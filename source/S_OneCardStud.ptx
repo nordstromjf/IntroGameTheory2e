@@ -1,0 +1,299 @@
+
+<section xml:id="S_OneCardStud">
+  <title>A Game of Chance</title>
+  <p>
+    Now that we have worked with expected value, we can begin to analyze some simple games that involve an element of chance.
+  </p>
+
+  <example xml:id="E_onecardstud">
+    <title>One-Card Stud Poker<idx><h>One-Card Stud Poker</h></idx></title>
+    <statement>
+      
+
+      <p>
+        We begin with a deck of cards in which 50% are Aces (you can use Red cards for Aces) and 50% are Kings (you can use Black cards for Kings). There are two players and one dealer. The play begins by each player putting in the ante (1 chip). Each player is dealt one card face down. WITHOUT LOOKING AT THEIR CARD, the players decide to Bet (say, 1 chip) or Fold. Players secretly show the dealer their choice of Bet or Fold. If one player Bets and the other Folds, then the player who Bet wins. If both Bet or both Fold, then Ace beats King (or Red beats Black); winner takes the pot (all the chips from the ante and any bets). If there is a tie, they split the pot.
+      </p>
+    </statement>
+  </example>
+
+  <activity xml:id="A_playonecard">
+    <title>Play One-Card Stud Poker</title>
+    <statement>
+      <p>
+        Play the game several times with two other people (so you have two players and a dealer). Keep track of the strategy choices of the players and the resulting payoffs. 
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_onecardconjecturestrat">
+    <title>Guess a strategy</title>
+    <statement>
+      <p>
+        Based on playing the game, determine a possible winning strategy.
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_onecardzerosum">
+    <title>Check if zero-sum</title>
+    <statement>
+      <p>
+        Is this a zero-sum game? Why or why not?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_dealandstrat">
+    <title>Relationship between the deal and the strategy</title>
+    <statement>
+      <p>
+        Does the actual deal affect the choice of strategy?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_strategychoices">
+    <title>Strategy choices</title>
+    <statement>
+      <p>
+        On any given deal, what strategy choices does a player have?
+      </p>
+    </statement>
+  </activity>
+  <p>
+    Before moving on, you should attempt to determine the payoff matrix. The remainder of this section will be more meaningful if you have given some thought to what the payoff matrix should be. It is OK to be wrong at this point, it is not OK to not try.
+  </p>
+  <activity xml:id="A_possiblematrix">
+    <title>Determine a possible payoff matrix</title>
+    <statement>
+      <p>
+        Write down a possible payoff matrix for this game.
+      </p>
+    </statement>
+  </activity>
+  <p>
+    Now let's work through creating the payoff matrix for One-Card Stud Poker.
+  </p>
+  <activity xml:id="A_payoffBF">
+    <title>Payoff for [Bet, Fold]</title>
+    <statement>
+      <p>
+        If Player 1 Bets and Player 2 Folds, does it matter which cards were dealt? How much does Player 1 win? How much does Player 2 lose? What is the payoff vector for [Bet, Fold]? (Keep in mind your answer to <xref ref="A_onecardzerosum"></xref>.)
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_payoffFB">
+    <title>Payoff for [Fold, Bet]</title>
+    <statement>
+      <p>
+        If Player 1 Folds and Player 2 Bets, does it matter which cards were dealt? What is the payoff vector for [Fold, Bet]?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_payoffandactual">
+    <title>Payoff and the actual deal</title>
+    <statement>
+      <p>
+        If both players Bet, does the payoff depend on which cards were dealt?
+      </p>
+    </statement>
+  </activity>
+  <p>
+    To determine the payoff vector for [Bet, Bet] and [Fold, Fold] we will need to consider which cards were dealt. We can use some probability to determine the remaining payoff vectors.
+  </p>
+  <activity xml:id="A_probofdeal">
+    <title>Probability of each deal</title>
+    <statement>
+      <p>
+        There are four possible outcomes of the deal (what cards could have been dealt to each player?). List them. What is the probability that each occurs? Remember, the probability of an event is a number between 0 and 1.
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_BBpayoffperdeal">
+    <title>Payoff for each deal with [Bet, Bet]</title>
+    <statement>
+      <p>
+        Consider the pair of strategies [Bet, Bet]. For each possible deal, determine the payoff vector. For example, if the players are each dealt an Ace (Red), how much does each player win? Again, keep in mind your answer to <xref ref="A_onecardzerosum"></xref>.
+      </p>
+    </statement>
+  </activity>
+  <p>
+    In order to calculate the payoff for [Bet, Bet], we need to take a weighted average of the possible payoff vectors in <xref ref="A_BBpayoffperdeal"></xref>. In particular, we will <q>weight</q> a payoff by the probability that it occurs. Recall that this is the <term>expected value</term><idx><h>expected value</h></idx>, <xref ref="D_expectedvalue"></xref>. We will calculate the expected value separately for each player.
+  </p>
+  <activity xml:id="A_BBev1">
+    <title>Player 1's expected value for [Bet, Bet]</title>
+    <statement>
+      <p>
+        Find the expected value for [Bet, Bet] for Player 1.
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_BBev2">
+    <title>Player 2's expected value for [Bet, Bet]</title>
+    <statement>
+      <p>
+        Find the expected value for [Bet, Bet] for Player 2.
+      </p>
+    </statement>
+  </activity>
+  <p>
+    The pair of expected values from <xref ref="A_BBev1"></xref> and <xref ref="A_BBev2"></xref> is the payoff vector for [Bet, Bet].
+  </p>
+  <activity xml:id="A_BBexplain">
+    <title>Justify using expected value as the payoff</title>
+    <statement>
+      <p>
+        Explain why it should make sense to use the expected values for the payoffs in the matrix for the strategy pair [Bet, Bet].
+      </p>
+    </statement>
+    <hint><p>Think about what a player needs to know to choose a strategy in a game of chance.</p></hint>
+  </activity>
+
+  <p>We can use a similar process to find the payoff vector for [Fold, Fold].</p>
+
+  <activity xml:id="A_FF">
+    <title>Repeat for [Fold, Fold]</title>
+    <statement>
+      <p>
+        Repeat <xref ref="A_BBpayoffperdeal"></xref>, <xref ref="A_BBev1"></xref>, and <xref ref="A_BBev2"></xref> for the pair of strategies [Fold, Fold].
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_onecardmatrix">
+    <title>Complete payoff matrix</title>
+    <statement>
+      <p>
+        Summarize the above work by giving the completed payoff matrix for One-Card Stud Poker.
+      </p>
+    </statement>
+  </activity>
+
+  <p>Now that you have done all the hard work of finding the payoff matrix for One-Card Stud Poker, we can analyze our two-player zero-sum game using the techniques we learned in the previous sections. It is also important to see how the mathematical solution compares to our conjectured solution from <xref ref="A_onecardconjecturestrat"></xref>.</p>
+
+  <activity xml:id="A_onecardstrategy">
+    <title>Best strategy for One-Card Stud</title>
+    <statement>
+      <p>
+         Use the payoff matrix to determine the best strategy for each player. If each player uses their best strategy, what will be the outcome of the game?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_onecardcompare">
+    <title>Compare strategies</title>
+    <statement>
+      <p>
+        Compare the strategy you found in <xref ref="A_onecardstrategy"></xref> to your suggested strategy in <xref ref="A_onecardconjecturestrat"></xref>. In particular, discuss how knowing the payoff matrix might have changed your strategy. Also compare the payoff that results from the strategy in <xref ref="A_onecardstrategy"></xref> to the payoff that results from your original strategy in <xref ref="A_onecardconjecturestrat"></xref>.
+      </p>
+    </statement>
+  </activity>
+
+  <p>Since One-Card Stud Poker has an element of chance, we should see what happens if we play the game several times using the strategy from <xref ref="A_onecardstrategy"></xref>.</p>
+  <activity xml:id="A_onecardlongrun">
+    <title>Payoff for repeated One-Card Stud</title>
+    <statement>
+      <p>
+        Use the payoff matrix to predict what the payoff to each player would be if the game is played ten times.
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_onecardtrials">
+    <title>Play repeated One-Card Stud</title>
+    <statement>
+      <p>
+        Play the game ten times using the best strategy. How much has each player won or lost after ten hands of One-Card Stud Poker? Compare your answer to your prediction in <xref ref="A_onecardlongrun"></xref>. Does the actual payoff differ from the theoretical payoff? If so, why do you think this might be?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_onecardfair">
+    <title>Fair game</title>
+    <statement>
+      <p>
+        Explain why this game is considered fair.
+      </p>
+    </statement>
+  </activity>
+
+  <example xml:id="E_genonecardstud">
+    <title>Generalized One-Card Stud Poker<idx><h>Generalized One-Card Stud Poker</h></idx></title>
+    <statement>
+      
+      <p>
+        In One-Card Stud Poker we anted one chip and bet one chip. Now, suppose we let players ante a different amount and bet a different amount (although players will still ante and bet the same amount as each other). Suppose a player antes <m>a</m> and bets <m>b</m>. How might this change the game?
+      </p>
+    </statement>
+  </example>
+
+  <activity xml:id="A_genonecard">
+    <title>Payoff matrix for Generalized One-Card Stud</title>
+    <statement>
+      <p>
+        Use the method outlined for One-Card Stud Poker to determine the payoff matrix for Generalized One-Card Stud Poker.
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_stratgenonecard">
+    <title>Strategy for Generalized One-Card Stud</title>
+    <statement>
+      <p>
+        Does the strategy change for the generalized version of the game? Explain.
+      </p>
+    </statement>
+  </activity>
+<p>For more of a challenge with probability, you can think about what happens if we change the number of Kings in the deck.</p>
+  <activity xml:id="A_OCSMoreK"><title>One-Card Stud with more Kings</title>
+<introduction><p>Suppose you are playing the regular version of One-Card Stud Poker from <xref ref="E_onecardstud"></xref>, but now the deck contains 25% Aces and 75% Kings.</p></introduction>
+<task><p>Do you think having fewer Aces would change your strategy? Why or why not?</p></task>
+<task><p>Does the number of Kings in the deck change the the payoff vector for [Bet, Fold] and [Fold, Bet]?</p></task>
+<task><p>Calculate the expected value for the [Bet, Bet] and [Fold, Fold] strategy pairs.</p><hint><p>To make this a little easier, assume the deck has infinitely many cards, so that the probability of a player being dealt an Ace doesn't change if the other player was dealt an Ace. In other words, each player has a probability of <m>.25</m> of being dealt an Ace. Now the probability of the deal Ace, Ace is <m>.25\times .25</m>.</p></hint></task>
+<task><p>Give the payoff matrix for the game. How does it compare to the standard version of the game?</p></task>
+<task><p>Does the strategy for the game change if the percentage of Kings changes?</p></task>
+</activity>
+  <p>Now that we have analyzed several zero-sum games, we can see how important it is to find any equilibrium pairs. In the next section we explore equilibrium strategies in more detail.</p>
+
+   <reading-questions>
+      <title>Check Your Understanding</title>
+      
+
+      <exercise label="IGT_OCS_CYU_OCSadvantage"><statement correct="yes"><p>True or False: Neither player has an advantage in One-Card Stud Poker.</p></statement><feedback><p>This is a fair game.</p></feedback><answer><p>True.</p></answer>
+      </exercise>
+
+       <exercise label="IGT_OCS_CYU_OCSequilibrium"><statement correct="yes"><p>True or False: One-Card Stud Poker has an equilibrium pair.</p></statement><feedback><p>[Bet, Bet] is an equilibrium pair.</p></feedback><answer><p>True.</p></answer>
+      </exercise>
+
+       <exercise label="IGT_OCS_CYU_howoftenbet"><statement><p>In One-Card Stud Poker, Player 1 wants to play Bet </p></statement>
+       <choices randomize="yes">
+      <choice correct="yes"><statement><p>always.</p></statement>
+      <feedback><p>[Bet, Bet] is an equilibrium pair, so if both players are playing optimally, they should both Bet.</p></feedback></choice>
+      <choice ><statement><p>never.</p></statement>
+      <feedback><p>Incorrect.</p></feedback></choice>
+      <choice ><statement><p>more often than Fold.</p></statement>
+      <feedback><p>Incorrect.</p></feedback></choice>
+      <choice ><statement><p>less often than Fold.</p></statement>
+      <feedback><p>Incorrect.</p></feedback></choice>
+    </choices><answer><p>always. [Bet, Bet] is an equilibrium pair, so if both players are playing optimally, they should both Bet.</p></answer>
+      </exercise>
+
+      <exercise label="IGT_OCS_CYU_expvalue"><statement><p>The expected payoff to a player in One-Card Stud Poker over the long run is <var width="3"/>.</p></statement>
+      <setup>
+    <var>
+
+    <condition number="0">
+    <feedback>
+      <p>
+        Correct. The expected payoff is 0, as that is the expected payoff for [Bet, Bet].
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+        Use that players should play the equilibium strategies.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
+      <answer><m>0</m></answer></exercise>
+      <exercise label="IGT_OCS_CYU_OCSactual"><statement correct="no"><p>True or False: The actual payoff to a player in One-Card Stud Poker is the same as the expected payoff.</p></statement><feedback><p>In a game of chance the actual outcome is often different that the expected outcome. As the game is played more, the actual payoff approaches the expected payoff.</p></feedback><answer><p>False.</p></answer>
+      </exercise>
+
+    </reading-questions>
+</section>

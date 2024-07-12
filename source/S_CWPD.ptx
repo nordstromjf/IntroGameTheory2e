@@ -1,0 +1,313 @@
+
+<section xml:id="S_CWPD">
+  <title>A Class-Wide Experiment</title>
+  <p>
+    <idx><h>Class-Wide Prisoner's Dilemma</h></idx>
+  </p>
+
+  <p>
+    We are going to look at a class-wide game.
+  </p>
+
+  <p>
+    Each member of the class secretly chooses a single letter: <q>C</q> or <q>D,</q> standing for <q>cooperate</q><idx><h>cooperate</h></idx> or <q>defect.</q><idx><h>defect</h></idx> This will be used as your strategy choice in the following game with each of the other players in the class. Here is how it works for each pair of players: if they both cooperate, they get each get 3 points. If they both defect, they each get 1 point. If one cooperates and one defects, the cooperator gets nothing, but the defector gets 5 points. Your one choice of <q>C</q> or <q>D</q> will be used to play the game with all the other players in the class.
+  </p>
+
+  <p>
+    Thus, if everyone chooses <q>C,</q> everyone will get 3 points per person (not counting yourself). If everyone chooses <q>D,</q> everyone will get 1 point per person (not counting yourself). You can't lose! And of course, anyone chooses <q>D</q> will get at least as much as everyone else will. If, for example in a class of 20 poeple, 11 people choose <q>C</q> and 9 choose <q>D,</q> then the 11 C-ers will get 3 points apiece from the other C-ers (making 30 points), and zero from the D-ers. So C-ers will get 30 points each. The D-ers, by contrast, will pick up 5 points apiece from each of the C-ers, making 55 points, and 1 point from each of the other D-ers, making 8 points, for a grand total of 63 points. No matter what the distribution is, D-ers always do better than C-ers. Of course, the more C-ers there are, the better everyone will do!
+  </p>
+
+  <p>
+    By the way, I should make it clear that in making your choice, you should not aim to be the winner, but simply to get as many points for yourself as possible. Thus you should be happier to get 30 points (as a result of saying <q>C</q> along with 10 others, even though the 9 D-sayers get more than you) than to get 19 points (by saying <q>D</q> along with everybody else, so nobody <q>beats</q> you).
+  </p>
+
+  <p>
+    Of course, your hope is to be the only defector, thus really cleaning up: with 19 C-ers, you'll get 95 points, and they'll each get 18 times 3, namely 54 points! But why am I doing the multiplication or any of this figuring for you? You've been studying game theory. So have all of you! You are all equally versed in game theory and understand about making rational choices. Therefore, I hardly need to tell you that you are to make what you consider to be your maximally rational choice. In particular, feelings of morality, guilt, apathy, and so on, are to be disregarded. Reasoning alone (of course including reasoning about others' reasoning) should be the basis of your decision.
+  </p>
+
+  <p>
+    So all you need to do is make your choice. Write it down.
+  </p>
+
+  <p>
+    It is to be understood (it almost goes without saying, but not quite) that you are not to discuss your answer with anyone else from the class. The purpose is to see what people do on their own, in isolation. Along with your answer you should include a short explanation for why you made your particular choice.
+  </p>
+
+  <p>
+    Adapted from Douglas Hofstadter, <pubtitle>Metamagical Themas</pubtitle>,  p. 740.
+  </p>
+
+  <p>
+    <ndash /><ndash /><ndash /><ndash /><ndash /><ndash /><ndash /><ndash /><ndash /><ndash /><ndash /><ndash /><ndash /><ndash /><ndash /><ndash /><ndash /><ndash /><ndash /><ndash /><ndash />
+  </p>
+
+  <p>Once everyone in class has made their choice, share your answers with the class. Then answer the following questions about the class's responses.</p>
+
+  <activity xml:id="A_CWPDsummary">
+    <title>Summary of responses</title>
+    <introduction><p>Create a summary of the responses from the class-wide experiment.</p></introduction>
+      
+        <task><p>
+            How many C's were there?
+          </p></task>
+
+        <task><p>
+            How many D's were there?
+          </p></task>
+
+        <task><p>
+            What was the payoff to each C?
+          </p></task>
+
+        <task><p>
+            What was the payoff to each D?
+          </p></task>
+     
+  </activity>
+  <activity xml:id="A_CWPDmatrix">
+    <title>Payoff matrix</title>
+    <statement>
+      <p>
+        Determine the payoff matrix for class-wide Prisoner's Dilemma.
+      </p>
+    </statement>
+    <hint><p>Although you played this game with each other person in the class, this is still a 2 person game!</p></hint>
+  </activity>
+  <activity xml:id="A_CWPDreasons">
+    <title>Reasons for choice</title>
+    <statement>
+      <p>
+        What are some reasons people chose C? What are some reasons people chose D?
+      </p>
+    </statement>
+  </activity>
+
+  <p>Although we can now see what everyone chose, we might not agree that everyone made the most rational choice. How might perfectly rational players play the game?</p>
+
+  <activity xml:id="A_CWPDrational">
+    <title>The rational choice</title>
+    <statement>
+      <p>
+        What appears to be the most rational choice, C or D? If everyone is <em>equally</em> rational, then what would everyone do? If everyone is equally rational, should everyone choose the same thing?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_CWPDsame">
+    <title>Everyone is rational</title>
+    <statement>
+      <p>
+        Now suppose everyone is equally (and perfectly) rational. AND everyone knows that everyone else is equally (and perfectly) rational. What should everyone choose? 
+      </p>
+    </statement>
+    <hint><p>If everyone knows that everyone will choose the same answer, what should everyone choose to do?</p></hint>
+  </activity>
+
+  <p>The next two exercises look at two more examples of games where players can <q>Cooperate</q> or <q>Defect</q>. How does changing the payoffs change the players' incentive to cooperate or defect?</p>
+
+  <activity xml:id="A_PDvariant1">
+    <title>A game of cooperation and defection</title>
+    <statement>
+      <p>
+        Consider the following game where C stands for Cooperate, and D stands for Defect. 
+      </p>
+
+      <table xml:id="T_PDvariant1" >
+        <title>A Cooperate-Defect game</title>
+        <tabular halign="center">
+          <row>
+            <cell></cell>
+            <cell bottom="minor">C</cell>
+            <cell bottom="minor">D</cell>
+          </row>
+          <row>
+            <cell right="minor">C</cell>
+            <cell right="minor" bottom="minor" halign="center">(3, 3)</cell>
+            <cell right="minor" bottom="minor" halign="center">(0, 50)</cell>
+          </row>
+          <row>
+            <cell right="minor"><em>D</em></cell>
+            <cell right="minor" bottom="minor" halign="center">(50, 0)</cell>
+            <cell right="minor" bottom="minor" halign="center">(.01, .01)</cell>
+          </row>
+
+        </tabular>
+      </table>
+
+      <p>
+        What would you do? Why? What seems to be the most rational thing to do? Why?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_PDvariant2">
+    <title>Another game of cooperation and defection</title>
+    <statement>
+      <p>
+        Consider the following game where C stands for Cooperate, and D stands for Defect.
+      </p>
+
+      <table xml:id="T_PDvariant2" >
+        <title>Matrix for another Cooperate-Defect game</title>
+        <tabular halign="center">
+          <row>
+            <cell></cell>
+            <cell bottom="minor">C</cell>
+            <cell bottom="minor">D</cell>
+          </row>
+          <row>
+            <cell right="minor">C</cell>
+            <cell right="minor" bottom="minor" halign="center">(1000, 1000)</cell>
+            <cell right="minor" bottom="minor" halign="center">(0, 100)</cell>
+          </row>
+          <row>
+            <cell right="minor">D</cell>
+            <cell right="minor" bottom="minor" halign="center">(100, 0)</cell>
+            <cell right="minor" bottom="minor" halign="center">(100, 100)</cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>
+        What would you do? Why? What seems to be the most rational thing to do? Why?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_CWPDpayoffs">
+    <title>Motivation to cooperate or defect</title>
+    <statement>
+      <p>
+        Looking at all three of the above games (the Class-Wide experiment, <xref ref="T_PDvariant1"></xref>, and  <xref ref="T_PDvariant2"></xref>), can you think of what sort of payoffs you would need in order to cooperate (C)? What about to defect (D)?
+      </p>
+    </statement>
+  </activity>
+  <p>Not every game where player's cooperate or defect is a Prisoner's Dilemma, or even a dilemma. You can certainly change the payoffs in the above matrices so that it is very clear what each player should do. But as you've seen with this section's experiment, there is something special about the Prisoner's Dilemma. Everyone does better if they all cooperate, but any one player does better to defect. The next section will look more specifically at what makes a game a Prisoner's Dilemma. </p>
+
+  <reading-questions>
+      <title>Check Your Understanding</title>
+
+      <exercise label="IGT_CWPD_CYU_multiPD"><statement><p>Consider the Class-Wide Prisoner's Dilemma described at the beginning of this section.
+    
+      What is the payoff vector if Player 1 cooperates and Player 2 defects?
+    </p>
+      </statement>
+      <choices randomize="yes">
+        <choice ><statement><m>(3, 3)</m></statement><feedback><p>See <xref ref="A_CWPDmatrix"></xref>.</p></feedback></choice>
+        <choice correct="yes"><statement><m>(0, 5)</m></statement><feedback><p>See <xref ref="A_CWPDmatrix"></xref>.</p></feedback></choice>
+        <choice ><statement><m>(5, 0)</m></statement><feedback><p>See <xref ref="A_CWPDmatrix"></xref>.</p></feedback></choice>
+        <choice ><statement><m>(1, 1)</m></statement><feedback><p>See <xref ref="A_CWPDmatrix"></xref>.</p></feedback></choice>
+        <choice ><statement><m>(3, 5)</m></statement><feedback><p>See <xref ref="A_CWPDmatrix"></xref>.</p></feedback></choice>
+        <choice ><statement><m>(3, 1)</m></statement><feedback><p>See <xref ref="A_CWPDmatrix"></xref>.</p></feedback></choice>
+       
+      </choices><answer>(0, 5)</answer></exercise>
+
+      <exercise label="IGT_CWPD_CYU_multiPDDef"><statement><p>In Class-Wide Prisoner's Dilemma every player was playing a two-person Prisoner's Dilemma with every other player. If you think most of the class will defect, then you should
+    </p>
+      </statement>
+      <choices randomize="no">
+        <choice ><statement><p>Cooperate</p></statement><feedback><p>Cooperators get 0 against every defector, so it is probably better to defect and get 1.</p></feedback></choice>
+        <choice correct="yes"><statement><p>Defect</p></statement><feedback><p>Correct. Since it is better to defect against a defector.</p></feedback></choice>
+       
+      </choices><answer>Defect</answer></exercise>
+
+      <exercise label="IGT_CWPD_CYU_multiPDCoop"><statement><p>In Class-Wide Prisoner's Dilemma every player was playing a two-person Prisoner's Dilemma with every other player. If you think most of the class will cooperate, then you should
+    </p>
+      </statement>
+      <choices randomize="no">
+        <choice ><statement><p>Cooperate</p></statement><feedback><p>Although cooperators get 3 against other cooperators, a defector will get 5 against each of the cooperators.</p></feedback></choice>
+        <choice correct="yes"><statement><p>Defect</p></statement><feedback><p>Correct. Since it is better to defect against a cooperator.</p></feedback></choice>
+       
+      </choices><answer>Defect</answer></exercise>
+
+      <exercise label="IGT_CWPD_CYU_increaseC"><statement><p>Consider the following Cooperate-Defect game where we can vary the value for <m>a</m>.
+    <table xml:id="T_PDvaryC" >
+        <tabular halign="center">
+          <row>
+            <cell></cell>
+            <cell bottom="minor">C</cell>
+            <cell bottom="minor">D</cell>
+          </row>
+          <row>
+            <cell right="minor">C</cell>
+            <cell right="minor" bottom="minor" halign="center">(<m>a</m>, <m>a</m>)</cell>
+            <cell right="minor" bottom="minor" halign="center">(0, 5)</cell>
+          </row>
+          <row>
+            <cell right="minor">D</cell>
+            <cell right="minor" bottom="minor" halign="center">(5, 0)</cell>
+            <cell right="minor" bottom="minor" halign="center">(1, 1)</cell>
+          </row>
+        </tabular>
+      </table>
+      If we increase the value of <m>a</m>, we <fillin width="4"/> the likelihood players will choose to cooperate.
+    </p>
+      </statement>
+      <choices randomize="no">
+        <choice correct="yes"><statement><p>increase</p></statement><feedback><p>The greater the payoff for cooperating, the more incentive the players have to cooperate.</p></feedback></choice>
+        <choice ><statement><p>decrease</p></statement><feedback><p>Think about the incentives for cooperating vs. defecting.</p></feedback></choice>
+        <choice ><statement><p>don't change</p></statement><feedback><p>Think about the incentives for cooperating vs. defecting.</p></feedback></choice>
+      </choices><answer>increase</answer></exercise>
+
+      <exercise label="IGT_CWPD_CYU_increaseR"><statement><p>Consider the following Cooperate-Defect game where we can vary the value for <m>a</m>.
+    <table xml:id="T_PDvaryR" >
+        <tabular halign="center">
+          <row>
+            <cell></cell>
+            <cell bottom="minor">C</cell>
+            <cell bottom="minor">D</cell>
+          </row>
+          <row>
+            <cell right="minor">C</cell>
+            <cell right="minor" bottom="minor" halign="center">(3, 3)</cell>
+            <cell right="minor" bottom="minor" halign="center">(0, <m>a</m>)</cell>
+          </row>
+          <row>
+            <cell right="minor">D</cell>
+            <cell right="minor" bottom="minor" halign="center">(<m>a</m>, 0)</cell>
+            <cell right="minor" bottom="minor" halign="center">(1, 1)</cell>
+          </row>
+        </tabular>
+      </table>
+      If we increase the value of <m>a</m>, we <fillin width="4" /> the likelihood players will choose to cooperate.
+    </p>
+      </statement>
+      <choices randomize="no">
+        <choice ><statement><p>increase</p></statement><feedback><p>Think about the incentives for cooperating vs. defecting.</p></feedback></choice>
+        <choice correct="yes"><statement><p>decrease</p></statement><feedback><p>There is greater incentive to defect, so less incentive to cooperate.</p></feedback></choice>
+        <choice ><statement><p>don't change</p></statement><feedback><p>Think about the incentives for cooperating vs. defecting.</p></feedback></choice>
+      </choices><answer>decrease</answer></exercise>
+
+      <exercise label="IGT_CWPD_CYU_decreaseS"><statement><p>Consider the following Cooperate-Defect game where we can vary the value for <m>a</m>.
+    <table xml:id="T_PDvaryS" >
+        <tabular halign="center">
+          <row>
+            <cell></cell>
+            <cell bottom="minor">C</cell>
+            <cell bottom="minor">D</cell>
+          </row>
+          <row>
+            <cell right="minor">C</cell>
+            <cell right="minor" bottom="minor" halign="center">(3, 3)</cell>
+            <cell right="minor" bottom="minor" halign="center">(<m>a</m>, 0)</cell>
+          </row>
+          <row>
+            <cell right="minor">D</cell>
+            <cell right="minor" bottom="minor" halign="center">(0, <m>a</m>)</cell>
+            <cell right="minor" bottom="minor" halign="center">(1, 1)</cell>
+          </row>
+        </tabular>
+      </table>
+      If we decrease the value of <m>a</m>, we <fillin width="4"/> the likelihood players will choose to cooperate.
+    </p>
+      </statement>
+      <choices randomize="no">
+        <choice ><statement><p>increase</p></statement><feedback><p>Would you want to cooperate if you think your opponent will defect?</p></feedback></choice>
+        <choice correct="yes"><statement><p>decrease</p></statement><feedback><p>Since there is already incentive to defect, it becomes riskier to cooperate.</p></feedback></choice>
+        <choice ><statement><p>don't change</p></statement><feedback><p>Would you want to cooperate if you think your opponent will defect?</p></feedback></choice>
+      </choices><answer>decrease</answer></exercise>
+
+
+</reading-questions>
+
+      
+
+      
+</section>

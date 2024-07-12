@@ -1,0 +1,98 @@
+
+<section xml:id="S_PopPD">
+  <title>Popular Culture: Prisoner's Dilemma and Chicken</title>
+  <p>
+    <idx><h>popular culture</h></idx>
+  </p>
+
+  <p>
+    In this section, we will look at applications of Prisoner's Dilemma<idx><h>Prisoner's Dilemma</h></idx> and Chicken<idx><h>Chicken</h></idx> in popular culture.
+  </p>
+
+  <p>
+    The movie <pubtitle>Return to Paradise</pubtitle><idx><h><pubtitle>Return to Paradise</pubtitle></h></idx> (1998) explores a Prisoner's Dilemma throughout the film. The two main characters, Tony and Sheriff, must decide if they will cooperate by returning to Malaysia to serve time in prison, or defect by not returning to Malaysia. If both defect, their friend will die in prison. If both cooperate, their friend will be released and they will each serve short sentences.
+  </p>
+
+  <question>
+
+  <p>
+    Give a payoff matrix to model the Prisoner's Dilemma in the film. By the end of the film have the payoffs changed? Is it still a Prisoner's Dilemma? Explain.
+  </p>
+
+  </question>
+  
+  <question>
+
+  <p>
+    In the classic Prisoner's Dilemma, communication is not allowed between the players. In the film, Tony and Sheriff can communicate all they want. How does this communication impact the Prisoner's Dilemma. Does it help or hinder their choice of strategy? Explain.
+  </p>
+
+  </question>
+
+  <p>
+    The movie <pubtitle>Rebel Without a Cause</pubtitle><idx><h><pubtitle>Rebel Without a Cause</pubtitle></h></idx> (1955) contains an iconic Chicken scene, in which the two characters race towards a cliff. The last one to jump out of his car is declared the winner.
+  </p>
+
+  <question>
+
+  <p>
+    Does Jim win or lose the game of Chicken? Explain your answer.
+  </p>
+
+  </question>
+  
+  <question>
+
+  <p>
+    The movie <pubtitle>Footloose</pubtitle><idx><h><pubtitle>Footloose</pubtitle></h></idx> (1984) also has a Chicken scene (this time with tractors). Compare the Chicken scenes in <pubtitle>Rebel</pubtitle> and <pubtitle>Footloose</pubtitle>. Is the Chicken game used similarly in each? In both scenes, one player has no choice of strategy. Why might the writer have made this choice in each of these films?
+  </p>
+
+  </question>
+
+  <p>In the film <pubtitle>Crazy Rich Asians</pubtitle><idx><h><pubtitle>Crazy Rich Asians</pubtitle></h></idx> (2018), after getting engaged to Nick, Rachel is in a battle of wills with her future Mother-in-Law, Eleanor. In one scene, Rachel explicity descibes the battle as a game of Chicken. Both Rachel and Eleanor want the other to <q>swerve</q> and back out of Nick's life (or at least stop controlling it so much). They are determined to show their strength by not backing down (going <q>straight</q>). If neither back down it is clear that they will both lose Nick.</p>
+
+  <question><p>How does the film ultimately resolve the conflict? Who <q>wins</q> and what is the director trying to say about the characters in this resolution?</p></question>
+
+  <question><p>It is interesting to note that many classic Chicken scenes have male protagonists, and the game is intended to demonstrate dominance. In contrast, the protagonists in <pubtitle>Crazy Rich Asians</pubtitle> are women. Compare any gender differences in the Chicken scenarios in, say, <pubtitle>Footloose</pubtitle>, and in <pubtitle>Crazy Rich Asians</pubtitle>.</p></question>
+  <question><p>Given the classic presentation of Chicken (players choosing to rick their lives driving towards each other), it can be tempting to say that the only rational approach to Chicken is just to refuse to play. In <pubtitle>Crazy Rich Asians</pubtitle>, do the characters have such a choice? Explain how the situation forces the characters to engage in the game of Chicken. You might consider what it means for a character to refuse to play.</p></question>
+
+  <p>Dilemmas such as Prisoner's Dilamma and Volunteer's Dilemma are used in some game shows and television competitions. For example, In <pubtitle>Friend or Foe</pubtitle><idx><h><pubtitle>Friend or Foe</pubtitle></h></idx> (2002-2003) after working together to win a pot of money, the contestants must decide if they are a <q>Friend</q> or a <q>Foe</q>. If they both pick Friend, they split the money. If one picks Foe, while the other picks Friend, Foe gets all the money. If they both pick Foe, they both get nothing.</p>
+
+  <question><p>Is the game in friend or Foe really a Prisoner's Dilemma? Explain why you think it is or isn't.</p></question>
+
+  <question><p>The players in <pubtitle>Friend or Foe</pubtitle> are allowed to communicate and negotiate. What are some strategies you would use to convince your opponent to say <q>Friend</q>?</p></question>
+
+  <question><p>As we studied Prisoner's Dilemma, we saw that it was more rational to defect (choose Foe). It turns out, over the course of the game show, more contestants said Friend. Explain why, in this context, you think people often chose Friend.</p></question>
+
+<p>An example of a Volunteer's Dilemma can be seen starting in Season 41 of <pubtitle>Survivor</pubtitle> <idx><h><pubtitle>Survivor</pubtitle></h></idx> (2021). Three contestants must decide to <q>Protect</q> their vote or <q>Risk</q> their vote. Their vote is very valuable in the game. If all three contestants choose Protect, they all keep their votes. If at least one contestant chooses to Protect her vote, then all three keep their votes and any contestants who chose Risk get an extra vote. If all three choose Risk, they all lose their vote.</p>
+
+<p>Explain why this is a Volunteer's Dilemma. If you were a contestant on <pubtitle>Survivor</pubtitle>, what would you choose to do and why? Are there certain conditions that would make you more likely to choose Risk? If you are familiar with the show, you might want to think about whther you are more or less likely to Risk your vote if you feel you are in danger of being voted off the island.</p>
+
+  <p>
+    Now try to apply the models of cooperate-defect games to your own popular culture, political, or social examples.
+  </p>
+
+  <question>
+
+  <p>
+    Suppose players are allowed to communicate in a Prisoner's Dilemma. Explain the relationship between trust and communication in a Prisoner's Dilemma. Give an example from a film demonstrating the relationship.
+  </p>
+
+  </question>
+  
+  <question>
+
+  <p>
+    Why might a writer include a Chicken scene in a film? What key attributes might the director be trying to display about the winner of Chicken and the loser? Use an example from popular culture to demonstrate your answer.
+  </p>
+
+  </question>
+
+  <question>
+
+  <p>
+    One of the interesting comparisons between Prisoner's Dilemma and Chicken is with their equilibrium points. Players in a Prisoner's Dilemma can reach an equilibrium point if they play the <em>same</em> way. Players in a Chicken game can reach an equilibrium if they choose <em>different</em> strategies. Find examples of how these games are used in popular culture to emphasize differences between characters. 
+  </p>
+
+  </question>
+</section>

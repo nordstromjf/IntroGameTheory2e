@@ -1,0 +1,324 @@
+
+<section xml:id="S_VolunteerDil">
+  <title>Volunteer's Dilemma</title><idx><h>Volunteer's Dilemma</h></idx>
+  <p>
+    In <xref ref="S_VDexperiment"></xref> we played a game called Volunteer's Dilemma.
+  </p>
+
+  <example xml:id="E_VDpoints"><idx><h>Volunteer's Dilemma</h></idx>
+    <title>A Volunteer's Dilemma</title>
+    <statement>
+      <p>
+        One example of a Volunteer's Dilemma is the game where everyone chooses <q>1 point</q> or <q>5 points.</q> If at least one person writes down 1 point, then everyone gets the number of points they wrote down. If no one chooses 1 point, then everyone gets 0 points. Choosing <q>1 point</q> is considered volunteering or cooperating. Choosing to not volunteer and take <q>5 points</q> is defecting.
+      </p>
+
+      <p>
+        You should note that it is difficult to put this game into a matrix form since payoffs depend on whether there is at least one volunteer or cooperator.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    In this section we will compare Class-wide Prisoner's Dilemma with Volunteer's Dilemma. In particular, we want to think about the effect cooperating and defecting have on the group of players. How does one player's choice affect everyone else? What happens to the group if there is a single cooperator or a single defector? What happens if everyone cooperates or everyone defects? We will use the payoffs for Prisoner's Dilemma from <xref ref="S_CWPD"></xref> and <xref ref="T_CWPD"></xref>, given again in the following table.
+  </p>
+
+  <table xml:id="T_CWPD2" >
+    <title>Class-wide Prisoner's Dilemma (again).</title>
+        <tabular>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell colspan="2" halign="center">Player 2</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell halign="center" bottom="minor">Cooperate</cell>
+            <cell halign="center" bottom="minor">Defect</cell>
+          </row>
+          <row>
+            <cell>Driver 1</cell>
+            <cell right="minor">Cooperate</cell>
+            <cell halign="center" bottom="minor" right="minor"><m>(3, 3)</m></cell>
+            <cell halign="center" bottom="minor" right="minor"><m>(0, 5)</m></cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell right="minor">Defect</cell>
+            <cell halign="center" bottom="minor" right="minor"><m>(5, 0)</m></cell>
+            <cell halign="center" bottom="minor" right="minor"><m>(1, 1)</m></cell>
+          </row>
+        </tabular>
+  </table>
+
+  <activity xml:id="A_CWPDdefecteffect">
+    <title>Effect of a single defector in Class-wide Prisoner's Dilemma</title>
+    <statement>
+      <p>
+        In Class-wide Prisoner's Dilemma, <xref ref="T_CWPD2"></xref>, what effect does one defector have on the group? In other words, if a single player defects, how many points does he cost each of the other players?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_CWPDalldefecteffect">
+    <title>Effect of everyone's defection in Class-wide Prisoner's Dilemma</title>
+    <statement>
+      <p>
+        In Class-wide Prisoner's Dilemma, <xref ref="T_CWPD2"></xref>, what effect does everyone's defection have on the group? In other words, what is the most points lost by the group if everyone defects?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_CWPDowndefect">
+    <title>Effect of your defection in Class-wide Prisoner's Dilemma</title>
+    <statement>
+      <p>
+        In Class-wide Prisoner's Dilemma, <xref ref="T_CWPD2"></xref>, what effect could your own defection have on the group? In other words, how many points does the group lose if you defect instead of cooperate? You may need to consider different cases depending on how many cooperators there are. For example what if there are no cooperators? What if there are no defectors? What if there are some of each?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_VDdefecteffect">
+    <title>Effect of a single defector in Volunteer's Dilemma</title>
+    <statement>
+      <p>
+        In Volunteer's Dilemma,  with the payoffs given in <xref ref="E_VDpoints"></xref>, what effect does one defector have on the group? In other words, if there is a single defector, how many points do each of the other players lose?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_VDalldefecteffect">
+    <title>Effect of everyone's defection in Volunteer's Dilemma</title>
+    <statement>
+      <p>
+        In Volunteer's Dilemma, with the payoffs given in <xref ref="E_VDpoints"></xref>, what effect does everyone's defection have on the group? In other words, if everyone defects, how many points does the group lose?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_VDowndefect">
+     <title>Effect of your defection in Volunteer's Dilemma</title>
+    <statement>
+      <p>
+        In Volunteer's Dilemma, with the payoffs given in <xref ref="E_VDpoints"></xref>, what effect could your own defection have on the group? In other words, how many points does the group lose if you defect instead of cooperate? You may need to consider different cases depending on how many cooperators there are. For example what if there are no cooperators? What if there are no defectors? What if there are some of each?
+      </p>
+    </statement>
+  </activity>
+
+  <p>Now that we've considered how an individual decision can affect the group, we can think about what the most rational strategy is in a multiplayer Prisoner's Dilemma or a Volunteer's Dilemma.</p>
+
+  <activity xml:id="A_CWPDcoopordefect">
+    <title>Rationality in Class-wide Prisoner's Dilemma</title>
+    <statement>
+      <p>
+        Considering your answers above and to previous work with Prisoner's Dilemma, in Class-wide Prisoner's Dilemma, which is more rational, to be a cooperator or a defector? Why?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_CWPDallrational">
+     <title>Everyone is rational in Class-wide Prisoner's Dilemma</title>
+    <statement>
+      <p>
+        Whichever strategy you chose in <xref ref="A_CWPDcoopordefect"></xref>, explain what would happen if everyone was the most rational. Is it now more rational to do the opposite?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_VDcoopordefect">
+    <title>Rationality in Volunteer's Dilemma</title>
+    <statement>
+      <p>
+        Considering your answers above, in Volunteer's Dilemma, which is more rational, to be a cooperator (volunteer) or a defector? Why?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_VDallrational">
+    <title>Everyone is rational in Volunteer's Dilemma</title>
+    <statement>
+      <p>
+        Whichever strategy you chose in <xref ref="A_VDcoopordefect"></xref>, explain what would happen if everyone was the most rational. Is it now more rational to do the opposite?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_classchicken">
+    <title>Class-wide Chicken</title>
+    <statement>
+      <p>
+        Volunteer's Dilemma can also be called <term>Class-wide Chicken</term>. Try to describe this class-wide game in terms of <q>swerving</q> and <q>going straight.</q> How do the payoffs for Volunteer's Dilemma relate to the payoffs for Chicken?
+      </p>
+    </statement>
+  </activity>
+  
+  <p>Even though the Class-wide Prisoner's Dilemma and the Volunteer's Dilemma games were played with multiple players, each game was only played once. In the next section we look at what might happen if we repeatedly play Prisoner's Dilemma with the same opponent.</p>
+
+  <reading-questions>
+      <title>Check Your Understanding</title>
+
+       <exercise label="IGT_VolDil_CYU_VD0CD"><statement><p>Consider the Volunteer's Dilemma in which each player can choose 1 point or 0 points. If no one chooses 0, everyone loses 10 points. If at least one person chooses 0, every player gets the points they chose. A player who chooses 0 is a</p></statement>
+
+       <choices randomize="no">
+        <choice correct="yes"><statement><p>cooperator.</p></statement><feedback><p>Choosing 0 allows the group to benefit.</p></feedback></choice>
+        <choice ><statement><p>defector.</p></statement><feedback><p>Who benefits most by a player choosing 0, the individual or the group?</p></feedback></choice>
+       </choices><answer>cooperator.</answer></exercise>
+
+       <exercise label="IGT_VolDil_CYU_VD1CD"><statement><p>Consider the Volunteer's Dilemma in which each player can choose 1 point or 0 points. If no one chooses 0, everyone loses 10 points. If at least one person chooses 0, every player gets the points they chose. A player who chooses 1 is a</p></statement>
+
+       <choices randomize="no">
+        <choice ><statement><p>cooperator.</p></statement><feedback><p>Who benefits most by a player choosing 1, the individual or the group?</p></feedback></choice>
+        <choice correct="yes"><statement><p>defector.</p></statement><feedback><p>Choosing 1 allows the individual to benefit but risks a negetive payoff for everyone.</p></feedback></choice>
+       </choices><answer>cooperator.</answer></exercise>
+
+      <exercise label="IGT_VolDil_CYU_Vall0"><statement><p>Consider the Volunteer's Dilemma in which each player can choose 1 point or 0 points. If no one chooses 0, everyone loses 10 points. If at least one person chooses 0, every player gets the points they chose.  Suppose you are playing this game in a class of 20 people. If everyone chooses 0, how many points does each person get? <var width="3" /></p></statement>
+      <setup>
+        <var>
+          <condition number="0"><feedback><p>Correct, there is at least one 0, everyone gets the points they chose.</p></feedback></condition>
+
+          <condition number="1"><feedback><p>Incorrect. How many points did each player choose?</p></feedback></condition>
+
+          <condition string=".*"><feedback><p>Incorrect. Do players get the points they chose?</p></feedback></condition>
+        </var>
+      </setup><answer>0</answer></exercise>
+
+      <exercise label="IGT_VolDil_CYU_Vno0"><statement><p>Consider the Volunteer's Dilemma in which each player can choose 1 point or 0 points. If no one chooses 0, everyone loses 10 points. If at least one person chooses 0, every player gets the points they chose.  Suppose you are playing this game in a class of 20 people. If no one chooses 0, how many points does each person get? <var width="3" /></p></statement>
+      <setup>
+        <var>
+          <condition number="-10"><feedback><p>Correct, since there are no 0s, everyone gets <m>-10</m>.</p></feedback></condition>
+
+          <condition number="1"><feedback><p>Incorrect. What happens if no one chooses 0?</p></feedback></condition>
+
+          <condition string=".*"><feedback><p>Incorrect. What happens if no one chooses 0?</p></feedback></condition>
+        </var>
+      </setup><answer><m>-10</m></answer></exercise>
+
+      <exercise label="IGT_VolDil_CYU_Vone0"><statement><p>Consider the Volunteer's Dilemma in which each player can choose 1 point or 0 points. If no one chooses 0, everyone loses 10 points. If at least one person chooses 0, every player gets the points they chose.  Suppose you are playing this game in a class of 20 people. If one person chooses 0 and 19 choose 1, how many points does a defector get? <var width="3" /></p></statement>
+      <setup>
+        <var>
+          <condition number="1"><feedback><p>Correct, since there is someone choosing 0, every defector gets 1.</p></feedback></condition>
+
+          <condition number="0"><feedback><p>Incorrect. The player who chose 0 is a cooperator.</p></feedback></condition>
+
+          <condition string=".*"><feedback><p>Incorrect. Who are the cooperators and who are the defectors?</p></feedback></condition>
+        </var>
+      </setup><answer><m>1</m></answer></exercise>
+
+      <exercise label="IGT_VolDil_CYU_Vone1"><statement><p>Consider the Volunteer's Dilemma in which each player can choose 1 point or 0 points. If no one chooses 0, everyone loses 10 points. If at least one person chooses 0, every player gets the points they chose.  Suppose you are playing this game in a class of 20 people. If one person chooses 1 and 19 choose 0, how many points does a defector get? <var width="3" /></p></statement>
+      <setup>
+        <var>
+          <condition number="1"><feedback><p>Correct, since there is someone choosing 0, every defector gets 1.</p></feedback></condition>
+
+          <condition number="0"><feedback><p>Incorrect. The player who chose 0 is a cooperator.</p></feedback></condition>
+
+          <condition string=".*"><feedback><p>Incorrect. Who are the cooperators and who are the defectors?</p></feedback></condition>
+        </var>
+      </setup><answer><m>1</m></answer></exercise>
+
+      <exercise label="IGT_VolDil_CYU_VCpayoff"><statement correct="yes"><p>True or False: In the Volunteer's Dilemma in which players choose 1 point or 0 points and if no one chooses 0, everyone loses 10, a cooperator will get 0 points no matter what anyone else does.</p></statement><feedback><p>Since a cooperator guarantees everyone gets the points they chose, the cooperator get 0 no matter what anyone else does.</p></feedback><answer>True.</answer></exercise>
+
+      <exercise label="IGT_VolDil_CYU_VDpayoff"><statement correct="no"><p>True or False: In the Volunteer's Dilemma in which players choose 1 point or 0 points and if no one chooses 0, everyone loses 10, a defector will get 1 point no matter what anyone else does.</p></statement><feedback><p>A defector only gets 1 point if someone else chose 0.</p></feedback><answer>False.</answer></exercise>
+
+      <exercise label="IGT_VolDil_CYU_MPDR1CD"><statement><p>Consider the class-wide or multiplayer Prisoner's Dilemma with the following payoff matrix
+      <me>
+          \left[\begin{matrix}
+            (1, 1) \amp  (-5, 5)\\
+           (5, -5) \amp  (0, 0)
+          \end{matrix}\right],
+        </me> where every player is playing the game against every other player. A player who chooses Row or Column 1 is a </p></statement>
+
+       <choices randomize="no">
+        <choice correct="yes"><statement><p>cooperator.</p></statement><feedback><p>Choosing Row/Column 1 is attempting to get 1 for everyone.</p></feedback></choice>
+        <choice ><statement><p>defector.</p></statement><feedback><p>Who benefits most by a player choosing Row/Column 1, the individual or the group?</p></feedback></choice>
+       </choices><answer>cooperator.</answer></exercise>
+
+       <exercise label="IGT_VolDil_CYU_MPDR2CD"><statement><p>Consider the class-wide or multiplayer Prisoner's Dilemma with the following payoff matrix
+      <me>
+          \left[\begin{matrix}
+            (1, 1) \amp  (-5, 5)\\
+           (5, -5) \amp  (0, 0)
+          \end{matrix}\right],
+        </me> where every player is playing the game against every other player. A player who chooses Row or Column 2 is a </p></statement>
+
+       <choices randomize="no">
+        <choice ><statement><p>cooperator.</p></statement><feedback><p>Who benefits most by a player choosing Row/Column 2, the individual or the group?</p></feedback></choice>
+        <choice correct="yes"><statement><p>defector.</p></statement><feedback><p>Choosing Row/Column 2 get the player the highest individual payoff.</p></feedback></choice>
+       </choices ><answer>cooperator.</answer></exercise>
+
+       <exercise label="IGT_VolDil_CYU_PDallC"><statement><p>Consider the class-wide or multiplayer Prisoner's Dilemma with the following payoff matrix
+      <me>
+          \left[\begin{matrix}
+            (1, 1) \amp  (-5, 5)\\
+           (5, -5) \amp  (0, 0)
+          \end{matrix}\right],
+        </me> where every player is playing the game against every other player.  Suppose you are playing this game in a class of 20 people. If everyone chooses Row/Column 1, how many points does each person get? <var width="3" /></p></statement>
+      <setup>
+        <var>
+          <condition number="19"><feedback><p>Correct, every player gets 1 point with each of the other 19 players.</p></feedback></condition>
+
+          <condition number="1"><feedback><p>Incorrect. Remember, each player is playing against 19 other players.</p></feedback></condition>
+
+          <condition number="20"><feedback><p>Incorrect. Although there are 20 players total, each player is playing against 19 other players.</p></feedback></condition>
+
+          <condition string=".*"><feedback><p>Incorrect. Everyone is playing against 19 other people who all chose the same Row/Column.</p></feedback></condition>
+        </var>
+      </setup><answer>19</answer></exercise>
+
+       <exercise label="IGT_VolDil_CYU_PDnoC"><statement><p>Consider the class-wide or multiplayer Prisoner's Dilemma with the following payoff matrix
+      <me>
+          \left[\begin{matrix}
+            (1, 1) \amp  (-5, 5)\\
+           (5, -5) \amp  (0, 0)
+          \end{matrix}\right],
+        </me> where every player is playing the game against every other player.  Suppose you are playing this game in a class of 20 people. If no one chooses Row/Column 1, how many points does each person get? <var width="3" /></p></statement>
+      <setup>
+        <var>
+          <condition number="0"><feedback><p>Correct, every player gets 0 points with each of the other 19 players.</p></feedback></condition>
+
+          <condition number="1"><feedback><p>Incorrect. Everyone is playing Row 2.</p></feedback></condition>
+
+
+          <condition string=".*"><feedback><p>Incorrect. Everyone is playing against 19 other people who all chose the same Row/Column.</p></feedback></condition>
+        </var>
+      </setup><answer>0</answer></exercise>
+
+      <exercise label="IGT_VolDil_CYU_PDoneC"><statement><p>Consider the class-wide or multiplayer Prisoner's Dilemma with the following payoff matrix
+      <me>
+          \left[\begin{matrix}
+            (1, 1) \amp  (-5, 5)\\
+           (5, -5) \amp  (0, 0)
+          \end{matrix}\right],
+        </me> where every player is playing the game against every other player.  Suppose you are playing this game in a class of 20 people. If one player chooses Row/Column 1 and 19 choose Row/Column 2, how many points does a defector get? <var width="3" /></p></statement>
+      <setup>
+        <var>
+          <condition number="5"><feedback><p>Correct, every defector gets 5 points from the one cooperator, but 0 from the other 18 defectors.</p></feedback></condition>
+
+          <condition number="-95"><feedback><p>Incorrect, this is how many points a single cooperator gets.</p></feedback></condition>
+
+
+          <condition string=".*"><feedback><p>Incorrect. How many cooperators is the defector playing against? How many defectors?</p></feedback></condition>
+        </var>
+      </setup><answer>5</answer></exercise>
+
+      <exercise label="IGT_VolDil_CYU_PDoneD"><statement><p>Consider the class-wide or multiplayer Prisoner's Dilemma with the following payoff matrix
+      <me>
+          \left[\begin{matrix}
+            (1, 1) \amp  (-5, 5)\\
+           (5, -5) \amp  (0, 0)
+          \end{matrix}\right],
+        </me> where every player is playing the game against every other player.  Suppose you are playing this game in a class of 20 people. If 19 players chooses Row/Column 1 and one chooses Row/Column 2, how many points does a defector get? <var width="3" /></p></statement>
+      <setup>
+        <var>
+          <condition number="95"><feedback><p>Correct, the single defector gets 5 points from each of the 19 cooperators.</p></feedback></condition>
+
+          <condition number="13"><feedback><p>Incorrect, this is how many points the 19 cooperators get.</p></feedback></condition>
+
+
+          <condition string=".*"><feedback><p>Incorrect. How many cooperators is the defector playing against? How many defectors?</p></feedback></condition>
+        </var>
+      </setup><answer>95</answer></exercise>
+
+      <exercise label="IGT_VolDil_CYU_PDCpayoff"><statement correct="yes"><p>True or False: In the multiplayer Prisoner's Dilemma with payoff matrix  <me>
+          \left[\begin{matrix}
+            (1, 1) \amp  (-5, 5)\\
+           (5, -5) \amp  (0, 0)
+          \end{matrix}\right],
+        </me>
+         a defector always does better than a cooperator no matter how many cooperators there are.</p></statement><feedback><p>Remember, in Prisoner's Dilemma, a player always does better to defect.</p></feedback><answer>True.</answer></exercise>
+
+      
+
+
+  </reading-questions>
+</section>

@@ -1,0 +1,1456 @@
+
+<section xml:id="S_DominatedStrategies">
+  <title>Finding Strategies</title>
+  <introduction><p>
+    Recall that in a zero-sum game, we know that one player's win is the other player's loss. Furthermore, we know we can rewrite any zero-sum game so that the player's payoffs are in the form <m>(a, -a)</m>. Note, this works even if <m>a</m> is negative; in which case, <m>-a</m> is positive.
+  </p></introduction>
+
+  <subsection xml:id="SS_simplifyingmatrix"><title>Simplifying a Zero-Sum Game Matrix</title>
+
+  <example xml:id="E_domstrat1">
+    <title>A Simpler Payoff Matrix</title>
+    <statement>
+      <p>
+        Consider the zero-sum game with payoff matrix in <xref ref="T_smallexample"></xref>. For simplicity our payoff matrix contains only the payoffs and not the strategy names; but Player 1 still chooses a row and Player 2 still chooses a column.
+      </p>
+
+      <table xml:id="T_smallexample" >
+        <title>The payoff matrix for <xref ref="E_domstrat1"></xref>.</title>
+        <tabular>
+          <row>
+            <cell></cell>
+            <cell colspan="2" halign="center" bottom="minor">Player 2</cell>
+          </row>
+          <row>
+            <cell right="minor">Player 1</cell>
+            <cell bottom="minor" right="minor"><m>(1, -1)</m></cell>
+            <cell bottom="minor" right="minor"><m>(-0, 0)</m></cell>
+          </row>
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor"><m>(-1, 1)</m></cell>
+            <cell bottom="minor" right="minor"><m>(-2, 2)</m></cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>
+        If we know we are playing a zero-sum game, then the use of ordered pairs seems somewhat redundant: if Player 1 wins 1, then we know that Player 2 must lose 1 (win <m>-1</m>). Thus, if we KNOW we are playing a zero-sum game, we can simplify our notation by just using Player 1's payoffs. The above matrix in <xref ref="T_smallexample"></xref> can be simplified as in <xref ref="T_smallexampleP1"></xref>.
+      </p>
+
+      <table xml:id="T_smallexampleP1" >
+        <title>The payoff matrix for <xref ref="E_domstrat1"></xref> using only Player 1's payoffs.</title>
+        <tabular>
+          <row>
+            <cell></cell>
+            <cell colspan="2" halign="center" bottom="minor">Player 2</cell>
+          </row>
+          <row>
+            <cell right="minor">Player 1</cell>
+            <cell bottom="minor" right="minor" halign="center">1</cell>
+            <cell bottom="minor" right="minor" halign="center">0</cell>
+          </row>
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor" halign="center">-1</cell>
+            <cell bottom="minor" right="minor" halign="center">-2</cell>
+          </row>
+        </tabular>
+      </table>
+    </statement>
+  </example>
+
+  <p>
+  When simplifying, keep a few things in mind:
+
+  <ol>
+    <li><p>
+        You MUST know that the game is zero-sum.
+      </p></li>
+
+    <li><p>
+        If it is not otherwise specified, the payoffs represent Player 1's payoffs.
+      </p></li>
+
+    <li><p>
+        You can always give a similar matrix representing Player 2's payoffs. However, due to (2), you should indicate that the matrix is for Player 2. For example, Player 2's payoff matrix would be given by <xref ref="T_smallexampleP2"></xref>.
+
+        <table xml:id="T_smallexampleP2" >
+          <title>The payoff matrix for <xref ref="E_domstrat1"></xref> using only Player 2's payoffs.</title>
+          <tabular>
+          <row>
+            <cell></cell>
+            <cell colspan="2" halign="center" bottom="minor">Player 2</cell>
+          </row>
+          <row>
+            <cell right="minor">Player 1</cell>
+            <cell bottom="minor" right="minor" halign="center">-1</cell>
+            <cell bottom="minor" right="minor" halign="center">0</cell>
+          </row>
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor" halign="center">1</cell>
+            <cell bottom="minor" right="minor" halign="center">2</cell>
+          </row>
+        </tabular>
+        </table>
+
+      </p></li>
+
+    <li><p>
+        Both players can make strategy decisions by considering only Player 1's payoff matrix. (Why?) Just to test this out, by looking only at the matrix in <xref ref="T_smallexampleP1"></xref> determine which strategy each player should choose.
+
+       <!-- <table>
+          <title>Player 1's payoffs in <xref ref="E_domstrat1"></xref>.</title>
+          <tabular>
+          <row>
+            <cell></cell>
+            <cell colspan="2" halign="center" bottom="minor">Player 2</cell>
+          </row>
+          <row>
+            <cell right="minor">Player 1</cell>
+            <cell bottom="minor" right="minor" halign="center">1</cell>
+            <cell bottom="minor" right="minor" halign="center">0</cell>
+          </row>
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor" halign="center">-1</cell>
+            <cell bottom="minor" right="minor" halign="center">-2</cell>
+          </row>
+        </tabular>
+        </table>-->
+
+      </p></li>
+  </ol>
+  </p>
+
+  <p>
+    In this last example, it should be clear that Player 1 is looking for rows which give her the largest payoff. This is nothing new. However, Player 2 is now looking for columns which give Player 1 the SMALLEST payoff. (Why?)
+  </p>
+</subsection>
+<subsection xml:id="SS_DomStrategies"><title>Dominated Strategies</title>
+
+  <p>
+    Now that we have simplified our notation for zero-sum games, let's try to find a way to determine the best strategy for each player.
+  </p>
+
+  <example xml:id="E_domstrat2">
+    <title>A <m>2\times 3</m> Game</title>
+    <statement>
+      <p>
+        Consider the zero-sum game given in <xref ref="T_biggerexampleP1"></xref>.
+      </p>
+
+      <table xml:id="T_biggerexampleP1" >
+        <title>Payoff matrix for <xref ref="E_domstrat2"></xref>.</title>
+        <tabular>
+          <row>
+            <cell></cell>
+            <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
+          </row>
+          <row>
+            <cell right="minor">Player 1</cell>
+            <cell bottom="minor" right="minor" halign="center">1</cell>
+            <cell bottom="minor" right="minor" halign="center">0</cell>
+            <cell bottom="minor" right="minor" halign="center">2</cell>
+          </row>
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor" halign="center">-1</cell>
+            <cell bottom="minor" right="minor" halign="center">-2</cell>
+            <cell bottom="minor" right="minor" halign="center">2</cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>
+        Determine which row Player 1 should choose. Is there any situation in which Player 1 would choose the other row?
+      </p>
+    </statement>
+  </example>
+
+  <example xml:id="E_domstrat3">
+    <title>Another <m>2 \times 3</m> Game</title>
+    <statement>
+      <p>
+        Consider the zero-sum game given in <xref ref="T_biggerexample2"></xref>.
+      </p>
+
+      <table xml:id="T_biggerexample2" >
+        <title>Payoff matrix for <xref ref="E_domstrat3"></xref>.</title>
+        <tabular>
+          <row>
+            <cell></cell>
+            <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
+          </row>
+          <row>
+            <cell right="minor">Player 1</cell>
+            <cell bottom="minor" right="minor">1</cell>
+            <cell bottom="minor" right="minor">0</cell>
+            <cell bottom="minor" right="minor">2</cell>
+          </row>
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor">-1</cell>
+            <cell bottom="minor" right="minor">-2</cell>
+            <cell bottom="minor" right="minor">3</cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>
+        Determine which row Player 1 should choose. Is there any situation in which Player 1 would choose the other row?
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    In <xref ref="E_domstrat2"></xref>, no matter what Player 2 does, Player 1 would always choose Row 1, since every payoff in Row 1 is greater than or equal to the corresponding payoff in Row 2 (<m>1\ge -1</m>, <m>0\ge -2</m>, <m>2\ge 2</m>). In <xref ref="E_domstrat3"></xref>, this is not the case: if Player 2 were to choose Column 3, then Player 1 would prefer Row 2. In <xref ref="E_domstrat2"></xref> we would say that Row 1 <term>dominates</term><idx><h>dominates</h></idx> Row 2.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A strategy <m>X</m> <term>dominates</term><idx><h>dominates</h></idx> a strategy <m>Y</m> if every entry for <m>X</m> is greater than or equal to the corresponding entry for <m>Y</m>. In this case, we say <m>Y</m> is <term>dominated by</term><idx><h>dominated by</h></idx><idx><h>dominated strategy</h></idx> <m>X</m>.
+      </p>
+      <p>
+        If strategy <m>X</m> dominates stratgy <m>Y</m>, we can write <m>X\succ Y</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    In mathematical notation, let <m>a_{ik}</m> be the value in the <m>i^{ th}</m> row and <m>k^{ th}</m> column. Similarly,  <m>a_{jk}</m> is the value in the <m>j^{ th}</m> row and <m>k^{ th}</m> column. The <m>i^{ th}</m> row dominates the <m>j^{ th}</m> row if <m>a_{ik}\ge a_{jk}</m> for all <m>k</m>, and <m>a_{ik}> a_{jk}</m> for at least one <m>k</m>. 
+  </p>
+
+   
+
+  <p>
+    This definition can also be used for Player 2: we consider columns instead of rows. If we are looking at Player 1's payoffs, then Player 2 prefers smaller payoffs. Thus one column <m>X</m> dominates another column <m>Y</m> if all the entries in <m>X</m> are <em>smaller than or equal</em> to the corresponding entries in <m>Y</m>.
+  </p>
+
+  <p>
+    Here is the great thing: we can always eliminate dominated strategies! (Why?)
+    Thus, in <xref ref="E_domstrat2"></xref>, we can eliminate Row 2, as in <xref ref="F_strikerow2Ex2"></xref>.
+  </p>
+
+  <!--<table xml:id="T_strikerow2Ex2" >
+    <title>Row 2 is dominated by Row 1</title>
+    <tabular>
+          <row>
+            <cell></cell>
+            <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
+          </row>
+          <row>
+            <cell right="minor">Player 1</cell>
+            <cell bottom="minor" right="minor">1</cell>
+            <cell bottom="minor" right="minor">0</cell>
+            <cell bottom="minor" right="minor">2</cell>
+          </row>
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor"><stale>-1</stale></cell>
+            <cell bottom="minor" right="minor"><stale>-2</stale></cell>
+            <cell bottom="minor" right="minor"><stale>2</stale></cell>
+          </row>
+        </tabular>
+  </table>
+-->
+<figure xml:id="F_strikerow2Ex2">
+    <caption>Row 2 is dominated by Row 1.</caption>
+    <image width="30%" source="images/image-3.svg">
+      <latex-image>
+        <![CDATA[\begin{tikzpicture}
+        \draw[step=1cm] (0,0) grid (3,2);
+        \node at (1.5,2.3) {Player 2};
+        \node at (-.9, 1) {Player 1};
+        \node at (.5, .5) {-1};
+        \node at (1.5, .5) {-2};
+        \node at (2.5, .5) {2};
+        \node at (.5, 1.5) {1};
+        \node at (1.5, 1.5) {0};
+        \node at (2.5, 1.5) {2};
+        \draw[blue, very thick, opacity=0.9] (-0.1, .5)--(3.1, .5);
+        \end{tikzpicture}]]>
+      </latex-image>
+    </image>
+</figure>
+
+  <p>
+    Now it is easy to see what Player 2 should do, as we can ignore the crossed out row.
+  </p>
+
+  <p>
+    In <xref ref="E_domstrat3"></xref>, we cannot eliminate Row 2 since it is not dominated by Row 1. However, it should be clear that Column 2 dominates Column 3 (remember, Player 2 prefers SMALLER values). Thus we can eliminate Column 3 as in <xref ref="F_strikecol3Ex3"></xref>.
+  </p>
+
+  <!--<table xml:id="T_strikecol3Ex3" >
+    <title>Column 3 is dominated by Column 2</title>
+    <tabular>
+          <row>
+            <cell></cell>
+            <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
+          </row>
+          <row>
+            <cell right="minor">Player 1</cell>
+            <cell bottom="minor" right="minor">1</cell>
+            <cell bottom="minor" right="minor">0</cell>
+            <cell bottom="minor" right="minor"><stale>2</stale></cell>
+          </row>
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor">-1</cell>
+            <cell bottom="minor" right="minor">-2</cell>
+            <cell bottom="minor" right="minor"><stale>3</stale></cell>
+          </row>
+        </tabular>
+  </table>
+  -->
+<figure xml:id="F_strikecol3Ex3">
+    <caption>Column 3 is dominated by Column 2.</caption>
+    <image width="30%" source="images/image-4.svg">
+      <latex-image>
+        <![CDATA[\begin{tikzpicture}
+        \draw[step=1cm] (0,0) grid (3,2);
+        \node at (1.5,2.3) {Player 2};
+        \node at (-.9, 1) {Player 1};
+        \node at (.5, .5) {-1};
+        \node at (1.5, .5) {-2};
+        \node at (2.5, .5) {3};
+        \node at (.5, 1.5) {1};
+        \node at (1.5, 1.5) {0};
+        \node at (2.5, 1.5) {2};
+        \draw[blue, very thick, opacity=0.9] (2.5, -.1)--(2.5, 2.1);
+        \end{tikzpicture}]]>
+      </latex-image>
+    </image>
+</figure>
+  <p>
+    AFTER eliminating Column 3, Row 1 dominates Row 2. Now, in <xref ref="F_strikerow2Ex3"></xref> we can eliminate Row 2.
+  </p>
+
+ <!-- <table xml:id="T_strikerow2Ex3" >
+    <title>After eliminating Column 3, Row 2 is dominated by Row 1</title>
+   <tabular>
+          <row>
+            <cell></cell>
+            <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
+          </row>
+          <row>
+            <cell right="minor">Player 1</cell>
+            <cell bottom="minor" right="minor">1</cell>
+            <cell bottom="minor" right="minor">0</cell>
+            <cell bottom="minor" right="minor"><stale>2</stale></cell>
+          </row>
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor"><stale>-1</stale></cell>
+            <cell bottom="minor" right="minor"><stale>-2</stale></cell>
+            <cell bottom="minor" right="minor"><stale>3</stale></cell>
+          </row>
+        </tabular>
+  </table>
+-->
+<figure xml:id="F_strikerow2Ex3">
+    <caption>After eliminating Column 3, Row 2 is dominated by Row 1.</caption>
+    <image width="30%" source="images/image-5.svg">
+      <latex-image>
+        <![CDATA[ \begin{tikzpicture}
+        \draw[step=1cm] (0,0) grid (3,2);
+        \node at (1.5,2.3) {Player 2};
+        \node at (-.9, 1) {Player 1};
+        \node at (.5, .5) {-1};
+        \node at (1.5, .5) {-2};
+        \node at (2.5, .5) {3};
+        \node at (.5, 1.5) {1};
+        \node at (1.5, 1.5) {0};
+        \node at (2.5, 1.5) {2};
+        \draw[very thick, opacity=0.9] (2.5, -.1)--(2.5, 2.1);
+        \draw[blue, very thick, opacity=0.9] (-0.1, .5)--(3.1, .5);
+    \end{tikzpicture}]]>
+      </latex-image>
+    </image>
+</figure>
+  <p>
+    Again, in the reduced game it is easy to determine what each player should do.
+  </p>
+  <activity xml:id="A_checkequilpair">
+    <title>Check equilibrium pairs</title>
+    <statement>
+      <p>
+        Check that the strategy pairs we determined in <xref ref="E_domstrat2"></xref> and <xref ref="E_domstrat3"></xref> are, in fact, equilibrium pairs.
+      </p>
+    </statement>
+  </activity>
+
+  <assemblage xml:id="elimdomstrategies"><title>Eliminating Dominated Strategies</title>
+  <p>
+    Given a zero-sum game matrix with Player 1's payoffs. We find a <term>dominated strategy</term><idx><h>dominated strategy</h></idx> with the following process. Note, you can compare either rows or columns first.
+    <ol>
+      <li><p>Choose two rows.</p></li>
+      <li><p>Compare the corresponding values in the two rows. </p></li>
+      <li><p>If in each comparison, one row has values less than or equal to the values in the other row, eliminate the row with the smaller values.</p></li>
+    </ol></p>
+
+     <p><ol>
+      <li><p>Choose two columns.</p></li>
+      <li><p>Compare the corresponding values in the two columns. </p></li>
+      <li><p>If in each comparison, one column has values greater than or equal to the values in the other column, eliminate the column with the larger values.</p></li>
+    </ol></p>
+    <p>Once you have eliminated a row or column, you can repeat the process with the remaining rows or columns, ignoring any eliminated values. The process of elimininating dominated strategies is helpful for simplifying the game.</p>
+  </assemblage>
+
+  <p>Now, look back at the election examples from <xref ref="Ex_election"></xref> and apply the process of eliminating dominated strategies.</p>
+
+  <activity xml:id="A_elimdomstrat">
+    <title>Eliminating dominated strategies</title>
+
+    <statement>
+      <p>
+        Use the idea of eliminating dominated strategies to determine what each player should do in the Arnold/ Bainbridge examples in <xref ref="T_election1"></xref>, <xref ref="T_election2"></xref>, and <xref ref="T_election3"></xref>. Do you get the same strategy pairs as you determined in the related activities (<xref ref="A_election1"></xref>, <xref ref="A_election2"></xref>, <xref ref="A_election3"></xref>)?
+      </p>
+    </statement>
+  </activity>
+
+  <p>The next three activities provide more practice in using dominated strategies to find equilibrium pairs.</p>
+
+  <activity xml:id="A_domstratpractice1">
+    <title>More practice with dominated strategies</title>
+    <statement>
+      <p>
+        Use the idea of eliminating dominated strategies to determine any equilibrium pairs in the zero-sum game given in <xref ref="T_domstratpractice1"></xref>. Note, since it is a zero-sum game we need only show Player 1's payoffs. Explain all the steps in your solution. If you are unable to find an equilibrium pair, explain what goes wrong.
+      </p>
+
+      <table xml:id="T_domstratpractice1" >
+        <title>Payoff matrix for <xref ref="A_domstratpractice1"></xref>.</title>
+        <tabular halign="center">
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell colspan="4">Player 2</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell bottom="minor">W</cell>
+            <cell bottom="minor">X</cell>
+            <cell bottom="minor">Y</cell>
+            <cell bottom="minor">Z</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell right="minor">A</cell>
+            <cell right="minor" bottom="minor">1</cell>
+            <cell right="minor" bottom="minor">0</cell>
+            <cell right="minor" bottom="minor">0</cell>
+            <cell right="minor" bottom="minor">10</cell>
+          </row>
+          <row>
+            <cell>Player 1</cell>
+            <cell right="minor">B</cell>
+            <cell right="minor" bottom="minor">-1</cell>
+            <cell right="minor" bottom="minor">0</cell>
+            <cell right="minor" bottom="minor">-2</cell>
+            <cell right="minor" bottom="minor">9</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell right="minor">C</cell>
+            <cell right="minor" bottom="minor">1</cell>
+            <cell right="minor" bottom="minor">1</cell>
+            <cell right="minor" bottom="minor">1</cell>
+            <cell right="minor" bottom="minor">8</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell right="minor">D</cell>
+            <cell right="minor" bottom="minor">-2</cell>
+            <cell right="minor" bottom="minor">0</cell>
+            <cell right="minor" bottom="minor">0</cell>
+            <cell right="minor" bottom="minor">7</cell>
+          </row>
+        </tabular>
+      </table>
+    </statement>
+  </activity>
+  <activity xml:id="A_domstratpractice2">
+    <title>Determine equilibrium pairs</title>
+    <statement>
+      <p>
+        Determine any equilibrium pairs in the zero-sum game given in <xref ref="T_domstratpractice2"></xref>. Explain all the steps in your solution. If you are unable to find an equilibrium pair, explain what goes wrong.
+      </p>
+
+      <table xml:id="T_domstratpractice2" >
+        <title>Payoff matrix for <xref ref="A_domstratpractice2"></xref>.</title>
+        <tabular halign="center">
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell colspan="4">Player 2</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell bottom="minor">W</cell>
+            <cell bottom="minor">X</cell>
+            <cell bottom="minor">Y</cell>
+            <cell bottom="minor">Z</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell right="minor">A</cell>
+            <cell right="minor" bottom="minor">1</cell>
+            <cell right="minor" bottom="minor">2</cell>
+            <cell right="minor" bottom="minor">3</cell>
+            <cell right="minor" bottom="minor">4</cell>
+          </row>
+          <row>
+            <cell>Player 1</cell>
+            <cell right="minor">B</cell>
+            <cell right="minor" bottom="minor">0</cell>
+            <cell right="minor" bottom="minor">-1</cell>
+            <cell right="minor" bottom="minor">-0</cell>
+            <cell right="minor" bottom="minor">5</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell right="minor">C</cell>
+            <cell right="minor" bottom="minor">-1</cell>
+            <cell right="minor" bottom="minor">3</cell>
+            <cell right="minor" bottom="minor">2</cell>
+            <cell right="minor" bottom="minor">4</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell right="minor">D</cell>
+            <cell right="minor" bottom="minor">0</cell>
+            <cell right="minor" bottom="minor">1</cell>
+            <cell right="minor" bottom="minor">-1</cell>
+            <cell right="minor" bottom="minor">1</cell>
+          </row>
+        </tabular>
+      </table>
+    </statement>
+  </activity>
+  <activity xml:id="A_domstratpractice3">
+    <title>Practice finding equilibrium pairs</title>
+    <statement>
+      <p>
+        Determine any equilibrium pairs in the zero-sum game given in <xref ref="T_domstratpractice3"></xref>. Explain all the steps in your solution. If you are unable to find an equilibrium pair, explain what goes wrong.
+      </p>
+
+      <table xml:id="T_domstratpractice3" >
+        <title>Payoff matrix for <xref ref="A_domstratpractice3"></xref>.</title>
+        <tabular halign="center">
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell colspan="4">Player 2</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell bottom="minor">W</cell>
+            <cell bottom="minor">X</cell>
+            <cell bottom="minor">Y</cell>
+            <cell bottom="minor">Z</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell right="minor">A</cell>
+            <cell right="minor" bottom="minor">-2</cell>
+            <cell right="minor" bottom="minor">0</cell>
+            <cell right="minor" bottom="minor">3</cell>
+            <cell right="minor" bottom="minor">20</cell>
+          </row>
+          <row>
+            <cell>Player 1</cell>
+            <cell right="minor">B</cell>
+            <cell right="minor" bottom="minor">1</cell>
+            <cell right="minor" bottom="minor">-2</cell>
+            <cell right="minor" bottom="minor">-3</cell>
+            <cell right="minor" bottom="minor">0</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell right="minor">C</cell>
+            <cell right="minor" bottom="minor">10</cell>
+            <cell right="minor" bottom="minor">-10</cell>
+            <cell right="minor" bottom="minor">-1</cell>
+            <cell right="minor" bottom="minor">1</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell right="minor">D</cell>
+            <cell right="minor" bottom="minor">0</cell>
+            <cell right="minor" bottom="minor">0</cell>
+            <cell right="minor" bottom="minor">10</cell>
+            <cell right="minor" bottom="minor">15</cell>
+          </row>
+        </tabular>
+      </table>
+    </statement>
+  </activity>
+  <activity xml:id="A_domstratpractice4">
+    <title>A more challenging example</title>
+    <statement>
+      <p>
+        Determine any equilibrium pairs in the zero-sum game given in <xref ref="T_domstratpractice4"></xref>. Explain all the steps in your solution. If you are unable to find an equilibrium pair, explain what goes wrong.
+      </p>
+
+      <table xml:id="T_domstratpractice4" >
+        <title>Payoff matrix for <xref ref="A_domstratpractice4"></xref>.</title>
+        <tabular halign="center">
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell colspan="4">Player 2</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell bottom="minor">W</cell>
+            <cell bottom="minor">X</cell>
+            <cell bottom="minor">Y</cell>
+            <cell bottom="minor">Z</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell right="minor">A</cell>
+            <cell right="minor" bottom="minor">-2</cell>
+            <cell right="minor" bottom="minor">0</cell>
+            <cell right="minor" bottom="minor">3</cell>
+            <cell right="minor" bottom="minor">20</cell>
+          </row>
+          <row>
+            <cell>Player 1</cell>
+            <cell right="minor">B</cell>
+            <cell right="minor" bottom="minor">1</cell>
+            <cell right="minor" bottom="minor">-2</cell>
+            <cell right="minor" bottom="minor">-5</cell>
+            <cell right="minor" bottom="minor">-3</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell right="minor">C</cell>
+            <cell right="minor" bottom="minor">10</cell>
+            <cell right="minor" bottom="minor">-10</cell>
+            <cell right="minor" bottom="minor">-1</cell>
+            <cell right="minor" bottom="minor">1</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell right="minor">D</cell>
+            <cell right="minor" bottom="minor">0</cell>
+            <cell right="minor" bottom="minor">0</cell>
+            <cell right="minor" bottom="minor">10</cell>
+            <cell right="minor" bottom="minor">8</cell>
+          </row>
+        </tabular>
+      </table>
+    </statement>
+  </activity>
+  <p>
+    Chances are you had trouble determining an equilibrium pair for the game in <xref ref="A_domstratpractice4"></xref>. Does this mean there isn't an equilibrium pair? Not necessarily, but we are stuck if we try to use only the idea of eliminating dominated strategies. So we need a new method.
+  </p></subsection>
+
+  <subsection xml:id="SS_maximin"><title>Maximin and Minimax Strategies</title>
+
+  <p>
+    We might think of our next method as the <q>worst case scenario,</q> or <q>extremely defensive play.</q> The idea is that we want to assume our opponent is the best player to ever live. In fact, we might assume our opponent is telepathic. So no matter what we do, our opponent will always guess what we are going to choose.
+  </p>
+
+  <example xml:id="A_intromaxmin">
+    <title>Playing Against the Best</title>
+    <statement>
+      <p>
+        Assume you are Player 1, and you are playing against this <q>infinitely smart</q> Player 2. Consider the game in <xref ref="T_domstratpractice1"></xref>. If you pick row A, what will Player 2 do? Player 2 will pick column X or Y. Try this for each of the rows. Which row is your best choice? If you pick A, you will get <m>0</m>; if you pick B, you will get <m>-2</m>; if you pick C, you will get <m>1</m>; and if you pick D you will get <m>-2</m>. Thus, your best choice is to choose C and get <m>1</m>. Now assume you are Player 2, and Player 1 is <q>infinitely smart.</q> Which column is your best choice? If you pick W, Player 1 will get <m>1</m> (you will get <m>-1</m>); if you pick X, Player 1 will get <m>1</m>; if you pick Y, Player 1 will get <m>1</m>; and if you pick Z, Player 1 will get <m>10</m>. Thus, you can choose W, X, or Y (since you want Player 1 to win the least) and get <m>-1</m>.
+      </p>
+    </statement>
+  </example>
+
+  <activity xml:id="A_maxmindomstrat2">
+    <title>A new method</title>
+    <statement>
+      <p>
+        Using the method described in <xref ref="A_intromaxmin"></xref>, determine what each player should do in the game in <xref ref="T_domstratpractice2"></xref>.
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_maxmindomstrat3">
+    <title>More practice with the new method</title>
+    <statement>
+      <p>
+        Using the method described in <xref ref="A_intromaxmin"></xref>, determine what each player should do in the game in <xref ref="T_domstratpractice3"></xref>.
+      </p>
+    </statement>
+  </activity>
+
+  <p>After working through a few examples can you describe more generally the process used in <xref ref="A_intromaxmin"></xref>? What is Player 1 looking for in each row? Then how does she choose which row to play? What is Player 2 looking for in each column? How does he choose which column to play?</p>
+
+  <activity xml:id="A_genrule">
+    <title>Generalizing the new method</title>
+    <statement>
+      <p>
+        Generalize the method described in <xref ref="A_intromaxmin"></xref>. In other words, give a general rule for how Player 1 should determine his or her best move. Do the same for Player 2.
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_maxminequil">
+    <title>The new method and equlibrium points</title>
+    <statement>
+      <p>
+        What do you notice about using this method on the games in <xref ref="T_domstratpractice1"></xref>, <xref ref="T_domstratpractice2"></xref>, and <xref ref="T_domstratpractice3"></xref>? Is the solution an equilibrium pair?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_maxmindomstrat4">
+    <title>The new method on the challenging example</title>
+    <statement>
+      <p>
+        Now try this method on the elusive payoff matrix in <xref ref="T_domstratpractice4">Table</xref>. What should each player do? Do you think we get an equilibrium pair? Explain.
+      </p>
+    </statement>
+  </activity>
+  <p>
+    The strategies we found using the above method have a more official name. Player 1's strategy is called the <term>maximin</term><idx><h>maximin strategy</h></idx> strategy. Player 1 is maximizing the minimum values from each row. Player 2's strategy is called the <term>minimax</term><idx><h>minimax</h></idx> strategy. Player 2 is minimizing the maximum values from each column. Notice, we can find the maximin and minimax strategies for any zero-sum game. But do our players always want to use these strategies? Will they always result in an equilibrium pair? The next five activities explore these questions.
+  </p>
+  <assemblage xml:id="maximinstrategy"><title>Finding the Maximin and Minimax Strategies</title>
+  <p>
+    Given a zero-sum game matrix with Player 1's payoffs. We find the <term>maximin strategy</term><idx><h>maximin strategy</h></idx> with the following process.
+    <ol>
+      <li><p>Find the smallest value in each row.</p></li>
+      <li><p>From the smallest values you found in step (1), choose the largest.</p></li>
+      <li><p>Player 1 chooses the row corresponding to the value found in (2).</p></li>
+    </ol></p>
+    <p>
+    Given a zero-sum game matrix with Player 1's payoffs. We find the <term>minimax strategy</term><idx><h>minimax strategy</h></idx> with the following process.
+    <ol>
+      <li><p>Find the largest value in each column.</p></li>
+      <li><p>From the largest values you found in step (1), choose the smallest.</p></li>
+      <li><p>Player 2 chooses the column corresponding to the value found in (2).</p></li>
+    </ol></p>
+    <p>Since we often will look for the maximin strategy for Player 1 and the minimax strategy for Player 2 in a game, this strategy pair will be referred to as the <term>maximin/minimax</term> strategy (or strategy pair).</p>
+  </assemblage>
+  <activity xml:id="A_domstratpractice5">
+    <title>Look for dominated strategies</title>
+    <statement>
+      <p>
+        Let's consider another game matrix, given in <xref ref="T_domstratpractice5"></xref>. Explain why you cannot use dominated strategies to find an equilibrium pair. Do you think there is an equilibrium pair for this game (why or why not)?
+      </p>
+
+      <table xml:id="T_domstratpractice5" >
+        <title>Payoff matrix for <xref ref="A_domstratpractice5"></xref>.</title>
+        <tabular halign="center">
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell colspan="4">Player 2</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell bottom="minor">W</cell>
+            <cell bottom="minor">X</cell>
+            <cell bottom="minor">Y</cell>
+            <cell bottom="minor">Z</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell right="minor">A</cell>
+            <cell right="minor" bottom="minor">-2</cell>
+            <cell right="minor" bottom="minor">0</cell>
+            <cell right="minor" bottom="minor">3</cell>
+            <cell right="minor" bottom="minor">20</cell>
+          </row>
+          <row>
+            <cell>Player 1</cell>
+            <cell right="minor">B</cell>
+            <cell right="minor" bottom="minor">1</cell>
+            <cell right="minor" bottom="minor">2</cell>
+            <cell right="minor" bottom="minor">-3</cell>
+            <cell right="minor" bottom="minor">0</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell right="minor">C</cell>
+            <cell right="minor" bottom="minor">10</cell>
+            <cell right="minor" bottom="minor">-10</cell>
+            <cell right="minor" bottom="minor">-1</cell>
+            <cell right="minor" bottom="minor">1</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell right="minor">D</cell>
+            <cell right="minor" bottom="minor">0</cell>
+            <cell right="minor" bottom="minor">0</cell>
+            <cell right="minor" bottom="minor">10</cell>
+            <cell right="minor" bottom="minor">15</cell>
+          </row>
+        </tabular>
+      </table>
+    </statement>
+  </activity>
+  <activity xml:id="A_maxmindomstrat5">
+    <title>Find the maximin/minimax strategy</title>
+    <statement>
+      <p>
+        If both players use the maximin/ minimax strategy, what is the outcome of the game in <xref ref="T_domstratpractice5"></xref>?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_predictmaxmin">
+    <title>Predicting a maximin strategy</title>
+    <statement>
+      <p>
+        In the game in <xref ref="T_domstratpractice5"></xref>, if Player 1's opponent can guess that Player 1 will choose to use a maximin strategy, is Player 1 better off <em>not</em> using the maximin strategy?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_iterate5">
+    <title>Deviating from the maximin/minimax strategy</title>
+    <statement>
+      <p>
+        Suppose both players initially decide to use the maximin/minimax strategy in the game in <xref ref="T_domstratpractice5"></xref>. Is Player 1 better off choosing a different strategy? If Player 2 guesses a change, is Player 2 better off changing strategies? Continue this line of reasoning for several iterations. What strategies do each of the players choose? Is at least one player always better off switching strategies? Can we conclude that the maximin/ minimax strategy does not lead to an equilibrium pair?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_compareex">
+    <title>Comparing examples</title>
+    <statement>
+      <p>
+        Compare your answers in <xref ref="A_iterate5"></xref> to what happens in <xref ref="A_domstratpractice1"></xref>, <xref ref="A_domstratpractice2"></xref>, and <xref ref="A_domstratpractice3"></xref>. Can you identify any key differences between the games in <xref ref="A_iterate5"></xref> and <xref ref="A_domstratpractice1"></xref>, <xref ref="A_domstratpractice2"></xref>, and <xref ref="A_domstratpractice3"></xref>?
+      </p>
+    </statement>
+  </activity>
+  <p>Given a zero-sum matrix game, we can find equilibruim pairs (if they exist) by the <q>guess and check</q> method, by eliminating dominated strategies, and by looking for the minimax/maximin strategies. You should be able to apply all three methods and think about which method might be the most appropriate for a given matrix game. For example, although <q>guess and check</q> should always find an equilibrium point if it exists, it may be very tedious to apply to a really large matrix. The maximin/minimax method might be much faster. </p></subsection>
+
+  <reading-questions>
+      <title>Check Your Understanding</title>
+      
+
+      <exercise label="IGT_strat_CYU_exdomstratrow"><statement><p>Suppose we are looking for dominated strategies in the following matrix.
+<table xml:id="T_exdomstratrow" >
+        <tabular>
+          <row>
+            <cell></cell>
+            <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
+          </row>
+          <row>
+            <cell right="minor">Player 1</cell>
+            <cell bottom="minor" right="minor">-1</cell>
+            <cell bottom="minor" right="minor">0</cell>
+            <cell bottom="minor" right="minor">2</cell>
+          </row>
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor">5</cell>
+            <cell bottom="minor" right="minor">-2</cell>
+            <cell bottom="minor" right="minor">1</cell>
+          </row>
+
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor">0</cell>
+            <cell bottom="minor" right="minor">1</cell>
+            <cell bottom="minor" right="minor">4</cell>
+          </row>
+        </tabular>
+      </table>
+    </p>
+    <p>Which row can we eliminate?
+      </p>
+    </statement><choices randomize="no">
+      <choice correct="yes"><statement><p>Row 1</p></statement>
+      <feedback><p>Row 1 is dominated by Row 3.</p></feedback></choice>
+      <choice><statement><p>Row 2</p></statement>
+     <feedback><p>Row 2 is not dominated by either Row 1 or Row 3.</p></feedback></choice>
+      <choice><statement><p>Row 3</p></statement>
+     <feedback><p>Row 3 is not dominated by either Row 1 or Row 2.</p></feedback></choice>
+     <choice><statement><p>We can't eliminate any rows.</p></statement>
+     <feedback><p>There is a dominated row.</p></feedback></choice>
+    </choices>
+      <answer><p>Row 1. Row 1 is dominated by Row 3.</p></answer></exercise>
+
+      <exercise label="IGT_strat_CYU_exdomstratcol"><statement><p>Suppose we are looking for dominated strategies in the matrix <xref ref="T_exdomstratrow"></xref>.
+
+    </p>
+    <p>Which column can we eliminate?
+      </p>
+    </statement><choices randomize="no">
+      <choice><statement><p>Column 1</p></statement>
+      <feedback><p>Column 1 is not dominated by Column 2 or Column 3.</p></feedback></choice>
+      <choice><statement><p>Column 2</p></statement>
+     <feedback><p>Column 2 is not dominated by either Column 1 or Column 3. Remember Player 2 prefers smaller values since these are PLayer 1's payoffs.</p></feedback></choice>
+      <choice correct="yes"><statement><p>Column 3</p></statement>
+     <feedback><p>Column 3 is dominated by Column 2.</p></feedback></choice>
+     <choice><statement><p>We can't eliminate any columns.</p></statement>
+     <feedback><p>There is a dominated column.</p></feedback></choice>
+    </choices>
+      <answer><p>Column 3. Column 3 is dominated by Column 2.</p></answer></exercise>
+
+      <exercise label="IGT_strat_CYU_exdomstrat1"><statement><p>Suppose we are looking for dominated strategies in the following matrix.
+<table xml:id="T_exdomstrat1" >
+        <tabular>
+          <row>
+            <cell></cell>
+            <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
+          </row>
+          <row>
+            <cell right="minor">Player 1</cell>
+            <cell bottom="minor" right="minor">-2</cell>
+            <cell bottom="minor" right="minor">-1</cell>
+            <cell bottom="minor" right="minor">0</cell>
+          </row>
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor">0</cell>
+            <cell bottom="minor" right="minor">2</cell>
+            <cell bottom="minor" right="minor">-1</cell>
+          </row>
+
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor">1</cell>
+            <cell bottom="minor" right="minor">3</cell>
+            <cell bottom="minor" right="minor">-4</cell>
+          </row>
+        </tabular>
+      </table>
+    </p>
+    <p>Which row or column can we eliminate?
+      </p>
+    </statement><choices randomize="no">
+      <choice ><statement><p>Row 1</p></statement>
+      <feedback><p>Row 1 is not dominated by either Row 2 or Row 3.</p></feedback></choice>
+      <choice><statement><p>Row 2</p></statement>
+     <feedback><p>Row 2 is not dominated by either Row 1 or Row 3.</p></feedback></choice>
+      <choice><statement><p>Row 3</p></statement>
+     <feedback><p>Row 3 is not dominated by either Row 1 or Row 2.</p></feedback></choice>
+     <choice><statement><p>Column 1</p></statement>
+      <feedback><p>Column 1 is not dominated by Column 2 or Column 3.</p></feedback></choice>
+      <choice correct="yes"><statement><p>Column 2</p></statement>
+     <feedback><p>Column 2 is dominated by Column 1.</p></feedback></choice>
+      <choice><statement><p>Column 3</p></statement>
+     <feedback><p>Column 3 is not dominated by either Column 1 or Column 2.</p></feedback></choice>
+     <choice><statement><p>We can't eliminate any rows or columns.</p></statement>
+     <feedback><p>There is a dominated column.</p></feedback></choice>
+    </choices>
+      <answer><p>Column 2. Column 2 is dominated by Column 1.</p></answer></exercise>
+
+      <exercise label="IGT_strat_CYU_exdomstrat2"><statement><p>Suppose we are looking for dominated strategies in the following matrix.
+<table xml:id="T_exdomstrat2" >
+        <tabular>
+          <row>
+            <cell></cell>
+            <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
+          </row>
+          <row>
+            <cell right="minor">Player 1</cell>
+            <cell bottom="minor" right="minor">3</cell>
+            <cell bottom="minor" right="minor">0</cell>
+            <cell bottom="minor" right="minor">-1</cell>
+          </row>
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor">1</cell>
+            <cell bottom="minor" right="minor">2</cell>
+            <cell bottom="minor" right="minor">-3</cell>
+          </row>
+
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor">1</cell>
+            <cell bottom="minor" right="minor">0</cell>
+            <cell bottom="minor" right="minor">3</cell>
+          </row>
+        </tabular>
+      </table>
+    </p>
+    <p>Which row or column can we eliminate?
+      </p>
+    </statement><choices randomize="no">
+      <choice ><statement><p>Row 1</p></statement>
+      <feedback><p>Row 1 is not dominated by either Row 2 or Row 3.</p></feedback></choice>
+      <choice><statement><p>Row 2</p></statement>
+     <feedback><p>Row 2 is not dominated by either Row 1 or Row 3.</p></feedback></choice>
+      <choice><statement><p>Row 3</p></statement>
+     <feedback><p>Row 3 is not dominated by either Row 1 or Row 2.</p></feedback></choice>
+     <choice><statement><p>Column 1</p></statement>
+      <feedback><p>Column 1 is not dominated by Column 2 or Column 3.</p></feedback></choice>
+      <choice ><statement><p>Column 2</p></statement>
+     <feedback><p>Column 2 is not dominated by either Column 1 or Column 3.</p></feedback></choice>
+      <choice><statement><p>Column 3</p></statement>
+     <feedback><p>Column 3 is not dominated by either Column 1 or Column 2.</p></feedback></choice>
+     <choice correct="yes"><statement><p>We can't eliminate any rows or columns.</p></statement>
+     <feedback><p>There is not a dominated row or column.</p></feedback></choice>
+    </choices>
+      <answer><p>We can't eliminate any rows or columns. There is not a dominated row or column.</p></answer></exercise>
+
+      <exercise label="IGT_strat_CYU_maximin"><introduction><p>This exercise finds Player 1's maximin strategy.</p></introduction>
+      <task><statement><p> Click on or circle the smallest value in each row.</p></statement>
+      <areas><p>
+<table xml:id="T_exmaxmin1" >
+        <tabular>
+          <row>
+            <cell></cell>
+            <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
+          </row>
+          <row>
+            <cell right="minor">Player 1</cell>
+            <cell bottom="minor" right="minor"><area correct="no">3</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no">0</area></cell>
+            <cell bottom="minor" right="minor"><area correct="yes">-1</area></cell>
+          </row>
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor"><area correct="no">1</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no">2</area></cell>
+            <cell bottom="minor" right="minor"><area correct="yes">-3</area></cell>
+          </row>
+
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor"><area correct="no">1</area></cell>
+            <cell bottom="minor" right="minor"><area correct="yes">0</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no">3</area></cell>
+          </row>
+        </tabular>
+      </table>
+    </p></areas>
+    <answer><m>-1, -3, 0</m></answer></task>
+    <!--<task>
+      <statement><p>What is the largest of the values you selected (a)? <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="0">
+    <feedback>
+      <p>
+       O is the largest of the smallest values in each row.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="3">
+    <feedback>
+      <p>
+        This is the largest value in the matrix, but not the largest of the smallest values from (a).
+      </p>
+    </feedback>
+    </condition>
+    <condition number="-3">
+    <feedback>
+      <p>
+        This is the smallest value form (a). We want the largest.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
+    </task>-->
+    <task><statement><p>If Player 1 wants to play the maximin stategy, she should play the row with the largest of the values from (a). Thus, she should play</p></statement>
+  <choices randomize="no">
+      <choice ><statement><p>Row 1.</p></statement>
+      <feedback><p>Incorrect.</p></feedback></choice>
+      <choice><statement><p>Row 2.</p></statement>
+     <feedback><p>Incorrect.</p></feedback></choice>
+      <choice correct="yes"><statement><p>Row 3.</p></statement>
+     <feedback><p>Row 3 is the row with the largest of the smallest values from each row.</p></feedback></choice>
+   </choices>
+   <answer><p>Row 3. Row 3 is the row with the largest of the smallest values from each row.</p></answer></task></exercise>
+
+   <exercise label="IGT_strat_CYU_minimax"><introduction><p>This exercise finds Player 2's minimax strategy.</p></introduction>
+      <task><statement><p> Click on or circle the largest value in each column.</p></statement>
+      <areas><p>
+<table xml:id="T_exminimax1" >
+        <tabular>
+          <row>
+            <cell></cell>
+            <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
+          </row>
+          <row>
+            <cell right="minor">Player 1</cell>
+            <cell bottom="minor" right="minor"><area correct="yes">3</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no">0</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no">-1</area></cell>
+          </row>
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor"><area correct="no">1</area></cell>
+            <cell bottom="minor" right="minor"><area correct="yes">2</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no">-3</area></cell>
+          </row>
+
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor"><area correct="no">1</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no">0</area></cell>
+            <cell bottom="minor" right="minor"><area correct="yes">3</area></cell>
+          </row>
+        </tabular>
+      </table>
+    </p></areas><answer><m>3, 2, 3</m></answer></task>
+    <!--<task>
+      <statement><p>What is the smallest of the values you selected (a)? <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="2">
+    <feedback>
+      <p>
+       2 is the smallest of the largest values in each column.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="-3">
+    <feedback>
+      <p>
+        This is the smallest value in the matrix, but not the smallest of the largest values from (a).
+      </p>
+    </feedback>
+    </condition>
+    <condition number="3">
+    <feedback>
+      <p>
+        This is the largest value from (a). We want the smallest.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
+    </task>-->
+    <task><statement><p>If Player 2 wants to play the minimax stategy, she should play the column with the smallest of the values from (a). Thus, she should play</p></statement>
+  <choices randomize="no">
+      <choice ><statement><p>Column 1.</p></statement>
+      <feedback><p>Incorrect.</p></feedback></choice>
+      <choice correct="yes"><statement><p>Column 2.</p></statement>
+     <feedback><p>Column 2 is the column with the smallest of the largest values from each column.</p></feedback></choice>
+      <choice ><statement><p>Column 3.</p></statement>
+     <feedback><p>Incorrect</p></feedback></choice>
+   </choices><answer><p>Column 2. Column 2 is the column with the smallest of the largest values from each column.</p></answer></task></exercise>
+
+   <exercise label="IGT_strat_CYU_maxminvalequal1">
+    <statement><p>Looking at the game <xref ref="T_exdomstrat2"></xref>, the value of the maximin strategy for Player 1 is
+
+    <var width="3"/>.</p> 
+    <p>The value of the minimax strategy for Player 2 is <var width="3"/>.</p>
+    <p>These two values are equal (<q>yes</q> or <q>no</q>) <var width="3"/>. </p></statement>
+      <setup>
+    <var>
+    <condition number="0">
+    <feedback>
+      <p>
+       O is the largest of the smallest values in each row.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="3">
+    <feedback>
+      <p>
+        This is the largest value in the matrix, but not the largest of the minimum values from each row.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="-3">
+    <feedback>
+      <p>
+        This is the smallest of the minimum values. We want the largest.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+    <var>
+    <condition number="2">
+    <feedback>
+      <p>
+       2 is the smallest of the largest values in each column.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="-3">
+    <feedback>
+      <p>
+        This is the smallest value in the matrix, but not the smallest of the maximum values in each column.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="3">
+    <feedback>
+      <p>
+        This is the largest of the maximum values. We want the smallest.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+    <var>
+      <condition string="no">
+    <feedback>
+      <p>
+        The maximin and the minimax values are not equal.
+      </p>
+    </feedback>
+    </condition>
+    <condition string="yes">
+    <feedback>
+      <p>
+        The maximin and the minimax values are not equal.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Yuo answer should be <q>yes</q> or <q>no</q>.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup><answer><p>0, 2, no</p></answer>
+     
+   </exercise>
+
+   <exercise label="IGT_strat_CYU_maxminequilib1">
+     <statement correct="no">
+       <p>True or False: The game <xref ref="T_exdomstrat2"></xref>, has an equilibrium pair.</p>
+     </statement><hint><p>Try using what you know about the maximin and minimax strategies.</p></hint><answer>False</answer><feedback><p>This game does not have an equilibrium pair.</p></feedback><answer><p>False.</p></answer>
+   </exercise>
+
+<exercise label="IGT_strat_CYU_maximin2"><introduction><p>This exercise finds Player 1's maximin strategy.</p></introduction>
+      <task><statement><p> Click on or circle the smallest value in each row.</p></statement>
+      <areas><p>
+<table xml:id="T_exmaxmin2" >
+        <tabular>
+          <row>
+            <cell></cell>
+            <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
+          </row>
+          <row>
+            <cell right="minor">Player 1</cell>
+            <cell bottom="minor" right="minor"><area correct="yes">-4</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no">-2</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no">5</area></cell>
+          </row>
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor"><area correct="no">2</area></cell>
+            <cell bottom="minor" right="minor"><area correct="yes">1</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no">3</area></cell>
+          </row>
+
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor"><area correct="no">5</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no">-3</area></cell>
+            <cell bottom="minor" right="minor"><area correct="yes">-4</area></cell>
+          </row>
+        </tabular>
+      </table>
+    </p></areas><answer><m>-4, 1, -4</m></answer></task>
+    
+    <task><statement><p>If Player 1 wants to play the maximin stategy, she should play the row with the largest of the values from (a). Thus, she should play</p></statement>
+  <choices randomize="no">
+      <choice ><statement><p>Row 1.</p></statement>
+      <feedback><p>Incorrect.</p></feedback></choice>
+      <choice correct="yes"><statement><p>Row 2.</p></statement>
+     <feedback><p>Row 2 is the row with the largest of the smallest values from each row.</p></feedback></choice>
+      <choice ><statement><p>Row 3.</p></statement>
+     <feedback><p>Incorrect.</p></feedback></choice>
+   </choices><answer><p>Row 2. Row 2 is the row with the largest of the smallest values from each row.</p></answer></task></exercise>
+
+   <exercise label="IGT_strat_CYU_minimax2"><introduction><p>This exercise finds Player 2's minimax strategy.</p></introduction>
+      <task><statement><p> Click on or circle the largest value in each column.</p></statement>
+      <areas><p>
+<table xml:id="T_exminimax2" >
+        <tabular>
+          <row>
+            <cell></cell>
+            <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
+          </row>
+          <row>
+            <cell right="minor">Player 1</cell>
+            <cell bottom="minor" right="minor"><area correct="no">-4</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no">-2</area></cell>
+            <cell bottom="minor" right="minor"><area correct="yes">5</area></cell>
+          </row>
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor"><area correct="no">2</area></cell>
+            <cell bottom="minor" right="minor"><area correct="yes">1</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no">3</area></cell>
+          </row>
+
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor"><area correct="yes">5</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no">-3</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no">-4</area></cell>
+          </row>
+        </tabular>
+      </table>
+    </p></areas><answer>5, 1, 5</answer></task>
+    
+    <task><statement><p>If Player 2 wants to play the minimax stategy, she should play the column with the smallest of the values from (a). Thus, she should play</p></statement>
+  <choices randomize="no">
+      <choice ><statement><p>Column 1.</p></statement>
+      <feedback><p>Incorrect.</p></feedback></choice>
+      <choice correct="yes"><statement><p>Column 2.</p></statement>
+     <feedback><p>Column 2 is the column with the smallest of the largest values from each column.</p></feedback></choice>
+      <choice ><statement><p>Column 3.</p></statement>
+     <feedback><p>Incorrect</p></feedback></choice>
+   </choices><answer><p>Column 2 is the column with the smallest of the largest values from each column.</p></answer></task></exercise>
+
+   <exercise label="IGT_strat_CYU_maxminvalequal2">
+    <statement><p>Consider the game given in the table.
+    <table xml:id="T_exdomstrat3" >
+        <tabular>
+          <row>
+            <cell></cell>
+            <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
+          </row>
+          <row>
+            <cell right="minor">Player 1</cell>
+            <cell bottom="minor" right="minor">-4</cell>
+            <cell bottom="minor" right="minor">-2</cell>
+            <cell bottom="minor" right="minor">5</cell>
+          </row>
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor">2</cell>
+            <cell bottom="minor" right="minor">1</cell>
+            <cell bottom="minor" right="minor">3</cell>
+          </row>
+
+          <row>
+            <cell right="minor"></cell>
+            <cell bottom="minor" right="minor">5</cell>
+            <cell bottom="minor" right="minor">-3</cell>
+            <cell bottom="minor" right="minor">-4</cell>
+          </row>
+        </tabular>
+      </table> </p>
+      <p>The value of the maximin strategy for Player 1 is <var width="3"/>.</p> 
+    <p>The value of the minimax strategy for Player 2 is <var width="3"/>.</p>
+    <p>These two values are equal (<q>yes</q> or <q>no</q>) <var width="3"/>. </p></statement>
+      <setup>
+    <var>
+    <condition number="1">
+    <feedback>
+      <p>
+       1 is the largest of the smallest values in each row.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="5">
+    <feedback>
+      <p>
+        This is the largest value in the matrix, but not the largest of the minimum values from each row.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="-4">
+    <feedback>
+      <p>
+        This is the smallest of the minimum values. We want the largest.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+    <var>
+    <condition number="1">
+    <feedback>
+      <p>
+       1 is the smallest of the largest values in each column.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="-4">
+    <feedback>
+      <p>
+        This is the smallest value in the matrix, but not the smallest of the maximum values from each column.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="5">
+    <feedback>
+      <p>
+        This is the largest value of the maximum values. We want the smallest.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+    <var>
+      
+    <condition string="yes">
+    <feedback>
+      <p>
+        The maximin and the minimax values are equal.
+      </p>
+    </feedback>
+    </condition>
+    <condition string="no">
+    <feedback>
+      <p>
+        The maximin and the minimax values are equal.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Your answer should be <q>yes</q> or <q>no</q>.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup><answer><p>1, 1, yes</p></answer>
+     
+   </exercise>
+
+   <exercise label="IGT_strat_CYU_maxminequilib2">
+     <statement correct="yes">
+       <p>True or False: The game <xref ref="T_exdomstrat3"></xref>, has an equilibrium pair.</p>
+     </statement><feedback><p>This game has an equilibrium pair, [Row 2, Column 2].</p></feedback><hint><p>Try using what you know about the maximin and minimax strategies.</p></hint><answer>True.</answer>
+   </exercise>
+   
+    </reading-questions>
+</section>

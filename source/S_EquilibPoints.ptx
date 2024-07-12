@@ -1,0 +1,206 @@
+
+<section xml:id="S_EquilibPoints">
+  <title>Equilibrium Points</title>
+  <p>
+    In this section, we will try to gain a greater understanding of equilibrium strategies in a game. In general, we call the pair of equilibrium strategies an <term>equilibrium pair</term><idx><h>equilibrium pair</h></idx>, while we call the specific payoff vector associated with an equilibrium pair an <term>equilibrium point</term><idx><h>equilibrium point</h></idx>.
+  </p>
+  <activity xml:id="A_matrixexamples">
+    <title>Find equilibrium points</title>
+    <introduction>
+      <p>
+      Determine the equilibrium point(s) for the following games.</p></introduction>
+
+        <task><p>
+            <m>\left[\begin{matrix}(2, -2)\amp (-1, 1)\\
+            (2, -2)\amp (-1, 1)
+            \end{matrix} \right]</m>
+          </p></task>
+
+        <task><p>
+            <m>\left[\begin{matrix}(0, 0)\amp (-1, 1)\amp (0, 0)\\
+            (-1, 1)\amp (0, 0)\amp (-1, 1)\\
+            (0, 0)\amp (1, -1)\amp (0, 0)
+            \end{matrix} \right]</m>
+          </p></task>
+  </activity>
+  <activity xml:id="A_equilobserve">
+    <title>An observation about equilibrium points</title>
+    <statement>
+      <p>
+        What do you notice about the values of the equilibrium points of the games in <xref ref="A_matrixexamples"></xref>?
+      </p>
+    </statement>
+  </activity>
+  <p>
+    We now get to the main quetion in this section.</p>
+     <question xml:id="Q_valuesofequilib"><p>Can two equilibrium points for a two-player zero-sum game have different values?
+     </p></question>
+     <p>By experimenting with some examples, try to create an example of a game with two equilibrium points where those points have different values for one of the players. If you can successfully create such an example, you will have answered the question. But just because you can't find an example, that doesn't mean one doesn't exist!
+  </p>
+  <activity xml:id="A_diffexperiment"><title>Experimenting with different values</title>
+  <introduction><p>Let's see if we can create a <m>2\times 2</m> matrix for a zero-sum game that has two equilibrium points with different values. Let's assume the two equilbrium are <m>(1, -1)</m> and <m>(2, -2)</m>.</p></introduction>
+  <task><p>Create a matrix with <m>(1, -1)</m> and <m>(2, -2)</m> in the same row. Can they both be equilibria, or does one player want to switch?</p></task>
+  <task><p>Create a matrix with <m>(1, -1)</m> and <m>(2, -2)</m> in the same column. Can they both be equilibria, or does one player want to switch?</p></task>
+  <task><p>Now place <m>(1, -1)</m> and <m>(2, -2)</m> diagonally in the matrix (different rows and columns). Try to fill in values for the other two places in the matrix so that <m>(1, -1)</m> is an equilibrium. Is <m>(2, -2)</m> an equilibrium in any of your examples?</p><hint><p>Remember, if <m>(1, -1)</m> is an equilibrium, then <m>1</m> must be the biggest value for Player 1 in the column and <m>1</m> is the smallest in the row, so that <m>-1</m> is the biggest for Player 2 in the row.</p></hint></task>
+  <task><p>Do you think it is possible to have both <m>(1, -1)</m> and <m>(2, -2)</m> be equilibrium points in a <m>2\times 2</m> matrix? Explain your answer based on your examples.</p></task>
+
+</activity>
+
+  <p>
+    After trying several examples, you might be beginning to believe that the answer to <xref ref="Q_valuesofequilib"></xref> is <q>no.</q> Now you are ready to try to prove the following theorem.
+  </p>
+
+
+    <theorem xml:id="T_STfZSG"><title>Solution Theorem for Zero-Sum Games</title><idx><h>Solution Theorem for Zero-Sum Games</h></idx>
+    <statement><p>
+       Every equilibrium point of a two-person zero-sum game has the same value.
+    </p></statement></theorem>
+
+  <p>
+    Let's start with the <m>2 \times 2</m> case. We will use a <term>proof by contradiction</term><idx><h>proof by contradiction</h></idx>. We will assume the theorem is false and show that we get a logical contradiction. Once we reach a logical contradiction (a statement that is both true and false), we can conclude we were wrong to assume the theorem was false; hence, the theorem must be true. Make sure you are comfortable with the logic of this before moving on.
+  </p>
+
+  <p>
+    Since we want to assume the theorem is false, we assume we have a two-player zero-sum game with two different equilibrium values. Since we don't have a specific example of such a game, we want to represent the game in a general form. In particular, we can represent the general game
+    <me>
+      \left[\begin{matrix}(a, -a)\amp (c, -c)\\
+      (d, -d)\amp (b, -b)
+      \end{matrix} \right].
+    </me>
+  </p>
+
+  <p>
+    Note that if <m>a</m> is negative, then <m>-a</m> is positive; thus, every possible set of values is represented by this matrix. We want to look at the possible cases for equilibria.
+  </p>
+  <activity xml:id="A_col1neq">
+    <title> Equilibria in Column 1 </title>
+    <statement>
+      <p>
+        Explain what goes wrong if <m>(a, -a)</m> and <m>(d, -d)</m> are equilibria with <m>a \neq d</m>.
+      </p>
+    </statement>
+    <hint><p>Think about the different cases, such as <m>a\lt d</m>, <m>a>d</m>. Can you show that in each case either <m>(a, -a)</m> or <m>(d, -d)</m> is NOT an equilibrium?</p></hint>
+  </activity>
+  <activity xml:id="A_gencolneq">
+    <title> Equilibria in the same column/row </title>
+    <statement>
+      <p>
+        Generalize your answer to <xref ref="A_col1neq"></xref> to explain what goes wrong if the two equilibria with different values are in the same column. Similarly, explain what happens if the two equilibria are in the same row.
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_diag">
+    <title> Diagonal equilibria </title>
+    <statement>
+      <p>
+        Does the same explanation hold if the two equilibria are diagonal from each other? (Explain your answer!)
+      </p>
+    </statement>
+  </activity>
+  <p>
+    From your last answer, you should see that we need to do more work to figure out what happens if the equilibria are diagonal. So let's assume that the two equilibria are <m>(a, -a)</m> and <m>(b, -b)</m> with <m>a \neq b</m>. It might be helpful to draw the payoff matrix and circle the equilibria.
+  </p>
+  <activity xml:id="A_4ineq1">
+    <title> A player prefers the value of an equilibrium</title>
+    <statement>
+      <p>
+        Construct a system of inequalities using the fact that a player prefers an equilibrium point to another choice. For example, Player 1 prefers <m>a</m> to <m>d</m>. Thus, <m>a > d</m>. List all four inequalities you can get using this fact. You should get two for each player. Remember that Player 1 can only compare values in the same column since he has no ability to switch columns. If necessary, convert all inequalities to ones without negatives. (Algebra review: <m>-5 \lt  -2</m> means <m>5 > 2</m>.)
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_string1">
+    <title> Create strings of inequalities </title>
+    <statement>
+      <p>
+        Now string your inequalities together. For example, if <m>a \lt  b</m> and <m>b \lt  c</m> then we can write <m>a \lt  b \lt  c</m>. Be careful, the inequalities must face the same way; we cannot write <m>a> b \lt  c</m>.
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_contra1">
+    <title> You now have a contradiction</title>
+    <statement>
+      <p>
+        Explain why you now have a contradiction (a statement that <em>must</em> be false).
+        We can now conclude our assumption that <m>a \neq b</m> was wrong.
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_repeatineq">
+    <title> Diagonal case for <m>c</m> and <m>d</m></title>
+    <statement>
+      <p>
+        Repeat the above argument (<xref ref="A_4ineq1"></xref>, <xref ref="A_string1"></xref>, and <xref ref="A_contra1"></xref>) for the case that the two equilibria are <m>(d, -d)</m> and <m>(c, -c)</m> with <m>d\neq c</m>.
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_concl2x2">
+    <title> Summarize conclusion </title>
+    <statement>
+      <p>
+        Explain why you can conclude that all equilibria in a <m>2 \times 2</m> two-player zero-sum game have the same value.
+      </p>
+    </statement>
+  </activity>
+  <p>
+    We just worked through the proof, step-by-step, but now you need to put all the ideas together for yourself.
+  </p>
+  <activity xml:id="A_2x2proof">
+    <title>The complete proof</title>
+    <statement>
+      <p>
+        Write up the complete proof for the <m>2 \times 2</m> case in your own words.
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_nxn">
+    <title>Generalizing to a larger game</title>
+    <statement>
+      <p>
+        Can you see how you might generalize to a larger game matrix? You do not need to write up a proof of the general case, just explain how the key ideas from the <m>2 \times 2</m> case would apply to a bigger game matrix. 
+      </p>
+    </statement>
+    <hint><p>Think about equilibria in (a) the same row, (b) in the same column, or (c) in a different row and column.</p></hint>
+  </activity>
+  
+  <p>We've seen that any two equlibrium points must have the same value. However, it is important to note that just because an outcome has the same value as an equilibrium point, that does not mean it is also an equilibrium point. </p>
+
+  <activity xml:id="A_nonequil">
+    <title>Equal values may not be equilibria</title>
+    <statement>
+      <p>
+         Give a specific example of a game matrix with two payoff vectors that are <m>(0, 0)</m>, where one is an equilibrium point and the other is not.
+      </p>
+    </statement>
+  </activity>
+  <p>Working through the steps of a mathematical proof can be challenging. As you think about what we did in this section, first make sure you understand the argument for each step. Then work on understanding how the steps fit together to create the larger argument. </p>
+
+  <p>The next section summarizes all our work with finding equilibrium points for zero-sum games.</p>
+
+  <reading-questions>
+      <title>Check Your Understanding</title>
+      <exercise label="IGT_EP_CYU_inequal1"><statement correct="yes"><p>True or False: If <m>a\lt b \lt c\lt d</m> then <m>a\lt d</m>.</p></statement><feedback><p>This is called the transitive property of inequalities.</p></feedback><answer>True.</answer>
+      </exercise>
+
+       <exercise label="IGT_EP_CYU_inequal2"><statement correct="no"><p>True or False: If <m>a\lt b</m> then <m>-a\lt -d</m>.</p></statement><feedback><p>When we multiply by a negative, the direction of the inequality changes, so it should be <m>-d\lt -a</m></p></feedback><answer>False.</answer>
+      </exercise>
+
+      <exercise label="IGT_EP_CYU_inequal3"><statement correct="yes"><p>True or False: If <m>a\lt b \lt c\lt d \lt a</m> then we have a contradiction.</p></statement><feedback><p>This inequality leads to <m>a \lt a</m> which cannot be true.</p></feedback><answer>True.</answer>
+      </exercise>
+
+       <exercise label="IGT_EP_CYU_equilequal"><statement correct="yes"><p>True or False: If <m>(a, -a)</m> and <m>(b, -b)</m> are two equilibria in a zero-sum game, then <m>a=b</m>.</p></statement><feedback><p>This is what <xref ref="T_STfZSG"></xref> tells us.</p></feedback><answer>True.</answer>
+      </exercise>
+
+      <exercise label="IGT_EP_CYU_equilvalues"><statement correct="yes"><p>True or False: If <m>(3, -3)</m> is an equilibrium in a zero-sum game, then every equilibrium in the game has payoff vector <m>(3, -3)</m>.</p></statement><feedback><p>This is what <xref ref="T_STfZSG"></xref> tells us.</p></feedback><answer>True.</answer>
+      </exercise>
+
+      <exercise label="IGT_EP_CYU_equilnonequil"><statement correct="no"><p>True or False: In the matrix 
+        <me>\left[\begin{matrix}(-2, 2)\amp (-1, 1)\\
+            (-1, 1)\amp (2, -2)
+            \end{matrix} \right]</me>
+        both <m>(-1, 1)</m> payoff vectors are equilibria.</p></statement><feedback><p>True or False: Only the vector in Row 2, Column 1 is an equilibrium.</p></feedback><answer>False.</answer>
+      </exercise>
+
+      <exercise label="IGT_EP_CYU_equilmultple"><statement correct="no"><p>True or False: If <m>(3, -3)</m> is an equilibrium in a zero-sum game, then every payoff vector <m>(3, -3)</m> is a equilibrium.</p></statement><feedback><p>See <xref ref="A_nonequil"></xref>.</p></feedback><answer>False.</answer>
+      </exercise>
+    </reading-questions>
+</section>

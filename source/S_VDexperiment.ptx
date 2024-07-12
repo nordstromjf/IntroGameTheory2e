@@ -1,0 +1,288 @@
+
+<section xml:id="S_VDexperiment">
+  <title>Another Multiplayer Experiment</title>
+  <p>
+    This activity needs to be played as a class. All players need to be able to respond without being able to see the responses of others. Answers may be revealed before moving on to the next question.
+  </p>
+
+<activity xml:id="A_VDexperiment">
+  <statement><p>
+    Without sharing your answers with others, select your answer to the following questions. Try to be as honest about your answer as possible. Make sure you have a reason for each answer.
+  </p>
+
+  <p><ol>
+  <li><p>
+    The lights go out in the neighborhood. Someone needs to call the power company. If someone calls, everyone's lights go on.
+  
+
+  <ol>
+    <li><p>
+        Call
+      </p></li>
+
+    <li><p>
+        Don't call
+      </p></li>
+  </ol></p>
+  </li>
+
+  <li><p>
+  The same as in (1), but now you have to wait on hold for 5 minutes.
+
+  <ol>
+    <li><p>
+        Call
+      </p></li>
+
+    <li><p>
+        Don't call
+      </p></li>
+  </ol>
+  </p></li>
+
+  <li><p>
+  The same as in (1), but now you have to wait on hold for 30 minutes.
+
+  <ol>
+    <li><p>
+        Call
+      </p></li>
+
+    <li><p>
+        Don't call
+      </p></li>
+  </ol>
+  </p></li>
+
+  <li><p>
+  The same as in (1), but now you have to pay a $.50 service fee.
+
+  <ol>
+    <li><p>
+        Call
+      </p></li>
+
+    <li><p>
+        Don't call
+      </p></li>
+  </ol>
+  </p></li>
+
+  <li><p>
+  The same as in (1), but now you have to pay a $2.50 service fee.
+
+  <ol>
+    <li><p>
+        Call
+      </p></li>
+
+    <li><p>
+        Don't call
+      </p></li>
+  </ol>
+  </p></li>
+
+  <li><p>
+  The phone lines go down in your small mountain community. You have to hike 3 miles in the snow to notify the power company.
+
+  <ol>
+    <li><p>
+        Hike to notify the phone company
+      </p></li>
+
+    <li><p>
+        Stay home and let someone else do the hiking
+      </p></li>
+  </ol>
+  </p></li>
+
+  <li><p>
+  Everyone in your class cheats on an exam. The professor says if someone confesses they receive an F. If no one confesses, everyone fails.
+
+  <ol>
+    <li><p>
+        Confess
+      </p></li>
+
+    <li><p>
+        Don't confess
+      </p></li>
+  </ol>
+  </p></li>
+
+  <li><p>
+  Evil Dr. No captures the class and puts you in all in a shark tank separated so you can't communicate. If one person volunteers to be eaten then the rest go free. If no one volunteers after 10 minutes all get eaten by sharks.
+
+  <ol>
+    <li><p>
+        Volunteer
+      </p></li>
+
+    <li><p>
+        Don't volunteer
+      </p></li>
+  </ol>
+  </p></li>
+
+  <li><p>
+  Evil Dr. No captures your family and puts you in all in a shark tank separated so you can't communicate. If one person volunteers to be eaten then the rest go free. If no one volunteers after 10 minutes all get eaten by sharks.
+
+  <ol>
+    <li><p>
+        Volunteer
+      </p></li>
+
+    <li><p>
+        Don't volunteer
+      </p></li>
+  </ol>
+  </p></li>
+
+  <li><p>
+  For any <q>Big Brother</q> fans: choose to eat all your favorite foods for a week or nasty <q>slop</q> for a week. If at least three people say slop, everyone gets what they asked for. Otherwise, everyone is on slop.
+
+  <ol>
+    <li><p>
+        Favorite foods
+      </p></li>
+
+    <li><p>
+        Slop
+      </p></li>
+  </ol>
+  </p></li>
+
+  <li><p>
+  OK, now let's get serious about this. Answer 5 points or 1 point. If at least one person says 1 point, everyone gets the number of points they chose. Otherwise, everyone gets 0 points.
+
+  <ol>
+    <li><p>
+        5 points
+      </p></li>
+
+    <li><p>
+        1 point
+      </p></li>
+  </ol>
+  </p></li>
+
+  <li><p>
+  Answer 20 points or 1 point. If at least one person says 1 point, everyone gets the number of points they chose. Otherwise, everyone gets 0 points.
+
+  <ol>
+    <li><p>
+        20 points
+      </p></li>
+
+    <li><p>
+        1 point
+      </p></li>
+  </ol>
+  </p></li>
+
+  <li><p>
+  Answer 6 points or 5 points. If at least one person says 5 points, everyone gets the number of points they chose. Otherwise, everyone gets 0 points.
+
+  <ol>
+    <li><p>
+        6 points
+      </p></li>
+
+    <li><p>
+        5 points
+      </p></li>
+  </ol>
+  </p></li>
+
+  <li><p>
+  Answer 20 points or 1 point. If at least <em>five</em>  people say 1 point, everyone gets the number of points they chose. Otherwise, everyone gets 0 points.
+
+  <ol>
+    <li><p>
+        20 points
+      </p></li>
+
+    <li><p>
+        1 point
+      </p></li>
+  </ol>
+  </p></li>
+  </ol></p></statement></activity>
+  
+
+  <p>After answering the above questions and seeing the responses from your classmates, think about how you responded. Did this differ from how your classmates responded? Try to give reasons for how you chose your responses to the above questions. Ask classmates for their reasons for responding as they did. It can be particularly useful to share your answers with someone who chose a different response from you. You can summarize the various reasons for volunteering and not volunteering in the activities below.</p>
+
+  <activity xml:id="A_youvol">
+    <title>Volunteer or not</title>
+    <statement>
+      <p>
+        After answering the questions, were you likely to volunteer or unlikely to volunteer? For example, were you likely to be the one to call the power company or get eaten by sharks, or were you generally hoping someone else would do it? If it depended on the situation, explain under what circumstances you were likely to volunteer.
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_alwaysV">
+    <title>Always a volunteer</title>
+    <statement>
+      <p>
+        After sharing your answers as a class, did each situation have a volunteer? In other words, was there always someone willing to call the power company or take fewer points? If there was a question with no volunteer, can you suggest why?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_unlikelyV">
+    <title>Unlikely to volunteer</title>
+    <statement>
+      <p>
+        For which questions was it unlikely that there would be very many volunteers? Did you take that into consideration when deciding if you were going to volunteer?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_reasonsV">
+    <title>Reasons to volunteer</title>
+    <statement>
+      <p>
+        What are some reasons for volunteering? What are some reasons for not to volunteer?
+      </p>
+    </statement>
+  </activity>
+
+   <reading-questions>
+      <title>Check Your Understanding</title>
+
+      <p>The following questions are to help you reflect on the experiment from this section. Although each question will indicate a <q>correct</q> answer, there is room for discussion and disagreement about each of these questions.</p>
+
+      <exercise label="IGT_VDE_CYU_costV"><statement><p>As the cost of volunteering goes up, it becomes <fillin width="5"></fillin> likely that someone volunteers.</p></statement>
+      <choices randomize="no">
+        <choice><statement><p>more</p></statement><feedback><p>Generally, if it costs more to volunteer, a player is less likely to do it.</p></feedback></choice>
+        <choice correct="yes"><statement><p>less</p></statement><feedback><p>Generally, if it costs more to volunteer, a player is less likely to do it.</p></feedback></choice>
+      </choices><answer>less</answer></exercise>
+
+      <exercise label="IGT_VDE_CYU_rewardV"><statement><p>As the reward for the group goes up, it becomes <fillin width="5"></fillin> likely that someone volunteers.</p></statement>
+      <choices randomize="no">
+        <choice correct="yes"><statement><p>more</p></statement><feedback><p>Generally, if it is more beneficial to have a volunteer, a player is more likely to do it.</p></feedback></choice>
+        <choice ><statement><p>less</p></statement><feedback><p>Generally, if it is more beneficial to have a volunteer, a player is more likely to do it.</p></feedback></choice>
+      </choices><answer>more</answer></exercise>
+
+      <exercise label="IGT_VDE_CYU_costofnoV"><statement><p>As the cost of having <em>no</em> volunteers goes up, it becomes <fillin width="5"></fillin> likely that someone volunteers.</p></statement>
+      <choices randomize="no">
+        <choice correct="yes"><statement><p>more</p></statement><feedback><p>Generally, if it is more beneficial to have a volunteer, a player is more likely to do it.</p></feedback></choice>
+        <choice ><statement><p>less</p></statement><feedback><p>Generally, if it is more beneficial to have a volunteer, a player is more likely to do it.</p></feedback></choice>
+      </choices><answer>more</answer></exercise>
+
+      <exercise label="IGT_VDE_CYU_numpartaV"><statement><p>Although our experiment did not change the number of participants, think about what you predict would happen if we now played this experiment with the entire school or community. As the number of participants goes up, it becomes <fillin width="5"></fillin> likely that there is a volunteer.</p></statement>
+      <choices randomize="no">
+        <choice correct="yes"><statement><p>more</p></statement><feedback><p>Generally, if there are more people, we can predict that there will be someone who volunteers.</p></feedback></choice>
+        <choice ><statement><p>less</p></statement><feedback><p>Generally, if there are more people, we can predict that there will be someone who volunteers.</p></feedback></choice>
+      </choices><answer>more</answer></exercise>
+
+      <exercise label="IGT_VDE_CYU_numpartindV"><statement><p>Although our experiment did not change the number of participants, think about what you predict would happen if we now played this experiment with the entire school or community. As the number of participants goes up, it becomes <fillin width="5"></fillin> likely that any specific individual volunteers.</p></statement>
+      <choices randomize="no">
+        <choice ><statement><p>more</p></statement><feedback><p>Generally, if there are more people, there is less pressure on any one person to volunteer. People are more likely to let someone else volunteer.</p></feedback></choice>
+        <choice correct="yes"><statement><p>less</p></statement><feedback><p>Generally, if there are more people, there is less pressure on any one person to volunteer. People are more likely to let someone else volunteer.</p></feedback></choice>
+      </choices><answer>less</answer></exercise>
+
+      <exercise label="IGT_VDE_CYU_considerothers"><statement correct="yes"><p>True or False: In trying to get the best outcome for yourself in this experiment, it is useful to consider how likely it is that other people volunteer.</p></statement><feedback><p>For example, if you think there are likely to be other volunteers, you may not to volunteer. You can get the benefit without the cost of volunteering.</p></feedback><answer>True.</answer></exercise>
+
+
+
+  </reading-questions>
+</section>

@@ -1,0 +1,585 @@
+
+<section xml:id="S_AugMatrices">
+  <title>Solving Systems of Equations Using Matrices</title>
+    <idx><h>augmented matrix</h></idx><idx><h>systems of equations</h></idx>
+  
+
+  <p>
+    In this section, we will see how to use matrices to solve systems of equations<idx><h>systems of equations</h></idx>. In both the graphical method and the expected value method, you have had to solve a system of equations. In the graphical method you had systems consisting of two lines such as <xref ref="E_twoeq"></xref>.
+  </p>
+
+  <example xml:id="E_twoeq">
+    <title>Two Equations</title>
+    <statement>
+      <p> An example of a system of two lines:</p>
+      <md>
+        <mrow>y \amp = \frac{3}{5}x-\frac{1}{5}</mrow>
+        <mrow>y \amp =-x+3.</mrow>
+      </md>
+    </statement>
+  </example>
+
+  <p>
+    In the expected value method we had systems of three equations such as <xref ref="E_threeeq"></xref>.
+  </p>
+
+  <example xml:id="E_threeeq">
+    <title>Three Equations</title>
+    <statement>
+      <p> An example of a system of three equations where the variables are <m>E_1(A), E_1(B), P_2(C), P_2(D)</m>:</p>
+      <md>
+        <mrow>E_1(A) \amp = P_2(C)-P_2(D)</mrow>
+        <mrow>E_1(B) \amp = 2P_2(D)</mrow>
+        <mrow>1 \amp = P_2(C)+P_2(D).</mrow>
+      </md>
+    </statement>
+  </example>
+
+  <p>
+    In <xref ref="E_threeeq"></xref>, even after setting <m>E_1(A)=E_1(B)</m> so that there were only 2 variables, the algebra began to get cumbersome. What if we wanted to solve a much larger game, such as a 5 X 5 game?
+  </p>
+
+  <p>
+    We've used matrices to represent our games, but now we want to use them as a mathematical tool to help us solve systems of equations. In order to use matrices to solve our systems of equations, we want to write all our equations in the same form: we will have all the variable terms on the left of the equals sign and all constants on the right.
+  </p>
+
+  <example xml:id="E_equtomatrix"><title>Turning a System of Equations into a Matrix</title><p>
+    The equations in <xref ref="E_twoeq"></xref> we can be rewritten as
+    <md>
+      <mrow>\frac{3}{5}x-y \amp =\frac{1}{5}</mrow>
+      <mrow>x+y \amp = 3.</mrow>
+    </md>
+  </p>
+
+  <p>
+    In fact, we can simplify the first equation by multiplying both sides by 5:
+    <md>
+      <mrow>3x-5y \amp =1</mrow>
+      <mrow>x+y \amp = 3.</mrow>
+    </md>
+  </p>
+
+  <p>
+    We can use the coefficients and constants to create a matrix:
+    <me>
+      \left[
+      \begin{matrix}3 \amp  -5 \amp  1\\
+      1 \amp  1 \amp  3
+      \end{matrix} 
+      \right].
+    </me>
+  
+    In this matrix  you have a column for the coefficients of each variable. So the coefficients of <m>x</m> are in the first column, the coefficients of <m>y</m> are in the second. The constant terms are always in the last column. Each row corresponds to one equation.</p></example>
+
+    <p>The matrix in <xref ref="E_equtomatrix"></xref> is called an <term>augmented matrix</term><idx><h>augmented matrix</h></idx>. It is really just a matrix, but we call it <em>augmented</em> if we include information from both sides of the equation (the coefficients and the constants).
+  </p>
+
+  <p>
+    The algebraic method for solving the system of equations (finding the <m>x</m> and <m>y</m> values that satisfy both equations) is called <term>row reduction</term><idx><h>row reduction</h></idx>. It is based on the <term>elimination method</term> that you may have seen in a precalculus or college algebra course. We won't go through the algebra here, as we really don't need it. Since our goal is to be able to easily solve larger systems of equations, we will rely on technology to do the algebra.
+  </p>
+
+  <p>
+    Computer algebra systems such as Sage, Mathematica, and Maple, as well as graphing calculators, can easily do the row reduction for us. In this section we will use the Desmos matrix calculator first, then show how to use Sage. Note that any graphing claculator will work similarly to Desmos.
+  </p>
+
+  <example xml:id="E_desmosmatrix"><title>Using the Desmos Matrix Calculator</title><p>
+    On Desmos, use the Matrix Calculator under Math Tools: <url href="https://www.desmos.com/matrix">Desmos Matrix Calculator</url>. Use the New Matrix button to enter the matrix. If we want to enter the matrix 
+     <me>
+      \left[
+      \begin{matrix}3 \amp  -5 \amp  1\\
+      1 \amp  1 \amp  3
+      \end{matrix} 
+      \right]
+    </me> we will need a matrix with 2 rows and 3 columns. Enter the values in the matrix. You can either Tab to each entry or use the arrow buttons. Once you have entered the values in the matrix, use the blue Enter button (the blue arrow in the bottom right corner. Then use the <q>rref</q> button (this stands for <q>reduced row echelon form</q>) and the matrix name, probably A . The result will be the following matrix:
+    <me>
+      \left[
+      \begin{matrix}1 \amp  0 \amp  2\\
+      0 \amp  1 \amp  1
+      \end{matrix} 
+      \right].
+    </me>
+    This is the matrix we will use to determine the solution for the system of equations. We'll get to how we do that shortly.
+  </p></example>
+
+  <example xml:id="E_sagematrix"><title>Using Sage</title><p>
+    We can also find the reduced row echolon form of a matrix using Sage, as in the following Sage Cell.
+  </p>
+
+  <sage>
+    <input>
+      A=matrix([[3,-5,1],[1,1,3]]);
+      show(A.rref())
+    </input>
+    <output>matrix([[1, 0, 2],[0,1,1]])</output>
+  </sage></example>
+
+
+
+  <p>
+    Recall that when we set up the original matrix, the first column is for <m>x</m> and the second is for <m>y</m>. Each row represents an equation. We can take the matrix 
+    <me>
+      \left[
+      \begin{matrix}1 \amp  0 \amp  2\\
+      0 \amp  1 \amp  1
+      \end{matrix} 
+      \right].
+    </me>
+    and translate each row back to equations. This gives us the following system of equations:
+    <md>
+      <mrow>x+0y \amp =2</mrow>
+      <mrow>0x+y \amp = 1</mrow>
+    </md>
+    which simplifies to
+    <md>
+      <mrow>x \amp =2</mrow>
+      <mrow>y \amp = 1.</mrow>
+    </md>
+  </p>
+
+  <p>
+    By plugging these values back into the original equations, you can verify that this is in fact the solution to the system of equations in <xref ref="E_equtomatrix"></xref>.
+  </p>
+
+  <p>
+    Since the technology does all the algebra for us, our job is to translate the equations into an appropriate matrix and then translate the final matrix back into the solution to the system of equations. Remember, when using a matrix to solve a game, the matrix is only a tool, it is not the solution to the game.
+  </p>
+
+  <p>
+    Now, let's try the equations for the expected value method in <xref ref="E_threeeq"></xref>. As presented, how many variables does the system have?
+    <md>
+      <mrow>E_1(A) \amp = P_2(C)-P_2(D)</mrow>
+      <mrow>E_1(B) \amp = 2P_2(D)</mrow>
+      <mrow>1 \amp = P_2(C)+P_2(D)</mrow>
+    </md>
+  </p>
+
+  <p>
+    It has 4: <m>E_1(A), E_1(B), P_2(C)</m> and <m>P_2(D)</m>. But when we solved these equations, we set the expected values equal to each other. This gives us the two equations
+    <md>
+      <mrow>P_2(C)-P_2(D) \amp = 2P_2(D)</mrow>
+      <mrow>1 \amp = P_2(C)+P_2(D).</mrow>
+    </md>
+  </p>
+
+  <p>
+    Now if we put these into the equation form with all variables on the left and constants on the right, we get
+    <md>
+      <mrow>P_2(C)-3P_2(D) \amp = 0</mrow>
+      <mrow>P_2(C)+P_2(D) \amp = 1.</mrow>
+    </md>
+  </p>
+
+  <p>
+    Putting these equations into an augmented matrix, gives us
+    <me>
+      \left[
+      \begin{matrix}1 \amp  -3 \amp  0\\
+      1 \amp  1 \amp  1
+      \end{matrix} 
+      \right],
+    </me>
+    where the first column corresponds to <m>P_2(C)</m> and the second column corresponds to <m>P_2(D)</m>. We can do the row reduction using either Desmos or the Sage cell below.
+  </p>
+
+
+  <sage>
+    <input>
+      A=matrix([[1,-3,0],[1,1,1]]);
+      show(A.rref())
+    </input>
+    <output>matrix([[1, 0, 3/4],[0,1,1/4]])</output>
+  </sage>
+
+
+  <p>
+    Using row reduction, we get
+    <me>
+      \left[
+      \begin{matrix}1 \amp  0 \amp  3/4\\
+      0 \amp  1 \amp  1/4
+      \end{matrix} 
+      \right].
+    </me>
+  </p>
+
+
+  <p>
+    Thus, recalling Column 1 is for <m>P_2(C)</m> and Column 2 is for <m>P_2(D)</m>, our solution is <m>P_2(C)=3/4</m>, and <m>P_2(D)=1/4</m>.
+  </p>
+
+  <p>
+    Here are some more systems of equations to practice solving using augmented matrices. If you want to use the above Sage cells just edit the values for each row in the cell.
+  </p>
+  <activity xml:id="A_2x2system1">
+    <title>Solve a system of 2 equations</title>
+    <statement>
+      <p>
+        Solve the system of equations.
+      </p>
+
+      <p>
+        <me>\begin{matrix}2x-2y\amp =6\\x+3y\amp =7
+        \end{matrix}</me>
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_2x2system2">
+    <title>Solve another system of 2 equations</title>
+    <statement>
+      <p>
+        Solve the system of equations.
+      </p>
+
+      <p>
+        <me>\begin{matrix}4p_1-2p_2\amp =0\\p_1+p_2\amp =1
+        \end{matrix}</me>
+      </p>
+    </statement>
+  </activity>
+
+  <p>For larger matrices, you can edit the Sage cell by adding additional terms in each row, and adding more rows. For example, you can replace <m>[3,-5,1],[1,1,3]</m> with <m>[4,8,-4,4],[3,8,5,-11],[-2,1,12,-17]</m>.</p>
+
+  <activity xml:id="A_3x3system1">
+    <title>Solve a system of 3 equations</title>
+    <introduction>
+      <p>
+        Consider the system of equations
+
+
+      
+      <me>\begin{matrix}4x+8y-4z\amp =4\\3x+8y+5z\amp =-11\\-2x+y+12z\amp =-17.
+      \end{matrix}</me></p></introduction>
+
+      
+        <task><p>
+            Set up the augmented matrix for this system.
+          </p></task>
+
+        <task><p>
+            Use row reduction to find the solution.
+          </p></task>
+    
+  </activity>
+  <activity xml:id="A_3x3system2">
+    <title>Solve another system of 3 equations</title>
+    <introduction>
+      <p>
+        Consider the system of equations
+      
+      <me>\begin{matrix}2x+y-4z\amp =10\\3x+5z\amp =-5\\y+2z\amp =7.
+      \end{matrix}</me></p></introduction>
+
+    
+        <task><p>
+            Set up the augmented matrix for this system.
+          </p></task>
+
+        <task><p>
+            Use row reduction to find the solution.
+          </p></task>
+      
+  </activity>
+  <activity xml:id="A_3x3system3">
+    <title>Even more practice with 3 equations</title>
+    <introduction>
+      <p>
+        Consider the system of equations
+      
+      <me>\begin{matrix}a+b-5c\amp =0\\-4a-b+6c\amp =0\\a+b+c\amp =1.
+      \end{matrix}</me></p></introduction>
+
+      
+        <task><p>
+            Set up the augmented matrix for this system.
+          </p></task>
+
+        <task><p>
+            Use row reduction to find the solution.
+          </p></task>
+      
+  </activity>
+  <activity xml:id="A_5x5system1">
+    <title>Now, a sytem with 5 equations</title>
+    <introduction>
+      <p>
+        Consider the system of equations
+      
+      <me>\begin{matrix}3x+2y-w-v\amp =0\\2x-y+3z+w+5v\amp =0\\x+2y+6z-w\amp =0\\ -y+z-3w+v\amp =0\\x+y+z+w+v\amp =1.
+      \end{matrix}</me></p></introduction>
+
+     
+        <task><p>
+            Set up the augmented matrix for this system.
+          </p></task>
+
+        <task><p>
+            Use row reduction to find the solution.
+          </p></task>
+      
+  </activity>
+  <p>Now we are ready to apply everything we have learned about solving repeated zero-sum games to a much more challenging game in the next section.</p>
+
+  <reading-questions>
+      <title>Check Your Understanding</title>
+
+      <exercise label="IGT_SSAM_CYU_findmatrix">
+    <statement><p>Suppose we have the system of equations 
+      <me>\begin{matrix}3x -4 \amp =y\\z+2x\amp =5\\x-2y\amp =3z.
+      \end{matrix}</me>
+      Which is the corresponding augmented matrix for this system?</p></statement>
+    <choices randomize="yes">
+      <choice><statement><m>\left[
+      \begin{matrix}3 \amp  -4 \amp  1\\
+      1 \amp  2 \amp  5\\
+      1 \amp  -2 \amp  3\\
+      \end{matrix} 
+      \right]</m></statement><feedback><p>How many variables are in the system? How many columns do you need?</p></feedback></choice>
+
+      <choice><statement><m>\left[
+      \begin{matrix}3 \amp  -1 \amp  4\\
+      2 \amp  1 \amp  5\\
+      1 \amp  -2 \amp  3\\
+      \end{matrix} 
+      \right]</m></statement><feedback><p>How many variables are in the system? How many columns do you need?</p></feedback></choice>
+      
+      <choice correct="yes"><statement><m>\left[
+      \begin{matrix}3 \amp  -1\amp 0 \amp  4\\
+      2 \amp 0 \amp   1 \amp  5\\
+      1 \amp  -2 \amp  -3 \amp 0\\
+      \end{matrix} 
+      \right]</m></statement><feedback><p>Correct.</p></feedback></choice>
+
+      <choice><statement><m>\left[
+      \begin{matrix}3 \amp  1\amp 0 \amp  -4\\
+      2 \amp 0 \amp   1 \amp  5\\
+      1 \amp  -2 \amp  3 \amp 0\\
+      \end{matrix} 
+      \right]</m></statement><feedback><p>Make sure the variables are on one side of each equation and the constants are on the other.</p></feedback></choice>
+    </choices><answer><m>\left[
+      \begin{matrix}3 \amp  -1\amp 0 \amp  4\\
+      2 \amp 0 \amp   1 \amp  5\\
+      1 \amp  -2 \amp  -3 \amp 0\\
+      \end{matrix} 
+      \right]</m></answer>
+  </exercise>
+
+  <exercise label="IGT_SSAM_CYU_solverref"><statement><p>Suppose after doing row reduction on a system of equations with variables <m>x, y, z</m>, we have the following matrix 
+  <me>\left[
+      \begin{matrix}1 \amp  0\amp 0 \amp  3\\
+      0 \amp 1 \amp   0 \amp  2\\
+      0 \amp  0 \amp  1 \amp -1\\
+      \end{matrix} 
+      \right].</me>
+      Then the solution to the system of equations is </p>
+      <p><m>x= </m><var width="3"/> </p>
+      <p><m>y= </m><var width="3"/> </p>
+      <p><m>z= </m><var width="3"/> </p>
+    </statement>
+    
+      <setup>
+    <var>
+
+    <condition number="3">
+    <feedback>
+      <p>
+        Correct, we get <m>x=3</m> from the first row. 
+      </p>
+    </feedback>
+    </condition>
+    
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+        It might be helpful to turn the rows back into equations.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+
+    <var>
+
+    <condition number="2">
+    <feedback>
+      <p>
+        Correct, we get <m>y=2</m> from the second row. 
+      </p>
+    </feedback>
+    </condition>
+    
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+        It might be helpful to turn the rows back into equations.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+
+    <var>
+
+    <condition number="-1">
+    <feedback>
+      <p>
+        Correct, we get <m>z=-1</m> from the third row. 
+      </p>
+    </feedback>
+    </condition>
+    
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+        It might be helpful to turn the rows back into equations.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+    
+  </setup>
+      <answer><m>x=3, y=2, z=-1</m></answer></exercise>
+
+      <exercise label="IGT_SSAM_CYU_solvesystem"><statement><p>Use row reduction to solve the following system of equations.
+      <me>\begin{matrix}2x-3y+z\amp =7\\-x+2y-2z\amp =-7\\x+y+z\amp =2.
+      \end{matrix}</me>
+      Then the solution to the system of equations is </p>
+      <p><m>x= </m><var width="3"/> </p>
+      <p><m>y= </m><var width="3"/> </p>
+      <p><m>z= </m><var width="3"/> </p>
+    </statement>
+    
+      <setup>
+    <var>
+
+    <condition number="1">
+    <feedback>
+      <p>
+        Correct, we get <m>x=1</m>. 
+      </p>
+    </feedback>
+    </condition>
+    
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+        Check that you entered the matrix correctly.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+
+    <var>
+
+    <condition number="-1">
+    <feedback>
+      <p>
+        Correct, we get <m>y=-1</m>. 
+      </p>
+    </feedback>
+    </condition>
+    
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+        Check that you entered the matrix correctly.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+
+    <var>
+
+    <condition number="2">
+    <feedback>
+      <p>
+        Correct, we get <m>z=-2</m>. 
+      </p>
+    </feedback>
+    </condition>
+    
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+        Check that you entered the matrix correctly.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+    
+  </setup>
+      <answer><m>x=1, y=-1, z=2</m></answer></exercise>
+
+      <exercise label="IGT_SSAM_CYU_solmatrix1">
+    <statement><p>Suppose we finding the mixed strategy equilibrium for a <m>2\times 2</m> game using row reduction. After row reducing we have the following matrix where the first column represents <m>P(A)</m> and the second represents <m>P(B)</m>.
+
+      <me>\left[
+      \begin{matrix}1 \amp  0\amp  -1\\
+      0 \amp 1 \amp  2\\
+      \end{matrix} 
+      \right].</me>
+      What can we conclude?</p></statement>
+    <choices randomize="yes">
+      <choice><statement><m>P(A)=-1, P(B)=2</m></statement><feedback><p>Remember, <m>P(A), P(B)</m> represent probabilities in this context.</p></feedback></choice>
+      <choice><statement><m>P(A)=1, P(B)=2</m></statement><feedback><p>Remember, <m>P(A), P(B)</m> represent probabilities in this context.</p></feedback></choice>
+      <choice><statement><m>P(A)=-1/3, P(B)=2/3</m></statement><feedback><p>We can't get this solution from the above matrix.</p></feedback></choice>
+      <choice><statement><m>P(A)=-1/3, P(B)=2/3</m></statement><feedback><p>We can't get this solution from the above matrix.</p></feedback></choice>
+      <choice><statement><p>We must have made a mistake since <m>P(A)+P(B)=1</m> in this context.</p></statement><feedback><p>Although <m>2-1=1</m>, there is another condition for probabilities.</p></feedback></choice>
+      <choice correct="yes"><statement><p>We must have made a mistake since <m>P(A)</m> and <m>P(B)</m> must be between 0 and 1 in this context.</p></statement><feedback><p>Correct.</p></feedback></choice>
+
+      
+    </choices><answer><p>We must have made a mistake since <m>P(A)</m> and <m>P(B)</m> must be between 0 and 1 in this context.</p></answer>
+  </exercise>
+<exercise label="IGT_SSAM_CYU_solmatrix2">
+  <statement><p>Suppose we finding the mixed strategy equilibrium for a <m>2\times 2</m> game using row reduction. After row reducing we have the following matrix where the first column represents <m>P(A)</m> and the second represents <m>P(B)</m>.
+
+      <me>\left[
+      \begin{matrix}1 \amp  0\amp  1/3\\
+      0 \amp 1 \amp  1/3\\
+      \end{matrix} 
+      \right].</me>
+      What can we conclude?</p></statement>
+    <choices randomize="yes">
+      <choice><statement><m>P(A)=1/3, P(B)=1/3</m></statement><feedback><p>Remember, <m>P(A), P(B)</m> must sum to 1.</p></feedback></choice>
+      
+      <choice><statement><m>P(A)=1/3, P(B)=2/3</m></statement><feedback><p>We can't get this solution from the above matrix.</p></feedback></choice>
+      
+      <choice correct="yes"><statement><p>We must have made a mistake since <m>P(A)+P(B)=1</m> in this context.</p></statement><feedback><p>Correct.</p></feedback></choice>
+      <choice ><statement><p>We must have made a mistake since <m>P(A)</m> and <m>P(B)</m> must be between 0 and 1 in this context.</p></statement><feedback><p><m>1/3</m> is between 0 and 1, but there is another condition.</p></feedback></choice>
+
+      
+    </choices><answer><p>We must have made a mistake since <m>P(A)+P(B)=1</m> in this context.</p></answer>
+  </exercise>
+
+  <exercise label="IGT_SSAM_CYU_solmatrix3">
+  <statement><p>Suppose we finding the mixed strategy equilibrium for a <m>2\times 2</m> game using row reduction. After row reducing we have the following matrix where the first column represents <m>P(A)</m> and the second represents <m>P(B)</m>.
+
+      <me>\left[
+      \begin{matrix}1 \amp  0\amp  1/3\\
+      0 \amp 1 \amp  2/3\\
+      \end{matrix} 
+      \right].</me>
+      What can we conclude?</p></statement>
+    <choices randomize="yes">
+      <choice><statement><m>P(A)=2/3, P(B)=1/3</m></statement><feedback><p>Be careful of the order of <m>P(A), P(B)</m>.</p></feedback></choice>
+      
+      <choice correct="yes"><statement><m>P(A)=1/3, P(B)=2/3</m></statement><feedback><p>Correct.</p></feedback></choice>
+      
+      <choice ><statement><p>We must have made a mistake since <m>P(A)+P(B)=1</m> in this context.</p></statement><feedback><m>(1/3)+(2/3)=1</m></feedback></choice>
+      <choice ><statement><p>We must have made a mistake since <m>P(A)</m> and <m>P(B)</m> must be between 0 and 1 in this context.</p></statement><feedback><p><m>1/3, 2/3</m> are between 0 and 1.</p></feedback></choice>
+
+      
+    </choices><answer><m>P(A)=1/3, P(B)=2/3</m></answer>
+  </exercise>
+
+    </reading-questions>
+</section>

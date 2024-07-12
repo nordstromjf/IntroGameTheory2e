@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file contains all of the "backmatter" material -->
+<!-- In comments, we show examples of how to have hints to divisional -->
+<!-- excercies appear in a section, and then their -->
+<!-- solutions in the next. Then there is an appendix -->
+<!-- with all notation generated, and finally the index. -->
+<backmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="backmatter">
+  <title>Backmatter</title>
+
+  <references>
+        <title>References</title>
+
+            <biblio type="raw" xml:id="biblio-gardner-GBE">Roy Gardner, <title>Games for Business and Economics</title>, Wiley, 2003.
+            </biblio>
+
+            <biblio type="raw" xml:id="biblio-hofstadter-MT">Douglas Hofstadter, <title>Metamagical Themas: Questing for the Essence of Mind and Pattern</title>, Basic Books, 1985.
+            </biblio>
+
+            <biblio type="raw" xml:id="biblio-nordstrom-BWMT">Jennifer Nordstrom, <q>Battles of Wits and Matters of Trust: Game Theory in Popular Culture</q>, <title>Mathematics and Popular Culture: Essays on Appearances in Film, Fiction, Games, Television and Other Media</title>, eds. E. Sklar and J. Sklar, McFarland, 2012, pp. 86-98.
+            </biblio>     
+
+            <biblio type="raw" xml:id="biblio-poundstone-PD">William Poundstone, <title>Prisoner's Dilemma: John von Neumann, Game Theory, and the Puzzle of the Bomb</title>, Anchor Books, 1993.
+            </biblio>                     
+
+    </references>
+<index>
+<title>Index</title>
+<index-list />
+</index>
+
+<colophon>
+    <p>This text was authored in <pretext />.</p>
+</colophon>
+
+  <!-- <solutions divisional="hint"> <title>Selected Hints</title> </solutions> -->
+
+  <!-- <solutions divisional="solution"> <title>Selected Solutions</title> </solutions> -->
+
+  <!-- <appendix> <title>List of Symbols</title> <notation-list/> </appendix> -->
+
+
+</backmatter>
+

@@ -1,0 +1,522 @@
+
+<section xml:id="S_PDconditions">
+  <title>What Makes a Prisoner's Dilemma?</title>
+  <p>
+    In this section we give a mathematical description of Prisoner's Dilemma and compare it to some similar games.
+  </p>
+
+  <p>
+    The Class-wide Prisoner's Dilemma game we played in <xref ref="S_CWPD"></xref> has the payoff matrix given in <xref ref="T_CWPD"></xref> for each pair of players.
+  </p>
+
+  <table xml:id="T_CWPD" >
+    <title>A Class-wide Prisoner's Dilemma.</title>
+    <tabular>
+      <row>
+        <cell></cell>
+        <cell></cell>
+        <cell colspan="2" halign="center">Player 2</cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell></cell>
+        <cell halign="center" bottom="minor">Cooperate</cell>
+        <cell halign="center" bottom="minor">Defect</cell>
+      </row>
+      <row>
+        <cell>Player 1</cell>
+        <cell right="minor">Cooperate</cell>
+        <cell halign="center" bottom="minor" right="minor"><m>(3, 3)</m></cell>
+        <cell halign="center" bottom="minor" right="minor"><m>(0, 5)</m></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell right="minor">Defect</cell>
+        <cell halign="center" bottom="minor" right="minor"><m>(5, 0)</m></cell>
+        <cell halign="center" bottom="minor" right="minor"><m>(1, 1)</m></cell>
+      </row>
+    </tabular>
+  </table>
+
+  <p>
+  We can classify each of the values for the payoffs as follows:
+
+  <ul>
+    <li><p>
+        Reward for Mutual Cooperation: <m>R=3.</m>
+      </p></li>
+
+    <li><p>
+        Punishment for Defecting: <m>P=1.</m>
+      </p></li>
+
+    <li><p>
+        Temptation to Defect: <m>T=5.</m>
+      </p></li>
+
+    <li><p>
+        Sucker's Payoff: <m>S=0.</m>
+      </p></li>
+  </ul>
+  </p>
+
+  <p>
+  In order for a game to be a variation of Prisoner's Dilemma it must satisfy two conditions:
+<list xml:id="l_ConditionsPD"><title>Conditions for a Prisoner's Dilemma</title>
+  <ol marker="1">
+    <li><p>
+        <m>T>R>P>S</m>
+      </p></li>
+
+    <li><p>
+        <m>(T+S)/2 \lt  R</m>
+      </p></li>
+  </ol>
+</list>
+  </p>
+
+  <p>
+    Let's apply this description of Prisoner's Dilemma to a few games we've seen. We can use the conditions to check if a game is really a Prisoner's Dilemma.
+  </p>
+  <activity xml:id="A_describeconditions">
+    <title>Description of conditions</title>
+    <statement>
+      <p>
+        Describe conditions (1) and (2) in <xref ref="l_ConditionsPD"></xref> in words.
+      </p>
+    </statement>
+    <hint><p> <m>(T+S)/2</m> is the average of <m>T</m> and <m>S</m>.</p></hint>
+  </activity>
+  <activity xml:id="A_CWPDshow">
+    <title>The conditions for Classwide Prisoner's Dilemma</title>
+    <statement>
+      <p>
+        Show that the two conditions in <xref ref="l_ConditionsPD"></xref> hold for the Class-wide Prisoner's Dilemma (<xref ref="S_CWPD"></xref>).
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="E_PDshow">
+    <title>The conditions for Prisoner's Dilemma</title>
+    <statement>
+      <p>
+        Recall the matrix for Prisoner's Dilemma from <xref ref="E_PrisonersDilemma"></xref>.
+      </p>
+
+      <table>
+        <title>Prisoner's Dilemma (again).</title>
+        <tabular>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell colspan="2" halign="center">Prisoner 2</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell halign="center" bottom="minor">Confess</cell>
+            <cell halign="center" bottom="minor">Don't Confess</cell>
+          </row>
+          <row>
+            <cell>Prisoner 1</cell>
+            <cell right="minor">Confess</cell>
+            <cell halign="center" bottom="minor" right="minor"><m>(8, 8)</m></cell>
+            <cell halign="center" bottom="minor" right="minor"><m>(0.25, 10)</m></cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell right="minor">Don't Confess</cell>
+            <cell halign="center" bottom="minor" right="minor"><m>(10, 0.25)</m></cell>
+            <cell halign="center" bottom="minor" right="minor"><m>(1, 1)</m></cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>
+        Determine <m>R, P, T,</m> and <m>S</m> for this game. Be careful, think about what cooperating versus defecting should mean. Show the conditions for Prisoner's Dilemma are satisfied. 
+      </p>
+    </statement>
+    <hint><p>Time in jail is bad, so the bigger the number, the worse you do; thus, it might be helpful to think of the payoffs as negatives.</p></hint>
+  </activity>
+  <activity xml:id="A_chickenshow">
+    <title>The conditions for Chicken</title>
+    <statement>
+      <p>
+        Recall the matrix for Chicken from <xref ref="E_Chicken"></xref>.
+      </p>
+
+      <table>
+        <title>Chicken (again).</title>
+        <tabular>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell colspan="2" halign="center">Driver 2</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell halign="center" bottom="minor">Swerve</cell>
+            <cell halign="center" bottom="minor">Straight</cell>
+          </row>
+          <row>
+            <cell>Driver 1</cell>
+            <cell right="minor">Swerve</cell>
+            <cell halign="center" bottom="minor" right="minor"><m>(0, 0)</m></cell>
+            <cell halign="center" bottom="minor" right="minor"><m>(-1, 10)</m></cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell right="minor">Straight</cell>
+            <cell halign="center" bottom="minor" right="minor"><m>(10, -1)</m></cell>
+            <cell halign="center" bottom="minor" right="minor"><m>(-100, -100)</m></cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>
+        Determine <m>R, P, T,</m> and <m>S</m> for this game. Again, think about what cooperating and defecting mean in this game. Determine if the conditions for Prisoner's Dilemma are satisfied. If not, which condition(s) fail?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_conditionspractice1">
+    <title>The conditions on another game</title>
+    <statement>
+      <p>
+        Consider the cooperate-defect game where the first row//column is C and the second row/column is D:
+
+        <me>
+          \left[\begin{matrix}
+            (3, 3) \amp  (0, 50)\\
+           (50, 0) \amp  (.01, .01)
+          \end{matrix}\right].
+        </me>
+
+        <!--<me>
+          \begin{matrix}\amp  C\amp  D\\
+          C\amp  (3, 3) \amp  (0, 50)\\
+          D \amp (50, 0) \amp  (.01, .01)
+          \end{matrix}.
+        </me>-->
+      </p>
+
+      <p>
+        Determine <m>R, P, T,</m> and <m>S</m> for this game. Determine if the conditions for Prisoner's Dilemma are satisfied. If not, which condition(s) fail?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_conditionspractice2">
+    <title>A little more practice</title>
+    <statement>
+      <p>
+        Consider the cooperate-defect game where the first row//column is C and the second row/column is D:
+        <me>
+          \left[\begin{matrix}
+          (1000, 1000) \amp  (0, 100)\\
+          (100, 0) \amp  (100, 100)
+          \end{matrix}\right].
+        </me>
+      </p>
+
+      <p>
+        Determine <m>R, P, T,</m> and <m>S</m> for this game. Determine if the conditions for Prisoner's Dilemma are satisfied. If not, which condition(s) fail?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_conditionscompare">
+    <title>Compare the games</title>
+    <statement>
+      <p>
+        The games in <xref ref="A_chickenshow"></xref>, <xref ref="A_conditionspractice1"></xref>, and <xref ref="A_conditionspractice2"></xref> are not true Prisoner's Dilemmas. For each game, how do the changes in payoffs affect how you play? In particular, in Prisoner's Dilemma, a player will generally choose to defect. This results in a non-optimal payoff for each player. Is this still true in <xref ref="A_chickenshow"></xref>, <xref ref="A_conditionspractice1"></xref>, and <xref ref="A_conditionspractice2"></xref>? If possible, use the changes in the conditions (A) and (B) to help explain any differences in how one should play.
+      </p>
+    </statement>
+  </activity>
+  <p>
+    We can now define <term>defection</term><idx><h>defection</h></idx> as the idea that if everyone did it, things would be worse for everyone. Yet, if only one (or a small) number did it, life would be sweeter for that individual. We can define <term>cooperation</term><idx><h>cooperation</h></idx> as the act of resisting temptation for the betterment of all players.
+  </p>
+  <activity xml:id="A_reallifeex">
+    <title>Example from real life</title>
+    <statement>
+      <p>
+        Give an example of defection and cooperation from real life. Explain how your example of defection make things worse for everyone if everyone did it, but would benefit the defctor. Explain how cooperation is improves things for all, even if the payoff is smaller for the individual.
+      </p>
+    </statement>
+  </activity>
+
+  <reading-questions>
+      <title>Check Your Understanding</title>
+
+      <exercise label="IGT_PDCond_CYU_RPTS1"><statement><p>Consider the cooperate-defect game
+
+        <me>
+          \left[
+      \begin{matrix}(5, 5) \amp  (15, -1)\\
+      (-1, 15) \amp  (10, 10)\\
+      \end{matrix} 
+      \right].
+        </me></p>
+
+        <p>Match the reward for mutual cooeration (R), the punishment for defecting (P), the temptation to defect (T), and the sucker's payoff (S) with their corresponding payoffs.</p></statement>
+      <feedback>
+    <p>
+       Make sure you identify which row (column) is cooperating and which is defecting first.
+    </p>
+  </feedback>
+  <matches>
+  <match order="4">
+  <premise>10</premise>
+  <response>R</response>
+  </match>
+  <match order="3">
+  <premise>-1</premise>
+  <response>S</response>
+  </match>
+  <match order="1">
+  <premise>5</premise>
+  <response>P</response>
+  </match>
+  <match order="2">
+  <premise>15</premise>
+  <response>T</response>
+  </match>
+  </matches><answer><m>R=10, P=5, T=15, S=-1.</m></answer></exercise>
+
+  <exercise label="IGT_PDCond_CYU_checkpd1"><statement correct="yes"><p>True or False: the game 
+    <me>
+          \left[
+      \begin{matrix}(5, 5) \amp  (15, -1)\\
+      (-1, 15) \amp  (10, 10)\\
+      \end{matrix} 
+      \right]
+        </me>
+        satisfies the two conditions of a Prisoner's Dilemma</p></statement><feedback><m>T>R>P>S; (T+S)/2 &lt; R.</m></feedback><answer>True.</answer></exercise>
+
+        <exercise label="IGT_PDCond_CYU_RPTS2"><statement><p>Consider the cooperate-defect game
+
+        <me>
+          \left[
+      \begin{matrix}(10, 10) \amp  (-1, 5)\\
+      (5, -1) \amp  (2, 2)\\
+      \end{matrix} 
+      \right].
+        </me></p>
+
+        <p>Match the reward for mutual cooeration (R), the punishment for defecting (P), the temptation to defect (T), and the sucker's payoff (S) with their corresponding payoffs.</p></statement>
+      <feedback>
+    <p>
+       Make sure you identify which row (column) is cooperating and which is defecting first.
+    </p>
+  </feedback>
+  <matches>
+  <match order="2">
+  <premise>10</premise>
+  <response>R</response>
+  </match>
+  <match order="4">
+  <premise>-1</premise>
+  <response>S</response>
+  </match>
+  <match order="1">
+  <premise>2</premise>
+  <response>P</response>
+  </match>
+  <match order="3">
+  <premise>5</premise>
+  <response>T</response>
+  </match>
+  </matches><answer><m>R=10, P=2, T=5, S=-1.</m></answer></exercise>
+
+  <exercise label="IGT_PDCond_CYU_checkpd2"><statement correct="no"><p>True or False: the game 
+    <me>
+          \left[
+      \begin{matrix}(10, 10) \amp  (-1, 5)\\
+      (5, -1) \amp  (2, 2)\\
+      \end{matrix} 
+      \right]
+        </me>
+        satisfies the two conditions of a Prisoner's Dilemma</p></statement><feedback><m>T\ngtr R; (T+S)/2 &lt; R.</m></feedback><answer>False.</answer></exercise>
+    
+    <exercise label="IGT_PDCond_CYU_RPTS3"><statement><p>Consider the cooperate-defect game
+
+        <me>
+          \left[
+      \begin{matrix}(2, 2) \amp  (-5, 5)\\
+      (5, -5) \amp  (-2, -2)\\
+      \end{matrix} 
+      \right].
+        </me></p>
+
+        <p>Match the reward for mutual cooeration (R), the punishment for defecting (P), the temptation to defect (T), and the sucker's payoff (S) with their corresponding payoffs.</p></statement>
+      <feedback>
+    <p>
+       Make sure you identify which row (column) is cooperating and which is defecting first.
+    </p>
+  </feedback>
+  <matches>
+  <match order="3">
+  <premise>2</premise>
+  <response>R</response>
+  </match>
+  <match order="4">
+  <premise>-5</premise>
+  <response>S</response>
+  </match>
+  <match order="2">
+  <premise>-2</premise>
+  <response>P</response>
+  </match>
+  <match order="1">
+  <premise>5</premise>
+  <response>T</response>
+  </match>
+  </matches><answer><m>R=2, P=-2, T=5, S=-5.</m></answer></exercise>
+
+  <exercise label="IGT_PDCond_CYU_checkpd3"><statement correct="yes"><p>True or False: the game 
+    <me>
+          \left[
+      \begin{matrix}(2, 2) \amp  (-5, 5)\\
+      (5, -5) \amp  (-2, -2)\\
+      \end{matrix} 
+      \right]
+        </me>
+        satisfies the two conditions of a Prisoner's Dilemma</p></statement><feedback><m>T>R>P>S; (T+S)/2 &lt; R.</m></feedback><answer>True.</answer></exercise>
+
+        <exercise label="IGT_PDCond_CYU_equilpd3"><statement><p>The game given in 
+         <me>
+        \left[
+      \begin{matrix}(2, 2) \amp  (-5, 5)\\
+      (5, -5) \amp  (-2, -2)\\
+      \end{matrix} 
+      \right]
+        </me>
+        has <fillin width="3"></fillin> equilibrium point(s).</p></statement>
+        <choices ramdomize="no">
+          <choice><statement><m>0</m></statement></choice>
+          <choice correct="yes"><statement><m>1</m></statement><feedback><p><m>(-2, -2)</m> is the only equilibrium point.</p></feedback></choice>
+          <choice><statement><m>2</m></statement></choice>
+          <choice><statement><m>3</m></statement></choice>
+        </choices><answer>1</answer></exercise>
+
+  <exercise label="IGT_PDCond_CYU_RPTS4"><statement><p>Consider the cooperate-defect game
+
+        <me>
+          \left[
+      \begin{matrix}(-2, -2) \amp  (5, 0)\\
+      (0, 5) \amp  (2, 2)\\
+      \end{matrix} 
+      \right].
+        </me></p>
+
+        <p>Match the reward for mutual cooeration (R), the punishment for defecting (P), the temptation to defect (T), and the sucker's payoff (S) with their corresponding payoffs.</p></statement>
+      <feedback>
+    <p>
+       Make sure you identify which row (column) is cooperating and which is defecting first.
+    </p>
+  </feedback>
+  <matches>
+  <match order="3">
+  <premise>2</premise>
+  <response>R</response>
+  </match>
+  <match order="4">
+  <premise>0</premise>
+  <response>S</response>
+  </match>
+  <match order="1">
+  <premise>-2</premise>
+  <response>P</response>
+  </match>
+  <match order="2">
+  <premise>5</premise>
+  <response>T</response>
+  </match>
+  </matches><answer><m>R=2, P=-2, T=5, S=0.</m></answer></exercise>
+
+  <exercise label="IGT_PDCond_CYU_checkpd4"><statement correct="no"><p>True or False: the game 
+    <me>
+          \left[
+      \begin{matrix}(-2, -2) \amp  (5, 0)\\
+      (0, 5) \amp  (2, 2)\\
+      \end{matrix} 
+      \right]
+        </me>
+        satisfies the two conditions of a Prisoner's Dilemma</p></statement><feedback><m>P\ngtr S; (T+S)/2 \nless R.</m></feedback><answer>False.</answer></exercise>
+
+        <exercise label="IGT_PDCond_CYU_equilpd4"><statement><p>The game given in 
+         <me>
+        \left[
+      \begin{matrix}(-2, -2) \amp  (5, 0)\\
+      (0, 5) \amp  (2, 2)\\
+      \end{matrix} 
+      \right]
+        </me>
+        has <fillin width="3"></fillin> equilibrium point(s).</p></statement>
+        <choices ramdomize="no">
+          <choice><statement><m>0</m></statement></choice>
+          <choice ><statement><m>1</m></statement></choice>
+          <choice correct="yes"><statement><m>2</m></statement><feedback><p><m>(0, 5)</m> and <m>(5, 0)</m> is the two equilibrium points.</p></feedback></choice>
+          <choice><statement><m>3</m></statement></choice>
+        </choices><answer>2</answer></exercise>
+
+      <exercise label="IGT_PDCond_CYU_RPTS5"><statement><p>Consider the cooperate-defect game
+
+        <me>
+          \left[
+      \begin{matrix}(0, 0) \amp  (-15, 20)\\
+      (20, -15) \amp  (-10, -10)\\
+      \end{matrix} 
+      \right].
+        </me></p>
+
+        <p>Match the reward for mutual cooeration (R), the punishment for defecting (P), the temptation to defect (T), and the sucker's payoff (S) with their corresponding payoffs.</p></statement>
+      <feedback>
+    <p>
+       Make sure you identify which row (column) is cooperating and which is defecting first.
+    </p>
+  </feedback>
+  <matches>
+  <match order="1">
+  <premise>0</premise>
+  <response>R</response>
+  </match>
+  <match order="2">
+  <premise>-15</premise>
+  <response>S</response>
+  </match>
+  <match order="3">
+  <premise>-10</premise>
+  <response>P</response>
+  </match>
+  <match order="4">
+  <premise>20</premise>
+  <response>T</response>
+  </match>
+  </matches><answer><m>R=0, P=-10, T=20, S=-15.</m></answer></exercise>
+
+  <exercise label="IGT_PDCond_CYU_checkpd5"><statement correct="no"><p>True or False: the game 
+    <me>
+        \left[
+      \begin{matrix}(0, 0) \amp  (-15, 20)\\
+      (20, -15) \amp  (-10, -10)\\
+      \end{matrix} 
+      \right]
+        </me>
+        satisfies the two conditions of a Prisoner's Dilemma</p></statement><feedback><m>T>R>P>S; (T+S)/2 \nless R.</m></feedback><answer>False.</answer></exercise>
+
+        <exercise label="IGT_PDCond_CYU_equilpd5"><statement><p>The game given in 
+         <me>
+        \left[
+      \begin{matrix}(0, 0) \amp  (-15, 20)\\
+      (20, -15) \amp  (-10, -10)\\
+      \end{matrix} 
+      \right]
+        </me>
+        has <fillin width="3"></fillin> equilibrium point(s).</p></statement>
+        <choices ramdomize="no">
+          <choice><statement><m>0</m></statement></choice>
+          <choice correct="yes"><statement><m>1</m></statement><feedback><p><m>(-10, -10)</m> is the only equilibrium point.</p></feedback></choice>
+          <choice><statement><m>2</m></statement></choice>
+          <choice><statement><m>3</m></statement></choice>
+        </choices><answer>1</answer></exercise>
+
+    </reading-questions>
+</section>

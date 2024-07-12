@@ -1,0 +1,696 @@
+
+<section xml:id="S_IntroZeroSum">
+  <title>Introduction to Two-Person Zero-Sum Games</title><idx><h>zero-sum game</h></idx>
+  <introduction>
+       <p>
+      In the examples from the last section, whatever amount one player won, the other player lost.
+    </p>
+
+    <definition xml:id="D_zerosum">
+      <statement>
+        <p>
+          A two player game is called a <term>zero-sum</term><idx><h>zero-sum game</h></idx> game if the sum of the payoffs to each player is constant for all possible outcomes of the game. More specifically, the coordinates in each payoff vector must add up to the same value for each payoff vector. Such games are sometimes called <term>constant-sum</term><idx><h>constant-sum game</h></idx> games instead.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      We can always think of zero-sum games as being games in which one player's win is the other player's loss.
+    </p>
+
+    <example xml:id="poker">
+      <title>Zero-sum in Poker</title>
+      <statement>
+        <p>
+          Consider a poker game in which each player comes to the game with $100. If there are five players, then the sum of money for all five players is always $500. At any given time during the game, a particular player may have more than $100, but then another player must have less than $100. One player's win is another player's loss.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="E_cakecutting2">
+      <title>Zero-sum in Cake Division</title>
+      <statement>
+        <p>
+          Consider the cake division game. We want to find the payoff matrix for this game. It is important to determine what each player's options are first. How can the <q>cutter</q> cut the cake? How can the <q>chooser</q> pick her piece? The payoff matrix is given in <xref ref="T_cakecutting"></xref>.
+        </p>
+
+        <table xml:id="T_cakecutting" >
+          <title>Payoff matrix for Cake Cutting game.</title>
+          <tabular>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell colspan="2" halign="center">Chooser</cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell bottom="minor">Larger Piece</cell>
+              <cell bottom="minor">Smaller Piece</cell>
+            </row>
+            <row>
+              <cell>Cutter</cell>
+              <cell right="minor">Cut Evenly</cell>
+              <cell right="minor" bottom="minor" halign="center">(half, half)</cell>
+              <cell right="minor" bottom="minor" halign="center">(half, half)</cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell right="minor">Cut Unvenly</cell>
+              <cell right="minor" bottom="minor" halign="center">(small piece, large piece)</cell>
+              <cell right="minor" bottom="minor" halign="center">(large piece, small piece)</cell>
+            </row>
+          </tabular>
+        </table>
+
+        <p>
+          In order to better see that this game is zero-sum (or constant-sum), we could give values for the amount of cake each player gets. For example, half the cake would be 50%, a small piece might be 40%. Then we can rewrite the matrix with the percentage values in <xref ref="T_cakecuttingpercent"></xref>
+        </p>
+
+        <table xml:id="T_cakecuttingpercent" >
+          <title>Payoff matrix, in percent of cake, for the Cake Cutting game.</title>
+          <tabular>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell colspan="2" halign="center">Chooser</cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell bottom="minor">Larger Piece</cell>
+              <cell bottom="minor">Smaller Piece</cell>
+            </row>
+            <row>
+              <cell>Cutter</cell>
+              <cell right="minor">Cut Evenly</cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(50, 50)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(50, 50)</m></cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell right="minor">Cut Unvenly</cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(40, 60)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(60, 40)</m></cell>
+            </row>
+          </tabular>
+        </table>
+
+        <p>
+          In each outcome, the payoffs to each player add up to 100 (or 100%). In more mathematical terms, the coordinates of each payoff vector add up to 100. Thus the sum is the same, or constant, for each outcome.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      We can see from the matrix in <xref ref="T_cakecuttingpercent"></xref> that Player 2 will always choose the larger piece, thus Player 1 does best to cut the cake evenly. The outcome of the game is the <term>strategy pair</term><idx><h>strategy pair</h></idx> denoted [Cut Evenly, Larger Piece], with resulting payoff vector <m>(50, 50)</m>.
+    </p>
+
+    <p>
+      But why are we going to call these games <q>zero-sum</q> rather than <q>constant-sum</q>? We can convert any zero-sum game to a game where the payoffs actually sum to zero.
+    </p>
+
+    <example xml:id="E_pokerzero">
+      <title>Poker Payoffs Revisited</title>
+      <statement>
+        <p>
+          Consider the above poker game where each player begins the game with $100. Suppose at some point in the game the five players have the following amounts of money: $50, $200, $140, $100, $10. Then we could think of their gain as -$50, $100, $40, $0, -$90. What do these five numbers add up to?
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="E_cakecuttingzero">
+      <tile>Converting to Payoffs that Sum to Zero</tile>
+      <statement>
+        <p>
+          Convert the cake division payoffs so that the payoff vectors sum to zero (rather than 100).
+        </p>
+
+        <p>
+          The solution is given in <xref ref="T_cakecuttingzerosum"></xref>.
+        </p>
+
+        <table xml:id="T_cakecuttingzerosum" >
+          <title>Zero-sum payoff matrix for Cake Cutting game.</title>
+          <tabular>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell colspan="2" halign="center">Chooser</cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell bottom="minor">Larger Piece</cell>
+              <cell bottom="minor">Smaller Piece</cell>
+            </row>
+            <row>
+              <cell>Cutter</cell>
+              <cell right="minor">Cut Evenly</cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(0, 0)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(0, 0)</m></cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell right="minor">Cut Unvenly</cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(-10, 10)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(10, -10)</m></cell>
+            </row>
+          </tabular>
+        </table>
+
+        <p>
+          But let's make sure we understand what these numbers mean. For example, a payoff of <m>(0,0)</m> does not mean each player gets no cake, it means they don't get any more cake than the other player. In this example, each player gets half the cake (50%) plus the payoff.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      When the game matrix is in the form of <xref ref="E_cakecuttingzero"></xref>, it is easy to recognize a zero-sum game since each payoff vector has the form <m>(a, -a)</m> (or <m>(-a, a)</m>).
+    </p>
+  </introduction>
+
+  <subsection xml:id="Ex_election">
+    <title>An Election Campaign Game</title>
+    <p>
+      Two candidates, Arnold and Bainbridge, are facing each other in a state election. They have three choices regarding the issue of the speed limit on I-5: they can support raising the speed limit to 70 MPH, they can support keeping the current speed limit, or they can dodge the issue entirely. The next three examples present three different payoff matrices for Arnold and Bainbridge.
+    </p>
+    <example xml:id="Ex_election1">
+      <title>The Speed Limit Issue</title>
+      <statement>
+        <p>
+          The candidates have the information given in <xref ref="T_election1"></xref> about how they would likely fare in the election based on how they stand on the speed limit.
+        </p>
+
+        <table xml:id="T_election1" >
+          <title>Percentage of the vote for <xref ref="Ex_election1"></xref>.</title>
+          <tabular>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell colspan="3" halign="center">Bainbridge</cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell bottom="minor">Raise Limit</cell>
+              <cell bottom="minor">Keep Limit</cell>
+              <cell bottom="minor">Dodge</cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell right="minor">Raise Limit</cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(45, 55)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(50, 50)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(40, 60)</m></cell>
+            </row>
+            <row>
+              <cell>Arnold</cell>
+              <cell right="minor">Keep Limit</cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(60, 40)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(55, 45)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(50, 50)</m></cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell right="minor">Dodge</cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(45, 55)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(55, 45)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(40, 60)</m></cell>
+            </row>
+          </tabular>
+        </table>
+      </statement>
+    </example>
+    <activity xml:id="A_election1">
+      <title>Analysis of the election game</title>
+      <introduction>
+      <p> For the following questions, assume Arnold and Bainbridge have the payoff matrix given in <xref ref="Ex_election1"></xref>.
+      </p></introduction>
+        <task><p>
+              Explain why <xref ref="T_election1"></xref> is a zero-sum game.
+            </p></task>
+
+          <task><p>
+              What should Arnold choose to do? What should Bainbridge choose to do? Be sure to explain each candidate's choice. And remember, a player doesn't just want to win, he wants to get THE MOST votes. For example, you could assume these are polling numbers and that there is some margin of error, thus a candidate prefers to have a larger margin over his opponent.
+            </p></task>
+
+          <task><p>
+              What is the outcome of the election? What percentage of the vote does each candidate get?
+            </p></task>
+
+          <task><p>
+              Does Arnold need to consider Bainbridge's strategies in order to decide on his own strategy? Does Bainbridge need to consider Arnold's strategies in order to decide on his own strategy? Explain your answer.
+            </p></task>
+     </activity>
+    <example xml:id="Ex_election2">
+      <title>A New Scenario</title>
+      <statement>
+        <p>
+          Bainbridge's mother is injured in a highway accident caused by speeding. The new payoff matrix is given in <xref ref="T_election2"></xref>.
+        </p>
+
+        <table xml:id="T_election2" >
+          <title>Percentage of the vote for <xref ref="Ex_election2"></xref>.</title>
+          <tabular>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell colspan="3" halign="center">Bainbridge</cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell bottom="minor">Raise Limit</cell>
+              <cell bottom="minor">Keep Limit</cell>
+              <cell bottom="minor">Dodge</cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell right="minor">Raise Limit</cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(45, 55)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(10, 90)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(40, 60)</m></cell>
+            </row>
+            <row>
+              <cell>Arnold</cell>
+              <cell right="minor">Keep Limit</cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(60, 40)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(55, 45)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(50, 50)</m></cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell right="minor">Dodge</cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(45, 55)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(10, 90)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(40, 60)</m></cell>
+            </row>
+          </tabular>
+        </table>
+      </statement>
+    </example>
+   <activity xml:id="A_election2">
+    <title>Analysis of the second scenario</title>
+    <introduction>
+      <p> For the following questions, assume Arnold and Bainbridge have the payoff matrix given in <xref ref="Ex_election2"></xref>.
+      </p></introduction>
+        <task><p>
+              Explain why <xref ref="T_election2"></xref> is a zero-sum game.
+            </p></task>
+
+          <task><p>
+              What should Arnold choose to do? What should Bainbridge choose to do? Be sure to explain each candidate's choice.
+            </p></task>
+
+          <task><p>
+              What is the outcome of the election?
+            </p></task>
+
+          <task><p>
+              Does Arnold need to consider Bainbridge's strategies in order to decide on his own strategy? Does Bainbridge need to consider Arnold's strategies in order to decide on his own strategy? Explain your answer.
+            </p></task>
+
+    </activity>
+    <example xml:id="Ex_election3">
+      <title>A Third Scenario</title>
+      <statement>
+        <p>
+          Bainbridge begins giving election speeches at college campuses and monster truck rallies.
+          The new payoff matrix is given in <xref ref="T_election3"></xref>.
+        </p>
+
+        <table xml:id="T_election3" >
+          <title>Percentage of the vote for <xref ref="Ex_election3"></xref>.</title>
+          <tabular>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell colspan="3" halign="center">Bainbridge</cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell bottom="minor">Raise Limit</cell>
+              <cell bottom="minor">Keep Limit</cell>
+              <cell bottom="minor">Dodge</cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell right="minor">Raise Limit</cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(35, 65)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(10, 90)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(60, 40)</m></cell>
+            </row>
+            <row>
+              <cell>Arnold</cell>
+              <cell right="minor">Keep Limit</cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(45, 55)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(55, 45)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(50, 50)</m></cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell right="minor">Dodge</cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(40, 60)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(10, 90)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(65, 35)</m></cell>
+            </row>
+          </tabular>
+        </table>
+      </statement>
+    </example>
+   <activity xml:id="A_election3">
+    <title>Analysis of the third scenario</title>
+    <introduction>
+      <p> For the following questions, assume Arnold and Bainbridge have the payoff matrix given in <xref ref="Ex_election3"></xref>.
+      </p></introduction>
+          <task><p>
+              Explain why <xref ref="T_election3"></xref> is a zero-sum game.
+            </p></task>
+
+          <task><p>
+              What should Arnold choose to do? What should Bainbridge choose to do? Be sure to explain each candidate's choice.
+            </p></task>
+
+          <task><p>
+              What is the outcome of the election?
+            </p></task>
+
+          <task><p>
+              Does Arnold need to consider Bainbridge's strategies in order to decide on his own strategy? Does Bainbridge need to consider Arnold's strategies in order to decide on his own strategy? Explain your answer.
+            </p></task>
+    </activity>
+    <activity xml:id="A_changestrategy">
+      <title>Changing the strategy</title>
+      <statement>
+        <p>
+          In each of the above scenarios, is there any reason for Arnold or Bainbridge to change his strategy? If there is, explain under what circumstances it makes sense to change strategy. If not, explain why it never makes sense to change strategy.
+        </p>
+      </statement>
+    </activity>
+  </subsection>
+
+  <subsection xml:id="SS_equilpairs">
+    <title>Equilibrium Pairs</title>
+    <p>
+      Chances are, in each of the exercises above, you were able to determine what each player should do. In particular, if both players play your suggested strategies, there is no reason for either player to change to a different strategy.
+    </p>
+
+    <definition xml:id="D_equilpair">
+      <statement>
+        <p>
+           A pair of strategies is an <term>equilibrium pair</term><idx><h>equilibrium pair</h></idx> if neither player gains by changing strategies.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      For example, consider the game matrix from <xref ref="E_Sec2_2small"></xref>, <xref ref="T_matrixEx1Sec2_2"></xref>.
+    </p>
+
+    <table>
+      <title>Payoff matrix for <xref ref="E_Sec2_2small"></xref>.</title>
+      <tabular>
+        <row>
+          <cell></cell>
+          <cell></cell>
+          <cell colspan="2" halign="center">Player 2</cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell></cell>
+          <cell bottom="minor" halign="center">A</cell>
+          <cell bottom="minor" halign="center">B</cell>
+        </row>
+        <row>
+          <cell>Player 1</cell>
+          <cell right="minor">A</cell>
+          <cell right="minor" bottom="minor" halign="center"><m>(100, -100)</m></cell>
+          <cell right="minor" bottom="minor" halign="center"><m>(-10, 10)</m></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell right="minor">B</cell>
+          <cell right="minor" bottom="minor" halign="center"><m>(0, 0)</m></cell>
+          <cell right="minor" bottom="minor" halign="center"><m>(-1, 1)</m></cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>
+      You determined that Player 2 should choose to play B, and thus, Player 1 should play B (i.e., we have the strategy pair [B, B]). Why is this an equilibrium pair? If Player 2 plays B, does Player 1 have any reason to change to strategy A? No, she would lose 10 instead of 1. If Player 1 plays B, does Player 2 have any reason to change to strategy A? No, she would gain 0 instead of 1. Thus neither player benefits from changing strategy, and so we say [B, B] is an equilibrium pair.
+    </p>
+
+    <p>
+      For now, we can use a <q>guess and check</q> method for finding equilibrium pairs. Take each outcome and decide whether either player would prefer to switch. Remember, Player 1 can only choose a different row, and Player 2 can only choose a different column. In our above example there are four outcomes to check: [A, A], [A, B], [B, A], and [B, B]. We already know [B, B] is an equilibrium pair, but let's check the rest. Suppose the players play [A, A]. Does Player 1 want to switch to B? No, she'd rather get 100 than 0. Does Player 2 want to switch to B? Yes! She'd rather get 10 than <m>-100</m>. So [A, A] is NOT an equilibrium pair since a player wants to switch. Now check that for [A, B] Player 1 would want to switch, and for [B, A] both players would want to switch. Thus [A, B] and [B, A] are NOT equilibrium pairs. Now you can try to find equilibrium pairs in any matrix game by just checking each payoff vector to see if one of the players would have wanted to switch to a different strategy.
+    </p>
+
+    <p>Generally, when we define a game matrix for a game, our rows and columns will be named with the strategy choices for the players. However, mathematically, we can just think of the matrix of payoff vectors without the row and column labels. In this case, we often identify the payoff vector itself as an <term>equilibrium</term><idx><h>equilibrium</h></idx> or <term>equilibrium point</term><idx><h>equilibrium point</h></idx>. In <xref ref="T_matrixEx1Sec2_2"></xref>, for example, we would say the payoff vector <m>(-1, 1)</m> is an <term>equilibrium point</term>.</p>
+
+    <activity xml:id="A_checkequil">
+      <title>Checking equilibrium pairs</title>
+      <statement>
+        <p>
+          Are the strategy pairs you determined in the three election scenarios, <xref ref="T_election1"></xref>, <xref ref="T_election2"></xref>, and <xref ref="T_election3"></xref>, equilibrium pairs? In other words, would either player prefer to change strategies? (You don't need to check whether any other strategies are equilibrium pairs.)
+        </p>
+      </statement>
+    </activity>
+    <activity xml:id="A_guesscheck">
+      <title>Using <q>guess and check</q></title>
+      <introduction>
+        <p>
+        Use the <q>guess and check</q> method to determine any equilibrium points for the following payoff matrices. It can also be helpful to identify the associated row and column for the equilibrium pair.</p></introduction>
+
+          <task><p>
+              <me>
+                \left[\begin{matrix}
+                (2,-2)\amp (2, -2)\\
+                (1, -1) \amp  (3, -3)
+                \end{matrix}\right]\hspace{.5in}
+              </me>
+            </p></task>
+
+          <task><p>
+              <me>
+                \left[\begin{matrix}
+                (3,-3)\amp (1, -1)\\
+                (2, -2) \amp  (4, -4)
+                \end{matrix}\right]\hspace{.5in}
+              </me>
+            </p></task>
+
+          <task><p>
+              <me>
+                \left[\begin{matrix}
+                (4,-4)\amp (5, -5)\amp (4, -4)\\
+                (3, -3) \amp  (0, 0)\amp (1, -1)
+                \end{matrix}\right]
+              </me>
+            </p></task>
+   
+    </activity>
+
+    <p>After trying the above examples, do you think every game has an equilibrium pair? Can games have multiple equilibrium pairs?</p>
+
+    <activity xml:id="A_existequil">
+      <title>Existence of equilibrium pairs</title>
+      <statement>
+        <p>
+          Do all games have equilibrium pairs?
+        </p>
+      </statement>
+    </activity>
+    <activity xml:id="A_multequil">
+      <title>Multiple equilibrium pairs</title>
+      <statement>
+        <p>
+          Can a game have more than one equilibrium pair?
+        </p>
+      </statement>
+    </activity>
+
+    <p>The next three activities give you a few more games to practice finding equilibrium pairs.</p>
+
+    <activity xml:id="A_RPSmatrix">
+      <title>Rock, paper, scissors</title>
+      <statement>
+        <p>
+          Consider the game ROCK, PAPER, SCISSORS<idx><h>Rock-Paper-Scissors</h></idx> (Rock beats Scissors, Scissors beat Paper, Paper beats Rock). Construct the payoff matrix for this game. Does it have an equilibrium pair? Explain your answer.
+        </p>
+      </statement>
+    </activity>
+    <activity xml:id="A_network">
+      <title>Battle of the networks</title>
+      <introduction>
+        <p>
+          Two television networks are battling for viewers for 7 pm Monday night. They each need to decide if they are going to show a sitcom or a sporting event. <xref ref="T_network"></xref> gives the payoffs as percent of viewers.
+        </p>
+
+        <table xml:id="T_network" >
+          <title>Payoff matrix for Battle of the Networks.</title>
+          <tabular>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell colspan="2" halign="center">Network 2</cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell bottom="minor">Sitcom</cell>
+              <cell bottom="minor">Sports</cell>
+            </row>
+            <row>
+              <cell>Network 1</cell>
+              <cell right="minor">Sitcom</cell>
+              <cell right="minor" bottom="minor"><m>(55, 45)</m></cell>
+              <cell right="minor" bottom="minor"><m>(52, 48)</m></cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell right="minor">Sports</cell>
+              <cell right="minor" bottom="minor"><m>(50, 50)</m></cell>
+              <cell right="minor" bottom="minor"><m>(45, 55)</m></cell>
+            </row>
+          </tabular>
+        </table></introduction>
+
+       
+          <task><p>
+              Explain why this is a zero-sum game.
+            </p></task>
+
+          <task><p>
+              Does this game have an equilibrium pair? If so, find it and explain what each network should do.
+            </p></task>
+
+          <task><p>
+              Convert this game to one in which the payoffs actually sum to zero.</p><hint><p>If a network wins 60% of the viewers, how much more than 50% of the viewers does it have?
+            </p></hint></task>
+    </activity>
+    <activity xml:id="A_compadvantage">
+      <title>Competitive advantage</title>
+      <introduction>
+        <p>
+          This game is an example of what economists call <term>Competitive Advantage</term><idx><h>Competitive Advantage</h></idx>. Two competing firms need to decide whether or not to adopt a new type of technology. The payoff matrix is in <xref ref="T_compadvantage"></xref>. The variable <m>a</m> is a positive number representing the economic advantage a firm will gain if it is the first to adopt the new technology.
+        </p>
+
+        <table xml:id="T_compadvantage" >
+          <title>Payoff matrix for Competitive Advantage.</title>
+          <tabular>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell colspan="2" halign="center">Firm A</cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell bottom="minor">Adopt New Tech</cell>
+              <cell bottom="minor">Stay Put</cell>
+            </row>
+            <row>
+              <cell>Firm B</cell>
+              <cell right="minor">Adopt New Tech</cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(0, 0)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(a, -a)</m></cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell right="minor">Stay Put</cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(-a, a)</m></cell>
+              <cell right="minor" bottom="minor" halign="center"><m>(0, 0)</m></cell>
+            </row>
+            <row>
+              <cell></cell>
+            </row>
+          </tabular>
+        </table></introduction>
+
+          <task><p>
+              Explain the payoff vector for each strategy pair. For example, why should the pair [Adopt New Tech, Stay Put] have the payoff <m>(a, -a)</m>?
+            </p></task>
+
+          <task><p>
+              Explain what each firm should do.
+            </p></task>
+
+          <task><p>
+              Give a real life example of Competitive Advantage.
+            </p></task>
+ 
+    </activity>
+
+    <p>We've seen how to describe a zero-sum game and how to find equilibrium pairs. We've tried to decide what each player's strategy should be. Each player may need to consider the strategy of the other player in order to determine his or her best strategy. But we need to be careful, although our intuition can be useful in deciding the best strategy, we'd like to be able to be more precise about finding strategies for each player. We'll learn some of these tools in the next section.</p> 
+  </subsection>
+
+   <reading-questions>
+      <title>Check Your Understanding</title>
+      
+
+      <exercise label="IGT_izs_CYU_zerosum1"><statement correct="yes"><p>True or False: The following game matrix is a zero-sum game.
+         <me>
+                \left[\begin{matrix}
+                (10, 20)\amp (-10, 40)\\
+                (-20, 50) \amp  (0, 30)
+                \end{matrix}\right]\hspace{.5in}
+              </me>
+      </p></statement><feedback><p>Each payoff vector sums to 30, a constant sum. Thus, this is a zero-sum game.</p></feedback><answer>True.</answer></exercise>
+
+      <exercise label="IGT_izs_CYU_zerosum2"><statement correct="no"><p>True or False: The following game matrix is a zero-sum game.
+         <me>
+                \left[\begin{matrix}
+                (10, 20)\amp (-20, 10)\\
+                (-10, 20) \amp  (20, 10)
+                \end{matrix}\right]\hspace{.5in}
+              </me>
+      </p></statement><feedback><p>Payoff vector <m>(10, 20)</m> sums to 30, but payoff vector <m>(-10, 20)</m> sums to 10. Thus, this is not a zero-sum game.</p></feedback><answer>False.</answer></exercise>
+
+      <exercise label="IGT_izs_CYU_equil"><statement><p> Determine which payoff vector is an equilbrium point for the following matrix.
+      <me>
+                \left[\begin{matrix}
+                (1, -1)\amp (0, 0)\\
+                (3, -3) \amp  (2, -2)
+                \end{matrix}\right]\hspace{.5in}
+              </me>
+      </p></statement>
+      <choices randomize="yes">
+      <choice correct="yes"><statement><m>(2, -2)</m></statement>
+      <feedback><p><m>(2, -2)</m> is an equilibrium point since if Player 2 chose column 2, Player 1 does not prefer row 1 with a payoff of 0. Similarly, if Player 1 chose row 2, Player 2 does not prefer column 1 with a payoff of <m>-3</m>.</p></feedback></choice>
+      <choice><statement><m>(1, -1)</m></statement>
+     <feedback><p><m>(1, -1)</m> is not an equilibrium point since if Player 2 chose column 1, Player 1 prefers row 2 with a payoff of 3. Similarly, if Player 1 chose row 1, Player 2 prefers column 2 with a payoff of <m>0</m>.</p></feedback></choice>
+     <choice><statement><m>(0, 0)</m></statement>
+     <feedback><p><m>(0, 0)</m> is not an equilibrium point since if Player 2 chose column 2, Player 1 prefers row 2 with a payoff of 2. Note, Player 2 doesn't want to switch, but we only need one player to want to change strategies for the vector to not be an equilbrium.</p></feedback></choice>
+     <choice><statement><m>(3, -3)</m></statement>
+     <feedback><p><m>(3, -3)</m> is not an equilibrium point since if Player 1 chose row 2, Player 2 prefers column 2 with a payoff of <m>-2</m>. Note, Player 1 doesn't want to switch, but we only need one player to want to change strategies for the vector to not be an equilbrium.</p></feedback></choice>
+    </choices><answer><m>(2, -2)</m></answer>
+    </exercise>
+
+    <exercise label="IGT_izs_CYU_existequil"><statement correct="no"><p>True or False: A zero-sum game must have an equilibrium pair (or point).
+      </p></statement><feedback><p>For example, the game matrix 
+    <me>
+                \left[\begin{matrix}
+                (3,-3)\amp (1, -1)\\
+                (2, -2) \amp  (4, -4)
+                \end{matrix}\right]\hspace{.5in}
+              </me>
+    does not have an equilibrium.</p></feedback><answer>False.</answer></exercise>
+
+    <exercise label="IGT_izs_CYU_multequil"><statement correct="yes"><p>True or False: A zero-sum game can have more than one  equilibrium pair (or point).
+      </p></statement><feedback><p>For example, the game matrix 
+    <me>
+                \left[\begin{matrix}
+                (4,-4)\amp (5, -5)\amp (4, -4)\\
+                (3, -3) \amp  (0, 0)\amp (1, -1)
+                \end{matrix}\right]
+              </me>
+    has more than one equilibrium.</p></feedback><answer>True.</answer></exercise>
+
+    <exercise label="IGT_izs_CYU_RPS"><statement correct="no"><p>True or False: The game of Rock-Paper-Scissors has an equilibrium pair.
+      </p></statement><feedback><p>No matter which strategy pair is played, there is at least one player that wishes they had played a different strategy.</p></feedback><answer>False.</answer></exercise>
+
+
+ 
+    </reading-questions>
+</section>

@@ -1,0 +1,279 @@
+
+<section xml:id="S_LiarsPoker">
+  <title>Liar's Poker</title>
+  <p>
+    In this section, we will continue to explore the ideas of a mixed strategy equilibrium. We have seen several examples of finding an equilibrium. We began with games which had a pure strategy equilibrium and then moved to games with a mixed strategy equilibrium. We saw two different methods for finding an equilibrium. The first employed graphs in order to understand and find the maximin and minimax strategies, and hence the equilibrium mixed strategy. The second method employed the ideas of expected value to find the equilibrium strategy. We will continue to solidify these ideas with another game, a simplified variation of poker.
+  </p>
+
+  <example xml:id="G_liarspoker">
+    <title>Liar's Poker<idx><h>Liar's Poker</h></idx></title>
+    <statement>
+      <p>
+         We begin with a deck of cards which has 50% Aces (A) and 50% Kings (K) and two players. Aces rank higher than Kings.</p>
+         <p>Player 1 is dealt one card, face down. Player 1 can look at the card, but does not show the card to Player 2. Player 1 then says <q>Ace</q> or <q>King</q> depending on what his card is. Player 1 can either tell the truth and say what the card is (T), or he can bluff and say that he has a higher ranking card (B). Note that if Player 1 has an Ace, he must tell the truth since there are no higher ranking cards. However, if he is dealt a King, he can bluff by saying he has an Ace.</p>
+         <p> If Player 1 says <q>King</q> the game ends and both players break even. If Player 1 says <q>Ace</q> then Player 2 can either call (C) or fold (F). If Player 2 folds, then Player 1 wins $0.50. If Player 2 calls and Player 1 does not have an Ace, then Player 2 wins $1. If Player 2 calls and Player 1 does have an Ace, then Player 1 wins $1.
+      </p>
+    </statement>
+  </example>
+
+  <activity xml:id="A_PlayLP">
+    <title>Play Liar's Poker</title>
+    <statement>
+      <p>
+        Choose an opponent and play Liar's Poker several times. Be sure to play the game as Player 1 and as Player 2. This is important for understanding the game. Keep track of the outcomes.
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_LPguessstrat">
+    <title>Conjecture a strategy</title>
+    <statement>
+      <p>
+        Just from playing Liar's Poker several times, can you suggest a strategy for Player 1? What about for Player 2? Does this game seem fair, or does one of the players seem to have an advantage? Explain your answers.
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_LPguessmatrix">
+    <title>Try to find the payoff matrix</title>
+    <statement>
+      <p>
+        In order to formally analyze Liar's Poker, we should find the payoff matrix. Do your best to find the payoff matrix. In a single hand of Liar's Poker, what are the possible strategies for Player 1? What are the possible strategies for Player 2? Determine any payoffs that you can.
+      </p>
+    </statement>
+  </activity>
+  <p>
+    Finding the payoff matrix in <xref ref="A_LPguessmatrix"></xref> is probably more challenging than it appears. Eventually we want to employ the same method for finding the payoff matrix that we used in One-Card Stud Poker from <xref ref="E_onecardstud"></xref> in Chapter 2, but first we need to understand each player's strategies and the resulting payoffs. We begin with the fact that Player 1 can be dealt an Ace or a King.
+  </p>
+  <activity xml:id="A_LPP1Ace">
+    <title>Player 1 has an Ace</title>
+    <statement>
+      <p>
+        Assume Player 1 is dealt an Ace. What can Player 1 do? What can Player 2 do? What is the payoff for each situation?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_LPP1King">
+    <title>Player 1 has a King</title>
+    <statement>
+      <p>
+        Assume Player 1 is dealt a King. What can Player 1 do? What can Player 2 do? What is the payoff for each situation?
+      </p>
+    </statement>
+  </activity>
+  <p>
+    Since Player 1 must say <q>Ace</q> when dealt an Ace, he only has a choice of strategy when dealt a King. So we can define his strategy independent of the deal. One strategy is to say <q>Ace</q> when dealt an Ace and say <q>Ace</q> when dealt a King; call this the <term>bluffing strategy, (B)</term>. The other strategy is to say <q>Ace</q> when dealt an Ace and say <q>King</q> when dealt a King; call this the <term>truth strategy, (T)</term>. The only time Player 2 has a choice is when Player 1 says <q>Ace.</q> In this case Player 2 can <term>call, (C)</term>  or <term>fold, (F)</term>. Since we need to determine the payoff matrix, we first need to determine the payoffs for pure strategies. This is similar to what we did for the One-Card Stud game.
+  </p>
+  <activity xml:id="A_LPBC">
+    <title>Expected value of [B, C]</title>
+    <statement>
+      <p>
+        Consider Player 1's pure strategy of always bluffing when dealt a King (B) and Player 2's pure strategy of always calling (C). Determine the expected value for Player 1. What is Player 2's expected value?
+      </p>
+    </statement>
+    <hint><p>You need to consider each possible deal. </p></hint>
+  </activity>
+  <activity xml:id="A_LPBF">
+    <title>Expected value of [B, F]</title>
+    <statement>
+      <p>
+        Similarly, determine the expected value for Player 1 for the pure strategy pair [B, F]. What is Player 2's expected value?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_LPTC">
+    <title>Expected value of [T, C]</title>
+    <statement>
+      <p>
+        Determine the expected value for Player 1 for the pure strategy pair [T, C]. What is Player 2's expected value?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_LPTF">
+    <title>Expected value of [T, F]</title>
+    <statement>
+      <p>
+        Determine the expected value for Player 1 for the pure strategy pair [T, F]. What is Player 2's expected value?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_LPmatrix">
+    <title>Payoff matrix for Liar's Poker</title>
+    <statement>
+      <p>
+        Using the expected values you calculated in <xref ref="A_LPBC"></xref>, <xref ref="A_LPBF"></xref>, <xref ref="A_LPTC"></xref>, and <xref ref="A_LPTF"></xref>, set up the <m>2 \times 2</m> payoff matrix for Liar's Poker.
+      </p>
+    </statement>
+  </activity>
+  <p>Once you have determined the payoff matrix for Liar's Poker, you can use either the graphical method or expected value method to solve the game. But before using either of these methods always check for a pure strategy equilibrium!</p>
+  <activity xml:id="A_LPpureequil">
+    <title>Pure strategy equilibrium</title>
+    <statement>
+      <p>
+        Using the payoff matrix you found in <xref ref="A_LPmatrix"></xref>, does Liar's Poker have a pure strategy equilibrium? Explain.
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_LPmixedequil">
+    <title>Mixed strategy equilibrium</title>
+    <statement>
+      <p>
+        Use any method you have learned to find a mixed strategy equilibrium for Liar's Poker. Give the mixed strategy for Player 1 and the mixed strategy for Player 2.
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_LPcompare">
+    <title>Compare strategies</title>
+    <statement>
+      <p>
+        Compare your solution from <xref ref="A_LPmixedequil"></xref> to your conjectured strategy from <xref ref="A_LPguessstrat"></xref>.
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_LPexpectedvalue">
+    <title>Expected value of the game</title>
+    <statement>
+      <p>
+        What is the expected value of the game for each player? How much would Player 1 expect to win if she played 15 games using the equilibrium mixed strategy?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_LPfair">
+    <title>Fairness</title>
+    <statement>
+      <p>
+        Is this game fair? Explain. Again, compare your answer to your conjecture in <xref ref="A_LPguessstrat"></xref>.
+      </p>
+    </statement>
+  </activity>
+  <p>Congratulations! You can now set up matrices for simple games of chance and solve for a mixed strategy equilibrium. Before solving a more complicated game, let's get the help of technology for solving larger matrix games.</p>
+
+  <reading-questions>
+      <title>Check Your Understanding</title>
+
+      <exercise label="IGT_LP_CYU_payofftostrat"><statement>
+    <p>
+      Match each payoff vector to the corresponding strategy pair for Liar's Poker, <xref ref="G_liarspoker"></xref>.
+    </p>
+  </statement>
+  <feedback>
+    <p>
+      Use the matrix you found in <xref ref="A_LPmatrix"></xref>.
+    </p>
+  </feedback>
+  <matches>
+  <match order="1">
+  <premise>[B, C]</premise>
+  <response><m>(0, 0)</m></response>
+  </match>
+  <match order="2">
+  <premise>[B, F]</premise>
+  <response><m>(1/2, -1/2)</m></response>
+  </match>
+  <match order="3">
+  <premise>[T, F]</premise>
+  <response><m>(1/4, -1/4)</m></response>
+  </match>
+  </matches><answer><p>[B, C]<m>=(0, 0)</m>; [B, F]<m>=(1/2, -1/2)</m>; [T, F]<m>=(1/4, -1/4)</m>;</p></answer></exercise>
+
+  <exercise label="IGT_LP_CYU_payofftTC">
+    <statement><p>In Liar's Poker, the payoff vector for [T, C] is</p></statement>
+    <choices randomize="yes">
+      <choice><statement><m>(0, 0)</m></statement></choice>
+      <choice correct="yes"><statement><m>(1/2, -1/2).</m></statement></choice>
+      <choice><statement><m>(-1/2, 1/2).</m></statement></choice>
+      <choice><statement><m>(-1/4, 1/4).</m></statement></choice>
+      <choice><statement><m>(1/4, -1/4).</m></statement></choice>
+    </choices><answer><m>(1/2, -1/2)</m></answer>
+  </exercise>
+
+<exercise label="IGT_LP_CYU_prefPlayer">
+    <statement><p>In Liar's Poker, it is preferable to be </p></statement>
+    <choices randomize="no">
+      <choice correct="yes"><statement><p>Player 1</p></statement><feedback><p>Correct. Player 1 has expected payoffs greater than or equal to 0.</p></feedback></choice>
+      <choice><statement><p>Player 2</p></statement><feedback><p>Incorrect. Player 2 has expected payoffs less than or equal to 0.</p></feedback></choice>
+      <choice><statement><p>Neither, the game looks the same to both players.</p></statement><feedback><p>Incorrect. Player 1's expected payoffs are greater than or equal to 0,  while Player 2's expected payoffs less than or equal to 0.</p></feedback></choice>
+    </choices><answer><p>Player 1</p></answer>
+  </exercise>
+
+ <exercise label="IGT_LP_CYU_LPP1B"><statement correct="no"><p>True or False: In the game of Liar's Poker, Player 1 should always bluff (B).
+    </p></statement><feedback><p>The payoff matrix is helpful.</p></feedback><answer>False</answer></exercise>
+
+    <exercise label="IGT_LP_CYU_LPP2C"><statement correct="no"><p>True or False: In the game of Liar's Poker, Player 2 should always call (C).
+    </p></statement><feedback><p>The payoff matrix is helpful.</p></feedback><answer>False</answer></exercise>
+
+    <exercise label="IGT_LP_CYU_LPP1moreT"><statement correct="yes"><p>True or False: In the game of Liar's Poker, Player 1 should tell the truth (T) more often than bluff (B).
+    </p></statement><feedback><p>The equilibrium mixed strategy from <xref ref="A_LPmixedequil"></xref> is helpful.</p></feedback><answer>True</answer></exercise>
+
+    <exercise label="IGT_LP_CYU_LPP2moreF"><statement correct="yes"><p>True or False: In the game of Liar's Poker, Player 2 should fold (F) more often than call (C).
+    </p></statement><feedback><p>The equilibrium mixed strategy from <xref ref="A_LPmixedequil"></xref> is helpful.</p></feedback><answer>True</answer></exercise>
+
+    <exercise label="IGT_LP_CYU_LPfair"><statement correct="no"><p>True or False: Liar's Poker is a fair game.
+    </p></statement><feedback><p>The expected payoff from <xref ref="A_LPexpectedvalue"></xref> is helpful.</p></feedback><answer>False</answer></exercise>
+
+    <exercise label="IGT_LP_CYU_findE15050"><statement><p>In Liar's Poker, suppose Player 2 calls (C) 50% of the time and folds (F) 50% of the time.</p>
+       <p> What is the expected payoff to Player 1 for bluffing, <m>E_1(B)</m>? <var width="4"/></p>
+       <p> What is the expected payoff to Player 1 for telling the truth, <m>E_1(T)</m>? <var width="4"/></p> 
+       <p>Reminder, if your answer is not a whole number, use decimals.</p>
+    </statement>
+    
+      <setup>
+    <var>
+
+    <condition number="0.25">
+    <feedback>
+      <p>
+        Correct, <m>(1/2)(0)+(1/2)(0.5)=0.25</m>. 
+      </p>
+    </feedback>
+    </condition>
+    
+
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+        Make sure you are using the probabilities <m>1/2</m> and <m>1/2</m> and Player 1's payoffs when bliuffing (B).
+      </p>
+    </feedback>
+    </condition>
+    </var>
+
+    <var>
+
+    <condition number="0.375">
+    <feedback>
+      <p>
+        Correct, <m>(1/2)(0.5)+(1/2)(0.25)=0.375</m>. 
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+        Make sure you are using the probabilities <m>1/2</m> and <m>1/2</m> and Player 1's payoffs when telling the truth (T).
+      </p>
+    </feedback>
+    </condition>
+    </var>
+    
+  </setup>
+      <answer><m>E_1(B)=0.25, E_1(T)=0.375</m></answer></exercise>
+
+    <exercise label="IGT_LP_CYU_BorT5050"><statement><p>If Player 2 plays the (1/2, 1/2) mixed strategy in  Liar's Poker, then which pure strategy does Player 1 prefer?</p></statement> 
+    <choices randomize="no">
+      <choice><statement><p>Bluffing (B)</p></statement><feedback><p>Use the expected values of each pure strategy to help you.</p></feedback></choice>
+
+      <choice correct="yes"><statement ><p>Telling the truth (T)</p></statement><feedback><p>Since the expected value for Player 1 is greater for T than B, Player 1 prefers T.</p></feedback></choice>
+      
+      <choice ><statement><p>Neither, Player 1 is indifferent to playing B or T.</p></statement><feedback><p>Use the expected values of each pure strategy to help you.</p></feedback></choice>
+    </choices><answer><p>Telling the truth (T)</p></answer></exercise> 
+
+    <exercise label="IGT_LP_CYU_LPonce"><statement correct="no"><p>True or False: If Liar's Poker is played once (not repeated), Player 1 will win.
+    </p></statement><feedback><p>Although the expected payoff is positive, we don't know what will happen for any one time the game is played.</p></feedback><answer>False.</answer></exercise>
+
+    <exercise label="IGT_LP_CYU_LPtentimes"><statement correct="yes"><p>True or False: If Liar's Poker is played 10 times with Player 1 playing the mixed strategy equilibrium, then Player 1 expects to have a positive payoff.
+    </p></statement><feedback><p>Since the expected payoff is positive for the mixed strategy equilibrium, Player 1 expects a positive payoff in the long run.</p></feedback><answer>True.</answer></exercise>
+
+  </reading-questions>
+</section>

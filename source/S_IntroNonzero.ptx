@@ -1,0 +1,432 @@
+
+<section xml:id="S_IntroNonzero">
+  <title>Introduction to Two-Player Non-Zero-Sum Games</title>
+  <p>
+    In this section we introduce non-zero-sum games. In a <term>non-zero-sum game</term><idx><h>non-zero-sum game</h></idx> the players' payoffs no longer need to sum to a constant value. Now it is possible for both players to gain or both players to lose.
+  </p>
+  <activity xml:id="A_propertiesnonzero">
+    <title>Compare properties</title>
+    <statement>
+      <p>
+        What are some properties of a zero-sum game that may no longer hold for a non-zero-sum game? For example, in a zero-sum game is it ever advantageous to inform your opponent of your strategy? Is it advantageous to communicate prior to game play and determine a joint plan of action? Would you still want to minimize your opponents payoff?
+      </p>
+    </statement>
+  </activity>
+  <p>
+    Let's build an understanding of non-zero-sum games by looking at an example.
+  </p>
+
+  <example xml:id="E_battle_of_movies">
+    <title>Battle of the Movies<idx><h>Battle of the Movies</h></idx></title>
+    <statement>
+      <p>
+         Alice and Bob want to go out to a movie. Bob wants to see an action movie, Alice wants to see a comedy. Both prefer to go to a movie together rather than to go alone. We can represent the situation with the payoff matrix in <xref ref="T_battleofmovies"></xref>:
+      </p>
+
+      <table xml:id="T_battleofmovies" >
+        <title>Battle of the Movies</title>
+        <tabular>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell colspan="2" halign="center">Alice</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell bottom="minor">Action</cell>
+            <cell bottom="minor">Comedy</cell>
+          </row>
+          <row>
+            <cell>Bob</cell>
+            <cell right="minor">Action</cell>
+            <cell right="minor" bottom="minor" halign="center"><m>(2, 1)</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>(-1, -1)</m></cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell right="minor">Comedy</cell>
+            <cell right="minor" bottom="minor" halign="center"><m>(-1, -1)</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>(1, 2)</m></cell>
+          </row>
+        </tabular>
+      </table>
+    </statement>
+  </example>
+
+  <activity xml:id="A_BoMnotzerosum">
+    <title>Not zero-sum</title>
+    <statement>
+      <p>
+        Explain why this is not a zero-sum game.
+      </p>
+    </statement>
+  </activity>
+
+  <p> In zero-sum games it is never advantageous to let your opponent know you strategy. Does that property still apply for games like Battle of the Movies?</p>
+
+  <activity xml:id="A_BoMannounce">
+    <title>Announcing a strategy</title>
+    <statement>
+      <p>
+        Could it be advantageous for a player to announce his or her strategy? Could it be harmful to announce his or her strategy? If possible, describe a scenario in which it would be advantageous to announce a strategy. If possible, describe a scenario in which it would be harmful to announce a strategy.
+      </p>
+    </statement>
+  </activity>
+
+  <p>We might first try to analyze Battle of the Movies using the same techniques as we used for zero-sum games. For example, we might start as we would in zero-sum games by looking for any equilibrium points.</p>
+
+  <activity xml:id="A_BoMequilpoints">
+    <title>Equilibrium points</title>
+    <introduction>
+      <p>
+        Since our main goal in analyzing games has been to find equilibrium points, let's find any equilibrium points for Battle of the Movies. </p></introduction>
+        <task><p>Are there any strategy pairs where players would not want to switch? </p><hint><p>There are two!</p></hint></task>
+  
+    
+  
+    
+    <task>
+      <p>
+        Are the equilibrium points the same (in other words, does each player get the same payoff at each equilibrium point)? Compare this to what must happen for zero-sum games.
+      </p>
+    </task>
+  </activity>
+
+  <p>Now that we know Battle of the Movies has two equilibrium points, we should try to find actual strategies for Alice and Bob. Is there a good strategy for each if they play the game only once? What if they repeat the game? Recall that with zero-sum games, if there was an equilibrium, rational players always want to play it, even if the game is repeated. Does that still seem to work here? Also, how might the ability to communicate change what the players do? </p>
+
+  <activity xml:id="A_BoMrepeat">
+    <title>Repeating the game</title>
+    <introduction>
+      <p>
+        Suppose the game is played repeatedly. For example, Alice and Bob have movie night once a month. </p></introduction>
+
+        <task><p>Suggest a strategy for Alice and for Bob.</p></task>
+        <task><p> Play the game with someone from class <em>without communicating</em> about your strategy before each game.
+      </p>
+    </task>
+  
+      <task><p>
+        How could communication affect the choice of strategy? Now play several times where you are allowed to communicate about your strategy. Does this change your strategy?</p></task>
+    
+    
+      <task><p>
+        In either case, communicating and not communicating, do you think your strategies for Alice and Bob represent a mixed strategy equilibrium?
+      </p>
+    </task>
+  </activity>
+  <activity xml:id="A_BoMcomparezerosum">
+    <title>Compare to zero-sum</title>
+    <statement>
+      <p>
+        In a zero-sum game, if there is a pure strategy equilibrium, then what happens when you repeat a game? If you repeat Battle of the Movies, does the game always result in an equilibrium pair?
+      </p>
+    </statement>
+  </activity>
+  <p>
+    Hopefully, you are beginning to see some of the challenges for analyzing non-zero-sum games. We know there are equilibrium points in Battle of the Movies, but even rational play may not result in an equilibrium. For the remainder of this section, let's assume that players are <em>not</em> allowed to communicate about strategy prior to play. Such games are called <term>non-cooperative</term><idx><h>non-cooperative games</h></idx> games. Before moving on, let's try to find the maximin strategies for our players using the graphical method, as we did with zero-sum games.
+  </p>
+  <activity xml:id="A_BoMBobsmatrix">
+    <title>Bob's payoff matrix</title>
+    <statement>
+      <p>
+        Consider Battle of the Movies from Bob's point of view. We know that Bob wants to maximize his payoff (that has not changed). So Bob doesn't care what Alice's payoff's are. Write down Bob's payoff matrix without including Alice's payoffs.
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_BoMBobgraph">
+    <title>Graphical method on Bob's matrix</title>
+    <statement>
+      <p>
+        Recall that the graphical method represents Bob's expected payoff depending on how often he plays each of his options. Sketch the graph associated with Bob's payoff matrix.
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_BoMBobintersection">
+    <title>Bob's maximin mixed strategy</title>
+    <statement>
+      <p>
+        The area between the two lines still represents the possible expected values for Bob, depending on how often Alice plays each of her strategies. So as before, the bottom lines represent the <em>least</em> Bob can expect as he varies his strategy. Thus, the point of intersection will represent the biggest of these smallest values (the maximin strategy). Find this point of intersection. How often should Bob play each option? What is his expected payoff?
+      </p>
+    </statement>
+  </activity>
+  <p>
+    So no matter what Alice does, Bob can expect that over the long run he wins at least the value you found in <xref ref="A_BoMBobintersection"></xref>. Make sure you understand this before moving on.
+  </p>
+  <activity xml:id="A_BoMAlicematrix">
+    <title>Alice's maximin mixed strategy</title>
+    <statement>
+      <p>
+        Consider Battle of the Movies from Alice's point of view. Write down her payoff matrix and use the graphical method to find the probability with which she should play each option and her expected payoff.
+      </p>
+    </statement>
+  </activity>
+  <p>
+    Now, from <xref ref="A_BoMBobintersection"></xref> and <xref ref="A_BoMAlicematrix"></xref> you have the minimum payoff each player should expect. Note that since this is not a zero-sum game, both players can expect a positive payoff. But now we want to see how this pair of mixed strategies really works for the players.
+  </p>
+  <activity xml:id="A_BoMBobsmaximin">
+    <title>Alice's expected value when Bob plays his maximin strategy</title>
+    <introduction>
+      <p>
+        Assume Bob plays the mixed strategy from <xref ref="A_BoMBobintersection"></xref>.</p></introduction>
+        <task><p>Calculate Alice's expected value for each of her <em>pure</em> strategies (<m>E_2</m>(Comedy) and <m>E_2</m>(Action)).
+      </p>
+    </task>
+  
+ 
+    <task>
+      <p>
+        Are Alice's expected values equal? If not, which strategy does she prefer when Bob plays the mixed strategy from <xref ref="A_BoMBobintersection"></xref>? Does Alice want to deviate from her mixed strategy?
+      </p>
+    </task>
+  </activity>
+  <activity xml:id="A_BoMBobchange">
+    <title>Mixed strategy equilibrium</title>
+    <statement>
+      <p>
+        If Alice plays a pure strategy, does Bob want to change his strategy? Is the mixed strategy pair for Bob and Alice from <xref ref="A_BoMBobintersection"></xref> and <xref ref="A_BoMAlicematrix"></xref> an equilibrium? In fact, if Bob changes his strategy, how does his expected value compare to the expected value for his mixed strategy?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_BoMgraphwrong">
+    <title>Downside of the graphical method</title>
+    <statement>
+      <p>
+        What goes wrong with the graphical method in the case of a non-zero-sum game? 
+      </p>
+    </statement>
+    <hint><p>Is it important for Alice to consider the minimax strategy? Does Alice have any reason to minimize Bob's payoff?</p></hint>
+  </activity>
+  <p>
+    As we can see by the above activities, the methods used to analyze zero-sum games may not be too helpful for non-zero-sum games. Part of the problem is that in solving zero-sum games we take into consideration that one player wants to <em>minimize</em> the payoff to the other player. This is no longer the case. Changing strategies may allow BOTH players to do better. A player no longer has any reason to prevent the other player from doing better.
+  </p>
+  <activity xml:id="A_BoMstartBmixed">
+    <title>Response to the mixed strategy</title>
+    <statement>
+      <p>
+        We know the mixed strategy won't give us an equilibrium. But suppose we start there. In other words, suppose Bob plans to play the mixed strategy from <xref ref="A_BoMBobintersection"></xref>. Which pure strategy should Alice play? In response, which pure strategy should Bob play? What is the outcome? Do you end up at an equilibrium?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_BoMstartAmixed">
+    <title>Bob's expected value when Alice plays her maximin strategy</title>
+    <statement>
+      <p>
+        Suppose Alice plans to play the mixed strategy from <xref ref="A_BoMAlicematrix"></xref>. Calculate the expected value for Bob for each of his pure strategies. Which pure strategy does Bob prefer to play? How will Alice respond to Bob's pure strategy? What is the outcome? Do you end up at an equilibrium?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_BoMoutguess">
+    <title>Out-guessing the mixed strategy</title>
+    <statement>
+      <p>
+        Suppose Bob thinks Alice will try the mixed strategy and Alice thinks Bob will try the mixed strategy. Which pure strategy will each play? What is the outcome? Do you end up at an equilibrium?
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_BoMeverplaymixed">
+    <title>Playing the maximin mixed strategy</title>
+    <statement>
+      <p>
+        Considering <xref ref="A_BoMstartBmixed"></xref>, <xref ref="A_BoMstartAmixed"></xref>, and <xref ref="A_BoMoutguess"></xref>, is it in a player's best interest to even consider playing the mixed strategy from <xref ref="A_BoMBobintersection"></xref> or <xref ref="A_BoMAlicematrix"></xref>?
+      </p>
+    </statement>
+  </activity>
+
+  <p>We've seen the limitations of the graphical method, but what about the expected value method?</p>
+
+  <activity xml:id="A_BoMevsol">
+    <title>Expected value solution</title>
+    <statement>
+      <p>
+        Try applying the expected value method to Battle of the Movies. What mixed strategies do you get? Explain why this method will also not result in an equilibrium. You might want to consider whether it is important for one player to minimize the expected value for the other player.
+      </p>
+    </statement>
+  </activity>
+  <p>Now that we have seen how the methods that allowed us to solve zero-sum games don't work for non-zero-sum games, we will need to find new ways to approach non-zero-sum games.</p>
+
+  <reading-questions>
+      <title>Check Your Understanding</title>
+
+      <exercise label="IGT_INZ_CYU_zerosum1"><statement correct="no"><p>True or False: The following game
+        <table xml:id="T_NZmatrix1" >
+    <tabular>
+      <row>
+        <cell></cell>
+        <cell bottom="minor"><b>C</b></cell>
+        <cell bottom="minor"><b>D</b></cell>
+      </row>
+      <row>
+        <cell right="minor"><b>A</b></cell>
+        <cell right="minor" bottom="minor" halign="center"><m>(2, 2)</m></cell>
+        <cell right="minor" bottom="minor" halign="center"><m>(1, 0)</m></cell>
+      </row>
+      <row>
+        <cell right="minor"><b>B</b></cell>
+        <cell right="minor" bottom="minor" halign="center"><m>(0, 1)</m></cell>
+        <cell right="minor" bottom="minor" halign="center"><m>(-1, -1)</m></cell>
+      </row>
+    </tabular>
+  </table>
+    is a zero-sum game.</p></statement><answer>False</answer></exercise>
+
+    <exercise label="IGT_INZ_CYU_findequil1"><statement><p>The following game has at least one pure strategy equilibrium, click on or circle the equilibrium point(s).
+    </p></statement><areas><p>
+<table>
+        <tabular>
+          <row>
+        <cell></cell>
+        <cell bottom="minor"><b>C</b></cell>
+        <cell bottom="minor"><b>D</b></cell>
+      </row>
+      <row>
+        <cell right="minor"><b>A</b></cell>
+        <cell right="minor" bottom="minor" halign="center"><area correct="yes"><m>(2, 2)</m></area></cell>
+        <cell right="minor" bottom="minor" halign="center"><area correct="no"><m>(1, 0)</m></area></cell>
+      </row>
+      <row>
+        <cell right="minor"><b>B</b></cell>
+        <cell right="minor" bottom="minor" halign="center"><area correct="no"><m>(0, 1)</m></area></cell>
+        <cell right="minor" bottom="minor" halign="center"><area correct="no"><m>(-1, -1)</m></area></cell>
+      </row>
+      </tabular>
+  </table>
+    </p></areas>
+
+    <answer>(2, 2)</answer></exercise>
+
+    <exercise label="IGT_INZ_CYU_P1strat1"><statement><p> In the game in <xref ref="T_NZmatrix1"></xref>, Player 1 should play</p></statement>
+    <choices randomize="no">
+      <choice correct="yes"><statement><p>Pure strategy A.</p></statement><feedback><p>Correct.</p></feedback></choice>
+      <choice ><statement><p>Pure strategy B.</p></statement><feedback><p>Think about any equilibrium points.</p></feedback></choice>
+      <choice ><statement><p>A mixed strategy with A more often than B.</p></statement><feedback><p>Think about any equilibrium points.</p></feedback></choice>
+      <choice ><statement><p>A mixed strategy with B more often than A.</p></statement><feedback><p>Think about any equilibrium points.</p></feedback></choice>
+    </choices><answer><p>Pure strategy A</p></answer></exercise>
+
+    <exercise label="IGT_INZ_CYU_P2strat1"><statement><p> In the game in <xref ref="T_NZmatrix1"></xref>, Player 2 should play</p></statement>
+    <choices randomize="no">
+      <choice correct="yes"><statement><p>Pure strategy C.</p></statement><feedback><p>Correct.</p></feedback></choice>
+      <choice ><statement><p>Pure strategy D.</p></statement><feedback><p>Think about any equilibrium points.</p></feedback></choice>
+      <choice ><statement><p>A mixed strategy with C more often than D.</p></statement><feedback><p>Think about any equilibrium points.</p></feedback></choice>
+      <choice ><statement><p>A mixed strategy with D more often than C.</p></statement><feedback><p>Think about any equilibrium points.</p></feedback></choice>
+    </choices><answer><p>Pure strategy A</p></answer></exercise>
+
+    <exercise label="IGT_INZ_CYU_zerosum2"><statement correct="no"><p>True or False: The following game
+        <table xml:id="T_NZmatrix2" >
+    <tabular>
+      <row>
+        <cell></cell>
+        <cell bottom="minor"><b>C</b></cell>
+        <cell bottom="minor"><b>D</b></cell>
+      </row>
+      <row>
+        <cell right="minor"><b>A</b></cell>
+        <cell right="minor" bottom="minor" halign="center"><m>(2, 3)</m></cell>
+        <cell right="minor" bottom="minor" halign="center"><m>(1, -4)</m></cell>
+      </row>
+      <row>
+        <cell right="minor"><b>B</b></cell>
+        <cell right="minor" bottom="minor" halign="center"><m>(-4, 1)</m></cell>
+        <cell right="minor" bottom="minor" halign="center"><m>(3, 2)</m></cell>
+      </row>
+    </tabular>
+  </table>
+    is a zero-sum game.</p></statement><answer>False</answer></exercise>
+
+    <exercise label="IGT_INZ_CYU_findequil2"><statement><p>The following game has at least one pure strategy equilibrium, click on or circle the equilibrium point(s).
+    </p></statement><areas><p>
+<table>
+        <tabular>
+          <row>
+        <cell></cell>
+        <cell bottom="minor"><b>C</b></cell>
+        <cell bottom="minor"><b>D</b></cell>
+      </row>
+      <row>
+        <cell right="minor"><b>A</b></cell>
+        <cell right="minor" bottom="minor" halign="center"><area correct="yes"><m>(2, 3)</m></area></cell>
+        <cell right="minor" bottom="minor" halign="center"><area correct="no"><m>(1, -4)</m></area></cell>
+      </row>
+      <row>
+        <cell right="minor"><b>B</b></cell>
+        <cell right="minor" bottom="minor" halign="center"><area correct="no"><m>(-4, 1)</m></area></cell>
+        <cell right="minor" bottom="minor" halign="center"><area correct="yes"><m>(3, 2)</m></area></cell>
+      </row>
+      </tabular>
+  </table>
+    </p></areas>
+
+    <answer><p>(2, 3) and (3, 2)</p></answer></exercise>
+
+    <exercise label="IGT_INZ_CYU_repeat2"><statement correct="no"><p>True or False: In the game in <xref ref="T_NZmatrix2"></xref>, if the players play once, and each player chooses the strategy with their preferred equilibrium, them the game will result in an equilibrium.</p></statement><feedback><p>Player 1 would play B while Player 2 would play C, which is not an equilibrium.</p></feedback><answer>False.</answer></exercise>
+
+    <exercise label="IGT_INZ_CYU_P1strat2"><statement><p> In the game in <xref ref="T_NZmatrix2"></xref>, suppose Player 1 only considers her payoff matrix and finds the mixed strategy as we did for zero-sum games. Then Player 1 would play</p></statement>
+    <choices randomize="no">
+      <choice ><statement><p>Pure strategy A.</p></statement><feedback><p>Find the mixed strategy using the graphical or expected value method.</p></feedback></choice>
+      <choice ><statement><p>Pure strategy B.</p></statement><feedback><p>Find the mixed strategy using the graphical or expected value method.</p></feedback></choice>
+      <choice correct="yes"><statement ><p>A mixed strategy with A more often than B.</p></statement><feedback><p>The mixed strategy is <m>(7/8, 1/8)</m>.</p></feedback></choice>
+      <choice ><statement><p>A mixed strategy with B more often than A.</p></statement><feedback><p>The mixed strategy is <m>(7/8, 1/8)</m>.</p></feedback></choice>
+    </choices><answer><p>A mixed strategy with A more often than B: <m>(7/8, 1/8)</m>.</p></answer></exercise>
+
+    <exercise label="IGT_INZ_CYU_P2strat2"><statement><p> In the game in <xref ref="T_NZmatrix2"></xref>, suppose Player 1 plays the zero-sum mixed strategy. Then Player 2 prefers to play </p></statement>
+    <choices randomize="no">
+      <choice correct="yes"><statement><p>Pure strategy C.</p></statement><feedback><p>We can find <m>E_2(C)=17/8</m> and <m>E_2(D)=9/8.</m> So, Player 2 prefers C.</p></feedback></choice>
+      <choice ><statement><p>Pure strategy D.</p></statement><feedback><p>Find <m>E_2(C)</m> and <m>E_2(D).</m></p></feedback></choice>
+      <choice ><statement ><p>A mixed strategy with A more often than B.</p></statement><feedback><p>Find <m>E_2(C)</m> and <m>E_2(D).</m></p></feedback></choice>
+      <choice ><statement><p>A mixed strategy with B more often than A.</p></statement><feedback><p>Find <m>E_2(C)</m> and <m>E_2(D).</m></p></feedback></choice>
+    </choices><answer><p>Pure strategy C since <m>E_2(C)=17/8</m> and <m>E_2(D)=9/8.</m></p></answer></exercise>
+
+    <exercise label="IGT_INZ_CYU_P1strat2P2C"><statement><p> In the game in <xref ref="T_NZmatrix2"></xref>, suppose Player 2 announces he will play C. What should Player 1 play?</p></statement>
+    <choices randomize="no">
+      <choice correct="yes"><statement ><p>Pure strategy A.</p></statement><feedback><p>If Player 2 plays C, Player 1 prefers A.</p></feedback></choice>
+      <choice ><statement><p>Pure strategy B.</p></statement><feedback><p>Player 1 does not prefer -4.</p></feedback></choice>
+      <choice ><statement><p>A mixed strategy with A more often than B.</p></statement><feedback><p>In this game, knowing what Player 2 will do should make the choice easy for Player 1.</p></feedback></choice>
+      <choice ><statement><p>A mixed strategy with B more often than A.</p></statement><feedback><p>In this game, knowing what Player 2 will do should make the choice easy for Player 1.</p></feedback></choice>
+    </choices><answer><p>Pure strategy A.</p></answer></exercise>
+
+    <exercise label="IGT_INZ_CYU_BoMvariation"><statement><p>Going back to Battle of the Movies, suppose Alice still prefers Comedy to Action, but also prefers to go to the movie with Bob than to go alone. However, now Bob hates Comedy, so he would prefer to see the action movie alone rather than go to the Comedy movie.</p>
+    <p> We can adjust the payoff as in the following matrix. Click or circle any equilibruim points. 
+    </p></statement><areas><p>
+<table xml:id="T_battleofmoviesvariation" >
+        <tabular>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell colspan="2" halign="center">Alice</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell bottom="minor">Action</cell>
+            <cell bottom="minor">Comedy</cell>
+          </row>
+          <row>
+            <cell>Bob</cell>
+            <cell right="minor">Action</cell>
+            <cell right="minor" bottom="minor" halign="center"><area correct="yes"><m>(2, 1)</m></area></cell>
+            <cell right="minor" bottom="minor" halign="center"><area correct="no"><m>(1, -1)</m></area></cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell right="minor">Comedy</cell>
+            <cell right="minor" bottom="minor" halign="center"><area correct="no"><m>(-3, -1)</m></area></cell>
+            <cell right="minor" bottom="minor" halign="center"><area correct="no"><m>(-2, 2)</m></area></cell>
+          </row>
+        </tabular>
+      </table>
+    </p></areas>
+
+    <answer>(2, 2)</answer></exercise>
+    
+    <exercise label="IGT_INZ_CYU_zerocomm"><statement correct="no"><p>True or False: In a <em>zero-sum game</em>, it can be a benefit to a player to announce their strategy.</p></statement><feedback><p>Since one player's gain is the other's loss, it never benefits a player to announce a strategy.</p></feedback><answer>False.</answer></exercise>
+
+    <exercise label="IGT_INZ_CYU_nonzerocomm"><statement correct="yes"><p>True or False: In a <em>non-zero-sum game</em>, it can be a benefit to a player to announce their strategy.</p></statement><feedback><p>Think of Battle of the Movies and what Bob should do if Alice says she is going to Comedy. Would this benefit Alice?</p></feedback><answer>True.</answer></exercise>
+
+    <exercise label="IGT_INZ_CYU_zerominopp"><statement correct="yes"><p>True or False: In a <em>zero-sum game</em>, a player wants to minimize their opponent's payoff.</p></statement><feedback><p>This is the entire premise behind our methods for solving zero-sum games.</p></feedback><answer>True.</answer></exercise>
+    
+    <exercise label="IGT_INZ_CYU_znonerominopp"><statement correct="no"><p>True or False: In a <em>non-zero-sum game</em>, a player wants to minimize their opponent's payoff.</p></statement><feedback><p>Since both players can win, there is no reason to make your opponent lose.</p></feedback><answer>False.</answer></exercise>
+
+
+
+    </reading-questions>
+</section>

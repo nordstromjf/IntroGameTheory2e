@@ -1,0 +1,207 @@
+
+<section xml:id="S_intro">
+  <title>Players and Strategies</title>
+  <introduction>
+    <p>
+      In this book most of the games will be played by two <term>players</term><idx><h>player</h></idx>. Each player must decide how he or she will play the game. In order to study games mathematically, we need to make some assumptions about how the players should play the game. This allows us to be able to better predict what our players should do. 
+    </p>
+  </introduction>
+
+  <subsection xml:id="SS_Cake">
+    <title>Assumptions: Cake Division</title><idx><h>Cake Division</h></idx>
+    
+    <p>We begin with an example of cutting a cake to illustrate some of the assumptions we will make about our players.
+      How can two children fairly divide a cake? One classic solution is to have one child cut the cake and have the other child choose a piece.
+    </p>
+
+    <p>
+      Before examining this solution, try to answer the following questions:
+      <ul>
+        <li>Why does this work? In other words, why should both children feel they received a fair share of the cake?</li>
+        <li>What are the underlying assumptions that make this process work? What do we need to assume about each player?</li>
+      </ul>
+    </p>
+
+    <p>
+          The goal of each player is to get the largest piece. We can think of this as each player acting in his or her <term>self-interest</term><idx><h>self-interest</h></idx>.
+     
+          Furthermore, both players know that the other player has the same goal and will act to further this goal. Thus, we know that each player is <term>rational</term><idx><h>rational</h></idx>. Even more, each player knows the <em>other</em> player is rational.
+        </p>
+
+    <p>
+      We need both players to be self-interested and rational to reach the solution that the cake is divided evenly, and both children receive equal sized pieces. For example, if a player doesn't like cake, then they may cut themselves a small piece, and give the other player a large piece. This could lead to both children being happy and feeling that the cake was fairly divided, but it does not give us an evenly divided cake. The idea that each player knows the other player is rational is important as well. If the cake cutter does not think the chooser will take the largest piece, then we also may not get an evenly divided cake.
+    </p>
+
+    <p>
+      The idea that players are self-interested is crucial to game theory. There are lots of other ways to play games, and those might be worth exploring. But to get started with game theory, we must make specific assumptions and develop the mathematical context from these assumptions.
+    </p>
+
+    <p>
+      <em>Assumption 1:</em><idx><h>assumptions</h></idx> Players are self-interested. The goal is to win the most or lose the least. 
+    </p>
+
+    <p>
+      But what does it mean to win? A player's <term>payoff</term><idx><h>payoff</h></idx> is the amount (points, money, or anything a player values) a player receives for a particular outcome of a game. We say that the player's goal is to maximize his or her payoff. We should note that the maximum payoff for a player might even be negative, in which case the player wants the least negative (or closest to 0) payoff.
+    </p>
+
+    <p>
+    It is important to recognize the difference between having the goal of maximizing the payoff and having the goal of simply winning. Here are some examples.
+
+    <ol>
+      <li><p>
+          If two players were racing, a player wouldn't just want to finish first, she would want to finish by as large a margin as possible.
+        </p></li>
+
+      <li><p>
+          If two teams were playing basketball, the team wouldn't want to just have the higher score, they would want to win by the largest number of points. In other words, a team would prefer to win by 10 points rather than by 1 point.
+        </p></li>
+
+      <li><p>
+          In an election poll, a candidate doesn't just want to be ahead of her opponent, she wants lead by as large a margin as possible, (especially if she needs to account for error in the polls).
+        </p></li>
+    </ol>
+    </p>
+
+    <p>
+      Keep in mind the the goal of each player is to win the most or lose the least. It will be tempting to look for strategies which simply assure a player of a positive payoff, but we need to make sure a player can't do even better with a different strategy.
+    </p>
+
+    <p>
+      <em>Assumption 2:</em><idx><h>assumptions</h></idx> Players are perfectly logical. A player will always take into account all available information and make the decision which maximizes his payoff. This includes knowing that his opponent is also making the best decision for herself.
+      For example, in the cake cutting game a player wouldn't cut one large piece hoping that his opponent will by chance pick the smaller piece. A player must assume that her opponent will always choose the larger piece.
+    </p>
+
+    <p>
+      Now you may be wondering what these assumptions have to do with reality. After all, no one's perfect. But we often study ideal situations (especially in math!). For example, you've all studied geometry. Can anyone here draw a perfectly straight line or a perfectly round circle? Yet, you've all studied such objects!
+    </p>
+
+    <p>
+      <em>Our Goal: Develop strategies for our perfectly logical, self-interested players.</em>
+    </p>
+  </subsection>
+
+  <subsection xml:id="Ex_Tic">
+    <title>Developing Strategies: Tic Tac Toe</title><idx><h>Tic Tac Toe </h></idx>
+    <p>Now that we know what our players' goals are, we want to develop a strategy to achieve them. We start with the familiar game of Tic Tac Toe.</p>
+    
+    <activity xml:id="A_TicTacToe">
+      <title>Play Tic Tac Toe</title>
+      <introduction>
+        <p>
+        Play several games of Tic TacToe with an opponent. Make sure you take turns being the first player and the second player. Develop a strategy for winning Tic Tac Toe. You may have a different strategy for the first player and for the second player. Be as specific as possible. You may need to consider several possibilities which depend on what your opponent does.
+      </p></introduction>
+
+        <task>
+          <p>
+              Who wins? Player 1 or Player 2?
+            </p></task>
+
+          <task><p>
+              What must each player do in order to have the best possible outcome?
+            </p></task>
+
+          <task><p>
+              How did you develop your strategy?
+            </p></task>
+
+          <task><p>
+              How do you know it will always work?
+            </p></task>
+    </activity>
+    
+    <p>
+    Let us note some characteristics of Tic Tac Toe.
+
+    <ul>
+      <li><p>
+          There are two players.
+        </p></li>
+
+      <li><p>
+          Players have <term>perfect information</term><idx><h>perfect information</h></idx>. This means each player knows what all of his or her own options are, what all of his or her opponent's options are, and both players know what the outcome of each option is. Additionally, players know that both players have all of this information.
+        </p></li>
+
+      <li><p>
+          This game has a <term>solution</term><idx><h>solution</h></idx>.  A solution for a game consists of a strategy for each player and the outcome of the game when each player plays his or her strategy. In Tic Tac Toe, if both players play their best, the game will always end in a tie.
+        </p></li>
+
+      <li><p>
+          The game is <term>finite</term><idx><h>finite game</h></idx>. This means the game must end after a finite number of moves or turns. In other words, the game cannot go on forever. A game that is not finite is called <term>infinite</term><idx><h>infinite game</h></idx>. Note, an infinite game may end after a finite number of turns, but there is no maximum number of turns or process to ensure the game ends. In Tic Tac Toe, the game must end after 9 or fewer turns.
+        </p></li>
+    </ul>
+    </p>
+    <activity xml:id="A_perfectinfoex">
+      <title>Perfect information, more examples</title>
+      <statement>
+        <p>
+          Can you think of another example of a game with perfect information? What is an example of a game that does not have perfect information?
+        </p>
+      </statement>
+    </activity>
+    <activity xml:id="A_finiteex">
+      <title>Finite and infinite, more examples</title>
+      <statement>
+        <p>
+          Give some examples of finite games and infinite games.
+        </p>
+      </statement>
+    </activity>
+
+    <definition>
+      <statement>
+        <p>
+          A <term>strategy</term> for a player is a complete way to play the game regardless of what the other player does.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      The choice of what a player does may depend on the opponent, but that choice is predetermined before game play. For example, in the cake cutting game, it doesn't matter which piece the <q>chooser</q> will pick, the <q>cutter</q> will always cut evenly. Similarly, it doesn't matter how the cutter cuts, the chooser will always pick the largest piece. In Tic Tac Toe, Player 2's strategy should determine his first move no matter what Player 1 plays first. For example, if Player 1 plays the center square, where should Player 2 play? If Player 1 plays a corner, where should Player 2 play?
+    </p>
+    <activity xml:id="A_favoritegame">
+      <title>Describe your favorite game</title>
+      <introduction>
+        <p>
+        What is your favorite game?</p></introduction>
+
+        <task>
+          <p>
+              Give a brief description of the game, including what it means to <q>win</q> or <q>lose</q> the game.
+            </p></task>
+
+          <task><p>
+              How many players do you need?
+            </p></task>
+
+          <task><p>
+              Do the players have perfect information for the game?
+            </p></task>
+
+          <task><p>
+              Is the game finite or can it go on forever?
+            </p></task>
+
+          <task><p>
+              Give some possible strategies for the player(s). Note, depending on the game, these strategies may not always result in a definite win, but they should suggest a way to increase a player's chances of winning (or not losing).
+            </p></task>
+        
+      </activity>
+ 
+    <p>We have established a few assumptions and looked at how to describe strategies in some familiar games.  Not all games easily fit into the context we will be using throughout this text. But you might keep in mind some of your favorite games and see how well the strategies and solutions can be applied to them. In the next section we develop some useful notation for describing most of the games we will study.</p>
+  </subsection>
+
+  <reading-questions>
+      <title>Check Your Understanding</title>
+      
+
+      <exercise label="IGT_intro_CYU_perfectinfo"><statement correct="no"><p>True or False: If a player has perfect information, then they know exacty how their opponent will play the game.</p></statement><feedback><p>The player knows their opponent's choices and the outcomes of those choices, but does not necessarily know which choice their opponent will actually make.</p></feedback><answer>False.</answer></exercise>
+
+      <exercise label="IGT_intro_CYU_chessperfectinfo"><statement correct="yes"><p>True or False: The game of chess has perfect information.</p></statement><feedback><p>Each player knows their opponent's choices and the outcomes of those choices, but does not necessarily know which choice their opponent will actually make. In chess, the complexity of the game means it is very difficult to know all the possibilities more than a few moves out. But at each stage a player knows all the choices their opponent can make.</p></feedback><answer>True.</answer></exercise>
+
+      <exercise label="IGT_intro_CYU_pokerperfectinfo"><statement correct="no"><p>True or False: The game of poker has perfect information</p></statement><feedback><p>Since the cards in an opponent's hand are hidden, a player does not know their opponent's choices or the outcomes of those choices.</p></feedback><answer>False.</answer></exercise>
+
+      <exercise label="IGT_intro_CYU_rational"><statement correct="yes"><p>True or False: A rational player always wants to score as many points as possible.</p></statement><answer>True.</answer></exercise>
+
+      <exercise label="IGT_intro_CYU_payoff"><statement correct="yes"><p>True or False: A payoff for a player can have a negative value.</p></statement><answer>True.</answer></exercise>
+    </reading-questions>
+</section>

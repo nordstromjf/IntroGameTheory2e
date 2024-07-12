@@ -1,0 +1,695 @@
+<section xml:id="S_SolvingEq">
+  <title>Using Sage to Graph Lines and Solve Equations</title><idx><h><pubtitle>Sage</pubtitle></h></idx>
+
+  <p>
+    In this section we will use technology to graph lines and solve for the intersection point. In particular, we will use an open online resource called <pubtitle>Sage</pubtitle><idx><pubtitle>Sage</pubtitle></idx>. 
+  </p>
+
+  <p>
+    Let's continue to consider the game from <xref ref="S_MixStratGraph"></xref> given by
+    
+  <table>
+    <title>Small Repeated Game.</title>
+    <tabular>
+      <row>
+        <cell></cell>
+        <cell bottom="minor"><b>C</b></cell>
+        <cell bottom="minor"><b>D</b></cell>
+      </row>
+      <row>
+        <cell right="minor"><b>A</b></cell>
+        <cell right="minor" bottom="minor">1</cell>
+        <cell right="minor" bottom="minor">0</cell>
+      </row>
+      <row>
+        <cell right="minor"><b>B</b></cell>
+        <cell right="minor" bottom="minor">-1</cell>
+        <cell right="minor" bottom="minor"> 2</cell>
+      </row>
+    </tabular>
+  </table>
+  </p>
+  <p>
+    Recall, our goal is to determine how often Player 1 should play A and how often she should play B.
+  </p>
+
+  <p>
+    We will follow the same steps as in <xref ref="S_MixStratGraph"></xref>. Let <m>p</m> be the probability that Player 1 plays B. Let <m>m</m> be the payoff to Player 1. Since we are trying to find a mixed strategy for Player 1, we will pick a strategy for Player 2 and try to determine the possible payoffs for Player 1.
+  </p>
+
+  <p>
+    Let us determine some pairs <m>(p, m)</m>.
+  </p>
+
+  <p><ul>
+  <li>
+  <title>Step 1. Assume Player 2 plays pure strategy <alert>C</alert></title>
+  <p>
+    <ul>
+    <li>
+      <title>Step 1a. Assume Player 1 plays pure strategy <alert>A</alert></title>
+      <p>
+        If Player 1 always plays <m>A</m>, then we are considering the strategy pair <m>[A, C]</m>.
+
+        Since Player 1 never plays <m>B</m>,  <m>p=0</m>. 
+
+        The payoff to Player 1 for  <m>[A, C]</m> is <m>m=1</m>. 
+
+        Thus, for the strategy pair <m>[A, C]</m> we get <m>(p, m)=(0, 1)</m>. 
+
+      </p></li>
+
+    <li>
+      <title>Step 1b. Assume Player 1 plays pure strategy <alert>B</alert></title>
+      <p>
+        If Player 1 always plays <m>B</m>, then we are considering the strategy pair <m>[B, C]</m>.
+
+        Since Player 1 always plays <m>B</m>, <m>p=1</m>. 
+
+        The payoff to Player 1 for <m>[A, C]</m> is <m>m=-1</m>. 
+
+        Thus, for the strategy pair <m>[B, C]</m> we get <m>(p, m)=(1, -1)</m>.
+      </p></li>
+
+    <li>
+      <title>Step 1c. Player 1 varies her strategy</title>
+      <p>
+        Now we want to know what Player 1's payoff will be as she varies the probability, <m>p</m>, with which she plays <m>B</m>. We can draw a graph where the <m>x</m>-axis represents to probability with which she plays B (<m>p</m>) and the <m>y</m>-axis represents the expected payoff (<m>m</m>). 
+        Thus, when Player 1 plays only <m>A</m>, she is playing <m>B</m> with probability 0; when Player 1 plays only B, she is playing B with probability 1. It might be easier to remember if you label your graph as in <xref ref="F_MixedStrategyAxes"></xref>.
+      </p></li>
+
+    <li>
+      <title>Step 1d. Plot points</title>
+      <p>
+        Now we can use <pubtitle>Sage</pubtitle> to plot the points we determined in Step 1a and Step 1b  and the line between them. This line represents Player 2's pure strategy <m>C</m>. See <xref ref="F_MixedStrategyOneLine"></xref>. Click on the <q>Evaluate (Sage)</q> button to plot the line between the points <m>(0, 1)</m> and <m>(1, -1)</m>.
+
+        <sage>
+          <input>
+          u=(0,1);
+          v=(1,-1);
+          show(line([u, v], thickness=2, color=('blue'))+point(u, color=('blue'), pointsize=70)+point(v, color=('blue'), pointsize=70), figsize=4)
+          </input>
+          <output></output>
+        </sage>
+      </p></li></ul></p></li>
+</ul></p>
+<p>
+  Before moving on, let's again, make sure we understand what this line represents. Any point on it represents the expected payoff to Player 1 as she varies her strategy, <em>assuming Player 2 only plays <m>C</m></em>. In this case, we can see that as she plays <m>B</m> more often, her expected payoff goes down. You can now use this Sage cell to plot any line for Player 2's pure strategy <m>C</m>. Just edit the values for the points <m>u</m> and <m>v</m>. Go ahead and try it! (Don't worry the original values will reset when you refresh the page.)
+</p>
+<p>
+  Now let's do the same thing, assuming Player 2 plays only <m>D</m>.
+</p><p>
+  <ul>
+  <li>
+  <title>Step 2. Assume Player 2 plays pure strategy <alert>D</alert></title>
+  <p>
+    <ul>
+    <li>
+      <title>Step 2a. Assume Player 1 plays pure strategy <alert>A</alert></title>
+      <p>
+        If Player 1 always plays <m>A</m>, then we are considering the strategy pair <m>[A, D]</m>.
+
+        Since Player 1 never plays <m>B</m>,  <m>p=0</m>. 
+
+        The payoff to Player 1 for  <m>[A, D]</m> is <m>m=0</m>. 
+
+        Thus, for the strategy pair <m>[A, D]</m> we get <m>(p, m)=(0, 0)</m>. 
+      </p></li>
+
+    <li>
+      <title>Step 2b. Assume Player 1 plays pure strategy <alert>B</alert></title>
+      <p>
+        If Player 1 always plays <m>B</m>, then we are considering the strategy pair <m>[B, D]</m>.
+
+        Since Player 1 always plays <m>B</m>,  <m>p=1</m>. 
+
+        The payoff to Player 1 for  <m>[B, D]</m> is <m>m=2</m>. 
+
+        Thus, for the strategy pair <m>[B, D]</m> we get <m>(p, m)=(1, 2)</m>.
+      </p></li>
+
+    <li>
+      <title>Step 2c. Player 1 varies her strategy</title>
+      <p>
+        Now, on our same graph from Step 1, we can plot the points we determined in Step 2a and Step 2b. We will connect them with a line representing Player 2's pure strategy <m>D</m>. See <xref ref="F_Player_2_s_pure_strategy_D"></xref>. 
+      </p>
+
+        <sage>
+          <input>
+          u=(0,1);
+          v=(1,-1);
+          w=(0,0);
+          z=(1, 2);
+          show(line([u, v], thickness=2, color=('blue'))+point(u, color=('blue'), pointsize=70)
+            +point(v, color=('blue'), pointsize=70)
+            +line([w, z], thickness=2, color=('red'))
+            +point(w, color=('red'), pointsize=70)+point(z, color=('red'), pointsize=70), figsize=4)
+          </input>
+          <output></output>
+        </sage>
+
+      <p>
+        Now we can see that if Player 2 plays only <m>D</m>, then Player 1 does best by playing only <m>B</m>. Again, you can use this Sage cell to plot both Player 2's pure strategies. Points <m>u</m> and <m>v</m> are for strategy <m>C</m>, while points <m>w</m> and <m>z</m> are for strategy <m>D</m>.
+      </p></li></ul></p></li>
+  </ul></p>
+  
+  <p>
+    As we saw in <xref ref="S_MixStratGraph"></xref>, for each choice of <m>p</m>, the top line represents the highest expected value for Player 1; the bottom line represents the lowest expected value for Player 1; the area between the lines represents the possible expected values for Player 1. Thus,  Player 1 wants to maximize the minimum expected value, which means she wants to find the maximin strategy<idx>maximin strategy, repeated games</idx>. And, as we saw in <xref ref="S_MixStratGraph"></xref>, the maximin strategy occurs at the intersection of the two lines.
+  </p>
+
+<p>
+  <ul>
+  <li>
+  <title>Step 3. Find the intersection of the two lines</title>
+  <p>
+    <ul>
+  
+
+    <li>
+      <title>Step 3a. Find the equation for Line C</title>
+      <p>
+
+        This is the line passing through the points <m>(0, 1)</m> and <m>(1, -1)</m>. It has slope <m>-2</m> and <m>y</m>-intercept 1. Thus, it has equation <m>m=-2p+1</m>. (Recall the <m>x</m>-axis represents probability <m>p</m> and the <m>y</m>-axis represents expected payoff <m>m</m>.)
+      </p></li>
+
+    <li>
+      <title>Step 3b. Find the equation for Line D</title>
+      <p>
+
+        This is the line passing through the points <m>(0, 0)</m> and <m>(1, 2)</m>. It has slope <m>2</m> and <m>y</m>-intercept 0. Thus, it has equation <m>m=2p</m>.
+      </p></li>
+
+    <li>
+      <title>Step 3c. Use technology to find the point of intersection</title>
+      <p>
+       
+
+        <sage>
+          <input>
+            p, m = var('p, m')
+            solve([m==-2*p+1, m==2*p], p, m)[0] 
+          </input>
+          <output>[p == (1/4), m == (1/2)]
+          </output>
+        </sage></p>
+        <p>The solution for Player 1 is <m>(p, m)</m>. Where <m>p</m> is the probability Player 1 plays B, and <m>m</m> is the expected payoff to Player 1.</p>
+      <p>
+        We can use this Sage cell to solve for <m>p</m> and <m>m</m> for any <m>2\times 2</m> game by editing the equations <m>m==-2*p+1, m==2*p</m>.
+      </p></li></ul></p></li>
+    
+    <li>
+      <title>Step 4. Determine Player 1's maximin mixed strategy</title><idx><h>maximin mixed strategy</h></idx>
+      <p>
+      Determine Player 1's maximin mixed strategy<idx>maximin mixed strategy</idx>. 
+
+      Recalling that <m>p</m> is the probability that Player 1 plays <m>B</m>, we know that Player 1 will play <m>B</m> with probability 1/4, and thus, play A with probability 3/4. The expected payoff for Player 1, <m>m</m>, is 1/2. It is important to check the algebraic solution with where the intersection point appears on the graph. Although we are using technology to help us graph and solve for the intersection point, we need to be able to catch any errors we make entering the information into Sage.
+      </p>
+    </li></ul></p>
+  
+
+
+  <p>
+    We have seen that we can use the same matrix with Player 1's payoffs to find the strategy for Player 2. Using the same game matrix as above:
+    <me>
+      \left[\begin{matrix}1\amp 0\\
+      -1\amp 2
+      \end{matrix} \right],
+    </me>
+    and continuing to label Player 1's strategies by <m>A</m> and <m>B</m>, and Player 2's strategies by <m>C</m> and <m>D</m>, we can graph lines for Player 1's pure strategies <m>A</m> and <m>B</m>. We now let the <m>x</m>--axis represent the probability that Player 2 plays <m>D</m>. In the Sage applet below, for <m>u</m> and <m>v</m> enter the coordinates of two points that determine the line for when Player 1 plays <m>A</m>, then the two points for <m>w</m> and <m>z</m> that determine the line for when Player 1 plays <m>B</m>. We will then have Sage graph the lines. You can enter new values for <m>u, v, w, z</m> if you would like to draw the graph for a different matrix.
+  </p>
+
+  <sage>
+    <input>
+    @interact(layout=dict(top=[['u','v'],['w','z']]))
+    def endpoints(u=vector((0,1.0)), v=vector((1,0.0)), w=vector((0,-1.0)), z=vector((1, 2.0))):
+      L1 = line([u, v], thickness=2, color=('blue'))
+      L2 = line([w, z], thickness=2, color=('red'))
+      P1 = point(u, color=('blue'), pointsize=70)
+      P2 = point(v, color=('blue'), pointsize=70)
+      P3 = point(w, color=('red'), pointsize=70)
+      P4 = point(z, color=('red'), pointsize=70)
+      pretty_print(html("Enter the coordinates of the endpoints for the two lines you'd like to graph. Note that u and v are for one line, w and z for the other."))
+      show(L1+L2+P1+P2+P3+P4, figsize=4)
+     </input>
+     <output></output> 
+  </sage>
+
+    <!--<sage>
+      <input>
+          u=(0,1);
+          v=(1,0);
+          w=(0,-1);
+          z=(1, 2);
+          show(line([u, v], thickness=2, color=('blue'))+point(u, color=('blue'), pointsize=70)
+            +point(v, color=('blue'), pointsize=70)
+            +line([w, z], thickness=2, color=('red'))
+            +point(w, color=('red'), pointsize=70)+point(z, color=('red'), pointsize=70))
+      </input>
+      <output></output>
+      </sage>-->
+  <p>
+    Now determine and enter the equations of the two lines and have Sage solve for the intersection point.
+  </p>  
+
+  <sage>
+    <input>
+    p, m = var('p, m')
+    @interact
+    def intersection(Slope1=-1,Intercept1=1,Slope2=3,Intercept2=-1):
+      Eq1 = m==Slope1*p+Intercept1
+      Eq2 = m==Slope2*p+Intercept2
+      S = solve([Eq1, Eq2], p, m)[0]
+      pretty_print(html("<p>The intersection point is <ul><li>$%s$, </li> <li>$%s$</li></ul>.</p>"%(latex(S[0]),latex(S[1]))))
+    </input>
+    <output></output>  
+  </sage>
+
+     <!-- <sage>
+        <input>
+            p, m = var('p, m')
+            show(solve([m==-1*p+1, m==3*p-1], p, m))
+        </input>
+        <output><m>p=1/2</m>, <m>m=1/2</m>
+        </output>
+      </sage> -->
+
+  <p>You can now use these last two Sage cells to solve any 2 <m>\times</m> 2 game with a mixed strategy equilibrium. You can also take some time to experiment with what happens if the game has a pure strategy equilibrium.</p>
+
+
+  <p>
+    Now use the Sage cells to help you analyze some more games!
+  </p>
+  <activity xml:id="A_graph2practiceSage">
+    <title>Use Sage to find a mixed strategy equilibrium </title>
+    <statement>
+      <p>
+      Consider the zero-sum game <m>\left[\begin{matrix}-4\amp 4\\
+      2\amp -2
+      \end{matrix} \right].</m>
+
+      <ol marker="a">
+        <li><p>
+            Does this game have a pure strategy equilibrium?
+          </p></li>
+
+        <li><p>
+            Just by looking at the matrix, do you think this game will be fair? (Would you rather be Player 1 or Player 2?)
+          </p></li>
+
+        <li><p>
+            Use Sage to draw the appropriate graph for this game. Which pure strategy does the blue line represent? Which pure strategy does the red line represent?
+          </p></li>
+
+        <li><p>
+            Use your graph to determine if there is a mixed strategy equilibrium point. If there is, use Sage to determine how often Player 1 should play each strategy. What is the expected payoff to each player?
+          </p></li>
+
+        <li><p>
+            Is this game fair? Explain. Compare your answer to (b).
+          </p></li>
+      </ol>
+      </p>
+    </statement>
+  </activity>
+  <activity xml:id="A_graph3practiceSage">
+    <title>More practice with Sage</title>
+    <statement>
+      <p>
+      Consider the zero-sum game <m>\left[\begin{matrix}0\amp 1\\
+      1\amp -10
+      \end{matrix} \right].</m>
+
+      <ol marker="a">
+        <li><p>
+            Does this game have a pure strategy equilibrium?
+          </p></li>
+
+        <li><p>
+            Just by looking at the matrix, do you think this game will be fair? (Would you rather be Player 1 or Player 2?)
+          </p></li>
+
+        <li><p>
+            Use Sage to draw the appropriate graph for this game. Which pure strategy does the blue line represent? Which pure strategy does the red line represent?
+          </p></li>
+
+        <li><p>
+            Use your graph to determine if there is a mixed strategy equilibrium point. If there is, use Sage to determine how often Player 1 should play each strategy. What is the expected payoff to each player?
+          </p></li>
+
+        <li><p>
+            Is this game fair? Explain. Compare your answer to (b).
+          </p></li>
+      </ol>
+      </p>
+    </statement>
+  </activity>
+
+  <reading-questions>
+      <title>Check Your Understanding</title>
+      <p>The following exercises will use the Sage applets above to find the mixed strategy for Player 1.</p>
+      
+       <exercise label="IGT_SE_CYU_equil"><statement correct="no"><p>True or False: The following zero-sum game
+        <table xml:id="T_exergame2" >
+    <tabular>
+      <row>
+        <cell></cell>
+        <cell bottom="minor"><b>C</b></cell>
+        <cell bottom="minor"><b>D</b></cell>
+      </row>
+      <row>
+        <cell right="minor"><b>A</b></cell>
+        <cell right="minor" bottom="minor">5</cell>
+        <cell right="minor" bottom="minor">-2</cell>
+      </row>
+      <row>
+        <cell right="minor"><b>B</b></cell>
+        <cell right="minor" bottom="minor">1</cell>
+        <cell right="minor" bottom="minor"> 3</cell>
+      </row>
+    </tabular>
+  </table>
+    has a pure strategy equilibrium.</p></statement><answer>False.</answer></exercise>
+
+     <exercise label="IGT_SE_CYU_pointsC"><statement><p>Consider the zero-sum game given by
+       <xref ref="T_exergame2"></xref>. If we are finding Player 1's mixed strategy, which two points are on the line for Player 2's pure strategy C?</p></statement>
+       <choices randomize="yes">
+         <choice correct="yes"><statement><m>(0, 5)</m></statement><feedback><p>Correct.</p></feedback></choice>
+         <choice correct="yes"><statement><m>(1, 1)</m></statement><feedback><p>Correct.</p></feedback></choice>
+         <choice><statement><m>(0, -2)</m></statement><feedback><p>Player 2 is playing C, not D.</p></feedback></choice>
+         <choice><statement><m>(1, 3)</m></statement><feedback><p>Player 2 is playing C, not D.</p></feedback></choice>
+         <choice ><statement><m>(1, 5)</m></statement><feedback><p>Check the probability with which Player 1 is playing A.</p></feedback></choice>
+         <choice ><statement><m>(0, 1)</m></statement><feedback><p>Check the probability with which Player 1 is playing B.</p></feedback></choice>
+         <choice><statement><m>(1, -2)</m></statement><feedback><p>Player 2 is playing C, not D.</p></feedback></choice>
+         <choice><statement><m>(0, 3)</m></statement><feedback><p>Player 2 is playing C, not D.</p></feedback></choice>
+       </choices><answer><m>(0, 5), (1, 1)</m></answer></exercise>
+
+       <exercise label="IGT_SE_CYU_pointsD"><statement><p>Consider the zero-sum game given by
+       <xref ref="T_exergame2"></xref>. If we are finding Player 1's mixed strategy, which two points are on the line for Player 2's pure strategy D?</p></statement>
+       <choices randomize="yes">
+         <choice ><statement><m>(0, 5)</m></statement><feedback><p>Player 2 is playing D, not C.</p></feedback></choice>
+         <choice ><statement><m>(1, 1)</m></statement><feedback><p>Player 2 is playing D, not C.</p></feedback></choice>
+         <choice correct="yes"><statement><m>(0, -2)</m></statement><feedback><p>Correct.</p></feedback></choice>
+         <choice correct="yes"><statement><m>(1, 3)</m></statement><feedback><p>Correct.</p></feedback></choice>
+         <choice ><statement><m>(1, 5)</m></statement><feedback><p>Player 2 is playing D, not C.</p></feedback></choice>
+         <choice ><statement><m>(0, 1)</m></statement><feedback><p>Player 2 is playing D, not C.</p></feedback></choice>
+         <choice><statement><m>(1, -2)</m></statement><feedback><p>Check the probability with which Player 1 is playing A.</p></feedback></choice>
+         <choice><statement><m>(0, 3)</m></statement><feedback><p>Check the probability with which Player 1 is playing B.</p></feedback></choice>
+       </choices><answer><m>(0, -2), (1, 3)</m></answer></exercise>
+
+       <exercise label="IGT_SE_CYU_findlineC"><statement><p>The line between the points <m>(0, 5)</m> and <m>(1, 1)</m>
+    has slope <var width="3" /> and <m>y</m> intercept <var width="3" />.</p></statement>
+      
+      <setup>
+    <var>
+
+    <condition number="-4">
+    <feedback>
+      <p>
+        Correct. Since the slope is <m>\frac{1-5}{1-0}.</m> 
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+        The slope is <m>\frac{y_2-y_1}{x_2-x_1}.</m>
+      </p>
+    </feedback>
+    </condition>
+    </var>
+    <var>
+
+    <condition number="5">
+    <feedback>
+      <p>
+        Correct. Since the <m>y</m> coordinate of <m>(0, 5)</m> is <m>5</m>.
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+        Find the <m>y</m> coordinate of <m>(0, y)</m>.
+      </p>
+    </feedback>
+    </condition>
+    </var></setup><answer><p>slope= <m>-4</m>, intercept=<m>5</m></p></answer></exercise>
+
+    <exercise label="IGT_SE_CYU_findlineD"><statement><p>The line between the points <m>(0, -2)</m> and <m>(1, 3)</m>
+    has slope <var width="3" /> and <m>y</m> intercept <var width="3" />.</p></statement>
+      
+      <setup>
+    <var>
+
+    <condition number="5">
+    <feedback>
+      <p>
+        Correct. Since the slope is <m>\frac{3-(-2)}{1-0}.</m> 
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+        The slope is <m>\frac{y_2-y_1}{x_2-x_1}.</m>
+      </p>
+    </feedback>
+    </condition>
+    </var>
+    <var>
+
+    <condition number="-2">
+    <feedback>
+      <p>
+        Correct. Since the <m>y</m> coordinate of <m>(0, -2)</m> is <m>-2</m>.
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+        Find the <m>y</m> coordinate of <m>(0, y)</m>.
+      </p>
+    </feedback>
+    </condition>
+    </var></setup><answer><p>slope= <m>5</m>, intercept=<m>-2</m></p></answer></exercise>
+
+    <exercise label="IGT_SE_CYU_pneg"><statement correct="no"><p>True or False: When finding the mixed strategy, it is possible that <m>p</m> is negative.</p></statement><feedback><p>Remember, <m>p</m> is a probabilty. What is the smallest a probability can be?</p></feedback></exercise>
+
+    <exercise label="IGT_SE_CYU_pgt1"><statement correct="no"><p>True or False: When finding the mixed strategy, it is possible that <m>p</m> is greater than 1.</p></statement><feedback><p>Remember, <m>p</m> is a probabilty. What is the largest a probability can be?</p></feedback><answer>False.</answer></exercise>
+
+    <exercise label="IGT_SE_CYU_mixedstrat"><statement><p>Consider the zero-sum game given by
+       <xref ref="T_exergame2"></xref>. Use Sage to find the mixed strategy for Player 1. </p></statement>
+       <choices randomize="yes">
+         <choice><statement><m>(7/9, 2/9)</m></statement><feedback><p>Remember <m>x</m> in the intersection point is the probability that Player 1 plays B.</p></feedback></choice>
+         <choice correct="yes"><statement><m>(2/9, 7/9)</m></statement><feedback><p>Correct. Player 1 should play A with a probability of <m>2/9</m> and B with a probability of <m>7/9</m>.</p></feedback></choice>
+         <choice><statement><m>(2/9, 17/9)</m></statement><feedback><p>This is the intersection point, not the mixed strategy.</p></feedback></choice>
+       </choices><answer><m>(2/9, 7/9)</m></answer></exercise>
+
+       <exercise label="IGT_SE_CYU_exppayoff"><statement><p>Consider the repeated zero-sum game given by
+       <xref ref="T_exergame2"></xref>. If Player 1 plays the maximin mixed strategy, her expected payoff is </p></statement>
+       <choices randomize="yes">
+         <choice><statement><m>7/9</m></statement><feedback><p>Remember <m>x</m> in the intersection point is the probability that Player 1 plays B.</p></feedback></choice>
+         <choice correct="yes"><statement><m>17/9</m></statement><feedback><p>Correct. The <m>y</m> in the intersection point is the payoff to Player 1.</p></feedback></choice>
+         <choice><statement><p>It depends on what Player 2 plays.</p></statement><feedback><p>The maximin strategy gives the same expected payoff no matter what Player 2 does.</p></feedback></choice>
+       </choices><answer><m>17/9</m></answer></exercise>
+
+       <exercise label="IGT_SE_CYU_fair"><statement><p>Is the game in <xref ref="T_exergame2" ></xref> fair?</p></statement>
+       <choices randomize="no">
+         <choice><statement><p>Yes.</p></statement><feedback><p>Think about the expected payoff of this game.</p></feedback></choice>
+         <choice correct="yes"><statement><p>No, Player 1 has an advantage.</p></statement><feedback><p>Correct, since the expected payoff to Player 1 is positive.</p></feedback></choice>
+         <choice><statement><p>No, Player 2 has an advantage.</p></statement><feedback><p>Incorrect, since the expected payoff to Player 1 is positive, the expected payoff to Player 2 is negative.</p></feedback></choice>
+       </choices><answer><p>No, Player 1 has an advantage.</p></answer></exercise>
+
+       <exercise label="IGT_SE_CYU_full2game3"><statement><p>Use Sage to find the mixed strategy for Player 1 for the following game.
+
+        <table xml:id="T_exergame3" >
+    <tabular>
+      <row>
+        <cell></cell>
+        <cell bottom="minor"><b>C</b></cell>
+        <cell bottom="minor"><b>D</b></cell>
+      </row>
+      <row>
+        <cell right="minor"><b>A</b></cell>
+        <cell right="minor" bottom="minor">-2</cell>
+        <cell right="minor" bottom="minor">1</cell>
+      </row>
+      <row>
+        <cell right="minor"><b>B</b></cell>
+        <cell right="minor" bottom="minor">1</cell>
+        <cell right="minor" bottom="minor"> -2</cell>
+      </row>
+    </tabular>
+  </table></p>
+  <p> Player 1 should play A with a probability of <var width="3" /> and B with a probabilty of <var width="3" />. The expected payoff to Player 1 is <var width="3" />.</p></statement>
+      
+      <setup>
+    <var>
+
+    <condition number="0.5">
+    <feedback>
+      <p>
+        Correct.
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. Work through the process carefully.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+    <var>
+
+    <condition number="0.5">
+    <feedback>
+      <p>
+        Correct. 
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. Make sure your your probabilities sum to 1.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+
+    <var>
+
+    <condition number="-0.5">
+    <feedback>
+      <p>
+        Correct. 
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+      </p>
+    </feedback>
+    </condition>
+    </var></setup><answer><p><m>(0.5, 0.5), -0.5</m></p></answer></exercise>
+
+    <exercise label="IGT_SE_CYU_fullP2game2"><statement><p>Use Sage to find the mixed strategy for <alert>Player 2</alert> for the game in 
+
+        <xref ref="T_exergame2"></xref>.</p>
+  <p> Player 2 should play C with a probability of <var width="3" /> and D with a probabilty of <var width="3" />. The expected payoff to Player 2 is <var width="4" />. (Use 3 decimal places if necesary)</p></statement>
+      
+      <setup>
+    <var>
+
+    <condition number="0.556" tolerance="0.0005">
+    <feedback>
+      <p>
+        Correct. 
+      </p>
+    </feedback>
+    </condition>
+
+    <condition number="0.555">
+    <feedback>
+      <p>
+        Make sure to round up. 
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. Work through the process carefully.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+    <var>
+
+    <condition number="0.444" tolerance="0.0005">
+    <feedback>
+      <p>
+        Correct. 
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. Make sure your your probabilities sum to 1.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+
+    <var>
+
+    <condition number="-1.889" tolerance="0.0005">
+    <feedback>
+      <p>
+        Correct. 
+      </p>
+    </feedback>
+    </condition>
+
+    <condition number="-1.888">
+    <feedback>
+      <p>
+        Make sure to round up.
+      </p>
+    </feedback>
+    </condition>
+
+    <condition number="1.889" tolerance="0.005">
+    <feedback>
+      <p>
+        Should Player 2's payoff be positive? 
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+      </p>
+    </feedback>
+    </condition>
+    </var></setup><answer><p><m>(5/9, 4/9), -17/9</m></p></answer></exercise>
+
+    <exercise label="IGT_SE_CYU_infofromgraph"><statement><p>If we use the graph to try to find Player 1's mixed strategy, which of the following can we determine with just the graph, without solving for the intersection point?</p></statement>
+       <choices randomize="yes">
+         <choice correct="yes"><statement ><p>Whether Player 1 should play A more often than B.</p></statement><feedback><p>If the intersection seems to be closer to <m>x=0</m> than <m>x=1</m>, then Player 1 should play A more often than B.</p></feedback></choice>
+         <choice correct="yes"><statement><p>Whether Player 1's expected payoff is positive or negative.</p></statement><feedback><p>If the intersection point is above the <m>x</m>-axis, then the payoff is positive.</p></feedback></choice>
+
+         <choice correct="yes"><statement><p>Whether Player 2's expected payoff is positive or negative.</p></statement><feedback><p>If the intersection point is above the <m>x</m>-axis, then the payoff to Player 1 is positive, hence the payoff to Player 2 is negative.</p></feedback></choice>
+         <choice><statement ><p>Whether Player 2 should play C more often than D.</p></statement><feedback><p>We can't determine Player 2's mixed strategy from Player 1's graph.</p></feedback></choice>
+
+         <choice><statement ><p>Whether Player 1 will win or lose if the game is played once.</p></statement><feedback><p>We are finding the expected payoff. The actual payoff will depend on what each player plays in one game.</p></feedback></choice>
+
+         <choice><statement ><p>Whether Player 1 will win or lose if the game is played 10 times.</p></statement><feedback><p>We are finding the expected payoff. The actual payoff will depend on what each player plays over the 10 games.</p></feedback></choice>
+
+         
+       </choices><answer><p>The three correct answers are: whether Player 1 should play A more often than B; whether Player 1's expected payoff is positive or negative; and whether Player 2's expected payoff is positive or negative.</p></answer></exercise>
+     
+    
+  </reading-questions>
+</section>
