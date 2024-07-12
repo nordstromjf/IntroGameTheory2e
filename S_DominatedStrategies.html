@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Finding Strategies</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Game Theory">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.3.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.2/prefix-runtime.740db250e511e1cc.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.2/prefix-347.8328b60515045466.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.2/prefix-runestone.9813637ef2f0e0ee.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.3.2/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.3.2/prefix-runestone.f64dcc3632d7a0c3.css">
+</head>
+<body id="introgametheory" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""><img src="external/image-1.svg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="intro_game_theory.html"><span class="title">Introduction to Game Theory:</span> <span class="subtitle">a Discovery Approach</span></a></h1>
+<p class="byline">Jennifer Firkins Nordstrom</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="S_IntroZeroSum.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="intro_game_theory-5.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="S_Probability.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\( \newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+  \newcommand{\MyTikzmark}[2]{
+     \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
+\newcommand{\DrawVLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.3ex, #1] (#2.north) -- (#3.south);
+  \end{tikzpicture}
+}
+\newcommand{\DrawHLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.2em, #1] (#2.west) -- (#3.east);
+  \end{tikzpicture}
+}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="intro_game_theory-4.html" class="internal"><span class="codenumber">1</span> <span class="title">What is Game Theory?</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Players and Strategies</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_intro.html#SS_Cake" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Assumptions: Cake Division</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_intro.html#Ex_Tic" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Developing Strategies: Tic Tac Toe</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_intro.html#S_intro-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_IntroMatrices.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Game Matrices and Payoff Vectors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroMatrices.html#SS_MatchPennies" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Setting up a Payoff Matrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroMatrices.html#SS_revistassump" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Revisiting thte Assumptions</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroMatrices.html#S_IntroMatrices-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="intro_game_theory-5.html" class="internal"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_IntroZeroSum.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to Two-Person Zero-Sum Games</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroZeroSum.html#Ex_election" class="internal"><span class="codenumber">2.1.1</span> <span class="title">An Election Campaign Game</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroZeroSum.html#SS_equilpairs" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Equilibrium Pairs</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroZeroSum.html#S_IntroZeroSum-6" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="S_DominatedStrategies.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Finding Strategies</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_simplifyingmatrix" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Simplifying a Zero-Sum Game Matrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_DomStrategies" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Dominated Strategies</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_maximin" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Maximin and Minimax Strategies</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_DominatedStrategies.html#S_DominatedStrategies-6" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Check Your Understanding</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_Probability.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Probability and Expected Value</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_Probability.html#SS_basicprob" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Some Basic Probability</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_Probability.html#SS_expectedvalue" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Expected Value</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_Probability.html#S_Probability-5" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_OneCardStud.html" class="internal"><span class="codenumber">2.4</span> <span class="title">A Game of Chance</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_OneCardStud.html#S_OneCardStud-39" class="internal"><span class="codenumber">2.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_EquilibPoints.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Equilibrium Points</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_EquilibPoints.html#S_EquilibPoints-30" class="internal"><span class="codenumber">2.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Strategies for Zero-Sum Games and Equilibrium Points</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html#S_ZeroSumStrategySummary-15" class="internal"><span class="codenumber">2.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopRationality.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Popular Culture: Rationality and Perfect Information</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="intro_game_theory-6.html" class="internal"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_IntroRepeated.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction to Repeated Games</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroRepeated.html#S_IntroRepeated-25" class="internal"><span class="codenumber">3.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_MixStratGraph.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Mixed Strategies: Graphical Solution</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratGraph.html#S_MixStratGraph-53" class="internal"><span class="codenumber">3.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_SolvingEq.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Using Sage to Graph Lines and Solve Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_SolvingEq.html#S_SolvingEq-22" class="internal"><span class="codenumber">3.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_MixStratEV.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Mixed Strategies: Expected Value Solution</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratEV.html#S_MixStratEV-31" class="internal"><span class="codenumber">3.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_LiarsPoker.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Liar’s Poker</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_LiarsPoker.html#S_LiarsPoker-23" class="internal"><span class="codenumber">3.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_AugMatrices.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Solving Systems of Equations Using Matrices</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_AugMatrices.html#S_AugMatrices-35" class="internal"><span class="codenumber">3.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_Undercut.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Undercut</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_Undercut.html#S_Undercut-31" class="internal"><span class="codenumber">3.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="intro_game_theory-7.html" class="internal"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_IntroNonzero.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Introduction to Two-Player Non-Zero-Sum Games</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroNonzero.html#S_IntroNonzero-32" class="internal"><span class="codenumber">4.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_PdandChicken.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Prisoner’s Dilemma and Chicken</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PdandChicken.html#S_PdandChicken-41" class="internal"><span class="codenumber">4.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_CWPD.html" class="internal"><span class="codenumber">4.3</span> <span class="title">A Class-Wide Experiment</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_CWPD.html#S_CWPD-24" class="internal"><span class="codenumber">4.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_PDconditions.html" class="internal"><span class="codenumber">4.4</span> <span class="title">What Makes a Prisoner’s Dilemma?</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PDconditions.html#S_PDconditions-17" class="internal"><span class="codenumber">4.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_VDexperiment.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Another Multiplayer Experiment</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VDexperiment.html#S_VDexperiment-9" class="internal"><span class="codenumber">4.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_VolunteerDil.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Volunteer’s Dilemma</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VolunteerDil.html#S_VolunteerDil-20" class="internal"><span class="codenumber">4.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_RepeatPD.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Repeated Prisoner’s Dilemma</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_RepeatPD.html#S_RepeatPD-29" class="internal"><span class="codenumber">4.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopPD.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Popular Culture: Prisoner’s Dilemma and Chicken</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">References</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="S_DominatedStrategies"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.2</span><span class="space"> </span><span class="title">Finding Strategies</span>
+</h2>
+<section class="introduction" id="S_DominatedStrategies-2"><div class="para" id="S_DominatedStrategies-2-1">Recall that in a zero-sum game, we know that one player’s win is the other player’s loss. Furthermore, we know we can rewrite any zero-sum game so that the player’s payoffs are in the form <span class="process-math">\((a, -a)\text{.}\)</span> Note, this works even if <span class="process-math">\(a\)</span> is negative; in which case, <span class="process-math">\(-a\)</span> is positive.</div></section><section class="subsection" id="SS_simplifyingmatrix"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="space"> </span><span class="title">Simplifying a Zero-Sum Game Matrix</span>
+</h3>
+<article class="example example-like" id="E_domstrat1"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">A Simpler Payoff Matrix.</span>
+</h4>
+<div class="para" id="E_domstrat1-2-1">Consider the zero-sum game with payoff matrix in <a href="S_DominatedStrategies.html#T_smallexample" class="xref" data-knowl="./knowl/xref/T_smallexample.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.2: The payoff matrix for Example 2.2.1.">Table 2.2.2</a>. For simplicity our payoff matrix contains only the payoffs and not the strategy names; but Player 1 still chooses a row and Player 2 still chooses a column.</div> <figure class="table table-like" id="T_smallexample"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.2<span class="period">.</span></span><span class="space"> </span>The payoff matrix for Example 2.2.1.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines" colspan="2">Player 2</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines">Player 1</td>
+<td class="l m b1 r1 l0 t0 lines"><span class="process-math">\((1, -1)\)</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="process-math">\((-0, 0)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines"></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="process-math">\((-1, 1)\)</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="process-math">\((-2, 2)\)</span></td>
+</tr>
+</table></div></figure> <div class="para" id="E_domstrat1-2-3">If we know we are playing a zero-sum game, then the use of ordered pairs seems somewhat redundant: if Player 1 wins 1, then we know that Player 2 must lose 1 (win <span class="process-math">\(-1\)</span>). Thus, if we KNOW we are playing a zero-sum game, we can simplify our notation by just using Player 1’s payoffs. The above matrix in <a href="S_DominatedStrategies.html#T_smallexample" class="xref" data-knowl="./knowl/xref/T_smallexample.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.2: The payoff matrix for Example 2.2.1.">Table 2.2.2</a> can be simplified as in <a href="S_DominatedStrategies.html#T_smallexampleP1" class="xref" data-knowl="./knowl/xref/T_smallexampleP1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.3: The payoff matrix for Example 2.2.1 using only Player 1’s payoffs.">Table 2.2.3</a>.</div> <figure class="table table-like" id="T_smallexampleP1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.3<span class="period">.</span></span><span class="space"> </span>The payoff matrix for Example 2.2.1 using only Player 1’s payoffs.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines" colspan="2">Player 2</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines">Player 1</td>
+<td class="c m b1 r1 l0 t0 lines">1</td>
+<td class="c m b1 r1 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines">-1</td>
+<td class="c m b1 r1 l0 t0 lines">-2</td>
+</tr>
+</table></div></figure></article><div class="para logical" id="SS_simplifyingmatrix-3">
+<div class="para">When simplifying, keep a few things in mind:</div>
+<ol class="decimal">
+<li id="SS_simplifyingmatrix-3-1-1"><div class="para" id="SS_simplifyingmatrix-3-1-1-1">You MUST know that the game is zero-sum.</div></li>
+<li id="SS_simplifyingmatrix-3-1-2"><div class="para" id="SS_simplifyingmatrix-3-1-2-1">If it is not otherwise specified, the payoffs represent Player 1’s payoffs.</div></li>
+<li id="SS_simplifyingmatrix-3-1-3"><div class="para" id="SS_simplifyingmatrix-3-1-3-1">You can always give a similar matrix representing Player 2’s payoffs. However, due to (2), you should indicate that the matrix is for Player 2. For example, Player 2’s payoff matrix would be given by <a href="S_DominatedStrategies.html#T_smallexampleP2" class="xref" data-knowl="./knowl/xref/T_smallexampleP2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.4: The payoff matrix for Example 2.2.1 using only Player 2’s payoffs.">Table 2.2.4</a>. <figure class="table table-like" id="T_smallexampleP2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.4<span class="period">.</span></span><span class="space"> </span>The payoff matrix for Example 2.2.1 using only Player 2’s payoffs.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines" colspan="2">Player 2</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines">Player 1</td>
+<td class="c m b1 r1 l0 t0 lines">-1</td>
+<td class="c m b1 r1 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines">1</td>
+<td class="c m b1 r1 l0 t0 lines">2</td>
+</tr>
+</table></div></figure>
+</div></li>
+<li id="SS_simplifyingmatrix-3-1-4"><div class="para" id="SS_simplifyingmatrix-3-1-4-1">Both players can make strategy decisions by considering only Player 1’s payoff matrix. (Why?) Just to test this out, by looking only at the matrix in <a href="S_DominatedStrategies.html#T_smallexampleP1" class="xref" data-knowl="./knowl/xref/T_smallexampleP1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.3: The payoff matrix for Example 2.2.1 using only Player 1’s payoffs.">Table 2.2.3</a> determine which strategy each player should choose. </div></li>
+</ol>
+</div>
+<div class="para" id="SS_simplifyingmatrix-4">In this last example, it should be clear that Player 1 is looking for rows which give her the largest payoff. This is nothing new. However, Player 2 is now looking for columns which give Player 1 the SMALLEST payoff. (Why?)</div></section><section class="subsection" id="SS_DomStrategies"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="space"> </span><span class="title">Dominated Strategies</span>
+</h3>
+<div class="para" id="SS_DomStrategies-2">Now that we have simplified our notation for zero-sum games, let’s try to find a way to determine the best strategy for each player.</div>
+<article class="example example-like" id="E_domstrat2"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">A <span class="process-math">\(2\times 3\)</span> Game.</span>
+</h4>
+<div class="para" id="E_domstrat2-2-1">Consider the zero-sum game given in <a href="S_DominatedStrategies.html#T_biggerexampleP1" class="xref" data-knowl="./knowl/xref/T_biggerexampleP1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.6: Payoff matrix for Example 2.2.5.">Table 2.2.6</a>.</div> <figure class="table table-like" id="T_biggerexampleP1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.6<span class="period">.</span></span><span class="space"> </span>Payoff matrix for Example 2.2.5.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines" colspan="3">Player 2</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines">Player 1</td>
+<td class="c m b1 r1 l0 t0 lines">1</td>
+<td class="c m b1 r1 l0 t0 lines">0</td>
+<td class="c m b1 r1 l0 t0 lines">2</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines">-1</td>
+<td class="c m b1 r1 l0 t0 lines">-2</td>
+<td class="c m b1 r1 l0 t0 lines">2</td>
+</tr>
+</table></div></figure> <div class="para" id="E_domstrat2-2-3">Determine which row Player 1 should choose. Is there any situation in which Player 1 would choose the other row?</div></article><article class="example example-like" id="E_domstrat3"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Another <span class="process-math">\(2 \times 3\)</span> Game.</span>
+</h4>
+<div class="para" id="E_domstrat3-2-1">Consider the zero-sum game given in <a href="S_DominatedStrategies.html#T_biggerexample2" class="xref" data-knowl="./knowl/xref/T_biggerexample2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.8: Payoff matrix for Example 2.2.7.">Table 2.2.8</a>.</div> <figure class="table table-like" id="T_biggerexample2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.8<span class="period">.</span></span><span class="space"> </span>Payoff matrix for Example 2.2.7.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines" colspan="3">Player 2</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines">Player 1</td>
+<td class="l m b1 r1 l0 t0 lines">1</td>
+<td class="l m b1 r1 l0 t0 lines">0</td>
+<td class="l m b1 r1 l0 t0 lines">2</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines"></td>
+<td class="l m b1 r1 l0 t0 lines">-1</td>
+<td class="l m b1 r1 l0 t0 lines">-2</td>
+<td class="l m b1 r1 l0 t0 lines">3</td>
+</tr>
+</table></div></figure> <div class="para" id="E_domstrat3-2-3">Determine which row Player 1 should choose. Is there any situation in which Player 1 would choose the other row?</div></article><div class="para" id="SS_DomStrategies-5">In <a href="S_DominatedStrategies.html#E_domstrat2" class="xref" data-knowl="./knowl/xref/E_domstrat2.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.2.5: A 2\times 3 Game">Example 2.2.5</a>, no matter what Player 2 does, Player 1 would always choose Row 1, since every payoff in Row 1 is greater than or equal to the corresponding payoff in Row 2 (<span class="process-math">\(1\ge -1\text{,}\)</span> <span class="process-math">\(0\ge -2\text{,}\)</span> <span class="process-math">\(2\ge 2\)</span>). In <a href="S_DominatedStrategies.html#E_domstrat3" class="xref" data-knowl="./knowl/xref/E_domstrat3.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.2.7: Another 2 \times 3 Game">Example 2.2.7</a>, this is not the case: if Player 2 were to choose Column 3, then Player 1 would prefer Row 2. In <a href="S_DominatedStrategies.html#E_domstrat2" class="xref" data-knowl="./knowl/xref/E_domstrat2.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.2.5: A 2\times 3 Game">Example 2.2.5</a> we would say that Row 1 <dfn class="terminology">dominates</dfn> Row 2.</div>
+<article class="definition definition-like" id="SS_DomStrategies-6"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.9</span><span class="period">.</span>
+</h4>
+<div class="para" id="SS_DomStrategies-6-1-1">A strategy <span class="process-math">\(X\)</span> <dfn class="terminology">dominates</dfn> a strategy <span class="process-math">\(Y\)</span> if every entry for <span class="process-math">\(X\)</span> is greater than or equal to the corresponding entry for <span class="process-math">\(Y\text{.}\)</span> In this case, we say <span class="process-math">\(Y\)</span> is <dfn class="terminology">dominated by</dfn> <span class="process-math">\(X\text{.}\)</span>
+</div> <div class="para" id="SS_DomStrategies-6-1-2">If strategy <span class="process-math">\(X\)</span> dominates stratgy <span class="process-math">\(Y\text{,}\)</span> we can write <span class="process-math">\(X\succ Y\text{.}\)</span>
+</div></article><div class="para" id="SS_DomStrategies-7">In mathematical notation, let <span class="process-math">\(a_{ik}\)</span> be the value in the <span class="process-math">\(i^{ th}\)</span> row and <span class="process-math">\(k^{ th}\)</span> column. Similarly,  <span class="process-math">\(a_{jk}\)</span> is the value in the <span class="process-math">\(j^{ th}\)</span> row and <span class="process-math">\(k^{ th}\)</span> column. The <span class="process-math">\(i^{ th}\)</span> row dominates the <span class="process-math">\(j^{ th}\)</span> row if <span class="process-math">\(a_{ik}\ge a_{jk}\)</span> for all <span class="process-math">\(k\text{,}\)</span> and <span class="process-math">\(a_{ik}&gt; a_{jk}\)</span> for at least one <span class="process-math">\(k\text{.}\)</span>
+</div>
+<div class="para" id="SS_DomStrategies-8">This definition can also be used for Player 2: we consider columns instead of rows. If we are looking at Player 1’s payoffs, then Player 2 prefers smaller payoffs. Thus one column <span class="process-math">\(X\)</span> dominates another column <span class="process-math">\(Y\)</span> if all the entries in <span class="process-math">\(X\)</span> are <em class="emphasis">smaller than or equal</em> to the corresponding entries in <span class="process-math">\(Y\text{.}\)</span>
+</div>
+<div class="para" id="SS_DomStrategies-9">Here is the great thing: we can always eliminate dominated strategies! (Why?) Thus, in <a href="S_DominatedStrategies.html#E_domstrat2" class="xref" data-knowl="./knowl/xref/E_domstrat2.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.2.5: A 2\times 3 Game">Example 2.2.5</a>, we can eliminate Row 2, as in <a href="S_DominatedStrategies.html#F_strikerow2Ex2" class="xref" data-knowl="./knowl/xref/F_strikerow2Ex2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.10">Figure 2.2.10</a>.</div>
+<figure class="figure figure-like" id="F_strikerow2Ex2"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/F_strikerow2Ex2-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.10<span class="period">.</span></span><span class="space"> </span>Row 2 is dominated by Row 1.</figcaption></figure><div class="para" id="SS_DomStrategies-11">Now it is easy to see what Player 2 should do, as we can ignore the crossed out row.</div>
+<div class="para" id="SS_DomStrategies-12">In <a href="S_DominatedStrategies.html#E_domstrat3" class="xref" data-knowl="./knowl/xref/E_domstrat3.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.2.7: Another 2 \times 3 Game">Example 2.2.7</a>, we cannot eliminate Row 2 since it is not dominated by Row 1. However, it should be clear that Column 2 dominates Column 3 (remember, Player 2 prefers SMALLER values). Thus we can eliminate Column 3 as in <a href="S_DominatedStrategies.html#F_strikecol3Ex3" class="xref" data-knowl="./knowl/xref/F_strikecol3Ex3.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.11">Figure 2.2.11</a>.</div>
+<figure class="figure figure-like" id="F_strikecol3Ex3"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/F_strikecol3Ex3-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.11<span class="period">.</span></span><span class="space"> </span>Column 3 is dominated by Column 2.</figcaption></figure><div class="para" id="SS_DomStrategies-14">AFTER eliminating Column 3, Row 1 dominates Row 2. Now, in <a href="S_DominatedStrategies.html#F_strikerow2Ex3" class="xref" data-knowl="./knowl/xref/F_strikerow2Ex3.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.12">Figure 2.2.12</a> we can eliminate Row 2.</div>
+<figure class="figure figure-like" id="F_strikerow2Ex3"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/F_strikerow2Ex3-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.12<span class="period">.</span></span><span class="space"> </span>After eliminating Column 3, Row 2 is dominated by Row 1.</figcaption></figure><div class="para" id="SS_DomStrategies-16">Again, in the reduced game it is easy to determine what each player should do.</div>
+<article class="activity project-like" id="A_checkequilpair"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Check equilibrium pairs.</span>
+</h4>
+<div class="para" id="A_checkequilpair-2-1">Check that the strategy pairs we determined in <a href="S_DominatedStrategies.html#E_domstrat2" class="xref" data-knowl="./knowl/xref/E_domstrat2.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.2.5: A 2\times 3 Game">Example 2.2.5</a> and <a href="S_DominatedStrategies.html#E_domstrat3" class="xref" data-knowl="./knowl/xref/E_domstrat3.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.2.7: Another 2 \times 3 Game">Example 2.2.7</a> are, in fact, equilibrium pairs.</div></article><article class="assemblage assemblage-like" id="elimdomstrategies"><h4 class="heading"><span class="title">Eliminating Dominated Strategies.</span></h4>
+<div class="para logical" id="elimdomstrategies-2">
+<div class="para">Given a zero-sum game matrix with Player 1’s payoffs. We find a <dfn class="terminology">dominated strategy</dfn> with the following process. Note, you can compare either rows or columns first.</div>
+<ol class="decimal">
+<li id="elimdomstrategies-2-3-1"><div class="para" id="elimdomstrategies-2-3-1-1">Choose two rows.</div></li>
+<li id="elimdomstrategies-2-3-2"><div class="para" id="elimdomstrategies-2-3-2-1">Compare the corresponding values in the two rows.</div></li>
+<li id="elimdomstrategies-2-3-3"><div class="para" id="elimdomstrategies-2-3-3-1">If in each comparison, one row has values less than or equal to the values in the other row, eliminate the row with the smaller values.</div></li>
+</ol>
+</div>
+<div class="para logical" id="elimdomstrategies-3"><ol class="decimal">
+<li id="elimdomstrategies-3-1-1"><div class="para" id="elimdomstrategies-3-1-1-1">Choose two columns.</div></li>
+<li id="elimdomstrategies-3-1-2"><div class="para" id="elimdomstrategies-3-1-2-1">Compare the corresponding values in the two columns.</div></li>
+<li id="elimdomstrategies-3-1-3"><div class="para" id="elimdomstrategies-3-1-3-1">If in each comparison, one column has values greater than or equal to the values in the other column, eliminate the column with the larger values.</div></li>
+</ol></div>
+<div class="para" id="elimdomstrategies-4">Once you have eliminated a row or column, you can repeat the process with the remaining rows or columns, ignoring any eliminated values. The process of elimininating dominated strategies is helpful for simplifying the game.</div></article><div class="para" id="SS_DomStrategies-19">Now, look back at the election examples from <a href="S_IntroZeroSum.html#Ex_election" class="internal" title="Subsection 2.1.1: An Election Campaign Game">Subsection 2.1.1</a> and apply the process of eliminating dominated strategies.</div>
+<article class="activity project-like" id="A_elimdomstrat"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Eliminating dominated strategies.</span>
+</h4>
+<div class="para" id="A_elimdomstrat-2-1">Use the idea of eliminating dominated strategies to determine what each player should do in the Arnold/ Bainbridge examples in <a href="S_IntroZeroSum.html#T_election1" class="xref" data-knowl="./knowl/xref/T_election1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.10: Percentage of the vote for Example 2.1.9.">Table 2.1.10</a>, <a href="S_IntroZeroSum.html#T_election2" class="xref" data-knowl="./knowl/xref/T_election2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.12: Percentage of the vote for Example 2.1.11.">Table 2.1.12</a>, and <a href="S_IntroZeroSum.html#T_election3" class="xref" data-knowl="./knowl/xref/T_election3.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.14: Percentage of the vote for Example 2.1.13.">Table 2.1.14</a>. Do you get the same strategy pairs as you determined in the related activities (<a href="S_IntroZeroSum.html#A_election1" class="xref" data-knowl="./knowl/xref/A_election1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.1.1: Analysis of the election game">Activity 2.1.1</a>, <a href="S_IntroZeroSum.html#A_election2" class="xref" data-knowl="./knowl/xref/A_election2.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.1.2: Analysis of the second scenario">Activity 2.1.2</a>, <a href="S_IntroZeroSum.html#A_election3" class="xref" data-knowl="./knowl/xref/A_election3.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.1.3: Analysis of the third scenario">Activity 2.1.3</a>)?</div></article><div class="para" id="SS_DomStrategies-21">The next three activities provide more practice in using dominated strategies to find equilibrium pairs.</div>
+<article class="activity project-like" id="A_domstratpractice1"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">More practice with dominated strategies.</span>
+</h4>
+<div class="para" id="A_domstratpractice1-2-1">Use the idea of eliminating dominated strategies to determine any equilibrium pairs in the zero-sum game given in <a href="S_DominatedStrategies.html#T_domstratpractice1" class="xref" data-knowl="./knowl/xref/T_domstratpractice1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.13: Payoff matrix for Activity 2.2.3.">Table 2.2.13</a>. Note, since it is a zero-sum game we need only show Player 1’s payoffs. Explain all the steps in your solution. If you are unable to find an equilibrium pair, explain what goes wrong.</div> <figure class="table table-like" id="T_domstratpractice1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.13<span class="period">.</span></span><span class="space"> </span>Payoff matrix for Activity 2.2.3.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="4">Player 2</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">W</td>
+<td class="c m b1 r0 l0 t0 lines">X</td>
+<td class="c m b1 r0 l0 t0 lines">Y</td>
+<td class="c m b1 r0 l0 t0 lines">Z</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0 lines">1</td>
+<td class="c m b1 r1 l0 t0 lines">0</td>
+<td class="c m b1 r1 l0 t0 lines">0</td>
+<td class="c m b1 r1 l0 t0 lines">10</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">Player 1</td>
+<td class="c m b0 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0 lines">-1</td>
+<td class="c m b1 r1 l0 t0 lines">0</td>
+<td class="c m b1 r1 l0 t0 lines">-2</td>
+<td class="c m b1 r1 l0 t0 lines">9</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r1 l0 t0 lines">C</td>
+<td class="c m b1 r1 l0 t0 lines">1</td>
+<td class="c m b1 r1 l0 t0 lines">1</td>
+<td class="c m b1 r1 l0 t0 lines">1</td>
+<td class="c m b1 r1 l0 t0 lines">8</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r1 l0 t0 lines">D</td>
+<td class="c m b1 r1 l0 t0 lines">-2</td>
+<td class="c m b1 r1 l0 t0 lines">0</td>
+<td class="c m b1 r1 l0 t0 lines">0</td>
+<td class="c m b1 r1 l0 t0 lines">7</td>
+</tr>
+</table></div></figure></article><article class="activity project-like" id="A_domstratpractice2"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Determine equilibrium pairs.</span>
+</h4>
+<div class="para" id="A_domstratpractice2-2-1">Determine any equilibrium pairs in the zero-sum game given in <a href="S_DominatedStrategies.html#T_domstratpractice2" class="xref" data-knowl="./knowl/xref/T_domstratpractice2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.14: Payoff matrix for Activity 2.2.4.">Table 2.2.14</a>. Explain all the steps in your solution. If you are unable to find an equilibrium pair, explain what goes wrong.</div> <figure class="table table-like" id="T_domstratpractice2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.14<span class="period">.</span></span><span class="space"> </span>Payoff matrix for Activity 2.2.4.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="4">Player 2</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">W</td>
+<td class="c m b1 r0 l0 t0 lines">X</td>
+<td class="c m b1 r0 l0 t0 lines">Y</td>
+<td class="c m b1 r0 l0 t0 lines">Z</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0 lines">1</td>
+<td class="c m b1 r1 l0 t0 lines">2</td>
+<td class="c m b1 r1 l0 t0 lines">3</td>
+<td class="c m b1 r1 l0 t0 lines">4</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">Player 1</td>
+<td class="c m b0 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0 lines">0</td>
+<td class="c m b1 r1 l0 t0 lines">-1</td>
+<td class="c m b1 r1 l0 t0 lines">-0</td>
+<td class="c m b1 r1 l0 t0 lines">5</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r1 l0 t0 lines">C</td>
+<td class="c m b1 r1 l0 t0 lines">-1</td>
+<td class="c m b1 r1 l0 t0 lines">3</td>
+<td class="c m b1 r1 l0 t0 lines">2</td>
+<td class="c m b1 r1 l0 t0 lines">4</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r1 l0 t0 lines">D</td>
+<td class="c m b1 r1 l0 t0 lines">0</td>
+<td class="c m b1 r1 l0 t0 lines">1</td>
+<td class="c m b1 r1 l0 t0 lines">-1</td>
+<td class="c m b1 r1 l0 t0 lines">1</td>
+</tr>
+</table></div></figure></article><article class="activity project-like" id="A_domstratpractice3"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Practice finding equilibrium pairs.</span>
+</h4>
+<div class="para" id="A_domstratpractice3-2-1">Determine any equilibrium pairs in the zero-sum game given in <a href="S_DominatedStrategies.html#T_domstratpractice3" class="xref" data-knowl="./knowl/xref/T_domstratpractice3.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.15: Payoff matrix for Activity 2.2.5.">Table 2.2.15</a>. Explain all the steps in your solution. If you are unable to find an equilibrium pair, explain what goes wrong.</div> <figure class="table table-like" id="T_domstratpractice3"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.15<span class="period">.</span></span><span class="space"> </span>Payoff matrix for Activity 2.2.5.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="4">Player 2</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">W</td>
+<td class="c m b1 r0 l0 t0 lines">X</td>
+<td class="c m b1 r0 l0 t0 lines">Y</td>
+<td class="c m b1 r0 l0 t0 lines">Z</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0 lines">-2</td>
+<td class="c m b1 r1 l0 t0 lines">0</td>
+<td class="c m b1 r1 l0 t0 lines">3</td>
+<td class="c m b1 r1 l0 t0 lines">20</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">Player 1</td>
+<td class="c m b0 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0 lines">1</td>
+<td class="c m b1 r1 l0 t0 lines">-2</td>
+<td class="c m b1 r1 l0 t0 lines">-3</td>
+<td class="c m b1 r1 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r1 l0 t0 lines">C</td>
+<td class="c m b1 r1 l0 t0 lines">10</td>
+<td class="c m b1 r1 l0 t0 lines">-10</td>
+<td class="c m b1 r1 l0 t0 lines">-1</td>
+<td class="c m b1 r1 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r1 l0 t0 lines">D</td>
+<td class="c m b1 r1 l0 t0 lines">0</td>
+<td class="c m b1 r1 l0 t0 lines">0</td>
+<td class="c m b1 r1 l0 t0 lines">10</td>
+<td class="c m b1 r1 l0 t0 lines">15</td>
+</tr>
+</table></div></figure></article><article class="activity project-like" id="A_domstratpractice4"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">A more challenging example.</span>
+</h4>
+<div class="para" id="A_domstratpractice4-2-1">Determine any equilibrium pairs in the zero-sum game given in <a href="S_DominatedStrategies.html#T_domstratpractice4" class="xref" data-knowl="./knowl/xref/T_domstratpractice4.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.16: Payoff matrix for Activity 2.2.6.">Table 2.2.16</a>. Explain all the steps in your solution. If you are unable to find an equilibrium pair, explain what goes wrong.</div> <figure class="table table-like" id="T_domstratpractice4"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.16<span class="period">.</span></span><span class="space"> </span>Payoff matrix for Activity 2.2.6.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="4">Player 2</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">W</td>
+<td class="c m b1 r0 l0 t0 lines">X</td>
+<td class="c m b1 r0 l0 t0 lines">Y</td>
+<td class="c m b1 r0 l0 t0 lines">Z</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0 lines">-2</td>
+<td class="c m b1 r1 l0 t0 lines">0</td>
+<td class="c m b1 r1 l0 t0 lines">3</td>
+<td class="c m b1 r1 l0 t0 lines">20</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">Player 1</td>
+<td class="c m b0 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0 lines">1</td>
+<td class="c m b1 r1 l0 t0 lines">-2</td>
+<td class="c m b1 r1 l0 t0 lines">-5</td>
+<td class="c m b1 r1 l0 t0 lines">-3</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r1 l0 t0 lines">C</td>
+<td class="c m b1 r1 l0 t0 lines">10</td>
+<td class="c m b1 r1 l0 t0 lines">-10</td>
+<td class="c m b1 r1 l0 t0 lines">-1</td>
+<td class="c m b1 r1 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r1 l0 t0 lines">D</td>
+<td class="c m b1 r1 l0 t0 lines">0</td>
+<td class="c m b1 r1 l0 t0 lines">0</td>
+<td class="c m b1 r1 l0 t0 lines">10</td>
+<td class="c m b1 r1 l0 t0 lines">8</td>
+</tr>
+</table></div></figure></article><div class="para" id="SS_DomStrategies-26">Chances are you had trouble determining an equilibrium pair for the game in <a href="S_DominatedStrategies.html#A_domstratpractice4" class="xref" data-knowl="./knowl/xref/A_domstratpractice4.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.2.6: A more challenging example">Activity 2.2.6</a>. Does this mean there isn’t an equilibrium pair? Not necessarily, but we are stuck if we try to use only the idea of eliminating dominated strategies. So we need a new method.</div></section><section class="subsection" id="SS_maximin"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="space"> </span><span class="title">Maximin and Minimax Strategies</span>
+</h3>
+<div class="para" id="SS_maximin-2">We might think of our next method as the “worst case scenario,” or “extremely defensive play.” The idea is that we want to assume our opponent is the best player to ever live. In fact, we might assume our opponent is telepathic. So no matter what we do, our opponent will always guess what we are going to choose.</div>
+<article class="example example-like" id="A_intromaxmin"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.17</span><span class="period">.</span><span class="space"> </span><span class="title">Playing Against the Best.</span>
+</h4>
+<div class="para" id="A_intromaxmin-2-1">Assume you are Player 1, and you are playing against this “infinitely smart” Player 2. Consider the game in <a href="S_DominatedStrategies.html#T_domstratpractice1" class="xref" data-knowl="./knowl/xref/T_domstratpractice1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.13: Payoff matrix for Activity 2.2.3.">Table 2.2.13</a>. If you pick row A, what will Player 2 do? Player 2 will pick column X or Y. Try this for each of the rows. Which row is your best choice? If you pick A, you will get <span class="process-math">\(0\text{;}\)</span> if you pick B, you will get <span class="process-math">\(-2\text{;}\)</span> if you pick C, you will get <span class="process-math">\(1\text{;}\)</span> and if you pick D you will get <span class="process-math">\(-2\text{.}\)</span> Thus, your best choice is to choose C and get <span class="process-math">\(1\text{.}\)</span> Now assume you are Player 2, and Player 1 is “infinitely smart.” Which column is your best choice? If you pick W, Player 1 will get <span class="process-math">\(1\)</span> (you will get <span class="process-math">\(-1\)</span>); if you pick X, Player 1 will get <span class="process-math">\(1\text{;}\)</span> if you pick Y, Player 1 will get <span class="process-math">\(1\text{;}\)</span> and if you pick Z, Player 1 will get <span class="process-math">\(10\text{.}\)</span> Thus, you can choose W, X, or Y (since you want Player 1 to win the least) and get <span class="process-math">\(-1\text{.}\)</span>
+</div></article><article class="activity project-like" id="A_maxmindomstrat2"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">A new method.</span>
+</h4>
+<div class="para" id="A_maxmindomstrat2-2-1">Using the method described in <a href="S_DominatedStrategies.html#A_intromaxmin" class="xref" data-knowl="./knowl/xref/A_intromaxmin.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.2.17: Playing Against the Best">Example 2.2.17</a>, determine what each player should do in the game in <a href="S_DominatedStrategies.html#T_domstratpractice2" class="xref" data-knowl="./knowl/xref/T_domstratpractice2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.14: Payoff matrix for Activity 2.2.4.">Table 2.2.14</a>.</div></article><article class="activity project-like" id="A_maxmindomstrat3"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">More practice with the new method.</span>
+</h4>
+<div class="para" id="A_maxmindomstrat3-2-1">Using the method described in <a href="S_DominatedStrategies.html#A_intromaxmin" class="xref" data-knowl="./knowl/xref/A_intromaxmin.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.2.17: Playing Against the Best">Example 2.2.17</a>, determine what each player should do in the game in <a href="S_DominatedStrategies.html#T_domstratpractice3" class="xref" data-knowl="./knowl/xref/T_domstratpractice3.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.15: Payoff matrix for Activity 2.2.5.">Table 2.2.15</a>.</div></article><div class="para" id="SS_maximin-6">After working through a few examples can you describe more generally the process used in <a href="S_DominatedStrategies.html#A_intromaxmin" class="xref" data-knowl="./knowl/xref/A_intromaxmin.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.2.17: Playing Against the Best">Example 2.2.17</a>? What is Player 1 looking for in each row? Then how does she choose which row to play? What is Player 2 looking for in each column? How does he choose which column to play?</div>
+<article class="activity project-like" id="A_genrule"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Generalizing the new method.</span>
+</h4>
+<div class="para" id="A_genrule-2-1">Generalize the method described in <a href="S_DominatedStrategies.html#A_intromaxmin" class="xref" data-knowl="./knowl/xref/A_intromaxmin.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.2.17: Playing Against the Best">Example 2.2.17</a>. In other words, give a general rule for how Player 1 should determine his or her best move. Do the same for Player 2.</div></article><article class="activity project-like" id="A_maxminequil"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">The new method and equlibrium points.</span>
+</h4>
+<div class="para" id="A_maxminequil-2-1">What do you notice about using this method on the games in <a href="S_DominatedStrategies.html#T_domstratpractice1" class="xref" data-knowl="./knowl/xref/T_domstratpractice1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.13: Payoff matrix for Activity 2.2.3.">Table 2.2.13</a>, <a href="S_DominatedStrategies.html#T_domstratpractice2" class="xref" data-knowl="./knowl/xref/T_domstratpractice2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.14: Payoff matrix for Activity 2.2.4.">Table 2.2.14</a>, and <a href="S_DominatedStrategies.html#T_domstratpractice3" class="xref" data-knowl="./knowl/xref/T_domstratpractice3.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.15: Payoff matrix for Activity 2.2.5.">Table 2.2.15</a>? Is the solution an equilibrium pair?</div></article><article class="activity project-like" id="A_maxmindomstrat4"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.11</span><span class="period">.</span><span class="space"> </span><span class="title">The new method on the challenging example.</span>
+</h4>
+<div class="para" id="A_maxmindomstrat4-2-1">Now try this method on the elusive payoff matrix in <a href="S_DominatedStrategies.html#T_domstratpractice4" class="xref" data-knowl="./knowl/xref/T_domstratpractice4.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.16: Payoff matrix for Activity 2.2.6.">Table 2.2.16</a>. What should each player do? Do you think we get an equilibrium pair? Explain.</div></article><div class="para" id="SS_maximin-10">The strategies we found using the above method have a more official name. Player 1’s strategy is called the <dfn class="terminology">maximin</dfn> strategy. Player 1 is maximizing the minimum values from each row. Player 2’s strategy is called the <dfn class="terminology">minimax</dfn> strategy. Player 2 is minimizing the maximum values from each column. Notice, we can find the maximin and minimax strategies for any zero-sum game. But do our players always want to use these strategies? Will they always result in an equilibrium pair? The next five activities explore these questions.</div>
+<article class="assemblage assemblage-like" id="maximinstrategy"><h4 class="heading"><span class="title">Finding the Maximin and Minimax Strategies.</span></h4>
+<div class="para logical" id="maximinstrategy-2">
+<div class="para">Given a zero-sum game matrix with Player 1’s payoffs. We find the <dfn class="terminology">maximin strategy</dfn> with the following process.</div>
+<ol class="decimal">
+<li id="maximinstrategy-2-3-1"><div class="para" id="maximinstrategy-2-3-1-1">Find the smallest value in each row.</div></li>
+<li id="maximinstrategy-2-3-2"><div class="para" id="maximinstrategy-2-3-2-1">From the smallest values you found in step (1), choose the largest.</div></li>
+<li id="maximinstrategy-2-3-3"><div class="para" id="maximinstrategy-2-3-3-1">Player 1 chooses the row corresponding to the value found in (2).</div></li>
+</ol>
+</div>
+<div class="para logical" id="maximinstrategy-3">
+<div class="para">Given a zero-sum game matrix with Player 1’s payoffs. We find the <dfn class="terminology">minimax strategy</dfn> with the following process.</div>
+<ol class="decimal">
+<li id="maximinstrategy-3-3-1"><div class="para" id="maximinstrategy-3-3-1-1">Find the largest value in each column.</div></li>
+<li id="maximinstrategy-3-3-2"><div class="para" id="maximinstrategy-3-3-2-1">From the largest values you found in step (1), choose the smallest.</div></li>
+<li id="maximinstrategy-3-3-3"><div class="para" id="maximinstrategy-3-3-3-1">Player 2 chooses the column corresponding to the value found in (2).</div></li>
+</ol>
+</div>
+<div class="para" id="maximinstrategy-4">Since we often will look for the maximin strategy for Player 1 and the minimax strategy for Player 2 in a game, this strategy pair will be referred to as the <dfn class="terminology">maximin/minimax</dfn> strategy (or strategy pair).</div></article><article class="activity project-like" id="A_domstratpractice5"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Look for dominated strategies.</span>
+</h4>
+<div class="para" id="A_domstratpractice5-2-1">Let’s consider another game matrix, given in <a href="S_DominatedStrategies.html#T_domstratpractice5" class="xref" data-knowl="./knowl/xref/T_domstratpractice5.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.18: Payoff matrix for Activity 2.2.12.">Table 2.2.18</a>. Explain why you cannot use dominated strategies to find an equilibrium pair. Do you think there is an equilibrium pair for this game (why or why not)?</div> <figure class="table table-like" id="T_domstratpractice5"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.18<span class="period">.</span></span><span class="space"> </span>Payoff matrix for Activity 2.2.12.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="4">Player 2</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">W</td>
+<td class="c m b1 r0 l0 t0 lines">X</td>
+<td class="c m b1 r0 l0 t0 lines">Y</td>
+<td class="c m b1 r0 l0 t0 lines">Z</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0 lines">-2</td>
+<td class="c m b1 r1 l0 t0 lines">0</td>
+<td class="c m b1 r1 l0 t0 lines">3</td>
+<td class="c m b1 r1 l0 t0 lines">20</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">Player 1</td>
+<td class="c m b0 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0 lines">1</td>
+<td class="c m b1 r1 l0 t0 lines">2</td>
+<td class="c m b1 r1 l0 t0 lines">-3</td>
+<td class="c m b1 r1 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r1 l0 t0 lines">C</td>
+<td class="c m b1 r1 l0 t0 lines">10</td>
+<td class="c m b1 r1 l0 t0 lines">-10</td>
+<td class="c m b1 r1 l0 t0 lines">-1</td>
+<td class="c m b1 r1 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r1 l0 t0 lines">D</td>
+<td class="c m b1 r1 l0 t0 lines">0</td>
+<td class="c m b1 r1 l0 t0 lines">0</td>
+<td class="c m b1 r1 l0 t0 lines">10</td>
+<td class="c m b1 r1 l0 t0 lines">15</td>
+</tr>
+</table></div></figure></article><article class="activity project-like" id="A_maxmindomstrat5"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.13</span><span class="period">.</span><span class="space"> </span><span class="title">Find the maximin/minimax strategy.</span>
+</h4>
+<div class="para" id="A_maxmindomstrat5-2-1">If both players use the maximin/ minimax strategy, what is the outcome of the game in <a href="S_DominatedStrategies.html#T_domstratpractice5" class="xref" data-knowl="./knowl/xref/T_domstratpractice5.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.18: Payoff matrix for Activity 2.2.12.">Table 2.2.18</a>?</div></article><article class="activity project-like" id="A_predictmaxmin"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.14</span><span class="period">.</span><span class="space"> </span><span class="title">Predicting a maximin strategy.</span>
+</h4>
+<div class="para" id="A_predictmaxmin-2-1">In the game in <a href="S_DominatedStrategies.html#T_domstratpractice5" class="xref" data-knowl="./knowl/xref/T_domstratpractice5.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.18: Payoff matrix for Activity 2.2.12.">Table 2.2.18</a>, if Player 1’s opponent can guess that Player 1 will choose to use a maximin strategy, is Player 1 better off <em class="emphasis">not</em> using the maximin strategy?</div></article><article class="activity project-like" id="A_iterate5"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.15</span><span class="period">.</span><span class="space"> </span><span class="title">Deviating from the maximin/minimax strategy.</span>
+</h4>
+<div class="para" id="A_iterate5-2-1">Suppose both players initially decide to use the maximin/minimax strategy in the game in <a href="S_DominatedStrategies.html#T_domstratpractice5" class="xref" data-knowl="./knowl/xref/T_domstratpractice5.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.18: Payoff matrix for Activity 2.2.12.">Table 2.2.18</a>. Is Player 1 better off choosing a different strategy? If Player 2 guesses a change, is Player 2 better off changing strategies? Continue this line of reasoning for several iterations. What strategies do each of the players choose? Is at least one player always better off switching strategies? Can we conclude that the maximin/ minimax strategy does not lead to an equilibrium pair?</div></article><article class="activity project-like" id="A_compareex"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.16</span><span class="period">.</span><span class="space"> </span><span class="title">Comparing examples.</span>
+</h4>
+<div class="para" id="A_compareex-2-1">Compare your answers in <a href="S_DominatedStrategies.html#A_iterate5" class="xref" data-knowl="./knowl/xref/A_iterate5.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.2.15: Deviating from the maximin/minimax strategy">Activity 2.2.15</a> to what happens in <a href="S_DominatedStrategies.html#A_domstratpractice1" class="xref" data-knowl="./knowl/xref/A_domstratpractice1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.2.3: More practice with dominated strategies">Activity 2.2.3</a>, <a href="S_DominatedStrategies.html#A_domstratpractice2" class="xref" data-knowl="./knowl/xref/A_domstratpractice2.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.2.4: Determine equilibrium pairs">Activity 2.2.4</a>, and <a href="S_DominatedStrategies.html#A_domstratpractice3" class="xref" data-knowl="./knowl/xref/A_domstratpractice3.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.2.5: Practice finding equilibrium pairs">Activity 2.2.5</a>. Can you identify any key differences between the games in <a href="S_DominatedStrategies.html#A_iterate5" class="xref" data-knowl="./knowl/xref/A_iterate5.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.2.15: Deviating from the maximin/minimax strategy">Activity 2.2.15</a> and <a href="S_DominatedStrategies.html#A_domstratpractice1" class="xref" data-knowl="./knowl/xref/A_domstratpractice1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.2.3: More practice with dominated strategies">Activity 2.2.3</a>, <a href="S_DominatedStrategies.html#A_domstratpractice2" class="xref" data-knowl="./knowl/xref/A_domstratpractice2.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.2.4: Determine equilibrium pairs">Activity 2.2.4</a>, and <a href="S_DominatedStrategies.html#A_domstratpractice3" class="xref" data-knowl="./knowl/xref/A_domstratpractice3.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.2.5: Practice finding equilibrium pairs">Activity 2.2.5</a>?</div></article><div class="para" id="SS_maximin-17">Given a zero-sum matrix game, we can find equilibruim pairs (if they exist) by the “guess and check” method, by eliminating dominated strategies, and by looking for the minimax/maximin strategies. You should be able to apply all three methods and think about which method might be the most appropriate for a given matrix game. For example, although “guess and check” should always find an equilibrium point if it exists, it may be very tedious to apply to a really large matrix. The maximin/minimax method might be much faster.</div></section><section class="reading-questions" id="S_DominatedStrategies-6"><h3 class="heading hide-type">
+<span class="type">Reading Questions</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="space"> </span><span class="title">Check Your Understanding</span>
+</h3>
+<article class="exercise exercise-like" id="IGT_strat_CYU_exdomstratrow"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="IGT_strat_CYU_exdomstratrow" data-multipleanswers="false">
+<div class="para" id="IGT_strat_CYU_exdomstratrow-1-1">Suppose we are looking for dominated strategies in the following matrix. <figure class="table table-like" id="T_exdomstratrow"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.19<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines" colspan="3">Player 2</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines">Player 1</td>
+<td class="l m b1 r1 l0 t0 lines">-1</td>
+<td class="l m b1 r1 l0 t0 lines">0</td>
+<td class="l m b1 r1 l0 t0 lines">2</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines"></td>
+<td class="l m b1 r1 l0 t0 lines">5</td>
+<td class="l m b1 r1 l0 t0 lines">-2</td>
+<td class="l m b1 r1 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines"></td>
+<td class="l m b1 r1 l0 t0 lines">0</td>
+<td class="l m b1 r1 l0 t0 lines">1</td>
+<td class="l m b1 r1 l0 t0 lines">4</td>
+</tr>
+</table></div></figure>
+</div> <div class="para" id="IGT_strat_CYU_exdomstratrow-1-2">Which row can we eliminate?</div>
+<li data-component="answer" id="IGT_strat_CYU_exdomstratrow_opt_a" data-correct=""><div class="para" id="IGT_strat_CYU_exdomstratrow-2-1-1-1">Row 1</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstratrow_opt_a"><div class="para" id="IGT_strat_CYU_exdomstratrow-2-1-2-1">Row 1 is dominated by Row 3.</div></li>
+<li data-component="answer" id="IGT_strat_CYU_exdomstratrow_opt_b"><div class="para" id="IGT_strat_CYU_exdomstratrow-2-2-1-1">Row 2</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstratrow_opt_b"><div class="para" id="IGT_strat_CYU_exdomstratrow-2-2-2-1">Row 2 is not dominated by either Row 1 or Row 3.</div></li>
+<li data-component="answer" id="IGT_strat_CYU_exdomstratrow_opt_c"><div class="para" id="IGT_strat_CYU_exdomstratrow-2-3-1-1">Row 3</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstratrow_opt_c"><div class="para" id="IGT_strat_CYU_exdomstratrow-2-3-2-1">Row 3 is not dominated by either Row 1 or Row 2.</div></li>
+<li data-component="answer" id="IGT_strat_CYU_exdomstratrow_opt_d"><div class="para" id="IGT_strat_CYU_exdomstratrow-2-4-1-1">We can’t eliminate any rows.</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstratrow_opt_d"><div class="para" id="IGT_strat_CYU_exdomstratrow-2-4-2-1">There is a dominated row.</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="IGT_strat_CYU_exdomstratcol"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="IGT_strat_CYU_exdomstratcol" data-multipleanswers="false">
+<div class="para" id="IGT_strat_CYU_exdomstratcol-1-1">Suppose we are looking for dominated strategies in the matrix <a href="S_DominatedStrategies.html#T_exdomstratrow" class="xref" data-knowl="./knowl/xref/T_exdomstratrow.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.19">Table 2.2.19</a>.</div> <div class="para" id="IGT_strat_CYU_exdomstratcol-1-2">Which column can we eliminate?</div>
+<li data-component="answer" id="IGT_strat_CYU_exdomstratcol_opt_a"><div class="para" id="IGT_strat_CYU_exdomstratcol-2-1-1-1">Column 1</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstratcol_opt_a"><div class="para" id="IGT_strat_CYU_exdomstratcol-2-1-2-1">Column 1 is not dominated by Column 2 or Column 3.</div></li>
+<li data-component="answer" id="IGT_strat_CYU_exdomstratcol_opt_b"><div class="para" id="IGT_strat_CYU_exdomstratcol-2-2-1-1">Column 2</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstratcol_opt_b"><div class="para" id="IGT_strat_CYU_exdomstratcol-2-2-2-1">Column 2 is not dominated by either Column 1 or Column 3. Remember Player 2 prefers smaller values since these are PLayer 1’s payoffs.</div></li>
+<li data-component="answer" id="IGT_strat_CYU_exdomstratcol_opt_c" data-correct=""><div class="para" id="IGT_strat_CYU_exdomstratcol-2-3-1-1">Column 3</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstratcol_opt_c"><div class="para" id="IGT_strat_CYU_exdomstratcol-2-3-2-1">Column 3 is dominated by Column 2.</div></li>
+<li data-component="answer" id="IGT_strat_CYU_exdomstratcol_opt_d"><div class="para" id="IGT_strat_CYU_exdomstratcol-2-4-1-1">We can’t eliminate any columns.</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstratcol_opt_d"><div class="para" id="IGT_strat_CYU_exdomstratcol-2-4-2-1">There is a dominated column.</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="IGT_strat_CYU_exdomstrat1"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="IGT_strat_CYU_exdomstrat1" data-multipleanswers="false">
+<div class="para" id="IGT_strat_CYU_exdomstrat1-1-1">Suppose we are looking for dominated strategies in the following matrix. <figure class="table table-like" id="T_exdomstrat1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.20<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines" colspan="3">Player 2</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines">Player 1</td>
+<td class="l m b1 r1 l0 t0 lines">-2</td>
+<td class="l m b1 r1 l0 t0 lines">-1</td>
+<td class="l m b1 r1 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines"></td>
+<td class="l m b1 r1 l0 t0 lines">0</td>
+<td class="l m b1 r1 l0 t0 lines">2</td>
+<td class="l m b1 r1 l0 t0 lines">-1</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines"></td>
+<td class="l m b1 r1 l0 t0 lines">1</td>
+<td class="l m b1 r1 l0 t0 lines">3</td>
+<td class="l m b1 r1 l0 t0 lines">-4</td>
+</tr>
+</table></div></figure>
+</div> <div class="para" id="IGT_strat_CYU_exdomstrat1-1-2">Which row or column can we eliminate?</div>
+<li data-component="answer" id="IGT_strat_CYU_exdomstrat1_opt_a"><div class="para" id="IGT_strat_CYU_exdomstrat1-2-1-1-1">Row 1</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstrat1_opt_a"><div class="para" id="IGT_strat_CYU_exdomstrat1-2-1-2-1">Row 1 is not dominated by either Row 2 or Row 3.</div></li>
+<li data-component="answer" id="IGT_strat_CYU_exdomstrat1_opt_b"><div class="para" id="IGT_strat_CYU_exdomstrat1-2-2-1-1">Row 2</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstrat1_opt_b"><div class="para" id="IGT_strat_CYU_exdomstrat1-2-2-2-1">Row 2 is not dominated by either Row 1 or Row 3.</div></li>
+<li data-component="answer" id="IGT_strat_CYU_exdomstrat1_opt_c"><div class="para" id="IGT_strat_CYU_exdomstrat1-2-3-1-1">Row 3</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstrat1_opt_c"><div class="para" id="IGT_strat_CYU_exdomstrat1-2-3-2-1">Row 3 is not dominated by either Row 1 or Row 2.</div></li>
+<li data-component="answer" id="IGT_strat_CYU_exdomstrat1_opt_d"><div class="para" id="IGT_strat_CYU_exdomstrat1-2-4-1-1">Column 1</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstrat1_opt_d"><div class="para" id="IGT_strat_CYU_exdomstrat1-2-4-2-1">Column 1 is not dominated by Column 2 or Column 3.</div></li>
+<li data-component="answer" id="IGT_strat_CYU_exdomstrat1_opt_e" data-correct=""><div class="para" id="IGT_strat_CYU_exdomstrat1-2-5-1-1">Column 2</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstrat1_opt_e"><div class="para" id="IGT_strat_CYU_exdomstrat1-2-5-2-1">Column 2 is dominated by Column 1.</div></li>
+<li data-component="answer" id="IGT_strat_CYU_exdomstrat1_opt_f"><div class="para" id="IGT_strat_CYU_exdomstrat1-2-6-1-1">Column 3</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstrat1_opt_f"><div class="para" id="IGT_strat_CYU_exdomstrat1-2-6-2-1">Column 3 is not dominated by either Column 1 or Column 2.</div></li>
+<li data-component="answer" id="IGT_strat_CYU_exdomstrat1_opt_g"><div class="para" id="IGT_strat_CYU_exdomstrat1-2-7-1-1">We can’t eliminate any rows or columns.</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstrat1_opt_g"><div class="para" id="IGT_strat_CYU_exdomstrat1-2-7-2-1">There is a dominated column.</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="IGT_strat_CYU_exdomstrat2"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="IGT_strat_CYU_exdomstrat2" data-multipleanswers="false">
+<div class="para" id="IGT_strat_CYU_exdomstrat2-1-1">Suppose we are looking for dominated strategies in the following matrix. <figure class="table table-like" id="T_exdomstrat2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.21<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines" colspan="3">Player 2</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines">Player 1</td>
+<td class="l m b1 r1 l0 t0 lines">3</td>
+<td class="l m b1 r1 l0 t0 lines">0</td>
+<td class="l m b1 r1 l0 t0 lines">-1</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines"></td>
+<td class="l m b1 r1 l0 t0 lines">1</td>
+<td class="l m b1 r1 l0 t0 lines">2</td>
+<td class="l m b1 r1 l0 t0 lines">-3</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines"></td>
+<td class="l m b1 r1 l0 t0 lines">1</td>
+<td class="l m b1 r1 l0 t0 lines">0</td>
+<td class="l m b1 r1 l0 t0 lines">3</td>
+</tr>
+</table></div></figure>
+</div> <div class="para" id="IGT_strat_CYU_exdomstrat2-1-2">Which row or column can we eliminate?</div>
+<li data-component="answer" id="IGT_strat_CYU_exdomstrat2_opt_a"><div class="para" id="IGT_strat_CYU_exdomstrat2-2-1-1-1">Row 1</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstrat2_opt_a"><div class="para" id="IGT_strat_CYU_exdomstrat2-2-1-2-1">Row 1 is not dominated by either Row 2 or Row 3.</div></li>
+<li data-component="answer" id="IGT_strat_CYU_exdomstrat2_opt_b"><div class="para" id="IGT_strat_CYU_exdomstrat2-2-2-1-1">Row 2</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstrat2_opt_b"><div class="para" id="IGT_strat_CYU_exdomstrat2-2-2-2-1">Row 2 is not dominated by either Row 1 or Row 3.</div></li>
+<li data-component="answer" id="IGT_strat_CYU_exdomstrat2_opt_c"><div class="para" id="IGT_strat_CYU_exdomstrat2-2-3-1-1">Row 3</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstrat2_opt_c"><div class="para" id="IGT_strat_CYU_exdomstrat2-2-3-2-1">Row 3 is not dominated by either Row 1 or Row 2.</div></li>
+<li data-component="answer" id="IGT_strat_CYU_exdomstrat2_opt_d"><div class="para" id="IGT_strat_CYU_exdomstrat2-2-4-1-1">Column 1</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstrat2_opt_d"><div class="para" id="IGT_strat_CYU_exdomstrat2-2-4-2-1">Column 1 is not dominated by Column 2 or Column 3.</div></li>
+<li data-component="answer" id="IGT_strat_CYU_exdomstrat2_opt_e"><div class="para" id="IGT_strat_CYU_exdomstrat2-2-5-1-1">Column 2</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstrat2_opt_e"><div class="para" id="IGT_strat_CYU_exdomstrat2-2-5-2-1">Column 2 is not dominated by either Column 1 or Column 3.</div></li>
+<li data-component="answer" id="IGT_strat_CYU_exdomstrat2_opt_f"><div class="para" id="IGT_strat_CYU_exdomstrat2-2-6-1-1">Column 3</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstrat2_opt_f"><div class="para" id="IGT_strat_CYU_exdomstrat2-2-6-2-1">Column 3 is not dominated by either Column 1 or Column 2.</div></li>
+<li data-component="answer" id="IGT_strat_CYU_exdomstrat2_opt_g" data-correct=""><div class="para" id="IGT_strat_CYU_exdomstrat2-2-7-1-1">We can’t eliminate any rows or columns.</div></li>
+<li data-component="feedback" id="IGT_strat_CYU_exdomstrat2_opt_g"><div class="para" id="IGT_strat_CYU_exdomstrat2-2-7-2-1">There is not a dominated row or column.</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="IGT_strat_CYU_maximin"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="introduction" id="IGT_strat_CYU_maximin-1"><div class="para" id="IGT_strat_CYU_maximin-1-1">This exercise finds Player 1’s maximin strategy.</div></div>
+<article class="task exercise-like" id="IGT_strat_CYU_maximin-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="ptx-runestone-container"><div class="runestone clickablearea_section"><div data-component="clickablearea" data-question_label="" style="visibility: hidden;" id="">
+<span data-question=""><div class="para" id="IGT_strat_CYU_maximin-2-1-1">Click on or circle the smallest value in each row.</div></span><span data-feedback=""></span><div class="para" id="IGT_strat_CYU_maximin-2-2-1"><figure class="table table-like" id="T_exmaxmin1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.22<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines" colspan="3">Player 2</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines">Player 1</td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">3</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">0</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-correct="">-1</span></td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines"></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">1</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">2</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-correct="">-3</span></td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines"></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">1</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-correct="">0</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">3</span></td>
+</tr>
+</table></div></figure></div>
+</div></div></div></article><article class="task exercise-like" id="IGT_strat_CYU_maximin-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="" data-multipleanswers="false">
+<div class="para" id="IGT_strat_CYU_maximin-3-1-1">If Player 1 wants to play the maximin stategy, she should play the row with the largest of the values from (a). Thus, she should play</div>
+<li data-component="answer" id="_opt_a"><div class="para" id="IGT_strat_CYU_maximin-3-2-1-1-1">Row 1.</div></li>
+<li data-component="feedback" id="_opt_a"><div class="para" id="IGT_strat_CYU_maximin-3-2-1-2-1">Incorrect.</div></li>
+<li data-component="answer" id="_opt_b"><div class="para" id="IGT_strat_CYU_maximin-3-2-2-1-1">Row 2.</div></li>
+<li data-component="feedback" id="_opt_b"><div class="para" id="IGT_strat_CYU_maximin-3-2-2-2-1">Incorrect.</div></li>
+<li data-component="answer" id="_opt_c" data-correct=""><div class="para" id="IGT_strat_CYU_maximin-3-2-3-1-1">Row 3.</div></li>
+<li data-component="feedback" id="_opt_c"><div class="para" id="IGT_strat_CYU_maximin-3-2-3-2-1">Row 3 is the row with the largest of the smallest values from each row.</div></li>
+</ul></div></div></article></article><article class="exercise exercise-like" id="IGT_strat_CYU_minimax"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="introduction" id="IGT_strat_CYU_minimax-1"><div class="para" id="IGT_strat_CYU_minimax-1-1">This exercise finds Player 2’s minimax strategy.</div></div>
+<article class="task exercise-like" id="IGT_strat_CYU_minimax-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="ptx-runestone-container"><div class="runestone clickablearea_section"><div data-component="clickablearea" data-question_label="" style="visibility: hidden;" id="">
+<span data-question=""><div class="para" id="IGT_strat_CYU_minimax-2-1-1">Click on or circle the largest value in each column.</div></span><span data-feedback=""></span><div class="para" id="IGT_strat_CYU_minimax-2-2-1"><figure class="table table-like" id="T_exminimax1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.23<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines" colspan="3">Player 2</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines">Player 1</td>
+<td class="l m b1 r1 l0 t0 lines"><span data-correct="">3</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">0</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">-1</span></td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines"></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">1</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-correct="">2</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">-3</span></td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines"></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">1</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">0</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-correct="">3</span></td>
+</tr>
+</table></div></figure></div>
+</div></div></div></article><article class="task exercise-like" id="IGT_strat_CYU_minimax-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="" data-multipleanswers="false">
+<div class="para" id="IGT_strat_CYU_minimax-3-1-1">If Player 2 wants to play the minimax stategy, she should play the column with the smallest of the values from (a). Thus, she should play</div>
+<li data-component="answer" id="_opt_a"><div class="para" id="IGT_strat_CYU_minimax-3-2-1-1-1">Column 1.</div></li>
+<li data-component="feedback" id="_opt_a"><div class="para" id="IGT_strat_CYU_minimax-3-2-1-2-1">Incorrect.</div></li>
+<li data-component="answer" id="_opt_b" data-correct=""><div class="para" id="IGT_strat_CYU_minimax-3-2-2-1-1">Column 2.</div></li>
+<li data-component="feedback" id="_opt_b"><div class="para" id="IGT_strat_CYU_minimax-3-2-2-2-1">Column 2 is the column with the smallest of the largest values from each column.</div></li>
+<li data-component="answer" id="_opt_c"><div class="para" id="IGT_strat_CYU_minimax-3-2-3-1-1">Column 3.</div></li>
+<li data-component="feedback" id="_opt_c"><div class="para" id="IGT_strat_CYU_minimax-3-2-3-2-1">Incorrect</div></li>
+</ul></div></div></article></article><article class="exercise exercise-like" id="IGT_strat_CYU_maxminvalequal1"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="IGT_strat_CYU_maxminvalequal1">
+<div class="para" id="IGT_strat_CYU_maxminvalequal1-1-1">Looking at the game <a href="S_DominatedStrategies.html#T_exdomstrat2" class="xref" data-knowl="./knowl/xref/T_exdomstrat2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.21">Table 2.2.21</a>, the value of the maximin strategy for Player 1 is <input type="text" placeholder="Number" size="3">.</div> <div class="para" id="IGT_strat_CYU_maxminvalequal1-1-2">The value of the minimax strategy for Player 2 is <input type="text" placeholder="Number" size="3">.</div> <div class="para" id="IGT_strat_CYU_maxminvalequal1-1-3">These two values are equal (“yes” or “no”) <input type="text" placeholder="Number" size="3">.</div>
+<script type="application/json">[[{"number": [0, 0], "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal1-2-1-1-1-1\">O is the largest of the smallest values in each row.<\/div>"}, {"number": [3, 3], "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal1-2-1-2-1-1\">This is the largest value in the matrix, but not the largest of the minimum values from each row.<\/div>"}, {"number": [-3, -3], "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal1-2-1-3-1-1\">This is the smallest of the minimum values. We want the largest.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal1-2-1-4-1-1\">Incorrect.<\/div>"}], [{"number": [2, 2], "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal1-2-2-1-1-1\">2 is the smallest of the largest values in each column.<\/div>"}, {"number": [-3, -3], "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal1-2-2-2-1-1\">This is the smallest value in the matrix, but not the smallest of the maximum values in each column.<\/div>"}, {"number": [3, 3], "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal1-2-2-3-1-1\">This is the largest of the maximum values. We want the smallest.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal1-2-2-4-1-1\">Incorrect.<\/div>"}], [{"regex": "^\\s*no\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal1-2-3-1-1-1\">The maximin and the minimax values are not equal.<\/div>"}, {"regex": "^\\s*yes\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal1-2-3-2-1-1\">The maximin and the minimax values are not equal.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal1-2-3-3-1-1\">Yuo answer should be “yes” or “no”.<\/div>"}]]</script>
+</div></div></div></article><article class="exercise exercise-like" id="IGT_strat_CYU_maxminequilib1"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="IGT_strat_CYU_maxminequilib1">
+<div class="para" id="IGT_strat_CYU_maxminequilib1-1-1">True or False: The game <a href="S_DominatedStrategies.html#T_exdomstrat2" class="xref" data-knowl="./knowl/xref/T_exdomstrat2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.21">Table 2.2.21</a>, has an equilibrium pair.</div>
+<li data-component="answer" id="IGT_strat_CYU_maxminequilib1_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="IGT_strat_CYU_maxminequilib1_opt_t"><div class="para" id="IGT_strat_CYU_maxminequilib1-2-1">This game does not have an equilibrium pair.</div></li>
+<li data-component="answer" id="IGT_strat_CYU_maxminequilib1_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="IGT_strat_CYU_maxminequilib1_opt_f"><div class="para" id="IGT_strat_CYU_maxminequilib1-2-1">This game does not have an equilibrium pair.</div></li>
+</ul></div></div>
+<div class="solutions"><details id="IGT_strat_CYU_maxminequilib1-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="IGT_strat_CYU_maxminequilib1-3-1">Try using what you know about the maximin and minimax strategies.</div></div></details></div></article><article class="exercise exercise-like" id="IGT_strat_CYU_maximin2"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="introduction" id="IGT_strat_CYU_maximin2-1"><div class="para" id="IGT_strat_CYU_maximin2-1-1">This exercise finds Player 1’s maximin strategy.</div></div>
+<article class="task exercise-like" id="IGT_strat_CYU_maximin2-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="ptx-runestone-container"><div class="runestone clickablearea_section"><div data-component="clickablearea" data-question_label="" style="visibility: hidden;" id="">
+<span data-question=""><div class="para" id="IGT_strat_CYU_maximin2-2-1-1">Click on or circle the smallest value in each row.</div></span><span data-feedback=""></span><div class="para" id="IGT_strat_CYU_maximin2-2-2-1"><figure class="table table-like" id="T_exmaxmin2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.24<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines" colspan="3">Player 2</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines">Player 1</td>
+<td class="l m b1 r1 l0 t0 lines"><span data-correct="">-4</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">-2</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">5</span></td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines"></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">2</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-correct="">1</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">3</span></td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines"></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">5</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">-3</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-correct="">-4</span></td>
+</tr>
+</table></div></figure></div>
+</div></div></div></article><article class="task exercise-like" id="IGT_strat_CYU_maximin2-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="" data-multipleanswers="false">
+<div class="para" id="IGT_strat_CYU_maximin2-3-1-1">If Player 1 wants to play the maximin stategy, she should play the row with the largest of the values from (a). Thus, she should play</div>
+<li data-component="answer" id="_opt_a"><div class="para" id="IGT_strat_CYU_maximin2-3-2-1-1-1">Row 1.</div></li>
+<li data-component="feedback" id="_opt_a"><div class="para" id="IGT_strat_CYU_maximin2-3-2-1-2-1">Incorrect.</div></li>
+<li data-component="answer" id="_opt_b" data-correct=""><div class="para" id="IGT_strat_CYU_maximin2-3-2-2-1-1">Row 2.</div></li>
+<li data-component="feedback" id="_opt_b"><div class="para" id="IGT_strat_CYU_maximin2-3-2-2-2-1">Row 2 is the row with the largest of the smallest values from each row.</div></li>
+<li data-component="answer" id="_opt_c"><div class="para" id="IGT_strat_CYU_maximin2-3-2-3-1-1">Row 3.</div></li>
+<li data-component="feedback" id="_opt_c"><div class="para" id="IGT_strat_CYU_maximin2-3-2-3-2-1">Incorrect.</div></li>
+</ul></div></div></article></article><article class="exercise exercise-like" id="IGT_strat_CYU_minimax2"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="introduction" id="IGT_strat_CYU_minimax2-1"><div class="para" id="IGT_strat_CYU_minimax2-1-1">This exercise finds Player 2’s minimax strategy.</div></div>
+<article class="task exercise-like" id="IGT_strat_CYU_minimax2-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="ptx-runestone-container"><div class="runestone clickablearea_section"><div data-component="clickablearea" data-question_label="" style="visibility: hidden;" id="">
+<span data-question=""><div class="para" id="IGT_strat_CYU_minimax2-2-1-1">Click on or circle the largest value in each column.</div></span><span data-feedback=""></span><div class="para" id="IGT_strat_CYU_minimax2-2-2-1"><figure class="table table-like" id="T_exminimax2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.25<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines" colspan="3">Player 2</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines">Player 1</td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">-4</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">-2</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-correct="">5</span></td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines"></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">2</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-correct="">1</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">3</span></td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines"></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-correct="">5</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">-3</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span data-incorrect="">-4</span></td>
+</tr>
+</table></div></figure></div>
+</div></div></div></article><article class="task exercise-like" id="IGT_strat_CYU_minimax2-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="" data-multipleanswers="false">
+<div class="para" id="IGT_strat_CYU_minimax2-3-1-1">If Player 2 wants to play the minimax stategy, she should play the column with the smallest of the values from (a). Thus, she should play</div>
+<li data-component="answer" id="_opt_a"><div class="para" id="IGT_strat_CYU_minimax2-3-2-1-1-1">Column 1.</div></li>
+<li data-component="feedback" id="_opt_a"><div class="para" id="IGT_strat_CYU_minimax2-3-2-1-2-1">Incorrect.</div></li>
+<li data-component="answer" id="_opt_b" data-correct=""><div class="para" id="IGT_strat_CYU_minimax2-3-2-2-1-1">Column 2.</div></li>
+<li data-component="feedback" id="_opt_b"><div class="para" id="IGT_strat_CYU_minimax2-3-2-2-2-1">Column 2 is the column with the smallest of the largest values from each column.</div></li>
+<li data-component="answer" id="_opt_c"><div class="para" id="IGT_strat_CYU_minimax2-3-2-3-1-1">Column 3.</div></li>
+<li data-component="feedback" id="_opt_c"><div class="para" id="IGT_strat_CYU_minimax2-3-2-3-2-1">Incorrect</div></li>
+</ul></div></div></article></article><article class="exercise exercise-like" id="IGT_strat_CYU_maxminvalequal2"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="IGT_strat_CYU_maxminvalequal2">
+<div class="para" id="IGT_strat_CYU_maxminvalequal2-1-1">Consider the game given in the table. <figure class="table table-like" id="T_exdomstrat3"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.26<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines" colspan="3">Player 2</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines">Player 1</td>
+<td class="l m b1 r1 l0 t0 lines">-4</td>
+<td class="l m b1 r1 l0 t0 lines">-2</td>
+<td class="l m b1 r1 l0 t0 lines">5</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines"></td>
+<td class="l m b1 r1 l0 t0 lines">2</td>
+<td class="l m b1 r1 l0 t0 lines">1</td>
+<td class="l m b1 r1 l0 t0 lines">3</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines"></td>
+<td class="l m b1 r1 l0 t0 lines">5</td>
+<td class="l m b1 r1 l0 t0 lines">-3</td>
+<td class="l m b1 r1 l0 t0 lines">-4</td>
+</tr>
+</table></div></figure>
+</div> <div class="para" id="IGT_strat_CYU_maxminvalequal2-1-2">The value of the maximin strategy for Player 1 is <input type="text" placeholder="Number" size="3">.</div> <div class="para" id="IGT_strat_CYU_maxminvalequal2-1-3">The value of the minimax strategy for Player 2 is <input type="text" placeholder="Number" size="3">.</div> <div class="para" id="IGT_strat_CYU_maxminvalequal2-1-4">These two values are equal (“yes” or “no”) <input type="text" placeholder="Number" size="3">.</div>
+<script type="application/json">[[{"number": [1, 1], "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal2-2-1-1-1-1\">1 is the largest of the smallest values in each row.<\/div>"}, {"number": [5, 5], "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal2-2-1-2-1-1\">This is the largest value in the matrix, but not the largest of the minimum values from each row.<\/div>"}, {"number": [-4, -4], "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal2-2-1-3-1-1\">This is the smallest of the minimum values. We want the largest.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal2-2-1-4-1-1\">Incorrect.<\/div>"}], [{"number": [1, 1], "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal2-2-2-1-1-1\">1 is the smallest of the largest values in each column.<\/div>"}, {"number": [-4, -4], "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal2-2-2-2-1-1\">This is the smallest value in the matrix, but not the smallest of the maximum values from each column.<\/div>"}, {"number": [5, 5], "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal2-2-2-3-1-1\">This is the largest value of the maximum values. We want the smallest.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal2-2-2-4-1-1\">Incorrect.<\/div>"}], [{"regex": "^\\s*yes\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal2-2-3-1-1-1\">The maximin and the minimax values are equal.<\/div>"}, {"regex": "^\\s*no\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal2-2-3-2-1-1\">The maximin and the minimax values are equal.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_strat_CYU_maxminvalequal2-2-3-3-1-1\">Your answer should be “yes” or “no”.<\/div>"}]]</script>
+</div></div></div></article><article class="exercise exercise-like" id="IGT_strat_CYU_maxminequilib2"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="IGT_strat_CYU_maxminequilib2">
+<div class="para" id="IGT_strat_CYU_maxminequilib2-1-1">True or False: The game <a href="S_DominatedStrategies.html#T_exdomstrat3" class="xref" data-knowl="./knowl/xref/T_exdomstrat3.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.26">Table 2.2.26</a>, has an equilibrium pair.</div>
+<li data-component="answer" id="IGT_strat_CYU_maxminequilib2_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="IGT_strat_CYU_maxminequilib2_opt_t"><div class="para" id="IGT_strat_CYU_maxminequilib2-2-1">This game has an equilibrium pair, [Row 2, Column 2].</div></li>
+<li data-component="answer" id="IGT_strat_CYU_maxminequilib2_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="IGT_strat_CYU_maxminequilib2_opt_f"><div class="para" id="IGT_strat_CYU_maxminequilib2-2-1">This game has an equilibrium pair, [Row 2, Column 2].</div></li>
+</ul></div></div>
+<div class="solutions"><details id="IGT_strat_CYU_maxminequilib2-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="IGT_strat_CYU_maxminequilib2-3-1">Try using what you know about the maximin and minimax strategies.</div></div></details></div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="S_IntroZeroSum.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="S_Probability.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

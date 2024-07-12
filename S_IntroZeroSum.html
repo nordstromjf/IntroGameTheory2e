@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Introduction to Two-Person Zero-Sum Games</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Game Theory">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.3.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.2/prefix-runtime.740db250e511e1cc.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.2/prefix-347.8328b60515045466.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.2/prefix-runestone.9813637ef2f0e0ee.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.3.2/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.3.2/prefix-runestone.f64dcc3632d7a0c3.css">
+</head>
+<body id="introgametheory" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""><img src="external/image-1.svg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="intro_game_theory.html"><span class="title">Introduction to Game Theory:</span> <span class="subtitle">a Discovery Approach</span></a></h1>
+<p class="byline">Jennifer Firkins Nordstrom</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="intro_game_theory-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="intro_game_theory-5.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="S_DominatedStrategies.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\( \newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+  \newcommand{\MyTikzmark}[2]{
+     \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
+\newcommand{\DrawVLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.3ex, #1] (#2.north) -- (#3.south);
+  \end{tikzpicture}
+}
+\newcommand{\DrawHLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.2em, #1] (#2.west) -- (#3.east);
+  \end{tikzpicture}
+}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="intro_game_theory-4.html" class="internal"><span class="codenumber">1</span> <span class="title">What is Game Theory?</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Players and Strategies</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_intro.html#SS_Cake" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Assumptions: Cake Division</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_intro.html#Ex_Tic" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Developing Strategies: Tic Tac Toe</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_intro.html#S_intro-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_IntroMatrices.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Game Matrices and Payoff Vectors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroMatrices.html#SS_MatchPennies" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Setting up a Payoff Matrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroMatrices.html#SS_revistassump" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Revisiting thte Assumptions</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroMatrices.html#S_IntroMatrices-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="intro_game_theory-5.html" class="internal"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="S_IntroZeroSum.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to Two-Person Zero-Sum Games</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroZeroSum.html#Ex_election" class="internal"><span class="codenumber">2.1.1</span> <span class="title">An Election Campaign Game</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroZeroSum.html#SS_equilpairs" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Equilibrium Pairs</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroZeroSum.html#S_IntroZeroSum-6" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_DominatedStrategies.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Finding Strategies</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_simplifyingmatrix" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Simplifying a Zero-Sum Game Matrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_DomStrategies" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Dominated Strategies</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_maximin" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Maximin and Minimax Strategies</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_DominatedStrategies.html#S_DominatedStrategies-6" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Check Your Understanding</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_Probability.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Probability and Expected Value</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_Probability.html#SS_basicprob" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Some Basic Probability</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_Probability.html#SS_expectedvalue" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Expected Value</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_Probability.html#S_Probability-5" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_OneCardStud.html" class="internal"><span class="codenumber">2.4</span> <span class="title">A Game of Chance</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_OneCardStud.html#S_OneCardStud-39" class="internal"><span class="codenumber">2.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_EquilibPoints.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Equilibrium Points</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_EquilibPoints.html#S_EquilibPoints-30" class="internal"><span class="codenumber">2.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Strategies for Zero-Sum Games and Equilibrium Points</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html#S_ZeroSumStrategySummary-15" class="internal"><span class="codenumber">2.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopRationality.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Popular Culture: Rationality and Perfect Information</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="intro_game_theory-6.html" class="internal"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_IntroRepeated.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction to Repeated Games</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroRepeated.html#S_IntroRepeated-25" class="internal"><span class="codenumber">3.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_MixStratGraph.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Mixed Strategies: Graphical Solution</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratGraph.html#S_MixStratGraph-53" class="internal"><span class="codenumber">3.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_SolvingEq.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Using Sage to Graph Lines and Solve Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_SolvingEq.html#S_SolvingEq-22" class="internal"><span class="codenumber">3.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_MixStratEV.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Mixed Strategies: Expected Value Solution</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratEV.html#S_MixStratEV-31" class="internal"><span class="codenumber">3.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_LiarsPoker.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Liar’s Poker</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_LiarsPoker.html#S_LiarsPoker-23" class="internal"><span class="codenumber">3.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_AugMatrices.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Solving Systems of Equations Using Matrices</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_AugMatrices.html#S_AugMatrices-35" class="internal"><span class="codenumber">3.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_Undercut.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Undercut</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_Undercut.html#S_Undercut-31" class="internal"><span class="codenumber">3.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="intro_game_theory-7.html" class="internal"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_IntroNonzero.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Introduction to Two-Player Non-Zero-Sum Games</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroNonzero.html#S_IntroNonzero-32" class="internal"><span class="codenumber">4.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_PdandChicken.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Prisoner’s Dilemma and Chicken</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PdandChicken.html#S_PdandChicken-41" class="internal"><span class="codenumber">4.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_CWPD.html" class="internal"><span class="codenumber">4.3</span> <span class="title">A Class-Wide Experiment</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_CWPD.html#S_CWPD-24" class="internal"><span class="codenumber">4.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_PDconditions.html" class="internal"><span class="codenumber">4.4</span> <span class="title">What Makes a Prisoner’s Dilemma?</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PDconditions.html#S_PDconditions-17" class="internal"><span class="codenumber">4.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_VDexperiment.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Another Multiplayer Experiment</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VDexperiment.html#S_VDexperiment-9" class="internal"><span class="codenumber">4.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_VolunteerDil.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Volunteer’s Dilemma</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VolunteerDil.html#S_VolunteerDil-20" class="internal"><span class="codenumber">4.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_RepeatPD.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Repeated Prisoner’s Dilemma</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_RepeatPD.html#S_RepeatPD-29" class="internal"><span class="codenumber">4.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopPD.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Popular Culture: Prisoner’s Dilemma and Chicken</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">References</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="S_IntroZeroSum"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.1</span><span class="space"> </span><span class="title">Introduction to Two-Person Zero-Sum Games</span>
+</h2>
+<section class="introduction" id="S_IntroZeroSum-3"><div class="para" id="S_IntroZeroSum-3-1">In the examples from the last section, whatever amount one player won, the other player lost.</div> <article class="definition definition-like" id="D_zerosum"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="D_zerosum-1-1">A two player game is called a <dfn class="terminology">zero-sum</dfn> game if the sum of the payoffs to each player is constant for all possible outcomes of the game. More specifically, the coordinates in each payoff vector must add up to the same value for each payoff vector. Such games are sometimes called <dfn class="terminology">constant-sum</dfn> games instead.</div></article> <div class="para" id="S_IntroZeroSum-3-3">We can always think of zero-sum games as being games in which one player’s win is the other player’s loss.</div> <article class="example example-like" id="poker"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Zero-sum in Poker.</span>
+</h3>
+<div class="para" id="poker-2-1">Consider a poker game in which each player comes to the game with $100. If there are five players, then the sum of money for all five players is always $500. At any given time during the game, a particular player may have more than $100, but then another player must have less than $100. One player’s win is another player’s loss.</div></article> <article class="example example-like" id="E_cakecutting2"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Zero-sum in Cake Division.</span>
+</h3>
+<div class="para" id="E_cakecutting2-2-1">Consider the cake division game. We want to find the payoff matrix for this game. It is important to determine what each player’s options are first. How can the “cutter” cut the cake? How can the “chooser” pick her piece? The payoff matrix is given in <a href="S_IntroZeroSum.html#T_cakecutting" class="xref" data-knowl="./knowl/xref/T_cakecutting.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.4: Payoff matrix for Cake Cutting game.">Table 2.1.4</a>.</div> <figure class="table table-like" id="T_cakecutting"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.4<span class="period">.</span></span><span class="space"> </span>Payoff matrix for Cake Cutting game.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="2">Chooser</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">Larger Piece</td>
+<td class="l m b1 r0 l0 t0 lines">Smaller Piece</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Cutter</td>
+<td class="l m b0 r1 l0 t0 lines">Cut Evenly</td>
+<td class="c m b1 r1 l0 t0 lines">(half, half)</td>
+<td class="c m b1 r1 l0 t0 lines">(half, half)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Cut Unvenly</td>
+<td class="c m b1 r1 l0 t0 lines">(small piece, large piece)</td>
+<td class="c m b1 r1 l0 t0 lines">(large piece, small piece)</td>
+</tr>
+</table></div></figure> <div class="para" id="E_cakecutting2-2-3">In order to better see that this game is zero-sum (or constant-sum), we could give values for the amount of cake each player gets. For example, half the cake would be 50%, a small piece might be 40%. Then we can rewrite the matrix with the percentage values in <a href="S_IntroZeroSum.html#T_cakecuttingpercent" class="xref" data-knowl="./knowl/xref/T_cakecuttingpercent.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.5: Payoff matrix, in percent of cake, for the Cake Cutting game.">Table 2.1.5</a>
+</div> <figure class="table table-like" id="T_cakecuttingpercent"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.5<span class="period">.</span></span><span class="space"> </span>Payoff matrix, in percent of cake, for the Cake Cutting game.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="2">Chooser</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">Larger Piece</td>
+<td class="l m b1 r0 l0 t0 lines">Smaller Piece</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Cutter</td>
+<td class="l m b0 r1 l0 t0 lines">Cut Evenly</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((50, 50)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((50, 50)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Cut Unvenly</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((40, 60)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((60, 40)\)</span></td>
+</tr>
+</table></div></figure> <div class="para" id="E_cakecutting2-2-5">In each outcome, the payoffs to each player add up to 100 (or 100%). In more mathematical terms, the coordinates of each payoff vector add up to 100. Thus the sum is the same, or constant, for each outcome.</div></article> <div class="para" id="S_IntroZeroSum-3-6">We can see from the matrix in <a href="S_IntroZeroSum.html#T_cakecuttingpercent" class="xref" data-knowl="./knowl/xref/T_cakecuttingpercent.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.5: Payoff matrix, in percent of cake, for the Cake Cutting game.">Table 2.1.5</a> that Player 2 will always choose the larger piece, thus Player 1 does best to cut the cake evenly. The outcome of the game is the <dfn class="terminology">strategy pair</dfn> denoted [Cut Evenly, Larger Piece], with resulting payoff vector <span class="process-math">\((50, 50)\text{.}\)</span>
+</div> <div class="para" id="S_IntroZeroSum-3-7">But why are we going to call these games “zero-sum” rather than “constant-sum”? We can convert any zero-sum game to a game where the payoffs actually sum to zero.</div> <article class="example example-like" id="E_pokerzero"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Poker Payoffs Revisited.</span>
+</h3>
+<div class="para" id="E_pokerzero-2-1">Consider the above poker game where each player begins the game with $100. Suppose at some point in the game the five players have the following amounts of money: $50, $200, $140, $100, $10. Then we could think of their gain as -$50, $100, $40, $0, -$90. What do these five numbers add up to?</div></article> <article class="example example-like" id="E_cakecuttingzero"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.7</span><span class="period">.</span>
+</h3>
+<div class="para" id="E_cakecuttingzero-2-1">Convert the cake division payoffs so that the payoff vectors sum to zero (rather than 100).</div> <div class="para" id="E_cakecuttingzero-2-2">The solution is given in <a href="S_IntroZeroSum.html#T_cakecuttingzerosum" class="xref" data-knowl="./knowl/xref/T_cakecuttingzerosum.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.8: Zero-sum payoff matrix for Cake Cutting game.">Table 2.1.8</a>.</div> <figure class="table table-like" id="T_cakecuttingzerosum"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.8<span class="period">.</span></span><span class="space"> </span>Zero-sum payoff matrix for Cake Cutting game.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="2">Chooser</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">Larger Piece</td>
+<td class="l m b1 r0 l0 t0 lines">Smaller Piece</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Cutter</td>
+<td class="l m b0 r1 l0 t0 lines">Cut Evenly</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((0, 0)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((0, 0)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Cut Unvenly</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((-10, 10)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((10, -10)\)</span></td>
+</tr>
+</table></div></figure> <div class="para" id="E_cakecuttingzero-2-4">But let’s make sure we understand what these numbers mean. For example, a payoff of <span class="process-math">\((0,0)\)</span> does not mean each player gets no cake, it means they don’t get any more cake than the other player. In this example, each player gets half the cake (50%) plus the payoff.</div></article> <div class="para" id="S_IntroZeroSum-3-10">When the game matrix is in the form of <a href="S_IntroZeroSum.html#E_cakecuttingzero" class="xref" data-knowl="./knowl/xref/E_cakecuttingzero.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.1.7">Example 2.1.7</a>, it is easy to recognize a zero-sum game since each payoff vector has the form <span class="process-math">\((a, -a)\)</span> (or <span class="process-math">\((-a, a)\)</span>).</div></section><section class="subsection" id="Ex_election"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="space"> </span><span class="title">An Election Campaign Game</span>
+</h3>
+<div class="para" id="Ex_election-2">Two candidates, Arnold and Bainbridge, are facing each other in a state election. They have three choices regarding the issue of the speed limit on I-5: they can support raising the speed limit to 70 MPH, they can support keeping the current speed limit, or they can dodge the issue entirely. The next three examples present three different payoff matrices for Arnold and Bainbridge.</div>
+<article class="example example-like" id="Ex_election1"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">The Speed Limit Issue.</span>
+</h4>
+<div class="para" id="Ex_election1-2-1">The candidates have the information given in <a href="S_IntroZeroSum.html#T_election1" class="xref" data-knowl="./knowl/xref/T_election1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.10: Percentage of the vote for Example 2.1.9.">Table 2.1.10</a> about how they would likely fare in the election based on how they stand on the speed limit.</div> <figure class="table table-like" id="T_election1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.10<span class="period">.</span></span><span class="space"> </span>Percentage of the vote for Example 2.1.9.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="3">Bainbridge</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">Raise Limit</td>
+<td class="l m b1 r0 l0 t0 lines">Keep Limit</td>
+<td class="l m b1 r0 l0 t0 lines">Dodge</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Raise Limit</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((45, 55)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((50, 50)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((40, 60)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Arnold</td>
+<td class="l m b0 r1 l0 t0 lines">Keep Limit</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((60, 40)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((55, 45)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((50, 50)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Dodge</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((45, 55)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((55, 45)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((40, 60)\)</span></td>
+</tr>
+</table></div></figure></article><article class="activity project-like" id="A_election1"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Analysis of the election game.</span>
+</h4>
+<div class="introduction" id="A_election1-2"><div class="para" id="A_election1-2-1">For the following questions, assume Arnold and Bainbridge have the payoff matrix given in <a href="S_IntroZeroSum.html#Ex_election1" class="xref" data-knowl="./knowl/xref/Ex_election1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.1.9: The Speed Limit Issue">Example 2.1.9</a>.</div></div>
+<article class="task exercise-like" id="A_election1-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="A_election1-3-1">Explain why <a href="S_IntroZeroSum.html#T_election1" class="xref" data-knowl="./knowl/xref/T_election1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.10: Percentage of the vote for Example 2.1.9.">Table 2.1.10</a> is a zero-sum game.</div></article><article class="task exercise-like" id="A_election1-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="A_election1-4-1">What should Arnold choose to do? What should Bainbridge choose to do? Be sure to explain each candidate’s choice. And remember, a player doesn’t just want to win, he wants to get THE MOST votes. For example, you could assume these are polling numbers and that there is some margin of error, thus a candidate prefers to have a larger margin over his opponent.</div></article><article class="task exercise-like" id="A_election1-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="A_election1-5-1">What is the outcome of the election? What percentage of the vote does each candidate get?</div></article><article class="task exercise-like" id="A_election1-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="A_election1-6-1">Does Arnold need to consider Bainbridge’s strategies in order to decide on his own strategy? Does Bainbridge need to consider Arnold’s strategies in order to decide on his own strategy? Explain your answer.</div></article></article><article class="example example-like" id="Ex_election2"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.11</span><span class="period">.</span><span class="space"> </span><span class="title">A New Scenario.</span>
+</h4>
+<div class="para" id="Ex_election2-2-1">Bainbridge’s mother is injured in a highway accident caused by speeding. The new payoff matrix is given in <a href="S_IntroZeroSum.html#T_election2" class="xref" data-knowl="./knowl/xref/T_election2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.12: Percentage of the vote for Example 2.1.11.">Table 2.1.12</a>.</div> <figure class="table table-like" id="T_election2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.12<span class="period">.</span></span><span class="space"> </span>Percentage of the vote for Example 2.1.11.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="3">Bainbridge</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">Raise Limit</td>
+<td class="l m b1 r0 l0 t0 lines">Keep Limit</td>
+<td class="l m b1 r0 l0 t0 lines">Dodge</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Raise Limit</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((45, 55)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((10, 90)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((40, 60)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Arnold</td>
+<td class="l m b0 r1 l0 t0 lines">Keep Limit</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((60, 40)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((55, 45)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((50, 50)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Dodge</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((45, 55)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((10, 90)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((40, 60)\)</span></td>
+</tr>
+</table></div></figure></article><article class="activity project-like" id="A_election2"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Analysis of the second scenario.</span>
+</h4>
+<div class="introduction" id="A_election2-2"><div class="para" id="A_election2-2-1">For the following questions, assume Arnold and Bainbridge have the payoff matrix given in <a href="S_IntroZeroSum.html#Ex_election2" class="xref" data-knowl="./knowl/xref/Ex_election2.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.1.11: A New Scenario">Example 2.1.11</a>.</div></div>
+<article class="task exercise-like" id="A_election2-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="A_election2-3-1">Explain why <a href="S_IntroZeroSum.html#T_election2" class="xref" data-knowl="./knowl/xref/T_election2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.12: Percentage of the vote for Example 2.1.11.">Table 2.1.12</a> is a zero-sum game.</div></article><article class="task exercise-like" id="A_election2-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="A_election2-4-1">What should Arnold choose to do? What should Bainbridge choose to do? Be sure to explain each candidate’s choice.</div></article><article class="task exercise-like" id="A_election2-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="A_election2-5-1">What is the outcome of the election?</div></article><article class="task exercise-like" id="A_election2-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="A_election2-6-1">Does Arnold need to consider Bainbridge’s strategies in order to decide on his own strategy? Does Bainbridge need to consider Arnold’s strategies in order to decide on his own strategy? Explain your answer.</div></article></article><article class="example example-like" id="Ex_election3"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.13</span><span class="period">.</span><span class="space"> </span><span class="title">A Third Scenario.</span>
+</h4>
+<div class="para" id="Ex_election3-2-1">Bainbridge begins giving election speeches at college campuses and monster truck rallies. The new payoff matrix is given in <a href="S_IntroZeroSum.html#T_election3" class="xref" data-knowl="./knowl/xref/T_election3.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.14: Percentage of the vote for Example 2.1.13.">Table 2.1.14</a>.</div> <figure class="table table-like" id="T_election3"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.14<span class="period">.</span></span><span class="space"> </span>Percentage of the vote for Example 2.1.13.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="3">Bainbridge</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">Raise Limit</td>
+<td class="l m b1 r0 l0 t0 lines">Keep Limit</td>
+<td class="l m b1 r0 l0 t0 lines">Dodge</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Raise Limit</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((35, 65)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((10, 90)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((60, 40)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Arnold</td>
+<td class="l m b0 r1 l0 t0 lines">Keep Limit</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((45, 55)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((55, 45)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((50, 50)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Dodge</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((40, 60)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((10, 90)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((65, 35)\)</span></td>
+</tr>
+</table></div></figure></article><article class="activity project-like" id="A_election3"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Analysis of the third scenario.</span>
+</h4>
+<div class="introduction" id="A_election3-2"><div class="para" id="A_election3-2-1">For the following questions, assume Arnold and Bainbridge have the payoff matrix given in <a href="S_IntroZeroSum.html#Ex_election3" class="xref" data-knowl="./knowl/xref/Ex_election3.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.1.13: A Third Scenario">Example 2.1.13</a>.</div></div>
+<article class="task exercise-like" id="A_election3-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="A_election3-3-1">Explain why <a href="S_IntroZeroSum.html#T_election3" class="xref" data-knowl="./knowl/xref/T_election3.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.14: Percentage of the vote for Example 2.1.13.">Table 2.1.14</a> is a zero-sum game.</div></article><article class="task exercise-like" id="A_election3-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="A_election3-4-1">What should Arnold choose to do? What should Bainbridge choose to do? Be sure to explain each candidate’s choice.</div></article><article class="task exercise-like" id="A_election3-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="A_election3-5-1">What is the outcome of the election?</div></article><article class="task exercise-like" id="A_election3-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="A_election3-6-1">Does Arnold need to consider Bainbridge’s strategies in order to decide on his own strategy? Does Bainbridge need to consider Arnold’s strategies in order to decide on his own strategy? Explain your answer.</div></article></article><article class="activity project-like" id="A_changestrategy"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Changing the strategy.</span>
+</h4>
+<div class="para" id="A_changestrategy-2-1">In each of the above scenarios, is there any reason for Arnold or Bainbridge to change his strategy? If there is, explain under what circumstances it makes sense to change strategy. If not, explain why it never makes sense to change strategy.</div></article></section><section class="subsection" id="SS_equilpairs"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="space"> </span><span class="title">Equilibrium Pairs</span>
+</h3>
+<div class="para" id="SS_equilpairs-2">Chances are, in each of the exercises above, you were able to determine what each player should do. In particular, if both players play your suggested strategies, there is no reason for either player to change to a different strategy.</div>
+<article class="definition definition-like" id="D_equilpair"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.15</span><span class="period">.</span>
+</h4>
+<div class="para" id="D_equilpair-1-1">A pair of strategies is an <dfn class="terminology">equilibrium pair</dfn> if neither player gains by changing strategies.</div></article><div class="para" id="SS_equilpairs-4">For example, consider the game matrix from <a href="S_IntroMatrices.html#E_Sec2_2small" class="xref" data-knowl="./knowl/xref/E_Sec2_2small.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.2.4: A 2\times 2 Game">Example 1.2.4</a>, <a href="S_IntroMatrices.html#T_matrixEx1Sec2_2" class="xref" data-knowl="./knowl/xref/T_matrixEx1Sec2_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 1.2.5: Payoff matrix for Activity 1.2.2">Table 1.2.5</a>.</div>
+<figure class="table table-like" id="SS_equilpairs-5"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.16<span class="period">.</span></span><span class="space"> </span>Payoff matrix for Example 1.2.4.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="2">Player 2</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">A</td>
+<td class="c m b1 r0 l0 t0 lines">B</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Player 1</td>
+<td class="l m b0 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((100, -100)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((-10, 10)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((0, 0)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((-1, 1)\)</span></td>
+</tr>
+</table></div></figure><div class="para" id="SS_equilpairs-6">You determined that Player 2 should choose to play B, and thus, Player 1 should play B (i.e., we have the strategy pair [B, B]). Why is this an equilibrium pair? If Player 2 plays B, does Player 1 have any reason to change to strategy A? No, she would lose 10 instead of 1. If Player 1 plays B, does Player 2 have any reason to change to strategy A? No, she would gain 0 instead of 1. Thus neither player benefits from changing strategy, and so we say [B, B] is an equilibrium pair.</div>
+<div class="para" id="SS_equilpairs-7">For now, we can use a “guess and check” method for finding equilibrium pairs. Take each outcome and decide whether either player would prefer to switch. Remember, Player 1 can only choose a different row, and Player 2 can only choose a different column. In our above example there are four outcomes to check: [A, A], [A, B], [B, A], and [B, B]. We already know [B, B] is an equilibrium pair, but let’s check the rest. Suppose the players play [A, A]. Does Player 1 want to switch to B? No, she’d rather get 100 than 0. Does Player 2 want to switch to B? Yes! She’d rather get 10 than <span class="process-math">\(-100\text{.}\)</span> So [A, A] is NOT an equilibrium pair since a player wants to switch. Now check that for [A, B] Player 1 would want to switch, and for [B, A] both players would want to switch. Thus [A, B] and [B, A] are NOT equilibrium pairs. Now you can try to find equilibrium pairs in any matrix game by just checking each payoff vector to see if one of the players would have wanted to switch to a different strategy.</div>
+<div class="para" id="SS_equilpairs-8">Generally, when we define a game matrix for a game, our rows and columns will be named with the strategy choices for the players. However, mathematically, we can just think of the matrix of payoff vectors without the row and column labels. In this case, we often identify the payoff vector itself as an <dfn class="terminology">equilibrium</dfn> or <dfn class="terminology">equilibrium point</dfn>. In <a href="S_IntroMatrices.html#T_matrixEx1Sec2_2" class="xref" data-knowl="./knowl/xref/T_matrixEx1Sec2_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 1.2.5: Payoff matrix for Activity 1.2.2">Table 1.2.5</a>, for example, we would say the payoff vector <span class="process-math">\((-1, 1)\)</span> is an <dfn class="terminology">equilibrium point</dfn>.</div>
+<article class="activity project-like" id="A_checkequil"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Checking equilibrium pairs.</span>
+</h4>
+<div class="para" id="A_checkequil-2-1">Are the strategy pairs you determined in the three election scenarios, <a href="S_IntroZeroSum.html#T_election1" class="xref" data-knowl="./knowl/xref/T_election1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.10: Percentage of the vote for Example 2.1.9.">Table 2.1.10</a>, <a href="S_IntroZeroSum.html#T_election2" class="xref" data-knowl="./knowl/xref/T_election2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.12: Percentage of the vote for Example 2.1.11.">Table 2.1.12</a>, and <a href="S_IntroZeroSum.html#T_election3" class="xref" data-knowl="./knowl/xref/T_election3.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.14: Percentage of the vote for Example 2.1.13.">Table 2.1.14</a>, equilibrium pairs? In other words, would either player prefer to change strategies? (You don’t need to check whether any other strategies are equilibrium pairs.)</div></article><article class="activity project-like" id="A_guesscheck"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Using “guess and check”.</span>
+</h4>
+<div class="introduction" id="A_guesscheck-2"><div class="para" id="A_guesscheck-2-1">Use the “guess and check” method to determine any equilibrium points for the following payoff matrices. It can also be helpful to identify the associated row and column for the equilibrium pair.</div></div>
+<article class="task exercise-like" id="A_guesscheck-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para logical" id="A_guesscheck-3-1"><div class="displaymath process-math">
+\begin{equation*}
+\left[\begin{matrix}
+(2,-2)\amp (2, -2)\\
+(1, -1) \amp  (3, -3)
+\end{matrix}\right]\hspace{.5in}
+\end{equation*}
+</div></div></article><article class="task exercise-like" id="A_guesscheck-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical" id="A_guesscheck-4-1"><div class="displaymath process-math">
+\begin{equation*}
+\left[\begin{matrix}
+(3,-3)\amp (1, -1)\\
+(2, -2) \amp  (4, -4)
+\end{matrix}\right]\hspace{.5in}
+\end{equation*}
+</div></div></article><article class="task exercise-like" id="A_guesscheck-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para logical" id="A_guesscheck-5-1"><div class="displaymath process-math">
+\begin{equation*}
+\left[\begin{matrix}
+(4,-4)\amp (5, -5)\amp (4, -4)\\
+(3, -3) \amp  (0, 0)\amp (1, -1)
+\end{matrix}\right]
+\end{equation*}
+</div></div></article></article><div class="para" id="SS_equilpairs-11">After trying the above examples, do you think every game has an equilibrium pair? Can games have multiple equilibrium pairs?</div>
+<article class="activity project-like" id="A_existequil"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Existence of equilibrium pairs.</span>
+</h4>
+<div class="para" id="A_existequil-2-1">Do all games have equilibrium pairs?</div></article><article class="activity project-like" id="A_multequil"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Multiple equilibrium pairs.</span>
+</h4>
+<div class="para" id="A_multequil-2-1">Can a game have more than one equilibrium pair?</div></article><div class="para" id="SS_equilpairs-14">The next three activities give you a few more games to practice finding equilibrium pairs.</div>
+<article class="activity project-like" id="A_RPSmatrix"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Rock, paper, scissors.</span>
+</h4>
+<div class="para" id="A_RPSmatrix-2-1">Consider the game ROCK, PAPER, SCISSORS (Rock beats Scissors, Scissors beat Paper, Paper beats Rock). Construct the payoff matrix for this game. Does it have an equilibrium pair? Explain your answer.</div></article><article class="activity project-like" id="A_network"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Battle of the networks.</span>
+</h4>
+<div class="introduction" id="A_network-2">
+<div class="para" id="A_network-2-1">Two television networks are battling for viewers for 7 pm Monday night. They each need to decide if they are going to show a sitcom or a sporting event. <a href="S_IntroZeroSum.html#T_network" class="xref" data-knowl="./knowl/xref/T_network.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.17: Payoff matrix for Battle of the Networks.">Table 2.1.17</a> gives the payoffs as percent of viewers.</div> <figure class="table table-like" id="T_network"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.17<span class="period">.</span></span><span class="space"> </span>Payoff matrix for Battle of the Networks.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="2">Network 2</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">Sitcom</td>
+<td class="l m b1 r0 l0 t0 lines">Sports</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Network 1</td>
+<td class="l m b0 r1 l0 t0 lines">Sitcom</td>
+<td class="l m b1 r1 l0 t0 lines"><span class="process-math">\((55, 45)\)</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="process-math">\((52, 48)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Sports</td>
+<td class="l m b1 r1 l0 t0 lines"><span class="process-math">\((50, 50)\)</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="process-math">\((45, 55)\)</span></td>
+</tr>
+</table></div></figure>
+</div>
+<article class="task exercise-like" id="A_network-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="A_network-3-1">Explain why this is a zero-sum game.</div></article><article class="task exercise-like" id="A_network-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="A_network-4-1">Does this game have an equilibrium pair? If so, find it and explain what each network should do.</div></article><article class="task exercise-like" id="A_network-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="A_network-5-1">Convert this game to one in which the payoffs actually sum to zero.</div>
+<details id="A_network-5-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="A_network-5-2-1">If a network wins 60% of the viewers, how much more than 50% of the viewers does it have?</div></div></details></article></article><article class="activity project-like" id="A_compadvantage"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Competitive advantage.</span>
+</h4>
+<div class="introduction" id="A_compadvantage-2">
+<div class="para" id="A_compadvantage-2-1">This game is an example of what economists call <dfn class="terminology">Competitive Advantage</dfn>. Two competing firms need to decide whether or not to adopt a new type of technology. The payoff matrix is in <a href="S_IntroZeroSum.html#T_compadvantage" class="xref" data-knowl="./knowl/xref/T_compadvantage.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.18: Payoff matrix for Competitive Advantage.">Table 2.1.18</a>. The variable <span class="process-math">\(a\)</span> is a positive number representing the economic advantage a firm will gain if it is the first to adopt the new technology.</div> <figure class="table table-like" id="T_compadvantage"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.18<span class="period">.</span></span><span class="space"> </span>Payoff matrix for Competitive Advantage.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="2">Firm A</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">Adopt New Tech</td>
+<td class="l m b1 r0 l0 t0 lines">Stay Put</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Firm B</td>
+<td class="l m b0 r1 l0 t0 lines">Adopt New Tech</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((0, 0)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((a, -a)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Stay Put</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((-a, a)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((0, 0)\)</span></td>
+</tr>
+<tr><td class="l m b0 r0 l0 t0 lines"></td></tr>
+</table></div></figure>
+</div>
+<article class="task exercise-like" id="A_compadvantage-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="A_compadvantage-3-1">Explain the payoff vector for each strategy pair. For example, why should the pair [Adopt New Tech, Stay Put] have the payoff <span class="process-math">\((a, -a)\text{?}\)</span>
+</div></article><article class="task exercise-like" id="A_compadvantage-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="A_compadvantage-4-1">Explain what each firm should do.</div></article><article class="task exercise-like" id="A_compadvantage-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="A_compadvantage-5-1">Give a real life example of Competitive Advantage.</div></article></article><div class="para" id="SS_equilpairs-18">We’ve seen how to describe a zero-sum game and how to find equilibrium pairs. We’ve tried to decide what each player’s strategy should be. Each player may need to consider the strategy of the other player in order to determine his or her best strategy. But we need to be careful, although our intuition can be useful in deciding the best strategy, we’d like to be able to be more precise about finding strategies for each player. We’ll learn some of these tools in the next section.</div></section><section class="reading-questions" id="S_IntroZeroSum-6"><h3 class="heading hide-type">
+<span class="type">Reading Questions</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="space"> </span><span class="title">Check Your Understanding</span>
+</h3>
+<article class="exercise exercise-like" id="IGT_izs_CYU_zerosum1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="IGT_izs_CYU_zerosum1">
+<div class="para logical" id="IGT_izs_CYU_zerosum1-1-1">
+<div class="para">True or False: The following game matrix is a zero-sum game.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left[\begin{matrix}
+(10, 20)\amp (-10, 40)\\
+(-20, 50) \amp  (0, 30)
+\end{matrix}\right]\hspace{.5in}
+\end{equation*}
+</div>
+</div>
+<li data-component="answer" id="IGT_izs_CYU_zerosum1_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="IGT_izs_CYU_zerosum1_opt_t"><div class="para" id="IGT_izs_CYU_zerosum1-2-1">Each payoff vector sums to 30, a constant sum. Thus, this is a zero-sum game.</div></li>
+<li data-component="answer" id="IGT_izs_CYU_zerosum1_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="IGT_izs_CYU_zerosum1_opt_f"><div class="para" id="IGT_izs_CYU_zerosum1-2-1">Each payoff vector sums to 30, a constant sum. Thus, this is a zero-sum game.</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="IGT_izs_CYU_zerosum2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="IGT_izs_CYU_zerosum2">
+<div class="para logical" id="IGT_izs_CYU_zerosum2-1-1">
+<div class="para">True or False: The following game matrix is a zero-sum game.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left[\begin{matrix}
+(10, 20)\amp (-20, 10)\\
+(-10, 20) \amp  (20, 10)
+\end{matrix}\right]\hspace{.5in}
+\end{equation*}
+</div>
+</div>
+<li data-component="answer" id="IGT_izs_CYU_zerosum2_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="IGT_izs_CYU_zerosum2_opt_t"><div class="para" id="IGT_izs_CYU_zerosum2-2-1">Payoff vector <span class="process-math">\((10, 20)\)</span> sums to 30, but payoff vector <span class="process-math">\((-10, 20)\)</span> sums to 10. Thus, this is not a zero-sum game.</div></li>
+<li data-component="answer" id="IGT_izs_CYU_zerosum2_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="IGT_izs_CYU_zerosum2_opt_f"><div class="para" id="IGT_izs_CYU_zerosum2-2-1">Payoff vector <span class="process-math">\((10, 20)\)</span> sums to 30, but payoff vector <span class="process-math">\((-10, 20)\)</span> sums to 10. Thus, this is not a zero-sum game.</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="IGT_izs_CYU_equil"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="IGT_izs_CYU_equil" data-multipleanswers="false" data-random="">
+<div class="para logical" id="IGT_izs_CYU_equil-1-1">
+<div class="para">Determine which payoff vector is an equilbrium point for the following matrix.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left[\begin{matrix}
+(1, -1)\amp (0, 0)\\
+(3, -3) \amp  (2, -2)
+\end{matrix}\right]\hspace{.5in}
+\end{equation*}
+</div>
+</div>
+<li data-component="answer" id="IGT_izs_CYU_equil_opt_a" data-correct=""><span class="process-math">\((2, -2)\)</span></li>
+<li data-component="feedback" id="IGT_izs_CYU_equil_opt_a"><div class="para" id="IGT_izs_CYU_equil-2-1-2-1">
+<span class="process-math">\((2, -2)\)</span> is an equilibrium point since if Player 2 chose column 2, Player 1 does not prefer row 1 with a payoff of 0. Similarly, if Player 1 chose row 2, Player 2 does not prefer column 1 with a payoff of <span class="process-math">\(-3\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="IGT_izs_CYU_equil_opt_b"><span class="process-math">\((1, -1)\)</span></li>
+<li data-component="feedback" id="IGT_izs_CYU_equil_opt_b"><div class="para" id="IGT_izs_CYU_equil-2-2-2-1">
+<span class="process-math">\((1, -1)\)</span> is not an equilibrium point since if Player 2 chose column 1, Player 1 prefers row 2 with a payoff of 3. Similarly, if Player 1 chose row 1, Player 2 prefers column 2 with a payoff of <span class="process-math">\(0\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="IGT_izs_CYU_equil_opt_c"><span class="process-math">\((0, 0)\)</span></li>
+<li data-component="feedback" id="IGT_izs_CYU_equil_opt_c"><div class="para" id="IGT_izs_CYU_equil-2-3-2-1">
+<span class="process-math">\((0, 0)\)</span> is not an equilibrium point since if Player 2 chose column 2, Player 1 prefers row 2 with a payoff of 2. Note, Player 2 doesn’t want to switch, but we only need one player to want to change strategies for the vector to not be an equilbrium.</div></li>
+<li data-component="answer" id="IGT_izs_CYU_equil_opt_d"><span class="process-math">\((3, -3)\)</span></li>
+<li data-component="feedback" id="IGT_izs_CYU_equil_opt_d"><div class="para" id="IGT_izs_CYU_equil-2-4-2-1">
+<span class="process-math">\((3, -3)\)</span> is not an equilibrium point since if Player 1 chose row 2, Player 2 prefers column 2 with a payoff of <span class="process-math">\(-2\text{.}\)</span> Note, Player 1 doesn’t want to switch, but we only need one player to want to change strategies for the vector to not be an equilbrium.</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="IGT_izs_CYU_existequil"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="IGT_izs_CYU_existequil">
+<div class="para" id="IGT_izs_CYU_existequil-1-1">True or False: A zero-sum game must have an equilibrium pair (or point).</div>
+<li data-component="answer" id="IGT_izs_CYU_existequil_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="IGT_izs_CYU_existequil_opt_t"><div class="para logical" id="IGT_izs_CYU_existequil-2-1">
+<div class="para">For example, the game matrix</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left[\begin{matrix}
+(3,-3)\amp (1, -1)\\
+(2, -2) \amp  (4, -4)
+\end{matrix}\right]\hspace{.5in}
+\end{equation*}
+</div>
+<div class="para">does not have an equilibrium.</div>
+</div></li>
+<li data-component="answer" id="IGT_izs_CYU_existequil_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="IGT_izs_CYU_existequil_opt_f"><div class="para logical" id="IGT_izs_CYU_existequil-2-1">
+<div class="para">For example, the game matrix</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left[\begin{matrix}
+(3,-3)\amp (1, -1)\\
+(2, -2) \amp  (4, -4)
+\end{matrix}\right]\hspace{.5in}
+\end{equation*}
+</div>
+<div class="para">does not have an equilibrium.</div>
+</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="IGT_izs_CYU_multequil"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="IGT_izs_CYU_multequil">
+<div class="para" id="IGT_izs_CYU_multequil-1-1">True or False: A zero-sum game can have more than one  equilibrium pair (or point).</div>
+<li data-component="answer" id="IGT_izs_CYU_multequil_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="IGT_izs_CYU_multequil_opt_t"><div class="para logical" id="IGT_izs_CYU_multequil-2-1">
+<div class="para">For example, the game matrix</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left[\begin{matrix}
+(4,-4)\amp (5, -5)\amp (4, -4)\\
+(3, -3) \amp  (0, 0)\amp (1, -1)
+\end{matrix}\right]
+\end{equation*}
+</div>
+<div class="para">has more than one equilibrium.</div>
+</div></li>
+<li data-component="answer" id="IGT_izs_CYU_multequil_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="IGT_izs_CYU_multequil_opt_f"><div class="para logical" id="IGT_izs_CYU_multequil-2-1">
+<div class="para">For example, the game matrix</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left[\begin{matrix}
+(4,-4)\amp (5, -5)\amp (4, -4)\\
+(3, -3) \amp  (0, 0)\amp (1, -1)
+\end{matrix}\right]
+\end{equation*}
+</div>
+<div class="para">has more than one equilibrium.</div>
+</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="IGT_izs_CYU_RPS"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="IGT_izs_CYU_RPS">
+<div class="para" id="IGT_izs_CYU_RPS-1-1">True or False: The game of Rock-Paper-Scissors has an equilibrium pair.</div>
+<li data-component="answer" id="IGT_izs_CYU_RPS_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="IGT_izs_CYU_RPS_opt_t"><div class="para" id="IGT_izs_CYU_RPS-2-1">No matter which strategy pair is played, there is at least one player that wishes they had played a different strategy.</div></li>
+<li data-component="answer" id="IGT_izs_CYU_RPS_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="IGT_izs_CYU_RPS_opt_f"><div class="para" id="IGT_izs_CYU_RPS-2-1">No matter which strategy pair is played, there is at least one player that wishes they had played a different strategy.</div></li>
+</ul></div></div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="intro_game_theory-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="S_DominatedStrategies.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

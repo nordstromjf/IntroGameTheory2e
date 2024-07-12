@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Mixed Strategies: Graphical Solution</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Game Theory">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.3.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.2/prefix-runtime.740db250e511e1cc.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.2/prefix-347.8328b60515045466.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.2/prefix-runestone.9813637ef2f0e0ee.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.3.2/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.3.2/prefix-runestone.f64dcc3632d7a0c3.css">
+</head>
+<body id="introgametheory" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""><img src="external/image-1.svg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="intro_game_theory.html"><span class="title">Introduction to Game Theory:</span> <span class="subtitle">a Discovery Approach</span></a></h1>
+<p class="byline">Jennifer Firkins Nordstrom</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="S_IntroRepeated.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="intro_game_theory-6.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="S_SolvingEq.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\( \newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+  \newcommand{\MyTikzmark}[2]{
+     \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
+\newcommand{\DrawVLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.3ex, #1] (#2.north) -- (#3.south);
+  \end{tikzpicture}
+}
+\newcommand{\DrawHLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.2em, #1] (#2.west) -- (#3.east);
+  \end{tikzpicture}
+}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="intro_game_theory-4.html" class="internal"><span class="codenumber">1</span> <span class="title">What is Game Theory?</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Players and Strategies</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_intro.html#SS_Cake" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Assumptions: Cake Division</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_intro.html#Ex_Tic" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Developing Strategies: Tic Tac Toe</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_intro.html#S_intro-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_IntroMatrices.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Game Matrices and Payoff Vectors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroMatrices.html#SS_MatchPennies" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Setting up a Payoff Matrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroMatrices.html#SS_revistassump" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Revisiting thte Assumptions</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroMatrices.html#S_IntroMatrices-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="intro_game_theory-5.html" class="internal"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_IntroZeroSum.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to Two-Person Zero-Sum Games</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroZeroSum.html#Ex_election" class="internal"><span class="codenumber">2.1.1</span> <span class="title">An Election Campaign Game</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroZeroSum.html#SS_equilpairs" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Equilibrium Pairs</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroZeroSum.html#S_IntroZeroSum-6" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_DominatedStrategies.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Finding Strategies</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_simplifyingmatrix" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Simplifying a Zero-Sum Game Matrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_DomStrategies" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Dominated Strategies</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_maximin" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Maximin and Minimax Strategies</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_DominatedStrategies.html#S_DominatedStrategies-6" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Check Your Understanding</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_Probability.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Probability and Expected Value</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_Probability.html#SS_basicprob" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Some Basic Probability</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_Probability.html#SS_expectedvalue" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Expected Value</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_Probability.html#S_Probability-5" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_OneCardStud.html" class="internal"><span class="codenumber">2.4</span> <span class="title">A Game of Chance</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_OneCardStud.html#S_OneCardStud-39" class="internal"><span class="codenumber">2.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_EquilibPoints.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Equilibrium Points</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_EquilibPoints.html#S_EquilibPoints-30" class="internal"><span class="codenumber">2.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Strategies for Zero-Sum Games and Equilibrium Points</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html#S_ZeroSumStrategySummary-15" class="internal"><span class="codenumber">2.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopRationality.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Popular Culture: Rationality and Perfect Information</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="intro_game_theory-6.html" class="internal"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_IntroRepeated.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction to Repeated Games</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroRepeated.html#S_IntroRepeated-25" class="internal"><span class="codenumber">3.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="S_MixStratGraph.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Mixed Strategies: Graphical Solution</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratGraph.html#S_MixStratGraph-53" class="internal"><span class="codenumber">3.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_SolvingEq.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Using Sage to Graph Lines and Solve Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_SolvingEq.html#S_SolvingEq-22" class="internal"><span class="codenumber">3.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_MixStratEV.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Mixed Strategies: Expected Value Solution</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratEV.html#S_MixStratEV-31" class="internal"><span class="codenumber">3.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_LiarsPoker.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Liar’s Poker</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_LiarsPoker.html#S_LiarsPoker-23" class="internal"><span class="codenumber">3.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_AugMatrices.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Solving Systems of Equations Using Matrices</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_AugMatrices.html#S_AugMatrices-35" class="internal"><span class="codenumber">3.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_Undercut.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Undercut</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_Undercut.html#S_Undercut-31" class="internal"><span class="codenumber">3.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="intro_game_theory-7.html" class="internal"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_IntroNonzero.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Introduction to Two-Player Non-Zero-Sum Games</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroNonzero.html#S_IntroNonzero-32" class="internal"><span class="codenumber">4.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_PdandChicken.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Prisoner’s Dilemma and Chicken</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PdandChicken.html#S_PdandChicken-41" class="internal"><span class="codenumber">4.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_CWPD.html" class="internal"><span class="codenumber">4.3</span> <span class="title">A Class-Wide Experiment</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_CWPD.html#S_CWPD-24" class="internal"><span class="codenumber">4.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_PDconditions.html" class="internal"><span class="codenumber">4.4</span> <span class="title">What Makes a Prisoner’s Dilemma?</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PDconditions.html#S_PDconditions-17" class="internal"><span class="codenumber">4.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_VDexperiment.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Another Multiplayer Experiment</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VDexperiment.html#S_VDexperiment-9" class="internal"><span class="codenumber">4.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_VolunteerDil.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Volunteer’s Dilemma</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VolunteerDil.html#S_VolunteerDil-20" class="internal"><span class="codenumber">4.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="S_RepeatPD.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Repeated Prisoner’s Dilemma</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_RepeatPD.html#S_RepeatPD-29" class="internal"><span class="codenumber">4.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopPD.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Popular Culture: Prisoner’s Dilemma and Chicken</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">References</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="S_MixStratGraph"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.2</span><span class="space"> </span><span class="title">Mixed Strategies: Graphical Solution</span>
+</h2>
+<div class="para" id="S_MixStratGraph-6">We know for games with an equilibrium, the maximin/minimax strategies will find an equilibrium solution. In this section we will learn a method for finding the maximin/minimax mixed strategies for a repeated game. This method will use graphs of lines and their intersection point to find the probability with which a player should play each row or column.</div>
+<div class="para logical" id="S_MixStratGraph-7">
+<div class="para">Let’s continue to consider the game given in <a href="S_IntroRepeated.html#E_smallrepeat" class="xref" data-knowl="./knowl/xref/E_smallrepeat.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.1.1: A 2\times 2 repeated game">Activity 3.1.1</a> by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/E_smallrepeat.html">
+\begin{equation*}
+\left[\begin{matrix}1\amp 0\\
+-1\amp 2
+\end{matrix} \right].
+\end{equation*}
+</div>
+</div>
+<div class="para" id="S_MixStratGraph-8">In order to make our analysis easier, let’s name the row and column strategies as in <a href="S_MixStratGraph.html#T_smallrepeat" class="xref" data-knowl="./knowl/xref/T_smallrepeat.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 3.2.1: Example matrix with named strategies">Table 3.2.1</a>.</div>
+<figure class="table table-like" id="T_smallrepeat"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.2.1<span class="period">.</span></span><span class="space"> </span>Example matrix with named strategies</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">C</td>
+<td class="l m b1 r0 l0 t0 lines">D</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines">A</td>
+<td class="l m b1 r1 l0 t0 lines">1</td>
+<td class="l m b1 r1 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines">B</td>
+<td class="l m b1 r1 l0 t0 lines">-1</td>
+<td class="l m b1 r1 l0 t0 lines">2</td>
+</tr>
+</table></div></figure><div class="para" id="S_MixStratGraph-10">We want to determine how often Player 1 should play A and how often she should play B.</div>
+<article class="activity project-like" id="A_linearconjecture"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Conjecture a strategy.</span>
+</h3>
+<div class="para" id="A_linearconjecture-2-1">First it is good to test your instinct. Do you think she should play one of the strategies more often than the other? If so, which strategy should she play the most?</div></article><div class="para" id="S_MixStratGraph-12">What we are really trying to find is the probability with which Player 1 plays A (or B). Since we know that the probabilities sum to one, if we can find one probability, then we know the other.</div>
+<div class="para" id="S_MixStratGraph-13">Here is one way to do this. Let <span class="process-math">\(p\)</span> be the probability that Player 1 plays B. Let <span class="process-math">\(m\)</span> be the payoff to Player 1. Since we are trying to find a mixed strategy for Player 1, we will pick a strategy for Player 2 and try to determine the possible payoffs for Player 1.</div>
+<div class="para" id="S_MixStratGraph-14">Let us determine some pairs <span class="process-math">\((p, m)\)</span> for <a href="S_MixStratGraph.html#T_smallrepeat" class="xref" data-knowl="./knowl/xref/T_smallrepeat.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 3.2.1: Example matrix with named strategies">Table 3.2.1</a>.</div>
+<div class="para logical" id="S_MixStratGraph-15"><ul class="disc"><li id="S_MixStratGraph-15-1-1">
+<span class="heading"><span class="title">Step 1. Assume Player 2 plays pure strategy <em class="alert">C</em>.</span></span><div class="para logical" id="S_MixStratGraph-15-1-1-2"><ul class="circle">
+<li id="S_MixStratGraph-15-1-1-2-1-1">
+<span class="heading"><span class="title">Step 1a. Assume Player 1 plays pure strategy <em class="alert">A</em>.</span></span><div class="para" id="S_MixStratGraph-15-1-1-2-1-1-2">Find the probability, <span class="process-math">\(p\text{,}\)</span> and payoff, <span class="process-math">\(m\text{,}\)</span> if Player 1 always plays A.</div>
+<div class="para logical" id="S_MixStratGraph-15-1-1-2-1-1-3">
+<div class="para">If Player 1 plays pure strategy A, then she never plays B. Thus the probability she plays B is 0. Hence,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p=0.
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="S_MixStratGraph-15-1-1-2-1-1-4">
+<div class="para">In the case where Player 1 plays A and Player 2 plays C, what is the payoff to Player 1? This is <span class="process-math">\(m\text{,}\)</span> so</div>
+<div class="displaymath process-math">
+\begin{equation*}
+m=1.
+\end{equation*}
+</div>
+</div>
+<div class="para" id="S_MixStratGraph-15-1-1-2-1-1-5">Thus, for the strategy pair <span class="process-math">\([A, C]\)</span> we get <span class="process-math">\((p, m)=(0, 1)\text{.}\)</span>
+</div>
+<div class="para" id="S_MixStratGraph-15-1-1-2-1-1-6">It is important to note that <span class="process-math">\((0, 1)\)</span> is <em class="emphasis">not</em> a payoff vector. This is common notation for any ordered pair. With payoff vectors, the ordered pair represents the payoff to each player. Here the ordered pair represents a probability of playing B and the payoff to Player 1.</div>
+</li>
+<li id="S_MixStratGraph-15-1-1-2-1-2">
+<span class="heading"><span class="title">Step 1b. Assume Player 1 plays pure strategy <em class="alert">B</em>.</span></span><div class="para" id="S_MixStratGraph-15-1-1-2-1-2-2">Find the probability (<span class="process-math">\(p\)</span>) and payoff (<span class="process-math">\(m\)</span>) if Player 1 always plays B.</div>
+<div class="para logical" id="S_MixStratGraph-15-1-1-2-1-2-3">
+<div class="para">If Player 1 plays pure strategy B, then what is the probability that she plays B? Since she always plays B,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p=1.
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="S_MixStratGraph-15-1-1-2-1-2-4">
+<div class="para">In the case where Player 1 plays B and Player 2 plays C, what is the payoff to Player 1?</div>
+<div class="displaymath process-math">
+\begin{equation*}
+m=-1.
+\end{equation*}
+</div>
+</div>
+<div class="para" id="S_MixStratGraph-15-1-1-2-1-2-5">Thus, for the strategy pair <span class="process-math">\([B, C]\)</span> we get <span class="process-math">\((p, m)=(1, -1)\text{.}\)</span>
+</div>
+</li>
+<li id="S_MixStratGraph-15-1-1-2-1-3">
+<span class="heading"><span class="title">Step 1c. Player 1 varies her strategy.</span></span><div class="para" id="S_MixStratGraph-15-1-1-2-1-3-2">Now we want to know what Player 1’s payoff will be as she varies the probability, <span class="process-math">\(p\text{,}\)</span> with which she plays B. We can draw a graph where the <span class="process-math">\(x\)</span>-axis represents to probability with which she plays B (<span class="process-math">\(p\)</span>) and the <span class="process-math">\(y\)</span>-axis represents the expected payoff (<span class="process-math">\(m\)</span>). See <a href="S_MixStratGraph.html#F_MixedStrategyAxes" class="xref" data-knowl="./knowl/xref/F_MixedStrategyAxes.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.2">Figure 3.2.2</a>. <figure class="figure figure-like" id="F_MixedStrategyAxes"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/F_MixedStrategyAxes-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.2<span class="period">.</span></span><span class="space"> </span>Labeled axes.</figcaption></figure> Thus, when Player 1 plays only A, she is playing B with probability 0; when Player 1 plays only B, she is playing B with probability 1. It might be easier to remember if you label your graph as in <a href="S_MixStratGraph.html#F_MixedStrategyAxes" class="xref" data-knowl="./knowl/xref/F_MixedStrategyAxes.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.2">Figure 3.2.2</a>.</div>
+</li>
+<li id="S_MixStratGraph-15-1-1-2-1-4">
+<span class="heading"><span class="title">Step 1d. Plot points.</span></span><div class="para" id="S_MixStratGraph-15-1-1-2-1-4-2">Now we can plot the points we determined in Step 1a and Step 1b. We will connect them with a line representing Player 2’s pure strategy <em class="alert">C</em>. See <a href="S_MixStratGraph.html#F_MixedStrategyOneLine" class="xref" data-knowl="./knowl/xref/F_MixedStrategyOneLine.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.3">Figure 3.2.3</a>. <figure class="figure figure-like" id="F_MixedStrategyOneLine"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/F_MixedStrategyOneLine-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.3<span class="period">.</span></span><span class="space"> </span>Player 2’s strategy <em class="emphasis">C</em>.</figcaption></figure>
+</div>
+</li>
+</ul></div>
+</li></ul></div>
+<div class="para" id="S_MixStratGraph-16">Before moving on, let’s make sure we understand what this line represents. Any point on it represents the expected payoff to Player 1 as she varies her strategy, <em class="emphasis">assuming Player 2 only plays C</em>. In this case, we can see that as she plays B more often, her expected payoff goes down.</div>
+<div class="para" id="S_MixStratGraph-17">Now let’s do the same thing, assuming Player 2 plays only D.</div>
+<ul class="disc"><li id="S_MixStratGraph-18-1">
+<span class="heading"><span class="title">Step 2. Assume Player 2 plays pure strategy <em class="alert">D</em>.</span></span><div class="para logical" id="S_MixStratGraph-18-1-2"><ul class="circle">
+<li id="S_MixStratGraph-18-1-2-1-1">
+<span class="heading"><span class="title">Step 2a. Assume Player 1 plays pure strategy <em class="alert">A</em>.</span></span><div class="para" id="S_MixStratGraph-18-1-2-1-1-2">Find the probability, <span class="process-math">\(p\text{,}\)</span>  and payoff, <span class="process-math">\(m\text{,}\)</span> if Player 1 always plays A.</div>
+<div class="para logical" id="S_MixStratGraph-18-1-2-1-1-3">
+<div class="para">If Player 1 plays pure strategy A, then what is the probability that she plays B?</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p=0.
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="S_MixStratGraph-18-1-2-1-1-4">
+<div class="para">What is the payoff to Player 1?</div>
+<div class="displaymath process-math">
+\begin{equation*}
+m=0.
+\end{equation*}
+</div>
+</div>
+<div class="para" id="S_MixStratGraph-18-1-2-1-1-5">Thus, for the strategy pair <span class="process-math">\([A, D]\)</span> we get <span class="process-math">\((p, m)=(0, 0)\text{.}\)</span>
+</div>
+</li>
+<li id="S_MixStratGraph-18-1-2-1-2">
+<span class="heading"><span class="title">Step 2b. Assume Player 1 plays pure strategy <em class="alert">B</em>.</span></span><div class="para" id="S_MixStratGraph-18-1-2-1-2-2">Find the probability, <span class="process-math">\(p\text{,}\)</span> and payoff, <span class="process-math">\(m\text{,}\)</span> if Player 1 always plays B.</div>
+<div class="para logical" id="S_MixStratGraph-18-1-2-1-2-3">
+<div class="para">If Player 1 plays pure strategy B, then what is the probability that she plays B?</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p=1.
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="S_MixStratGraph-18-1-2-1-2-4">
+<div class="para">What is the payoff to Player 1?</div>
+<div class="displaymath process-math">
+\begin{equation*}
+m=2.
+\end{equation*}
+</div>
+</div>
+<div class="para" id="S_MixStratGraph-18-1-2-1-2-5">Thus, for the strategy pair <span class="process-math">\([B, D]\)</span> we get <span class="process-math">\((p, m)=(1, 2)\text{.}\)</span>
+</div>
+</li>
+<li id="S_MixStratGraph-18-1-2-1-3">
+<span class="heading"><span class="title">Step 2c. Player 1 varies her strategy.</span></span><div class="para" id="S_MixStratGraph-18-1-2-1-3-2">Now, on our same graph from Step 1, we can plot the points we determined in Step 2a and Step 2b. We will connect them with a line representing Player 2’s pure strategy <em class="alert">D</em>. See <a href="S_MixStratGraph.html#F_Player_2_s_pure_strategy_D" class="xref" data-knowl="./knowl/xref/F_Player_2_s_pure_strategy_D.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.4">Figure 3.2.4</a>. <figure class="figure figure-like" id="F_Player_2_s_pure_strategy_D"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/F_Player_2_s_pure_strategy_D-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.4<span class="period">.</span></span><span class="space"> </span>Player 2’s strategy <em class="emphasis">D</em>.</figcaption></figure> Now we can see that if Player 2 plays only D, then Player 1 does best by playing only B.</div>
+</li>
+</ul></div>
+</li></ul>
+<div class="para" id="S_MixStratGraph-19">Now we have this nice graph, but what does it really tell us? Although we drew lines representing each of Player 2’s pure strategies, Player 1 doesn’t know what Player 2 will do. Suppose Player 1 only played A, while Player 2 plays an unknown mixed strategy. Then the possible payoffs for Player 1 are 1 or 0. The more often Player 2 plays C, the more often Player 1 gets 1. So the <em class="emphasis">expected payoff</em> per game for a repeated game varies between 0 and 1. We can see the possible expected values as the red line on the graph in <a href="S_MixStratGraph.html#F_BoldA" class="xref" data-knowl="./knowl/xref/F_BoldA.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.5">Figure 3.2.5</a>.</div>
+<figure class="figure figure-like" id="F_BoldA"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/F_BoldA-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.5<span class="period">.</span></span><span class="space"> </span><a href="S_MixStratGraph.html#F_BoldA" class="xref" data-knowl="./knowl/xref/F_BoldA.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.5">Figure 3.2.5</a> of the expected payoffs for Player 1 playing only A.</figcaption></figure><div class="para" id="S_MixStratGraph-21">Since we want to understand mixed strategies for Player 1, what would happen if Player 1 played A half the time and B half the time? In other words, what happens if <span class="process-math">\(p=1/2\text{?}\)</span> Although we may not easily be able to see the exact values, we can represent the possible expected values on the graph in <a href="S_MixStratGraph.html#F_BoldHalf" class="xref" data-knowl="./knowl/xref/F_BoldHalf.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.6">Figure 3.2.6</a>.</div>
+<figure class="figure figure-like" id="F_BoldHalf"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/F_BoldHalf-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.6<span class="period">.</span></span><span class="space"> </span>The expected payoffs for Player 1 playing B half the time.</figcaption></figure><div class="para" id="S_MixStratGraph-23">Hopefully, you’ve begun to see that for each choice of <span class="process-math">\(p\text{,}\)</span> the top line represents the highest expected value for Player 1; the bottom line represents the lowest expected value for Player 1; the area between the lines represents the possible expected values for Player 1. As we did with non-repeated games, let’s look at the “worst case scenario” for Player 1. In other words, let’s assume that Player 2 can figure out Player 1’s strategy. Then Player 1 would want to <em class="emphasis">maximize the minimum expected value</em>. Aha! This is just looking for the <dfn class="terminology">maximin</dfn> strategy!</div>
+<div class="para" id="S_MixStratGraph-24">Now the minimum expected value for each choice of <span class="process-math">\(p\)</span> is given by the bottom lines on the graph, shown in red in <a href="S_MixStratGraph.html#F_BoldMin" class="xref" data-knowl="./knowl/xref/F_BoldMin.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.7">Figure 3.2.7</a>.</div>
+<figure class="figure figure-like" id="F_BoldMin"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/F_BoldMin-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.7<span class="period">.</span></span><span class="space"> </span>The minimum expected payoffs for Player 1.</figcaption></figure><div class="para" id="S_MixStratGraph-26">It should be easy to see that the <em class="emphasis">maximum</em> of the minimum expected payoffs occurs at the intersection of the two lines.</div>
+<div class="para logical" id="S_MixStratGraph-27"><ul class="disc">
+<li id="S_MixStratGraph-27-1-1">
+<span class="heading"><span class="title">Step 3. Find the intersection of the two lines.</span></span><div class="para logical" id="S_MixStratGraph-27-1-1-2"><ul class="circle">
+<li id="S_MixStratGraph-27-1-1-2-1-1">
+<span class="heading"><span class="title">Step 3a. Find the equation for Line C.</span></span><div class="para logical" id="S_MixStratGraph-27-1-1-2-1-1-2">
+<div class="para">This is the line passing through the points <span class="process-math">\((0, 1)\)</span> and <span class="process-math">\((1, -1)\text{.}\)</span> It has slope <span class="process-math">\(-2\)</span> and <span class="process-math">\(y\)</span>-intercept 1. Thus, it has equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y=-2x+1.
+\end{equation*}
+</div>
+<div class="para">[Although the <span class="process-math">\(x\)</span>-axis represents probability <span class="process-math">\(p\)</span> and the <span class="process-math">\(y\)</span>-axis represents expected payoff <span class="process-math">\(m\text{,}\)</span> you are probably more comfortable solving equations–at least for the moment–in <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span>]</div>
+</div>
+</li>
+<li id="S_MixStratGraph-27-1-1-2-1-2">
+<span class="heading"><span class="title">Step 3b. Find the equation for Line D.</span></span><div class="para logical" id="S_MixStratGraph-27-1-1-2-1-2-2">
+<div class="para">This is the line passing through the points <span class="process-math">\((0, 0)\)</span> and <span class="process-math">\((1, 2)\text{.}\)</span> It has slope <span class="process-math">\(2\)</span> and <span class="process-math">\(y\)</span>-intercept 0. Thus, it has equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y=2x.
+\end{equation*}
+</div>
+</div>
+</li>
+<li id="S_MixStratGraph-27-1-1-2-1-3">
+<span class="heading"><span class="title">Step 3c. Use substitution to find the point of intersection.</span></span><div class="para logical" id="S_MixStratGraph-27-1-1-2-1-3-2">
+<div class="displaymath process-math" id="S_MixStratGraph-27-1-1-2-1-3-2-1">
+\begin{align*}
+2x \amp =  \amp -2x+1\\
+4x \amp = \amp 1\\
+x \amp = \amp \frac{1}{4}
+\end{align*}
+</div>
+<div class="para">Substituting <span class="process-math">\(x=\frac{1}{4}\)</span> back in to either original equation, say <span class="process-math">\(y=2x\text{,}\)</span> gives us <span class="process-math">\(y=\frac{1}{2}\text{.}\)</span> Thus, the point of intersection is <span class="process-math">\((1/4, 1/2)\text{.}\)</span>
+</div>
+</div>
+</li>
+</ul></div>
+</li>
+<li id="S_MixStratGraph-27-1-2">
+<span class="heading"><span class="title">Step 4. Determine Player 1’s maximin mixed strategy.</span></span><div class="para" id="S_MixStratGraph-27-1-2-3">Recalling that the first coordinate is <span class="process-math">\(p\text{,}\)</span> the probability that Player 1 plays B, we know that Player 1 will play B with probability 1/4, and thus, play A with probability 3/4, since <span class="process-math">\(1-(1/4)=3/4\text{.}\)</span> The expected payoff for Player 1 is 1/2. It is important to check back to your original intuition about the game from <a href="S_MixStratGraph.html#A_linearconjecture" class="xref" data-knowl="./knowl/xref/A_linearconjecture.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.2.1: Conjecture a strategy">Activity 3.2.1</a>. Did it seem as though Player 1 should play A more often than B?</div>
+</li>
+</ul></div>
+<div class="para" id="S_MixStratGraph-28">Let’s make a few important observations. First, it should be clear from the graph that Player 1 expects a payoff of 1/2 NO MATTER WHAT PLAYER 2 DOES. Second, since this is a zero-sum game, we know that Player 2’s expected payoff is <span class="process-math">\(-1/2\text{.}\)</span> It is important to note that this graph does not give us any information about an optimal strategy for Player 2. We will see how to find a strategy for Player 2 in the following activities. Can you think of how you might do this?</div>
+<div class="para" id="S_MixStratGraph-29">We can use the graphical method to find the maximin and minimax mixed strategies for repeated two-person zero-sum games.</div>
+<div class="para logical" id="S_MixStratGraph-30">
+<div class="para">Using the same game matrix as above:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left[\begin{matrix}1\amp 0\\
+-1\amp 2
+\end{matrix} \right],
+\end{equation*}
+</div>
+<div class="para">we will continue to label Player 1’s strategies by <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> and Player 2’s strategies by <span class="process-math">\(C\)</span> and <span class="process-math">\(D\text{.}\)</span> We now want to determine the minimax strategy for Player 2. Keep in mind the payoffs are still the payoffs to Player 1, so Player 2 wants the payoff to be as small as possible.</div>
+</div>
+<article class="activity project-like" id="A_showminimax"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">The minimax strategy.</span>
+</h3>
+<div class="introduction" id="A_showminimax-2"><div class="para" id="A_showminimax-2-1">We can use the graph to see the payoff for Player 2’s minimax strategy.</div></div>
+<article class="task exercise-like" id="A_showminimax-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="A_showminimax-3-1">Sketch the graph for Player 1 that we drew above. Be sure to label the endpoints of each line. Also label each line according to which strategy they represent.</div></article><article class="task exercise-like" id="A_showminimax-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_showminimax-4-1">Describe the minimax strategy and show it on the graph. (You do not need to find the actual mixed strategy for Player 2.)</div></article><article class="task exercise-like" id="A_showminimax-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_showminimax-5-1">Are the payoff vectors for the maximin and minimax strategies the same?</div></article></article><div class="para" id="S_MixStratGraph-32">For non-repeated games we have seen that if the maximin value is the same as the minimax value, then the game has a pure strategy equilibrium. The same idea applies to mixed strategy games. If the value of the maximin strategy is the same as the value of the minimax strategy, then the corresponding mixed strategies will be a <dfn class="terminology">mixed strategy equilibrium point</dfn>. Thus, your answer to <a href="S_MixStratGraph.html#A_showminimax" class="xref" data-knowl="./knowl/xref/A_showminimax.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.2.2: The minimax strategy">Activity 3.2.2</a> should tell you this game has a mixed strategy equilibrium point consisting of the maximin/ minimax strategy.</div>
+<div class="para" id="S_MixStratGraph-33">Before looking for the mixed strategy for Player 2, we summarize the graphical process for finding the mixed strategy for Player 1.</div>
+<article class="assemblage assemblage-like" id="AS_FindMixedEquil"><h3 class="heading"><span class="title">Finding a Mixed Strategy Graphically.</span></h3>
+<div class="para" id="AS_FindMixedEquil-2">The graph represents the probability that Player 1 plays B along the <span class="process-math">\(x\)</span>-axis and the payoff along the <span class="process-math">\(y\)</span>-axis.</div>
+<div class="para logical" id="AS_FindMixedEquil-3"><ol class="decimal">
+<li id="AS_FindMixedEquil-3-1-1"><div class="para logical" id="AS_FindMixedEquil-3-1-1-1">
+<div class="para">Assume Player 2 plays C.</div>
+<ol class="lower-alpha">
+<li id="AS_FindMixedEquil-3-1-1-1-1-1">
+<div class="para" id="AS_FindMixedEquil-3-1-1-1-1-1-1">Assume Player 1 plays A.</div>
+<div class="para" id="AS_FindMixedEquil-3-1-1-1-1-1-2">Then <span class="process-math">\(p=0\)</span> and <span class="process-math">\(m=\)</span> the payoff for <span class="process-math">\([A, C].\)</span>
+</div>
+<div class="para" id="AS_FindMixedEquil-3-1-1-1-1-1-3">Plot <span class="process-math">\((p, m).\)</span>
+</div>
+</li>
+<li id="AS_FindMixedEquil-3-1-1-1-1-2">
+<div class="para" id="AS_FindMixedEquil-3-1-1-1-1-2-1">Assume Player 1 plays B.</div>
+<div class="para" id="AS_FindMixedEquil-3-1-1-1-1-2-2">Then <span class="process-math">\(p=1\)</span> and <span class="process-math">\(m=\)</span> the payoff for <span class="process-math">\([B, C].\)</span>
+</div>
+<div class="para" id="AS_FindMixedEquil-3-1-1-1-1-2-3">Plot <span class="process-math">\((p, m).\)</span>
+</div>
+</li>
+<li id="AS_FindMixedEquil-3-1-1-1-1-3">
+<div class="para" id="AS_FindMixedEquil-3-1-1-1-1-3-1">Draw the line connecting the two points.</div>
+<div class="para" id="AS_FindMixedEquil-3-1-1-1-1-3-2">This represents Player 2’s pure strategy C.</div>
+</li>
+</ol>
+</div></li>
+<li id="AS_FindMixedEquil-3-1-2"><div class="para logical" id="AS_FindMixedEquil-3-1-2-1">
+<div class="para">Assume Player 2 plays D.</div>
+<ol class="lower-alpha">
+<li id="AS_FindMixedEquil-3-1-2-1-1-1">
+<div class="para" id="AS_FindMixedEquil-3-1-2-1-1-1-1">Assume Player 1 plays A.</div>
+<div class="para" id="AS_FindMixedEquil-3-1-2-1-1-1-2">Then <span class="process-math">\(p=0\)</span> and <span class="process-math">\(m=\)</span> the payoff for <span class="process-math">\([A, D].\)</span>
+</div>
+<div class="para" id="AS_FindMixedEquil-3-1-2-1-1-1-3">Plot <span class="process-math">\((p, m).\)</span>
+</div>
+</li>
+<li id="AS_FindMixedEquil-3-1-2-1-1-2">
+<div class="para" id="AS_FindMixedEquil-3-1-2-1-1-2-1">Assume Player 1 plays B.</div>
+<div class="para" id="AS_FindMixedEquil-3-1-2-1-1-2-2">Then <span class="process-math">\(p=1\)</span> and <span class="process-math">\(m=\)</span> the payoff for <span class="process-math">\([B, D].\)</span>
+</div>
+<div class="para" id="AS_FindMixedEquil-3-1-2-1-1-2-3">Plot <span class="process-math">\((p, m).\)</span>
+</div>
+</li>
+<li id="AS_FindMixedEquil-3-1-2-1-1-3">
+<div class="para" id="AS_FindMixedEquil-3-1-2-1-1-3-1">Draw the line connecting the two points.</div>
+<div class="para" id="AS_FindMixedEquil-3-1-2-1-1-3-2">This represents Player 2’s pure strategy D.</div>
+</li>
+</ol>
+</div></li>
+<li id="AS_FindMixedEquil-3-1-3"><div class="para logical" id="AS_FindMixedEquil-3-1-3-1">
+<div class="para">Find the mixed strategy.</div>
+<ol class="lower-alpha">
+<li id="AS_FindMixedEquil-3-1-3-1-1-1"><div class="para" id="AS_FindMixedEquil-3-1-3-1-1-1-1">Find the equations of the two lines.</div></li>
+<li id="AS_FindMixedEquil-3-1-3-1-1-2"><div class="para" id="AS_FindMixedEquil-3-1-3-1-1-2-1">Find the intersection, <span class="process-math">\((x, y)\text{,}\)</span> of the two lines.</div></li>
+</ol>
+</div></li>
+</ol></div>
+<div class="para" id="AS_FindMixedEquil-4">Recalling that <span class="process-math">\(x\)</span> is the probability that Player 1 plays B, the mixed strategy will be <span class="process-math">\((1-x, x)\)</span> with an expected payoff to Player 1 of <span class="process-math">\(y\text{.}\)</span>
+</div></article><div class="para" id="S_MixStratGraph-35">We now know that Player 2 wants to play the minimax strategy in response to Player 1’s maximin strategy, so we need to find the actual mixed strategy for Player 2 to employ. Since we are minimizing Player 1’s maximum expected payoff, we will continue to use the matrix representing Player 1’s payoff. We will repeat the process we used for Player 1, except the <span class="process-math">\(x\)</span>-axis now represents the probability that Player 2 will play <span class="process-math">\(D\text{,}\)</span> and the lines will represent Player 1’s strategies <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> The <span class="process-math">\(y\)</span>-axis continues to represent Player 1’s payoff.</div>
+<article class="activity project-like" id="A_graphStep0"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Draw the axes for Player 2’s strategy.</span>
+</h3>
+<div class="para" id="A_graphStep0-2-1">First sketch the axes. (Recall, the <span class="process-math">\(x\)</span>-axis only goes from 0 to 1.)</div></article><article class="activity project-like" id="A_graphP1A"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Player 1 plays <span class="process-math">\(A\)</span>.</span>
+</h3>
+<div class="introduction" id="A_graphP1A-2"><div class="para" id="A_graphP1A-2-1">Assume Player 1 only plays <span class="process-math">\(A\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="A_graphP1A-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="A_graphP1A-3-1">If Player 2 only plays <span class="process-math">\(C\text{,}\)</span> what is the payoff to Player 1? Recall we called this <span class="process-math">\(m\text{.}\)</span> What is the probability that Player 2 plays <span class="process-math">\(D\text{?}\)</span> Recall we called this <span class="process-math">\(p\text{.}\)</span> On your graph, plot the point (<span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(m\)</span>).</div></article><article class="task exercise-like" id="A_graphP1A-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_graphP1A-4-1">If Player 2 plays only <span class="process-math">\(D\text{,}\)</span> find <span class="process-math">\(m\)</span> and <span class="process-math">\(p\text{.}\)</span> Plot <span class="process-math">\((p, m)\)</span> on the graph.</div></article><article class="task exercise-like" id="A_graphP1A-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_graphP1A-5-1">Now sketch the line through your two points. This line represents Player 1’s pure strategy <span class="process-math">\(A\)</span> and the expected payoff (to Player 1) for Player 2’s mixed strategies. Label it <span class="process-math">\(A\text{.}\)</span>
+</div></article></article><article class="activity project-like" id="A_graphP1B"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Player 1 plays <span class="process-math">\(B\)</span>.</span>
+</h3>
+<div class="para" id="A_graphP1B-2-1">Now assume Player 1 plays only <span class="process-math">\(B\text{.}\)</span> Repeat the steps in <a href="S_MixStratGraph.html#A_graphP1A" class="xref" data-knowl="./knowl/xref/A_graphP1A.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.2.4: Player 1 plays A">Activity 3.2.4</a>, using <span class="process-math">\(B\)</span> instead of <span class="process-math">\(A\text{,}\)</span> to find the line representing Player 1’s pure strategy <span class="process-math">\(B\text{.}\)</span> (Label it!)</div></article><article class="activity project-like" id="A_graphminimax"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">The graph for Player 2.</span>
+</h3>
+<div class="introduction" id="A_graphminimax-2"><div class="para" id="A_graphminimax-2-1">It is important to keep in mind that although the <span class="process-math">\(x\)</span>-axis refers to how often Player 2 will play <span class="process-math">\(C\)</span> and <span class="process-math">\(D\text{,}\)</span> the <span class="process-math">\(y\)</span>-axis represents the payoff to <em class="emphasis">Player 1</em>.</div></div>
+<article class="task exercise-like" id="A_graphminimax-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="A_graphminimax-3-1">Explain why we are looking for the <em class="emphasis">minimax</em> strategy for Player 2.</div></article><article class="task exercise-like" id="A_graphminimax-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_graphminimax-4-1">Show on the graph the <em class="emphasis">maximum</em> payoff that Player 1 can expect for each of Player 2’s possible mixed strategies.</div></article><article class="task exercise-like" id="A_graphminimax-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_graphminimax-5-1">Show the point on the graph that represents the minimax strategy.</div></article></article><article class="activity project-like" id="A_graphFindEquations"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Equations for the lines.</span>
+</h3>
+<div class="para" id="A_graphFindEquations-2-1">Find the equations of the lines you drew in <a href="S_MixStratGraph.html#A_graphP1A" class="xref" data-knowl="./knowl/xref/A_graphP1A.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.2.4: Player 1 plays A">Activity 3.2.4</a> and <a href="S_MixStratGraph.html#A_graphP1B" class="xref" data-knowl="./knowl/xref/A_graphP1B.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.2.5: Player 1 plays B">Activity 3.2.5</a>.</div></article><article class="activity project-like" id="A_graphFindIntersection"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">The point of intersection.</span>
+</h3>
+<div class="para" id="A_graphFindIntersection-2-1">Using the equations from <a href="S_MixStratGraph.html#A_graphFindEquations" class="xref" data-knowl="./knowl/xref/A_graphFindEquations.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.2.7: Equations for the lines">Activity 3.2.7</a>, find the point of intersection of the two lines.</div></article><article class="activity project-like" id="A_graphSolution"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Player 2’s mixed strategy.</span>
+</h3>
+<div class="para" id="A_graphSolution-2-1">How often should Player 2 play <span class="process-math">\(C\text{?}\)</span> How often should he play <span class="process-math">\(D\text{?}\)</span> What is Player 1’s expected payoff? And hence, what is Player 2’s expected payoff?</div></article><article class="activity project-like" id="A_whyequil"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Equilibrium strategies.</span>
+</h3>
+<div class="para" id="A_whyequil-2-1">Explain why each player should play the maximin/ minimax mixed strategy. In other words, explain why neither player benefits by changing their strategy.</div>
+<div class="solutions"><details id="A_whyequil-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="A_whyequil-3-1">Think about playing defensively and assuming the other player is the “perfect” player.</div></div></details></div></article><div class="para" id="S_MixStratGraph-44">Now it may have occurred to you that since this is a zero-sum game, we could have just converted our matrix to the payoff matrix for Player 2 and found Player 2’s maximin strategy. But it is important to understand the relationship between the maximin and the minimax strategies. So for the sake of practice and a little more insight, find Player 2’s maximin strategy by writing the payoff matrix for Player 2 and repeating the process that we did for Player 1. Keep in mind that Player 2 is finding the probability of playing <span class="process-math">\(C\)</span> and <span class="process-math">\(D\)</span> rather than <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span>
+</div>
+<article class="activity project-like" id="A_graphconvert"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.11</span><span class="period">.</span><span class="space"> </span><span class="title">Finding the maximin using Player 2’s payoffs.</span>
+</h3>
+<div class="para" id="A_graphconvert-2-1">Convert the payoff matrix above into the payoff matrix for Player 2. Find the maximin strategy for Player 2 using the graphical method. Be sure to include a sketch of the graph (labeled!!), the equations for the lines, the probability that Player 2 will play <span class="process-math">\(C\)</span> and <span class="process-math">\(D\text{,}\)</span> and the expected payoff for Player 2.</div></article><article class="activity project-like" id="A_graphcompareapproaches"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Compare the solutions.</span>
+</h3>
+<div class="para" id="A_graphcompareapproaches-2-1">Compare your answer in <a href="S_MixStratGraph.html#A_graphconvert" class="xref" data-knowl="./knowl/xref/A_graphconvert.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.2.11: Finding the maximin using Player 2’s payoffs">Activity 3.2.11</a> to your answer in <a href="S_MixStratGraph.html#A_graphSolution" class="xref" data-knowl="./knowl/xref/A_graphSolution.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.2.9: Player 2’s mixed strategy">Activity 3.2.9</a>.</div></article><article class="activity project-like" id="A_graphfair"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.13</span><span class="period">.</span><span class="space"> </span><span class="title">Fairness.</span>
+</h3>
+<div class="para" id="A_graphfair-2-1">Is this game fair? Explain.</div></article><article class="activity project-like" id="A_graphexplainEV"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.14</span><span class="period">.</span><span class="space"> </span><span class="title">Expected payoff.</span>
+</h3>
+<div class="para" id="A_graphexplainEV-2-1">We saw above that the expected payoff for Player 1 was 1/2. Explain what this means for a repeated game.</div>
+<div class="solutions"><details id="A_graphexplainEV-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="A_graphexplainEV-3-1">Is it actually possible for a player to win 1/2 in a given game?</div></div></details></div></article><div class="para" id="S_MixStratGraph-49">Now you are ready to try to analyze some more games!</div>
+<article class="activity project-like" id="A_graph2practice"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.15</span><span class="period">.</span><span class="space"> </span><span class="title">Practice finding mixed strategies.</span>
+</h3>
+<div class="introduction" id="A_graph2practice-2"><div class="para" id="A_graph2practice-2-1">Consider the zero-sum game <span class="process-math">\(\left[\begin{matrix}-4\amp 4\\
+2\amp -2
+\end{matrix} \right].\)</span>
+</div></div>
+<article class="task exercise-like" id="A_graph2practice-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="A_graph2practice-3-1">Does this game have a pure strategy equilibrium?</div></article><article class="task exercise-like" id="A_graph2practice-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_graph2practice-4-1">Just by looking at the matrix, do you think this game will be fair? (Would you rather be Player 1 or Player 2?)</div></article><article class="task exercise-like" id="A_graph2practice-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_graph2practice-5-1">Sketch (and label!) the appropriate graph for this game.</div></article><article class="task exercise-like" id="A_graph2practice-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="A_graph2practice-6-1">Use you graph to determine if there is a mixed strategy equilibrium point. If there is, how often should Player 1 play each strategy? What is the expected payoff to each player?</div></article><article class="task exercise-like" id="A_graph2practice-7"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="A_graph2practice-7-1">Is this game fair? Explain. Compare your answer to (b).</div></article></article><article class="activity project-like" id="A_graph3practice"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.16</span><span class="period">.</span><span class="space"> </span><span class="title">More practice finding mixed strategies.</span>
+</h3>
+<div class="introduction" id="A_graph3practice-2"><div class="para" id="A_graph3practice-2-1">Consider the zero-sum game <span class="process-math">\(\left[\begin{matrix}0\amp 1\\
+1\amp -10
+\end{matrix} \right].\)</span>
+</div></div>
+<article class="task exercise-like" id="A_graph3practice-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="A_graph3practice-3-1">Does this game have a pure strategy equilibrium?</div></article><article class="task exercise-like" id="A_graph3practice-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_graph3practice-4-1">Just by looking at the matrix, do you think this game will be fair? (Would you rather be Player 1 or Player 2?)</div></article><article class="task exercise-like" id="A_graph3practice-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_graph3practice-5-1">Sketch (and label!) the appropriate graph for this game.</div></article><article class="task exercise-like" id="A_graph3practice-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="A_graph3practice-6-1">Use you graph to determine if there is a mixed strategy equilibrium point. If there is, how often should Player 1 play each strategy? What is the expected payoff to each player?</div></article><article class="task exercise-like" id="A_graph3practice-7"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="A_graph3practice-7-1">Is this game fair? Explain. Compare your answer to (b).</div></article></article><div class="para" id="S_MixStratGraph-52">Although it is worth working through examples by hand in order to understand the algebraic process, in the next section we will see how technology can help us solve systems of equations.</div>
+<section class="reading-questions" id="S_MixStratGraph-53"><h3 class="heading hide-type">
+<span class="type">Reading Questions</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Check Your Understanding</span>
+</h3>
+<div class="para" id="S_MixStratGraph-53-2">The following exercises will work through the steps of finding the mixed strategy for Player 1.</div>
+<article class="exercise exercise-like" id="IGT_MSG_CYU_equil"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="IGT_MSG_CYU_equil">
+<div class="para" id="IGT_MSG_CYU_equil-1-1">True or False: The following zero-sum game <figure class="table table-like" id="T_exergame1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.2.8<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">C</td>
+<td class="l m b1 r0 l0 t0 lines">D</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines">A</td>
+<td class="l m b1 r1 l0 t0 lines">2</td>
+<td class="l m b1 r1 l0 t0 lines">-1</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines">B</td>
+<td class="l m b1 r1 l0 t0 lines">-3</td>
+<td class="l m b1 r1 l0 t0 lines">4</td>
+</tr>
+</table></div></figure> has a pure strategy equilibrium.</div>
+<li data-component="answer" id="IGT_MSG_CYU_equil_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="IGT_MSG_CYU_equil_opt_t">
+<li data-component="answer" id="IGT_MSG_CYU_equil_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="IGT_MSG_CYU_equil_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="IGT_MSG_CYU_findpandmC"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="IGT_MSG_CYU_findpandmC">
+<div class="para" id="IGT_MSG_CYU_findpandmC-1-1">Consider the zero-sum game given by <a href="S_MixStratGraph.html#T_exergame1" class="xref" data-knowl="./knowl/xref/T_exergame1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 3.2.8">Table 3.2.8</a>. Let <span class="process-math">\(p\)</span> be the probability that Player 1 plays B and <span class="process-math">\(m\)</span> be the payoff to Player 1.</div> <div class="para" id="IGT_MSG_CYU_findpandmC-1-2">If Player 1 plays A and Player 2 plays C then <span class="process-math">\(p=\)</span><input type="text" placeholder="Number" size="3"> and <span class="process-math">\(m=\)</span><input type="text" placeholder="Number" size="3">.</div> <div class="para" id="IGT_MSG_CYU_findpandmC-1-3">If Player 1 plays B and Player 2 plays C then <span class="process-math">\(p=\)</span><input type="text" placeholder="Number" size="3"> and <span class="process-math">\(m=\)</span><input type="text" placeholder="Number" size="3">.</div>
+<script type="application/json">[[{"number": [0, 0], "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findpandmC-2-1-1-1-1\">Correct. Since Player 1 never plays B.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findpandmC-2-1-2-1-1\">Incorrect. In this case, Player 1 is never playing B.<\/div>"}], [{"number": [2, 2], "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findpandmC-2-2-1-1-1\">Correct.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findpandmC-2-2-2-1-1\">Incorrect. Find the payoff for [A, C].<\/div>"}], [{"number": [1, 1], "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findpandmC-2-3-1-1-1\">Correct. Since Player 1 always plays B.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findpandmC-2-3-2-1-1\">Incorrect. In this case, Player 1 is always playing B.<\/div>"}], [{"number": [-3, -3], "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findpandmC-2-4-1-1-1\">Correct.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findpandmC-2-4-2-1-1\">Incorrect. Find the payoff for [B, C].<\/div>"}]]</script>
+</div></div></div></article><article class="exercise exercise-like" id="IGT_MSG_CYU_findpandmD"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="IGT_MSG_CYU_findpandmD">
+<div class="para" id="IGT_MSG_CYU_findpandmD-1-1">Consider the zero-sum game given by <a href="S_MixStratGraph.html#T_exergame1" class="xref" data-knowl="./knowl/xref/T_exergame1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 3.2.8">Table 3.2.8</a>. Let <span class="process-math">\(p\)</span> be the probability that Player 1 plays B and <span class="process-math">\(m\)</span> be the payoff to Player 1.</div> <div class="para" id="IGT_MSG_CYU_findpandmD-1-2">If Player 1 plays A and Player 2 plays D then <span class="process-math">\(p=\)</span><input type="text" placeholder="Number" size="3"> and <span class="process-math">\(m=\)</span><input type="text" placeholder="Number" size="3">.</div> <div class="para" id="IGT_MSG_CYU_findpandmD-1-3">If Player 1 plays B and Player 2 plays D then <span class="process-math">\(p=\)</span><input type="text" placeholder="Number" size="3"> and <span class="process-math">\(m=\)</span><input type="text" placeholder="Number" size="3">.</div>
+<script type="application/json">[[{"number": [0, 0], "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findpandmD-2-1-1-1-1\">Correct. Since Player 1 never plays B.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findpandmD-2-1-2-1-1\">Incorrect. In this case, Player 1 is never playing B.<\/div>"}], [{"number": [-1, -1], "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findpandmD-2-2-1-1-1\">Correct.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findpandmD-2-2-2-1-1\">Incorrect. Find the payoff for [A, D].<\/div>"}], [{"number": [1, 1], "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findpandmD-2-3-1-1-1\">Correct. Since Player 1 always plays B.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findpandmD-2-3-2-1-1\">Incorrect. In this case, Player 1 is always playing B.<\/div>"}], [{"number": [4, 4], "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findpandmD-2-4-1-1-1\">Correct.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findpandmD-2-4-2-1-1\">Incorrect. Find the payoff for [B, D].<\/div>"}]]</script>
+</div></div></div></article><article class="exercise exercise-like" id="IGT_MSG_CYU_findlineC"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="IGT_MSG_CYU_findlineC">
+<div class="para" id="IGT_MSG_CYU_findlineC-1-1">The line between to points <span class="process-math">\((0, 2)\)</span> and <span class="process-math">\((1, -3)\)</span> has slope <input type="text" placeholder="Number" size="3"> and <span class="process-math">\(y\)</span> intercept <input type="text" placeholder="Number" size="3">.</div>
+<script type="application/json">[[{"number": [-5, -5], "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findlineC-2-1-1-1-1\">Correct. Since the slope is <span class=\"process-math\">\\(\\frac{-3-2}{1-0}.\\)<\/span><\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findlineC-2-1-2-1-1\">Incorrect. The slope is <span class=\"process-math\">\\(\\frac{y_2-y_1}{x_2-x_1}.\\)<\/span><\/div>"}], [{"number": [2, 2], "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findlineC-2-2-1-1-1\">Correct. Since the <span class=\"process-math\">\\(y\\)<\/span> coordinate of <span class=\"process-math\">\\((0, 2)\\)<\/span> is <span class=\"process-math\">\\(2\\text{.}\\)<\/span><\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findlineC-2-2-2-1-1\">Incorrect. Find the <span class=\"process-math\">\\(y\\)<\/span> coordinate of <span class=\"process-math\">\\((0, y)\\text{.}\\)<\/span><\/div>"}]]</script>
+</div></div></div></article><article class="exercise exercise-like" id="IGT_MSG_CYU_findlineD"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="IGT_MSG_CYU_findlineD">
+<div class="para" id="IGT_MSG_CYU_findlineD-1-1">The line between to points <span class="process-math">\((0, -1)\)</span> and <span class="process-math">\((1, 4)\)</span> has slope <input type="text" placeholder="Number" size="3"> and <span class="process-math">\(y\)</span> intercept <input type="text" placeholder="Number" size="3">.</div>
+<script type="application/json">[[{"number": [5, 5], "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findlineD-2-1-1-1-1\">Correct. Since the slope is <span class=\"process-math\">\\(\\frac{4-(-1)}{1-0}.\\)<\/span><\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findlineD-2-1-2-1-1\">Incorrect. The slope is <span class=\"process-math\">\\(\\frac{y_2-y_1}{x_2-x_1}.\\)<\/span><\/div>"}], [{"number": [-1, -1], "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findlineD-2-2-1-1-1\">Correct. Since the <span class=\"process-math\">\\(y\\)<\/span> coordinate of <span class=\"process-math\">\\((0, -1)\\)<\/span> is <span class=\"process-math\">\\(-1\\text{.}\\)<\/span><\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findlineD-2-2-2-1-1\">Incorrect. Find the <span class=\"process-math\">\\(y\\)<\/span> coordinate of <span class=\"process-math\">\\((0, y)\\text{.}\\)<\/span><\/div>"}]]</script>
+</div></div></div></article><article class="exercise exercise-like" id="IGT_MSG_CYU_findinter"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="IGT_MSG_CYU_findinter">
+<div class="para" id="IGT_MSG_CYU_findinter-1-1">Find the intersection of the lines <span class="process-math">\(y=-5x+2\)</span> and <span class="process-math">\(y=5x-1\)</span>
+</div> <div class="para" id="IGT_MSG_CYU_findinter-1-2">
+<span class="process-math">\(x=\)</span><input type="text" placeholder="Number" size="3"> and <span class="process-math">\(y=\)</span><input type="text" placeholder="Number" size="3">. Give your answer in decimal form.</div>
+<script type="application/json">[[{"number": [0.295,0.305], "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findinter-2-1-1-1-1\">Correct. The <span class=\"process-math\">\\(x\\)<\/span> coordinate of the intersection point is <span class=\"process-math\">\\(x=0.3\\text{.}\\)<\/span><\/div>"}, {"number": [0.5, 0.5], "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findinter-2-1-2-1-1\">Make sure you give the <span class=\"process-math\">\\(x\\)<\/span> coordinate of the intersection point.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findinter-2-1-3-1-1\">Incorrect. Set the equations equal to each other and solve for <span class=\"process-math\">\\(x\\text{.}\\)<\/span> Be careful about subtracting negative numbers.<\/div>"}], [{"number": [0.495,0.505], "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findinter-2-2-1-1-1\">Correct. The <span class=\"process-math\">\\(y\\)<\/span> coordinate of the intersection point is <span class=\"process-math\">\\(x=0.5\\text{.}\\)<\/span><\/div>"}, {"number": [0.3, 0.3], "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findinter-2-2-2-1-1\">Make sure you give the <span class=\"process-math\">\\(y\\)<\/span> coordinate of the intersection point.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_MSG_CYU_findinter-2-2-3-1-1\">Incorrect. Once you find <span class=\"process-math\">\\(x\\text{,}\\)<\/span> you can plug that value into either equation to find <span class=\"process-math\">\\(y\\text{.}\\)<\/span><\/div>"}]]</script>
+</div></div></div></article><article class="exercise exercise-like" id="IGT_MSG_CYU_mixedstrat"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="IGT_MSG_CYU_mixedstrat" data-multipleanswers="false" data-random="">
+<div class="para" id="IGT_MSG_CYU_mixedstrat-1-1">Consider the zero-sum game given by <a href="S_MixStratGraph.html#T_exergame1" class="xref" data-knowl="./knowl/xref/T_exergame1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 3.2.8">Table 3.2.8</a>. Player 1 should play the mixed strategy</div>
+<li data-component="answer" id="IGT_MSG_CYU_mixedstrat_opt_a"><span class="process-math">\((0.3, 0.7)\)</span></li>
+<li data-component="feedback" id="IGT_MSG_CYU_mixedstrat_opt_a"><div class="para" id="IGT_MSG_CYU_mixedstrat-2-1-2-1">Remember <span class="process-math">\(x\)</span> in the intersection point is the probability that Player 1 plays B.</div></li>
+<li data-component="answer" id="IGT_MSG_CYU_mixedstrat_opt_b" data-correct=""><span class="process-math">\((0.7, 0.3)\)</span></li>
+<li data-component="feedback" id="IGT_MSG_CYU_mixedstrat_opt_b"><div class="para" id="IGT_MSG_CYU_mixedstrat-2-2-2-1">Correct. Player 1 should play A with a probability of <span class="process-math">\(0.7\)</span> and B with a probability of <span class="process-math">\(0.3\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="IGT_MSG_CYU_mixedstrat_opt_c"><span class="process-math">\((0.5, 0.5)\)</span></li>
+<li data-component="feedback" id="IGT_MSG_CYU_mixedstrat_opt_c"><div class="para" id="IGT_MSG_CYU_mixedstrat-2-3-2-1">Remember <span class="process-math">\(y\)</span> in the intersection point is the payoff to Player 1, not the probability.</div></li>
+<li data-component="answer" id="IGT_MSG_CYU_mixedstrat_opt_d"><span class="process-math">\((0.3, 0.5)\)</span></li>
+<li data-component="feedback" id="IGT_MSG_CYU_mixedstrat_opt_d"><div class="para" id="IGT_MSG_CYU_mixedstrat-2-4-2-1">This is the intersection point, not the mixed strategy.</div></li>
+</ul></div></div>
+<div class="solutions"><details id="IGT_MSG_CYU_mixedstrat-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="IGT_MSG_CYU_mixedstrat-3-1">The work in the previous exercises will help answer this question.</div></div></details></div></article><article class="exercise exercise-like" id="IGT_MSG_CYU_exppayoff"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="IGT_MSG_CYU_exppayoff" data-multipleanswers="false" data-random="">
+<div class="para" id="IGT_MSG_CYU_exppayoff-1-1">Consider the repeated zero-sum game given by <a href="S_MixStratGraph.html#T_exergame1" class="xref" data-knowl="./knowl/xref/T_exergame1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 3.2.8">Table 3.2.8</a>. If Player 1 plays the maximin mixed strategy, her expected payoff is</div>
+<li data-component="answer" id="IGT_MSG_CYU_exppayoff_opt_a"><span class="process-math">\(0.3\)</span></li>
+<li data-component="feedback" id="IGT_MSG_CYU_exppayoff_opt_a"><div class="para" id="IGT_MSG_CYU_exppayoff-2-1-2-1">Remember <span class="process-math">\(x\)</span> in the intersection point is the probability that Player 1 plays B.</div></li>
+<li data-component="answer" id="IGT_MSG_CYU_exppayoff_opt_b" data-correct=""><span class="process-math">\(0.5\)</span></li>
+<li data-component="feedback" id="IGT_MSG_CYU_exppayoff_opt_b"><div class="para" id="IGT_MSG_CYU_exppayoff-2-2-2-1">Correct. The <span class="process-math">\(y\)</span> in the intersection point is the payoff to Player 1.</div></li>
+<li data-component="answer" id="IGT_MSG_CYU_exppayoff_opt_c"><div class="para" id="IGT_MSG_CYU_exppayoff-2-3-1-1">It depends on what Player 2 plays.</div></li>
+<li data-component="feedback" id="IGT_MSG_CYU_exppayoff_opt_c"><div class="para" id="IGT_MSG_CYU_exppayoff-2-3-2-1">The maximin strategy gives the same expected payoff no matter what Player 2 does.</div></li>
+</ul></div></div>
+<div class="solutions"><details id="IGT_MSG_CYU_exppayoff-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="IGT_MSG_CYU_exppayoff-3-1">The work in the previous exercises will help answer this question.</div></div></details></div></article><article class="exercise exercise-like" id="IGT_MSG_CYU_fair"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="IGT_MSG_CYU_fair" data-multipleanswers="false">
+<div class="para" id="IGT_MSG_CYU_fair-1-1">Is the game in <a href="S_MixStratGraph.html#T_exergame1" class="xref" data-knowl="./knowl/xref/T_exergame1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 3.2.8">Table 3.2.8</a> fair?</div>
+<li data-component="answer" id="IGT_MSG_CYU_fair_opt_a"><div class="para" id="IGT_MSG_CYU_fair-2-1-1-1">Yes.</div></li>
+<li data-component="feedback" id="IGT_MSG_CYU_fair_opt_a"><div class="para" id="IGT_MSG_CYU_fair-2-1-2-1">Think about the expected payoff of this game.</div></li>
+<li data-component="answer" id="IGT_MSG_CYU_fair_opt_b" data-correct=""><div class="para" id="IGT_MSG_CYU_fair-2-2-1-1">No, Player 1 has an advantage.</div></li>
+<li data-component="feedback" id="IGT_MSG_CYU_fair_opt_b"><div class="para" id="IGT_MSG_CYU_fair-2-2-2-1">Correct, since the expected payoff to Player 1 is positive.</div></li>
+<li data-component="answer" id="IGT_MSG_CYU_fair_opt_c"><div class="para" id="IGT_MSG_CYU_fair-2-3-1-1">No, Player 2 has an advantage.</div></li>
+<li data-component="feedback" id="IGT_MSG_CYU_fair_opt_c"><div class="para" id="IGT_MSG_CYU_fair-2-3-2-1">Incorrect, since the expected payoff to Player 1 is positive, the expected payoff to Player 2 is negative.</div></li>
+</ul></div></div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="S_IntroRepeated.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="S_SolvingEq.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>
