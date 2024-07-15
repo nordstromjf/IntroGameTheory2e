@@ -133,7 +133,7 @@
     <!-- Magic IDs identify HTML pages to analytics services   -->
     <!-- Presence implies relevant Javascript will be added    -->
     <!-- StatCounter requires both values to be set            -->
-    <analytics  statcounter-project="013017515"
+    <analytics  statcounter-project="13017515"
     statcounter-security="7b8546ae"/> 
   </html>
 
