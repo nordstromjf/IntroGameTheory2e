@@ -33,6 +33,7 @@
     <p>This text was authored in <pretext />.</p>
 </colophon>
 
+  <!--<solutions reading="answer solution" admit="all"></solutions>-->
   <!-- <solutions divisional="hint"> <title>Selected Hints</title> </solutions> -->
 
   <!-- <solutions divisional="solution"> <title>Selected Solutions</title> </solutions> -->

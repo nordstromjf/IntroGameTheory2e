@@ -187,8 +187,8 @@
       <statement>
         <p>
           Consider a game where you toss two coins. If you get two Heads, you win $2. If you get a Head and a Tail, you win $1, if you get two Tails, you lose $4. Find the expected value of the game.</p>
-           <hint><p>First you need to find the probability of each event.  Think about <em>equally likely</em> events.</p></hint>
-      </statement>
+           
+      </statement><hint><p>First you need to find the probability of each event.  Think about <em>equally likely</em> events.</p></hint>
     </activity>
     <activity xml:id="A_playToss2coins">
       <title>Play the two-coin game</title>
