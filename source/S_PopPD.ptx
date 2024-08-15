@@ -49,16 +49,16 @@
 
   </question>
 
-  <p>In the film <pubtitle>Crazy Rich Asians</pubtitle><idx><h><pubtitle>Crazy Rich Asians</pubtitle></h></idx> (2018), after getting engaged to Nick, Rachel is in a battle of wills with her future Mother-in-Law, Eleanor. In one scene, Rachel explicity descibes the battle as a game of Chicken. Both Rachel and Eleanor want the other to <q>swerve</q> and back out of Nick's life (or at least stop controlling it so much). They are determined to show their strength by not backing down (going <q>straight</q>). If neither back down it is clear that they will both lose Nick.</p>
+  <p>In the film <pubtitle>Crazy Rich Asians</pubtitle><idx><h><pubtitle>Crazy Rich Asians</pubtitle></h></idx> (2018), after getting engaged to Nick, Rachel is in a battle of wills with her future Mother-in-Law, Eleanor. In one scene, Rachel explicitly describes the battle as a game of Chicken. Both Rachel and Eleanor want the other to <q>swerve</q> and back out of Nick's life (or at least stop controlling it so much). They are determined to show their strength by not backing down (going <q>straight</q>). If neither back down it is clear that they will both lose Nick.</p>
 
   <question><p>How does the film ultimately resolve the conflict? Who <q>wins</q> and what is the director trying to say about the characters in this resolution?</p></question>
 
   <question><p>It is interesting to note that many classic Chicken scenes have male protagonists, and the game is intended to demonstrate dominance. In contrast, the protagonists in <pubtitle>Crazy Rich Asians</pubtitle> are women. Compare any gender differences in the Chicken scenarios in, say, <pubtitle>Footloose</pubtitle>, and in <pubtitle>Crazy Rich Asians</pubtitle>.</p></question>
   <question><p>Given the classic presentation of Chicken (players choosing to rick their lives driving towards each other), it can be tempting to say that the only rational approach to Chicken is just to refuse to play. In <pubtitle>Crazy Rich Asians</pubtitle>, do the characters have such a choice? Explain how the situation forces the characters to engage in the game of Chicken. You might consider what it means for a character to refuse to play.</p></question>
 
-  <p>Dilemmas such as Prisoner's Dilamma and Volunteer's Dilemma are used in some game shows and television competitions. For example, In <pubtitle>Friend or Foe</pubtitle><idx><h><pubtitle>Friend or Foe</pubtitle></h></idx> (2002-2003) after working together to win a pot of money, the contestants must decide if they are a <q>Friend</q> or a <q>Foe</q>. If they both pick Friend, they split the money. If one picks Foe, while the other picks Friend, Foe gets all the money. If they both pick Foe, they both get nothing.</p>
+  <p>Dilemmas such as Prisoner's Dilemma and Volunteer's Dilemma are used in some game shows and television competitions. For example, In <pubtitle>Friend or Foe</pubtitle><idx><h><pubtitle>Friend or Foe</pubtitle></h></idx> (2002-2003) after working together to win a pot of money, the contestants must decide if they are a <q>Friend</q> or a <q>Foe</q>. If they both pick Friend, they split the money. If one picks Foe, while the other picks Friend, Foe gets all the money. If they both pick Foe, they both get nothing.</p>
 
-  <question><p>Is the game in friend or Foe really a Prisoner's Dilemma? Explain why you think it is or isn't.</p></question>
+  <question><p>Is the game in <pubtitle>Friend or Foe</pubtitle> really a Prisoner's Dilemma? Explain why you think it is or isn't.</p></question>
 
   <question><p>The players in <pubtitle>Friend or Foe</pubtitle> are allowed to communicate and negotiate. What are some strategies you would use to convince your opponent to say <q>Friend</q>?</p></question>
 
@@ -66,7 +66,7 @@
 
 <p>An example of a Volunteer's Dilemma can be seen starting in Season 41 of <pubtitle>Survivor</pubtitle> <idx><h><pubtitle>Survivor</pubtitle></h></idx> (2021). Three contestants must decide to <q>Protect</q> their vote or <q>Risk</q> their vote. Their vote is very valuable in the game. If all three contestants choose Protect, they all keep their votes. If at least one contestant chooses to Protect her vote, then all three keep their votes and any contestants who chose Risk get an extra vote. If all three choose Risk, they all lose their vote.</p>
 
-<p>Explain why this is a Volunteer's Dilemma. If you were a contestant on <pubtitle>Survivor</pubtitle>, what would you choose to do and why? Are there certain conditions that would make you more likely to choose Risk? If you are familiar with the show, you might want to think about whther you are more or less likely to Risk your vote if you feel you are in danger of being voted off the island.</p>
+<question><p>Explain why this game in <pubtitle>Survivor</pubtitle> is a Volunteer's Dilemma. If you were a contestant on <pubtitle>Survivor</pubtitle>, what would you choose to do and why? Are there certain conditions that would make you more likely to choose Risk? If you are familiar with the show, you might want to think about whether you are more or less likely to Risk your vote if you feel you are in danger of being voted off the island.</p></question>
 
   <p>
     Now try to apply the models of cooperate-defect games to your own popular culture, political, or social examples.
@@ -95,4 +95,14 @@
   </p>
 
   </question>
+
+  <question>
+
+  <p>
+    Give an example of a political or social situation that can be modeled by a Prisoner's Dilemma or Chicken, what does it mean to cooperate or defect in this situation? 
+  </p>
+
+  </question>
+
+  <question><p>Find a news article that describes a political or economic situation a being either a Prisoner's Dilemma or a game of Chicken. Do you agree that the situation is appropriately described as that game? Does the article seem to favor cooperating or defecting? Explain your answer.</p></question>
 </section>

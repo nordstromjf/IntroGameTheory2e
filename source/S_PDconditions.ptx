@@ -182,7 +182,7 @@
     <title>The conditions on another game</title>
     <statement>
       <p>
-        Consider the cooperate-defect game where the first row//column is C and the second row/column is D:
+        Consider the cooperate-defect game where the first row/column is C and the second row/column is D:
 
         <me>
           \left[\begin{matrix}
@@ -208,7 +208,7 @@
     <title>A little more practice</title>
     <statement>
       <p>
-        Consider the cooperate-defect game where the first row//column is C and the second row/column is D:
+        Consider the cooperate-defect game where the first row/column is C and the second row/column is D:
         <me>
           \left[\begin{matrix}
           (1000, 1000) \amp  (0, 100)\\
