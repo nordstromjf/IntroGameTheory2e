@@ -4,8 +4,10 @@
 <!-- works. -->
 
 <frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="frontmatter">
-  <titlepage>
-    <author>
+ 
+
+  <bibinfo>
+     <author>
       <personname>Jennifer Firkins Nordstrom</personname>
       <department>Department of Mathematics and Computer Science</department>
       <institution><line>Linfield University</line>
@@ -16,9 +18,6 @@
     <date>
       <today />
     </date>
-  </titlepage>
-
-  <colophon>
 
     <website>
       <url href="https://nordstrommath.com/">Website: Jennifer Nordstrom Open Math Textbooks</url>
@@ -31,6 +30,14 @@
             <shortlicense>This work is licensed under a <url  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</url>.</shortlicense>
     </copyright>
      <p>The images in this text were designed and created by the author using TikZ.</p>
+  </bibinfo>
+
+  <titlepage>
+    <titlepage-items/>
+  </titlepage>
+
+  <colophon xml:id="front-colophon">
+    <colophon-items/>
   </colophon>
 
   <preface>

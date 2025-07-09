@@ -988,7 +988,7 @@
       <answer><p>We can't eliminate any rows or columns. There is not a dominated row or column.</p></answer></exercise>
 
       <exercise label="IGT_strat_CYU_maximin"><introduction><p>This exercise finds Player 1's maximin strategy.</p></introduction>
-      <task><statement><p> Click on or circle the smallest value in each row.</p></statement>
+      <task label="IGT_strat_CYU_maximin_task_a"><statement><p> Click on or circle the smallest value in each row.</p></statement>
       <areas><p>
 <table xml:id="T_exmaxmin1" >
         <tabular>
@@ -1054,7 +1054,7 @@
     </var>
   </setup>
     </task>-->
-    <task><statement><p>If Player 1 wants to play the maximin stategy, she should play the row with the largest of the values from (a). Thus, she should play</p></statement>
+    <task label="IGT_strat_CYU_maximin_task_b"><statement><p>If Player 1 wants to play the maximin stategy, she should play the row with the largest of the values from (a). Thus, she should play</p></statement>
   <choices randomize="no">
       <choice ><statement><p>Row 1.</p></statement>
       <feedback><p>Incorrect.</p></feedback></choice>
@@ -1066,7 +1066,7 @@
    <answer><p>Row 3. Row 3 is the row with the largest of the smallest values from each row.</p></answer></task></exercise>
 
    <exercise label="IGT_strat_CYU_minimax"><introduction><p>This exercise finds Player 2's minimax strategy.</p></introduction>
-      <task><statement><p> Click on or circle the largest value in each column.</p></statement>
+      <task label="IGT_strat_CYU_minimax_task_a"><statement><p> Click on or circle the largest value in each column.</p></statement>
       <areas><p>
 <table xml:id="T_exminimax1" >
         <tabular>
@@ -1131,7 +1131,7 @@
     </var>
   </setup>
     </task>-->
-    <task><statement><p>If Player 2 wants to play the minimax stategy, she should play the column with the smallest of the values from (a). Thus, she should play</p></statement>
+    <task label="IGT_strat_CYU_minimax_task_b"><statement><p>If Player 2 wants to play the minimax stategy, she should play the column with the smallest of the values from (a). Thus, she should play</p></statement>
   <choices randomize="no">
       <choice ><statement><p>Column 1.</p></statement>
       <feedback><p>Incorrect.</p></feedback></choice>
@@ -1242,7 +1242,7 @@
    </exercise>
 
 <exercise label="IGT_strat_CYU_maximin2"><introduction><p>This exercise finds Player 1's maximin strategy.</p></introduction>
-      <task><statement><p> Click on or circle the smallest value in each row.</p></statement>
+      <task label="IGT_strat_CYU_maximin2_task_a"><statement><p> Click on or circle the smallest value in each row.</p></statement>
       <areas><p>
 <table xml:id="T_exmaxmin2" >
         <tabular>
@@ -1273,7 +1273,7 @@
       </table>
     </p></areas><answer><m>-4, 1, -4</m></answer></task>
     
-    <task><statement><p>If Player 1 wants to play the maximin stategy, she should play the row with the largest of the values from (a). Thus, she should play</p></statement>
+    <task label="IGT_strat_CYU_maximin2_task_b"><statement><p>If Player 1 wants to play the maximin stategy, she should play the row with the largest of the values from (a). Thus, she should play</p></statement>
   <choices randomize="no">
       <choice ><statement><p>Row 1.</p></statement>
       <feedback><p>Incorrect.</p></feedback></choice>
@@ -1284,7 +1284,7 @@
    </choices><answer><p>Row 2. Row 2 is the row with the largest of the smallest values from each row.</p></answer></task></exercise>
 
    <exercise label="IGT_strat_CYU_minimax2"><introduction><p>This exercise finds Player 2's minimax strategy.</p></introduction>
-      <task><statement><p> Click on or circle the largest value in each column.</p></statement>
+      <task label="IGT_strat_CYU_minimax2_task_a"><statement><p> Click on or circle the largest value in each column.</p></statement>
       <areas><p>
 <table xml:id="T_exminimax2" >
         <tabular>
@@ -1315,7 +1315,7 @@
       </table>
     </p></areas><answer>5, 1, 5</answer></task>
     
-    <task><statement><p>If Player 2 wants to play the minimax stategy, she should play the column with the smallest of the values from (a). Thus, she should play</p></statement>
+    <task label="IGT_strat_CYU_minimax2_task_b"><statement><p>If Player 2 wants to play the minimax stategy, she should play the column with the smallest of the values from (a). Thus, she should play</p></statement>
   <choices randomize="no">
       <choice ><statement><p>Column 1.</p></statement>
       <feedback><p>Incorrect.</p></feedback></choice>

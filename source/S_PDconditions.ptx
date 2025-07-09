@@ -261,24 +261,24 @@
        Make sure you identify which row (column) is cooperating and which is defecting first.
     </p>
   </feedback>
-  <matches>
-  <match order="4">
+  <cardsort>
+  <match >
   <premise>10</premise>
   <response>R</response>
   </match>
-  <match order="3">
+  <match >
   <premise>-1</premise>
   <response>S</response>
   </match>
-  <match order="1">
+  <match >
   <premise>5</premise>
   <response>P</response>
   </match>
-  <match order="2">
+  <match >
   <premise>15</premise>
   <response>T</response>
   </match>
-  </matches><answer><m>R=10, P=5, T=15, S=-1.</m></answer></exercise>
+  </cardsort><answer><m>R=10, P=5, T=15, S=-1.</m></answer></exercise>
 
   <exercise label="IGT_PDCond_CYU_checkpd1"><statement correct="yes"><p>True or False: the game 
     <me>
@@ -306,24 +306,24 @@
        Make sure you identify which row (column) is cooperating and which is defecting first.
     </p>
   </feedback>
-  <matches>
-  <match order="2">
+  <cardsort>
+  <match >
   <premise>10</premise>
   <response>R</response>
   </match>
-  <match order="4">
+  <match >
   <premise>-1</premise>
   <response>S</response>
   </match>
-  <match order="1">
+  <match >
   <premise>2</premise>
   <response>P</response>
   </match>
-  <match order="3">
+  <match >
   <premise>5</premise>
   <response>T</response>
   </match>
-  </matches><answer><m>R=10, P=2, T=5, S=-1.</m></answer></exercise>
+  </cardsort><answer><m>R=10, P=2, T=5, S=-1.</m></answer></exercise>
 
   <exercise label="IGT_PDCond_CYU_checkpd2"><statement correct="no"><p>True or False: the game 
     <me>
@@ -351,24 +351,24 @@
        Make sure you identify which row (column) is cooperating and which is defecting first.
     </p>
   </feedback>
-  <matches>
-  <match order="3">
+  <cardsort>
+  <match >
   <premise>2</premise>
   <response>R</response>
   </match>
-  <match order="4">
+  <match >
   <premise>-5</premise>
   <response>S</response>
   </match>
-  <match order="2">
+  <match >
   <premise>-2</premise>
   <response>P</response>
   </match>
-  <match order="1">
+  <match >
   <premise>5</premise>
   <response>T</response>
   </match>
-  </matches><answer><m>R=2, P=-2, T=5, S=-5.</m></answer></exercise>
+  </cardsort><answer><m>R=2, P=-2, T=5, S=-5.</m></answer></exercise>
 
   <exercise label="IGT_PDCond_CYU_checkpd3"><statement correct="yes"><p>True or False: the game 
     <me>
@@ -412,24 +412,24 @@
        Make sure you identify which row (column) is cooperating and which is defecting first.
     </p>
   </feedback>
-  <matches>
-  <match order="3">
+  <cardsort>
+  <match>
   <premise>2</premise>
   <response>R</response>
   </match>
-  <match order="4">
+  <match >
   <premise>0</premise>
   <response>S</response>
   </match>
-  <match order="1">
+  <match >
   <premise>-2</premise>
   <response>P</response>
   </match>
-  <match order="2">
+  <match >
   <premise>5</premise>
   <response>T</response>
   </match>
-  </matches><answer><m>R=2, P=-2, T=5, S=0.</m></answer></exercise>
+  </cardsort><answer><m>R=2, P=-2, T=5, S=0.</m></answer></exercise>
 
   <exercise label="IGT_PDCond_CYU_checkpd4"><statement correct="no"><p>True or False: the game 
     <me>
@@ -473,24 +473,24 @@
        Make sure you identify which row (column) is cooperating and which is defecting first.
     </p>
   </feedback>
-  <matches>
-  <match order="1">
+  <cardsort>
+  <match >
   <premise>0</premise>
   <response>R</response>
   </match>
-  <match order="2">
+  <match >
   <premise>-15</premise>
   <response>S</response>
   </match>
-  <match order="3">
+  <match >
   <premise>-10</premise>
   <response>P</response>
   </match>
-  <match order="4">
+  <match >
   <premise>20</premise>
   <response>T</response>
   </match>
-  </matches><answer><m>R=0, P=-10, T=20, S=-15.</m></answer></exercise>
+  </cardsort><answer><m>R=0, P=-10, T=20, S=-15.</m></answer></exercise>
 
   <exercise label="IGT_PDCond_CYU_checkpd5"><statement correct="no"><p>True or False: the game 
     <me>

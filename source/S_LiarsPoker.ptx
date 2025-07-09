@@ -159,20 +159,20 @@
       Use the matrix you found in <xref ref="A_LPmatrix"></xref>.
     </p>
   </feedback>
-  <matches>
-  <match order="1">
+  <cardsort>
+  <match>
   <premise>[B, C]</premise>
   <response><m>(0, 0)</m></response>
   </match>
-  <match order="2">
+  <match>
   <premise>[B, F]</premise>
   <response><m>(1/2, -1/2)</m></response>
   </match>
-  <match order="3">
+  <match>
   <premise>[T, F]</premise>
   <response><m>(1/4, -1/4)</m></response>
   </match>
-  </matches><answer><p>[B, C]<m>=(0, 0)</m>; [B, F]<m>=(1/2, -1/2)</m>; [T, F]<m>=(1/4, -1/4)</m>;</p></answer></exercise>
+  </cardsort><answer><p>[B, C]<m>=(0, 0)</m>; [B, F]<m>=(1/2, -1/2)</m>; [T, F]<m>=(1/4, -1/4)</m>;</p></answer></exercise>
 
   <exercise label="IGT_LP_CYU_payofftTC">
     <statement><p>In Liar's Poker, the payoff vector for [T, C] is</p></statement>
