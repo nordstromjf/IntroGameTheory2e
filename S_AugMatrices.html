@@ -6,15 +6,21 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-green                   *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Solving Systems of Equations Using Matrices</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Introduction to Game Theory">
-<meta property="book:author" content="Jennifer Firkins Nordstrom">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   "tex": {
@@ -86,38 +92,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
-// Their results will be linked, only within language type
-sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
-  "linked": true,
-  "linkKey": "linked-sage",
-  "autoeval": false,
-  "languages": [
-    "sage"
-  ],
-  "evalButtonText": "Evaluate (Sage)"
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Game Theory">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -139,23 +119,38 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.3.6';
+eBookConfig.runestone_version = '7.8.4';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.6/prefix-runtime.00db6230172ad960.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.6/prefix-347.8328b60515045466.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.6/prefix-runestone.5d3fd44c34d81620.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.3.6/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.3.6/prefix-runestone.f64dcc3632d7a0c3.css">
+<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
 </head>
 <body id="introgametheory" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""><img src="external/image-1.svg" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="intro_game_theory.html"><span class="title">Introduction to Game Theory:</span> <span class="subtitle">a Discovery Approach</span></a></h1>
+<img src="external/image-1.svg" alt="Logo image"><div class="title-container">
+<h1 class="heading"><a href="intro_game_theory.html"><span class="title">Introduction to Game Theory</span> <span class="subtitle">a Discovery Approach</span></a></h1>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -166,7 +161,8 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="S_LiarsPoker.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="intro_game_theory-6.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="S_Undercut.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\( \newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="S_LiarsPoker.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="intro_game_theory-6.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="S_Undercut.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\( \newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
   \newcommand{\MyTikzmark}[2]{
      \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
 \newcommand{\DrawVLine}[3][]{
@@ -186,12 +182,12 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Preface</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -281,9 +277,9 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="S_LiarsPoker.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Liar’s Poker</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_LiarsPoker.html#S_LiarsPoker-23" class="internal"><span class="codenumber">3.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section active">
+<li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="S_AugMatrices.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Solving Systems of Equations Using Matrices</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_AugMatrices.html#S_AugMatrices-35" class="internal"><span class="codenumber">3.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul class="structural toc-item-list active"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_AugMatrices.html#S_AugMatrices-35" class="internal"><span class="codenumber">3.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_Undercut.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Undercut</span></a></div>
@@ -337,21 +333,25 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="S_AugMatrices"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">3.6</span><span class="space"> </span><span class="title">Solving Systems of Equations Using Matrices</span>
 </h2>
-<div class="para" id="S_AugMatrices-4">In this section, we will see how to use matrices to solve systems of equations. In both the graphical method and the expected value method, you have had to solve a system of equations. In the graphical method you had systems consisting of two lines such as <a href="S_AugMatrices.html#E_twoeq" class="xref" data-knowl="./knowl/xref/E_twoeq.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.6.1: Two Equations">Example 3.6.1</a>.</div>
+<div class="para" id="S_AugMatrices-4">In this section, we will see how to use matrices to solve systems of equations. In both the graphical method and the expected value method, you have had to solve a system of equations. In the graphical method you had systems consisting of two lines such as <a href="S_AugMatrices.html#E_twoeq" class="xref" data-knowl="./knowl/xref/E_twoeq.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.6.1: Two Equations">Example 3.6.1</a>.<div class="autopermalink" data-description="Paragraph"><a href="#S_AugMatrices-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="E_twoeq"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.1</span><span class="period">.</span><span class="space"> </span><span class="title">Two Equations.</span>
 </h3>
-<div class="para" id="E_twoeq-2-1">An example of a system of two lines:</div>
+<div class="para" id="E_twoeq-2-1">An example of a system of two lines:<div class="autopermalink" data-description="Paragraph"><a href="#E_twoeq-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="displaymath process-math" id="E_twoeq-2-2">
 \begin{align*}
 y \amp = \frac{3}{5}x-\frac{1}{5}\\
 y \amp =-x+3.
 \end{align*}
-</div></article><div class="para" id="S_AugMatrices-6">In the expected value method we had systems of three equations such as <a href="S_AugMatrices.html#E_threeeq" class="xref" data-knowl="./knowl/xref/E_threeeq.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.6.2: Three Equations">Example 3.6.2</a>.</div>
+</div>
+<div class="autopermalink" data-description="Example 3.6.1: Two Equations"><a href="#E_twoeq" title="Copy heading and permalink for Example 3.6.1: Two Equations">🔗</a></div></article><div class="para" id="S_AugMatrices-6">In the expected value method we had systems of three equations such as <a href="S_AugMatrices.html#E_threeeq" class="xref" data-knowl="./knowl/xref/E_threeeq.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.6.2: Three Equations">Example 3.6.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#S_AugMatrices-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="E_threeeq"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.2</span><span class="period">.</span><span class="space"> </span><span class="title">Three Equations.</span>
 </h3>
-<div class="para" id="E_threeeq-2-1">An example of a system of three equations where the variables are <span class="process-math">\(E_1(A), E_1(B), P_2(C), P_2(D)\text{:}\)</span>
+<div class="para" id="E_threeeq-2-1">An example of a system of three equations where the variables are <span class="process-math">\(E_1(A), E_1(B), P_2(C), P_2(D)\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_threeeq-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="E_threeeq-2-2">
 \begin{align*}
@@ -359,8 +359,11 @@ E_1(A) \amp = P_2(C)-P_2(D)\\
 E_1(B) \amp = 2P_2(D)\\
 1 \amp = P_2(C)+P_2(D).
 \end{align*}
-</div></article><div class="para" id="S_AugMatrices-8">In <a href="S_AugMatrices.html#E_threeeq" class="xref" data-knowl="./knowl/xref/E_threeeq.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.6.2: Three Equations">Example 3.6.2</a>, even after setting <span class="process-math">\(E_1(A)=E_1(B)\)</span> so that there were only 2 variables, the algebra began to get cumbersome. What if we wanted to solve a much larger game, such as a 5 X 5 game?</div>
-<div class="para" id="S_AugMatrices-9">We’ve used matrices to represent our games, but now we want to use them as a mathematical tool to help us solve systems of equations. In order to use matrices to solve our systems of equations, we want to write all our equations in the same form: we will have all the variable terms on the left of the equals sign and all constants on the right.</div>
+</div>
+<div class="autopermalink" data-description="Example 3.6.2: Three Equations"><a href="#E_threeeq" title="Copy heading and permalink for Example 3.6.2: Three Equations">🔗</a></div></article><div class="para" id="S_AugMatrices-8">In <a href="S_AugMatrices.html#E_threeeq" class="xref" data-knowl="./knowl/xref/E_threeeq.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.6.2: Three Equations">Example 3.6.2</a>, even after setting <span class="process-math">\(E_1(A)=E_1(B)\)</span> so that there were only 2 variables, the algebra began to get cumbersome. What if we wanted to solve a much larger game, such as a 5 X 5 game?<div class="autopermalink" data-description="Paragraph"><a href="#S_AugMatrices-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="S_AugMatrices-9">We’ve used matrices to represent our games, but now we want to use them as a mathematical tool to help us solve systems of equations. In order to use matrices to solve our systems of equations, we want to write all our equations in the same form: we will have all the variable terms on the left of the equals sign and all constants on the right.<div class="autopermalink" data-description="Paragraph"><a href="#S_AugMatrices-9" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="E_equtomatrix"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.3</span><span class="period">.</span><span class="space"> </span><span class="title">Turning a System of Equations into a Matrix.</span>
 </h3>
@@ -372,7 +375,9 @@ E_1(B) \amp = 2P_2(D)\\
 x+y \amp = 3.
 \end{align*}
 </div>
-</div> <div class="para logical" id="E_equtomatrix-3">
+<div class="autopermalink" data-description="Paragraph"><a href="#E_equtomatrix-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="E_equtomatrix-3">
 <div class="para">In fact, we can simplify the first equation by multiplying both sides by 5:</div>
 <div class="displaymath process-math" id="E_equtomatrix-3-1">
 \begin{align*}
@@ -380,7 +385,9 @@ x+y \amp = 3.
 x+y \amp = 3.
 \end{align*}
 </div>
-</div> <div class="para logical" id="E_equtomatrix-4">
+<div class="autopermalink" data-description="Paragraph"><a href="#E_equtomatrix-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="E_equtomatrix-4">
 <div class="para">We can use the coefficients and constants to create a matrix:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -392,9 +399,14 @@ x+y \amp = 3.
 \end{equation*}
 </div>
 <div class="para">In this matrix  you have a column for the coefficients of each variable. So the coefficients of <span class="process-math">\(x\)</span> are in the first column, the coefficients of <span class="process-math">\(y\)</span> are in the second. The constant terms are always in the last column. Each row corresponds to one equation.</div>
-</div></article><div class="para" id="S_AugMatrices-11">The matrix in <a href="S_AugMatrices.html#E_equtomatrix" class="xref" data-knowl="./knowl/xref/E_equtomatrix.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.6.3: Turning a System of Equations into a Matrix">Example 3.6.3</a> is called an <dfn class="terminology">augmented matrix</dfn>. It is really just a matrix, but we call it <em class="emphasis">augmented</em> if we include information from both sides of the equation (the coefficients and the constants).</div>
-<div class="para" id="S_AugMatrices-12">The algebraic method for solving the system of equations (finding the <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> values that satisfy both equations) is called <dfn class="terminology">row reduction</dfn>. It is based on the <dfn class="terminology">elimination method</dfn> that you may have seen in a precalculus or college algebra course. We won’t go through the algebra here, as we really don’t need it. Since our goal is to be able to easily solve larger systems of equations, we will rely on technology to do the algebra.</div>
-<div class="para" id="S_AugMatrices-13">Computer algebra systems such as Sage, Mathematica, and Maple, as well as graphing calculators, can easily do the row reduction for us. In this section we will use the Desmos matrix calculator first, then show how to use Sage. Note that any graphing claculator will work similarly to Desmos.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#E_equtomatrix-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.6.3: Turning a System of Equations into a Matrix"><a href="#E_equtomatrix" title="Copy heading and permalink for Example 3.6.3: Turning a System of Equations into a Matrix">🔗</a></div></article><div class="para" id="S_AugMatrices-11">The matrix in <a href="S_AugMatrices.html#E_equtomatrix" class="xref" data-knowl="./knowl/xref/E_equtomatrix.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.6.3: Turning a System of Equations into a Matrix">Example 3.6.3</a> is called an <dfn class="terminology">augmented matrix</dfn>. It is really just a matrix, but we call it <em class="emphasis">augmented</em> if we include information from both sides of the equation (the coefficients and the constants).<div class="autopermalink" data-description="Paragraph"><a href="#S_AugMatrices-11" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="S_AugMatrices-12">The algebraic method for solving the system of equations (finding the <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> values that satisfy both equations) is called <dfn class="terminology">row reduction</dfn>. It is based on the <dfn class="terminology">elimination method</dfn> that you may have seen in a precalculus or college algebra course. We won’t go through the algebra here, as we really don’t need it. Since our goal is to be able to easily solve larger systems of equations, we will rely on technology to do the algebra.<div class="autopermalink" data-description="Paragraph"><a href="#S_AugMatrices-12" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="S_AugMatrices-13">Computer algebra systems such as Sage, Mathematica, and Maple, as well as graphing calculators, can easily do the row reduction for us. In this section we will use the Desmos matrix calculator first, then show how to use Sage. Note that any graphing claculator will work similarly to Desmos.<div class="autopermalink" data-description="Paragraph"><a href="#S_AugMatrices-13" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="E_desmosmatrix"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.4</span><span class="period">.</span><span class="space"> </span><span class="title">Using the Desmos Matrix Calculator.</span>
 </h3>
@@ -420,12 +432,17 @@ x+y \amp = 3.
 \end{equation*}
 </div>
 <div class="para">This is the matrix we will use to determine the solution for the system of equations. We’ll get to how we do that shortly.</div>
-</div></article><article class="example example-like" id="E_sagematrix"><h3 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#E_desmosmatrix-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.6.4: Using the Desmos Matrix Calculator"><a href="#E_desmosmatrix" title="Copy heading and permalink for Example 3.6.4: Using the Desmos Matrix Calculator">🔗</a></div></article><article class="example example-like" id="E_sagematrix"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.5</span><span class="period">.</span><span class="space"> </span><span class="title">Using Sage.</span>
 </h3>
-<div class="para" id="E_sagematrix-2">We can also find the reduced row echolon form of a matrix using Sage, as in the following Sage Cell.</div> <pre id="E_sagematrix-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A=matrix([[3,-5,1],[1,1,3]]);
+<div class="para" id="E_sagematrix-2">We can also find the reduced row echolon form of a matrix using Sage, as in the following Sage Cell.<div class="autopermalink" data-description="Paragraph"><a href="#E_sagematrix-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="E_sagematrix-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A=matrix([[3,-5,1],[1,1,3]]);
 show(A.rref())
-</script></pre></article><div class="para logical" id="S_AugMatrices-16">
+</script></div>
+<div class="autopermalink" data-description="Example 3.6.5: Using Sage"><a href="#E_sagematrix" title="Copy heading and permalink for Example 3.6.5: Using Sage">🔗</a></div></article><div class="para logical" id="S_AugMatrices-16">
 <div class="para">Recall that when we set up the original matrix, the first column is for <span class="process-math">\(x\)</span> and the second is for <span class="process-math">\(y\text{.}\)</span> Each row represents an equation. We can take the matrix</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -450,9 +467,12 @@ x \amp =2\\
 y \amp = 1.
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#S_AugMatrices-16" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="S_AugMatrices-17">By plugging these values back into the original equations, you can verify that this is in fact the solution to the system of equations in <a href="S_AugMatrices.html#E_equtomatrix" class="xref" data-knowl="./knowl/xref/E_equtomatrix.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.6.3: Turning a System of Equations into a Matrix">Example 3.6.3</a>.</div>
-<div class="para" id="S_AugMatrices-18">Since the technology does all the algebra for us, our job is to translate the equations into an appropriate matrix and then translate the final matrix back into the solution to the system of equations. Remember, when using a matrix to solve a game, the matrix is only a tool, it is not the solution to the game.</div>
+<div class="para" id="S_AugMatrices-17">By plugging these values back into the original equations, you can verify that this is in fact the solution to the system of equations in <a href="S_AugMatrices.html#E_equtomatrix" class="xref" data-knowl="./knowl/xref/E_equtomatrix.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.6.3: Turning a System of Equations into a Matrix">Example 3.6.3</a>.<div class="autopermalink" data-description="Paragraph"><a href="#S_AugMatrices-17" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="S_AugMatrices-18">Since the technology does all the algebra for us, our job is to translate the equations into an appropriate matrix and then translate the final matrix back into the solution to the system of equations. Remember, when using a matrix to solve a game, the matrix is only a tool, it is not the solution to the game.<div class="autopermalink" data-description="Paragraph"><a href="#S_AugMatrices-18" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="S_AugMatrices-19">
 <div class="para">Now, let’s try the equations for the expected value method in <a href="S_AugMatrices.html#E_threeeq" class="xref" data-knowl="./knowl/xref/E_threeeq.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.6.2: Three Equations">Example 3.6.2</a>. As presented, how many variables does the system have?</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/E_threeeq.html" id="S_AugMatrices-19-2">
@@ -462,6 +482,7 @@ E_1(B) \amp = 2P_2(D)\\
 1 \amp = P_2(C)+P_2(D)
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#S_AugMatrices-19" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="S_AugMatrices-20">
 <div class="para">It has 4: <span class="process-math">\(E_1(A), E_1(B), P_2(C)\)</span> and <span class="process-math">\(P_2(D)\text{.}\)</span> But when we solved these equations, we set the expected values equal to each other. This gives us the two equations</div>
@@ -471,6 +492,7 @@ P_2(C)-P_2(D) \amp = 2P_2(D)\\
 1 \amp = P_2(C)+P_2(D).
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#S_AugMatrices-20" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="S_AugMatrices-21">
 <div class="para">Now if we put these into the equation form with all variables on the left and constants on the right, we get</div>
@@ -480,6 +502,7 @@ P_2(C)-3P_2(D) \amp = 0\\
 P_2(C)+P_2(D) \amp = 1.
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#S_AugMatrices-21" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="S_AugMatrices-22">
 <div class="para">Putting these equations into an augmented matrix, gives us</div>
@@ -493,10 +516,11 @@ P_2(C)+P_2(D) \amp = 1.
 \end{equation*}
 </div>
 <div class="para">where the first column corresponds to <span class="process-math">\(P_2(C)\)</span> and the second column corresponds to <span class="process-math">\(P_2(D)\text{.}\)</span> We can do the row reduction using either Desmos or the Sage cell below.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#S_AugMatrices-22" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<pre id="S_AugMatrices-23" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A=matrix([[1,-3,0],[1,1,1]]);
+<div id="S_AugMatrices-23" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A=matrix([[1,-3,0],[1,1,1]]);
 show(A.rref())
-</script></pre>
+</script></div>
 <div class="para logical" id="S_AugMatrices-24">
 <div class="para">Using row reduction, we get</div>
 <div class="displaymath process-math">
@@ -508,27 +532,39 @@ show(A.rref())
 \right].
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#S_AugMatrices-24" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="S_AugMatrices-25">Thus, recalling Column 1 is for <span class="process-math">\(P_2(C)\)</span> and Column 2 is for <span class="process-math">\(P_2(D)\text{,}\)</span> our solution is <span class="process-math">\(P_2(C)=3/4\text{,}\)</span> and <span class="process-math">\(P_2(D)=1/4\text{.}\)</span>
+<div class="para" id="S_AugMatrices-25">Thus, recalling Column 1 is for <span class="process-math">\(P_2(C)\)</span> and Column 2 is for <span class="process-math">\(P_2(D)\text{,}\)</span> our solution is <span class="process-math">\(P_2(C)=3/4\text{,}\)</span> and <span class="process-math">\(P_2(D)=1/4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#S_AugMatrices-25" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="S_AugMatrices-26">Here are some more systems of equations to practice solving using augmented matrices. If you want to use the above Sage cells just edit the values for each row in the cell.</div>
+<div class="para" id="S_AugMatrices-26">Here are some more systems of equations to practice solving using augmented matrices. If you want to use the above Sage cells just edit the values for each row in the cell.<div class="autopermalink" data-description="Paragraph"><a href="#S_AugMatrices-26" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="activity project-like" id="A_2x2system1"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.6.1</span><span class="period">.</span><span class="space"> </span><span class="title">Solve a system of 2 equations.</span>
 </h3>
-<div class="para" id="A_2x2system1-2-1">Solve the system of equations.</div> <div class="para logical" id="A_2x2system1-2-2"><div class="displaymath process-math">
+<div class="para" id="A_2x2system1-2-1">Solve the system of equations.<div class="autopermalink" data-description="Paragraph"><a href="#A_2x2system1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="A_2x2system1-2-2">
+<div class="displaymath process-math">
 \begin{equation*}
 \begin{matrix}2x-2y\amp =6\\x+3y\amp =7
 \end{matrix}
 \end{equation*}
-</div></div></article><article class="activity project-like" id="A_2x2system2"><h3 class="heading">
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#A_2x2system1-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 3.6.1: Solve a system of 2 equations"><a href="#A_2x2system1" title="Copy heading and permalink for Activity 3.6.1: Solve a system of 2 equations">🔗</a></div></article><article class="activity project-like" id="A_2x2system2"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.6.2</span><span class="period">.</span><span class="space"> </span><span class="title">Solve another system of 2 equations.</span>
 </h3>
-<div class="para" id="A_2x2system2-2-1">Solve the system of equations.</div> <div class="para logical" id="A_2x2system2-2-2"><div class="displaymath process-math">
+<div class="para" id="A_2x2system2-2-1">Solve the system of equations.<div class="autopermalink" data-description="Paragraph"><a href="#A_2x2system2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="A_2x2system2-2-2">
+<div class="displaymath process-math">
 \begin{equation*}
 \begin{matrix}4p_1-2p_2\amp =0\\p_1+p_2\amp =1
 \end{matrix}
 \end{equation*}
-</div></div></article><div class="para" id="S_AugMatrices-29">For larger matrices, you can edit the Sage cell by adding additional terms in each row, and adding more rows. For example, you can replace <span class="process-math">\([3,-5,1],[1,1,3]\)</span> with <span class="process-math">\([4,8,-4,4],[3,8,5,-11],[-2,1,12,-17]\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#A_2x2system2-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 3.6.2: Solve another system of 2 equations"><a href="#A_2x2system2" title="Copy heading and permalink for Activity 3.6.2: Solve another system of 2 equations">🔗</a></div></article><div class="para" id="S_AugMatrices-29">For larger matrices, you can edit the Sage cell by adding additional terms in each row, and adding more rows. For example, you can replace <span class="process-math">\([3,-5,1],[1,1,3]\)</span> with <span class="process-math">\([4,8,-4,4],[3,8,5,-11],[-2,1,12,-17]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#S_AugMatrices-29" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="activity project-like" id="A_3x3system1"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.6.3</span><span class="period">.</span><span class="space"> </span><span class="title">Solve a system of 3 equations.</span>
@@ -541,10 +577,15 @@ show(A.rref())
 \end{matrix}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#A_3x3system1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="A_3x3system1-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_3x3system1-3-1">Set up the augmented matrix for this system.</div></article><article class="task exercise-like" id="A_3x3system1-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_3x3system1-4-1">Use row reduction to find the solution.</div></article></article><article class="activity project-like" id="A_3x3system2"><h3 class="heading">
+<div class="para" id="A_3x3system1-3-1">Set up the augmented matrix for this system.<div class="autopermalink" data-description="Paragraph"><a href="#A_3x3system1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.6.3.a"><a href="#A_3x3system1-3" title="Copy heading and permalink for Task 3.6.3.a">🔗</a></div></article><article class="task exercise-like" id="A_3x3system1-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_3x3system1-4-1">Use row reduction to find the solution.<div class="autopermalink" data-description="Paragraph"><a href="#A_3x3system1-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.6.3.b"><a href="#A_3x3system1-4" title="Copy heading and permalink for Task 3.6.3.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.6.3: Solve a system of 3 equations"><a href="#A_3x3system1" title="Copy heading and permalink for Activity 3.6.3: Solve a system of 3 equations">🔗</a></div></article><article class="activity project-like" id="A_3x3system2"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.6.4</span><span class="period">.</span><span class="space"> </span><span class="title">Solve another system of 3 equations.</span>
 </h3>
 <div class="introduction" id="A_3x3system2-2"><div class="para logical" id="A_3x3system2-2-1">
@@ -555,10 +596,15 @@ show(A.rref())
 \end{matrix}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#A_3x3system2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="A_3x3system2-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_3x3system2-3-1">Set up the augmented matrix for this system.</div></article><article class="task exercise-like" id="A_3x3system2-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_3x3system2-4-1">Use row reduction to find the solution.</div></article></article><article class="activity project-like" id="A_3x3system3"><h3 class="heading">
+<div class="para" id="A_3x3system2-3-1">Set up the augmented matrix for this system.<div class="autopermalink" data-description="Paragraph"><a href="#A_3x3system2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.6.4.a"><a href="#A_3x3system2-3" title="Copy heading and permalink for Task 3.6.4.a">🔗</a></div></article><article class="task exercise-like" id="A_3x3system2-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_3x3system2-4-1">Use row reduction to find the solution.<div class="autopermalink" data-description="Paragraph"><a href="#A_3x3system2-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.6.4.b"><a href="#A_3x3system2-4" title="Copy heading and permalink for Task 3.6.4.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.6.4: Solve another system of 3 equations"><a href="#A_3x3system2" title="Copy heading and permalink for Activity 3.6.4: Solve another system of 3 equations">🔗</a></div></article><article class="activity project-like" id="A_3x3system3"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.6.5</span><span class="period">.</span><span class="space"> </span><span class="title">Even more practice with 3 equations.</span>
 </h3>
 <div class="introduction" id="A_3x3system3-2"><div class="para logical" id="A_3x3system3-2-1">
@@ -569,10 +615,15 @@ show(A.rref())
 \end{matrix}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#A_3x3system3-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="A_3x3system3-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_3x3system3-3-1">Set up the augmented matrix for this system.</div></article><article class="task exercise-like" id="A_3x3system3-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_3x3system3-4-1">Use row reduction to find the solution.</div></article></article><article class="activity project-like" id="A_5x5system1"><h3 class="heading">
+<div class="para" id="A_3x3system3-3-1">Set up the augmented matrix for this system.<div class="autopermalink" data-description="Paragraph"><a href="#A_3x3system3-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.6.5.a"><a href="#A_3x3system3-3" title="Copy heading and permalink for Task 3.6.5.a">🔗</a></div></article><article class="task exercise-like" id="A_3x3system3-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_3x3system3-4-1">Use row reduction to find the solution.<div class="autopermalink" data-description="Paragraph"><a href="#A_3x3system3-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.6.5.b"><a href="#A_3x3system3-4" title="Copy heading and permalink for Task 3.6.5.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.6.5: Even more practice with 3 equations"><a href="#A_3x3system3" title="Copy heading and permalink for Activity 3.6.5: Even more practice with 3 equations">🔗</a></div></article><article class="activity project-like" id="A_5x5system1"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.6.6</span><span class="period">.</span><span class="space"> </span><span class="title">Now, a sytem with 5 equations.</span>
 </h3>
 <div class="introduction" id="A_5x5system1-2"><div class="para logical" id="A_5x5system1-2-1">
@@ -583,16 +634,22 @@ show(A.rref())
 \end{matrix}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#A_5x5system1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="A_5x5system1-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_5x5system1-3-1">Set up the augmented matrix for this system.</div></article><article class="task exercise-like" id="A_5x5system1-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_5x5system1-4-1">Use row reduction to find the solution.</div></article></article><div class="para" id="S_AugMatrices-34">Now we are ready to apply everything we have learned about solving repeated zero-sum games to a much more challenging game in the next section.</div>
+<div class="para" id="A_5x5system1-3-1">Set up the augmented matrix for this system.<div class="autopermalink" data-description="Paragraph"><a href="#A_5x5system1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.6.6.a"><a href="#A_5x5system1-3" title="Copy heading and permalink for Task 3.6.6.a">🔗</a></div></article><article class="task exercise-like" id="A_5x5system1-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_5x5system1-4-1">Use row reduction to find the solution.<div class="autopermalink" data-description="Paragraph"><a href="#A_5x5system1-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.6.6.b"><a href="#A_5x5system1-4" title="Copy heading and permalink for Task 3.6.6.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.6.6: Now, a sytem with 5 equations"><a href="#A_5x5system1" title="Copy heading and permalink for Activity 3.6.6: Now, a sytem with 5 equations">🔗</a></div></article><div class="para" id="S_AugMatrices-34">Now we are ready to apply everything we have learned about solving repeated zero-sum games to a much more challenging game in the next section.<div class="autopermalink" data-description="Paragraph"><a href="#S_AugMatrices-34" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <section class="reading-questions" id="S_AugMatrices-35"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="IGT_SSAM_CYU_findmatrix"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="IGT_SSAM_CYU_findmatrix" data-multipleanswers="false" data-random="">
-<div class="para logical" id="IGT_SSAM_CYU_findmatrix-1-1">
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para logical" id="IGT_SSAM_CYU_findmatrix-1-1">
 <div class="para">Suppose we have the system of equations</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -601,37 +658,41 @@ show(A.rref())
 \end{equation*}
 </div>
 <div class="para">Which is the corresponding augmented matrix for this system?</div>
-</div>
-<li data-component="answer" id="IGT_SSAM_CYU_findmatrix_opt_a"><span class="process-math">\(\left[
+<div class="autopermalink" data-description="Paragraph"><a href="#IGT_SSAM_CYU_findmatrix-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-IGT_SSAM_CYU_findmatrix" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-IGT_SSAM_CYU_findmatrix_opt_a"><span class="process-math">\(\left[
 \begin{matrix}3 \amp  -4 \amp  1\\
 1 \amp  2 \amp  5\\
 1 \amp  -2 \amp  3\\
 \end{matrix} 
 \right]\)</span></li>
-<li data-component="feedback" id="IGT_SSAM_CYU_findmatrix_opt_a"><div class="para" id="IGT_SSAM_CYU_findmatrix-2-1-2-1">How many variables are in the system? How many columns do you need?</div></li>
-<li data-component="answer" id="IGT_SSAM_CYU_findmatrix_opt_b"><span class="process-math">\(\left[
+<li data-component="feedback" id="rs-IGT_SSAM_CYU_findmatrix_opt_a"><div class="para" id="IGT_SSAM_CYU_findmatrix-2-1-2-1">How many variables are in the system? How many columns do you need?</div></li>
+<li data-component="answer" id="rs-IGT_SSAM_CYU_findmatrix_opt_b"><span class="process-math">\(\left[
 \begin{matrix}3 \amp  -1 \amp  4\\
 2 \amp  1 \amp  5\\
 1 \amp  -2 \amp  3\\
 \end{matrix} 
 \right]\)</span></li>
-<li data-component="feedback" id="IGT_SSAM_CYU_findmatrix_opt_b"><div class="para" id="IGT_SSAM_CYU_findmatrix-2-2-2-1">How many variables are in the system? How many columns do you need?</div></li>
-<li data-component="answer" id="IGT_SSAM_CYU_findmatrix_opt_c" data-correct=""><span class="process-math">\(\left[
+<li data-component="feedback" id="rs-IGT_SSAM_CYU_findmatrix_opt_b"><div class="para" id="IGT_SSAM_CYU_findmatrix-2-2-2-1">How many variables are in the system? How many columns do you need?</div></li>
+<li data-component="answer" id="rs-IGT_SSAM_CYU_findmatrix_opt_c" data-correct=""><span class="process-math">\(\left[
 \begin{matrix}3 \amp  -1\amp 0 \amp  4\\
 2 \amp 0 \amp   1 \amp  5\\
 1 \amp  -2 \amp  -3 \amp 0\\
 \end{matrix} 
 \right]\)</span></li>
-<li data-component="feedback" id="IGT_SSAM_CYU_findmatrix_opt_c"><div class="para" id="IGT_SSAM_CYU_findmatrix-2-3-2-1">Correct.</div></li>
-<li data-component="answer" id="IGT_SSAM_CYU_findmatrix_opt_d"><span class="process-math">\(\left[
+<li data-component="feedback" id="rs-IGT_SSAM_CYU_findmatrix_opt_c"><div class="para" id="IGT_SSAM_CYU_findmatrix-2-3-2-1">Correct.</div></li>
+<li data-component="answer" id="rs-IGT_SSAM_CYU_findmatrix_opt_d"><span class="process-math">\(\left[
 \begin{matrix}3 \amp  1\amp 0 \amp  -4\\
 2 \amp 0 \amp   1 \amp  5\\
 1 \amp  -2 \amp  3 \amp 0\\
 \end{matrix} 
 \right]\)</span></li>
-<li data-component="feedback" id="IGT_SSAM_CYU_findmatrix_opt_d"><div class="para" id="IGT_SSAM_CYU_findmatrix-2-4-2-1">Make sure the variables are on one side of each equation and the constants are on the other.</div></li>
-</ul></div></div></article><article class="exercise exercise-like" id="IGT_SSAM_CYU_solverref"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="IGT_SSAM_CYU_solverref">
+<li data-component="feedback" id="rs-IGT_SSAM_CYU_findmatrix_opt_d"><div class="para" id="IGT_SSAM_CYU_findmatrix-2-4-2-1">Make sure the variables are on one side of each equation and the constants are on the other.</div></li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Reading Question 3.6.1"><a href="#IGT_SSAM_CYU_findmatrix" title="Copy heading and permalink for Reading Question 3.6.1">🔗</a></div></article><article class="exercise exercise-like" id="IGT_SSAM_CYU_solverref"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-IGT_SSAM_CYU_solverref">
 <div class="para logical" id="IGT_SSAM_CYU_solverref-1-1">
 <div class="para">Suppose after doing row reduction on a system of equations with variables <span class="process-math">\(x, y, z\text{,}\)</span> we have the following matrix</div>
 <div class="displaymath process-math">
@@ -645,16 +706,18 @@ show(A.rref())
 \end{equation*}
 </div>
 <div class="para">Then the solution to the system of equations is</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#IGT_SSAM_CYU_solverref-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="IGT_SSAM_CYU_solverref-1-2">
-<span class="process-math">\(x= \)</span><input type="text" placeholder="Number" size="3">
+<span class="process-math">\(x= \)</span><input type="text" placeholder="Number" size="3"><div class="autopermalink" data-description="Paragraph"><a href="#IGT_SSAM_CYU_solverref-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="IGT_SSAM_CYU_solverref-1-3">
-<span class="process-math">\(y= \)</span><input type="text" placeholder="Number" size="3">
+<span class="process-math">\(y= \)</span><input type="text" placeholder="Number" size="3"><div class="autopermalink" data-description="Paragraph"><a href="#IGT_SSAM_CYU_solverref-1-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="IGT_SSAM_CYU_solverref-1-4">
-<span class="process-math">\(z= \)</span><input type="text" placeholder="Number" size="3">
+<span class="process-math">\(z= \)</span><input type="text" placeholder="Number" size="3"><div class="autopermalink" data-description="Paragraph"><a href="#IGT_SSAM_CYU_solverref-1-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <script type="application/json">[[{"number": [3, 3], "feedback": "<div class=\"para\" id=\"IGT_SSAM_CYU_solverref-2-1-1-1-1\">Correct, we get <span class=\"process-math\">\\(x=3\\)<\/span> from the first row.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_SSAM_CYU_solverref-2-1-2-1-1\">Incorrect. It might be helpful to turn the rows back into equations.<\/div>"}], [{"number": [2, 2], "feedback": "<div class=\"para\" id=\"IGT_SSAM_CYU_solverref-2-2-1-1-1\">Correct, we get <span class=\"process-math\">\\(y=2\\)<\/span> from the second row.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_SSAM_CYU_solverref-2-2-2-1-1\">Incorrect. It might be helpful to turn the rows back into equations.<\/div>"}], [{"number": [-1, -1], "feedback": "<div class=\"para\" id=\"IGT_SSAM_CYU_solverref-2-3-1-1-1\">Correct, we get <span class=\"process-math\">\\(z=-1\\)<\/span> from the third row.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_SSAM_CYU_solverref-2-3-2-1-1\">Incorrect. It might be helpful to turn the rows back into equations.<\/div>"}]]</script>
-</div></div></div></article><article class="exercise exercise-like" id="IGT_SSAM_CYU_solvesystem"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="IGT_SSAM_CYU_solvesystem">
+</div></div></div>
+<div class="autopermalink" data-description="Reading Question 3.6.2"><a href="#IGT_SSAM_CYU_solverref" title="Copy heading and permalink for Reading Question 3.6.2">🔗</a></div></article><article class="exercise exercise-like" id="IGT_SSAM_CYU_solvesystem"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-IGT_SSAM_CYU_solvesystem">
 <div class="para logical" id="IGT_SSAM_CYU_solvesystem-1-1">
 <div class="para">Use row reduction to solve the following system of equations.</div>
 <div class="displaymath process-math">
@@ -664,17 +727,19 @@ show(A.rref())
 \end{equation*}
 </div>
 <div class="para">Then the solution to the system of equations is</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#IGT_SSAM_CYU_solvesystem-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="IGT_SSAM_CYU_solvesystem-1-2">
-<span class="process-math">\(x= \)</span><input type="text" placeholder="Number" size="3">
+<span class="process-math">\(x= \)</span><input type="text" placeholder="Number" size="3"><div class="autopermalink" data-description="Paragraph"><a href="#IGT_SSAM_CYU_solvesystem-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="IGT_SSAM_CYU_solvesystem-1-3">
-<span class="process-math">\(y= \)</span><input type="text" placeholder="Number" size="3">
+<span class="process-math">\(y= \)</span><input type="text" placeholder="Number" size="3"><div class="autopermalink" data-description="Paragraph"><a href="#IGT_SSAM_CYU_solvesystem-1-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="IGT_SSAM_CYU_solvesystem-1-4">
-<span class="process-math">\(z= \)</span><input type="text" placeholder="Number" size="3">
+<span class="process-math">\(z= \)</span><input type="text" placeholder="Number" size="3"><div class="autopermalink" data-description="Paragraph"><a href="#IGT_SSAM_CYU_solvesystem-1-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <script type="application/json">[[{"number": [1, 1], "feedback": "<div class=\"para\" id=\"IGT_SSAM_CYU_solvesystem-2-1-1-1-1\">Correct, we get <span class=\"process-math\">\\(x=1\\text{.}\\)<\/span><\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_SSAM_CYU_solvesystem-2-1-2-1-1\">Incorrect. Check that you entered the matrix correctly.<\/div>"}], [{"number": [-1, -1], "feedback": "<div class=\"para\" id=\"IGT_SSAM_CYU_solvesystem-2-2-1-1-1\">Correct, we get <span class=\"process-math\">\\(y=-1\\text{.}\\)<\/span><\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_SSAM_CYU_solvesystem-2-2-2-1-1\">Incorrect. Check that you entered the matrix correctly.<\/div>"}], [{"number": [2, 2], "feedback": "<div class=\"para\" id=\"IGT_SSAM_CYU_solvesystem-2-3-1-1-1\">Correct, we get <span class=\"process-math\">\\(z=-2\\text{.}\\)<\/span><\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_SSAM_CYU_solvesystem-2-3-2-1-1\">Incorrect. Check that you entered the matrix correctly.<\/div>"}]]</script>
-</div></div></div></article><article class="exercise exercise-like" id="IGT_SSAM_CYU_solmatrix1"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="IGT_SSAM_CYU_solmatrix1" data-multipleanswers="false" data-random="">
-<div class="para logical" id="IGT_SSAM_CYU_solmatrix1-1-1">
+</div></div></div>
+<div class="autopermalink" data-description="Reading Question 3.6.3"><a href="#IGT_SSAM_CYU_solvesystem" title="Copy heading and permalink for Reading Question 3.6.3">🔗</a></div></article><article class="exercise exercise-like" id="IGT_SSAM_CYU_solmatrix1"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para logical" id="IGT_SSAM_CYU_solmatrix1-1-1">
 <div class="para">Suppose we finding the mixed strategy equilibrium for a <span class="process-math">\(2\times 2\)</span> game using row reduction. After row reducing we have the following matrix where the first column represents <span class="process-math">\(P(A)\)</span> and the second represents <span class="process-math">\(P(B)\text{.}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -687,22 +752,28 @@ show(A.rref())
 \end{equation*}
 </div>
 <div class="para">What can we conclude?</div>
-</div>
-<li data-component="answer" id="IGT_SSAM_CYU_solmatrix1_opt_a"><span class="process-math">\(P(A)=-1, P(B)=2\)</span></li>
-<li data-component="feedback" id="IGT_SSAM_CYU_solmatrix1_opt_a"><div class="para" id="IGT_SSAM_CYU_solmatrix1-2-1-2-1">Remember, <span class="process-math">\(P(A), P(B)\)</span> represent probabilities in this context.</div></li>
-<li data-component="answer" id="IGT_SSAM_CYU_solmatrix1_opt_b"><span class="process-math">\(P(A)=1, P(B)=2\)</span></li>
-<li data-component="feedback" id="IGT_SSAM_CYU_solmatrix1_opt_b"><div class="para" id="IGT_SSAM_CYU_solmatrix1-2-2-2-1">Remember, <span class="process-math">\(P(A), P(B)\)</span> represent probabilities in this context.</div></li>
-<li data-component="answer" id="IGT_SSAM_CYU_solmatrix1_opt_c"><span class="process-math">\(P(A)=-1/3, P(B)=2/3\)</span></li>
-<li data-component="feedback" id="IGT_SSAM_CYU_solmatrix1_opt_c"><div class="para" id="IGT_SSAM_CYU_solmatrix1-2-3-2-1">We can’t get this solution from the above matrix.</div></li>
-<li data-component="answer" id="IGT_SSAM_CYU_solmatrix1_opt_d"><span class="process-math">\(P(A)=-1/3, P(B)=2/3\)</span></li>
-<li data-component="feedback" id="IGT_SSAM_CYU_solmatrix1_opt_d"><div class="para" id="IGT_SSAM_CYU_solmatrix1-2-4-2-1">We can’t get this solution from the above matrix.</div></li>
-<li data-component="answer" id="IGT_SSAM_CYU_solmatrix1_opt_e"><div class="para" id="IGT_SSAM_CYU_solmatrix1-2-5-1-1">We must have made a mistake since <span class="process-math">\(P(A)+P(B)=1\)</span> in this context.</div></li>
-<li data-component="feedback" id="IGT_SSAM_CYU_solmatrix1_opt_e"><div class="para" id="IGT_SSAM_CYU_solmatrix1-2-5-2-1">Although <span class="process-math">\(2-1=1\text{,}\)</span> there is another condition for probabilities.</div></li>
-<li data-component="answer" id="IGT_SSAM_CYU_solmatrix1_opt_f" data-correct=""><div class="para" id="IGT_SSAM_CYU_solmatrix1-2-6-1-1">We must have made a mistake since <span class="process-math">\(P(A)\)</span> and <span class="process-math">\(P(B)\)</span> must be between 0 and 1 in this context.</div></li>
-<li data-component="feedback" id="IGT_SSAM_CYU_solmatrix1_opt_f"><div class="para" id="IGT_SSAM_CYU_solmatrix1-2-6-2-1">Correct.</div></li>
-</ul></div></div></article><article class="exercise exercise-like" id="IGT_SSAM_CYU_solmatrix2"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="IGT_SSAM_CYU_solmatrix2" data-multipleanswers="false" data-random="">
-<div class="para logical" id="IGT_SSAM_CYU_solmatrix2-1-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#IGT_SSAM_CYU_solmatrix1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-IGT_SSAM_CYU_solmatrix1" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-IGT_SSAM_CYU_solmatrix1_opt_a"><span class="process-math">\(P(A)=-1, P(B)=2\)</span></li>
+<li data-component="feedback" id="rs-IGT_SSAM_CYU_solmatrix1_opt_a"><div class="para" id="IGT_SSAM_CYU_solmatrix1-2-1-2-1">Remember, <span class="process-math">\(P(A), P(B)\)</span> represent probabilities in this context.</div></li>
+<li data-component="answer" id="rs-IGT_SSAM_CYU_solmatrix1_opt_b"><span class="process-math">\(P(A)=1, P(B)=2\)</span></li>
+<li data-component="feedback" id="rs-IGT_SSAM_CYU_solmatrix1_opt_b"><div class="para" id="IGT_SSAM_CYU_solmatrix1-2-2-2-1">Remember, <span class="process-math">\(P(A), P(B)\)</span> represent probabilities in this context.</div></li>
+<li data-component="answer" id="rs-IGT_SSAM_CYU_solmatrix1_opt_c"><span class="process-math">\(P(A)=-1/3, P(B)=2/3\)</span></li>
+<li data-component="feedback" id="rs-IGT_SSAM_CYU_solmatrix1_opt_c"><div class="para" id="IGT_SSAM_CYU_solmatrix1-2-3-2-1">We can’t get this solution from the above matrix.</div></li>
+<li data-component="answer" id="rs-IGT_SSAM_CYU_solmatrix1_opt_d"><span class="process-math">\(P(A)=-1/3, P(B)=2/3\)</span></li>
+<li data-component="feedback" id="rs-IGT_SSAM_CYU_solmatrix1_opt_d"><div class="para" id="IGT_SSAM_CYU_solmatrix1-2-4-2-1">We can’t get this solution from the above matrix.</div></li>
+<li data-component="answer" id="rs-IGT_SSAM_CYU_solmatrix1_opt_e"><div class="para" id="IGT_SSAM_CYU_solmatrix1-2-5-1-1">We must have made a mistake since <span class="process-math">\(P(A)+P(B)=1\)</span> in this context.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_SSAM_CYU_solmatrix1-2-5-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></li>
+<li data-component="feedback" id="rs-IGT_SSAM_CYU_solmatrix1_opt_e"><div class="para" id="IGT_SSAM_CYU_solmatrix1-2-5-2-1">Although <span class="process-math">\(2-1=1\text{,}\)</span> there is another condition for probabilities.</div></li>
+<li data-component="answer" id="rs-IGT_SSAM_CYU_solmatrix1_opt_f" data-correct=""><div class="para" id="IGT_SSAM_CYU_solmatrix1-2-6-1-1">We must have made a mistake since <span class="process-math">\(P(A)\)</span> and <span class="process-math">\(P(B)\)</span> must be between 0 and 1 in this context.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_SSAM_CYU_solmatrix1-2-6-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></li>
+<li data-component="feedback" id="rs-IGT_SSAM_CYU_solmatrix1_opt_f"><div class="para" id="IGT_SSAM_CYU_solmatrix1-2-6-2-1">Correct.</div></li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Reading Question 3.6.4"><a href="#IGT_SSAM_CYU_solmatrix1" title="Copy heading and permalink for Reading Question 3.6.4">🔗</a></div></article><article class="exercise exercise-like" id="IGT_SSAM_CYU_solmatrix2"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para logical" id="IGT_SSAM_CYU_solmatrix2-1-1">
 <div class="para">Suppose we finding the mixed strategy equilibrium for a <span class="process-math">\(2\times 2\)</span> game using row reduction. After row reducing we have the following matrix where the first column represents <span class="process-math">\(P(A)\)</span> and the second represents <span class="process-math">\(P(B)\text{.}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -715,19 +786,25 @@ show(A.rref())
 \end{equation*}
 </div>
 <div class="para">What can we conclude?</div>
-</div>
-<li data-component="answer" id="IGT_SSAM_CYU_solmatrix2_opt_a"><span class="process-math">\(P(A)=1/3, P(B)=1/3\)</span></li>
-<li data-component="feedback" id="IGT_SSAM_CYU_solmatrix2_opt_a"><div class="para" id="IGT_SSAM_CYU_solmatrix2-2-1-2-1">Remember, <span class="process-math">\(P(A), P(B)\)</span> must sum to 1.</div></li>
-<li data-component="answer" id="IGT_SSAM_CYU_solmatrix2_opt_b"><span class="process-math">\(P(A)=1/3, P(B)=2/3\)</span></li>
-<li data-component="feedback" id="IGT_SSAM_CYU_solmatrix2_opt_b"><div class="para" id="IGT_SSAM_CYU_solmatrix2-2-2-2-1">We can’t get this solution from the above matrix.</div></li>
-<li data-component="answer" id="IGT_SSAM_CYU_solmatrix2_opt_c" data-correct=""><div class="para" id="IGT_SSAM_CYU_solmatrix2-2-3-1-1">We must have made a mistake since <span class="process-math">\(P(A)+P(B)=1\)</span> in this context.</div></li>
-<li data-component="feedback" id="IGT_SSAM_CYU_solmatrix2_opt_c"><div class="para" id="IGT_SSAM_CYU_solmatrix2-2-3-2-1">Correct.</div></li>
-<li data-component="answer" id="IGT_SSAM_CYU_solmatrix2_opt_d"><div class="para" id="IGT_SSAM_CYU_solmatrix2-2-4-1-1">We must have made a mistake since <span class="process-math">\(P(A)\)</span> and <span class="process-math">\(P(B)\)</span> must be between 0 and 1 in this context.</div></li>
-<li data-component="feedback" id="IGT_SSAM_CYU_solmatrix2_opt_d"><div class="para" id="IGT_SSAM_CYU_solmatrix2-2-4-2-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#IGT_SSAM_CYU_solmatrix2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-IGT_SSAM_CYU_solmatrix2" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-IGT_SSAM_CYU_solmatrix2_opt_a"><span class="process-math">\(P(A)=1/3, P(B)=1/3\)</span></li>
+<li data-component="feedback" id="rs-IGT_SSAM_CYU_solmatrix2_opt_a"><div class="para" id="IGT_SSAM_CYU_solmatrix2-2-1-2-1">Remember, <span class="process-math">\(P(A), P(B)\)</span> must sum to 1.</div></li>
+<li data-component="answer" id="rs-IGT_SSAM_CYU_solmatrix2_opt_b"><span class="process-math">\(P(A)=1/3, P(B)=2/3\)</span></li>
+<li data-component="feedback" id="rs-IGT_SSAM_CYU_solmatrix2_opt_b"><div class="para" id="IGT_SSAM_CYU_solmatrix2-2-2-2-1">We can’t get this solution from the above matrix.</div></li>
+<li data-component="answer" id="rs-IGT_SSAM_CYU_solmatrix2_opt_c" data-correct=""><div class="para" id="IGT_SSAM_CYU_solmatrix2-2-3-1-1">We must have made a mistake since <span class="process-math">\(P(A)+P(B)=1\)</span> in this context.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_SSAM_CYU_solmatrix2-2-3-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></li>
+<li data-component="feedback" id="rs-IGT_SSAM_CYU_solmatrix2_opt_c"><div class="para" id="IGT_SSAM_CYU_solmatrix2-2-3-2-1">Correct.</div></li>
+<li data-component="answer" id="rs-IGT_SSAM_CYU_solmatrix2_opt_d"><div class="para" id="IGT_SSAM_CYU_solmatrix2-2-4-1-1">We must have made a mistake since <span class="process-math">\(P(A)\)</span> and <span class="process-math">\(P(B)\)</span> must be between 0 and 1 in this context.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_SSAM_CYU_solmatrix2-2-4-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></li>
+<li data-component="feedback" id="rs-IGT_SSAM_CYU_solmatrix2_opt_d"><div class="para" id="IGT_SSAM_CYU_solmatrix2-2-4-2-1">
 <span class="process-math">\(1/3\)</span> is between 0 and 1, but there is another condition.</div></li>
-</ul></div></div></article><article class="exercise exercise-like" id="IGT_SSAM_CYU_solmatrix3"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="IGT_SSAM_CYU_solmatrix3" data-multipleanswers="false" data-random="">
-<div class="para logical" id="IGT_SSAM_CYU_solmatrix3-1-1">
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Reading Question 3.6.5"><a href="#IGT_SSAM_CYU_solmatrix2" title="Copy heading and permalink for Reading Question 3.6.5">🔗</a></div></article><article class="exercise exercise-like" id="IGT_SSAM_CYU_solmatrix3"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para logical" id="IGT_SSAM_CYU_solmatrix3-1-1">
 <div class="para">Suppose we finding the mixed strategy equilibrium for a <span class="process-math">\(2\times 2\)</span> game using row reduction. After row reducing we have the following matrix where the first column represents <span class="process-math">\(P(A)\)</span> and the second represents <span class="process-math">\(P(B)\text{.}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -740,24 +817,30 @@ show(A.rref())
 \end{equation*}
 </div>
 <div class="para">What can we conclude?</div>
-</div>
-<li data-component="answer" id="IGT_SSAM_CYU_solmatrix3_opt_a"><span class="process-math">\(P(A)=2/3, P(B)=1/3\)</span></li>
-<li data-component="feedback" id="IGT_SSAM_CYU_solmatrix3_opt_a"><div class="para" id="IGT_SSAM_CYU_solmatrix3-2-1-2-1">Be careful of the order of <span class="process-math">\(P(A), P(B)\text{.}\)</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#IGT_SSAM_CYU_solmatrix3-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-IGT_SSAM_CYU_solmatrix3" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-IGT_SSAM_CYU_solmatrix3_opt_a"><span class="process-math">\(P(A)=2/3, P(B)=1/3\)</span></li>
+<li data-component="feedback" id="rs-IGT_SSAM_CYU_solmatrix3_opt_a"><div class="para" id="IGT_SSAM_CYU_solmatrix3-2-1-2-1">Be careful of the order of <span class="process-math">\(P(A), P(B)\text{.}\)</span>
 </div></li>
-<li data-component="answer" id="IGT_SSAM_CYU_solmatrix3_opt_b" data-correct=""><span class="process-math">\(P(A)=1/3, P(B)=2/3\)</span></li>
-<li data-component="feedback" id="IGT_SSAM_CYU_solmatrix3_opt_b"><div class="para" id="IGT_SSAM_CYU_solmatrix3-2-2-2-1">Correct.</div></li>
-<li data-component="answer" id="IGT_SSAM_CYU_solmatrix3_opt_c"><div class="para" id="IGT_SSAM_CYU_solmatrix3-2-3-1-1">We must have made a mistake since <span class="process-math">\(P(A)+P(B)=1\)</span> in this context.</div></li>
-<li data-component="feedback" id="IGT_SSAM_CYU_solmatrix3_opt_c"><span class="process-math">\((1/3)+(2/3)=1\)</span></li>
-<li data-component="answer" id="IGT_SSAM_CYU_solmatrix3_opt_d"><div class="para" id="IGT_SSAM_CYU_solmatrix3-2-4-1-1">We must have made a mistake since <span class="process-math">\(P(A)\)</span> and <span class="process-math">\(P(B)\)</span> must be between 0 and 1 in this context.</div></li>
-<li data-component="feedback" id="IGT_SSAM_CYU_solmatrix3_opt_d"><div class="para" id="IGT_SSAM_CYU_solmatrix3-2-4-2-1">
+<li data-component="answer" id="rs-IGT_SSAM_CYU_solmatrix3_opt_b" data-correct=""><span class="process-math">\(P(A)=1/3, P(B)=2/3\)</span></li>
+<li data-component="feedback" id="rs-IGT_SSAM_CYU_solmatrix3_opt_b"><div class="para" id="IGT_SSAM_CYU_solmatrix3-2-2-2-1">Correct.</div></li>
+<li data-component="answer" id="rs-IGT_SSAM_CYU_solmatrix3_opt_c"><div class="para" id="IGT_SSAM_CYU_solmatrix3-2-3-1-1">We must have made a mistake since <span class="process-math">\(P(A)+P(B)=1\)</span> in this context.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_SSAM_CYU_solmatrix3-2-3-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></li>
+<li data-component="feedback" id="rs-IGT_SSAM_CYU_solmatrix3_opt_c"><span class="process-math">\((1/3)+(2/3)=1\)</span></li>
+<li data-component="answer" id="rs-IGT_SSAM_CYU_solmatrix3_opt_d"><div class="para" id="IGT_SSAM_CYU_solmatrix3-2-4-1-1">We must have made a mistake since <span class="process-math">\(P(A)\)</span> and <span class="process-math">\(P(B)\)</span> must be between 0 and 1 in this context.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_SSAM_CYU_solmatrix3-2-4-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></li>
+<li data-component="feedback" id="rs-IGT_SSAM_CYU_solmatrix3_opt_d"><div class="para" id="IGT_SSAM_CYU_solmatrix3-2-4-2-1">
 <span class="process-math">\(1/3, 2/3\)</span> are between 0 and 1.</div></li>
-</ul></div></div></article></section></section></div>
-<div class="ptx-content-footer">
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Reading Question 3.6.6"><a href="#IGT_SSAM_CYU_solmatrix3" title="Copy heading and permalink for Reading Question 3.6.6">🔗</a></div></article><div class="autopermalink" data-description="Reading Questions 3.6: Check Your Understanding"><a href="#S_AugMatrices-35" title="Copy heading and permalink for Reading Questions 3.6: Check Your Understanding">🔗</a></div></section><div class="autopermalink" data-description="Section 3.6: Solving Systems of Equations Using Matrices"><a href="#S_AugMatrices" title="Copy heading and permalink for Section 3.6: Solving Systems of Equations Using Matrices">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="S_LiarsPoker.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="S_Undercut.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 <!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
 var sc_project=13017515;
