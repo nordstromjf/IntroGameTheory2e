@@ -17,7 +17,7 @@
   </p>
 
   <example xml:id="E_battle_of_movies">
-    <title>Battle of the Movies<idx><h>Battle of the Movies</h></idx></title>
+    <title>Battle of the Movies</title><idx><h>Battle of the Movies</h></idx><idx><h>game</h><h>Battle of the Movies</h></idx>
     <statement>
       <p>
          Alice and Bob want to go out to a movie. Bob wants to see an action movie, Alice wants to see a comedy. Both prefer to go to a movie together rather than to go alone. We can represent the situation with the payoff matrix in <xref ref="T_battleofmovies"></xref>:
@@ -25,7 +25,7 @@
 
       <table xml:id="T_battleofmovies" >
         <title>Battle of the Movies</title>
-        <tabular>
+        <tabular halign="center">
           <row>
             <cell></cell>
             <cell></cell>
@@ -40,14 +40,14 @@
           <row>
             <cell>Bob</cell>
             <cell right="minor">Action</cell>
-            <cell right="minor" bottom="minor" halign="center"><m>(2, 1)</m></cell>
-            <cell right="minor" bottom="minor" halign="center"><m>(-1, -1)</m></cell>
+            <cell right="minor" bottom="minor" ><m>(2, 1)</m></cell>
+            <cell right="minor" bottom="minor" ><m>(-1, -1)</m></cell>
           </row>
           <row>
             <cell></cell>
             <cell right="minor">Comedy</cell>
-            <cell right="minor" bottom="minor" halign="center"><m>(-1, -1)</m></cell>
-            <cell right="minor" bottom="minor" halign="center"><m>(1, 2)</m></cell>
+            <cell right="minor" bottom="minor" ><m>(-1, -1)</m></cell>
+            <cell right="minor" bottom="minor" ><m>(1, 2)</m></cell>
           </row>
         </tabular>
       </table>
@@ -124,7 +124,7 @@
     </statement>
   </activity>
   <p>
-    Hopefully, you are beginning to see some of the challenges for analyzing non-zero-sum games. We know there are equilibrium points in Battle of the Movies, but even rational play may not result in an equilibrium. For the remainder of this section, let's assume that players are <em>not</em> allowed to communicate about strategy prior to play. Such games are called <term>non-cooperative</term><idx><h>non-cooperative games</h></idx> games. Before moving on, let's try to find the maximin strategies for our players using the graphical method, as we did with zero-sum games.
+    Hopefully, you are beginning to see some of the challenges for analyzing non-zero-sum games. We know there are equilibrium points in Battle of the Movies, but even rational play may not result in an equilibrium. For the remainder of this section, let's assume that players are <em>not</em> allowed to communicate about strategy prior to play. Such games are called <term>non-cooperative</term><idx><h>non-cooperative game</h></idx> games. Before moving on, let's try to find the maximin strategies for our players using the graphical method, as we did with zero-sum games.
   </p>
   <activity xml:id="A_BoMBobsmatrix">
     <title>Bob's payoff matrix</title>
@@ -250,7 +250,7 @@
 
       <exercise label="IGT_INZ_CYU_zerosum1"><statement correct="no"><p>True or False: The following game
         <table xml:id="T_NZmatrix1" >
-    <tabular>
+    <tabular halign="center">
       <row>
         <cell></cell>
         <cell bottom="minor"><b>C</b></cell>
@@ -258,13 +258,13 @@
       </row>
       <row>
         <cell right="minor"><b>A</b></cell>
-        <cell right="minor" bottom="minor" halign="center"><m>(2, 2)</m></cell>
-        <cell right="minor" bottom="minor" halign="center"><m>(1, 0)</m></cell>
+        <cell right="minor" bottom="minor" ><m>(2, 2)</m></cell>
+        <cell right="minor" bottom="minor" ><m>(1, 0)</m></cell>
       </row>
       <row>
         <cell right="minor"><b>B</b></cell>
-        <cell right="minor" bottom="minor" halign="center"><m>(0, 1)</m></cell>
-        <cell right="minor" bottom="minor" halign="center"><m>(-1, -1)</m></cell>
+        <cell right="minor" bottom="minor" ><m>(0, 1)</m></cell>
+        <cell right="minor" bottom="minor" ><m>(-1, -1)</m></cell>
       </row>
     </tabular>
   </table>
@@ -273,7 +273,7 @@
     <exercise label="IGT_INZ_CYU_findequil1"><statement><p>The following game has at least one pure strategy equilibrium, click on or circle the equilibrium point(s).
     </p></statement><areas><p>
 <table>
-        <tabular>
+        <tabular halign="center">
           <row>
         <cell></cell>
         <cell bottom="minor"><b>C</b></cell>
@@ -281,13 +281,13 @@
       </row>
       <row>
         <cell right="minor"><b>A</b></cell>
-        <cell right="minor" bottom="minor" halign="center"><area correct="yes"><m>(2, 2)</m></area></cell>
-        <cell right="minor" bottom="minor" halign="center"><area correct="no"><m>(1, 0)</m></area></cell>
+        <cell right="minor" bottom="minor" ><area correct="yes"><m>(2, 2)</m></area></cell>
+        <cell right="minor" bottom="minor" ><area correct="no"><m>(1, 0)</m></area></cell>
       </row>
       <row>
         <cell right="minor"><b>B</b></cell>
-        <cell right="minor" bottom="minor" halign="center"><area correct="no"><m>(0, 1)</m></area></cell>
-        <cell right="minor" bottom="minor" halign="center"><area correct="no"><m>(-1, -1)</m></area></cell>
+        <cell right="minor" bottom="minor" ><area correct="no"><m>(0, 1)</m></area></cell>
+        <cell right="minor" bottom="minor" ><area correct="no"><m>(-1, -1)</m></area></cell>
       </row>
       </tabular>
   </table>
@@ -313,7 +313,7 @@
 
     <exercise label="IGT_INZ_CYU_zerosum2"><statement correct="no"><p>True or False: The following game
         <table xml:id="T_NZmatrix2" >
-    <tabular>
+    <tabular halign="center">
       <row>
         <cell></cell>
         <cell bottom="minor"><b>C</b></cell>
@@ -321,13 +321,13 @@
       </row>
       <row>
         <cell right="minor"><b>A</b></cell>
-        <cell right="minor" bottom="minor" halign="center"><m>(2, 3)</m></cell>
-        <cell right="minor" bottom="minor" halign="center"><m>(1, -4)</m></cell>
+        <cell right="minor" bottom="minor" ><m>(2, 3)</m></cell>
+        <cell right="minor" bottom="minor" ><m>(1, -4)</m></cell>
       </row>
       <row>
         <cell right="minor"><b>B</b></cell>
-        <cell right="minor" bottom="minor" halign="center"><m>(-4, 1)</m></cell>
-        <cell right="minor" bottom="minor" halign="center"><m>(3, 2)</m></cell>
+        <cell right="minor" bottom="minor" ><m>(-4, 1)</m></cell>
+        <cell right="minor" bottom="minor" ><m>(3, 2)</m></cell>
       </row>
     </tabular>
   </table>
@@ -336,7 +336,7 @@
     <exercise label="IGT_INZ_CYU_findequil2"><statement><p>The following game has at least one pure strategy equilibrium, click on or circle the equilibrium point(s).
     </p></statement><areas><p>
 <table>
-        <tabular>
+        <tabular halign="center">
           <row>
         <cell></cell>
         <cell bottom="minor"><b>C</b></cell>
@@ -344,13 +344,13 @@
       </row>
       <row>
         <cell right="minor"><b>A</b></cell>
-        <cell right="minor" bottom="minor" halign="center"><area correct="yes"><m>(2, 3)</m></area></cell>
-        <cell right="minor" bottom="minor" halign="center"><area correct="no"><m>(1, -4)</m></area></cell>
+        <cell right="minor" bottom="minor" ><area correct="yes"><m>(2, 3)</m></area></cell>
+        <cell right="minor" bottom="minor" ><area correct="no"><m>(1, -4)</m></area></cell>
       </row>
       <row>
         <cell right="minor"><b>B</b></cell>
-        <cell right="minor" bottom="minor" halign="center"><area correct="no"><m>(-4, 1)</m></area></cell>
-        <cell right="minor" bottom="minor" halign="center"><area correct="yes"><m>(3, 2)</m></area></cell>
+        <cell right="minor" bottom="minor" ><area correct="no"><m>(-4, 1)</m></area></cell>
+        <cell right="minor" bottom="minor" ><area correct="yes"><m>(3, 2)</m></area></cell>
       </row>
       </tabular>
   </table>
@@ -388,7 +388,7 @@
     <p> We can adjust the payoff as in the following matrix. Click or circle any equilibruim points. 
     </p></statement><areas><p>
 <table xml:id="T_battleofmoviesvariation" >
-        <tabular>
+        <tabular halign="center">
           <row>
             <cell></cell>
             <cell></cell>
@@ -403,14 +403,14 @@
           <row>
             <cell>Bob</cell>
             <cell right="minor">Action</cell>
-            <cell right="minor" bottom="minor" halign="center"><area correct="yes"><m>(2, 1)</m></area></cell>
-            <cell right="minor" bottom="minor" halign="center"><area correct="no"><m>(1, -1)</m></area></cell>
+            <cell right="minor" bottom="minor" ><area correct="yes"><m>(2, 1)</m></area></cell>
+            <cell right="minor" bottom="minor" ><area correct="no"><m>(1, -1)</m></area></cell>
           </row>
           <row>
             <cell></cell>
             <cell right="minor">Comedy</cell>
-            <cell right="minor" bottom="minor" halign="center"><area correct="no"><m>(-3, -1)</m></area></cell>
-            <cell right="minor" bottom="minor" halign="center"><area correct="no"><m>(-2, 2)</m></area></cell>
+            <cell right="minor" bottom="minor" ><area correct="no"><m>(-3, -1)</m></area></cell>
+            <cell right="minor" bottom="minor" ><area correct="no"><m>(-2, 2)</m></area></cell>
           </row>
         </tabular>
       </table>

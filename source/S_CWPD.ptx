@@ -1,9 +1,7 @@
 
 <section xml:id="S_CWPD">
-  <title>A Class-Wide Experiment</title>
-  <p>
-    <idx><h>Class-Wide Prisoner's Dilemma</h></idx>
-  </p>
+  <title>A Class-Wide Experiment</title> <idx><h>Class-Wide Prisoner's Dilemma</h></idx><idx><h>Prisoner's Dilemma</h><h>multiplayer</h></idx>
+ 
 
   <p>
     We are going to look at a class-wide game.

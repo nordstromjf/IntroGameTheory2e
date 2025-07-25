@@ -35,13 +35,19 @@
     <p>
       The idea that players are self-interested is crucial to game theory. There are lots of other ways to play games, and those might be worth exploring. But to get started with game theory, we must make specific assumptions and develop the mathematical context from these assumptions.
     </p>
-
+    <assemblage xml:id="assumptions"><title>Basic Assumptions</title><idx><h>assumptions</h></idx>
     <p>
-      <em>Assumption 1:</em><idx><h>assumptions</h></idx> Players are self-interested. The goal is to win the most or lose the least. 
+      <dl>
+        <li><title>Players are self-interested.</title>  The goal is to win the most or lose the least. </li>
+        <li><title>Players are perfectly logical.</title>  A player will always take into account all available information and make the decision which maximizes his payoff. This includes knowing that his opponent is also making the best decision for herself.</li>
+      </dl></p>
+    </assemblage>
+
+      <p>As an example of how a player must assume that his opponent is also making the best decision for herself, in the cake cutting game a player wouldn't cut one large piece hoping that his opponent will by chance pick the smaller piece. A player must assume that her opponent will always choose the larger piece.
     </p>
 
     <p>
-      But what does it mean to win? A player's <term>payoff</term><idx><h>payoff</h></idx> is the amount (points, money, or anything a player values) a player receives for a particular outcome of a game. We say that the player's goal is to maximize his or her payoff. We should note that the maximum payoff for a player might even be negative, in which case the player wants the least negative (or closest to 0) payoff.
+      What does it mean to win? A player's <term>payoff</term><idx><h>payoff</h></idx> is the amount (points, money, or anything a player values) a player receives for a particular outcome of a game. We say that the player's goal is to maximize his or her payoff. We should note that the maximum payoff for a player might even be negative, in which case the player wants the least negative (or closest to 0) payoff.
     </p>
 
     <p>
@@ -66,13 +72,10 @@
       Keep in mind the the goal of each player is to win the most or lose the least. It will be tempting to look for strategies which simply assure a player of a positive payoff, but we need to make sure a player can't do even better with a different strategy.
     </p>
 
-    <p>
-      <em>Assumption 2:</em><idx><h>assumptions</h></idx> Players are perfectly logical. A player will always take into account all available information and make the decision which maximizes his payoff. This includes knowing that his opponent is also making the best decision for herself.
-      For example, in the cake cutting game a player wouldn't cut one large piece hoping that his opponent will by chance pick the smaller piece. A player must assume that her opponent will always choose the larger piece.
-    </p>
+    
 
     <p>
-      Now you may be wondering what these assumptions have to do with reality. After all, no one's perfect. But we often study ideal situations (especially in math!). For example, you've all studied geometry. Can anyone here draw a perfectly straight line or a perfectly round circle? Yet, you've all studied such objects!
+      Now you may be wondering what these assumptions have to do with reality. After all, no one's perfect. But we often study ideal situations (especially in math). For example, you've all studied geometry. Can anyone here draw a perfectly straight line or a perfectly round circle? Yet, you've all studied such objects.
     </p>
 
     <p>

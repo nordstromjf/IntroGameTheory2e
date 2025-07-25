@@ -34,7 +34,7 @@
       <p>
       Exchange your list of matrices with another student in the class. For each matrix you have been given
 
-      <ol marker="a">
+      <ol marker="(a)">
         <li><p>
             try to determine any dominated strategies, if they exist.
           </p></li>

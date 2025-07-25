@@ -1,11 +1,11 @@
 
 <section xml:id="S_AugMatrices">
   <title>Solving Systems of Equations Using Matrices</title>
-    <idx><h>augmented matrix</h></idx><idx><h>systems of equations</h></idx>
+    <idx><h>augmented matrix</h></idx><idx><h>system of equations</h></idx>
   
 
   <p>
-    In this section, we will see how to use matrices to solve systems of equations<idx><h>systems of equations</h></idx>. In both the graphical method and the expected value method, you have had to solve a system of equations. In the graphical method you had systems consisting of two lines such as <xref ref="E_twoeq"></xref>.
+    In this section, we will see how to use matrices to solve systems of equations<idx><h>system of equations</h></idx>. In both the graphical method and the expected value method, you have had to solve a system of equations. In the graphical method you had systems consisting of two lines such as <xref ref="E_twoeq"></xref>.
   </p>
 
   <example xml:id="E_twoeq">
@@ -71,7 +71,7 @@
   
     In this matrix  you have a column for the coefficients of each variable. So the coefficients of <m>x</m> are in the first column, the coefficients of <m>y</m> are in the second. The constant terms are always in the last column. Each row corresponds to one equation.</p></example>
 
-    <p>The matrix in <xref ref="E_equtomatrix"></xref> is called an <term>augmented matrix</term><idx><h>augmented matrix</h></idx>. It is really just a matrix, but we call it <em>augmented</em> if we include information from both sides of the equation (the coefficients and the constants).
+    <p>The matrix in <xref ref="E_equtomatrix"></xref> is called an <term>augmented matrix</term><idx><h>augmented matrix</h></idx><idx><h>matrix</h><h>augmented</h></idx>. It is really just a matrix, but we call it <em>augmented</em> if we include information from both sides of the equation (the coefficients and the constants).
   </p>
 
   <p>

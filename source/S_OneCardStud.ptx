@@ -6,7 +6,7 @@
   </p>
 
   <example xml:id="E_onecardstud">
-    <title>One-Card Stud Poker<idx><h>One-Card Stud Poker</h></idx></title>
+    <title>One-Card Stud Poker<idx><h>One-Card Stud Poker</h></idx><idx><h>game</h><h>One-Card Stud Poker</h></idx></title>
     <statement>
       
 
@@ -41,7 +41,7 @@
     </statement>
   </activity>
   <activity xml:id="A_dealandstrat">
-    <title>Relationship between the deal and the strategy</title>
+    <title>Effect of the deal</title>
     <statement>
       <p>
         Does the actual deal affect the choice of strategy?
@@ -114,7 +114,7 @@
     </statement>
   </activity>
   <p>
-    In order to calculate the payoff for [Bet, Bet], we need to take a weighted average of the possible payoff vectors in <xref ref="A_BBpayoffperdeal"></xref>. In particular, we will <q>weight</q> a payoff by the probability that it occurs. Recall that this is the <term>expected value</term><idx><h>expected value</h></idx>, <xref ref="D_expectedvalue"></xref>. We will calculate the expected value separately for each player.
+    In order to calculate the payoff for [Bet, Bet], we need to take a weighted average of the possible payoff vectors in <xref ref="A_BBpayoffperdeal"></xref>. In particular, we will <q>weight</q> a payoff by the probability that it occurs. Recall that this is the <term>expected value</term>, <xref ref="D_expectedvalue"></xref>. We will calculate the expected value separately for each player.
   </p>
   <activity xml:id="A_BBev1">
     <title>Player 1's expected value for [Bet, Bet]</title>
@@ -210,7 +210,7 @@
   </activity>
 
   <example xml:id="E_genonecardstud">
-    <title>Generalized One-Card Stud Poker<idx><h>Generalized One-Card Stud Poker</h></idx></title>
+    <title>Generalized One-Card Stud Poker<idx><h>generalized One-Card Stud Poker</h></idx><idx><h>game</h><h>generalized One-Card Stud Poker</h></idx></title>
     <statement>
       
       <p>

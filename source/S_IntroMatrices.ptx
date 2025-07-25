@@ -10,16 +10,15 @@
 
   <subsection xml:id="SS_MatchPennies">
     <title>Setting up a Payoff Matrix</title>
-    <p>
-     We begin with an example of the game of Matching Pennies<idx><h>Matching Pennies</h></idx>.
-    </p>
+    
 
     <p>
-      Suppose each player has two choices: Heads (H) or Tails (T). If they choose the same side of the coin, then Player 1 wins $1 from Player 2. If they don't match, then Player 1 loses $1 to Player 2. We can represent all the possible outcomes of the game with a <term>matrix</term><idx><h>game matrix</h></idx><idx><h>matrix</h></idx>.
-    </p>
+      We begin with an example of the game of Matching Pennies<idx><h>Matching Pennies</h></idx><idx><h>game</h><h>Matching Pennies</h></idx>, Suppose each player has two choices: Heads (H) or Tails (T). If they choose the same side of the coin, then Player 1 wins $1 from Player 2. If they don't match, then Player 1 loses $1 to Player 2.</p>
+      
+    
 
     <p>
-      Player 1's options will always correspond to the rows of the matrix, and Player 2's options will correspond to the columns. See <xref ref="T_template"></xref>.
+      We can represent all the possible outcomes of the game with a <term>matrix</term><idx><h>game matrix</h></idx><idx><h>matrix</h></idx>. Player 1's options will always correspond to the rows of the matrix, and Player 2's options will correspond to the columns. See <xref ref="T_template"></xref>.
     </p>
 
     <table xml:id="T_template" >
@@ -51,10 +50,10 @@
                 </tabular>
     </table>
 
-    <definition>
+    <definition xml:id="D_payoff"><idx><h>payoff</h></idx>
       <statement>
         <p>
-          A <term>payoff</term><idx><h>payoff</h></idx> is the amount a player receives for a given outcome of the game.
+          A <term>payoff</term> is the amount a player receives for a given outcome of the game.
         </p>
       </statement>
     </definition>
@@ -108,11 +107,11 @@
   <subsection xml:id="SS_revistassump">
     <title>Revisiting the Assumptions</title>
     <p>
-    Recall that we said there are two major assumptions we must make about our players:
+    Recall that we said there are two <xref ref="assumptions" text="title"/> we must make about our players:
 
     <ul>
       <li><p>
-          Our players are <em>self-interested</em><idx><h>self-interested</h></idx>. This means they will always prefer the largest  possible payoff. They will choose a strategy which maximizes their payoff.
+          Our players are <em>self-interested</em><idx><h>self-interest</h></idx>. This means they will always prefer the largest  possible payoff. They will choose a strategy which maximizes their payoff.
         </p></li>
 
       <li><p>
@@ -126,21 +125,21 @@
     </p>
     <activity xml:id="A_preferredpayoff">
       <title>Preferred payoffs</title>
-      <statement>
-        <ol marker="a">
-          <li><p>
-              Which payoff does a player prefer: 0, 2, or -2?
-            </p></li>
+      <introduction><p>Determine best payoff in each of the following.</p></introduction>
+        
+          <task><p>
+              Which payoff does a player prefer: <m>0, 2,</m> or <m>-2</m>?
+            </p></task>
 
-          <li><p>
-              Which payoff does a player prefer: -2, -5, or -10?
-            </p></li>
+          <task><p>
+              Which payoff does a player prefer: <m>-2, -5,</m> or <m>-10</m>?
+            </p></task>
 
-          <li><p>
-              Which payoff does a player prefer: -1, -3, or 0?
-            </p></li>
-        </ol>
-      </statement>
+          <task><p>
+              Which payoff does a player prefer: <m>-1, -3,</m> or <m>0</m>?
+            </p></task>
+       
+      
     </activity>
     <p>
       It may be strightforward to decide the best payoff for a player out of a list of values, and it would be great if a player could just determine the biggest value in the table and choose that strategy. However, when there are two players a player may have to choose a strategy more carefully, since Player 1 can only choose the row, and Player 2 can only choose the column. Thus, the outcome of the game depends on BOTH players.
@@ -188,33 +187,33 @@
 
     <activity xml:id="A_SolveSec2_2small">
       <title>Finding strategies</title>
-      <statement>
-        <ol marker="a">
-          <li><p>
+      <introduction><p>Use the game matrix given in <xref ref="T_matrixEx1Sec2_2"/>.</p></introduction>
+        
+          <task><p>
               Just by quickly looking at the matrix, which player appears to be able to win more than the other player? Does one player seem to have an advantage? Explain.
-            </p></li>
+            </p></task>
 
-          <li><p>
+          <task><p>
               Determine what each player should do. Explain your answer.
-            </p></li>
+            </p></task>
 
-          <li><p>
+          <task><p>
               Compare your answer in (b) to your answer in (a). Did the player you suggested in (a) actually win more than the other player?
-            </p></li>
+            </p></task>
 
-          <li><p>
+          <task><p>
               According to your answer in (b), does Player 1 end up with the largest possible payoff (for Player 1) in the matrix?
-            </p></li>
+            </p></task>
 
-          <li><p>
+          <task><p>
               According to your answer in (b), does Player 2 end up with the largest possible payoff (for Player 2) in the matrix?
-            </p></li>
+            </p></task>
 
-          <li><p>
+          <task><p>
               Do you still think a player has an advantage in this game? Is it the same answer as in (a)?
-            </p></li>
-        </ol>
-      </statement>
+            </p></task>
+        
+      
     </activity>
     <example xml:id="E_Sec2_2large">
       <title>A <m>3\times 3</m> Game</title>
@@ -268,33 +267,32 @@
     </example>
     <activity xml:id="A_SolveSec2_2large">
       <title>More practice finding strategies</title>
-      <statement>
-        <ol marker="a">
-          <li><p>
+      <introduction><p>Use the game matrix given in <xref ref="T_matrixEx2Sec2_2"/>.</p></introduction>
+        
+          <task><p>
               Just by quickly looking at the matrix, which player appears to be able to win more than the other player? Does one player seem to have an advantage? Explain.
-            </p></li>
+            </p></task>
 
-          <li><p>
+          <task><p>
               Determine what each player should do. Explain your answer.
-            </p></li>
+            </p></task>
 
-          <li><p>
+          <task><p>
               Compare your answer in (b) to your answer in (a). Did the player you suggested in (a) actually win more than the other player?
-            </p></li>
+            </p></task>
 
-          <li><p>
+          <task><p>
               According to your answer in (b), does Player 1 end up with the largest possible payoff (for Player 1) in the matrix?
-            </p></li>
+            </p></task>
 
-          <li><p>
+          <task><p>
               According to your answer in (b), does Player 2 end up with the largest possible payoff (for Player 2) in the matrix?
-            </p></li>
+            </p></task>
 
-          <li><p>
+          <task><p>
               Do you still think a player has an advantage in this game? Is it the same answer as in (a)?
-            </p></li>
-        </ol>
-      </statement>
+            </p></task>
+      
     </activity>
     <p>
       This chapter has introduced you to who the players are and how to organize strategies and payoffs into a matrix. In the next chapter we will study some methods for how a player can determine his or her best strategy.
@@ -304,31 +302,31 @@
       <title>Check Your Understanding</title>
       
 
-      <exercise label="IGT_intromatrices_CYU_prefpayoff1"><statement><p> Which payoff does a player prefer: 3, 1, or -5?</p></statement><choices randomize="yes">
+      <exercise label="IGT_intromatrices_CYU_prefpayoff1"><statement><p> Which payoff does a player prefer: <m>3, 1,</m> or <m>-5</m>?</p></statement><choices randomize="yes">
       <choice correct="yes"><statement><m>3</m></statement>
-      <feedback><p>Correct. 3 is the largest payoff.</p></feedback></choice>
+      <feedback><p>Correct. <m>3</m> is the largest payoff.</p></feedback></choice>
       <choice><statement><m>1</m></statement>
-     <feedback><p>1 is not the largest payoff.</p></feedback></choice>
+     <feedback><p><m>1</m> is not the largest payoff.</p></feedback></choice>
       <choice><statement><m>-5</m></statement>
-      <feedback><p>-5 is not the largest payoff.</p></feedback></choice>
+      <feedback><p><m>-5</m> is not the largest payoff.</p></feedback></choice>
     </choices>
       <answer>3</answer></exercise>
 
-      <exercise label="IGT_intromatrices_CYU_prefpayoff2"><statement><p> Which payoff does a player prefer: -5, -1, or -10?</p></statement><choices randomize="yes">
+      <exercise label="IGT_intromatrices_CYU_prefpayoff2"><statement><p> Which payoff does a player prefer: <m>-5, -1,</m> or <m>-10</m>?</p></statement><choices randomize="yes">
       <choice correct="yes"><statement><m>-1</m></statement>
-      <feedback><p>Correct. -1 is the largest payoff.</p></feedback></choice>
+      <feedback><p>Correct. <m>-1</m> is the largest payoff.</p></feedback></choice>
       <choice><statement><m>-5</m></statement>
-     <feedback><p>-5 is not the largest payoff.</p></feedback></choice>
+     <feedback><p><m>-5</m> is not the largest payoff.</p></feedback></choice>
       <choice><statement><m>-10</m></statement>
       <feedback><p><m>-10</m> is not the largest payoff.</p></feedback></choice>
     </choices>
       <answer>-1</answer></exercise>
 
-      <exercise label="IGT_intromatrices_CYU_prefpayoff3"><statement><p> Which payoff does a player prefer: 1/2, 0, or 5/6?</p></statement><choices randomize="yes">
+      <exercise label="IGT_intromatrices_CYU_prefpayoff3"><statement><p> Which payoff does a player prefer: <m>1/2, 0,</m> or <m>5/6</m>?</p></statement><choices randomize="yes">
       <choice correct="yes"><statement><m>5/6</m></statement>
-      <feedback><p>Correct. 5/6 is the largest payoff.</p></feedback></choice>
+      <feedback><p>Correct. <m>5/6</m> is the largest payoff.</p></feedback></choice>
       <choice><statement><m>0</m></statement>
-     <feedback><p>0 is not the largest payoff.</p></feedback></choice>
+     <feedback><p><m>0</m> is not the largest payoff.</p></feedback></choice>
       <choice><statement><m>1/2</m></statement>
       <feedback><p><m>1/2</m> is not the largest payoff.</p></feedback></choice>
     </choices>

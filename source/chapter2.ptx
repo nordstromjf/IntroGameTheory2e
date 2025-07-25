@@ -5,6 +5,9 @@
 
     <sidebyside width="30%" margins="auto">
     <image width="30%" source="images/image-2.svg">
+       <shortdescription>
+            a 2 by 2 grid in which the first and fourth squares are blue, the second fades left to right yellow to red, the third fades left to right red to yellow
+      </shortdescription>
       <latex-image>
         <![CDATA[\begin{tikzpicture}
         \draw[step=1cm] (0,0) grid (2,2);

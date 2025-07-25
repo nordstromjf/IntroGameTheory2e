@@ -6,7 +6,7 @@
   </p>
 
   <example xml:id="G_liarspoker">
-    <title>Liar's Poker<idx><h>Liar's Poker</h></idx></title>
+    <title>Liar's Poker<idx><h>Liar's Poker</h></idx><idx><h>game</h><h>Liar's Poker</h></idx></title>
     <statement>
       <p>
          We begin with a deck of cards which has 50% Aces (A) and 50% Kings (K) and two players. Aces rank higher than Kings.</p>

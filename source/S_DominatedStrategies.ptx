@@ -16,7 +16,7 @@
 
       <table xml:id="T_smallexample" >
         <title>The payoff matrix for <xref ref="E_domstrat1"></xref>.</title>
-        <tabular>
+        <tabular halign="center">
           <row>
             <cell></cell>
             <cell colspan="2" halign="center" bottom="minor">Player 2</cell>
@@ -47,13 +47,13 @@
           </row>
           <row>
             <cell right="minor">Player 1</cell>
-            <cell bottom="minor" right="minor" halign="center">1</cell>
-            <cell bottom="minor" right="minor" halign="center">0</cell>
+            <cell bottom="minor" right="minor" halign="center"><m>1</m></cell>
+            <cell bottom="minor" right="minor" halign="center"><m>0</m></cell>
           </row>
           <row>
             <cell right="minor"></cell>
-            <cell bottom="minor" right="minor" halign="center">-1</cell>
-            <cell bottom="minor" right="minor" halign="center">-2</cell>
+            <cell bottom="minor" right="minor" halign="center"><m>-1</m></cell>
+            <cell bottom="minor" right="minor" halign="center"><m>-2</m></cell>
           </row>
         </tabular>
       </table>
@@ -84,13 +84,13 @@
           </row>
           <row>
             <cell right="minor">Player 1</cell>
-            <cell bottom="minor" right="minor" halign="center">-1</cell>
-            <cell bottom="minor" right="minor" halign="center">0</cell>
+            <cell bottom="minor" right="minor" halign="center"><m>-1</m></cell>
+            <cell bottom="minor" right="minor" halign="center"><m>0</m></cell>
           </row>
           <row>
             <cell right="minor"></cell>
-            <cell bottom="minor" right="minor" halign="center">1</cell>
-            <cell bottom="minor" right="minor" halign="center">2</cell>
+            <cell bottom="minor" right="minor" halign="center"><m>1</m></cell>
+            <cell bottom="minor" right="minor" halign="center"><m>2</m></cell>
           </row>
         </tabular>
         </table>
@@ -150,15 +150,15 @@
           </row>
           <row>
             <cell right="minor">Player 1</cell>
-            <cell bottom="minor" right="minor" halign="center">1</cell>
-            <cell bottom="minor" right="minor" halign="center">0</cell>
-            <cell bottom="minor" right="minor" halign="center">2</cell>
+            <cell bottom="minor" right="minor" halign="center"><m>1</m></cell>
+            <cell bottom="minor" right="minor" halign="center"><m>0</m></cell>
+            <cell bottom="minor" right="minor" halign="center"><m>2</m></cell>
           </row>
           <row>
             <cell right="minor"></cell>
-            <cell bottom="minor" right="minor" halign="center">-1</cell>
-            <cell bottom="minor" right="minor" halign="center">-2</cell>
-            <cell bottom="minor" right="minor" halign="center">2</cell>
+            <cell bottom="minor" right="minor" halign="center"><m>-1</m></cell>
+            <cell bottom="minor" right="minor" halign="center"><m>-2</m></cell>
+            <cell bottom="minor" right="minor" halign="center"><m>2</m></cell>
           </row>
         </tabular>
       </table>
@@ -185,15 +185,15 @@
           </row>
           <row>
             <cell right="minor">Player 1</cell>
-            <cell bottom="minor" right="minor">1</cell>
-            <cell bottom="minor" right="minor">0</cell>
-            <cell bottom="minor" right="minor">2</cell>
+            <cell bottom="minor" right="minor" halign="center"><m>1</m></cell>
+            <cell bottom="minor" right="minor" halign="center"><m>0</m></cell>
+            <cell bottom="minor" right="minor" halign="center"><m>2</m></cell>
           </row>
           <row>
             <cell right="minor"></cell>
-            <cell bottom="minor" right="minor">-1</cell>
-            <cell bottom="minor" right="minor">-2</cell>
-            <cell bottom="minor" right="minor">3</cell>
+            <cell bottom="minor" right="minor" halign="center"><m>-1</m></cell>
+            <cell bottom="minor" right="minor" halign="center"><m>-2</m></cell>
+            <cell bottom="minor" right="minor" halign="center"><m>3</m></cell>
           </row>
         </tabular>
       </table>
@@ -205,13 +205,13 @@
   </example>
 
   <p>
-    In <xref ref="E_domstrat2"></xref>, no matter what Player 2 does, Player 1 would always choose Row 1, since every payoff in Row 1 is greater than or equal to the corresponding payoff in Row 2 (<m>1\ge -1</m>, <m>0\ge -2</m>, <m>2\ge 2</m>). In <xref ref="E_domstrat3"></xref>, this is not the case: if Player 2 were to choose Column 3, then Player 1 would prefer Row 2. In <xref ref="E_domstrat2"></xref> we would say that Row 1 <term>dominates</term><idx><h>dominates</h></idx> Row 2.
+    In <xref ref="E_domstrat2"></xref>, no matter what Player 2 does, Player 1 would always choose Row 1, since every payoff in Row 1 is greater than or equal to the corresponding payoff in Row 2 (<m>1\ge -1</m>, <m>0\ge -2</m>, <m>2\ge 2</m>). In <xref ref="E_domstrat3"></xref>, this is not the case: if Player 2 were to choose Column 3, then Player 1 would prefer Row 2. In <xref ref="E_domstrat2"></xref> we would say that Row 1 <term>dominates</term> Row 2.
   </p>
 
-  <definition>
+  <definition xml:id="D_dominates"><idx><h>dominates</h></idx><idx><h>dominated by</h></idx><idx><h>dominated strategy</h></idx><idx><h>strategy</h><h>dominated</h></idx>
     <statement>
       <p>
-        A strategy <m>X</m> <term>dominates</term><idx><h>dominates</h></idx> a strategy <m>Y</m> if every entry for <m>X</m> is greater than or equal to the corresponding entry for <m>Y</m>. In this case, we say <m>Y</m> is <term>dominated by</term><idx><h>dominated by</h></idx><idx><h>dominated strategy</h></idx> <m>X</m>.
+        A strategy <m>X</m> <term>dominates</term> a strategy <m>Y</m> if every entry for <m>X</m> is greater than or equal to the corresponding entry for <m>Y</m>. In this case, we say <m>Y</m> is <term>dominated by</term> <m>X</m>.
       </p>
       <p>
         If strategy <m>X</m> dominates stratgy <m>Y</m>, we can write <m>X\succ Y</m>.
@@ -259,6 +259,9 @@
 <figure xml:id="F_strikerow2Ex2">
     <caption>Row 2 is dominated by Row 1.</caption>
     <image width="30%" source="images/image-3.svg">
+       <shortdescription>
+           the game matrix from the example with a line through the second row
+      </shortdescription>
       <latex-image>
         <![CDATA[\begin{tikzpicture}
         \draw[step=1cm] (0,0) grid (3,2);
@@ -309,6 +312,9 @@
 <figure xml:id="F_strikecol3Ex3">
     <caption>Column 3 is dominated by Column 2.</caption>
     <image width="30%" source="images/image-4.svg">
+      <shortdescription>
+           the game matrix from the example with a line through the second column
+      </shortdescription>
       <latex-image>
         <![CDATA[\begin{tikzpicture}
         \draw[step=1cm] (0,0) grid (3,2);
@@ -354,6 +360,9 @@
 <figure xml:id="F_strikerow2Ex3">
     <caption>After eliminating Column 3, Row 2 is dominated by Row 1.</caption>
     <image width="30%" source="images/image-5.svg">
+      <shortdescription>
+           the game matrix from the example with a line through the second row and a line through the second column
+      </shortdescription>
       <latex-image>
         <![CDATA[ \begin{tikzpicture}
         \draw[step=1cm] (0,0) grid (3,2);
@@ -383,9 +392,9 @@
     </statement>
   </activity>
 
-  <assemblage xml:id="elimdomstrategies"><title>Eliminating Dominated Strategies</title>
+  <assemblage xml:id="elimdomstrategies"><title>Eliminating Dominated Strategies</title><idx><h>dominated strategy</h><h>eliminating</h></idx>
   <p>
-    Given a zero-sum game matrix with Player 1's payoffs. We find a <term>dominated strategy</term><idx><h>dominated strategy</h></idx> with the following process. Note, you can compare either rows or columns first.
+    Given a zero-sum game matrix with Player 1's payoffs. We find a <term>dominated strategy</term> with the following process. Note, you can compare either rows or columns first.
     <ol>
       <li><p>Choose two rows.</p></li>
       <li><p>Compare the corresponding values in the two rows. </p></li>
@@ -432,42 +441,42 @@
           <row>
             <cell></cell>
             <cell></cell>
-            <cell bottom="minor">W</cell>
-            <cell bottom="minor">X</cell>
-            <cell bottom="minor">Y</cell>
-            <cell bottom="minor">Z</cell>
+            <cell bottom="minor" halign="center">W</cell>
+            <cell bottom="minor" halign="center">X</cell>
+            <cell bottom="minor" halign="center">Y</cell>
+            <cell bottom="minor" halign="center">Z</cell>
           </row>
           <row>
             <cell></cell>
-            <cell right="minor">A</cell>
-            <cell right="minor" bottom="minor">1</cell>
-            <cell right="minor" bottom="minor">0</cell>
-            <cell right="minor" bottom="minor">0</cell>
-            <cell right="minor" bottom="minor">10</cell>
+            <cell right="minor" >A</cell>
+            <cell right="minor" bottom="minor" halign="center"><m>1</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>0</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>0</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>10</m></cell>
           </row>
           <row>
             <cell>Player 1</cell>
             <cell right="minor">B</cell>
-            <cell right="minor" bottom="minor">-1</cell>
-            <cell right="minor" bottom="minor">0</cell>
-            <cell right="minor" bottom="minor">-2</cell>
-            <cell right="minor" bottom="minor">9</cell>
+            <cell right="minor" bottom="minor" halign="center"><m>-1</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>0</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>-2</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>9</m></cell>
           </row>
           <row>
             <cell></cell>
             <cell right="minor">C</cell>
-            <cell right="minor" bottom="minor">1</cell>
-            <cell right="minor" bottom="minor">1</cell>
-            <cell right="minor" bottom="minor">1</cell>
-            <cell right="minor" bottom="minor">8</cell>
+            <cell right="minor" bottom="minor" halign="center"><m>1</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>1</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>1</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>8</m></cell>
           </row>
           <row>
             <cell></cell>
             <cell right="minor">D</cell>
-            <cell right="minor" bottom="minor">-2</cell>
-            <cell right="minor" bottom="minor">0</cell>
-            <cell right="minor" bottom="minor">0</cell>
-            <cell right="minor" bottom="minor">7</cell>
+            <cell right="minor" bottom="minor" halign="center"><m>-2</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>0</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>0</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>7</m></cell>
           </row>
         </tabular>
       </table>
@@ -491,42 +500,42 @@
           <row>
             <cell></cell>
             <cell></cell>
-            <cell bottom="minor">W</cell>
-            <cell bottom="minor">X</cell>
-            <cell bottom="minor">Y</cell>
-            <cell bottom="minor">Z</cell>
+            <cell bottom="minor" halign="center">W</cell>
+            <cell bottom="minor" halign="center">X</cell>
+            <cell bottom="minor" halign="center">Y</cell>
+            <cell bottom="minor" halign="center">Z</cell>
           </row>
           <row>
             <cell></cell>
             <cell right="minor">A</cell>
-            <cell right="minor" bottom="minor">1</cell>
-            <cell right="minor" bottom="minor">2</cell>
-            <cell right="minor" bottom="minor">3</cell>
-            <cell right="minor" bottom="minor">4</cell>
+            <cell right="minor" bottom="minor" halign="center"><m>1</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>2</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>3</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>4</m></cell>
           </row>
           <row>
             <cell>Player 1</cell>
             <cell right="minor">B</cell>
-            <cell right="minor" bottom="minor">0</cell>
-            <cell right="minor" bottom="minor">-1</cell>
-            <cell right="minor" bottom="minor">-0</cell>
-            <cell right="minor" bottom="minor">5</cell>
+            <cell right="minor" bottom="minor" halign="center"><m>0</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>-1</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>0</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>5</m></cell>
           </row>
           <row>
             <cell></cell>
             <cell right="minor">C</cell>
-            <cell right="minor" bottom="minor">-1</cell>
-            <cell right="minor" bottom="minor">3</cell>
-            <cell right="minor" bottom="minor">2</cell>
-            <cell right="minor" bottom="minor">4</cell>
+            <cell right="minor" bottom="minor" halign="center"><m>-1</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>3</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>2</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>4</m></cell>
           </row>
           <row>
             <cell></cell>
             <cell right="minor">D</cell>
-            <cell right="minor" bottom="minor">0</cell>
-            <cell right="minor" bottom="minor">1</cell>
-            <cell right="minor" bottom="minor">-1</cell>
-            <cell right="minor" bottom="minor">1</cell>
+            <cell right="minor" bottom="minor" halign="center"><m>0</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>1</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>-1</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>1</m></cell>
           </row>
         </tabular>
       </table>
@@ -550,42 +559,42 @@
           <row>
             <cell></cell>
             <cell></cell>
-            <cell bottom="minor">W</cell>
-            <cell bottom="minor">X</cell>
-            <cell bottom="minor">Y</cell>
-            <cell bottom="minor">Z</cell>
+            <cell bottom="minor" halign="center">W</cell>
+            <cell bottom="minor" halign="center">X</cell>
+            <cell bottom="minor" halign="center">Y</cell>
+            <cell bottom="minor" halign="center">Z</cell>
           </row>
           <row>
             <cell></cell>
             <cell right="minor">A</cell>
-            <cell right="minor" bottom="minor">-2</cell>
-            <cell right="minor" bottom="minor">0</cell>
-            <cell right="minor" bottom="minor">3</cell>
-            <cell right="minor" bottom="minor">20</cell>
+            <cell right="minor" bottom="minor" halign="center"><m>-2</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>0</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>3</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>20</m></cell>
           </row>
           <row>
             <cell>Player 1</cell>
             <cell right="minor">B</cell>
-            <cell right="minor" bottom="minor">1</cell>
-            <cell right="minor" bottom="minor">-2</cell>
-            <cell right="minor" bottom="minor">-3</cell>
-            <cell right="minor" bottom="minor">0</cell>
+            <cell right="minor" bottom="minor" halign="center"><m>1</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>-2</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>-3</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>0</m></cell>
           </row>
           <row>
             <cell></cell>
             <cell right="minor">C</cell>
-            <cell right="minor" bottom="minor">10</cell>
-            <cell right="minor" bottom="minor">-10</cell>
-            <cell right="minor" bottom="minor">-1</cell>
-            <cell right="minor" bottom="minor">1</cell>
+            <cell right="minor" bottom="minor" halign="center"><m>10</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>-10</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>-1</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>1</m></cell>
           </row>
           <row>
             <cell></cell>
             <cell right="minor">D</cell>
-            <cell right="minor" bottom="minor">0</cell>
-            <cell right="minor" bottom="minor">0</cell>
-            <cell right="minor" bottom="minor">10</cell>
-            <cell right="minor" bottom="minor">15</cell>
+            <cell right="minor" bottom="minor" halign="center"><m>0</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>0</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>10</m></cell>
+            <cell right="minor" bottom="minor" halign="center"><m>15</m></cell>
           </row>
         </tabular>
       </table>
@@ -617,34 +626,34 @@
           <row>
             <cell></cell>
             <cell right="minor">A</cell>
-            <cell right="minor" bottom="minor">-2</cell>
-            <cell right="minor" bottom="minor">0</cell>
-            <cell right="minor" bottom="minor">3</cell>
-            <cell right="minor" bottom="minor">20</cell>
+            <cell right="minor" bottom="minor"><m>-2</m></cell>
+            <cell right="minor" bottom="minor"><m>0</m></cell>
+            <cell right="minor" bottom="minor"><m>3</m></cell>
+            <cell right="minor" bottom="minor"><m>20</m></cell>
           </row>
           <row>
             <cell>Player 1</cell>
             <cell right="minor">B</cell>
-            <cell right="minor" bottom="minor">1</cell>
-            <cell right="minor" bottom="minor">-2</cell>
-            <cell right="minor" bottom="minor">-5</cell>
-            <cell right="minor" bottom="minor">-3</cell>
+            <cell right="minor" bottom="minor"><m>1</m></cell>
+            <cell right="minor" bottom="minor"><m>-2</m></cell>
+            <cell right="minor" bottom="minor"><m>-5</m></cell>
+            <cell right="minor" bottom="minor"><m>-3</m></cell>
           </row>
           <row>
             <cell></cell>
             <cell right="minor">C</cell>
-            <cell right="minor" bottom="minor">10</cell>
-            <cell right="minor" bottom="minor">-10</cell>
-            <cell right="minor" bottom="minor">-1</cell>
-            <cell right="minor" bottom="minor">1</cell>
+            <cell right="minor" bottom="minor"><m>10</m></cell>
+            <cell right="minor" bottom="minor"><m>-10</m></cell>
+            <cell right="minor" bottom="minor"><m>-1</m></cell>
+            <cell right="minor" bottom="minor"><m>1</m></cell>
           </row>
           <row>
             <cell></cell>
             <cell right="minor">D</cell>
-            <cell right="minor" bottom="minor">0</cell>
-            <cell right="minor" bottom="minor">0</cell>
-            <cell right="minor" bottom="minor">10</cell>
-            <cell right="minor" bottom="minor">8</cell>
+            <cell right="minor" bottom="minor"><m>0</m></cell>
+            <cell right="minor" bottom="minor"><m>0</m></cell>
+            <cell right="minor" bottom="minor"><m>10</m></cell>
+            <cell right="minor" bottom="minor"><m>8</m></cell>
           </row>
         </tabular>
       </table>
@@ -713,18 +722,18 @@
     </statement>
   </activity>
   <p>
-    The strategies we found using the above method have a more official name. Player 1's strategy is called the <term>maximin</term><idx><h>maximin strategy</h></idx> strategy. Player 1 is maximizing the minimum values from each row. Player 2's strategy is called the <term>minimax</term><idx><h>minimax</h></idx> strategy. Player 2 is minimizing the maximum values from each column. Notice, we can find the maximin and minimax strategies for any zero-sum game. But do our players always want to use these strategies? Will they always result in an equilibrium pair? The next five activities explore these questions.
+    The strategies we found using the above method have a more official name. Player 1's strategy is called the <term>maximin</term><idx><h>maximin strategy</h></idx><idx><h>strategy</h><h>maximin</h></idx> strategy. Player 1 is maximizing the minimum values from each row. Player 2's strategy is called the <term>minimax</term><idx><h>minimax</h></idx><idx><h>strategy</h><h>minimax</h></idx> strategy. Player 2 is minimizing the maximum values from each column. Notice, we can find the maximin and minimax strategies for any zero-sum game. But do our players always want to use these strategies? Will they always result in an equilibrium pair? The next five activities explore these questions.
   </p>
-  <assemblage xml:id="maximinstrategy"><title>Finding the Maximin and Minimax Strategies</title>
+  <assemblage xml:id="maximinstrategy"><title>Finding the Maximin and Minimax Strategies</title><idx><h>maximin strategy</h><h>finding</h></idx><idx><h>minimax strategy</h><h>finding</h></idx>
   <p>
-    Given a zero-sum game matrix with Player 1's payoffs. We find the <term>maximin strategy</term><idx><h>maximin strategy</h></idx> with the following process.
+    Given a zero-sum game matrix with Player 1's payoffs. We find the <term>maximin strategy</term> with the following process.
     <ol>
       <li><p>Find the smallest value in each row.</p></li>
       <li><p>From the smallest values you found in step (1), choose the largest.</p></li>
       <li><p>Player 1 chooses the row corresponding to the value found in (2).</p></li>
     </ol></p>
     <p>
-    Given a zero-sum game matrix with Player 1's payoffs. We find the <term>minimax strategy</term><idx><h>minimax strategy</h></idx> with the following process.
+    Given a zero-sum game matrix with Player 1's payoffs. We find the <term>minimax strategy</term> with the following process.
     <ol>
       <li><p>Find the largest value in each column.</p></li>
       <li><p>From the largest values you found in step (1), choose the smallest.</p></li>
@@ -758,34 +767,34 @@
           <row>
             <cell></cell>
             <cell right="minor">A</cell>
-            <cell right="minor" bottom="minor">-2</cell>
-            <cell right="minor" bottom="minor">0</cell>
-            <cell right="minor" bottom="minor">3</cell>
-            <cell right="minor" bottom="minor">20</cell>
+            <cell right="minor" bottom="minor"><m>-2</m></cell>
+            <cell right="minor" bottom="minor"><m>0</m></cell>
+            <cell right="minor" bottom="minor"><m>3</m></cell>
+            <cell right="minor" bottom="minor"><m>20</m></cell>
           </row>
           <row>
             <cell>Player 1</cell>
             <cell right="minor">B</cell>
-            <cell right="minor" bottom="minor">1</cell>
-            <cell right="minor" bottom="minor">2</cell>
-            <cell right="minor" bottom="minor">-3</cell>
-            <cell right="minor" bottom="minor">0</cell>
+            <cell right="minor" bottom="minor"><m>1</m></cell>
+            <cell right="minor" bottom="minor"><m>2</m></cell>
+            <cell right="minor" bottom="minor"><m>-3</m></cell>
+            <cell right="minor" bottom="minor"><m>0</m></cell>
           </row>
           <row>
             <cell></cell>
             <cell right="minor">C</cell>
-            <cell right="minor" bottom="minor">10</cell>
-            <cell right="minor" bottom="minor">-10</cell>
-            <cell right="minor" bottom="minor">-1</cell>
-            <cell right="minor" bottom="minor">1</cell>
+            <cell right="minor" bottom="minor"><m>10</m></cell>
+            <cell right="minor" bottom="minor"><m>-10</m></cell>
+            <cell right="minor" bottom="minor"><m>-1</m></cell>
+            <cell right="minor" bottom="minor"><m>1</m></cell>
           </row>
           <row>
             <cell></cell>
             <cell right="minor">D</cell>
-            <cell right="minor" bottom="minor">0</cell>
-            <cell right="minor" bottom="minor">0</cell>
-            <cell right="minor" bottom="minor">10</cell>
-            <cell right="minor" bottom="minor">15</cell>
+            <cell right="minor" bottom="minor"><m>0</m></cell>
+            <cell right="minor" bottom="minor"><m>0</m></cell>
+            <cell right="minor" bottom="minor"><m>10</m></cell>
+            <cell right="minor" bottom="minor"><m>15</m></cell>
           </row>
         </tabular>
       </table>
@@ -831,29 +840,29 @@
 
       <exercise label="IGT_strat_CYU_exdomstratrow"><statement><p>Suppose we are looking for dominated strategies in the following matrix.
 <table xml:id="T_exdomstratrow" >
-        <tabular>
+        <tabular halign="center">
           <row>
             <cell></cell>
             <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
           </row>
           <row>
             <cell right="minor">Player 1</cell>
-            <cell bottom="minor" right="minor">-1</cell>
-            <cell bottom="minor" right="minor">0</cell>
-            <cell bottom="minor" right="minor">2</cell>
+            <cell bottom="minor" right="minor"><m>-1</m></cell>
+            <cell bottom="minor" right="minor"><m>0</m></cell>
+            <cell bottom="minor" right="minor"><m>2</m></cell>
           </row>
           <row>
             <cell right="minor"></cell>
-            <cell bottom="minor" right="minor">5</cell>
-            <cell bottom="minor" right="minor">-2</cell>
-            <cell bottom="minor" right="minor">1</cell>
+            <cell bottom="minor" right="minor"><m>5</m></cell>
+            <cell bottom="minor" right="minor"><m>-2</m></cell>
+            <cell bottom="minor" right="minor"><m>1</m></cell>
           </row>
 
           <row>
             <cell right="minor"></cell>
-            <cell bottom="minor" right="minor">0</cell>
-            <cell bottom="minor" right="minor">1</cell>
-            <cell bottom="minor" right="minor">4</cell>
+            <cell bottom="minor" right="minor"><m>0</m></cell>
+            <cell bottom="minor" right="minor"><m>1</m></cell>
+            <cell bottom="minor" right="minor"><m>4</m></cell>
           </row>
         </tabular>
       </table>
@@ -891,29 +900,29 @@
 
       <exercise label="IGT_strat_CYU_exdomstrat1"><statement><p>Suppose we are looking for dominated strategies in the following matrix.
 <table xml:id="T_exdomstrat1" >
-        <tabular>
+        <tabular halign="center">
           <row>
             <cell></cell>
             <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
           </row>
           <row>
             <cell right="minor">Player 1</cell>
-            <cell bottom="minor" right="minor">-2</cell>
-            <cell bottom="minor" right="minor">-1</cell>
-            <cell bottom="minor" right="minor">0</cell>
+            <cell bottom="minor" right="minor"><m>-2</m></cell>
+            <cell bottom="minor" right="minor"><m>-1</m></cell>
+            <cell bottom="minor" right="minor"><m>0</m></cell>
           </row>
           <row>
             <cell right="minor"></cell>
-            <cell bottom="minor" right="minor">0</cell>
-            <cell bottom="minor" right="minor">2</cell>
-            <cell bottom="minor" right="minor">-1</cell>
+            <cell bottom="minor" right="minor"><m>0</m></cell>
+            <cell bottom="minor" right="minor"><m>2</m></cell>
+            <cell bottom="minor" right="minor"><m>-1</m></cell>
           </row>
 
           <row>
             <cell right="minor"></cell>
-            <cell bottom="minor" right="minor">1</cell>
-            <cell bottom="minor" right="minor">3</cell>
-            <cell bottom="minor" right="minor">-4</cell>
+            <cell bottom="minor" right="minor"><m>1</m></cell>
+            <cell bottom="minor" right="minor"><m>3</m></cell>
+            <cell bottom="minor" right="minor"><m>-4</m></cell>
           </row>
         </tabular>
       </table>
@@ -940,29 +949,29 @@
 
       <exercise label="IGT_strat_CYU_exdomstrat2"><statement><p>Suppose we are looking for dominated strategies in the following matrix.
 <table xml:id="T_exdomstrat2" >
-        <tabular>
+        <tabular halign="center">
           <row>
             <cell></cell>
             <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
           </row>
           <row>
             <cell right="minor">Player 1</cell>
-            <cell bottom="minor" right="minor">3</cell>
-            <cell bottom="minor" right="minor">0</cell>
-            <cell bottom="minor" right="minor">-1</cell>
+            <cell bottom="minor" right="minor"><m>3</m></cell>
+            <cell bottom="minor" right="minor"><m>0</m></cell>
+            <cell bottom="minor" right="minor"><m>-1</m></cell>
           </row>
           <row>
             <cell right="minor"></cell>
-            <cell bottom="minor" right="minor">1</cell>
-            <cell bottom="minor" right="minor">2</cell>
-            <cell bottom="minor" right="minor">-3</cell>
+            <cell bottom="minor" right="minor"><m>1</m></cell>
+            <cell bottom="minor" right="minor"><m>2</m></cell>
+            <cell bottom="minor" right="minor"><m>-3</m></cell>
           </row>
 
           <row>
             <cell right="minor"></cell>
-            <cell bottom="minor" right="minor">1</cell>
-            <cell bottom="minor" right="minor">0</cell>
-            <cell bottom="minor" right="minor">3</cell>
+            <cell bottom="minor" right="minor"><m>1</m></cell>
+            <cell bottom="minor" right="minor"><m>0</m></cell>
+            <cell bottom="minor" right="minor"><m>3</m></cell>
           </row>
         </tabular>
       </table>
@@ -991,29 +1000,29 @@
       <task label="IGT_strat_CYU_maximin_task_a"><statement><p> Click on or circle the smallest value in each row.</p></statement>
       <areas><p>
 <table xml:id="T_exmaxmin1" >
-        <tabular>
+        <tabular halign="center">
           <row>
             <cell></cell>
             <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
           </row>
           <row>
             <cell right="minor">Player 1</cell>
-            <cell bottom="minor" right="minor"><area correct="no">3</area></cell>
-            <cell bottom="minor" right="minor"><area correct="no">0</area></cell>
-            <cell bottom="minor" right="minor"><area correct="yes">-1</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>3</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>0</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="yes"><m>-1</m></area></cell>
           </row>
           <row>
             <cell right="minor"></cell>
-            <cell bottom="minor" right="minor"><area correct="no">1</area></cell>
-            <cell bottom="minor" right="minor"><area correct="no">2</area></cell>
-            <cell bottom="minor" right="minor"><area correct="yes">-3</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>1</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>2</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="yes"><m>-3</m></area></cell>
           </row>
 
           <row>
             <cell right="minor"></cell>
-            <cell bottom="minor" right="minor"><area correct="no">1</area></cell>
-            <cell bottom="minor" right="minor"><area correct="yes">0</area></cell>
-            <cell bottom="minor" right="minor"><area correct="no">3</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>1</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="yes"><m>0</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>3</m></area></cell>
           </row>
         </tabular>
       </table>
@@ -1069,29 +1078,29 @@
       <task label="IGT_strat_CYU_minimax_task_a"><statement><p> Click on or circle the largest value in each column.</p></statement>
       <areas><p>
 <table xml:id="T_exminimax1" >
-        <tabular>
+        <tabular halign="center">
           <row>
             <cell></cell>
             <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
           </row>
           <row>
             <cell right="minor">Player 1</cell>
-            <cell bottom="minor" right="minor"><area correct="yes">3</area></cell>
-            <cell bottom="minor" right="minor"><area correct="no">0</area></cell>
-            <cell bottom="minor" right="minor"><area correct="no">-1</area></cell>
+            <cell bottom="minor" right="minor"><area correct="yes"><m>3</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>0</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>-1</m></area></cell>
           </row>
           <row>
             <cell right="minor"></cell>
-            <cell bottom="minor" right="minor"><area correct="no">1</area></cell>
-            <cell bottom="minor" right="minor"><area correct="yes">2</area></cell>
-            <cell bottom="minor" right="minor"><area correct="no">-3</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>1</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="yes"><m>2</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>-3</m></area></cell>
           </row>
 
           <row>
             <cell right="minor"></cell>
-            <cell bottom="minor" right="minor"><area correct="no">1</area></cell>
-            <cell bottom="minor" right="minor"><area correct="no">0</area></cell>
-            <cell bottom="minor" right="minor"><area correct="yes">3</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>1</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>0</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="yes"><m>3</m></area></cell>
           </row>
         </tabular>
       </table>
@@ -1245,29 +1254,29 @@
       <task label="IGT_strat_CYU_maximin2_task_a"><statement><p> Click on or circle the smallest value in each row.</p></statement>
       <areas><p>
 <table xml:id="T_exmaxmin2" >
-        <tabular>
+        <tabular halign="center">
           <row>
             <cell></cell>
             <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
           </row>
           <row>
             <cell right="minor">Player 1</cell>
-            <cell bottom="minor" right="minor"><area correct="yes">-4</area></cell>
-            <cell bottom="minor" right="minor"><area correct="no">-2</area></cell>
-            <cell bottom="minor" right="minor"><area correct="no">5</area></cell>
+            <cell bottom="minor" right="minor"><area correct="yes"><m>-4</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>-2</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>5</m></area></cell>
           </row>
           <row>
             <cell right="minor"></cell>
-            <cell bottom="minor" right="minor"><area correct="no">2</area></cell>
-            <cell bottom="minor" right="minor"><area correct="yes">1</area></cell>
-            <cell bottom="minor" right="minor"><area correct="no">3</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>2</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="yes"><m>1</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>3</m></area></cell>
           </row>
 
           <row>
             <cell right="minor"></cell>
-            <cell bottom="minor" right="minor"><area correct="no">5</area></cell>
-            <cell bottom="minor" right="minor"><area correct="no">-3</area></cell>
-            <cell bottom="minor" right="minor"><area correct="yes">-4</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>5</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>-3</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="yes"><m>-4</m></area></cell>
           </row>
         </tabular>
       </table>
@@ -1287,22 +1296,22 @@
       <task label="IGT_strat_CYU_minimax2_task_a"><statement><p> Click on or circle the largest value in each column.</p></statement>
       <areas><p>
 <table xml:id="T_exminimax2" >
-        <tabular>
+        <tabular halign="center">
           <row>
             <cell></cell>
             <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
           </row>
           <row>
             <cell right="minor">Player 1</cell>
-            <cell bottom="minor" right="minor"><area correct="no">-4</area></cell>
-            <cell bottom="minor" right="minor"><area correct="no">-2</area></cell>
-            <cell bottom="minor" right="minor"><area correct="yes">5</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>-4</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>-2</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="yes"><m>5</m></area></cell>
           </row>
           <row>
             <cell right="minor"></cell>
-            <cell bottom="minor" right="minor"><area correct="no">2</area></cell>
-            <cell bottom="minor" right="minor"><area correct="yes">1</area></cell>
-            <cell bottom="minor" right="minor"><area correct="no">3</area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>2</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="yes"><m>1</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>3</m></area></cell>
           </row>
 
           <row>
@@ -1328,29 +1337,29 @@
    <exercise label="IGT_strat_CYU_maxminvalequal2">
     <statement><p>Consider the game given in the table.
     <table xml:id="T_exdomstrat3" >
-        <tabular>
+        <tabular halign="center">
           <row>
             <cell></cell>
             <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
           </row>
           <row>
             <cell right="minor">Player 1</cell>
-            <cell bottom="minor" right="minor">-4</cell>
-            <cell bottom="minor" right="minor">-2</cell>
-            <cell bottom="minor" right="minor">5</cell>
+            <cell bottom="minor" right="minor"><m>-4</m></cell>
+            <cell bottom="minor" right="minor"><m>-2</m></cell>
+            <cell bottom="minor" right="minor"><m>5</m></cell>
           </row>
           <row>
             <cell right="minor"></cell>
-            <cell bottom="minor" right="minor">2</cell>
-            <cell bottom="minor" right="minor">1</cell>
-            <cell bottom="minor" right="minor">3</cell>
+            <cell bottom="minor" right="minor"><m>2</m></cell>
+            <cell bottom="minor" right="minor"><m>1</m></cell>
+            <cell bottom="minor" right="minor"><m>3</m></cell>
           </row>
 
           <row>
             <cell right="minor"></cell>
-            <cell bottom="minor" right="minor">5</cell>
-            <cell bottom="minor" right="minor">-3</cell>
-            <cell bottom="minor" right="minor">-4</cell>
+            <cell bottom="minor" right="minor"><m>5</m></cell>
+            <cell bottom="minor" right="minor"><m>-3</m></cell>
+            <cell bottom="minor" right="minor"><m>-4</m></cell>
           </row>
         </tabular>
       </table> </p>

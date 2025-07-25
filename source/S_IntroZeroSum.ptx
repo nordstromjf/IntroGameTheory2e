@@ -6,10 +6,10 @@
       In the examples from the last section, whatever amount one player won, the other player lost.
     </p>
 
-    <definition xml:id="D_zerosum">
+    <definition xml:id="D_zerosum"><idx><h>zero-sum game</h></idx><idx><h>constant-sum game</h></idx><idx><h>constant-sum game</h><seealso>zero-sum game</seealso></idx>
       <statement>
         <p>
-          A two player game is called a <term>zero-sum</term><idx><h>zero-sum game</h></idx> game if the sum of the payoffs to each player is constant for all possible outcomes of the game. More specifically, the coordinates in each payoff vector must add up to the same value for each payoff vector. Such games are sometimes called <term>constant-sum</term><idx><h>constant-sum game</h></idx> games instead.
+          A two player game is called a <term>zero-sum</term> game if the sum of the payoffs to each player is constant for all possible outcomes of the game. More specifically, the coordinates in each payoff vector must add up to the same value for each payoff vector. Such games are sometimes called <term>constant-sum</term> games instead.
         </p>
       </statement>
     </definition>
@@ -35,7 +35,7 @@
         </p>
 
         <table xml:id="T_cakecutting" >
-          <title>Payoff matrix for Cake Cutting game.</title>
+          <title>Payoff matrix for Cake Cutting game.</title><idx><h>Cake Cutting game</h></idx><idx><h>game</h><h>Cake Cutting</h></idx>
           <tabular>
             <row>
               <cell></cell>
@@ -397,10 +397,10 @@
       Chances are, in each of the exercises above, you were able to determine what each player should do. In particular, if both players play your suggested strategies, there is no reason for either player to change to a different strategy.
     </p>
 
-    <definition xml:id="D_equilpair">
+    <definition xml:id="D_equilpair"><idx><h>equilibrium pair</h></idx><idx><h>equilibrium</h></idx>
       <statement>
         <p>
-           A pair of strategies is an <term>equilibrium pair</term><idx><h>equilibrium pair</h></idx> if neither player gains by changing strategies.
+           A pair of strategies is an <term>equilibrium pair</term> if neither player gains by changing strategies.
         </p>
       </statement>
     </definition>
@@ -516,7 +516,7 @@
       <title>Rock, paper, scissors</title>
       <statement>
         <p>
-          Consider the game ROCK, PAPER, SCISSORS<idx><h>Rock-Paper-Scissors</h></idx> (Rock beats Scissors, Scissors beat Paper, Paper beats Rock). Construct the payoff matrix for this game. Does it have an equilibrium pair? Explain your answer.
+          Consider the game ROCK, PAPER, SCISSORS<idx><h>Rock-Paper-Scissors</h></idx><idx><h>game</h><h>Rock-Paper-Scissors</h></idx> (Rock beats Scissors, Scissors beat Paper, Paper beats Rock). Construct the payoff matrix for this game. Does it have an equilibrium pair? Explain your answer.
         </p>
       </statement>
     </activity>
@@ -573,7 +573,7 @@
       <title>Competitive advantage</title>
       <introduction>
         <p>
-          This game is an example of what economists call <term>Competitive Advantage</term><idx><h>Competitive Advantage</h></idx>. Two competing firms need to decide whether or not to adopt a new type of technology. The payoff matrix is in <xref ref="T_compadvantage"></xref>. The variable <m>a</m> is a positive number representing the economic advantage a firm will gain if it is the first to adopt the new technology.
+          This game is an example of what economists call <term>Competitive Advantage</term><idx><h>Competitive Advantage</h></idx><idx><h>game</h><h>Competitive Advantage</h></idx>. Two competing firms need to decide whether or not to adopt a new type of technology. The payoff matrix is in <xref ref="T_compadvantage"></xref>. The variable <m>a</m> is a positive number representing the economic advantage a firm will gain if it is the first to adopt the new technology.
         </p>
 
         <table xml:id="T_compadvantage" >

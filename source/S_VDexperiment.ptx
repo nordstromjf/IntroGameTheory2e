@@ -1,6 +1,6 @@
 
 <section xml:id="S_VDexperiment">
-  <title>Another Multiplayer Experiment</title>
+  <title>Another Multiplayer Experiment</title><idx><h>Volunteer's Dilemma</h></idx><idx><h>game</h><h>Volunteer's Dilemma</h></idx>
   <p>
     This activity needs to be played as a class. All players need to be able to respond without being able to see the responses of others. Answers may be revealed before moving on to the next question.
   </p>
@@ -10,12 +10,11 @@
     Without sharing your answers with others, select your answer to the following questions. Try to be as honest about your answer as possible. Make sure you have a reason for each answer.
   </p>
 
-  <p><ol>
-  <li><p>
+    <question xml:id="Q_VDlights"><p>
     The lights go out in the neighborhood. Someone needs to call the power company. If someone calls, everyone's lights go on.
   
 
-  <ol>
+  <ol marker="(A)">
     <li><p>
         Call
       </p></li>
@@ -24,12 +23,12 @@
         Don't call
       </p></li>
   </ol></p>
-  </li>
+  </question>
 
-  <li><p>
-  The same as in (1), but now you have to wait on hold for 5 minutes.
+   <question xml:id="Q_VDlightshold5"><p>
+  The same as in <xref ref="Q_VDlights"/>, but now you have to wait on hold for 5 minutes.
 
-  <ol>
+  <ol marker="(A)">
     <li><p>
         Call
       </p></li>
@@ -38,12 +37,13 @@
         Don't call
       </p></li>
   </ol>
-  </p></li>
+  </p>
+</question>
 
-  <li><p>
-  The same as in (1), but now you have to wait on hold for 30 minutes.
+   <question xml:id="Q_VDlightshold30"><p>
+  The same as in <xref ref="Q_VDlights"/>, but now you have to wait on hold for 30 minutes.
 
-  <ol>
+  <ol marker="(A)">
     <li><p>
         Call
       </p></li>
@@ -52,12 +52,13 @@
         Don't call
       </p></li>
   </ol>
-  </p></li>
+  </p>
+</question>
 
-  <li><p>
-  The same as in (1), but now you have to pay a $.50 service fee.
+   <question xml:id="Q_VDlightsholdcharge"><p>
+  The same as in <xref ref="Q_VDlights"/>, but now you have to pay a $.50 service fee.
 
-  <ol>
+  <ol marker="(A)">
     <li><p>
         Call
       </p></li>
@@ -66,12 +67,13 @@
         Don't call
       </p></li>
   </ol>
-  </p></li>
+  </p>
+</question>
 
-  <li><p>
-  The same as in (1), but now you have to pay a $2.50 service fee.
+  <question xml:id="Q_VDlightschargemore"><p>
+  The same as in <xref ref="Q_VDlights"/>, but now you have to pay a $2.50 service fee.
 
-  <ol>
+  <ol marker="(A)">
     <li><p>
         Call
       </p></li>
@@ -80,26 +82,26 @@
         Don't call
       </p></li>
   </ol>
-  </p></li>
+  </p></question>
 
-  <li><p>
-  The phone lines go down in your small mountain community. You have to hike 3 miles in the snow to notify the power company.
+  <question xml:id="Q_VDhike"><p>
+  The power lines go down in your small mountain community. You have to hike 3 miles in the snow to notify the power company.
 
-  <ol>
+  <ol marker="(A)">
     <li><p>
-        Hike to notify the phone company
+        Hike to notify the power company
       </p></li>
 
     <li><p>
         Stay home and let someone else do the hiking
       </p></li>
   </ol>
-  </p></li>
+  </p></question>
 
-  <li><p>
+  <question xml:id="Q_VDcheat"><p>
   Everyone in your class cheats on an exam. The professor says if someone confesses they receive an F. If no one confesses, everyone fails.
 
-  <ol>
+  <ol marker="(A)">
     <li><p>
         Confess
       </p></li>
@@ -108,12 +110,12 @@
         Don't confess
       </p></li>
   </ol>
-  </p></li>
+  </p></question>
 
-  <li><p>
+  <question xml:id="Q_VDsharksclass"><p>
   Evil Dr. No captures the class and puts you in all in a shark tank separated so you can't communicate. If one person volunteers to be eaten then the rest go free. If no one volunteers after 10 minutes all get eaten by sharks.
 
-  <ol>
+  <ol marker="(A)">
     <li><p>
         Volunteer
       </p></li>
@@ -122,12 +124,12 @@
         Don't volunteer
       </p></li>
   </ol>
-  </p></li>
+  </p></question>
 
-  <li><p>
-  Evil Dr. No captures your family and puts you in all in a shark tank separated so you can't communicate. If one person volunteers to be eaten then the rest go free. If no one volunteers after 10 minutes all get eaten by sharks.
+ <question xml:id="Q_VDsharksfamily"><p>
+  Evil Dr. No captures you and the five most important people in your life and puts you in all in a shark tank separated so you can't communicate. If one person volunteers to be eaten then the rest go free. If no one volunteers after 10 minutes all get eaten by sharks.
 
-  <ol>
+  <ol marker="(A)">
     <li><p>
         Volunteer
       </p></li>
@@ -136,12 +138,12 @@
         Don't volunteer
       </p></li>
   </ol>
-  </p></li>
+  </p></question>
 
-  <li><p>
+  <question xml:id="Q_VDslop"><p>
   For any <q>Big Brother</q> fans: choose to eat all your favorite foods for a week or nasty <q>slop</q> for a week. If at least three people say slop, everyone gets what they asked for. Otherwise, everyone is on slop.
 
-  <ol>
+  <ol marker="(A)">
     <li><p>
         Favorite foods
       </p></li>
@@ -150,12 +152,12 @@
         Slop
       </p></li>
   </ol>
-  </p></li>
+  </p></question>
 
-  <li><p>
+  <question xml:id="Q_VD5points"><p>
   OK, now let's get serious about this. Answer 5 points or 1 point. If at least one person says 1 point, everyone gets the number of points they chose. Otherwise, everyone gets 0 points.
 
-  <ol>
+  <ol marker="(A)">
     <li><p>
         5 points
       </p></li>
@@ -164,12 +166,12 @@
         1 point
       </p></li>
   </ol>
-  </p></li>
+  </p></question>
 
-  <li><p>
+  <question xml:id="Q_VD20points"><p>
   Answer 20 points or 1 point. If at least one person says 1 point, everyone gets the number of points they chose. Otherwise, everyone gets 0 points.
 
-  <ol>
+  <ol marker="(A)">
     <li><p>
         20 points
       </p></li>
@@ -178,12 +180,12 @@
         1 point
       </p></li>
   </ol>
-  </p></li>
+  </p></question>
 
-  <li><p>
+  <question xml:id="Q_VD6points"><p>
   Answer 6 points or 5 points. If at least one person says 5 points, everyone gets the number of points they chose. Otherwise, everyone gets 0 points.
 
-  <ol>
+  <ol marker="(A)">
     <li><p>
         6 points
       </p></li>
@@ -192,12 +194,12 @@
         5 points
       </p></li>
   </ol>
-  </p></li>
+  </p></question>
 
-  <li><p>
+  <question xml:id="Q_VD20points5vol"><p>
   Answer 20 points or 1 point. If at least <em>five</em>  people say 1 point, everyone gets the number of points they chose. Otherwise, everyone gets 0 points.
 
-  <ol>
+  <ol marker="(A)">
     <li><p>
         20 points
       </p></li>
@@ -206,8 +208,9 @@
         1 point
       </p></li>
   </ol>
-  </p></li>
-  </ol></p></statement></activity>
+  </p></question>
+  
+  </statement></activity>
   
 
   <p>After answering the above questions and seeing the responses from your classmates, think about how you responded. Did this differ from how your classmates responded? Try to give reasons for how you chose your responses to the above questions. Ask classmates for their reasons for responding as they did. It can be particularly useful to share your answers with someone who chose a different response from you. You can summarize the various reasons for volunteering and not volunteering in the activities below.</p>
@@ -216,7 +219,7 @@
     <title>Volunteer or not</title>
     <statement>
       <p>
-        After answering the questions, were you likely to volunteer or unlikely to volunteer? For example, were you likely to be the one to call the power company or get eaten by sharks, or were you generally hoping someone else would do it? If it depended on the situation, explain under what circumstances you were likely to volunteer.
+        After answering the questions in <xref ref="A_VDexperiment"/>, were you likely to volunteer or unlikely to volunteer? For example, were you likely to be the one to call the power company or get eaten by sharks, or were you generally hoping someone else would do it? If it depended on the situation, explain under what circumstances you were likely to volunteer.
       </p>
     </statement>
   </activity>
@@ -232,7 +235,7 @@
     <title>Unlikely to volunteer</title>
     <statement>
       <p>
-        For which questions was it unlikely that there would be very many volunteers? Did you take that into consideration when deciding if you were going to volunteer?
+        For which questions in <xref ref="A_VDexperiment"/> was it unlikely that there would be very many volunteers? Did you take that into consideration when deciding if you were going to volunteer?
       </p>
     </statement>
   </activity>
@@ -240,7 +243,7 @@
     <title>Reasons to volunteer</title>
     <statement>
       <p>
-        What are some reasons for volunteering? What are some reasons for not to volunteer?
+        What are some reasons for volunteering? What are some reasons for not volunteering?
       </p>
     </statement>
   </activity>

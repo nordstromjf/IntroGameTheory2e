@@ -2,7 +2,7 @@
 <section xml:id="S_EquilibPoints">
   <title>Equilibrium Points</title>
   <p>
-    In this section, we will try to gain a greater understanding of equilibrium strategies in a game. In general, we call the pair of equilibrium strategies an <term>equilibrium pair</term><idx><h>equilibrium pair</h></idx>, while we call the specific payoff vector associated with an equilibrium pair an <term>equilibrium point</term><idx><h>equilibrium point</h></idx>.
+    In this section, we will try to gain a greater understanding of equilibrium strategies in a game. In general, we call the pair of equilibrium strategies an <term>equilibrium pair</term><idx><h>equilibrium pair</h></idx>, while we call the specific payoff vector associated with an equilibrium pair an <term>equilibrium point</term><idx><h>equilibrium point</h></idx><idx><h>equilibrium</h></idx>.
   </p>
   <activity xml:id="A_matrixexamples">
     <title>Find equilibrium points</title>

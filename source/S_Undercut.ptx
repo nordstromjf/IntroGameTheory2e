@@ -10,13 +10,13 @@
   </p>
 
   <example xml:id="Undercut">
-    <title>Undercut<idx><h>Undercut</h></idx></title>
+    <title>Undercut</title><idx><h>Undercut</h></idx><idx><h>game</h><h>Undercut</h></idx>
     <statement>
      
 
       <p>
         
-        Each player chooses a number 1 through 5. If the two numbers don't differ by 1, then each player adds their own number to their score. If the two numbers differ by 1, then the player with the <em>lower</em> number adds <em>both</em> numbers to their score; the player with the higher number gets nothing. (This game is from Douglas Hofstadter's <pubtitle>Metamagical Themas</pubtitle>.)
+        Each player chooses a number 1 through 5. If the two numbers don't differ by 1, then each player adds their own number to their score. If the two numbers differ by 1, then the player with the <em>lower</em> number adds <em>both</em> numbers to their score; the player with the higher number gets nothing. This game is from Douglas Hofstadter's <pubtitle>Metamagical Themas</pubtitle>.
       </p>
 
       <p>
@@ -182,7 +182,7 @@
     </statement>
   </activity>
 
-  <p>You have now solved a rather complex two-person game. Try playing it with your friends and family. It may be difficult (or even impossible) to play randomly with the exact probabilties. It is also unlikely that your opponent will also be playing the equilibrium strategy, but can you use the solution to assure an advantage, or at least assure that your opponent doensn't have an advantage? Can you see the difference between an exact theoretical solution to a game, and a practical strategy for playing the game? In the next chapter we will see even more differences between theoretical and practical solutions to a game.</p>
+  <p>You have now solved a rather complex two-person game. Try playing it with your friends and family. It may be difficult (or even impossible) to play randomly with the exact probabilties. It is also unlikely that your opponent will also be playing the equilibrium strategy, but can you use the solution to assure you have an advantage, or at least assure that your opponent doensn't have an advantage? Can you see the difference between an exact theoretical solution to a game and a practical strategy for playing the game? In the next chapter we will see even more differences between theoretical and practical solutions to a game.</p>
 
   <reading-questions>
       <title>Check Your Understanding</title>
@@ -276,7 +276,7 @@
     </choices><answer><p>Neither, the game looks the same to both players.</p></answer>
   </exercise>
 
-  <exercise label="IGT_UC_CYU_symmeteric1"><statement correct="no"><p>True or False: The following zero-sum game is symmeteric:
+  <exercise label="IGT_UC_CYU_symmetric1"><statement correct="no"><p>True or False: The following zero-sum game is symmetric:
     <me>\left[
       \begin{matrix}3 \amp  1 \\
       1 \amp  3 \\
@@ -285,7 +285,7 @@
 
   </statement><feedback><p>Player 1's payoffs always positive, while Player 2's are always negative. Thus the game is not symmetric.</p></feedback><answer>False.</answer></exercise>
 
-  <exercise label="IGT_UC_CYU_symmeteric2"><statement correct="yes"><p>True or False: The following zero-sum game is symmeteric:
+  <exercise label="IGT_UC_CYU_symmetric2"><statement correct="yes"><p>True or False: The following zero-sum game is symmetric:
     <me>\left[
       \begin{matrix}0 \amp  -3 \\
       3 \amp  0 \\
@@ -294,7 +294,7 @@
 
   </statement><feedback><p>You can check that if wrote Player 2's payoff matrix with Player 2 as the row player, the matrix would be the same.</p></feedback><answer>True.</answer></exercise>
 
-  <exercise label="IGT_UC_CYU_symmeteric3"><statement correct="no"><p>True or False: The following zero-sum game is symmeteric:
+  <exercise label="IGT_UC_CYU_symmetric3"><statement correct="no"><p>True or False: The following zero-sum game is symmetric:
     <me>\left[
       \begin{matrix}2 \amp  -1 \\
       1 \amp  2 \\
@@ -303,7 +303,7 @@
 
   </statement><feedback><p>When players play the same strategy (for example Row 1, Column 1), Player 1 wins.</p></feedback><answer>False.</answer></exercise>
 
-  <exercise label="IGT_UC_CYU_symmeteric4"><statement correct="no"><p>True or False: The following zero-sum game is symmeteric:
+  <exercise label="IGT_UC_CYU_symmetric4"><statement correct="no"><p>True or False: The following zero-sum game is symmetric:
     <me>\left[
       \begin{matrix}0 \amp  -1 \\
       1 \amp  2 \\

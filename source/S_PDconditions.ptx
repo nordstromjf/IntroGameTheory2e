@@ -1,6 +1,6 @@
 
 <section xml:id="S_PDconditions">
-  <title>What Makes a Prisoner's Dilemma?</title>
+  <title>What Makes a Prisoner's Dilemma?</title><idx><h>Prisoner's Dilemma</h><h>conditions</h></idx>
   <p>
     In this section we give a mathematical description of Prisoner's Dilemma and compare it to some similar games.
   </p>
@@ -60,10 +60,11 @@
   </ul>
   </p>
 
-  <p>
-  In order for a game to be a variation of Prisoner's Dilemma it must satisfy two conditions:
-<list xml:id="l_ConditionsPD"><title>Conditions for a Prisoner's Dilemma</title>
-  <ol marker="1">
+ 
+  
+<assemblage xml:id="l_ConditionsPD"><title>Conditions for a Prisoner's Dilemma</title>
+<p>In order for a game to be a variation of Prisoner's Dilemma it must satisfy two conditions:
+  <ol marker="(1)">
     <li><p>
         <m>T>R>P>S</m>
       </p></li>
@@ -72,17 +73,18 @@
         <m>(T+S)/2 \lt  R</m>
       </p></li>
   </ol>
-</list>
+
   </p>
+</assemblage>
 
   <p>
-    Let's apply this description of Prisoner's Dilemma to a few games we've seen. We can use the conditions to check if a game is really a Prisoner's Dilemma.
+    Let's apply this description of Prisoner's Dilemma to a few games we've seen. We can use <xref ref="l_ConditionsPD" text="title"/> to check if a game is really a Prisoner's Dilemma.
   </p>
   <activity xml:id="A_describeconditions">
     <title>Description of conditions</title>
     <statement>
       <p>
-        Describe conditions (1) and (2) in <xref ref="l_ConditionsPD"></xref> in words.
+        Describe conditions (1) and (2) in <xref ref="l_ConditionsPD" text="title"></xref> in words.
       </p>
     </statement>
     <hint><p> <m>(T+S)/2</m> is the average of <m>T</m> and <m>S</m>.</p></hint>
@@ -91,7 +93,7 @@
     <title>The conditions for Classwide Prisoner's Dilemma</title>
     <statement>
       <p>
-        Show that the two conditions in <xref ref="l_ConditionsPD"></xref> hold for the Class-wide Prisoner's Dilemma (<xref ref="S_CWPD"></xref>).
+        Show the <xref ref="l_ConditionsPD" text="title"></xref> hold for the Class-wide Prisoner's Dilemma in <xref ref="T_CWPD"></xref>.
       </p>
     </statement>
   </activity>
@@ -132,7 +134,7 @@
       </table>
 
       <p>
-        Determine <m>R, P, T,</m> and <m>S</m> for this game. Be careful, think about what cooperating versus defecting should mean. Show the conditions for Prisoner's Dilemma are satisfied. 
+        Determine <m>R, P, T,</m> and <m>S</m> for this game. Be careful, think about what cooperating versus defecting should mean. Show the <xref ref="l_ConditionsPD" text="title"></xref> are satisfied. 
       </p>
     </statement>
     <hint><p>Time in jail is bad, so the bigger the number, the worse you do; thus, it might be helpful to think of the payoffs as negatives.</p></hint>
@@ -174,7 +176,7 @@
       </table>
 
       <p>
-        Determine <m>R, P, T,</m> and <m>S</m> for this game. Again, think about what cooperating and defecting mean in this game. Determine if the conditions for Prisoner's Dilemma are satisfied. If not, which condition(s) fail?
+        Determine <m>R, P, T,</m> and <m>S</m> for this game. Again, think about what cooperating and defecting mean in this game. Determine if the <xref ref="l_ConditionsPD" text="title"></xref> are satisfied. If not, which condition(s) fail?
       </p>
     </statement>
   </activity>
@@ -200,7 +202,7 @@
       </p>
 
       <p>
-        Determine <m>R, P, T,</m> and <m>S</m> for this game. Determine if the conditions for Prisoner's Dilemma are satisfied. If not, which condition(s) fail?
+        Determine <m>R, P, T,</m> and <m>S</m> for this game. Determine if the <xref ref="l_ConditionsPD" text="title"></xref> are satisfied. If not, which condition(s) fail?
       </p>
     </statement>
   </activity>
@@ -218,7 +220,7 @@
       </p>
 
       <p>
-        Determine <m>R, P, T,</m> and <m>S</m> for this game. Determine if the conditions for Prisoner's Dilemma are satisfied. If not, which condition(s) fail?
+        Determine <m>R, P, T,</m> and <m>S</m> for this game. Determine if <xref ref="l_ConditionsPD" text="title"></xref> are satisfied. If not, which condition(s) fail?
       </p>
     </statement>
   </activity>
@@ -226,12 +228,12 @@
     <title>Compare the games</title>
     <statement>
       <p>
-        The games in <xref ref="A_chickenshow"></xref>, <xref ref="A_conditionspractice1"></xref>, and <xref ref="A_conditionspractice2"></xref> are not true Prisoner's Dilemmas. For each game, how do the changes in payoffs affect how you play? In particular, in Prisoner's Dilemma, a player will generally choose to defect. This results in a non-optimal payoff for each player. Is this still true in <xref ref="A_chickenshow"></xref>, <xref ref="A_conditionspractice1"></xref>, and <xref ref="A_conditionspractice2"></xref>? If possible, use the changes in the conditions (A) and (B) to help explain any differences in how one should play.
+        The games in <xref ref="A_chickenshow"></xref>, <xref ref="A_conditionspractice1"></xref>, and <xref ref="A_conditionspractice2"></xref> are not true Prisoner's Dilemmas. For each game, how do the changes in payoffs affect how you play? In particular, in Prisoner's Dilemma, a player will generally choose to defect. This results in a non-optimal payoff for each player. Is this still true in <xref ref="A_chickenshow"></xref>, <xref ref="A_conditionspractice1"></xref>, and <xref ref="A_conditionspractice2"></xref>? If possible, use canges in the <xref ref="l_ConditionsPD" text="title"></xref> to help explain any differences in how one should play.
       </p>
     </statement>
   </activity>
   <p>
-    We can now define <term>defection</term><idx><h>defection</h></idx> as the idea that if everyone did it, things would be worse for everyone. Yet, if only one (or a small) number did it, life would be sweeter for that individual. We can define <term>cooperation</term><idx><h>cooperation</h></idx> as the act of resisting temptation for the betterment of all players.
+    We can now define <term>defection</term><idx><h>defection</h></idx><idx><h>defect</h><h>strategy</h></idx><idx><h>strategy</h><h>defect</h></idx> as the idea that if everyone did it, things would be worse for everyone. Yet, if only one (or a small) number did it, life would be sweeter for that individual. We can define <term>cooperation</term><idx><h>cooperation</h></idx><idx><h>cooperate</h><h>strategy</h></idx><idx><h>strategy</h><h>cooperate</h></idx> as the act of resisting temptation for the betterment of all players.
   </p>
   <activity xml:id="A_reallifeex">
     <title>Example from real life</title>
@@ -288,7 +290,7 @@
       \end{matrix} 
       \right]
         </me>
-        satisfies the two conditions of a Prisoner's Dilemma</p></statement><feedback><m>T>R>P>S; (T+S)/2 &lt; R.</m></feedback><answer>True.</answer></exercise>
+        satisfies the <xref ref="l_ConditionsPD" text="title"></xref>.</p></statement><feedback><m>T>R>P>S; (T+S)/2 &lt; R.</m></feedback><answer>True.</answer></exercise>
 
         <exercise label="IGT_PDCond_CYU_RPTS2"><statement><p>Consider the cooperate-defect game
 
@@ -333,7 +335,7 @@
       \end{matrix} 
       \right]
         </me>
-        satisfies the two conditions of a Prisoner's Dilemma</p></statement><feedback><m>T\ngtr R; (T+S)/2 &lt; R.</m></feedback><answer>False.</answer></exercise>
+        satisfies the <xref ref="l_ConditionsPD" text="title"></xref>.</p></statement><feedback><m>T\ngtr R; (T+S)/2 &lt; R.</m></feedback><answer>False.</answer></exercise>
     
     <exercise label="IGT_PDCond_CYU_RPTS3"><statement><p>Consider the cooperate-defect game
 
@@ -378,7 +380,7 @@
       \end{matrix} 
       \right]
         </me>
-        satisfies the two conditions of a Prisoner's Dilemma</p></statement><feedback><m>T>R>P>S; (T+S)/2 &lt; R.</m></feedback><answer>True.</answer></exercise>
+        satisfies the <xref ref="l_ConditionsPD" text="title"></xref>.</p></statement><feedback><m>T>R>P>S; (T+S)/2 &lt; R.</m></feedback><answer>True.</answer></exercise>
 
         <exercise label="IGT_PDCond_CYU_equilpd3"><statement><p>The game given in 
          <me>
@@ -439,7 +441,7 @@
       \end{matrix} 
       \right]
         </me>
-        satisfies the two conditions of a Prisoner's Dilemma</p></statement><feedback><m>P\ngtr S; (T+S)/2 \nless R.</m></feedback><answer>False.</answer></exercise>
+        satisfies the <xref ref="l_ConditionsPD" text="title"></xref>.</p></statement><feedback><m>P\ngtr S; (T+S)/2 \nless R.</m></feedback><answer>False.</answer></exercise>
 
         <exercise label="IGT_PDCond_CYU_equilpd4"><statement><p>The game given in 
          <me>
@@ -500,7 +502,7 @@
       \end{matrix} 
       \right]
         </me>
-        satisfies the two conditions of a Prisoner's Dilemma</p></statement><feedback><m>T>R>P>S; (T+S)/2 \nless R.</m></feedback><answer>False.</answer></exercise>
+        satisfies the <xref ref="l_ConditionsPD" text="title"></xref>.</p></statement><feedback><m>T>R>P>S; (T+S)/2 \nless R.</m></feedback><answer>False.</answer></exercise>
 
         <exercise label="IGT_PDCond_CYU_equilpd5"><statement><p>The game given in 
          <me>

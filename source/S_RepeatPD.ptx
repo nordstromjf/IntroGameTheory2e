@@ -1,8 +1,8 @@
 
 <section xml:id="S_RepeatPD">
-  <title>Repeated Prisoner's Dilemma</title>
+  <title>Repeated Prisoner's Dilemma</title><idx><h>Prisoner's Dilemma</h><h>repeated</h></idx><idx><h>iterated Prisoner's Dilemma</h></idx>
   <p>
-    In this section we look at two players playing Prisoner's Dilemma repeatedly. We call this game an <term>iterated</term> Prisoner's Dilemma<idx><h>iterated Prisoner's Dilemma</h></idx>.
+    In this section we look at two players playing Prisoner's Dilemma repeatedly. We call this game an <term>iterated</term> Prisoner's Dilemma.
     Recall the general Prisoner's Dilemma matrix from previous sections, given again in <xref ref="T_CWPD3"></xref>.
   </p>
 
@@ -92,7 +92,7 @@
       </p></li>
 
     <li><p>
-        Strategy: <term>Tit for Tat.</term><idx><h>Tit for Tat strategy</h></idx> Your strategy is to play whatever your opponent just played. Your first move is to COOPERATE (C), but then you need to repeat your opponent's last move.
+        Strategy: <term>Tit for Tat.</term><idx><h>Tit for Tat strategy</h></idx><idx><h>strategy</h><h>Tit for Tat</h></idx> Your strategy is to play whatever your opponent just played. Your first move is to COOPERATE (C), but then you need to repeat your opponent's last move.
       </p></li>
 
     <li><p>

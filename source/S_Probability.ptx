@@ -19,8 +19,8 @@
       Consider a standard deck of 52 playing cards. What is the chance of drawing a red card? What is the probability of drawing a red card? Is there a difference between chance and probability? Yes! The probability of an event has a very specific meaning in mathematics.</p>
    
 
-    <definition xml:id="D_probability">
-      <p>The <term>probability</term><idx><h>probability</h></idx> of an event <m>E</m> is the number of different outcomes resulting in <m>E</m> divided by the total number of equally likely outcomes. In mathematical symbols,
+    <definition xml:id="D_probability"><idx><h>probability</h></idx>
+      <p>The <term>probability</term> of an event <m>E</m> is the number of different outcomes resulting in <m>E</m> divided by the total number of equally likely outcomes. In mathematical symbols,
       <me>
         P(E)=\frac{\mbox{number of different outcomes resulting in \(E\)} }{\mbox{total number of equally likely outcomes} }.
       </me>
@@ -164,10 +164,10 @@
     <title>Expected Value</title><idx><h>expected value</h></idx>
    
 <p>Now that we have defined the probability for an outcome, we need a way to calculate payoffs for games of chance.</p>
-    <definition xml:id="D_expectedvalue">
+    <definition xml:id="D_expectedvalue"><idx><h>expected value</h></idx>
       <statement>
         <p>
-          The <term>expected value</term><idx><h>expected value</h></idx> of a game of chance is the average net gain or loss that we would expect per game if we played the game many times. We compute the expected value by multiplying the value of each outcome by its probability of occurring and then add up all of the products.
+          The <term>expected value</term> of a game of chance is the average net gain or loss that we would expect per game if we played the game many times. We compute the expected value by multiplying the value of each outcome by its probability of occurring and then add up all of the products.
         </p>
       </statement>
     </definition>
@@ -196,7 +196,7 @@
         <p>
         Now play the game in <xref ref="A_Toss2coins"></xref> the indicated number of times. Give your actual payoff and compare it to the expected value.
 
-        <ol marker="a">
+        <ol marker="(a)">
           <li><p>
               One time.
             </p></li>

@@ -4,6 +4,9 @@
   <introduction>
     <sidebyside width="30%" margins="auto">
     <image width="30%" source="images/image-1.svg">
+      <shortdescription>
+            a 5 by 5 grid in which each square is shaded two colors
+      </shortdescription>
       <latex-image>
         <![CDATA[\begin{tikzpicture}
         \draw[step=1cm] (0,0) grid (5,5);

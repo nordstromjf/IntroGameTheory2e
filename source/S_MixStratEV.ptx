@@ -1,18 +1,21 @@
 
 <section xml:id="S_MixStratEV">
-  <title>Mixed Strategies: Expected Value Solution</title><idx><h>mixed strategies, expected value solution</h></idx><idx><h>expected value</h></idx>
-  
+  <title>Mixed Strategies: Expected Value Solution</title><idx><h>mixed strategy</h><h>expected value solution</h></idx><idx><h>expected value</h></idx>
+    <idx><h>expected value solution</h></idx>
+    <idx><h>solution</h><h>expected value</h></idx>
+
+    <idx><h>maximin strategy</h><h>expected value solution</h></idx>
 
   <p>
     In this section, we will use the idea of expected value to find the equilibrium mixed strategies for repeated two-person zero-sum games.
   </p>
 
   <p>
-    One of the significant drawbacks of the graphical solution from the previous sections is that it can only solve 2 X 2 matrix games. If each player has 3 options, we would need to graph in three dimensions. Technically this is possible, but rather complicated. If each player has more than 3 options, since we can't graph in four or more dimensions, we are at a complete loss. So we need to think about an alternate way to solve for the mixed strategies. Although we will begin with 2 X 2 games, this method will easily generalize to larger games.
+    One of the significant drawbacks of the graphical solution from the previous sections is that it can only solve <m>2 \times 2</m> matrix games. If each player has 3 options, we would need to graph in three dimensions. Technically this is possible, but rather complicated. If each player has more than 3 options, since we can't graph in four or more dimensions, we are at a complete loss. So we need to think about an alternate way to solve for the mixed strategies. Although we will begin with <m>2 \times 2</m> games, this method will easily generalize to larger games.
   </p>
 
   <example xml:id="G_matching_pennies">
-    <title>Matching Pennies Game<idx><h>Matching Pennies</h></idx> </title>
+    <title>Matching Pennies Game<idx><h>Matching Pennies</h></idx><idx><h>game</h><h>Matching Pennies</h></idx> </title>
     <statement>
       <p>
         Consider the game in which each player can choose HEADS (H) or TAILS (T); if the two players match, Player 1 wins; if the two players differ, Player 2 wins. What strategy should each player play?
@@ -83,7 +86,7 @@
           </p></task>
 
         <task><p>
-            Similarly, compute the expected value for Player 1 if she plays only T (call it <m>E_1(T)</m>).
+            Similarly, compute the expected value for Player 1 if she plays only T. Call it <m>E_1(T)</m>.
           </p></task>
 
         <task><p>
@@ -148,7 +151,7 @@
       </p></task>
   </activity>
   <p>
-    So in general, to solve for Player 2's strategy, we want to write an equation for each of Player 1's pure strategy expected values in terms of Player 2's probabilities. For example, <m>E_1(H)</m> and <m>E_1(T)</m> in terms of variables <m>P_2(H)</m> and <m>P_2(T)</m>. We then set the expected values equal to each other. We now have an equation just in terms of Player 2's probabilities. 
+    In general, to solve for Player 2's strategy, we want to write an equation for each of Player 1's pure strategy expected values in terms of Player 2's probabilities. For example, <m>E_1(H)</m> and <m>E_1(T)</m> in terms of variables <m>P_2(H)</m> and <m>P_2(T)</m>. We then set the expected values equal to each other. We now have an equation just in terms of Player 2's probabilities. 
   </p>
 
   <p>
@@ -209,10 +212,10 @@
     </statement>
   </activity>
   <activity xml:id="A_RPSEVsol">
-    <title>Expected value solution for Rock-Paper-Scissors</title>
+    <title>Expected value solution for Rock-Paper-Scissors</title><idx><h>Rock-Paper-Scissors</h><h>expected value solution</h></idx>
     <statement>
       <p>
-        As we noted in this section, this method can be used to solve bigger games. We just have more equations. Use the expected value method to find the equilibrium mixed strategy for Rock-Paper-Scissors<idx><h>Rock-Paper-Scissors</h></idx> for Player 2.  
+        As we noted in this section, this method can be used to solve bigger games. We just have more equations. Use the expected value method to find the equilibrium mixed strategy for Rock-Paper-Scissors for Player 2.  
       </p>
     </statement>
     <hint><p>You will need to set <m>E_1(R)=E_1(P)</m> and <m>E_1(P)=E_1(S)</m>; solve for <m>P_2(R), P_2(P), P_2(S)</m>; etc. It should be very similar to what you did for Matching Pennies, but there will be three equations and three unknowns.</p></hint>
@@ -225,7 +228,7 @@
       
        <exercise label="IGT_MSEV_CYU_equil"><statement correct="no"><p>True or False: The following zero-sum game
         <table xml:id="T_exergameEV" >
-    <tabular>
+    <tabular halign="center">
       <row>
         <cell></cell>
         <cell bottom="minor"><b>C</b></cell>
@@ -233,13 +236,13 @@
       </row>
       <row>
         <cell right="minor"><b>A</b></cell>
-        <cell right="minor" bottom="minor">1</cell>
-        <cell right="minor" bottom="minor">-3</cell>
+        <cell right="minor" bottom="minor"><m>1</m></cell>
+        <cell right="minor" bottom="minor"><m>-3</m></cell>
       </row>
       <row>
         <cell right="minor"><b>B</b></cell>
-        <cell right="minor" bottom="minor">-4</cell>
-        <cell right="minor" bottom="minor"> 2</cell>
+        <cell right="minor" bottom="minor"><m>-4</m></cell>
+        <cell right="minor" bottom="minor"><m> 2</m></cell>
       </row>
     </tabular>
   </table>
@@ -489,7 +492,7 @@
 
     <exercise label="IGT_MSEV_CYU_P1stratequations"><statement><p>Which two equations should you use to find Player 1's equilibrium mixed strategy in the following game? 
       <table xml:id="T_exergameEV2" >
-    <tabular>
+    <tabular halign="center">
       <row>
         <cell></cell>
         <cell bottom="minor"><b>C</b></cell>
@@ -497,13 +500,13 @@
       </row>
       <row>
         <cell right="minor"><b>A</b></cell>
-        <cell right="minor" bottom="minor">5</cell>
-        <cell right="minor" bottom="minor">-2</cell>
+        <cell right="minor" bottom="minor"><m>5</m></cell>
+        <cell right="minor" bottom="minor"><m>-2</m></cell>
       </row>
       <row>
         <cell right="minor"><b>B</b></cell>
-        <cell right="minor" bottom="minor">1</cell>
-        <cell right="minor" bottom="minor"> 3</cell>
+        <cell right="minor" bottom="minor"><m>1</m></cell>
+        <cell right="minor" bottom="minor"> <m>3</m></cell>
       </row>
     </tabular>
   </table></p></statement> 

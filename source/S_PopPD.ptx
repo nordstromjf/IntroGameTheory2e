@@ -1,12 +1,9 @@
 
 <section xml:id="S_PopPD">
-  <title>Popular Culture: Prisoner's Dilemma and Chicken</title>
+  <title>Popular Culture: Prisoner's Dilemma and Chicken</title><idx><h>popular culture</h><h>Prisoner's Dilemma</h></idx><idx><h>popular culture</h><h>Chicken</h></idx><idx><h>Prisoner's Dilemma</h><h>in popular culture</h></idx><idx><h>Chicken</h><h>in popular culture</h></idx>
+ 
   <p>
-    <idx><h>popular culture</h></idx>
-  </p>
-
-  <p>
-    In this section, we will look at applications of Prisoner's Dilemma<idx><h>Prisoner's Dilemma</h></idx> and Chicken<idx><h>Chicken</h></idx> in popular culture.
+    In this section, we will look at applications of Prisoner's Dilemma and Chicken in popular culture.
   </p>
 
   <p>
@@ -68,6 +65,20 @@
 
 <question><p>Explain why this game in <pubtitle>Survivor</pubtitle> is a Volunteer's Dilemma. If you were a contestant on <pubtitle>Survivor</pubtitle>, what would you choose to do and why? Are there certain conditions that would make you more likely to choose Risk? If you are familiar with the show, you might want to think about whether you are more or less likely to Risk your vote if you feel you are in danger of being voted off the island.</p></question>
 
+<p>Another example of a more complicated Volunteer's Dilemma occurs in Season 2 of <pubtitle>The Traitors, New Zealand</pubtitle><idx><pubtitle>The Traitors, New Zealand</pubtitle></idx>, Episode 10 (2023). The five remaining contestants are taken to separate locations and have no way of communicating. Each is presented with a very unpleasant task.
+<ul>
+  <li>Anna: Get <q>The Traitor</q> logo tattooed on any part of her body.</li>
+  <li>Brooke: Lying in a bathtub and getting covered by maggots and cockroaches for 3 minutes.</li>
+  <li>Colin: Eat a platter of delicacies consisting of a heart, a tongue and an eyeball of an animal.</li>
+  <li>Julia: Submerging herself in a cryotherapy chamber for at least 3 minutes at a temperature of <m>-140C^\circ</m> minimum.</li>
+  <li>Sam S: Get a monk's haircut, which is shaving the top and underneath of his hair while leaving hair around the back and sides.</li>
+</ul>
+If exactly four of them complete the task, they win money for the prize pot at the end of the game. Otherwise they don't add any money to the prixe pot.
+</p>
+<question>
+  <p>Explain why this version of the game is more complicated than a standard Volunteer's Dilemma. How would you decide whether or not to complete your task if you were playing this game? Would it matter which task you were given? Even if you couldn't communicate, how would knowing who your fellow contestants are help you decide whether to complete your task?</p>
+</question>
+
   <p>
     Now try to apply the models of cooperate-defect games to your own popular culture, political, or social examples.
   </p>
@@ -104,5 +115,5 @@
 
   </question>
 
-  <question><p>Find a news article that describes a political or economic situation a being either a Prisoner's Dilemma or a game of Chicken. Do you agree that the situation is appropriately described as that game? Does the article seem to favor cooperating or defecting? Explain your answer.</p></question>
+  <question><p>Find a news article that describes a political or economic situation as being either a Prisoner's Dilemma or a game of Chicken. Do you agree that the situation is appropriately described as that game? Does the article seem to favor cooperating or defecting? Explain your answer.</p></question>
 </section>
