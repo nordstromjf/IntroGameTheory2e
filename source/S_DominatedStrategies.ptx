@@ -100,25 +100,7 @@
     <li><p>
         Both players can make strategy decisions by considering only Player 1's payoff matrix. (Why?) Just to test this out, by looking only at the matrix in <xref ref="T_smallexampleP1"></xref> determine which strategy each player should choose.
 
-       <!-- <table>
-          <title>Player 1's payoffs in <xref ref="E_domstrat1"></xref>.</title>
-          <tabular>
-          <row>
-            <cell></cell>
-            <cell colspan="2" halign="center" bottom="minor">Player 2</cell>
-          </row>
-          <row>
-            <cell right="minor">Player 1</cell>
-            <cell bottom="minor" right="minor" halign="center">1</cell>
-            <cell bottom="minor" right="minor" halign="center">0</cell>
-          </row>
-          <row>
-            <cell right="minor"></cell>
-            <cell bottom="minor" right="minor" halign="center">-1</cell>
-            <cell bottom="minor" right="minor" halign="center">-2</cell>
-          </row>
-        </tabular>
-        </table>-->
+ 
 
       </p></li>
   </ol>
@@ -234,28 +216,7 @@
     Thus, in <xref ref="E_domstrat2"></xref>, we can eliminate Row 2, as in <xref ref="F_strikerow2Ex2"></xref>.
   </p>
 
-  <!--<table xml:id="T_strikerow2Ex2" >
-    <title>Row 2 is dominated by Row 1</title>
-    <tabular>
-          <row>
-            <cell></cell>
-            <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
-          </row>
-          <row>
-            <cell right="minor">Player 1</cell>
-            <cell bottom="minor" right="minor">1</cell>
-            <cell bottom="minor" right="minor">0</cell>
-            <cell bottom="minor" right="minor">2</cell>
-          </row>
-          <row>
-            <cell right="minor"></cell>
-            <cell bottom="minor" right="minor"><stale>-1</stale></cell>
-            <cell bottom="minor" right="minor"><stale>-2</stale></cell>
-            <cell bottom="minor" right="minor"><stale>2</stale></cell>
-          </row>
-        </tabular>
-  </table>
--->
+  
 <figure xml:id="F_strikerow2Ex2">
     <caption>Row 2 is dominated by Row 1.</caption>
     <image width="30%" source="images/image-3.svg">
@@ -287,28 +248,7 @@
     In <xref ref="E_domstrat3"></xref>, we cannot eliminate Row 2 since it is not dominated by Row 1. However, it should be clear that Column 2 dominates Column 3 (remember, Player 2 prefers SMALLER values). Thus we can eliminate Column 3 as in <xref ref="F_strikecol3Ex3"></xref>.
   </p>
 
-  <!--<table xml:id="T_strikecol3Ex3" >
-    <title>Column 3 is dominated by Column 2</title>
-    <tabular>
-          <row>
-            <cell></cell>
-            <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
-          </row>
-          <row>
-            <cell right="minor">Player 1</cell>
-            <cell bottom="minor" right="minor">1</cell>
-            <cell bottom="minor" right="minor">0</cell>
-            <cell bottom="minor" right="minor"><stale>2</stale></cell>
-          </row>
-          <row>
-            <cell right="minor"></cell>
-            <cell bottom="minor" right="minor">-1</cell>
-            <cell bottom="minor" right="minor">-2</cell>
-            <cell bottom="minor" right="minor"><stale>3</stale></cell>
-          </row>
-        </tabular>
-  </table>
-  -->
+
 <figure xml:id="F_strikecol3Ex3">
     <caption>Column 3 is dominated by Column 2.</caption>
     <image width="30%" source="images/image-4.svg">
@@ -335,28 +275,7 @@
     AFTER eliminating Column 3, Row 1 dominates Row 2. Now, in <xref ref="F_strikerow2Ex3"></xref> we can eliminate Row 2.
   </p>
 
- <!-- <table xml:id="T_strikerow2Ex3" >
-    <title>After eliminating Column 3, Row 2 is dominated by Row 1</title>
-   <tabular>
-          <row>
-            <cell></cell>
-            <cell colspan="3" halign="center" bottom="minor">Player 2</cell>
-          </row>
-          <row>
-            <cell right="minor">Player 1</cell>
-            <cell bottom="minor" right="minor">1</cell>
-            <cell bottom="minor" right="minor">0</cell>
-            <cell bottom="minor" right="minor"><stale>2</stale></cell>
-          </row>
-          <row>
-            <cell right="minor"></cell>
-            <cell bottom="minor" right="minor"><stale>-1</stale></cell>
-            <cell bottom="minor" right="minor"><stale>-2</stale></cell>
-            <cell bottom="minor" right="minor"><stale>3</stale></cell>
-          </row>
-        </tabular>
-  </table>
--->
+ 
 <figure xml:id="F_strikerow2Ex3">
     <caption>After eliminating Column 3, Row 2 is dominated by Row 1.</caption>
     <image width="30%" source="images/image-5.svg">

@@ -4,5 +4,13 @@
   <targets>
     <target name="web" format="html" />
     <target name="print" format="pdf" />
+    
+    <target
+        name="runestone"
+        format="html"
+        source="main.ptx"
+        publication="runestone.ptx"
+        output-dir="published/IntroGameTheory"
+        />
   </targets>
 </project>
