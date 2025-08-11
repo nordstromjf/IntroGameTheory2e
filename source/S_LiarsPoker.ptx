@@ -161,15 +161,15 @@
   </feedback>
   <cardsort>
   <match>
-  <premise>[B, C]</premise>
+  <premise order="2">[B, C]</premise>
   <response><m>(0, 0)</m></response>
   </match>
   <match>
-  <premise>[B, F]</premise>
+  <premise order="3">[B, F]</premise>
   <response><m>(1/2, -1/2)</m></response>
   </match>
   <match>
-  <premise>[T, F]</premise>
+  <premise order="1">[T, F]</premise>
   <response><m>(1/4, -1/4)</m></response>
   </match>
   </cardsort><answer><p>[B, C]<m>=(0, 0)</m>; [B, F]<m>=(1/2, -1/2)</m>; [T, F]<m>=(1/4, -1/4)</m>;</p></answer></exercise>

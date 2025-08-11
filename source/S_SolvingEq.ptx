@@ -282,15 +282,18 @@
   <p>We can also use a simplified version of the interactive activity from <xref ref="S_MixStratGraph"/>.</p>
 
 <paragraphs xml:id="W_graphicalmethodtool"><title>Interactive Activity: Graphical Method</title>
-  <p>
+  
   <interactive xml:id="DN_graphingsolver" label="doenetgraphsolve" platform="doenetml" width="100%" aspect="40:43">
           <slate xml:id="test2" surface="doenetml">
             
-            <xi:include parse="text" href="doenet/graphingsolver.xml"/>
+            <xi:include parse="text" href="doenet/graphingsolver.doenetml"/>
             
           </slate>
+          <static><p>The interactive activity is available in the online version of the text at <url href="https://nordstrommath.com/IntroGameTheory2e/S_SolvingEq.html#W_graphicalmethodtool" visual="nordstrommath.com/IntroGameTheory2e/S_SolvingEq.html#W_graphicalmethodtool"/>
+           or on Doenet at <url href="https://www.doenet.org/portfolioviewer/_wuJisITcxM90a5oMR3Qye" visual="https://tinyurl.com/doenetmixstratfinder"/>.
+        </p></static>
   </interactive>
-</p>
+
 </paragraphs>
   <p>
     Now use the Sage cells or the interactive activity to help you analyze some more games!
@@ -364,7 +367,7 @@
       
        <exercise label="IGT_SE_CYU_equil"><statement correct="no"><p>True or False: The following zero-sum game
         <table xml:id="T_exergame2" >
-    <tabular>
+    <tabular halign="center">
       <row>
         <cell></cell>
         <cell bottom="minor"><b>C</b></cell>
@@ -526,7 +529,7 @@
        <exercise label="IGT_SE_CYU_full2game3"><statement><p>Find the mixed strategy for Player 1 for the following game.
 
         <table xml:id="T_exergame3" >
-    <tabular>
+    <tabular halign="center">
       <row>
         <cell></cell>
         <cell bottom="minor"><b>C</b></cell>

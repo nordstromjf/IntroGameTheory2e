@@ -265,19 +265,19 @@
   </feedback>
   <cardsort>
   <match >
-  <premise>10</premise>
+  <premise order="3">10</premise>
   <response>R</response>
   </match>
   <match >
-  <premise>-1</premise>
+  <premise order="1">-1</premise>
   <response>S</response>
   </match>
   <match >
-  <premise>5</premise>
+  <premise order="4">5</premise>
   <response>P</response>
   </match>
   <match >
-  <premise>15</premise>
+  <premise order="2">15</premise>
   <response>T</response>
   </match>
   </cardsort><answer><m>R=10, P=5, T=15, S=-1.</m></answer></exercise>
@@ -310,19 +310,19 @@
   </feedback>
   <cardsort>
   <match >
-  <premise>10</premise>
+  <premise order="2">10</premise>
   <response>R</response>
   </match>
   <match >
-  <premise>-1</premise>
+  <premise order="3">-1</premise>
   <response>S</response>
   </match>
   <match >
-  <premise>2</premise>
+  <premise order="4">2</premise>
   <response>P</response>
   </match>
   <match >
-  <premise>5</premise>
+  <premise order="1">5</premise>
   <response>T</response>
   </match>
   </cardsort><answer><m>R=10, P=2, T=5, S=-1.</m></answer></exercise>
@@ -355,19 +355,19 @@
   </feedback>
   <cardsort>
   <match >
-  <premise>2</premise>
+  <premise order="4">2</premise>
   <response>R</response>
   </match>
   <match >
-  <premise>-5</premise>
+  <premise order="1">-5</premise>
   <response>S</response>
   </match>
   <match >
-  <premise>-2</premise>
+  <premise order="2">-2</premise>
   <response>P</response>
   </match>
   <match >
-  <premise>5</premise>
+  <premise order="3">5</premise>
   <response>T</response>
   </match>
   </cardsort><answer><m>R=2, P=-2, T=5, S=-5.</m></answer></exercise>
@@ -416,19 +416,19 @@
   </feedback>
   <cardsort>
   <match>
-  <premise>2</premise>
+  <premise order="3">2</premise>
   <response>R</response>
   </match>
   <match >
-  <premise>0</premise>
+  <premise order="4">0</premise>
   <response>S</response>
   </match>
   <match >
-  <premise>-2</premise>
+  <premise order="1">-2</premise>
   <response>P</response>
   </match>
   <match >
-  <premise>5</premise>
+  <premise order="2">5</premise>
   <response>T</response>
   </match>
   </cardsort><answer><m>R=2, P=-2, T=5, S=0.</m></answer></exercise>
@@ -477,19 +477,19 @@
   </feedback>
   <cardsort>
   <match >
-  <premise>0</premise>
+  <premise order="4">0</premise>
   <response>R</response>
   </match>
   <match >
-  <premise>-15</premise>
+  <premise order="3">-15</premise>
   <response>S</response>
   </match>
   <match >
-  <premise>-10</premise>
+  <premise order="2">-10</premise>
   <response>P</response>
   </match>
   <match >
-  <premise>20</premise>
+  <premise order="1">20</premise>
   <response>T</response>
   </match>
   </cardsort><answer><m>R=0, P=-10, T=20, S=-15.</m></answer></exercise>

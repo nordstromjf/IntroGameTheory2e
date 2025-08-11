@@ -592,15 +592,20 @@
 
 
 <paragraphs xml:id="W_graphicalmethod"><title>Interactive Activity: Finding the mixed strategy graphically</title>
-  <p>
+  
   <interactive xml:id="DN_maximinws" label="doenetmaximingraph" platform="doenetml" width="100%" aspect="40:43">
           <slate xml:id="test" surface="doenetml">
             
-            <xi:include parse="text" href="doenet/maximingraph.xml"/>
+            <xi:include parse="text" href="doenet/maximingraph.doenetml"/>
             
           </slate>
+          <static><p>The interactive activity is available in the online version of the text at <url href="https://nordstrommath.com/IntroGameTheory2e/S_MixStratGraph.html#W_graphicalmethod" visual="nordstrommath.com/IntroGameTheory2e/S_MixStratGraph.html#W_graphicalmethod"/>
+           or on Doenet at <url href="https://www.doenet.org/portfolioviewer/_iR2WJvOBDdOFkCkep7LgL" visual="https://tinyurl.com/doenetmixstrat"/>.
+        </p></static>
   </interactive>
-</p>
+
+
+
 </paragraphs>
 
   <p>

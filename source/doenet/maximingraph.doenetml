@@ -1,0 +1,166 @@
+
+<p>This activity works through the steps to find Player 1's maximin mixed strategy for any <m>2\times 2</m> game matrix 
+<me>\left[\begin{matrix}
+  a &amp; b\\
+  c &amp; d\\
+  \end{matrix}\right]</me>
+with a mixed strategy equilibrium. Player 1's strategies are labeled A and B, Player 2's are C and D.</p>
+
+<p>First enter the four values for your matrix: 
+  <m>a=</m><mathInput name="ac"></mathInput>
+  <m>b=</m><mathInput name="ad"></mathInput>
+  <m>c=</m><mathInput name="bc"></mathInput>
+  <m>d=</m><mathInput name="bd"></mathInput>
+</p>
+
+<p>The game matrix for Player 1's payoffs is 
+<me>\left[\begin{matrix}
+  $ac &amp; $ad\\
+  $bc &amp; $bd\\
+  \end{matrix}\right].</me></p>
+
+<p>If Player 2 plays C and Player 1 plays A, what is the probability that Player 1 plays B? <answer>0</answer></p>
+<p>What is the payoff to Player 1 for <m>[A, C]</m>? <answer>$ac</answer></p>
+
+<p>If Player 2 plays C and Player 1 plays B, what is the probability Player 1 plays B?  <answer>1</answer></p>
+<p>What is the payoff to Player 1 for <m>[B,C]</m>? <answer>$bc</answer></p>
+
+<aside><title>The graph of Player 1's payoffs as Player 2 plays only C</title>
+
+<setup>
+<line name="line1" through="(0, $ac) (1,$bc)" styleNumber="1">
+  <label> C </label>
+</line>
+  <point name="C" styleNumber="2">
+      <constraints>
+        <constrainTo>$line1</constrainTo>
+      </constraints>
+    
+  </point>
+  <line name="x0" through="(0, 1) (0, 2)"></line>
+  <line name="x1" through="(1, 1) (1, 2)"></line>
+    <point name="c1"><math>(0,$ac)</math>
+  <constraints>
+        <constrainTo>$x0</constrainTo>
+        <constrainToGrid dx="0.1" dy="0.1"/>
+      </constraints>
+  </point>
+  <point name="c2"><math>(1,$bc)</math>
+  <constraints>
+        <constrainTo>$x1</constrainTo>
+        <constrainToGrid dx="0.1" dy="0.1"/>
+      </constraints></point>
+  
+</setup>
+
+<p>We want to graph the line through the points
+  <m>(0,$ac)</m>
+  and <m>(1,$bc)</m>.
+</p>
+
+ 
+
+
+ 
+<p>The graph of Player 2's pure strategy C as Player 1 varies the probability of playing B. Drag the point to see the probability.</p>
+<p>Probability Player 1 plays B= $C.x</p>
+<graph xmin="-0.1" xmax="1.1" ymin="-6" ymax="6">
+  $line1
+  $C
+  $c1
+  $c2
+    
+
+</graph>
+</aside>
+ 
+<p>If Player 2 plays D and Player 1 plays A, what is the probability Player 1 plays B? <answer>0</answer></p>
+<p>What is the payoff to Player 1 for <m>[A, D]</m>? <answer>$ad</answer></p>
+<p>If Player 2 plays D and Player 1 plays B, what is the probability Player 1 plays B?  <answer>1</answer></p>
+<p>What is the payoff to Player 1 for <m>[B, D]</m>? <answer>$bd</answer></p>
+
+<aside><title>The graph of Player 1's payoffs as Player 2 plays only D</title>
+ <setup>
+<line name="line2" through="(0, $ad) (1,$bd)" styleNumber="2">
+  <label>D</label>
+</line>
+  <point name="D" styleNumber="2">
+      <constraints>
+        <constrainTo>$line2</constrainTo>
+      </constraints>
+  </point>
+    <point name="d1" styleNumber="2"><math>(0,$ad) </math>
+  <constraints>
+        <constrainTo>$x0</constrainTo>
+        <constrainToGrid dx="0.1" dy="0.1"/>
+      </constraints>
+  </point>
+  <point name="d2" styleNumber="2"><math>(1,$bd) </math>
+  <constraints>
+        <constrainTo>$x1</constrainTo>
+        <constrainToGrid dx="0.1" dy="0.1"/>
+      </constraints>
+  </point>
+    
+</setup>
+
+<p>We want to graph the line through the points
+  <math>(0,$ad)</math>
+  and <math>(1,$bd)</math>.
+</p>
+
+
+ 
+<p>The graph of Player 2's pure strategy D as Player 1 varies the probability of playing B. Drag the point to see the probability.</p>
+<p>Probability Player 1 plays B= $D.x</p>
+<graph xmin="-0.1" xmax="1.1" ymin="-6" ymax="6">
+  $line2
+  $D
+  $d1
+  $d2
+    
+
+</graph>
+</aside>
+
+<aside><title>Graphs of both lines</title>
+<p>Now we want to graph both lines on the same axes.</p>
+<graph xmin="-0.1" xmax="1.1" ymin="-6" ymax="6">
+  $line1
+  $line2
+   $c1
+  $c2
+  $d1
+  $d2
+</graph>
+
+</aside>
+
+<p>The intersection of the two lines will give us the maximin strategy for Player 1. To find the intersection point, we need the equations of each line. Make sure your answers are in slope-intercept form <m>y=mx+b</m>.</p>
+<p>The line through (0, $ac) and (1, $bc) is <answer><award>y=(
+$bc-$ac)x+$ac</award></answer></p>
+
+<p>The line through (0, $ad) and (1, $bd) is <answer><award>y=(
+$bd-$ad)x+$ad</award></answer></p>
+
+<setup>
+  <math name="xcoor" simplify>($ad - $ac)/($bc - $ac - $bd +$ad)</math>
+  <math name="ycoor" simplify>($bc- $ac)*$xcoor +$ac</math>
+  <math name="probA" simplify>1-$xcoor</math>
+  <math name="probB" >$xcoor</math>
+  <math name="payoff1" >$ycoor</math>
+</setup>
+
+<!--<p><m>($xcoor, $ycoor)</m></p>-->
+
+<p>Find the intersection point: <m>(x,y) = \bigg( </m><mathInput name="userX"/> , <mathInput name="userY"/><m> \bigg)</m></p>
+
+  <answer name="ans1">
+    <award name="correct1">
+      <when>$userX = $xcoor and $userY = $ycoor</when>
+    </award>
+</answer>
+
+<p>Using our intersection point, we know Player 1 should play A with a probability of 
+<answer><award>$probA</award></answer> and play B with a probability of <answer><award>$probB</award></answer>.</p>
+<p>The expected payoff to Player 1 is <answer><award>$payoff1</award></answer></p>
