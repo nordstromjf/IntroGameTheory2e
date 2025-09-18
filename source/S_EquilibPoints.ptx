@@ -32,7 +32,7 @@
     </statement>
   </activity>
   <p>
-    We now get to the main quetion in this section.</p>
+    We now get to the main question in this section.</p>
      <question xml:id="Q_valuesofequilib"><p>Can two equilibrium points for a two-player zero-sum game have different values?
      </p></question>
      <p>By experimenting with some examples, try to create an example of a game with two equilibrium points where those points have different values for one of the players. If you can successfully create such an example, you will have answered the question. But just because you can't find an example, that doesn't mean one doesn't exist!
