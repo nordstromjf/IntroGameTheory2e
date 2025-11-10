@@ -372,8 +372,8 @@
     <choices randomize="no">
       <choice correct="yes"><statement><p>Pure strategy C.</p></statement><feedback><p>We can find <m>E_2(C)=17/8</m> and <m>E_2(D)=9/8.</m> So, Player 2 prefers C.</p></feedback></choice>
       <choice ><statement><p>Pure strategy D.</p></statement><feedback><p>Find <m>E_2(C)</m> and <m>E_2(D).</m></p></feedback></choice>
-      <choice ><statement ><p>A mixed strategy with A more often than B.</p></statement><feedback><p>Find <m>E_2(C)</m> and <m>E_2(D).</m></p></feedback></choice>
-      <choice ><statement><p>A mixed strategy with B more often than A.</p></statement><feedback><p>Find <m>E_2(C)</m> and <m>E_2(D).</m></p></feedback></choice>
+      <choice ><statement ><p>A mixed strategy with C more often than D.</p></statement><feedback><p>Find <m>E_2(C)</m> and <m>E_2(D).</m></p></feedback></choice>
+      <choice ><statement><p>A mixed strategy with D more often than C.</p></statement><feedback><p>Find <m>E_2(C)</m> and <m>E_2(D).</m></p></feedback></choice>
     </choices><answer><p>Pure strategy C since <m>E_2(C)=17/8</m> and <m>E_2(D)=9/8.</m></p></answer></exercise>
 
     <exercise label="IGT_INZ_CYU_P1strat2P2C"><statement><p> In the game in <xref ref="T_NZmatrix2"></xref>, suppose Player 2 announces he will play C. What should Player 1 play?</p></statement>

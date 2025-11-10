@@ -132,7 +132,7 @@
     Although you may have come up with a good strategy, let's see if we can't decide what the <q>best</q> strategy should be for Rock-Paper-Scissors. 
   </p>
   <activity xml:id="A_RPSsomemixed">
-    <title>Exploring some straegies</title>
+    <title>Exploring some strategies</title>
     <introduction><p>Let's assume we are playing Rock-Paper-Scissors against the smartest player to ever live. We will call such an opponent the <q>perfect</q> player. You can think of this player as one who can figure out your strategy easily.</p></introduction>
     <task>
       <p>
