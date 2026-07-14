@@ -20,85 +20,27 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js/lib"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: true,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
+<meta name="twitter:image" content="https://nordstromjf.github.io/IntroGameTheory2e/external/image-1.svg">
 <meta property="og:image" content="https://nordstromjf.github.io/IntroGameTheory2e/external/image-1.svg">
-<meta property="book:title" content="Introduction to Game Theory">
-<meta property="book:author" content="Jennifer Firkins Nordstrom">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<meta name="twitter:image:alt" content="Document Logo">
+<meta property="og:image:alt" content="Document Logo">
+<meta name="twitter:title" content="Introduction to Game Theory: a Discovery Approach">
+<meta property="og:title" content="Introduction to Game Theory: a Discovery Approach">
+<meta property="book:title" content="Introduction to Game Theory: a Discovery Approach">
+<meta name="twitter:description" content="This text provides an inquiry-based introduction to game theory. The material requires no mathematical prerequisites and is suitable for a non-majors quantitative reasoning course.">
+<meta property="og:description" content="This text provides an inquiry-based introduction to game theory. The material requires no mathematical prerequisites and is suitable for a non-majors quantitative reasoning course.">
+<meta name="twitter:card" content="summary_large_image">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -120,16 +62,16 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.18';
+eBookConfig.runestone_version = '8.1.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.cefb0224014f3333.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.c50cdcad467c8d3e.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/prefix-runtime.cb5af2e851de3574.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.f51cd4153b45055d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="introgametheory" class="pretext book ignore-math">
@@ -139,18 +81,35 @@ eBookConfig.enable_chatcodes =  false;
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div>
 </div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
-<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<div class="search-results-controls">
-<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-<h2 class="search-results-heading">Search Results: </h2>
-<div id="searchempty" class="searchempty"><span>No results.</span></div>
-<ol id="searchresults" class="searchresults"></ol>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
+<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="intro_game_theory-7.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="intro_game_theory-7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="S_PdandChicken.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="intro_game_theory-7.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="intro_game_theory-7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="S_PdandChicken.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\( \newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
   \newcommand{\MyTikzmark}[2]{
      \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
@@ -171,20 +130,20 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Preface</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="intro_game_theory-4.html" class="internal"><span class="codenumber">1</span> <span class="title">What is Game Theory?</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-intro_game_theory-4" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Players and Strategies</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_intro" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_intro.html#SS_Cake" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Assumptions: Cake Division</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_intro.html#Ex_Tic" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Developing Strategies: Tic Tac Toe</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_intro.html#S_intro-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Check Your Understanding</span></a></div></li>
@@ -192,7 +151,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_IntroMatrices.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Game Matrices and Payoff Vectors</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_IntroMatrices" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroMatrices.html#SS_MatchPennies" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Setting up a Payoff Matrix</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroMatrices.html#SS_revistassump" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Revisiting the Assumptions</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroMatrices.html#S_IntroMatrices-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Check Your Understanding</span></a></div></li>
@@ -202,10 +161,10 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="intro_game_theory-5.html" class="internal"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-intro_game_theory-5" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_IntroZeroSum.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to Two-Person Zero-Sum Games</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_IntroZeroSum" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroZeroSum.html#Ex_election" class="internal"><span class="codenumber">2.1.1</span> <span class="title">An Election Campaign Game</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroZeroSum.html#SS_equilpairs" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Equilibrium Pairs</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroZeroSum.html#S_IntroZeroSum-6" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Check Your Understanding</span></a></div></li>
@@ -213,7 +172,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_DominatedStrategies.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Finding Strategies</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_DominatedStrategies" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_simplifyingmatrix" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Simplifying a Zero-Sum Game Matrix</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_DomStrategies" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Dominated Strategies</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_maximin" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Maximin and Minimax Strategies</span></a></div></li>
@@ -222,7 +181,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_Probability.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Probability and Expected Value</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_Probability" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_Probability.html#SS_basicprob" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Some Basic Probability</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_Probability.html#SS_expectedvalue" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Expected Value</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_Probability.html#S_Probability-5" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Check Your Understanding</span></a></div></li>
@@ -230,111 +189,117 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_OneCardStud.html" class="internal"><span class="codenumber">2.4</span> <span class="title">A Game of Chance</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_OneCardStud.html#S_OneCardStud-39" class="internal"><span class="codenumber">2.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_OneCardStud" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_OneCardStud.html#S_OneCardStud-39" class="internal"><span class="codenumber">2.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_EquilibPoints.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Equilibrium Points</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_EquilibPoints.html#S_EquilibPoints-30" class="internal"><span class="codenumber">2.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_EquilibPoints" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_EquilibPoints.html#S_EquilibPoints-30" class="internal"><span class="codenumber">2.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Strategies for Zero-Sum Games and Equilibrium Points</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html#S_ZeroSumStrategySummary-15" class="internal"><span class="codenumber">2.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Strategies for Zero-Sum Games</span></a></div>
+<ul id="ptx-toc-group-S_ZeroSumStrategySummary" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html#S_ZeroSumStrategySummary-13" class="internal"><span class="codenumber">2.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopRationality.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Popular Culture: Rationality and Perfect Information</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopRationality.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Pop Culture: Rationality</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="intro_game_theory-6.html" class="internal"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-intro_game_theory-6" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_IntroRepeated.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction to Repeated Games</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroRepeated.html#S_IntroRepeated-26" class="internal"><span class="codenumber">3.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_IntroRepeated" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroRepeated.html#S_IntroRepeated-26" class="internal"><span class="codenumber">3.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_MixStratGraph.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Mixed Strategies: Graphical Solution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratGraph.html#S_MixStratGraph-55" class="internal"><span class="codenumber">3.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_MixStratGraph" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratGraph.html#S_MixStratGraph-53" class="internal"><span class="codenumber">3.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_SolvingEq.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Using Sage to Graph Lines and Solve Equations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_SolvingEq.html#S_SolvingEq-26" class="internal"><span class="codenumber">3.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_SolvingEq" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_SolvingEq.html#S_SolvingEq-26" class="internal"><span class="codenumber">3.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_MixStratEV.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Mixed Strategies: Expected Value Solution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratEV.html#S_MixStratEV-34" class="internal"><span class="codenumber">3.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_MixStratEV" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratEV.html#S_MixStratEV-32" class="internal"><span class="codenumber">3.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_LiarsPoker.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Liar’s Poker</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_LiarsPoker.html#S_LiarsPoker-23" class="internal"><span class="codenumber">3.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_LiarsPoker" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_LiarsPoker.html#S_LiarsPoker-23" class="internal"><span class="codenumber">3.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_AugMatrices.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Solving Systems of Equations Using Matrices</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_AugMatrices.html#S_AugMatrices-35" class="internal"><span class="codenumber">3.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_AugMatrices" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_AugMatrices.html#S_AugMatrices-35" class="internal"><span class="codenumber">3.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_Undercut.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Undercut</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_Undercut.html#S_Undercut-31" class="internal"><span class="codenumber">3.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_Undercut" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_Undercut.html#S_Undercut-30" class="internal"><span class="codenumber">3.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="intro_game_theory-7.html" class="internal"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-intro_game_theory-7">
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="S_IntroNonzero.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Introduction to Two-Player Non-Zero-Sum Games</span></a></div>
-<ul class="structural toc-item-list active"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroNonzero.html#S_IntroNonzero-32" class="internal"><span class="codenumber">4.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul class="structural toc-item-list active" id="ptx-toc-group-S_IntroNonzero"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroNonzero.html#S_IntroNonzero-32" class="internal"><span class="codenumber">4.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_PdandChicken.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Prisoner’s Dilemma and Chicken</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PdandChicken.html#S_PdandChicken-43" class="internal"><span class="codenumber">4.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_PdandChicken" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PdandChicken.html#S_PdandChicken-43" class="internal"><span class="codenumber">4.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_CWPD.html" class="internal"><span class="codenumber">4.3</span> <span class="title">A Class-Wide Experiment</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_CWPD.html#S_CWPD-25" class="internal"><span class="codenumber">4.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_CWPD" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_CWPD.html#S_CWPD-25" class="internal"><span class="codenumber">4.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_PDconditions.html" class="internal"><span class="codenumber">4.4</span> <span class="title">What Makes a Prisoner’s Dilemma?</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PDconditions.html#S_PDconditions-18" class="internal"><span class="codenumber">4.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_PDconditions" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PDconditions.html#S_PDconditions-18" class="internal"><span class="codenumber">4.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_VDexperiment.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Another Multiplayer Experiment</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VDexperiment.html#S_VDexperiment-11" class="internal"><span class="codenumber">4.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_VDexperiment" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VDexperiment.html#S_VDexperiment-11" class="internal"><span class="codenumber">4.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_VolunteerDil.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Volunteer’s Dilemma</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VolunteerDil.html#S_VolunteerDil-20" class="internal"><span class="codenumber">4.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_VolunteerDil" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VolunteerDil.html#S_VolunteerDil-20" class="internal"><span class="codenumber">4.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_RepeatPD.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Repeated Prisoner’s Dilemma</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_RepeatPD.html#S_RepeatPD-31" class="internal"><span class="codenumber">4.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_RepeatPD" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_RepeatPD.html#S_RepeatPD-29" class="internal"><span class="codenumber">4.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopPD.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Popular Culture: Prisoner’s Dilemma and Chicken</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopPD.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Pop Culture: Prisoner’s Dilemma and Chicken</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">References</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="S_IntroNonzero"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.1</span><span class="space"> </span><span class="title">Introduction to Two-Player Non-Zero-Sum Games</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="S_IntroNonzero">
+<h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Introduction to Two-Player Non-Zero-Sum Games</span>
 </h2>
-<div class="para" id="S_IntroNonzero-2">In this section we introduce non-zero-sum games. In a <dfn class="terminology">non-zero-sum game</dfn> the players’ payoffs no longer need to sum to a constant value. Now it is possible for both players to gain or both players to lose.<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroNonzero-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="S_IntroNonzero-2">In this section we introduce non-zero-sum games. In a <dfn class="terminology">non-zero-sum game</dfn> the players’ payoffs no longer need to sum to a constant value. Now it is possible for both players to gain or both players to lose.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroNonzero-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="A_propertiesnonzero" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Compare properties.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_propertiesnonzero-2-1">What are some properties of a zero-sum game that may no longer hold for a non-zero-sum game? For example, in a zero-sum game is it ever advantageous to inform your opponent of your strategy? Is it advantageous to communicate prior to game play and determine a joint plan of action? Would you still want to minimize your opponents payoff?<div class="autopermalink" data-description="Paragraph"><a href="#A_propertiesnonzero-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="activity project-like" id="A_propertiesnonzero"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Compare properties.</span>
+</h3>
+<div class="para" id="A_propertiesnonzero-2-1">What are some properties of a zero-sum game that may no longer hold for a non-zero-sum game? For example, in a zero-sum game is it ever advantageous to inform your opponent of your strategy? Is it advantageous to communicate prior to game play and determine a joint plan of action? Would you still want to minimize your opponent’s payoff?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_propertiesnonzero-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Activity 4.1.1: Compare properties"><a href="#A_propertiesnonzero" title="Copy heading and permalink for Activity 4.1.1: Compare properties" aria-label="Copy heading and permalink for Activity 4.1.1: Compare properties">🔗</a></div></article></details><div class="para" id="S_IntroNonzero-4">Let’s build an understanding of non-zero-sum games by looking at an example.<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroNonzero-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.1.1: Compare properties"><a tabindex="-1" href="#A_propertiesnonzero" title="Copy heading and permalink for Activity 4.1.1: Compare properties" aria-label="Copy heading and permalink for Activity 4.1.1: Compare properties">🔗</a></div>
+</article>
+<div class="para" id="S_IntroNonzero-4">Let’s build an understanding of non-zero-sum games by looking at an example.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroNonzero-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="E_battle_of_movies"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Battle of the Movies.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Battle of the Movies.</span>
 </h3>
-<div class="para" id="E_battle_of_movies-4-1">Alice and Bob want to go out to a movie. Bob wants to see an action movie, Alice wants to see a comedy. Both prefer to go to a movie together rather than to go alone. We can represent the situation with the payoff matrix in <a href="S_IntroNonzero.html#T_battleofmovies" class="xref" data-knowl="./knowl/xref/T_battleofmovies.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 4.1.2: Battle of the Movies">Table 4.1.2</a>:<div class="autopermalink" data-description="Paragraph"><a href="#E_battle_of_movies-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <figure class="table table-like" id="T_battleofmovies"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.1.2<span class="period">.</span></span><span class="space"> </span>Battle of the Movies<div class="autopermalink" data-description="Table 4.1.2: Battle of the Movies"><a href="#T_battleofmovies" title="Copy heading and permalink for Table 4.1.2: Battle of the Movies" aria-label="Copy heading and permalink for Table 4.1.2: Battle of the Movies">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="E_battle_of_movies-4-1">Alice and Bob want to go out to a movie. Bob wants to see an action movie, Alice wants to see a comedy. Both prefer to go to a movie together rather than to go alone. We can represent the situation with the payoff matrix in <a href="S_IntroNonzero.html#T_battleofmovies" class="xref" data-knowl="./knowl/xref/T_battleofmovies.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 4.1.2: Battle of the Movies">Table 4.1.2</a>:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_battle_of_movies-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="table table-like" id="T_battleofmovies"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Battle of the Movies<div class="autopermalink" aria-hidden="true" data-description="Table 4.1.2: Battle of the Movies"><a tabindex="-1" href="#T_battleofmovies" title="Copy heading and permalink for Table 4.1.2: Battle of the Movies" aria-label="Copy heading and permalink for Table 4.1.2: Battle of the Movies">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines"></td>
@@ -358,131 +323,213 @@ eBookConfig.enable_chatcodes =  false;
 <td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((-1, -1)\)</span></td>
 <td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((1, 2)\)</span></td>
 </tr>
-</table></div></figure><div class="autopermalink" data-description="Example 4.1.1: Battle of the Movies"><a href="#E_battle_of_movies" title="Copy heading and permalink for Example 4.1.1: Battle of the Movies" aria-label="Copy heading and permalink for Example 4.1.1: Battle of the Movies">🔗</a></div></article><details id="A_BoMnotzerosum" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Not zero-sum.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_BoMnotzerosum-2-1">Explain why this is not a zero-sum game.<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMnotzerosum-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 4.1.2: Not zero-sum"><a href="#A_BoMnotzerosum" title="Copy heading and permalink for Activity 4.1.2: Not zero-sum" aria-label="Copy heading and permalink for Activity 4.1.2: Not zero-sum">🔗</a></div></article></details><div class="para" id="S_IntroNonzero-7">In zero-sum games it is never advantageous to let your opponent know you strategy. Does that property still apply for games like Battle of the Movies?<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroNonzero-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="A_BoMannounce" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Announcing a strategy.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_BoMannounce-2-1">Could it be advantageous for a player to announce his or her strategy? Could it be harmful to announce his or her strategy? If possible, describe a scenario in which it would be advantageous to announce a strategy. If possible, describe a scenario in which it would be harmful to announce a strategy.<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMannounce-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 4.1.3: Announcing a strategy"><a href="#A_BoMannounce" title="Copy heading and permalink for Activity 4.1.3: Announcing a strategy" aria-label="Copy heading and permalink for Activity 4.1.3: Announcing a strategy">🔗</a></div></article></details><div class="para" id="S_IntroNonzero-9">We might first try to analyze Battle of the Movies using the same techniques as we used for zero-sum games. For example, we might start as we would in zero-sum games by looking for any equilibrium points.<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroNonzero-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="A_BoMequilpoints" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Equilibrium points.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="introduction" id="A_BoMequilpoints-2"><div class="para" id="A_BoMequilpoints-2-1">Since our main goal in analyzing games has been to find equilibrium points, let’s find any equilibrium points for Battle of the Movies.<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMequilpoints-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
-<article class="task exercise-like" id="A_BoMequilpoints-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_BoMequilpoints-3-1">Are there any strategy pairs where players would not want to switch?<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMequilpoints-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="A_BoMequilpoints-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
-<div class="para" id="A_BoMequilpoints-3-2-1">There are two!<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMequilpoints-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Hint 4.1.4.a.1"><a href="#A_BoMequilpoints-3-2" title="Copy heading and permalink for Hint 4.1.4.a.1" aria-label="Copy heading and permalink for Hint 4.1.4.a.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Task 4.1.4.a"><a href="#A_BoMequilpoints-3" title="Copy heading and permalink for Task 4.1.4.a" aria-label="Copy heading and permalink for Task 4.1.4.a">🔗</a></div></article><article class="task exercise-like" id="A_BoMequilpoints-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_BoMequilpoints-4-1">Are the equilibrium points the same (in other words, does each player get the same payoff at each equilibrium point)? Compare this to what must happen for zero-sum games.<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMequilpoints-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Task 4.1.4.b"><a href="#A_BoMequilpoints-4" title="Copy heading and permalink for Task 4.1.4.b" aria-label="Copy heading and permalink for Task 4.1.4.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 4.1.4: Equilibrium points"><a href="#A_BoMequilpoints" title="Copy heading and permalink for Activity 4.1.4: Equilibrium points" aria-label="Copy heading and permalink for Activity 4.1.4: Equilibrium points">🔗</a></div></article></details><div class="para" id="S_IntroNonzero-11">Now that we know Battle of the Movies has two equilibrium points, we should try to find actual strategies for Alice and Bob. Is there a good strategy for each if they play the game only once? What if they repeat the game? Recall that with zero-sum games, if there was an equilibrium, rational players always want to play it, even if the game is repeated. Does that still seem to work here? Also, how might the ability to communicate change what the players do?<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroNonzero-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="A_BoMrepeat" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Repeating the game.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="introduction" id="A_BoMrepeat-2"><div class="para" id="A_BoMrepeat-2-1">Suppose the game is played repeatedly. For example, Alice and Bob have movie night once a month.<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMrepeat-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
-<article class="task exercise-like" id="A_BoMrepeat-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_BoMrepeat-3-1">Suggest a strategy for Alice and for Bob.<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMrepeat-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Task 4.1.5.a"><a href="#A_BoMrepeat-3" title="Copy heading and permalink for Task 4.1.5.a" aria-label="Copy heading and permalink for Task 4.1.5.a">🔗</a></div></article><article class="task exercise-like" id="A_BoMrepeat-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_BoMrepeat-4-1">Play the game with someone from class <em class="emphasis">without communicating</em> about your strategy before each game.<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMrepeat-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Task 4.1.5.b"><a href="#A_BoMrepeat-4" title="Copy heading and permalink for Task 4.1.5.b" aria-label="Copy heading and permalink for Task 4.1.5.b">🔗</a></div></article><article class="task exercise-like" id="A_BoMrepeat-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="A_BoMrepeat-5-1">How could communication affect the choice of strategy? Now play several times where you are allowed to communicate about your strategy. Does this change your strategy?<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMrepeat-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Task 4.1.5.c"><a href="#A_BoMrepeat-5" title="Copy heading and permalink for Task 4.1.5.c" aria-label="Copy heading and permalink for Task 4.1.5.c">🔗</a></div></article><article class="task exercise-like" id="A_BoMrepeat-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="A_BoMrepeat-6-1">In either case, communicating and not communicating, do you think your strategies for Alice and Bob represent a mixed strategy equilibrium?<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMrepeat-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Task 4.1.5.d"><a href="#A_BoMrepeat-6" title="Copy heading and permalink for Task 4.1.5.d" aria-label="Copy heading and permalink for Task 4.1.5.d">🔗</a></div></article><div class="autopermalink" data-description="Activity 4.1.5: Repeating the game"><a href="#A_BoMrepeat" title="Copy heading and permalink for Activity 4.1.5: Repeating the game" aria-label="Copy heading and permalink for Activity 4.1.5: Repeating the game">🔗</a></div></article></details><details id="A_BoMcomparezerosum" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Compare to zero-sum.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_BoMcomparezerosum-2-1">In a zero-sum game, if there is a pure strategy equilibrium, then what happens when you repeat a game? If you repeat Battle of the Movies, does the game always result in an equilibrium pair?<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMcomparezerosum-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 4.1.6: Compare to zero-sum"><a href="#A_BoMcomparezerosum" title="Copy heading and permalink for Activity 4.1.6: Compare to zero-sum" aria-label="Copy heading and permalink for Activity 4.1.6: Compare to zero-sum">🔗</a></div></article></details><div class="para" id="S_IntroNonzero-14">Hopefully, you are beginning to see some of the challenges for analyzing non-zero-sum games. We know there are equilibrium points in Battle of the Movies, but even rational play may not result in an equilibrium. For the remainder of this section, let’s assume that players are <em class="emphasis">not</em> allowed to communicate about strategy prior to play. Such games are called <dfn class="terminology">non-cooperative</dfn> games. Before moving on, let’s try to find the maximin strategies for our players using the graphical method, as we did with zero-sum games.<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroNonzero-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="A_BoMBobsmatrix" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Bob’s payoff matrix.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_BoMBobsmatrix-2-1">Consider Battle of the Movies from Bob’s point of view. We know that Bob wants to maximize his payoff (that has not changed). So Bob doesn’t care what Alice’s payoff’s are. Write down Bob’s payoff matrix without including Alice’s payoffs.<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMBobsmatrix-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 4.1.7: Bob’s payoff matrix"><a href="#A_BoMBobsmatrix" title="Copy heading and permalink for Activity 4.1.7: Bob’s payoff matrix" aria-label="Copy heading and permalink for Activity 4.1.7: Bob’s payoff matrix">🔗</a></div></article></details><details id="A_BoMBobgraph" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Graphical method on Bob’s matrix.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_BoMBobgraph-2-1">Recall that the graphical method represents Bob’s expected payoff depending on how often he plays each of his options. Sketch the graph associated with Bob’s payoff matrix.<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMBobgraph-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 4.1.8: Graphical method on Bob’s matrix"><a href="#A_BoMBobgraph" title="Copy heading and permalink for Activity 4.1.8: Graphical method on Bob’s matrix" aria-label="Copy heading and permalink for Activity 4.1.8: Graphical method on Bob’s matrix">🔗</a></div></article></details><details id="A_BoMBobintersection" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Bob’s maximin mixed strategy.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_BoMBobintersection-2-1">The area between the two lines still represents the possible expected values for Bob, depending on how often Alice plays each of her strategies. So as before, the bottom lines represent the <em class="emphasis">least</em> Bob can expect as he varies his strategy. Thus, the point of intersection will represent the biggest of these smallest values (the maximin strategy). Find this point of intersection. How often should Bob play each option? What is his expected payoff?<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMBobintersection-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 4.1.9: Bob’s maximin mixed strategy"><a href="#A_BoMBobintersection" title="Copy heading and permalink for Activity 4.1.9: Bob’s maximin mixed strategy" aria-label="Copy heading and permalink for Activity 4.1.9: Bob’s maximin mixed strategy">🔗</a></div></article></details><div class="para" id="S_IntroNonzero-18">So no matter what Alice does, Bob can expect that over the long run he wins at least the value you found in <a href="S_IntroNonzero.html#A_BoMBobintersection" class="xref" data-knowl="./knowl/xref/A_BoMBobintersection.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.9: Bob’s maximin mixed strategy">Activity 4.1.9</a>. Make sure you understand this before moving on.<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroNonzero-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="A_BoMAlicematrix" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Alice’s maximin mixed strategy.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_BoMAlicematrix-2-1">Consider Battle of the Movies from Alice’s point of view. Write down her payoff matrix and use the graphical method to find the probability with which she should play each option and her expected payoff.<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMAlicematrix-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 4.1.10: Alice’s maximin mixed strategy"><a href="#A_BoMAlicematrix" title="Copy heading and permalink for Activity 4.1.10: Alice’s maximin mixed strategy" aria-label="Copy heading and permalink for Activity 4.1.10: Alice’s maximin mixed strategy">🔗</a></div></article></details><div class="para" id="S_IntroNonzero-20">Now, from <a href="S_IntroNonzero.html#A_BoMBobintersection" class="xref" data-knowl="./knowl/xref/A_BoMBobintersection.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.9: Bob’s maximin mixed strategy">Activity 4.1.9</a> and <a href="S_IntroNonzero.html#A_BoMAlicematrix" class="xref" data-knowl="./knowl/xref/A_BoMAlicematrix.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.10: Alice’s maximin mixed strategy">Activity 4.1.10</a> you have the minimum payoff each player should expect. Note that since this is not a zero-sum game, both players can expect a positive payoff. But now we want to see how this pair of mixed strategies really works for the players.<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroNonzero-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="A_BoMBobsmaximin" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Alice’s expected value when Bob plays his maximin strategy.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="introduction" id="A_BoMBobsmaximin-2"><div class="para" id="A_BoMBobsmaximin-2-1">Assume Bob plays the mixed strategy from <a href="S_IntroNonzero.html#A_BoMBobintersection" class="xref" data-knowl="./knowl/xref/A_BoMBobintersection.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.9: Bob’s maximin mixed strategy">Activity 4.1.9</a>.<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMBobsmaximin-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
-<article class="task exercise-like" id="A_BoMBobsmaximin-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_BoMBobsmaximin-3-1">Calculate Alice’s expected value for each of her <em class="emphasis">pure</em> strategies (<span class="process-math">\(E_2\)</span>(Comedy) and <span class="process-math">\(E_2\)</span>(Action)).<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMBobsmaximin-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Task 4.1.11.a"><a href="#A_BoMBobsmaximin-3" title="Copy heading and permalink for Task 4.1.11.a" aria-label="Copy heading and permalink for Task 4.1.11.a">🔗</a></div></article><article class="task exercise-like" id="A_BoMBobsmaximin-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_BoMBobsmaximin-4-1">Are Alice’s expected values equal? If not, which strategy does she prefer when Bob plays the mixed strategy from <a href="S_IntroNonzero.html#A_BoMBobintersection" class="xref" data-knowl="./knowl/xref/A_BoMBobintersection.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.9: Bob’s maximin mixed strategy">Activity 4.1.9</a>? Does Alice want to deviate from her mixed strategy?<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMBobsmaximin-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Task 4.1.11.b"><a href="#A_BoMBobsmaximin-4" title="Copy heading and permalink for Task 4.1.11.b" aria-label="Copy heading and permalink for Task 4.1.11.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 4.1.11: Alice’s expected value when Bob plays his maximin strategy"><a href="#A_BoMBobsmaximin" title="Copy heading and permalink for Activity 4.1.11: Alice’s expected value when Bob plays his maximin strategy" aria-label="Copy heading and permalink for Activity 4.1.11: Alice’s expected value when Bob plays his maximin strategy">🔗</a></div></article></details><details id="A_BoMBobchange" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Mixed strategy equilibrium.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_BoMBobchange-2-1">If Alice plays a pure strategy, does Bob want to change his strategy? Is the mixed strategy pair for Bob and Alice from <a href="S_IntroNonzero.html#A_BoMBobintersection" class="xref" data-knowl="./knowl/xref/A_BoMBobintersection.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.9: Bob’s maximin mixed strategy">Activity 4.1.9</a> and <a href="S_IntroNonzero.html#A_BoMAlicematrix" class="xref" data-knowl="./knowl/xref/A_BoMAlicematrix.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.10: Alice’s maximin mixed strategy">Activity 4.1.10</a> an equilibrium? In fact, if Bob changes his strategy, how does his expected value compare to the expected value for his mixed strategy?<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMBobchange-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 4.1.12: Mixed strategy equilibrium"><a href="#A_BoMBobchange" title="Copy heading and permalink for Activity 4.1.12: Mixed strategy equilibrium" aria-label="Copy heading and permalink for Activity 4.1.12: Mixed strategy equilibrium">🔗</a></div></article></details><details id="A_BoMgraphwrong" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Downside of the graphical method.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_BoMgraphwrong-2-1">What goes wrong with the graphical method in the case of a non-zero-sum game?<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMgraphwrong-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="solutions"><details id="A_BoMgraphwrong-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
-<div class="para" id="A_BoMgraphwrong-3-1">Is it important for Alice to consider the minimax strategy? Does Alice have any reason to minimize Bob’s payoff?<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMgraphwrong-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Hint 4.1.13.1"><a href="#A_BoMgraphwrong-3" title="Copy heading and permalink for Hint 4.1.13.1" aria-label="Copy heading and permalink for Hint 4.1.13.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Activity 4.1.13: Downside of the graphical method"><a href="#A_BoMgraphwrong" title="Copy heading and permalink for Activity 4.1.13: Downside of the graphical method" aria-label="Copy heading and permalink for Activity 4.1.13: Downside of the graphical method">🔗</a></div></article></details><div class="para" id="S_IntroNonzero-24">As we can see by the above activities, the methods used to analyze zero-sum games may not be too helpful for non-zero-sum games. Part of the problem is that in solving zero-sum games we take into consideration that one player wants to <em class="emphasis">minimize</em> the payoff to the other player. This is no longer the case. Changing strategies may allow BOTH players to do better. A player no longer has any reason to prevent the other player from doing better.<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroNonzero-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="A_BoMstartBmixed" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.14</span><span class="period">.</span><span class="space"> </span><span class="title">Response to the mixed strategy.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_BoMstartBmixed-2-1">We know the mixed strategy won’t give us an equilibrium. But suppose we start there. In other words, suppose Bob plans to play the mixed strategy from <a href="S_IntroNonzero.html#A_BoMBobintersection" class="xref" data-knowl="./knowl/xref/A_BoMBobintersection.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.9: Bob’s maximin mixed strategy">Activity 4.1.9</a>. Which pure strategy should Alice play? In response, which pure strategy should Bob play? What is the outcome? Do you end up at an equilibrium?<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMstartBmixed-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 4.1.14: Response to the mixed strategy"><a href="#A_BoMstartBmixed" title="Copy heading and permalink for Activity 4.1.14: Response to the mixed strategy" aria-label="Copy heading and permalink for Activity 4.1.14: Response to the mixed strategy">🔗</a></div></article></details><details id="A_BoMstartAmixed" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Bob’s expected value when Alice plays her maximin strategy.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_BoMstartAmixed-2-1">Suppose Alice plans to play the mixed strategy from <a href="S_IntroNonzero.html#A_BoMAlicematrix" class="xref" data-knowl="./knowl/xref/A_BoMAlicematrix.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.10: Alice’s maximin mixed strategy">Activity 4.1.10</a>. Calculate the expected value for Bob for each of his pure strategies. Which pure strategy does Bob prefer to play? How will Alice respond to Bob’s pure strategy? What is the outcome? Do you end up at an equilibrium?<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMstartAmixed-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 4.1.15: Bob’s expected value when Alice plays her maximin strategy"><a href="#A_BoMstartAmixed" title="Copy heading and permalink for Activity 4.1.15: Bob’s expected value when Alice plays her maximin strategy" aria-label="Copy heading and permalink for Activity 4.1.15: Bob’s expected value when Alice plays her maximin strategy">🔗</a></div></article></details><details id="A_BoMoutguess" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.16</span><span class="period">.</span><span class="space"> </span><span class="title">Out-guessing the mixed strategy.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_BoMoutguess-2-1">Suppose Bob thinks Alice will try the mixed strategy and Alice thinks Bob will try the mixed strategy. Which pure strategy will each play? What is the outcome? Do you end up at an equilibrium?<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMoutguess-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 4.1.16: Out-guessing the mixed strategy"><a href="#A_BoMoutguess" title="Copy heading and permalink for Activity 4.1.16: Out-guessing the mixed strategy" aria-label="Copy heading and permalink for Activity 4.1.16: Out-guessing the mixed strategy">🔗</a></div></article></details><details id="A_BoMeverplaymixed" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.17</span><span class="period">.</span><span class="space"> </span><span class="title">Playing the maximin mixed strategy.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_BoMeverplaymixed-2-1">Considering <a href="S_IntroNonzero.html#A_BoMstartBmixed" class="xref" data-knowl="./knowl/xref/A_BoMstartBmixed.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.14: Response to the mixed strategy">Activity 4.1.14</a>, <a href="S_IntroNonzero.html#A_BoMstartAmixed" class="xref" data-knowl="./knowl/xref/A_BoMstartAmixed.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.15: Bob’s expected value when Alice plays her maximin strategy">Activity 4.1.15</a>, and <a href="S_IntroNonzero.html#A_BoMoutguess" class="xref" data-knowl="./knowl/xref/A_BoMoutguess.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.16: Out-guessing the mixed strategy">Activity 4.1.16</a>, is it in a player’s best interest to even consider playing the mixed strategy from <a href="S_IntroNonzero.html#A_BoMBobintersection" class="xref" data-knowl="./knowl/xref/A_BoMBobintersection.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.9: Bob’s maximin mixed strategy">Activity 4.1.9</a> or <a href="S_IntroNonzero.html#A_BoMAlicematrix" class="xref" data-knowl="./knowl/xref/A_BoMAlicematrix.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.10: Alice’s maximin mixed strategy">Activity 4.1.10</a>?<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMeverplaymixed-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 4.1.17: Playing the maximin mixed strategy"><a href="#A_BoMeverplaymixed" title="Copy heading and permalink for Activity 4.1.17: Playing the maximin mixed strategy" aria-label="Copy heading and permalink for Activity 4.1.17: Playing the maximin mixed strategy">🔗</a></div></article></details><div class="para" id="S_IntroNonzero-29">We’ve seen the limitations of the graphical method, but what about the expected value method?<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroNonzero-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="A_BoMevsol" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.18</span><span class="period">.</span><span class="space"> </span><span class="title">Expected value solution.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_BoMevsol-2-1">Try applying the expected value method to Battle of the Movies. What mixed strategies do you get? Explain why this method will also not result in an equilibrium. You might want to consider whether it is important for one player to minimize the expected value for the other player.<div class="autopermalink" data-description="Paragraph"><a href="#A_BoMevsol-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 4.1.18: Expected value solution"><a href="#A_BoMevsol" title="Copy heading and permalink for Activity 4.1.18: Expected value solution" aria-label="Copy heading and permalink for Activity 4.1.18: Expected value solution">🔗</a></div></article></details><div class="para" id="S_IntroNonzero-31">Now that we have seen how the methods that allowed us to solve zero-sum games don’t work for non-zero-sum games, we will need to find new ways to approach non-zero-sum games.<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroNonzero-31" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<section class="reading-questions" id="S_IntroNonzero-32"><h3 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Check Your Understanding</span>
+</table></div>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Example 4.1.1: Battle of the Movies"><a tabindex="-1" href="#E_battle_of_movies" title="Copy heading and permalink for Example 4.1.1: Battle of the Movies" aria-label="Copy heading and permalink for Example 4.1.1: Battle of the Movies">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_BoMnotzerosum"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Not zero-sum.</span>
 </h3>
-<article class="exercise exercise-like" id="IGT_INZ_CYU_zerosum1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="A_BoMnotzerosum-2-1">Explain why Battle of the Movies is not a zero-sum game.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMnotzerosum-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.1.2: Not zero-sum"><a tabindex="-1" href="#A_BoMnotzerosum" title="Copy heading and permalink for Activity 4.1.2: Not zero-sum" aria-label="Copy heading and permalink for Activity 4.1.2: Not zero-sum">🔗</a></div>
+</article>
+<div class="para" id="S_IntroNonzero-7">In zero-sum games it is never advantageous to let your opponent know your strategy. Does that property still apply for games like Battle of the Movies?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroNonzero-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="A_BoMannounce"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Announcing a strategy.</span>
+</h3>
+<div class="para" id="A_BoMannounce-2-1">Could it be advantageous for a player to announce his or her strategy? Could it be harmful to announce his or her strategy? If possible, describe a scenario in which it would be advantageous to announce a strategy. If possible, describe a scenario in which it would be harmful to announce a strategy.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMannounce-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.1.3: Announcing a strategy"><a tabindex="-1" href="#A_BoMannounce" title="Copy heading and permalink for Activity 4.1.3: Announcing a strategy" aria-label="Copy heading and permalink for Activity 4.1.3: Announcing a strategy">🔗</a></div>
+</article>
+<div class="para" id="S_IntroNonzero-9">We might first try to analyze Battle of the Movies using the same techniques as we used for zero-sum games. For example, we might start as we would in zero-sum games by looking for any equilibrium points.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroNonzero-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="A_BoMequilpoints"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Equilibrium points.</span>
+</h3>
+<div class="introduction" id="A_BoMequilpoints-2">
+<div class="para" id="A_BoMequilpoints-2-1">Since our main goal in analyzing games has been to find equilibrium points, let’s find any equilibrium points for Battle of the Movies.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMequilpoints-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="A_BoMequilpoints-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="A_BoMequilpoints-3-1-1">Are there any strategy pairs where players would not want to switch?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMequilpoints-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="A_BoMequilpoints-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="A_BoMequilpoints-3-2-1">There are two!<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMequilpoints-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 4.1.4.a.1"><a tabindex="-1" href="#A_BoMequilpoints-3-2" title="Copy heading and permalink for Hint 4.1.4.a.1" aria-label="Copy heading and permalink for Hint 4.1.4.a.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.1.4.a"><a tabindex="-1" href="#A_BoMequilpoints-3" title="Copy heading and permalink for Task 4.1.4.a" aria-label="Copy heading and permalink for Task 4.1.4.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_BoMequilpoints-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_BoMequilpoints-4-1-1">Are the equilibrium points the same (in other words, does each player get the same payoff at each equilibrium point)? Compare this to what must happen for zero-sum games.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMequilpoints-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.1.4.b"><a tabindex="-1" href="#A_BoMequilpoints-4" title="Copy heading and permalink for Task 4.1.4.b" aria-label="Copy heading and permalink for Task 4.1.4.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 4.1.4: Equilibrium points"><a tabindex="-1" href="#A_BoMequilpoints" title="Copy heading and permalink for Activity 4.1.4: Equilibrium points" aria-label="Copy heading and permalink for Activity 4.1.4: Equilibrium points">🔗</a></div>
+</article>
+<div class="para" id="S_IntroNonzero-11">Now that we know Battle of the Movies has two equilibrium points, we should try to find actual strategies for Alice and Bob. Is there a good strategy for each if they play the game only once? What if they repeat the game? Recall that with zero-sum games, if there is an equilibrium, rational players always want to play it, even if the game is repeated. Does that still seem to work here? Also, how might the ability to communicate change what the players do?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroNonzero-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="A_BoMrepeat"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Repeating the game.</span>
+</h3>
+<div class="introduction" id="A_BoMrepeat-2">
+<div class="para" id="A_BoMrepeat-2-1">Suppose Battle of teh Movies is played repeatedly. For example, Alice and Bob have movie night once a month.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMrepeat-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="A_BoMrepeat-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="A_BoMrepeat-3-1-1">Suggest a strategy for Alice and for Bob.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMrepeat-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.1.5.a"><a tabindex="-1" href="#A_BoMrepeat-3" title="Copy heading and permalink for Task 4.1.5.a" aria-label="Copy heading and permalink for Task 4.1.5.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_BoMrepeat-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_BoMrepeat-4-1-1">Play the game with someone else <em class="emphasis">without communicating</em> about your strategy before each game.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMrepeat-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.1.5.b"><a tabindex="-1" href="#A_BoMrepeat-4" title="Copy heading and permalink for Task 4.1.5.b" aria-label="Copy heading and permalink for Task 4.1.5.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_BoMrepeat-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_BoMrepeat-5-1-1">How could communication affect the choice of strategy? Now play several times where you are allowed to communicate about your strategy. Does this change your strategy?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMrepeat-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.1.5.c"><a tabindex="-1" href="#A_BoMrepeat-5" title="Copy heading and permalink for Task 4.1.5.c" aria-label="Copy heading and permalink for Task 4.1.5.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_BoMrepeat-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="A_BoMrepeat-6-1-1">In either case, communicating and not communicating, do you think your strategies for Alice and Bob represent a mixed strategy equilibrium?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMrepeat-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.1.5.d"><a tabindex="-1" href="#A_BoMrepeat-6" title="Copy heading and permalink for Task 4.1.5.d" aria-label="Copy heading and permalink for Task 4.1.5.d">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 4.1.5: Repeating the game"><a tabindex="-1" href="#A_BoMrepeat" title="Copy heading and permalink for Activity 4.1.5: Repeating the game" aria-label="Copy heading and permalink for Activity 4.1.5: Repeating the game">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_BoMcomparezerosum"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Compare to zero-sum.</span>
+</h3>
+<div class="para" id="A_BoMcomparezerosum-2-1">In a zero-sum game, if there is a pure strategy equilibrium, then what happens when you repeat a game? If you repeat Battle of the Movies, does the game always result in an equilibrium point?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMcomparezerosum-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.1.6: Compare to zero-sum"><a tabindex="-1" href="#A_BoMcomparezerosum" title="Copy heading and permalink for Activity 4.1.6: Compare to zero-sum" aria-label="Copy heading and permalink for Activity 4.1.6: Compare to zero-sum">🔗</a></div>
+</article>
+<div class="para" id="S_IntroNonzero-14">Hopefully, you are beginning to see some of the challenges for analyzing non-zero-sum games. We know there are equilibrium points in Battle of the Movies, but even rational play may not result in an equilibrium. For the remainder of this section, let’s assume that players are <em class="emphasis">not</em> allowed to communicate about strategy prior to play. Such games are called <dfn class="terminology">non-cooperative</dfn> games. Before moving on, let’s try to find the maximin strategies for our players using the graphical method, as we did with zero-sum games.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroNonzero-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="A_BoMBobsmatrix"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bob’s payoff matrix.</span>
+</h3>
+<div class="para" id="A_BoMBobsmatrix-2-1">Consider Battle of the Movies from Bob’s point of view. We know that Bob wants to maximize his payoff (that has not changed). So Bob doesn’t care what Alice’s payoff’s are. Write down Bob’s payoff matrix without including Alice’s payoffs.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMBobsmatrix-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.1.7: Bob’s payoff matrix"><a tabindex="-1" href="#A_BoMBobsmatrix" title="Copy heading and permalink for Activity 4.1.7: Bob’s payoff matrix" aria-label="Copy heading and permalink for Activity 4.1.7: Bob’s payoff matrix">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_BoMBobgraph"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Graphical method on Bob’s matrix.</span>
+</h3>
+<div class="para" id="A_BoMBobgraph-2-1">Recall that the graphical method represents Bob’s expected payoff depending on how often he plays each of his options. Sketch the graph associated with Bob’s payoff matrix.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMBobgraph-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.1.8: Graphical method on Bob’s matrix"><a tabindex="-1" href="#A_BoMBobgraph" title="Copy heading and permalink for Activity 4.1.8: Graphical method on Bob’s matrix" aria-label="Copy heading and permalink for Activity 4.1.8: Graphical method on Bob’s matrix">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_BoMBobintersection"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bob’s maximin mixed strategy.</span>
+</h3>
+<div class="para" id="A_BoMBobintersection-2-1">The area between the two lines still represents the possible expected values for Bob, depending on how often Alice plays each of her strategies. So as before, the bottom lines represent the <em class="emphasis">least</em> Bob can expect as he varies his strategy. Thus, the point of intersection will represent the biggest of these smallest values (the maximin strategy). Find this point of intersection. How often should Bob play each option? What is his expected payoff?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMBobintersection-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.1.9: Bob’s maximin mixed strategy"><a tabindex="-1" href="#A_BoMBobintersection" title="Copy heading and permalink for Activity 4.1.9: Bob’s maximin mixed strategy" aria-label="Copy heading and permalink for Activity 4.1.9: Bob’s maximin mixed strategy">🔗</a></div>
+</article>
+<div class="para" id="S_IntroNonzero-18">So no matter what Alice does, Bob can expect that over the long run he wins at least the value you found in <a href="S_IntroNonzero.html#A_BoMBobintersection" class="xref" data-knowl="./knowl/xref/A_BoMBobintersection.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.9: Bob’s maximin mixed strategy">Activity 4.1.9</a>. Make sure you understand this before moving on.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroNonzero-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="A_BoMAlicematrix"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Alice’s maximin mixed strategy.</span>
+</h3>
+<div class="para" id="A_BoMAlicematrix-2-1">Consider Battle of the Movies from Alice’s point of view. Write down her payoff matrix and use the graphical method to find the probability with which she should play each option and her expected payoff.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMAlicematrix-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.1.10: Alice’s maximin mixed strategy"><a tabindex="-1" href="#A_BoMAlicematrix" title="Copy heading and permalink for Activity 4.1.10: Alice’s maximin mixed strategy" aria-label="Copy heading and permalink for Activity 4.1.10: Alice’s maximin mixed strategy">🔗</a></div>
+</article>
+<div class="para" id="S_IntroNonzero-20">Now, from <a href="S_IntroNonzero.html#A_BoMBobintersection" class="xref" data-knowl="./knowl/xref/A_BoMBobintersection.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.9: Bob’s maximin mixed strategy">Activity 4.1.9</a> and <a href="S_IntroNonzero.html#A_BoMAlicematrix" class="xref" data-knowl="./knowl/xref/A_BoMAlicematrix.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.10: Alice’s maximin mixed strategy">Activity 4.1.10</a> you have the minimum payoff each player should expect. Note that since this is not a zero-sum game, both players can expect a positive payoff. But now we want to see how this pair of mixed strategies really works for the players.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroNonzero-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="A_BoMBobsmaximin"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Alice’s expected value when Bob plays his maximin strategy.</span>
+</h3>
+<div class="introduction" id="A_BoMBobsmaximin-2">
+<div class="para" id="A_BoMBobsmaximin-2-1">Assume Bob plays the mixed strategy from <a href="S_IntroNonzero.html#A_BoMBobintersection" class="xref" data-knowl="./knowl/xref/A_BoMBobintersection.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.9: Bob’s maximin mixed strategy">Activity 4.1.9</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMBobsmaximin-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="A_BoMBobsmaximin-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="A_BoMBobsmaximin-3-1-1">Calculate Alice’s expected value for each of her <em class="emphasis">pure</em> strategies (<span class="process-math">\(E_2\)</span>(Comedy) and <span class="process-math">\(E_2\)</span>(Action)).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMBobsmaximin-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.1.11.a"><a tabindex="-1" href="#A_BoMBobsmaximin-3" title="Copy heading and permalink for Task 4.1.11.a" aria-label="Copy heading and permalink for Task 4.1.11.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_BoMBobsmaximin-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_BoMBobsmaximin-4-1-1">Are Alice’s expected values equal? If not, which strategy does she prefer when Bob plays the mixed strategy from <a href="S_IntroNonzero.html#A_BoMBobintersection" class="xref" data-knowl="./knowl/xref/A_BoMBobintersection.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.9: Bob’s maximin mixed strategy">Activity 4.1.9</a>? Does Alice want to deviate from her mixed strategy?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMBobsmaximin-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.1.11.b"><a tabindex="-1" href="#A_BoMBobsmaximin-4" title="Copy heading and permalink for Task 4.1.11.b" aria-label="Copy heading and permalink for Task 4.1.11.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 4.1.11: Alice’s expected value when Bob plays his maximin strategy"><a tabindex="-1" href="#A_BoMBobsmaximin" title="Copy heading and permalink for Activity 4.1.11: Alice’s expected value when Bob plays his maximin strategy" aria-label="Copy heading and permalink for Activity 4.1.11: Alice’s expected value when Bob plays his maximin strategy">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_BoMBobchange"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Mixed strategy equilibrium.</span>
+</h3>
+<div class="para" id="A_BoMBobchange-2-1">If Alice plays a pure strategy, does Bob want to change his strategy? Is the mixed strategy pair for Bob and Alice from <a href="S_IntroNonzero.html#A_BoMBobintersection" class="xref" data-knowl="./knowl/xref/A_BoMBobintersection.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.9: Bob’s maximin mixed strategy">Activity 4.1.9</a> and <a href="S_IntroNonzero.html#A_BoMAlicematrix" class="xref" data-knowl="./knowl/xref/A_BoMAlicematrix.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.10: Alice’s maximin mixed strategy">Activity 4.1.10</a> an equilibrium? In fact, if Bob changes his strategy, how does his expected value compare to the expected value for his mixed strategy?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMBobchange-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.1.12: Mixed strategy equilibrium"><a tabindex="-1" href="#A_BoMBobchange" title="Copy heading and permalink for Activity 4.1.12: Mixed strategy equilibrium" aria-label="Copy heading and permalink for Activity 4.1.12: Mixed strategy equilibrium">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_BoMgraphwrong"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Downside of the graphical method.</span>
+</h3>
+<div class="para" id="A_BoMgraphwrong-2-1">What goes wrong with the graphical method in the case of a non-zero-sum game?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMgraphwrong-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="A_BoMgraphwrong-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="A_BoMgraphwrong-3-1">Is it important for Alice to consider the minimax strategy? Does Alice have any reason to minimize Bob’s payoff?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMgraphwrong-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 4.1.13.1"><a tabindex="-1" href="#A_BoMgraphwrong-3" title="Copy heading and permalink for Hint 4.1.13.1" aria-label="Copy heading and permalink for Hint 4.1.13.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.1.13: Downside of the graphical method"><a tabindex="-1" href="#A_BoMgraphwrong" title="Copy heading and permalink for Activity 4.1.13: Downside of the graphical method" aria-label="Copy heading and permalink for Activity 4.1.13: Downside of the graphical method">🔗</a></div>
+</article>
+<div class="para" id="S_IntroNonzero-24">As we can see by the above activities, the methods used to analyze zero-sum games may not be too helpful for non-zero-sum games. Part of the problem is that in solving zero-sum games we take into consideration that one player wants to <em class="emphasis">minimize</em> the payoff to the other player. This is no longer the case. Changing strategies may allow BOTH players to do better. A player no longer has any reason to prevent the other player from doing better.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroNonzero-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="A_BoMstartBmixed"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Response to the mixed strategy.</span>
+</h3>
+<div class="para" id="A_BoMstartBmixed-2-1">We know the mixed strategy won’t give us an equilibrium. But suppose we start there. In other words, suppose Bob plans to play the mixed strategy from <a href="S_IntroNonzero.html#A_BoMBobintersection" class="xref" data-knowl="./knowl/xref/A_BoMBobintersection.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.9: Bob’s maximin mixed strategy">Activity 4.1.9</a>. Which pure strategy should Alice play? In response, which pure strategy should Bob play? What is the outcome? Do you end up at an equilibrium?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMstartBmixed-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.1.14: Response to the mixed strategy"><a tabindex="-1" href="#A_BoMstartBmixed" title="Copy heading and permalink for Activity 4.1.14: Response to the mixed strategy" aria-label="Copy heading and permalink for Activity 4.1.14: Response to the mixed strategy">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_BoMstartAmixed"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bob’s expected value when Alice plays her maximin strategy.</span>
+</h3>
+<div class="para" id="A_BoMstartAmixed-2-1">Suppose Alice plans to play the mixed strategy from <a href="S_IntroNonzero.html#A_BoMAlicematrix" class="xref" data-knowl="./knowl/xref/A_BoMAlicematrix.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.10: Alice’s maximin mixed strategy">Activity 4.1.10</a>. Calculate the expected value for Bob for each of his pure strategies. Which pure strategy does Bob prefer to play? How will Alice respond to Bob’s pure strategy? What is the outcome? Do you end up at an equilibrium?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMstartAmixed-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.1.15: Bob’s expected value when Alice plays her maximin strategy"><a tabindex="-1" href="#A_BoMstartAmixed" title="Copy heading and permalink for Activity 4.1.15: Bob’s expected value when Alice plays her maximin strategy" aria-label="Copy heading and permalink for Activity 4.1.15: Bob’s expected value when Alice plays her maximin strategy">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_BoMoutguess"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Out-guessing the mixed strategy.</span>
+</h3>
+<div class="para" id="A_BoMoutguess-2-1">Suppose Bob thinks Alice will try the mixed strategy, and Alice thinks Bob will try the mixed strategy. Which pure strategy will each play? What is the outcome? Do you end up at an equilibrium?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMoutguess-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.1.16: Out-guessing the mixed strategy"><a tabindex="-1" href="#A_BoMoutguess" title="Copy heading and permalink for Activity 4.1.16: Out-guessing the mixed strategy" aria-label="Copy heading and permalink for Activity 4.1.16: Out-guessing the mixed strategy">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_BoMeverplaymixed"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Playing the maximin mixed strategy.</span>
+</h3>
+<div class="para" id="A_BoMeverplaymixed-2-1">Considering <a href="S_IntroNonzero.html#A_BoMstartBmixed" class="xref" data-knowl="./knowl/xref/A_BoMstartBmixed.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.14: Response to the mixed strategy">Activity 4.1.14</a>, <a href="S_IntroNonzero.html#A_BoMstartAmixed" class="xref" data-knowl="./knowl/xref/A_BoMstartAmixed.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.15: Bob’s expected value when Alice plays her maximin strategy">Activity 4.1.15</a>, and <a href="S_IntroNonzero.html#A_BoMoutguess" class="xref" data-knowl="./knowl/xref/A_BoMoutguess.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.16: Out-guessing the mixed strategy">Activity 4.1.16</a>, is it in a player’s best interest to even consider playing the mixed strategy from <a href="S_IntroNonzero.html#A_BoMBobintersection" class="xref" data-knowl="./knowl/xref/A_BoMBobintersection.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.9: Bob’s maximin mixed strategy">Activity 4.1.9</a> or <a href="S_IntroNonzero.html#A_BoMAlicematrix" class="xref" data-knowl="./knowl/xref/A_BoMAlicematrix.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.10: Alice’s maximin mixed strategy">Activity 4.1.10</a>?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMeverplaymixed-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.1.17: Playing the maximin mixed strategy"><a tabindex="-1" href="#A_BoMeverplaymixed" title="Copy heading and permalink for Activity 4.1.17: Playing the maximin mixed strategy" aria-label="Copy heading and permalink for Activity 4.1.17: Playing the maximin mixed strategy">🔗</a></div>
+</article>
+<div class="para" id="S_IntroNonzero-29">We’ve seen the limitations of the graphical method, but what about the expected value method?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroNonzero-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="A_BoMevsol"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Expected value solution.</span>
+</h3>
+<div class="para" id="A_BoMevsol-2-1">Try applying the expected value method to Battle of the Movies. What mixed strategies do you get? Explain why this method will also not result in an equilibrium. You might want to consider whether it is important for one player to minimize the expected value for the other player.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BoMevsol-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.1.18: Expected value solution"><a tabindex="-1" href="#A_BoMevsol" title="Copy heading and permalink for Activity 4.1.18: Expected value solution" aria-label="Copy heading and permalink for Activity 4.1.18: Expected value solution">🔗</a></div>
+</article>
+<div class="para" id="S_IntroNonzero-31">Now that we have seen how the methods that allowed us to solve zero-sum games don’t work for non-zero-sum games, we will need to find new ways to approach non-zero-sum games.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroNonzero-31" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="reading-questions" id="S_IntroNonzero-32">
+<h3 class="heading hide-type">
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Check Your Understanding</span>
+</h3>
+<article class="exercise exercise-like" id="IGT_INZ_CYU_zerosum1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_INZ_CYU_zerosum1">
-<div class="para" id="IGT_INZ_CYU_zerosum1-1-1">True or False: The following game <figure class="table table-like" id="T_NZmatrix1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.1.3<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Table 4.1.3"><a href="#T_NZmatrix1" title="Copy heading and permalink for Table 4.1.3" aria-label="Copy heading and permalink for Table 4.1.3">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="IGT_INZ_CYU_zerosum1-1-1">True or False: The following game 
+<figure class="table table-like" id="T_NZmatrix1"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Table 4.1.3"><a tabindex="-1" href="#T_NZmatrix1" title="Copy heading and permalink for Table 4.1.3" aria-label="Copy heading and permalink for Table 4.1.3">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b1 r0 l0 t0 lines">C</td>
@@ -498,18 +545,23 @@ eBookConfig.enable_chatcodes =  false;
 <td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((0, 1)\)</span></td>
 <td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((-1, -1)\)</span></td>
 </tr>
-</table></div></figure> is a zero-sum game.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_zerosum1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</table></div>
+</figure> is a zero-sum game.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_INZ_CYU_zerosum1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_INZ_CYU_zerosum1_opt_t"><p>True.</p></li>
 <li data-component="feedback" id="rs-IGT_INZ_CYU_zerosum1_opt_t">
 <li data-component="answer" id="rs-IGT_INZ_CYU_zerosum1_opt_f" data-correct=""><p>False.</p></li>
 <li data-component="feedback" id="rs-IGT_INZ_CYU_zerosum1_opt_f">
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 4.1.1"><a href="#IGT_INZ_CYU_zerosum1" title="Copy heading and permalink for Reading Question 4.1.1" aria-label="Copy heading and permalink for Reading Question 4.1.1">🔗</a></div></article><article class="exercise exercise-like" id="IGT_INZ_CYU_findequil1"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.1.1"><a tabindex="-1" href="#IGT_INZ_CYU_zerosum1" title="Copy heading and permalink for Reading Question 4.1.1" aria-label="Copy heading and permalink for Reading Question 4.1.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_INZ_CYU_findequil1"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone clickablearea_section"><div data-component="clickablearea" data-question_label="" style="visibility: hidden;" id="rs-IGT_INZ_CYU_findequil1">
-<span data-question=""><div class="para" id="IGT_INZ_CYU_findequil1-1-1">The following game has at least one pure strategy equilibrium, click on or circle the equilibrium point(s).<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_findequil1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></span><span data-feedback=""></span><div class="para" id="IGT_INZ_CYU_findequil1-2-1">
-<figure class="table table-like" id="IGT_INZ_CYU_findequil1-2-1-1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.1.4<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Table 4.1.4"><a href="#IGT_INZ_CYU_findequil1-2-1-1" title="Copy heading and permalink for Table 4.1.4" aria-label="Copy heading and permalink for Table 4.1.4">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<span data-question="">
+<div class="para" id="IGT_INZ_CYU_findequil1-1-1">The following game has at least one pure strategy equilibrium, click on or circle the equilibrium point(s).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_INZ_CYU_findequil1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></span><span data-feedback=""></span>
+<div class="para" id="IGT_INZ_CYU_findequil1-2-1">
+<figure class="table table-like" id="IGT_INZ_CYU_findequil1-2-1-1"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b1 r0 l0 t0 lines">C</td>
@@ -525,50 +577,86 @@ eBookConfig.enable_chatcodes =  false;
 <td class="c m b1 r1 l0 t0 lines"><span data-incorrect=""><span class="process-math">\((0, 1)\)</span></span></td>
 <td class="c m b1 r1 l0 t0 lines"><span data-incorrect=""><span class="process-math">\((-1, -1)\)</span></span></td>
 </tr>
-</table></div></figure><div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_findequil1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</table></div>
+</figure>
 </div>
 </div></div></div>
-<div class="autopermalink" data-description="Reading Question 4.1.2"><a href="#IGT_INZ_CYU_findequil1" title="Copy heading and permalink for Reading Question 4.1.2" aria-label="Copy heading and permalink for Reading Question 4.1.2">🔗</a></div></article><article class="exercise exercise-like" id="IGT_INZ_CYU_P1strat1"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.1.2"><a tabindex="-1" href="#IGT_INZ_CYU_findequil1" title="Copy heading and permalink for Reading Question 4.1.2" aria-label="Copy heading and permalink for Reading Question 4.1.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_INZ_CYU_P1strat1"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
-<div class="exercise-statement"><div class="para" id="IGT_INZ_CYU_P1strat1-1-1">In the game in <a href="S_IntroNonzero.html#T_NZmatrix1" class="xref" data-knowl="./knowl/xref/T_NZmatrix1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 4.1.3">Table 4.1.3</a>, Player 1 should play<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P1strat1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="exercise-statement">
+<div class="para" id="IGT_INZ_CYU_P1strat1-1-1">In the game in <a href="S_IntroNonzero.html#T_NZmatrix1" class="xref" data-knowl="./knowl/xref/T_NZmatrix1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 4.1.3">Table 4.1.3</a>, Player 1 should play<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_INZ_CYU_P1strat1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <ul data-component="multiplechoice" class="exercise-interactives" id="rs-IGT_INZ_CYU_P1strat1" data-multipleanswers="false">
-<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat1_opt_a" data-correct=""><div class="para" id="IGT_INZ_CYU_P1strat1-2-1-1-1">Pure strategy A.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P1strat1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat1_opt_a"><div class="para" id="IGT_INZ_CYU_P1strat1-2-1-2-1">Correct.</div></li>
-<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat1_opt_b"><div class="para" id="IGT_INZ_CYU_P1strat1-2-2-1-1">Pure strategy B.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P1strat1-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat1_opt_b"><div class="para" id="IGT_INZ_CYU_P1strat1-2-2-2-1">Think about any equilibrium points.</div></li>
-<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat1_opt_c"><div class="para" id="IGT_INZ_CYU_P1strat1-2-3-1-1">A mixed strategy with A more often than B.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P1strat1-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat1_opt_c"><div class="para" id="IGT_INZ_CYU_P1strat1-2-3-2-1">Think about any equilibrium points.</div></li>
-<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat1_opt_d"><div class="para" id="IGT_INZ_CYU_P1strat1-2-4-1-1">A mixed strategy with B more often than A.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P1strat1-2-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat1_opt_d"><div class="para" id="IGT_INZ_CYU_P1strat1-2-4-2-1">Think about any equilibrium points.</div></li>
+<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat1_opt_a" data-correct="">
+<div class="para" id="IGT_INZ_CYU_P1strat1-2-1-1-1">Pure strategy A.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat1_opt_a">
+<div class="para" id="IGT_INZ_CYU_P1strat1-2-1-2-1">Correct.</div>
+</li>
+<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat1_opt_b">
+<div class="para" id="IGT_INZ_CYU_P1strat1-2-2-1-1">Pure strategy B.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat1_opt_b">
+<div class="para" id="IGT_INZ_CYU_P1strat1-2-2-2-1">Think about any equilibrium points.</div>
+</li>
+<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat1_opt_c">
+<div class="para" id="IGT_INZ_CYU_P1strat1-2-3-1-1">A mixed strategy with A more often than B.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat1_opt_c">
+<div class="para" id="IGT_INZ_CYU_P1strat1-2-3-2-1">Think about any equilibrium points.</div>
+</li>
+<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat1_opt_d">
+<div class="para" id="IGT_INZ_CYU_P1strat1-2-4-1-1">A mixed strategy with B more often than A.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat1_opt_d">
+<div class="para" id="IGT_INZ_CYU_P1strat1-2-4-2-1">Think about any equilibrium points.</div>
+</li>
 </ul>
 </div></div>
-<div class="autopermalink" data-description="Reading Question 4.1.3"><a href="#IGT_INZ_CYU_P1strat1" title="Copy heading and permalink for Reading Question 4.1.3" aria-label="Copy heading and permalink for Reading Question 4.1.3">🔗</a></div></article><article class="exercise exercise-like" id="IGT_INZ_CYU_P2strat1"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.1.3"><a tabindex="-1" href="#IGT_INZ_CYU_P1strat1" title="Copy heading and permalink for Reading Question 4.1.3" aria-label="Copy heading and permalink for Reading Question 4.1.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_INZ_CYU_P2strat1"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
-<div class="exercise-statement"><div class="para" id="IGT_INZ_CYU_P2strat1-1-1">In the game in <a href="S_IntroNonzero.html#T_NZmatrix1" class="xref" data-knowl="./knowl/xref/T_NZmatrix1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 4.1.3">Table 4.1.3</a>, Player 2 should play<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P2strat1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="exercise-statement">
+<div class="para" id="IGT_INZ_CYU_P2strat1-1-1">In the game in <a href="S_IntroNonzero.html#T_NZmatrix1" class="xref" data-knowl="./knowl/xref/T_NZmatrix1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 4.1.3">Table 4.1.3</a>, Player 2 should play<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_INZ_CYU_P2strat1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <ul data-component="multiplechoice" class="exercise-interactives" id="rs-IGT_INZ_CYU_P2strat1" data-multipleanswers="false">
-<li data-component="answer" id="rs-IGT_INZ_CYU_P2strat1_opt_a" data-correct=""><div class="para" id="IGT_INZ_CYU_P2strat1-2-1-1-1">Pure strategy C.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P2strat1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_P2strat1_opt_a"><div class="para" id="IGT_INZ_CYU_P2strat1-2-1-2-1">Correct.</div></li>
-<li data-component="answer" id="rs-IGT_INZ_CYU_P2strat1_opt_b"><div class="para" id="IGT_INZ_CYU_P2strat1-2-2-1-1">Pure strategy D.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P2strat1-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_P2strat1_opt_b"><div class="para" id="IGT_INZ_CYU_P2strat1-2-2-2-1">Think about any equilibrium points.</div></li>
-<li data-component="answer" id="rs-IGT_INZ_CYU_P2strat1_opt_c"><div class="para" id="IGT_INZ_CYU_P2strat1-2-3-1-1">A mixed strategy with C more often than D.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P2strat1-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_P2strat1_opt_c"><div class="para" id="IGT_INZ_CYU_P2strat1-2-3-2-1">Think about any equilibrium points.</div></li>
-<li data-component="answer" id="rs-IGT_INZ_CYU_P2strat1_opt_d"><div class="para" id="IGT_INZ_CYU_P2strat1-2-4-1-1">A mixed strategy with D more often than C.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P2strat1-2-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_P2strat1_opt_d"><div class="para" id="IGT_INZ_CYU_P2strat1-2-4-2-1">Think about any equilibrium points.</div></li>
+<li data-component="answer" id="rs-IGT_INZ_CYU_P2strat1_opt_a" data-correct="">
+<div class="para" id="IGT_INZ_CYU_P2strat1-2-1-1-1">Pure strategy C.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_P2strat1_opt_a">
+<div class="para" id="IGT_INZ_CYU_P2strat1-2-1-2-1">Correct.</div>
+</li>
+<li data-component="answer" id="rs-IGT_INZ_CYU_P2strat1_opt_b">
+<div class="para" id="IGT_INZ_CYU_P2strat1-2-2-1-1">Pure strategy D.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_P2strat1_opt_b">
+<div class="para" id="IGT_INZ_CYU_P2strat1-2-2-2-1">Think about any equilibrium points.</div>
+</li>
+<li data-component="answer" id="rs-IGT_INZ_CYU_P2strat1_opt_c">
+<div class="para" id="IGT_INZ_CYU_P2strat1-2-3-1-1">A mixed strategy with C more often than D.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_P2strat1_opt_c">
+<div class="para" id="IGT_INZ_CYU_P2strat1-2-3-2-1">Think about any equilibrium points.</div>
+</li>
+<li data-component="answer" id="rs-IGT_INZ_CYU_P2strat1_opt_d">
+<div class="para" id="IGT_INZ_CYU_P2strat1-2-4-1-1">A mixed strategy with D more often than C.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_P2strat1_opt_d">
+<div class="para" id="IGT_INZ_CYU_P2strat1-2-4-2-1">Think about any equilibrium points.</div>
+</li>
 </ul>
 </div></div>
-<div class="autopermalink" data-description="Reading Question 4.1.4"><a href="#IGT_INZ_CYU_P2strat1" title="Copy heading and permalink for Reading Question 4.1.4" aria-label="Copy heading and permalink for Reading Question 4.1.4">🔗</a></div></article><article class="exercise exercise-like" id="IGT_INZ_CYU_zerosum2"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.1.4"><a tabindex="-1" href="#IGT_INZ_CYU_P2strat1" title="Copy heading and permalink for Reading Question 4.1.4" aria-label="Copy heading and permalink for Reading Question 4.1.4">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_INZ_CYU_zerosum2"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_INZ_CYU_zerosum2">
-<div class="para" id="IGT_INZ_CYU_zerosum2-1-1">True or False: The following game <figure class="table table-like" id="T_NZmatrix2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.1.5<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Table 4.1.5"><a href="#T_NZmatrix2" title="Copy heading and permalink for Table 4.1.5" aria-label="Copy heading and permalink for Table 4.1.5">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="IGT_INZ_CYU_zerosum2-1-1">True or False: The following game 
+<figure class="table table-like" id="T_NZmatrix2"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Table 4.1.5"><a tabindex="-1" href="#T_NZmatrix2" title="Copy heading and permalink for Table 4.1.5" aria-label="Copy heading and permalink for Table 4.1.5">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b1 r0 l0 t0 lines">C</td>
@@ -584,18 +672,23 @@ eBookConfig.enable_chatcodes =  false;
 <td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((-4, 1)\)</span></td>
 <td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((3, 2)\)</span></td>
 </tr>
-</table></div></figure> is a zero-sum game.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_zerosum2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</table></div>
+</figure> is a zero-sum game.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_INZ_CYU_zerosum2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_INZ_CYU_zerosum2_opt_t"><p>True.</p></li>
 <li data-component="feedback" id="rs-IGT_INZ_CYU_zerosum2_opt_t">
 <li data-component="answer" id="rs-IGT_INZ_CYU_zerosum2_opt_f" data-correct=""><p>False.</p></li>
 <li data-component="feedback" id="rs-IGT_INZ_CYU_zerosum2_opt_f">
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 4.1.5"><a href="#IGT_INZ_CYU_zerosum2" title="Copy heading and permalink for Reading Question 4.1.5" aria-label="Copy heading and permalink for Reading Question 4.1.5">🔗</a></div></article><article class="exercise exercise-like" id="IGT_INZ_CYU_findequil2"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.1.5"><a tabindex="-1" href="#IGT_INZ_CYU_zerosum2" title="Copy heading and permalink for Reading Question 4.1.5" aria-label="Copy heading and permalink for Reading Question 4.1.5">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_INZ_CYU_findequil2"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone clickablearea_section"><div data-component="clickablearea" data-question_label="" style="visibility: hidden;" id="rs-IGT_INZ_CYU_findequil2">
-<span data-question=""><div class="para" id="IGT_INZ_CYU_findequil2-1-1">The following game has at least one pure strategy equilibrium, click on or circle the equilibrium point(s).<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_findequil2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></span><span data-feedback=""></span><div class="para" id="IGT_INZ_CYU_findequil2-2-1">
-<figure class="table table-like" id="IGT_INZ_CYU_findequil2-2-1-1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.1.6<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Table 4.1.6"><a href="#IGT_INZ_CYU_findequil2-2-1-1" title="Copy heading and permalink for Table 4.1.6" aria-label="Copy heading and permalink for Table 4.1.6">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<span data-question="">
+<div class="para" id="IGT_INZ_CYU_findequil2-1-1">The following game has at least one pure strategy equilibrium, click on or circle the equilibrium point(s).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_INZ_CYU_findequil2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></span><span data-feedback=""></span>
+<div class="para" id="IGT_INZ_CYU_findequil2-2-1">
+<figure class="table table-like" id="IGT_INZ_CYU_findequil2-2-1-1"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b1 r0 l0 t0 lines">C</td>
@@ -611,86 +704,146 @@ eBookConfig.enable_chatcodes =  false;
 <td class="c m b1 r1 l0 t0 lines"><span data-incorrect=""><span class="process-math">\((-4, 1)\)</span></span></td>
 <td class="c m b1 r1 l0 t0 lines"><span data-correct=""><span class="process-math">\((3, 2)\)</span></span></td>
 </tr>
-</table></div></figure><div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_findequil2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</table></div>
+</figure>
 </div>
 </div></div></div>
-<div class="autopermalink" data-description="Reading Question 4.1.6"><a href="#IGT_INZ_CYU_findequil2" title="Copy heading and permalink for Reading Question 4.1.6" aria-label="Copy heading and permalink for Reading Question 4.1.6">🔗</a></div></article><article class="exercise exercise-like" id="IGT_INZ_CYU_repeat2"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.1.6"><a tabindex="-1" href="#IGT_INZ_CYU_findequil2" title="Copy heading and permalink for Reading Question 4.1.6" aria-label="Copy heading and permalink for Reading Question 4.1.6">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_INZ_CYU_repeat2"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_INZ_CYU_repeat2">
-<div class="para" id="IGT_INZ_CYU_repeat2-1-1">True or False: In the game in <a href="S_IntroNonzero.html#T_NZmatrix2" class="xref" data-knowl="./knowl/xref/T_NZmatrix2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 4.1.5">Table 4.1.5</a>, if the players play once, and each player chooses the strategy with their preferred equilibrium, them the game will result in an equilibrium.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_repeat2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="IGT_INZ_CYU_repeat2-1-1">True or False: In the game in <a href="S_IntroNonzero.html#T_NZmatrix2" class="xref" data-knowl="./knowl/xref/T_NZmatrix2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 4.1.5">Table 4.1.5</a>, if the players play once, and each player chooses the strategy with their preferred equilibrium, then the game will result in an equilibrium.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_INZ_CYU_repeat2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_INZ_CYU_repeat2_opt_t"><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_repeat2_opt_t"><div class="para" id="IGT_INZ_CYU_repeat2-2-1">Player 1 would play B while Player 2 would play C, which is not an equilibrium.</div></li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_repeat2_opt_t">
+<div class="para" id="IGT_INZ_CYU_repeat2-2-1">Player 1 would play B while Player 2 would play C, which is not an equilibrium.</div>
+</li>
 <li data-component="answer" id="rs-IGT_INZ_CYU_repeat2_opt_f" data-correct=""><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_repeat2_opt_f"><div class="para" id="IGT_INZ_CYU_repeat2-2-1">Player 1 would play B while Player 2 would play C, which is not an equilibrium.</div></li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_repeat2_opt_f">
+<div class="para" id="IGT_INZ_CYU_repeat2-2-1">Player 1 would play B while Player 2 would play C, which is not an equilibrium.</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 4.1.7"><a href="#IGT_INZ_CYU_repeat2" title="Copy heading and permalink for Reading Question 4.1.7" aria-label="Copy heading and permalink for Reading Question 4.1.7">🔗</a></div></article><article class="exercise exercise-like" id="IGT_INZ_CYU_P1strat2"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.1.7"><a tabindex="-1" href="#IGT_INZ_CYU_repeat2" title="Copy heading and permalink for Reading Question 4.1.7" aria-label="Copy heading and permalink for Reading Question 4.1.7">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_INZ_CYU_P1strat2"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
-<div class="exercise-statement"><div class="para" id="IGT_INZ_CYU_P1strat2-1-1">In the game in <a href="S_IntroNonzero.html#T_NZmatrix2" class="xref" data-knowl="./knowl/xref/T_NZmatrix2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 4.1.5">Table 4.1.5</a>, suppose Player 1 only considers her payoff matrix and finds the mixed strategy as we did for zero-sum games. Then Player 1 would play<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P1strat2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="exercise-statement">
+<div class="para" id="IGT_INZ_CYU_P1strat2-1-1">In the game in <a href="S_IntroNonzero.html#T_NZmatrix2" class="xref" data-knowl="./knowl/xref/T_NZmatrix2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 4.1.5">Table 4.1.5</a>, suppose Player 1 only considers her payoff matrix and finds the mixed strategy as we did for zero-sum games. Then Player 1 would play<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_INZ_CYU_P1strat2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <ul data-component="multiplechoice" class="exercise-interactives" id="rs-IGT_INZ_CYU_P1strat2" data-multipleanswers="false">
-<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat2_opt_a"><div class="para" id="IGT_INZ_CYU_P1strat2-2-1-1-1">Pure strategy A.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P1strat2-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat2_opt_a"><div class="para" id="IGT_INZ_CYU_P1strat2-2-1-2-1">Find the mixed strategy using the graphical or expected value method.</div></li>
-<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat2_opt_b"><div class="para" id="IGT_INZ_CYU_P1strat2-2-2-1-1">Pure strategy B.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P1strat2-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat2_opt_b"><div class="para" id="IGT_INZ_CYU_P1strat2-2-2-2-1">Find the mixed strategy using the graphical or expected value method.</div></li>
-<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat2_opt_c" data-correct=""><div class="para" id="IGT_INZ_CYU_P1strat2-2-3-1-1">A mixed strategy with A more often than B.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P1strat2-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat2_opt_c"><div class="para" id="IGT_INZ_CYU_P1strat2-2-3-2-1">The mixed strategy is <span class="process-math">\((7/8, 1/8)\text{.}\)</span>
-</div></li>
-<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat2_opt_d"><div class="para" id="IGT_INZ_CYU_P1strat2-2-4-1-1">A mixed strategy with B more often than A.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P1strat2-2-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat2_opt_d"><div class="para" id="IGT_INZ_CYU_P1strat2-2-4-2-1">The mixed strategy is <span class="process-math">\((7/8, 1/8)\text{.}\)</span>
-</div></li>
+<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat2_opt_a">
+<div class="para" id="IGT_INZ_CYU_P1strat2-2-1-1-1">Pure strategy A.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat2_opt_a">
+<div class="para" id="IGT_INZ_CYU_P1strat2-2-1-2-1">Find the mixed strategy using the graphical or expected value method.</div>
+</li>
+<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat2_opt_b">
+<div class="para" id="IGT_INZ_CYU_P1strat2-2-2-1-1">Pure strategy B.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat2_opt_b">
+<div class="para" id="IGT_INZ_CYU_P1strat2-2-2-2-1">Find the mixed strategy using the graphical or expected value method.</div>
+</li>
+<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat2_opt_c" data-correct="">
+<div class="para" id="IGT_INZ_CYU_P1strat2-2-3-1-1">A mixed strategy with A more often than B.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat2_opt_c">
+<div class="para" id="IGT_INZ_CYU_P1strat2-2-3-2-1">The mixed strategy is <span class="process-math">\((7/8, 1/8)\text{.}\)</span>
+</div>
+</li>
+<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat2_opt_d">
+<div class="para" id="IGT_INZ_CYU_P1strat2-2-4-1-1">A mixed strategy with B more often than A.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat2_opt_d">
+<div class="para" id="IGT_INZ_CYU_P1strat2-2-4-2-1">The mixed strategy is <span class="process-math">\((7/8, 1/8)\text{.}\)</span>
+</div>
+</li>
 </ul>
 </div></div>
-<div class="autopermalink" data-description="Reading Question 4.1.8"><a href="#IGT_INZ_CYU_P1strat2" title="Copy heading and permalink for Reading Question 4.1.8" aria-label="Copy heading and permalink for Reading Question 4.1.8">🔗</a></div></article><article class="exercise exercise-like" id="IGT_INZ_CYU_P2strat2"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.1.8"><a tabindex="-1" href="#IGT_INZ_CYU_P1strat2" title="Copy heading and permalink for Reading Question 4.1.8" aria-label="Copy heading and permalink for Reading Question 4.1.8">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_INZ_CYU_P2strat2"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
-<div class="exercise-statement"><div class="para" id="IGT_INZ_CYU_P2strat2-1-1">In the game in <a href="S_IntroNonzero.html#T_NZmatrix2" class="xref" data-knowl="./knowl/xref/T_NZmatrix2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 4.1.5">Table 4.1.5</a>, suppose Player 1 plays the zero-sum mixed strategy. Then Player 2 prefers to play<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P2strat2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="exercise-statement">
+<div class="para" id="IGT_INZ_CYU_P2strat2-1-1">In the game in <a href="S_IntroNonzero.html#T_NZmatrix2" class="xref" data-knowl="./knowl/xref/T_NZmatrix2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 4.1.5">Table 4.1.5</a>, suppose Player 1 plays the zero-sum mixed strategy. Then Player 2 prefers to play<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_INZ_CYU_P2strat2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <ul data-component="multiplechoice" class="exercise-interactives" id="rs-IGT_INZ_CYU_P2strat2" data-multipleanswers="false">
-<li data-component="answer" id="rs-IGT_INZ_CYU_P2strat2_opt_a" data-correct=""><div class="para" id="IGT_INZ_CYU_P2strat2-2-1-1-1">Pure strategy C.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P2strat2-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_P2strat2_opt_a"><div class="para" id="IGT_INZ_CYU_P2strat2-2-1-2-1">We can find <span class="process-math">\(E_2(C)=17/8\)</span> and <span class="process-math">\(E_2(D)=9/8.\)</span> So, Player 2 prefers C.</div></li>
-<li data-component="answer" id="rs-IGT_INZ_CYU_P2strat2_opt_b"><div class="para" id="IGT_INZ_CYU_P2strat2-2-2-1-1">Pure strategy D.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P2strat2-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_P2strat2_opt_b"><div class="para" id="IGT_INZ_CYU_P2strat2-2-2-2-1">Find <span class="process-math">\(E_2(C)\)</span> and <span class="process-math">\(E_2(D).\)</span>
-</div></li>
-<li data-component="answer" id="rs-IGT_INZ_CYU_P2strat2_opt_c"><div class="para" id="IGT_INZ_CYU_P2strat2-2-3-1-1">A mixed strategy with C more often than D.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P2strat2-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_P2strat2_opt_c"><div class="para" id="IGT_INZ_CYU_P2strat2-2-3-2-1">Find <span class="process-math">\(E_2(C)\)</span> and <span class="process-math">\(E_2(D).\)</span>
-</div></li>
-<li data-component="answer" id="rs-IGT_INZ_CYU_P2strat2_opt_d"><div class="para" id="IGT_INZ_CYU_P2strat2-2-4-1-1">A mixed strategy with D more often than C.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P2strat2-2-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_P2strat2_opt_d"><div class="para" id="IGT_INZ_CYU_P2strat2-2-4-2-1">Find <span class="process-math">\(E_2(C)\)</span> and <span class="process-math">\(E_2(D).\)</span>
-</div></li>
+<li data-component="answer" id="rs-IGT_INZ_CYU_P2strat2_opt_a" data-correct="">
+<div class="para" id="IGT_INZ_CYU_P2strat2-2-1-1-1">Pure strategy C.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_P2strat2_opt_a">
+<div class="para" id="IGT_INZ_CYU_P2strat2-2-1-2-1">We can find <span class="process-math">\(E_2(C)=17/8\)</span> and <span class="process-math">\(E_2(D)=9/8.\)</span> So, Player 2 prefers C.</div>
+</li>
+<li data-component="answer" id="rs-IGT_INZ_CYU_P2strat2_opt_b">
+<div class="para" id="IGT_INZ_CYU_P2strat2-2-2-1-1">Pure strategy D.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_P2strat2_opt_b">
+<div class="para" id="IGT_INZ_CYU_P2strat2-2-2-2-1">Find <span class="process-math">\(E_2(C)\)</span> and <span class="process-math">\(E_2(D).\)</span>
+</div>
+</li>
+<li data-component="answer" id="rs-IGT_INZ_CYU_P2strat2_opt_c">
+<div class="para" id="IGT_INZ_CYU_P2strat2-2-3-1-1">A mixed strategy with C more often than D.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_P2strat2_opt_c">
+<div class="para" id="IGT_INZ_CYU_P2strat2-2-3-2-1">Find <span class="process-math">\(E_2(C)\)</span> and <span class="process-math">\(E_2(D).\)</span>
+</div>
+</li>
+<li data-component="answer" id="rs-IGT_INZ_CYU_P2strat2_opt_d">
+<div class="para" id="IGT_INZ_CYU_P2strat2-2-4-1-1">A mixed strategy with D more often than C.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_P2strat2_opt_d">
+<div class="para" id="IGT_INZ_CYU_P2strat2-2-4-2-1">Find <span class="process-math">\(E_2(C)\)</span> and <span class="process-math">\(E_2(D).\)</span>
+</div>
+</li>
 </ul>
 </div></div>
-<div class="autopermalink" data-description="Reading Question 4.1.9"><a href="#IGT_INZ_CYU_P2strat2" title="Copy heading and permalink for Reading Question 4.1.9" aria-label="Copy heading and permalink for Reading Question 4.1.9">🔗</a></div></article><article class="exercise exercise-like" id="IGT_INZ_CYU_P1strat2P2C"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.1.9"><a tabindex="-1" href="#IGT_INZ_CYU_P2strat2" title="Copy heading and permalink for Reading Question 4.1.9" aria-label="Copy heading and permalink for Reading Question 4.1.9">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_INZ_CYU_P1strat2P2C"><h4 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
-<div class="exercise-statement"><div class="para" id="IGT_INZ_CYU_P1strat2P2C-1-1">In the game in <a href="S_IntroNonzero.html#T_NZmatrix2" class="xref" data-knowl="./knowl/xref/T_NZmatrix2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 4.1.5">Table 4.1.5</a>, suppose Player 2 announces he will play C. What should Player 1 play?<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P1strat2P2C-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="exercise-statement">
+<div class="para" id="IGT_INZ_CYU_P1strat2P2C-1-1">In the game in <a href="S_IntroNonzero.html#T_NZmatrix2" class="xref" data-knowl="./knowl/xref/T_NZmatrix2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 4.1.5">Table 4.1.5</a>, suppose Player 2 announces he will play C. What should Player 1 play?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_INZ_CYU_P1strat2P2C-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <ul data-component="multiplechoice" class="exercise-interactives" id="rs-IGT_INZ_CYU_P1strat2P2C" data-multipleanswers="false">
-<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat2P2C_opt_a" data-correct=""><div class="para" id="IGT_INZ_CYU_P1strat2P2C-2-1-1-1">Pure strategy A.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P1strat2P2C-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat2P2C_opt_a"><div class="para" id="IGT_INZ_CYU_P1strat2P2C-2-1-2-1">If Player 2 plays C, Player 1 prefers A.</div></li>
-<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat2P2C_opt_b"><div class="para" id="IGT_INZ_CYU_P1strat2P2C-2-2-1-1">Pure strategy B.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P1strat2P2C-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat2P2C_opt_b"><div class="para" id="IGT_INZ_CYU_P1strat2P2C-2-2-2-1">Player 1 does not prefer -4.</div></li>
-<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat2P2C_opt_c"><div class="para" id="IGT_INZ_CYU_P1strat2P2C-2-3-1-1">A mixed strategy with A more often than B.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P1strat2P2C-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat2P2C_opt_c"><div class="para" id="IGT_INZ_CYU_P1strat2P2C-2-3-2-1">In this game, knowing what Player 2 will do should make the choice easy for Player 1.</div></li>
-<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat2P2C_opt_d"><div class="para" id="IGT_INZ_CYU_P1strat2P2C-2-4-1-1">A mixed strategy with B more often than A.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_P1strat2P2C-2-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat2P2C_opt_d"><div class="para" id="IGT_INZ_CYU_P1strat2P2C-2-4-2-1">In this game, knowing what Player 2 will do should make the choice easy for Player 1.</div></li>
+<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat2P2C_opt_a" data-correct="">
+<div class="para" id="IGT_INZ_CYU_P1strat2P2C-2-1-1-1">Pure strategy A.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat2P2C_opt_a">
+<div class="para" id="IGT_INZ_CYU_P1strat2P2C-2-1-2-1">If Player 2 plays C, Player 1 prefers A.</div>
+</li>
+<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat2P2C_opt_b">
+<div class="para" id="IGT_INZ_CYU_P1strat2P2C-2-2-1-1">Pure strategy B.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat2P2C_opt_b">
+<div class="para" id="IGT_INZ_CYU_P1strat2P2C-2-2-2-1">Player 1 does not prefer -4.</div>
+</li>
+<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat2P2C_opt_c">
+<div class="para" id="IGT_INZ_CYU_P1strat2P2C-2-3-1-1">A mixed strategy with A more often than B.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat2P2C_opt_c">
+<div class="para" id="IGT_INZ_CYU_P1strat2P2C-2-3-2-1">In this game, knowing what Player 2 will do should make the choice easy for Player 1.</div>
+</li>
+<li data-component="answer" id="rs-IGT_INZ_CYU_P1strat2P2C_opt_d">
+<div class="para" id="IGT_INZ_CYU_P1strat2P2C-2-4-1-1">A mixed strategy with B more often than A.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_P1strat2P2C_opt_d">
+<div class="para" id="IGT_INZ_CYU_P1strat2P2C-2-4-2-1">In this game, knowing what Player 2 will do should make the choice easy for Player 1.</div>
+</li>
 </ul>
 </div></div>
-<div class="autopermalink" data-description="Reading Question 4.1.10"><a href="#IGT_INZ_CYU_P1strat2P2C" title="Copy heading and permalink for Reading Question 4.1.10" aria-label="Copy heading and permalink for Reading Question 4.1.10">🔗</a></div></article><article class="exercise exercise-like" id="IGT_INZ_CYU_BoMvariation"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.1.10"><a tabindex="-1" href="#IGT_INZ_CYU_P1strat2P2C" title="Copy heading and permalink for Reading Question 4.1.10" aria-label="Copy heading and permalink for Reading Question 4.1.10">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_INZ_CYU_BoMvariation"><h4 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone clickablearea_section"><div data-component="clickablearea" data-question_label="" style="visibility: hidden;" id="rs-IGT_INZ_CYU_BoMvariation">
-<span data-question=""><div class="para" id="IGT_INZ_CYU_BoMvariation-1-1">Going back to Battle of the Movies, suppose Alice still prefers Comedy to Action, but also prefers to go to the movie with Bob than to go alone. However, now Bob hates Comedy, so he would prefer to see the action movie alone rather than go to the Comedy movie.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_BoMvariation-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="IGT_INZ_CYU_BoMvariation-1-2">We can adjust the payoff as in the following matrix. Click or circle any equilibruim points.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_BoMvariation-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></span><span data-feedback=""></span><div class="para" id="IGT_INZ_CYU_BoMvariation-2-1">
-<figure class="table table-like" id="T_battleofmoviesvariation"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.1.7<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Table 4.1.7"><a href="#T_battleofmoviesvariation" title="Copy heading and permalink for Table 4.1.7" aria-label="Copy heading and permalink for Table 4.1.7">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<span data-question="">
+<div class="para" id="IGT_INZ_CYU_BoMvariation-1-1">Going back to Battle of the Movies, suppose Alice still prefers Comedy to Action, but also prefers to go to the movie with Bob than to go alone. However, Bob hates Comedy, so he would prefer to see the action movie alone rather than go to the Comedy movie.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_INZ_CYU_BoMvariation-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="IGT_INZ_CYU_BoMvariation-1-2">We can adjust the payoff as in the following matrix. Click or circle any equilibruim points.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_INZ_CYU_BoMvariation-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></span><span data-feedback=""></span>
+<div class="para" id="IGT_INZ_CYU_BoMvariation-2-1">
+<figure class="table table-like" id="T_battleofmoviesvariation"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines"></td>
@@ -714,46 +867,75 @@ eBookConfig.enable_chatcodes =  false;
 <td class="c m b1 r1 l0 t0 lines"><span data-incorrect=""><span class="process-math">\((-3, -1)\)</span></span></td>
 <td class="c m b1 r1 l0 t0 lines"><span data-incorrect=""><span class="process-math">\((-2, 2)\)</span></span></td>
 </tr>
-</table></div></figure><div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_BoMvariation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</table></div>
+</figure>
 </div>
 </div></div></div>
-<div class="autopermalink" data-description="Reading Question 4.1.11"><a href="#IGT_INZ_CYU_BoMvariation" title="Copy heading and permalink for Reading Question 4.1.11" aria-label="Copy heading and permalink for Reading Question 4.1.11">🔗</a></div></article><article class="exercise exercise-like" id="IGT_INZ_CYU_zerocomm"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.1.11"><a tabindex="-1" href="#IGT_INZ_CYU_BoMvariation" title="Copy heading and permalink for Reading Question 4.1.11" aria-label="Copy heading and permalink for Reading Question 4.1.11">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_INZ_CYU_zerocomm"><h4 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_INZ_CYU_zerocomm">
-<div class="para" id="IGT_INZ_CYU_zerocomm-1-1">True or False: In a <em class="emphasis">zero-sum game</em>, it can be a benefit to a player to announce their strategy.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_zerocomm-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="IGT_INZ_CYU_zerocomm-1-1">True or False: In a <em class="emphasis">zero-sum game</em>, it can benefit  a player to announce their strategy.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_INZ_CYU_zerocomm-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_INZ_CYU_zerocomm_opt_t"><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_zerocomm_opt_t"><div class="para" id="IGT_INZ_CYU_zerocomm-2-1">Since one player’s gain is the other’s loss, it never benefits a player to announce a strategy.</div></li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_zerocomm_opt_t">
+<div class="para" id="IGT_INZ_CYU_zerocomm-2-1">Since one player’s gain is the other’s loss, it never benefits a player to announce a strategy.</div>
+</li>
 <li data-component="answer" id="rs-IGT_INZ_CYU_zerocomm_opt_f" data-correct=""><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_zerocomm_opt_f"><div class="para" id="IGT_INZ_CYU_zerocomm-2-1">Since one player’s gain is the other’s loss, it never benefits a player to announce a strategy.</div></li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_zerocomm_opt_f">
+<div class="para" id="IGT_INZ_CYU_zerocomm-2-1">Since one player’s gain is the other’s loss, it never benefits a player to announce a strategy.</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 4.1.12"><a href="#IGT_INZ_CYU_zerocomm" title="Copy heading and permalink for Reading Question 4.1.12" aria-label="Copy heading and permalink for Reading Question 4.1.12">🔗</a></div></article><article class="exercise exercise-like" id="IGT_INZ_CYU_nonzerocomm"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.1.12"><a tabindex="-1" href="#IGT_INZ_CYU_zerocomm" title="Copy heading and permalink for Reading Question 4.1.12" aria-label="Copy heading and permalink for Reading Question 4.1.12">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_INZ_CYU_nonzerocomm"><h4 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_INZ_CYU_nonzerocomm">
-<div class="para" id="IGT_INZ_CYU_nonzerocomm-1-1">True or False: In a <em class="emphasis">non-zero-sum game</em>, it can be a benefit to a player to announce their strategy.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_nonzerocomm-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="IGT_INZ_CYU_nonzerocomm-1-1">True or False: In a <em class="emphasis">non-zero-sum game</em>, it can  benefit a player to announce their strategy.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_INZ_CYU_nonzerocomm-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_INZ_CYU_nonzerocomm_opt_t" data-correct=""><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_nonzerocomm_opt_t"><div class="para" id="IGT_INZ_CYU_nonzerocomm-2-1">Think of Battle of the Movies and what Bob should do if Alice says she is going to Comedy. Would this benefit Alice?</div></li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_nonzerocomm_opt_t">
+<div class="para" id="IGT_INZ_CYU_nonzerocomm-2-1">Think of Battle of the Movies and what Bob should do if Alice says she is going to Comedy. Would this benefit Alice?</div>
+</li>
 <li data-component="answer" id="rs-IGT_INZ_CYU_nonzerocomm_opt_f"><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_nonzerocomm_opt_f"><div class="para" id="IGT_INZ_CYU_nonzerocomm-2-1">Think of Battle of the Movies and what Bob should do if Alice says she is going to Comedy. Would this benefit Alice?</div></li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_nonzerocomm_opt_f">
+<div class="para" id="IGT_INZ_CYU_nonzerocomm-2-1">Think of Battle of the Movies and what Bob should do if Alice says she is going to Comedy. Would this benefit Alice?</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 4.1.13"><a href="#IGT_INZ_CYU_nonzerocomm" title="Copy heading and permalink for Reading Question 4.1.13" aria-label="Copy heading and permalink for Reading Question 4.1.13">🔗</a></div></article><article class="exercise exercise-like" id="IGT_INZ_CYU_zerominopp"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.1.13"><a tabindex="-1" href="#IGT_INZ_CYU_nonzerocomm" title="Copy heading and permalink for Reading Question 4.1.13" aria-label="Copy heading and permalink for Reading Question 4.1.13">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_INZ_CYU_zerominopp"><h4 class="heading"><span class="codenumber">14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_INZ_CYU_zerominopp">
-<div class="para" id="IGT_INZ_CYU_zerominopp-1-1">True or False: In a <em class="emphasis">zero-sum game</em>, a player wants to minimize their opponent’s payoff.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_zerominopp-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="IGT_INZ_CYU_zerominopp-1-1">True or False: In a <em class="emphasis">zero-sum game</em>, a player wants to minimize their opponent’s payoff.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_INZ_CYU_zerominopp-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_INZ_CYU_zerominopp_opt_t" data-correct=""><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_zerominopp_opt_t"><div class="para" id="IGT_INZ_CYU_zerominopp-2-1">This is the entire premise behind our methods for solving zero-sum games.</div></li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_zerominopp_opt_t">
+<div class="para" id="IGT_INZ_CYU_zerominopp-2-1">This is the entire premise behind our methods for solving zero-sum games.</div>
+</li>
 <li data-component="answer" id="rs-IGT_INZ_CYU_zerominopp_opt_f"><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_zerominopp_opt_f"><div class="para" id="IGT_INZ_CYU_zerominopp-2-1">This is the entire premise behind our methods for solving zero-sum games.</div></li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_zerominopp_opt_f">
+<div class="para" id="IGT_INZ_CYU_zerominopp-2-1">This is the entire premise behind our methods for solving zero-sum games.</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 4.1.14"><a href="#IGT_INZ_CYU_zerominopp" title="Copy heading and permalink for Reading Question 4.1.14" aria-label="Copy heading and permalink for Reading Question 4.1.14">🔗</a></div></article><article class="exercise exercise-like" id="IGT_INZ_CYU_znonerominopp"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.1.14"><a tabindex="-1" href="#IGT_INZ_CYU_zerominopp" title="Copy heading and permalink for Reading Question 4.1.14" aria-label="Copy heading and permalink for Reading Question 4.1.14">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_INZ_CYU_znonerominopp"><h4 class="heading"><span class="codenumber">15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_INZ_CYU_znonerominopp">
-<div class="para" id="IGT_INZ_CYU_znonerominopp-1-1">True or False: In a <em class="emphasis">non-zero-sum game</em>, a player wants to minimize their opponent’s payoff.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_INZ_CYU_znonerominopp-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="IGT_INZ_CYU_znonerominopp-1-1">True or False: In a <em class="emphasis">non-zero-sum game</em>, a player wants to minimize their opponent’s payoff.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_INZ_CYU_znonerominopp-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_INZ_CYU_znonerominopp_opt_t"><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_znonerominopp_opt_t"><div class="para" id="IGT_INZ_CYU_znonerominopp-2-1">Since both players can win, there is no reason to make your opponent lose.</div></li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_znonerominopp_opt_t">
+<div class="para" id="IGT_INZ_CYU_znonerominopp-2-1">Since both players can win, there is no reason to make your opponent lose.</div>
+</li>
 <li data-component="answer" id="rs-IGT_INZ_CYU_znonerominopp_opt_f" data-correct=""><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_INZ_CYU_znonerominopp_opt_f"><div class="para" id="IGT_INZ_CYU_znonerominopp-2-1">Since both players can win, there is no reason to make your opponent lose.</div></li>
+<li data-component="feedback" id="rs-IGT_INZ_CYU_znonerominopp_opt_f">
+<div class="para" id="IGT_INZ_CYU_znonerominopp-2-1">Since both players can win, there is no reason to make your opponent lose.</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 4.1.15"><a href="#IGT_INZ_CYU_znonerominopp" title="Copy heading and permalink for Reading Question 4.1.15" aria-label="Copy heading and permalink for Reading Question 4.1.15">🔗</a></div></article><div class="autopermalink" data-description="Reading Questions 4.1: Check Your Understanding"><a href="#S_IntroNonzero-32" title="Copy heading and permalink for Reading Questions 4.1: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 4.1: Check Your Understanding">🔗</a></div></section><div class="autopermalink" data-description="Section 4.1: Introduction to Two-Player Non-Zero-Sum Games"><a href="#S_IntroNonzero" title="Copy heading and permalink for Section 4.1: Introduction to Two-Player Non-Zero-Sum Games" aria-label="Copy heading and permalink for Section 4.1: Introduction to Two-Player Non-Zero-Sum Games">🔗</a></div></section></div>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.1.15"><a tabindex="-1" href="#IGT_INZ_CYU_znonerominopp" title="Copy heading and permalink for Reading Question 4.1.15" aria-label="Copy heading and permalink for Reading Question 4.1.15">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 4.1: Check Your Understanding"><a tabindex="-1" href="#S_IntroNonzero-32" title="Copy heading and permalink for Reading Questions 4.1: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 4.1: Check Your Understanding">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 4.1: Introduction to Two-Player Non-Zero-Sum Games"><a tabindex="-1" href="#S_IntroNonzero" title="Copy heading and permalink for Section 4.1: Introduction to Two-Player Non-Zero-Sum Games" aria-label="Copy heading and permalink for Section 4.1: Introduction to Two-Player Non-Zero-Sum Games">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="intro_game_theory-7.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="S_PdandChicken.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

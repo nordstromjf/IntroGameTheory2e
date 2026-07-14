@@ -20,85 +20,27 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js/lib"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: true,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
+<meta name="twitter:image" content="https://nordstromjf.github.io/IntroGameTheory2e/external/image-1.svg">
 <meta property="og:image" content="https://nordstromjf.github.io/IntroGameTheory2e/external/image-1.svg">
-<meta property="book:title" content="Introduction to Game Theory">
-<meta property="book:author" content="Jennifer Firkins Nordstrom">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<meta name="twitter:image:alt" content="Document Logo">
+<meta property="og:image:alt" content="Document Logo">
+<meta name="twitter:title" content="Introduction to Game Theory: a Discovery Approach">
+<meta property="og:title" content="Introduction to Game Theory: a Discovery Approach">
+<meta property="book:title" content="Introduction to Game Theory: a Discovery Approach">
+<meta name="twitter:description" content="This text provides an inquiry-based introduction to game theory. The material requires no mathematical prerequisites and is suitable for a non-majors quantitative reasoning course.">
+<meta property="og:description" content="This text provides an inquiry-based introduction to game theory. The material requires no mathematical prerequisites and is suitable for a non-majors quantitative reasoning course.">
+<meta name="twitter:card" content="summary_large_image">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -120,16 +62,16 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.18';
+eBookConfig.runestone_version = '8.1.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.cefb0224014f3333.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.c50cdcad467c8d3e.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/prefix-runtime.cb5af2e851de3574.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.f51cd4153b45055d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="introgametheory" class="pretext book ignore-math">
@@ -139,18 +81,35 @@ eBookConfig.enable_chatcodes =  false;
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div>
 </div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
-<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<div class="search-results-controls">
-<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-<h2 class="search-results-heading">Search Results: </h2>
-<div id="searchempty" class="searchempty"><span>No results.</span></div>
-<ol id="searchresults" class="searchresults"></ol>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
+<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="S_PDconditions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="intro_game_theory-7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="S_VolunteerDil.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="S_PDconditions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="intro_game_theory-7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="S_VolunteerDil.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\( \newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
   \newcommand{\MyTikzmark}[2]{
      \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
@@ -171,20 +130,20 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Preface</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="intro_game_theory-4.html" class="internal"><span class="codenumber">1</span> <span class="title">What is Game Theory?</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-intro_game_theory-4" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Players and Strategies</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_intro" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_intro.html#SS_Cake" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Assumptions: Cake Division</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_intro.html#Ex_Tic" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Developing Strategies: Tic Tac Toe</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_intro.html#S_intro-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Check Your Understanding</span></a></div></li>
@@ -192,7 +151,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_IntroMatrices.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Game Matrices and Payoff Vectors</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_IntroMatrices" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroMatrices.html#SS_MatchPennies" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Setting up a Payoff Matrix</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroMatrices.html#SS_revistassump" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Revisiting the Assumptions</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroMatrices.html#S_IntroMatrices-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Check Your Understanding</span></a></div></li>
@@ -202,10 +161,10 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="intro_game_theory-5.html" class="internal"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-intro_game_theory-5" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_IntroZeroSum.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to Two-Person Zero-Sum Games</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_IntroZeroSum" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroZeroSum.html#Ex_election" class="internal"><span class="codenumber">2.1.1</span> <span class="title">An Election Campaign Game</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroZeroSum.html#SS_equilpairs" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Equilibrium Pairs</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroZeroSum.html#S_IntroZeroSum-6" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Check Your Understanding</span></a></div></li>
@@ -213,7 +172,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_DominatedStrategies.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Finding Strategies</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_DominatedStrategies" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_simplifyingmatrix" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Simplifying a Zero-Sum Game Matrix</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_DomStrategies" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Dominated Strategies</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_maximin" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Maximin and Minimax Strategies</span></a></div></li>
@@ -222,7 +181,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_Probability.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Probability and Expected Value</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_Probability" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_Probability.html#SS_basicprob" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Some Basic Probability</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_Probability.html#SS_expectedvalue" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Expected Value</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_Probability.html#S_Probability-5" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Check Your Understanding</span></a></div></li>
@@ -230,467 +189,571 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_OneCardStud.html" class="internal"><span class="codenumber">2.4</span> <span class="title">A Game of Chance</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_OneCardStud.html#S_OneCardStud-39" class="internal"><span class="codenumber">2.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_OneCardStud" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_OneCardStud.html#S_OneCardStud-39" class="internal"><span class="codenumber">2.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_EquilibPoints.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Equilibrium Points</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_EquilibPoints.html#S_EquilibPoints-30" class="internal"><span class="codenumber">2.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_EquilibPoints" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_EquilibPoints.html#S_EquilibPoints-30" class="internal"><span class="codenumber">2.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Strategies for Zero-Sum Games and Equilibrium Points</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html#S_ZeroSumStrategySummary-15" class="internal"><span class="codenumber">2.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Strategies for Zero-Sum Games</span></a></div>
+<ul id="ptx-toc-group-S_ZeroSumStrategySummary" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html#S_ZeroSumStrategySummary-13" class="internal"><span class="codenumber">2.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopRationality.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Popular Culture: Rationality and Perfect Information</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopRationality.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Pop Culture: Rationality</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="intro_game_theory-6.html" class="internal"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-intro_game_theory-6" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_IntroRepeated.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction to Repeated Games</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroRepeated.html#S_IntroRepeated-26" class="internal"><span class="codenumber">3.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_IntroRepeated" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroRepeated.html#S_IntroRepeated-26" class="internal"><span class="codenumber">3.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_MixStratGraph.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Mixed Strategies: Graphical Solution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratGraph.html#S_MixStratGraph-55" class="internal"><span class="codenumber">3.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_MixStratGraph" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratGraph.html#S_MixStratGraph-53" class="internal"><span class="codenumber">3.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_SolvingEq.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Using Sage to Graph Lines and Solve Equations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_SolvingEq.html#S_SolvingEq-26" class="internal"><span class="codenumber">3.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_SolvingEq" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_SolvingEq.html#S_SolvingEq-26" class="internal"><span class="codenumber">3.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_MixStratEV.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Mixed Strategies: Expected Value Solution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratEV.html#S_MixStratEV-34" class="internal"><span class="codenumber">3.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_MixStratEV" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratEV.html#S_MixStratEV-32" class="internal"><span class="codenumber">3.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_LiarsPoker.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Liar’s Poker</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_LiarsPoker.html#S_LiarsPoker-23" class="internal"><span class="codenumber">3.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_LiarsPoker" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_LiarsPoker.html#S_LiarsPoker-23" class="internal"><span class="codenumber">3.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_AugMatrices.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Solving Systems of Equations Using Matrices</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_AugMatrices.html#S_AugMatrices-35" class="internal"><span class="codenumber">3.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_AugMatrices" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_AugMatrices.html#S_AugMatrices-35" class="internal"><span class="codenumber">3.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_Undercut.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Undercut</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_Undercut.html#S_Undercut-31" class="internal"><span class="codenumber">3.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_Undercut" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_Undercut.html#S_Undercut-30" class="internal"><span class="codenumber">3.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="intro_game_theory-7.html" class="internal"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-intro_game_theory-7">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_IntroNonzero.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Introduction to Two-Player Non-Zero-Sum Games</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroNonzero.html#S_IntroNonzero-32" class="internal"><span class="codenumber">4.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_IntroNonzero" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroNonzero.html#S_IntroNonzero-32" class="internal"><span class="codenumber">4.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_PdandChicken.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Prisoner’s Dilemma and Chicken</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PdandChicken.html#S_PdandChicken-43" class="internal"><span class="codenumber">4.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_PdandChicken" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PdandChicken.html#S_PdandChicken-43" class="internal"><span class="codenumber">4.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_CWPD.html" class="internal"><span class="codenumber">4.3</span> <span class="title">A Class-Wide Experiment</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_CWPD.html#S_CWPD-25" class="internal"><span class="codenumber">4.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_CWPD" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_CWPD.html#S_CWPD-25" class="internal"><span class="codenumber">4.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_PDconditions.html" class="internal"><span class="codenumber">4.4</span> <span class="title">What Makes a Prisoner’s Dilemma?</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PDconditions.html#S_PDconditions-18" class="internal"><span class="codenumber">4.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_PDconditions" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PDconditions.html#S_PDconditions-18" class="internal"><span class="codenumber">4.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="S_VDexperiment.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Another Multiplayer Experiment</span></a></div>
-<ul class="structural toc-item-list active"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VDexperiment.html#S_VDexperiment-11" class="internal"><span class="codenumber">4.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul class="structural toc-item-list active" id="ptx-toc-group-S_VDexperiment"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VDexperiment.html#S_VDexperiment-11" class="internal"><span class="codenumber">4.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_VolunteerDil.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Volunteer’s Dilemma</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VolunteerDil.html#S_VolunteerDil-20" class="internal"><span class="codenumber">4.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_VolunteerDil" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VolunteerDil.html#S_VolunteerDil-20" class="internal"><span class="codenumber">4.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_RepeatPD.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Repeated Prisoner’s Dilemma</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_RepeatPD.html#S_RepeatPD-31" class="internal"><span class="codenumber">4.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_RepeatPD" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_RepeatPD.html#S_RepeatPD-29" class="internal"><span class="codenumber">4.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopPD.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Popular Culture: Prisoner’s Dilemma and Chicken</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopPD.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Pop Culture: Prisoner’s Dilemma and Chicken</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">References</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="S_VDexperiment"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.5</span><span class="space"> </span><span class="title">Another Multiplayer Experiment</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="S_VDexperiment">
+<h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Another Multiplayer Experiment</span>
 </h2>
-<div class="para" id="S_VDexperiment-4">This activity needs to be played as a class. All players need to be able to respond without being able to see the responses of others. Answers may be revealed before moving on to the next question.<div class="autopermalink" data-description="Paragraph"><a href="#S_VDexperiment-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="S_VDexperiment-4">This activity needs to be played as a class. All players need to be able to respond without being able to see the responses of others. Answers may be revealed before moving on to the next question.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_VDexperiment-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="A_VDexperiment" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.5.1</span><span class="period">.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_VDexperiment-1-1">Without sharing your answers with others, select your answer to the following questions. Try to be as honest about your answer as possible. Make sure you have a reason for each answer.<div class="autopermalink" data-description="Paragraph"><a href="#A_VDexperiment-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <article class="question example-like" id="Q_VDlights"><h4 class="heading">
-<span class="type">Question</span><span class="space"> </span><span class="codenumber">4.5.1</span><span class="period">.</span>
+<article class="activity project-like" id="A_VDexperiment"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="A_VDexperiment-1-1">Without sharing your answers with others, select your answer to the following questions. Try to be as honest about your answer as possible. Make sure you have a reason for each answer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_VDexperiment-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<article class="question example-like" id="Q_VDlights"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="Q_VDlights-1">
-<div class="para">The lights go out in the neighborhood. Someone needs to call the power company. If someone calls, everyone’s lights go on.</div>
+<div class="para">The power goes out in the neighborhood. Someone needs to call the power company. If someone calls, everyone’s power goes on.</div>
 <ol class="upper-alpha ol-marker-3" id="Q_VDlights-1-1">
 <li id="Q_VDlights-1-1-1">
-<div class="para" id="Q_VDlights-1-1-1-1">Call<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDlights-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VDlights-1-1-1-1">Call<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDlights-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item A"><a href="#Q_VDlights-1-1-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item A"><a tabindex="-1" href="#Q_VDlights-1-1-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
 </li>
 <li id="Q_VDlights-1-1-2">
-<div class="para" id="Q_VDlights-1-1-2-1">Don’t call<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDlights-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VDlights-1-1-2-1">Don’t call<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDlights-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item B"><a href="#Q_VDlights-1-1-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item B"><a tabindex="-1" href="#Q_VDlights-1-1-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDlights-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDlights-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Question 4.5.1"><a href="#Q_VDlights" title="Copy heading and permalink for Question 4.5.1" aria-label="Copy heading and permalink for Question 4.5.1">🔗</a></div></article> <article class="question example-like" id="Q_VDlightshold5"><h4 class="heading">
-<span class="type">Question</span><span class="space"> </span><span class="codenumber">4.5.2</span><span class="period">.</span>
+<div class="autopermalink" aria-hidden="true" data-description="Question 4.5.1"><a tabindex="-1" href="#Q_VDlights" title="Copy heading and permalink for Question 4.5.1" aria-label="Copy heading and permalink for Question 4.5.1">🔗</a></div>
+</article> 
+<article class="question example-like" id="Q_VDlightshold5"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="Q_VDlightshold5-1">
 <div class="para">The same as in <a href="S_VDexperiment.html#Q_VDlights" class="xref" data-knowl="./knowl/xref/Q_VDlights.html" data-reveal-label="Reveal" data-close-label="Close" title="Question 4.5.1">Question 4.5.1</a>, but now you have to wait on hold for 5 minutes.</div>
 <ol class="upper-alpha ol-marker-3" id="Q_VDlightshold5-1-2">
 <li id="Q_VDlightshold5-1-2-1">
-<div class="para" id="Q_VDlightshold5-1-2-1-1">Call<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDlightshold5-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VDlightshold5-1-2-1-1">Call<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDlightshold5-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item A"><a href="#Q_VDlightshold5-1-2-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item A"><a tabindex="-1" href="#Q_VDlightshold5-1-2-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
 </li>
 <li id="Q_VDlightshold5-1-2-2">
-<div class="para" id="Q_VDlightshold5-1-2-2-1">Don’t call<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDlightshold5-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VDlightshold5-1-2-2-1">Don’t call<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDlightshold5-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item B"><a href="#Q_VDlightshold5-1-2-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item B"><a tabindex="-1" href="#Q_VDlightshold5-1-2-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDlightshold5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDlightshold5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Question 4.5.2"><a href="#Q_VDlightshold5" title="Copy heading and permalink for Question 4.5.2" aria-label="Copy heading and permalink for Question 4.5.2">🔗</a></div></article> <article class="question example-like" id="Q_VDlightshold30"><h4 class="heading">
-<span class="type">Question</span><span class="space"> </span><span class="codenumber">4.5.3</span><span class="period">.</span>
+<div class="autopermalink" aria-hidden="true" data-description="Question 4.5.2"><a tabindex="-1" href="#Q_VDlightshold5" title="Copy heading and permalink for Question 4.5.2" aria-label="Copy heading and permalink for Question 4.5.2">🔗</a></div>
+</article> 
+<article class="question example-like" id="Q_VDlightshold30"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="Q_VDlightshold30-1">
 <div class="para">The same as in <a href="S_VDexperiment.html#Q_VDlights" class="xref" data-knowl="./knowl/xref/Q_VDlights.html" data-reveal-label="Reveal" data-close-label="Close" title="Question 4.5.1">Question 4.5.1</a>, but now you have to wait on hold for 30 minutes.</div>
 <ol class="upper-alpha ol-marker-3" id="Q_VDlightshold30-1-2">
 <li id="Q_VDlightshold30-1-2-1">
-<div class="para" id="Q_VDlightshold30-1-2-1-1">Call<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDlightshold30-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VDlightshold30-1-2-1-1">Call<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDlightshold30-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item A"><a href="#Q_VDlightshold30-1-2-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item A"><a tabindex="-1" href="#Q_VDlightshold30-1-2-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
 </li>
 <li id="Q_VDlightshold30-1-2-2">
-<div class="para" id="Q_VDlightshold30-1-2-2-1">Don’t call<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDlightshold30-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VDlightshold30-1-2-2-1">Don’t call<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDlightshold30-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item B"><a href="#Q_VDlightshold30-1-2-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item B"><a tabindex="-1" href="#Q_VDlightshold30-1-2-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDlightshold30-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDlightshold30-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Question 4.5.3"><a href="#Q_VDlightshold30" title="Copy heading and permalink for Question 4.5.3" aria-label="Copy heading and permalink for Question 4.5.3">🔗</a></div></article> <article class="question example-like" id="Q_VDlightsholdcharge"><h4 class="heading">
-<span class="type">Question</span><span class="space"> </span><span class="codenumber">4.5.4</span><span class="period">.</span>
+<div class="autopermalink" aria-hidden="true" data-description="Question 4.5.3"><a tabindex="-1" href="#Q_VDlightshold30" title="Copy heading and permalink for Question 4.5.3" aria-label="Copy heading and permalink for Question 4.5.3">🔗</a></div>
+</article> 
+<article class="question example-like" id="Q_VDlightsholdcharge"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="Q_VDlightsholdcharge-1">
-<div class="para">The same as in <a href="S_VDexperiment.html#Q_VDlights" class="xref" data-knowl="./knowl/xref/Q_VDlights.html" data-reveal-label="Reveal" data-close-label="Close" title="Question 4.5.1">Question 4.5.1</a>, but now you have to pay a $.50 service fee.</div>
+<div class="para">The same as in <a href="S_VDexperiment.html#Q_VDlights" class="xref" data-knowl="./knowl/xref/Q_VDlights.html" data-reveal-label="Reveal" data-close-label="Close" title="Question 4.5.1">Question 4.5.1</a>, but now you have to pay a $1.00 service fee.</div>
 <ol class="upper-alpha ol-marker-3" id="Q_VDlightsholdcharge-1-2">
 <li id="Q_VDlightsholdcharge-1-2-1">
-<div class="para" id="Q_VDlightsholdcharge-1-2-1-1">Call<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDlightsholdcharge-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VDlightsholdcharge-1-2-1-1">Call<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDlightsholdcharge-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item A"><a href="#Q_VDlightsholdcharge-1-2-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item A"><a tabindex="-1" href="#Q_VDlightsholdcharge-1-2-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
 </li>
 <li id="Q_VDlightsholdcharge-1-2-2">
-<div class="para" id="Q_VDlightsholdcharge-1-2-2-1">Don’t call<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDlightsholdcharge-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VDlightsholdcharge-1-2-2-1">Don’t call<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDlightsholdcharge-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item B"><a href="#Q_VDlightsholdcharge-1-2-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item B"><a tabindex="-1" href="#Q_VDlightsholdcharge-1-2-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDlightsholdcharge-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDlightsholdcharge-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Question 4.5.4"><a href="#Q_VDlightsholdcharge" title="Copy heading and permalink for Question 4.5.4" aria-label="Copy heading and permalink for Question 4.5.4">🔗</a></div></article> <article class="question example-like" id="Q_VDlightschargemore"><h4 class="heading">
-<span class="type">Question</span><span class="space"> </span><span class="codenumber">4.5.5</span><span class="period">.</span>
+<div class="autopermalink" aria-hidden="true" data-description="Question 4.5.4"><a tabindex="-1" href="#Q_VDlightsholdcharge" title="Copy heading and permalink for Question 4.5.4" aria-label="Copy heading and permalink for Question 4.5.4">🔗</a></div>
+</article> 
+<article class="question example-like" id="Q_VDlightschargemore"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="Q_VDlightschargemore-1">
-<div class="para">The same as in <a href="S_VDexperiment.html#Q_VDlights" class="xref" data-knowl="./knowl/xref/Q_VDlights.html" data-reveal-label="Reveal" data-close-label="Close" title="Question 4.5.1">Question 4.5.1</a>, but now you have to pay a $2.50 service fee.</div>
+<div class="para">The same as in <a href="S_VDexperiment.html#Q_VDlights" class="xref" data-knowl="./knowl/xref/Q_VDlights.html" data-reveal-label="Reveal" data-close-label="Close" title="Question 4.5.1">Question 4.5.1</a>, but now you have to pay a $5.00 service fee.</div>
 <ol class="upper-alpha ol-marker-3" id="Q_VDlightschargemore-1-2">
 <li id="Q_VDlightschargemore-1-2-1">
-<div class="para" id="Q_VDlightschargemore-1-2-1-1">Call<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDlightschargemore-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VDlightschargemore-1-2-1-1">Call<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDlightschargemore-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item A"><a href="#Q_VDlightschargemore-1-2-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item A"><a tabindex="-1" href="#Q_VDlightschargemore-1-2-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
 </li>
 <li id="Q_VDlightschargemore-1-2-2">
-<div class="para" id="Q_VDlightschargemore-1-2-2-1">Don’t call<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDlightschargemore-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VDlightschargemore-1-2-2-1">Don’t call<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDlightschargemore-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item B"><a href="#Q_VDlightschargemore-1-2-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item B"><a tabindex="-1" href="#Q_VDlightschargemore-1-2-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDlightschargemore-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDlightschargemore-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Question 4.5.5"><a href="#Q_VDlightschargemore" title="Copy heading and permalink for Question 4.5.5" aria-label="Copy heading and permalink for Question 4.5.5">🔗</a></div></article> <article class="question example-like" id="Q_VDhike"><h4 class="heading">
-<span class="type">Question</span><span class="space"> </span><span class="codenumber">4.5.6</span><span class="period">.</span>
+<div class="autopermalink" aria-hidden="true" data-description="Question 4.5.5"><a tabindex="-1" href="#Q_VDlightschargemore" title="Copy heading and permalink for Question 4.5.5" aria-label="Copy heading and permalink for Question 4.5.5">🔗</a></div>
+</article> 
+<article class="question example-like" id="Q_VDhike"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="Q_VDhike-1">
 <div class="para">The power lines go down in your small mountain community. You have to hike 3 miles in the snow to notify the power company.</div>
 <ol class="upper-alpha ol-marker-3" id="Q_VDhike-1-1">
 <li id="Q_VDhike-1-1-1">
-<div class="para" id="Q_VDhike-1-1-1-1">Hike to notify the power company<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDhike-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VDhike-1-1-1-1">Hike to notify the power company.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDhike-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item A"><a href="#Q_VDhike-1-1-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item A"><a tabindex="-1" href="#Q_VDhike-1-1-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
 </li>
 <li id="Q_VDhike-1-1-2">
-<div class="para" id="Q_VDhike-1-1-2-1">Stay home and let someone else do the hiking<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDhike-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VDhike-1-1-2-1">Stay home and let someone else do the hiking.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDhike-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item B"><a href="#Q_VDhike-1-1-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item B"><a tabindex="-1" href="#Q_VDhike-1-1-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDhike-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDhike-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Question 4.5.6"><a href="#Q_VDhike" title="Copy heading and permalink for Question 4.5.6" aria-label="Copy heading and permalink for Question 4.5.6">🔗</a></div></article> <article class="question example-like" id="Q_VDcheat"><h4 class="heading">
-<span class="type">Question</span><span class="space"> </span><span class="codenumber">4.5.7</span><span class="period">.</span>
+<div class="autopermalink" aria-hidden="true" data-description="Question 4.5.6"><a tabindex="-1" href="#Q_VDhike" title="Copy heading and permalink for Question 4.5.6" aria-label="Copy heading and permalink for Question 4.5.6">🔗</a></div>
+</article> 
+<article class="question example-like" id="Q_VDcheat"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="Q_VDcheat-1">
 <div class="para">Everyone in your class cheats on an exam. The professor says if someone confesses they receive an F. If no one confesses, everyone fails.</div>
 <ol class="upper-alpha ol-marker-3" id="Q_VDcheat-1-1">
 <li id="Q_VDcheat-1-1-1">
-<div class="para" id="Q_VDcheat-1-1-1-1">Confess<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDcheat-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VDcheat-1-1-1-1">Confess<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDcheat-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item A"><a href="#Q_VDcheat-1-1-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item A"><a tabindex="-1" href="#Q_VDcheat-1-1-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
 </li>
 <li id="Q_VDcheat-1-1-2">
-<div class="para" id="Q_VDcheat-1-1-2-1">Don’t confess<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDcheat-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VDcheat-1-1-2-1">Don’t confess<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDcheat-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item B"><a href="#Q_VDcheat-1-1-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item B"><a tabindex="-1" href="#Q_VDcheat-1-1-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDcheat-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDcheat-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Question 4.5.7"><a href="#Q_VDcheat" title="Copy heading and permalink for Question 4.5.7" aria-label="Copy heading and permalink for Question 4.5.7">🔗</a></div></article> <article class="question example-like" id="Q_VDsharksclass"><h4 class="heading">
-<span class="type">Question</span><span class="space"> </span><span class="codenumber">4.5.8</span><span class="period">.</span>
+<div class="autopermalink" aria-hidden="true" data-description="Question 4.5.7"><a tabindex="-1" href="#Q_VDcheat" title="Copy heading and permalink for Question 4.5.7" aria-label="Copy heading and permalink for Question 4.5.7">🔗</a></div>
+</article> 
+<article class="question example-like" id="Q_VDsharksclass"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="Q_VDsharksclass-1">
-<div class="para">Evil Dr. No captures the class and puts you in all in a shark tank separated so you can’t communicate. If one person volunteers to be eaten then the rest go free. If no one volunteers after 10 minutes all get eaten by sharks.</div>
+<div class="para">Evil Dr. No captures the class and puts you in all in a shark tank separated so you can’t communicate. If one person volunteers to be eaten then the rest go free. If no one volunteers after 10 minutes everyone gets eaten by sharks.</div>
 <ol class="upper-alpha ol-marker-3" id="Q_VDsharksclass-1-1">
 <li id="Q_VDsharksclass-1-1-1">
-<div class="para" id="Q_VDsharksclass-1-1-1-1">Volunteer<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDsharksclass-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VDsharksclass-1-1-1-1">Volunteer<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDsharksclass-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item A"><a href="#Q_VDsharksclass-1-1-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item A"><a tabindex="-1" href="#Q_VDsharksclass-1-1-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
 </li>
 <li id="Q_VDsharksclass-1-1-2">
-<div class="para" id="Q_VDsharksclass-1-1-2-1">Don’t volunteer<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDsharksclass-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VDsharksclass-1-1-2-1">Don’t volunteer<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDsharksclass-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item B"><a href="#Q_VDsharksclass-1-1-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item B"><a tabindex="-1" href="#Q_VDsharksclass-1-1-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDsharksclass-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDsharksclass-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Question 4.5.8"><a href="#Q_VDsharksclass" title="Copy heading and permalink for Question 4.5.8" aria-label="Copy heading and permalink for Question 4.5.8">🔗</a></div></article> <article class="question example-like" id="Q_VDsharksfamily"><h4 class="heading">
-<span class="type">Question</span><span class="space"> </span><span class="codenumber">4.5.9</span><span class="period">.</span>
+<div class="autopermalink" aria-hidden="true" data-description="Question 4.5.8"><a tabindex="-1" href="#Q_VDsharksclass" title="Copy heading and permalink for Question 4.5.8" aria-label="Copy heading and permalink for Question 4.5.8">🔗</a></div>
+</article> 
+<article class="question example-like" id="Q_VDsharksfamily"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="Q_VDsharksfamily-1">
-<div class="para">Evil Dr. No captures you and the five most important people in your life and puts you in all in a shark tank separated so you can’t communicate. If one person volunteers to be eaten then the rest go free. If no one volunteers after 10 minutes all get eaten by sharks.</div>
+<div class="para">Evil Dr. No captures you and the five most important people in your life and puts you in all in a shark tank separated so you can’t communicate. If one person volunteers to be eaten then the rest go free. If no one volunteers after 10 minutes everyone gets eaten by sharks.</div>
 <ol class="upper-alpha ol-marker-3" id="Q_VDsharksfamily-1-1">
 <li id="Q_VDsharksfamily-1-1-1">
-<div class="para" id="Q_VDsharksfamily-1-1-1-1">Volunteer<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDsharksfamily-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VDsharksfamily-1-1-1-1">Volunteer<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDsharksfamily-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item A"><a href="#Q_VDsharksfamily-1-1-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item A"><a tabindex="-1" href="#Q_VDsharksfamily-1-1-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
 </li>
 <li id="Q_VDsharksfamily-1-1-2">
-<div class="para" id="Q_VDsharksfamily-1-1-2-1">Don’t volunteer<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDsharksfamily-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VDsharksfamily-1-1-2-1">Don’t volunteer<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDsharksfamily-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item B"><a href="#Q_VDsharksfamily-1-1-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item B"><a tabindex="-1" href="#Q_VDsharksfamily-1-1-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDsharksfamily-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDsharksfamily-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Question 4.5.9"><a href="#Q_VDsharksfamily" title="Copy heading and permalink for Question 4.5.9" aria-label="Copy heading and permalink for Question 4.5.9">🔗</a></div></article> <article class="question example-like" id="Q_VDslop"><h4 class="heading">
-<span class="type">Question</span><span class="space"> </span><span class="codenumber">4.5.10</span><span class="period">.</span>
+<div class="autopermalink" aria-hidden="true" data-description="Question 4.5.9"><a tabindex="-1" href="#Q_VDsharksfamily" title="Copy heading and permalink for Question 4.5.9" aria-label="Copy heading and permalink for Question 4.5.9">🔗</a></div>
+</article> 
+<article class="question example-like" id="Q_VDslop"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="Q_VDslop-1">
-<div class="para">For any “Big Brother” fans: choose to eat all your favorite foods for a week or nasty “slop” for a week. If at least three people say slop, everyone gets what they asked for. Otherwise, everyone is on slop.</div>
+<div class="para">For any fans of CBS’s <span class="booktitle">Big Brother</span>: choose to eat all your favorite foods for a week or nasty “slop” for a week. If at least three people say slop, everyone gets what they asked for. Otherwise, everyone is on slop.</div>
 <ol class="upper-alpha ol-marker-3" id="Q_VDslop-1-3">
 <li id="Q_VDslop-1-3-1">
-<div class="para" id="Q_VDslop-1-3-1-1">Favorite foods<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDslop-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VDslop-1-3-1-1">Favorite foods<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDslop-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item A"><a href="#Q_VDslop-1-3-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item A"><a tabindex="-1" href="#Q_VDslop-1-3-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
 </li>
 <li id="Q_VDslop-1-3-2">
-<div class="para" id="Q_VDslop-1-3-2-1">Slop<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDslop-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VDslop-1-3-2-1">Slop<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDslop-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item B"><a href="#Q_VDslop-1-3-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item B"><a tabindex="-1" href="#Q_VDslop-1-3-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#Q_VDslop-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VDslop-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Question 4.5.10"><a href="#Q_VDslop" title="Copy heading and permalink for Question 4.5.10" aria-label="Copy heading and permalink for Question 4.5.10">🔗</a></div></article> <article class="question example-like" id="Q_VD5points"><h4 class="heading">
-<span class="type">Question</span><span class="space"> </span><span class="codenumber">4.5.11</span><span class="period">.</span>
+<div class="autopermalink" aria-hidden="true" data-description="Question 4.5.10"><a tabindex="-1" href="#Q_VDslop" title="Copy heading and permalink for Question 4.5.10" aria-label="Copy heading and permalink for Question 4.5.10">🔗</a></div>
+</article> 
+<article class="question example-like" id="Q_VD5points"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="Q_VD5points-1">
 <div class="para">OK, now let’s get serious about this. Answer 5 points or 1 point. If at least one person says 1 point, everyone gets the number of points they chose. Otherwise, everyone gets 0 points.</div>
 <ol class="upper-alpha ol-marker-3" id="Q_VD5points-1-1">
 <li id="Q_VD5points-1-1-1">
-<div class="para" id="Q_VD5points-1-1-1-1">5 points<div class="autopermalink" data-description="Paragraph"><a href="#Q_VD5points-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VD5points-1-1-1-1">5 points<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VD5points-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item A"><a href="#Q_VD5points-1-1-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item A"><a tabindex="-1" href="#Q_VD5points-1-1-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
 </li>
 <li id="Q_VD5points-1-1-2">
-<div class="para" id="Q_VD5points-1-1-2-1">1 point<div class="autopermalink" data-description="Paragraph"><a href="#Q_VD5points-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VD5points-1-1-2-1">1 point<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VD5points-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item B"><a href="#Q_VD5points-1-1-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item B"><a tabindex="-1" href="#Q_VD5points-1-1-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#Q_VD5points-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VD5points-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Question 4.5.11"><a href="#Q_VD5points" title="Copy heading and permalink for Question 4.5.11" aria-label="Copy heading and permalink for Question 4.5.11">🔗</a></div></article> <article class="question example-like" id="Q_VD20points"><h4 class="heading">
-<span class="type">Question</span><span class="space"> </span><span class="codenumber">4.5.12</span><span class="period">.</span>
+<div class="autopermalink" aria-hidden="true" data-description="Question 4.5.11"><a tabindex="-1" href="#Q_VD5points" title="Copy heading and permalink for Question 4.5.11" aria-label="Copy heading and permalink for Question 4.5.11">🔗</a></div>
+</article> 
+<article class="question example-like" id="Q_VD20points"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="Q_VD20points-1">
 <div class="para">Answer 20 points or 1 point. If at least one person says 1 point, everyone gets the number of points they chose. Otherwise, everyone gets 0 points.</div>
 <ol class="upper-alpha ol-marker-3" id="Q_VD20points-1-1">
 <li id="Q_VD20points-1-1-1">
-<div class="para" id="Q_VD20points-1-1-1-1">20 points<div class="autopermalink" data-description="Paragraph"><a href="#Q_VD20points-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VD20points-1-1-1-1">20 points<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VD20points-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item A"><a href="#Q_VD20points-1-1-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item A"><a tabindex="-1" href="#Q_VD20points-1-1-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
 </li>
 <li id="Q_VD20points-1-1-2">
-<div class="para" id="Q_VD20points-1-1-2-1">1 point<div class="autopermalink" data-description="Paragraph"><a href="#Q_VD20points-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VD20points-1-1-2-1">1 point<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VD20points-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item B"><a href="#Q_VD20points-1-1-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item B"><a tabindex="-1" href="#Q_VD20points-1-1-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#Q_VD20points-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VD20points-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Question 4.5.12"><a href="#Q_VD20points" title="Copy heading and permalink for Question 4.5.12" aria-label="Copy heading and permalink for Question 4.5.12">🔗</a></div></article> <article class="question example-like" id="Q_VD6points"><h4 class="heading">
-<span class="type">Question</span><span class="space"> </span><span class="codenumber">4.5.13</span><span class="period">.</span>
+<div class="autopermalink" aria-hidden="true" data-description="Question 4.5.12"><a tabindex="-1" href="#Q_VD20points" title="Copy heading and permalink for Question 4.5.12" aria-label="Copy heading and permalink for Question 4.5.12">🔗</a></div>
+</article> 
+<article class="question example-like" id="Q_VD6points"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="Q_VD6points-1">
 <div class="para">Answer 6 points or 5 points. If at least one person says 5 points, everyone gets the number of points they chose. Otherwise, everyone gets 0 points.</div>
 <ol class="upper-alpha ol-marker-3" id="Q_VD6points-1-1">
 <li id="Q_VD6points-1-1-1">
-<div class="para" id="Q_VD6points-1-1-1-1">6 points<div class="autopermalink" data-description="Paragraph"><a href="#Q_VD6points-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VD6points-1-1-1-1">6 points<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VD6points-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item A"><a href="#Q_VD6points-1-1-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item A"><a tabindex="-1" href="#Q_VD6points-1-1-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
 </li>
 <li id="Q_VD6points-1-1-2">
-<div class="para" id="Q_VD6points-1-1-2-1">5 points<div class="autopermalink" data-description="Paragraph"><a href="#Q_VD6points-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VD6points-1-1-2-1">5 points<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VD6points-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item B"><a href="#Q_VD6points-1-1-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item B"><a tabindex="-1" href="#Q_VD6points-1-1-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#Q_VD6points-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VD6points-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Question 4.5.13"><a href="#Q_VD6points" title="Copy heading and permalink for Question 4.5.13" aria-label="Copy heading and permalink for Question 4.5.13">🔗</a></div></article> <article class="question example-like" id="Q_VD20points5vol"><h4 class="heading">
-<span class="type">Question</span><span class="space"> </span><span class="codenumber">4.5.14</span><span class="period">.</span>
+<div class="autopermalink" aria-hidden="true" data-description="Question 4.5.13"><a tabindex="-1" href="#Q_VD6points" title="Copy heading and permalink for Question 4.5.13" aria-label="Copy heading and permalink for Question 4.5.13">🔗</a></div>
+</article> 
+<article class="question example-like" id="Q_VD20points5vol"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="Q_VD20points5vol-1">
 <div class="para">Answer 20 points or 1 point. If at least <em class="emphasis">five</em>  people say 1 point, everyone gets the number of points they chose. Otherwise, everyone gets 0 points.</div>
 <ol class="upper-alpha ol-marker-3" id="Q_VD20points5vol-1-2">
 <li id="Q_VD20points5vol-1-2-1">
-<div class="para" id="Q_VD20points5vol-1-2-1-1">20 points<div class="autopermalink" data-description="Paragraph"><a href="#Q_VD20points5vol-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VD20points5vol-1-2-1-1">20 points<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VD20points5vol-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item A"><a href="#Q_VD20points5vol-1-2-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item A"><a tabindex="-1" href="#Q_VD20points5vol-1-2-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
 </li>
 <li id="Q_VD20points5vol-1-2-2">
-<div class="para" id="Q_VD20points5vol-1-2-2-1">1 point<div class="autopermalink" data-description="Paragraph"><a href="#Q_VD20points5vol-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_VD20points5vol-1-2-2-1">1 point<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VD20points5vol-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item B"><a href="#Q_VD20points5vol-1-2-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item B"><a tabindex="-1" href="#Q_VD20points5vol-1-2-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#Q_VD20points5vol-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_VD20points5vol-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Question 4.5.14"><a href="#Q_VD20points5vol" title="Copy heading and permalink for Question 4.5.14" aria-label="Copy heading and permalink for Question 4.5.14">🔗</a></div></article><div class="autopermalink" data-description="Activity 4.5.1"><a href="#A_VDexperiment" title="Copy heading and permalink for Activity 4.5.1" aria-label="Copy heading and permalink for Activity 4.5.1">🔗</a></div></article></details><div class="para" id="S_VDexperiment-6">After answering the above questions and seeing the responses from your classmates, think about how you responded. Did this differ from how your classmates responded? Try to give reasons for how you chose your responses to the above questions. Ask classmates for their reasons for responding as they did. It can be particularly useful to share your answers with someone who chose a different response from you. You can summarize the various reasons for volunteering and not volunteering in the activities below.<div class="autopermalink" data-description="Paragraph"><a href="#S_VDexperiment-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Question 4.5.14"><a tabindex="-1" href="#Q_VD20points5vol" title="Copy heading and permalink for Question 4.5.14" aria-label="Copy heading and permalink for Question 4.5.14">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 4.5.1"><a tabindex="-1" href="#A_VDexperiment" title="Copy heading and permalink for Activity 4.5.1" aria-label="Copy heading and permalink for Activity 4.5.1">🔗</a></div>
+</article>
+<div class="para" id="S_VDexperiment-6">After answering the above questions and seeing the responses from your classmates, think about how you responded. Did this differ from how your classmates responded? Try to give reasons for how you chose your responses to the above questions. Ask classmates for their reasons for responding as they did. It can be particularly useful to share your answers with someone who chose a different response from you. You can summarize the various reasons for volunteering and not volunteering in the activities below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_VDexperiment-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="A_youvol" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Volunteer or not.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_youvol-2-1">After answering the questions in <a href="S_VDexperiment.html#A_VDexperiment" class="xref" data-knowl="./knowl/xref/A_VDexperiment.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.5.1">Activity 4.5.1</a>, were you likely to volunteer or unlikely to volunteer? For example, were you likely to be the one to call the power company or get eaten by sharks, or were you generally hoping someone else would do it? If it depended on the situation, explain under what circumstances you were likely to volunteer.<div class="autopermalink" data-description="Paragraph"><a href="#A_youvol-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 4.5.2: Volunteer or not"><a href="#A_youvol" title="Copy heading and permalink for Activity 4.5.2: Volunteer or not" aria-label="Copy heading and permalink for Activity 4.5.2: Volunteer or not">🔗</a></div></article></details><details id="A_alwaysV" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Always a volunteer.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_alwaysV-2-1">After sharing your answers as a class, did each situation have a volunteer? In other words, was there always someone willing to call the power company or take fewer points? If there was a question with no volunteer, can you suggest why?<div class="autopermalink" data-description="Paragraph"><a href="#A_alwaysV-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 4.5.3: Always a volunteer"><a href="#A_alwaysV" title="Copy heading and permalink for Activity 4.5.3: Always a volunteer" aria-label="Copy heading and permalink for Activity 4.5.3: Always a volunteer">🔗</a></div></article></details><details id="A_unlikelyV" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Unlikely to volunteer.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_unlikelyV-2-1">For which questions in <a href="S_VDexperiment.html#A_VDexperiment" class="xref" data-knowl="./knowl/xref/A_VDexperiment.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.5.1">Activity 4.5.1</a> was it unlikely that there would be very many volunteers? Did you take that into consideration when deciding if you were going to volunteer?<div class="autopermalink" data-description="Paragraph"><a href="#A_unlikelyV-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 4.5.4: Unlikely to volunteer"><a href="#A_unlikelyV" title="Copy heading and permalink for Activity 4.5.4: Unlikely to volunteer" aria-label="Copy heading and permalink for Activity 4.5.4: Unlikely to volunteer">🔗</a></div></article></details><details id="A_reasonsV" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.5.5</span><span class="period">.</span><span class="space"> </span><span class="title">Reasons to volunteer.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_reasonsV-2-1">What are some reasons for volunteering? What are some reasons for not volunteering?<div class="autopermalink" data-description="Paragraph"><a href="#A_reasonsV-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 4.5.5: Reasons to volunteer"><a href="#A_reasonsV" title="Copy heading and permalink for Activity 4.5.5: Reasons to volunteer" aria-label="Copy heading and permalink for Activity 4.5.5: Reasons to volunteer">🔗</a></div></article></details><section class="reading-questions" id="S_VDexperiment-11"><h3 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Check Your Understanding</span>
+<article class="activity project-like" id="A_youvol"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Volunteer or not.</span>
 </h3>
-<div class="para" id="S_VDexperiment-11-2">The following questions are to help you reflect on the experiment from this section. Although each question will indicate a “correct” answer, there is room for discussion and disagreement about each of these questions.<div class="autopermalink" data-description="Paragraph"><a href="#S_VDexperiment-11-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="A_youvol-2-1">After answering the questions in <a href="S_VDexperiment.html#A_VDexperiment" class="xref" data-knowl="./knowl/xref/A_VDexperiment.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.5.1">Activity 4.5.1</a>, were you likely to volunteer or unlikely to volunteer? For example, were you likely to be the one to call the power company or get eaten by sharks, or were you generally hoping someone else would do it? If it depended on the situation, explain under what circumstances you were likely to volunteer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_youvol-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="exercise exercise-like" id="IGT_VDE_CYU_costV"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.5.2: Volunteer or not"><a tabindex="-1" href="#A_youvol" title="Copy heading and permalink for Activity 4.5.2: Volunteer or not" aria-label="Copy heading and permalink for Activity 4.5.2: Volunteer or not">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_alwaysV"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Always a volunteer.</span>
+</h3>
+<div class="para" id="A_alwaysV-2-1">After sharing your answers as a class, did each situation have a volunteer? In other words, was there always someone willing to call the power company or take fewer points? If there was a question with no volunteer can you suggest why?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_alwaysV-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.5.3: Always a volunteer"><a tabindex="-1" href="#A_alwaysV" title="Copy heading and permalink for Activity 4.5.3: Always a volunteer" aria-label="Copy heading and permalink for Activity 4.5.3: Always a volunteer">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_unlikelyV"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Unlikely to volunteer.</span>
+</h3>
+<div class="para" id="A_unlikelyV-2-1">For which questions in <a href="S_VDexperiment.html#A_VDexperiment" class="xref" data-knowl="./knowl/xref/A_VDexperiment.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.5.1">Activity 4.5.1</a> was it unlikely that there would be very many volunteers? Did you take that into consideration when deciding if you were going to volunteer?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_unlikelyV-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.5.4: Unlikely to volunteer"><a tabindex="-1" href="#A_unlikelyV" title="Copy heading and permalink for Activity 4.5.4: Unlikely to volunteer" aria-label="Copy heading and permalink for Activity 4.5.4: Unlikely to volunteer">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_reasonsV"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reasons to volunteer.</span>
+</h3>
+<div class="para" id="A_reasonsV-2-1">What are some reasons for volunteering? What are some reasons for not volunteering?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_reasonsV-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.5.5: Reasons to volunteer"><a tabindex="-1" href="#A_reasonsV" title="Copy heading and permalink for Activity 4.5.5: Reasons to volunteer" aria-label="Copy heading and permalink for Activity 4.5.5: Reasons to volunteer">🔗</a></div>
+</article>
+<section class="reading-questions" id="S_VDexperiment-11">
+<h3 class="heading hide-type">
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Check Your Understanding</span>
+</h3>
+<div class="para" id="S_VDexperiment-11-2">The following questions are to help you reflect on the experiment from this section. Although each question will indicate a “correct” answer, there is room for discussion and disagreement about each of these questions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_VDexperiment-11-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="exercise exercise-like" id="IGT_VDE_CYU_costV"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
-<div class="exercise-statement"><div class="para" id="IGT_VDE_CYU_costV-1-1">As the cost of volunteering goes up, it becomes <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> likely that someone volunteers.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_VDE_CYU_costV-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="exercise-statement">
+<div class="para" id="IGT_VDE_CYU_costV-1-1">As the cost of volunteering goes up, it becomes <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> likely that someone volunteers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_VDE_CYU_costV-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <ul data-component="multiplechoice" class="exercise-interactives" id="rs-IGT_VDE_CYU_costV" data-multipleanswers="false">
-<li data-component="answer" id="rs-IGT_VDE_CYU_costV_opt_a"><div class="para" id="IGT_VDE_CYU_costV-2-1-1-1">more<div class="autopermalink" data-description="Paragraph"><a href="#IGT_VDE_CYU_costV-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_VDE_CYU_costV_opt_a"><div class="para" id="IGT_VDE_CYU_costV-2-1-2-1">Generally, if it costs more to volunteer, a player is less likely to do it.</div></li>
-<li data-component="answer" id="rs-IGT_VDE_CYU_costV_opt_b" data-correct=""><div class="para" id="IGT_VDE_CYU_costV-2-2-1-1">less<div class="autopermalink" data-description="Paragraph"><a href="#IGT_VDE_CYU_costV-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_VDE_CYU_costV_opt_b"><div class="para" id="IGT_VDE_CYU_costV-2-2-2-1">Generally, if it costs more to volunteer, a player is less likely to do it.</div></li>
+<li data-component="answer" id="rs-IGT_VDE_CYU_costV_opt_a">
+<div class="para" id="IGT_VDE_CYU_costV-2-1-1-1">more</div>
+</li>
+<li data-component="feedback" id="rs-IGT_VDE_CYU_costV_opt_a">
+<div class="para" id="IGT_VDE_CYU_costV-2-1-2-1">Generally, if it costs more to volunteer, a player is less likely to do it.</div>
+</li>
+<li data-component="answer" id="rs-IGT_VDE_CYU_costV_opt_b" data-correct="">
+<div class="para" id="IGT_VDE_CYU_costV-2-2-1-1">less</div>
+</li>
+<li data-component="feedback" id="rs-IGT_VDE_CYU_costV_opt_b">
+<div class="para" id="IGT_VDE_CYU_costV-2-2-2-1">Generally, if it costs more to volunteer, a player is less likely to do it.</div>
+</li>
 </ul>
 </div></div>
-<div class="autopermalink" data-description="Reading Question 4.5.1"><a href="#IGT_VDE_CYU_costV" title="Copy heading and permalink for Reading Question 4.5.1" aria-label="Copy heading and permalink for Reading Question 4.5.1">🔗</a></div></article><article class="exercise exercise-like" id="IGT_VDE_CYU_rewardV"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.5.1"><a tabindex="-1" href="#IGT_VDE_CYU_costV" title="Copy heading and permalink for Reading Question 4.5.1" aria-label="Copy heading and permalink for Reading Question 4.5.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_VDE_CYU_rewardV"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
-<div class="exercise-statement"><div class="para" id="IGT_VDE_CYU_rewardV-1-1">As the reward for the group goes up, it becomes <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> likely that someone volunteers.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_VDE_CYU_rewardV-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="exercise-statement">
+<div class="para" id="IGT_VDE_CYU_rewardV-1-1">As the reward for the group goes up, it becomes <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> likely that someone volunteers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_VDE_CYU_rewardV-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <ul data-component="multiplechoice" class="exercise-interactives" id="rs-IGT_VDE_CYU_rewardV" data-multipleanswers="false">
-<li data-component="answer" id="rs-IGT_VDE_CYU_rewardV_opt_a" data-correct=""><div class="para" id="IGT_VDE_CYU_rewardV-2-1-1-1">more<div class="autopermalink" data-description="Paragraph"><a href="#IGT_VDE_CYU_rewardV-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_VDE_CYU_rewardV_opt_a"><div class="para" id="IGT_VDE_CYU_rewardV-2-1-2-1">Generally, if it is more beneficial to have a volunteer, a player is more likely to do it.</div></li>
-<li data-component="answer" id="rs-IGT_VDE_CYU_rewardV_opt_b"><div class="para" id="IGT_VDE_CYU_rewardV-2-2-1-1">less<div class="autopermalink" data-description="Paragraph"><a href="#IGT_VDE_CYU_rewardV-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_VDE_CYU_rewardV_opt_b"><div class="para" id="IGT_VDE_CYU_rewardV-2-2-2-1">Generally, if it is more beneficial to have a volunteer, a player is more likely to do it.</div></li>
+<li data-component="answer" id="rs-IGT_VDE_CYU_rewardV_opt_a" data-correct="">
+<div class="para" id="IGT_VDE_CYU_rewardV-2-1-1-1">more</div>
+</li>
+<li data-component="feedback" id="rs-IGT_VDE_CYU_rewardV_opt_a">
+<div class="para" id="IGT_VDE_CYU_rewardV-2-1-2-1">Generally, if it is more beneficial to have a volunteer, a player is more likely to do it.</div>
+</li>
+<li data-component="answer" id="rs-IGT_VDE_CYU_rewardV_opt_b">
+<div class="para" id="IGT_VDE_CYU_rewardV-2-2-1-1">less</div>
+</li>
+<li data-component="feedback" id="rs-IGT_VDE_CYU_rewardV_opt_b">
+<div class="para" id="IGT_VDE_CYU_rewardV-2-2-2-1">Generally, if it is more beneficial to have a volunteer, a player is more likely to do it.</div>
+</li>
 </ul>
 </div></div>
-<div class="autopermalink" data-description="Reading Question 4.5.2"><a href="#IGT_VDE_CYU_rewardV" title="Copy heading and permalink for Reading Question 4.5.2" aria-label="Copy heading and permalink for Reading Question 4.5.2">🔗</a></div></article><article class="exercise exercise-like" id="IGT_VDE_CYU_costofnoV"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.5.2"><a tabindex="-1" href="#IGT_VDE_CYU_rewardV" title="Copy heading and permalink for Reading Question 4.5.2" aria-label="Copy heading and permalink for Reading Question 4.5.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_VDE_CYU_costofnoV"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
-<div class="exercise-statement"><div class="para" id="IGT_VDE_CYU_costofnoV-1-1">As the cost of having <em class="emphasis">no</em> volunteers goes up, it becomes <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> likely that someone volunteers.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_VDE_CYU_costofnoV-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="exercise-statement">
+<div class="para" id="IGT_VDE_CYU_costofnoV-1-1">As the cost of having <em class="emphasis">no</em> volunteers goes up, it becomes <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> likely that someone volunteers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_VDE_CYU_costofnoV-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <ul data-component="multiplechoice" class="exercise-interactives" id="rs-IGT_VDE_CYU_costofnoV" data-multipleanswers="false">
-<li data-component="answer" id="rs-IGT_VDE_CYU_costofnoV_opt_a" data-correct=""><div class="para" id="IGT_VDE_CYU_costofnoV-2-1-1-1">more<div class="autopermalink" data-description="Paragraph"><a href="#IGT_VDE_CYU_costofnoV-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_VDE_CYU_costofnoV_opt_a"><div class="para" id="IGT_VDE_CYU_costofnoV-2-1-2-1">Generally, if it is more beneficial to have a volunteer, a player is more likely to do it.</div></li>
-<li data-component="answer" id="rs-IGT_VDE_CYU_costofnoV_opt_b"><div class="para" id="IGT_VDE_CYU_costofnoV-2-2-1-1">less<div class="autopermalink" data-description="Paragraph"><a href="#IGT_VDE_CYU_costofnoV-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_VDE_CYU_costofnoV_opt_b"><div class="para" id="IGT_VDE_CYU_costofnoV-2-2-2-1">Generally, if it is more beneficial to have a volunteer, a player is more likely to do it.</div></li>
+<li data-component="answer" id="rs-IGT_VDE_CYU_costofnoV_opt_a" data-correct="">
+<div class="para" id="IGT_VDE_CYU_costofnoV-2-1-1-1">more</div>
+</li>
+<li data-component="feedback" id="rs-IGT_VDE_CYU_costofnoV_opt_a">
+<div class="para" id="IGT_VDE_CYU_costofnoV-2-1-2-1">Generally, if it is more beneficial to have a volunteer, a player is more likely to do it.</div>
+</li>
+<li data-component="answer" id="rs-IGT_VDE_CYU_costofnoV_opt_b">
+<div class="para" id="IGT_VDE_CYU_costofnoV-2-2-1-1">less</div>
+</li>
+<li data-component="feedback" id="rs-IGT_VDE_CYU_costofnoV_opt_b">
+<div class="para" id="IGT_VDE_CYU_costofnoV-2-2-2-1">Generally, if it is more beneficial to have a volunteer, a player is more likely to do it.</div>
+</li>
 </ul>
 </div></div>
-<div class="autopermalink" data-description="Reading Question 4.5.3"><a href="#IGT_VDE_CYU_costofnoV" title="Copy heading and permalink for Reading Question 4.5.3" aria-label="Copy heading and permalink for Reading Question 4.5.3">🔗</a></div></article><article class="exercise exercise-like" id="IGT_VDE_CYU_numpartaV"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.5.3"><a tabindex="-1" href="#IGT_VDE_CYU_costofnoV" title="Copy heading and permalink for Reading Question 4.5.3" aria-label="Copy heading and permalink for Reading Question 4.5.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_VDE_CYU_numpartaV"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
-<div class="exercise-statement"><div class="para" id="IGT_VDE_CYU_numpartaV-1-1">Although our experiment did not change the number of participants, think about what you predict would happen if we now played this experiment with the entire school or community. As the number of participants goes up, it becomes <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> likely that there is a volunteer.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_VDE_CYU_numpartaV-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="exercise-statement">
+<div class="para" id="IGT_VDE_CYU_numpartaV-1-1">Although our experiment did not change the number of participants, think about what you predict would happen if we now played this experiment with the entire school or community. As the number of participants goes up, it becomes <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> likely that there is a volunteer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_VDE_CYU_numpartaV-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <ul data-component="multiplechoice" class="exercise-interactives" id="rs-IGT_VDE_CYU_numpartaV" data-multipleanswers="false">
-<li data-component="answer" id="rs-IGT_VDE_CYU_numpartaV_opt_a" data-correct=""><div class="para" id="IGT_VDE_CYU_numpartaV-2-1-1-1">more<div class="autopermalink" data-description="Paragraph"><a href="#IGT_VDE_CYU_numpartaV-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_VDE_CYU_numpartaV_opt_a"><div class="para" id="IGT_VDE_CYU_numpartaV-2-1-2-1">Generally, if there are more people, we can predict that there will be someone who volunteers.</div></li>
-<li data-component="answer" id="rs-IGT_VDE_CYU_numpartaV_opt_b"><div class="para" id="IGT_VDE_CYU_numpartaV-2-2-1-1">less<div class="autopermalink" data-description="Paragraph"><a href="#IGT_VDE_CYU_numpartaV-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_VDE_CYU_numpartaV_opt_b"><div class="para" id="IGT_VDE_CYU_numpartaV-2-2-2-1">Generally, if there are more people, we can predict that there will be someone who volunteers.</div></li>
+<li data-component="answer" id="rs-IGT_VDE_CYU_numpartaV_opt_a" data-correct="">
+<div class="para" id="IGT_VDE_CYU_numpartaV-2-1-1-1">more</div>
+</li>
+<li data-component="feedback" id="rs-IGT_VDE_CYU_numpartaV_opt_a">
+<div class="para" id="IGT_VDE_CYU_numpartaV-2-1-2-1">Generally, if there are more people, we can predict that there will be someone who volunteers.</div>
+</li>
+<li data-component="answer" id="rs-IGT_VDE_CYU_numpartaV_opt_b">
+<div class="para" id="IGT_VDE_CYU_numpartaV-2-2-1-1">less</div>
+</li>
+<li data-component="feedback" id="rs-IGT_VDE_CYU_numpartaV_opt_b">
+<div class="para" id="IGT_VDE_CYU_numpartaV-2-2-2-1">Generally, if there are more people, we can predict that there will be someone who volunteers.</div>
+</li>
 </ul>
 </div></div>
-<div class="autopermalink" data-description="Reading Question 4.5.4"><a href="#IGT_VDE_CYU_numpartaV" title="Copy heading and permalink for Reading Question 4.5.4" aria-label="Copy heading and permalink for Reading Question 4.5.4">🔗</a></div></article><article class="exercise exercise-like" id="IGT_VDE_CYU_numpartindV"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.5.4"><a tabindex="-1" href="#IGT_VDE_CYU_numpartaV" title="Copy heading and permalink for Reading Question 4.5.4" aria-label="Copy heading and permalink for Reading Question 4.5.4">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_VDE_CYU_numpartindV"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
-<div class="exercise-statement"><div class="para" id="IGT_VDE_CYU_numpartindV-1-1">Although our experiment did not change the number of participants, think about what you predict would happen if we now played this experiment with the entire school or community. As the number of participants goes up, it becomes <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> likely that any specific individual volunteers.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_VDE_CYU_numpartindV-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="exercise-statement">
+<div class="para" id="IGT_VDE_CYU_numpartindV-1-1">Although our experiment did not change the number of participants, think about what you predict would happen if we now played this experiment with the entire school or community. As the number of participants goes up, it becomes <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> likely that any specific individual volunteers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_VDE_CYU_numpartindV-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <ul data-component="multiplechoice" class="exercise-interactives" id="rs-IGT_VDE_CYU_numpartindV" data-multipleanswers="false">
-<li data-component="answer" id="rs-IGT_VDE_CYU_numpartindV_opt_a"><div class="para" id="IGT_VDE_CYU_numpartindV-2-1-1-1">more<div class="autopermalink" data-description="Paragraph"><a href="#IGT_VDE_CYU_numpartindV-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_VDE_CYU_numpartindV_opt_a"><div class="para" id="IGT_VDE_CYU_numpartindV-2-1-2-1">Generally, if there are more people, there is less pressure on any one person to volunteer. People are more likely to let someone else volunteer.</div></li>
-<li data-component="answer" id="rs-IGT_VDE_CYU_numpartindV_opt_b" data-correct=""><div class="para" id="IGT_VDE_CYU_numpartindV-2-2-1-1">less<div class="autopermalink" data-description="Paragraph"><a href="#IGT_VDE_CYU_numpartindV-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_VDE_CYU_numpartindV_opt_b"><div class="para" id="IGT_VDE_CYU_numpartindV-2-2-2-1">Generally, if there are more people, there is less pressure on any one person to volunteer. People are more likely to let someone else volunteer.</div></li>
+<li data-component="answer" id="rs-IGT_VDE_CYU_numpartindV_opt_a">
+<div class="para" id="IGT_VDE_CYU_numpartindV-2-1-1-1">more</div>
+</li>
+<li data-component="feedback" id="rs-IGT_VDE_CYU_numpartindV_opt_a">
+<div class="para" id="IGT_VDE_CYU_numpartindV-2-1-2-1">Generally, if there are more people, there is less pressure on any one person to volunteer. People are more likely to let someone else volunteer.</div>
+</li>
+<li data-component="answer" id="rs-IGT_VDE_CYU_numpartindV_opt_b" data-correct="">
+<div class="para" id="IGT_VDE_CYU_numpartindV-2-2-1-1">less</div>
+</li>
+<li data-component="feedback" id="rs-IGT_VDE_CYU_numpartindV_opt_b">
+<div class="para" id="IGT_VDE_CYU_numpartindV-2-2-2-1">Generally, if there are more people, there is less pressure on any one person to volunteer. People are more likely to let someone else volunteer.</div>
+</li>
 </ul>
 </div></div>
-<div class="autopermalink" data-description="Reading Question 4.5.5"><a href="#IGT_VDE_CYU_numpartindV" title="Copy heading and permalink for Reading Question 4.5.5" aria-label="Copy heading and permalink for Reading Question 4.5.5">🔗</a></div></article><article class="exercise exercise-like" id="IGT_VDE_CYU_considerothers"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.5.5"><a tabindex="-1" href="#IGT_VDE_CYU_numpartindV" title="Copy heading and permalink for Reading Question 4.5.5" aria-label="Copy heading and permalink for Reading Question 4.5.5">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_VDE_CYU_considerothers"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_VDE_CYU_considerothers">
-<div class="para" id="IGT_VDE_CYU_considerothers-1-1">True or False: In trying to get the best outcome for yourself in this experiment, it is useful to consider how likely it is that other people volunteer.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_VDE_CYU_considerothers-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="IGT_VDE_CYU_considerothers-1-1">True or False: In trying to get the best outcome for yourself in this experiment, it is useful to consider how likely it is that other people volunteer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_VDE_CYU_considerothers-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_VDE_CYU_considerothers_opt_t" data-correct=""><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_VDE_CYU_considerothers_opt_t"><div class="para" id="IGT_VDE_CYU_considerothers-2-1">For example, if you think there are likely to be other volunteers, you may not to volunteer. You can get the benefit without the cost of volunteering.</div></li>
+<li data-component="feedback" id="rs-IGT_VDE_CYU_considerothers_opt_t">
+<div class="para" id="IGT_VDE_CYU_considerothers-2-1">For example, if you think there are likely to be other volunteers, you may not to volunteer. You can get the benefit without the cost of volunteering.</div>
+</li>
 <li data-component="answer" id="rs-IGT_VDE_CYU_considerothers_opt_f"><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_VDE_CYU_considerothers_opt_f"><div class="para" id="IGT_VDE_CYU_considerothers-2-1">For example, if you think there are likely to be other volunteers, you may not to volunteer. You can get the benefit without the cost of volunteering.</div></li>
+<li data-component="feedback" id="rs-IGT_VDE_CYU_considerothers_opt_f">
+<div class="para" id="IGT_VDE_CYU_considerothers-2-1">For example, if you think there are likely to be other volunteers, you may not to volunteer. You can get the benefit without the cost of volunteering.</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 4.5.6"><a href="#IGT_VDE_CYU_considerothers" title="Copy heading and permalink for Reading Question 4.5.6" aria-label="Copy heading and permalink for Reading Question 4.5.6">🔗</a></div></article><div class="autopermalink" data-description="Reading Questions 4.5: Check Your Understanding"><a href="#S_VDexperiment-11" title="Copy heading and permalink for Reading Questions 4.5: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 4.5: Check Your Understanding">🔗</a></div></section><div class="autopermalink" data-description="Section 4.5: Another Multiplayer Experiment"><a href="#S_VDexperiment" title="Copy heading and permalink for Section 4.5: Another Multiplayer Experiment" aria-label="Copy heading and permalink for Section 4.5: Another Multiplayer Experiment">🔗</a></div></section></div>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.5.6"><a tabindex="-1" href="#IGT_VDE_CYU_considerothers" title="Copy heading and permalink for Reading Question 4.5.6" aria-label="Copy heading and permalink for Reading Question 4.5.6">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 4.5: Check Your Understanding"><a tabindex="-1" href="#S_VDexperiment-11" title="Copy heading and permalink for Reading Questions 4.5: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 4.5: Check Your Understanding">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 4.5: Another Multiplayer Experiment"><a tabindex="-1" href="#S_VDexperiment" title="Copy heading and permalink for Section 4.5: Another Multiplayer Experiment" aria-label="Copy heading and permalink for Section 4.5: Another Multiplayer Experiment">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="S_PDconditions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="S_VolunteerDil.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

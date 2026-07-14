@@ -20,85 +20,27 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js/lib"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: true,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
+<meta name="twitter:image" content="https://nordstromjf.github.io/IntroGameTheory2e/external/image-1.svg">
 <meta property="og:image" content="https://nordstromjf.github.io/IntroGameTheory2e/external/image-1.svg">
-<meta property="book:title" content="Introduction to Game Theory">
-<meta property="book:author" content="Jennifer Firkins Nordstrom">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<meta name="twitter:image:alt" content="Document Logo">
+<meta property="og:image:alt" content="Document Logo">
+<meta name="twitter:title" content="Introduction to Game Theory: a Discovery Approach">
+<meta property="og:title" content="Introduction to Game Theory: a Discovery Approach">
+<meta property="book:title" content="Introduction to Game Theory: a Discovery Approach">
+<meta name="twitter:description" content="This text provides an inquiry-based introduction to game theory. The material requires no mathematical prerequisites and is suitable for a non-majors quantitative reasoning course.">
+<meta property="og:description" content="This text provides an inquiry-based introduction to game theory. The material requires no mathematical prerequisites and is suitable for a non-majors quantitative reasoning course.">
+<meta name="twitter:card" content="summary_large_image">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -120,16 +62,16 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.18';
+eBookConfig.runestone_version = '8.1.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.cefb0224014f3333.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.c50cdcad467c8d3e.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/prefix-runtime.cb5af2e851de3574.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.f51cd4153b45055d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="introgametheory" class="pretext book ignore-math">
@@ -139,18 +81,35 @@ eBookConfig.enable_chatcodes =  false;
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div>
 </div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
-<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<div class="search-results-controls">
-<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-<h2 class="search-results-heading">Search Results: </h2>
-<div id="searchempty" class="searchempty"><span>No results.</span></div>
-<ol id="searchresults" class="searchresults"></ol>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
+<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="S_OneCardStud.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="intro_game_theory-5.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="S_ZeroSumStrategySummary.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="S_OneCardStud.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="intro_game_theory-5.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="S_ZeroSumStrategySummary.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\( \newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
   \newcommand{\MyTikzmark}[2]{
      \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
@@ -171,20 +130,20 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Preface</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="intro_game_theory-4.html" class="internal"><span class="codenumber">1</span> <span class="title">What is Game Theory?</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-intro_game_theory-4" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Players and Strategies</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_intro" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_intro.html#SS_Cake" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Assumptions: Cake Division</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_intro.html#Ex_Tic" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Developing Strategies: Tic Tac Toe</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_intro.html#S_intro-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Check Your Understanding</span></a></div></li>
@@ -192,7 +151,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_IntroMatrices.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Game Matrices and Payoff Vectors</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_IntroMatrices" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroMatrices.html#SS_MatchPennies" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Setting up a Payoff Matrix</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroMatrices.html#SS_revistassump" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Revisiting the Assumptions</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroMatrices.html#S_IntroMatrices-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Check Your Understanding</span></a></div></li>
@@ -202,10 +161,10 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="intro_game_theory-5.html" class="internal"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-intro_game_theory-5">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_IntroZeroSum.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to Two-Person Zero-Sum Games</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_IntroZeroSum" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroZeroSum.html#Ex_election" class="internal"><span class="codenumber">2.1.1</span> <span class="title">An Election Campaign Game</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroZeroSum.html#SS_equilpairs" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Equilibrium Pairs</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroZeroSum.html#S_IntroZeroSum-6" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Check Your Understanding</span></a></div></li>
@@ -213,7 +172,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_DominatedStrategies.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Finding Strategies</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_DominatedStrategies" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_simplifyingmatrix" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Simplifying a Zero-Sum Game Matrix</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_DomStrategies" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Dominated Strategies</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_maximin" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Maximin and Minimax Strategies</span></a></div></li>
@@ -222,7 +181,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_Probability.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Probability and Expected Value</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_Probability" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_Probability.html#SS_basicprob" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Some Basic Probability</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_Probability.html#SS_expectedvalue" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Expected Value</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_Probability.html#S_Probability-5" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Check Your Understanding</span></a></div></li>
@@ -230,291 +189,394 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_OneCardStud.html" class="internal"><span class="codenumber">2.4</span> <span class="title">A Game of Chance</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_OneCardStud.html#S_OneCardStud-39" class="internal"><span class="codenumber">2.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_OneCardStud" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_OneCardStud.html#S_OneCardStud-39" class="internal"><span class="codenumber">2.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="S_EquilibPoints.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Equilibrium Points</span></a></div>
-<ul class="structural toc-item-list active"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_EquilibPoints.html#S_EquilibPoints-30" class="internal"><span class="codenumber">2.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul class="structural toc-item-list active" id="ptx-toc-group-S_EquilibPoints"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_EquilibPoints.html#S_EquilibPoints-30" class="internal"><span class="codenumber">2.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Strategies for Zero-Sum Games and Equilibrium Points</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html#S_ZeroSumStrategySummary-15" class="internal"><span class="codenumber">2.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Strategies for Zero-Sum Games</span></a></div>
+<ul id="ptx-toc-group-S_ZeroSumStrategySummary" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html#S_ZeroSumStrategySummary-13" class="internal"><span class="codenumber">2.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopRationality.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Popular Culture: Rationality and Perfect Information</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopRationality.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Pop Culture: Rationality</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="intro_game_theory-6.html" class="internal"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-intro_game_theory-6" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_IntroRepeated.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction to Repeated Games</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroRepeated.html#S_IntroRepeated-26" class="internal"><span class="codenumber">3.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_IntroRepeated" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroRepeated.html#S_IntroRepeated-26" class="internal"><span class="codenumber">3.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_MixStratGraph.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Mixed Strategies: Graphical Solution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratGraph.html#S_MixStratGraph-55" class="internal"><span class="codenumber">3.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_MixStratGraph" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratGraph.html#S_MixStratGraph-53" class="internal"><span class="codenumber">3.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_SolvingEq.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Using Sage to Graph Lines and Solve Equations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_SolvingEq.html#S_SolvingEq-26" class="internal"><span class="codenumber">3.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_SolvingEq" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_SolvingEq.html#S_SolvingEq-26" class="internal"><span class="codenumber">3.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_MixStratEV.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Mixed Strategies: Expected Value Solution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratEV.html#S_MixStratEV-34" class="internal"><span class="codenumber">3.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_MixStratEV" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratEV.html#S_MixStratEV-32" class="internal"><span class="codenumber">3.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_LiarsPoker.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Liar’s Poker</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_LiarsPoker.html#S_LiarsPoker-23" class="internal"><span class="codenumber">3.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_LiarsPoker" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_LiarsPoker.html#S_LiarsPoker-23" class="internal"><span class="codenumber">3.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_AugMatrices.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Solving Systems of Equations Using Matrices</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_AugMatrices.html#S_AugMatrices-35" class="internal"><span class="codenumber">3.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_AugMatrices" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_AugMatrices.html#S_AugMatrices-35" class="internal"><span class="codenumber">3.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_Undercut.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Undercut</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_Undercut.html#S_Undercut-31" class="internal"><span class="codenumber">3.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_Undercut" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_Undercut.html#S_Undercut-30" class="internal"><span class="codenumber">3.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="intro_game_theory-7.html" class="internal"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-intro_game_theory-7" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_IntroNonzero.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Introduction to Two-Player Non-Zero-Sum Games</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroNonzero.html#S_IntroNonzero-32" class="internal"><span class="codenumber">4.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_IntroNonzero" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroNonzero.html#S_IntroNonzero-32" class="internal"><span class="codenumber">4.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_PdandChicken.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Prisoner’s Dilemma and Chicken</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PdandChicken.html#S_PdandChicken-43" class="internal"><span class="codenumber">4.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_PdandChicken" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PdandChicken.html#S_PdandChicken-43" class="internal"><span class="codenumber">4.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_CWPD.html" class="internal"><span class="codenumber">4.3</span> <span class="title">A Class-Wide Experiment</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_CWPD.html#S_CWPD-25" class="internal"><span class="codenumber">4.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_CWPD" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_CWPD.html#S_CWPD-25" class="internal"><span class="codenumber">4.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_PDconditions.html" class="internal"><span class="codenumber">4.4</span> <span class="title">What Makes a Prisoner’s Dilemma?</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PDconditions.html#S_PDconditions-18" class="internal"><span class="codenumber">4.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_PDconditions" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PDconditions.html#S_PDconditions-18" class="internal"><span class="codenumber">4.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_VDexperiment.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Another Multiplayer Experiment</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VDexperiment.html#S_VDexperiment-11" class="internal"><span class="codenumber">4.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_VDexperiment" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VDexperiment.html#S_VDexperiment-11" class="internal"><span class="codenumber">4.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_VolunteerDil.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Volunteer’s Dilemma</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VolunteerDil.html#S_VolunteerDil-20" class="internal"><span class="codenumber">4.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_VolunteerDil" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VolunteerDil.html#S_VolunteerDil-20" class="internal"><span class="codenumber">4.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_RepeatPD.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Repeated Prisoner’s Dilemma</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_RepeatPD.html#S_RepeatPD-31" class="internal"><span class="codenumber">4.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_RepeatPD" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_RepeatPD.html#S_RepeatPD-29" class="internal"><span class="codenumber">4.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopPD.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Popular Culture: Prisoner’s Dilemma and Chicken</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopPD.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Pop Culture: Prisoner’s Dilemma and Chicken</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">References</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="S_EquilibPoints"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.5</span><span class="space"> </span><span class="title">Equilibrium Points</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="S_EquilibPoints">
+<h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Equilibrium Points</span>
 </h2>
-<div class="para" id="S_EquilibPoints-2">In this section, we will try to gain a greater understanding of equilibrium strategies in a game. In general, we call the pair of equilibrium strategies an <dfn class="terminology">equilibrium pair</dfn>, while we call the specific payoff vector associated with an equilibrium pair an <dfn class="terminology">equilibrium point</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#S_EquilibPoints-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="S_EquilibPoints-2">In this section, we will try to gain a greater understanding of equilibrium strategies in a game. In general, we call the pair of equilibrium strategies an <dfn class="terminology">equilibrium pair</dfn>, while we call the specific payoff vector associated with an equilibrium pair an <dfn class="terminology">equilibrium point</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_EquilibPoints-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="A_matrixexamples" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Find equilibrium points.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="introduction" id="A_matrixexamples-2"><div class="para" id="A_matrixexamples-2-1">Determine the equilibrium point(s) for the following games.<div class="autopermalink" data-description="Paragraph"><a href="#A_matrixexamples-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<article class="activity project-like" id="A_matrixexamples"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Find equilibrium points.</span>
+</h3>
+<div class="introduction" id="A_matrixexamples-2">
+<div class="para" id="A_matrixexamples-2-1">Determine the equilibrium point(s) for the following games.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_matrixexamples-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="A_matrixexamples-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_matrixexamples-3-1">
+<div class="para" id="A_matrixexamples-3-1-1">
 <span class="process-math">\(\left[\begin{matrix}(2, -2)\amp (-1, 1)\\
 (2, -2)\amp (-1, 1)
-\end{matrix} \right]\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_matrixexamples-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+\end{matrix} \right]\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_matrixexamples-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 2.5.1.a"><a href="#A_matrixexamples-3" title="Copy heading and permalink for Task 2.5.1.a" aria-label="Copy heading and permalink for Task 2.5.1.a">🔗</a></div></article><article class="task exercise-like" id="A_matrixexamples-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_matrixexamples-4-1">
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.5.1.a"><a tabindex="-1" href="#A_matrixexamples-3" title="Copy heading and permalink for Task 2.5.1.a" aria-label="Copy heading and permalink for Task 2.5.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_matrixexamples-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_matrixexamples-4-1-1">
 <span class="process-math">\(\left[\begin{matrix}(0, 0)\amp (-1, 1)\amp (0, 0)\\
 (-1, 1)\amp (0, 0)\amp (-1, 1)\\
 (0, 0)\amp (1, -1)\amp (0, 0)
-\end{matrix} \right]\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_matrixexamples-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+\end{matrix} \right]\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_matrixexamples-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 2.5.1.b"><a href="#A_matrixexamples-4" title="Copy heading and permalink for Task 2.5.1.b" aria-label="Copy heading and permalink for Task 2.5.1.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 2.5.1: Find equilibrium points"><a href="#A_matrixexamples" title="Copy heading and permalink for Activity 2.5.1: Find equilibrium points" aria-label="Copy heading and permalink for Activity 2.5.1: Find equilibrium points">🔗</a></div></article></details><details id="A_equilobserve" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">An observation about equilibrium points.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_equilobserve-2-1">What do you notice about the values of the equilibrium points of the games in <a href="S_EquilibPoints.html#A_matrixexamples" class="xref" data-knowl="./knowl/xref/A_matrixexamples.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.5.1: Find equilibrium points">Activity 2.5.1</a>?<div class="autopermalink" data-description="Paragraph"><a href="#A_equilobserve-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.5.1.b"><a tabindex="-1" href="#A_matrixexamples-4" title="Copy heading and permalink for Task 2.5.1.b" aria-label="Copy heading and permalink for Task 2.5.1.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 2.5.1: Find equilibrium points"><a tabindex="-1" href="#A_matrixexamples" title="Copy heading and permalink for Activity 2.5.1: Find equilibrium points" aria-label="Copy heading and permalink for Activity 2.5.1: Find equilibrium points">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_equilobserve"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">An observation about equilibrium points.</span>
+</h3>
+<div class="para" id="A_equilobserve-2-1">What do you notice about the values of the equilibrium points of the games in <a href="S_EquilibPoints.html#A_matrixexamples" class="xref" data-knowl="./knowl/xref/A_matrixexamples.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.5.1: Find equilibrium points">Activity 2.5.1</a>?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_equilobserve-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Activity 2.5.2: An observation about equilibrium points"><a href="#A_equilobserve" title="Copy heading and permalink for Activity 2.5.2: An observation about equilibrium points" aria-label="Copy heading and permalink for Activity 2.5.2: An observation about equilibrium points">🔗</a></div></article></details><div class="para" id="S_EquilibPoints-5">We now get to the main question in this section.<div class="autopermalink" data-description="Paragraph"><a href="#S_EquilibPoints-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.5.2: An observation about equilibrium points"><a tabindex="-1" href="#A_equilobserve" title="Copy heading and permalink for Activity 2.5.2: An observation about equilibrium points" aria-label="Copy heading and permalink for Activity 2.5.2: An observation about equilibrium points">🔗</a></div>
+</article>
+<div class="para" id="S_EquilibPoints-5">We now get to the main question in this section.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_EquilibPoints-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="question example-like" id="Q_valuesofequilib"><h3 class="heading">
-<span class="type">Question</span><span class="space"> </span><span class="codenumber">2.5.1</span><span class="period">.</span>
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="Q_valuesofequilib-1">Can two equilibrium points for a two-player zero-sum game have different values?<div class="autopermalink" data-description="Paragraph"><a href="#Q_valuesofequilib-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Q_valuesofequilib-1">Can two equilibrium points for a two-player zero-sum game have different values?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Q_valuesofequilib-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Question 2.5.1"><a href="#Q_valuesofequilib" title="Copy heading and permalink for Question 2.5.1" aria-label="Copy heading and permalink for Question 2.5.1">🔗</a></div></article><div class="para" id="S_EquilibPoints-7">By experimenting with some examples, try to create an example of a game with two equilibrium points where those points have different values for one of the players. If you can successfully create such an example, you will have answered the question. But just because you can’t find an example, that doesn’t mean one doesn’t exist!<div class="autopermalink" data-description="Paragraph"><a href="#S_EquilibPoints-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Question 2.5.1"><a tabindex="-1" href="#Q_valuesofequilib" title="Copy heading and permalink for Question 2.5.1" aria-label="Copy heading and permalink for Question 2.5.1">🔗</a></div>
+</article>
+<div class="para" id="S_EquilibPoints-7">By experimenting with some examples, try to create an example of a game with two equilibrium points where those points have different values for one of the players. If you can successfully create such an example, you will have answered the question. But just because you can’t find an example, that doesn’t mean one doesn’t exist.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_EquilibPoints-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="A_diffexperiment" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Experimenting with different values.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="introduction" id="A_diffexperiment-2"><div class="para" id="A_diffexperiment-2-1">Let’s see if we can create a <span class="process-math">\(2\times 2\)</span> matrix for a zero-sum game that has two equilibrium points with different values. Let’s assume the two equilbrium are <span class="process-math">\((1, -1)\)</span> and <span class="process-math">\((2, -2)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_diffexperiment-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<article class="activity project-like" id="A_diffexperiment"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Experimenting with different values.</span>
+</h3>
+<div class="introduction" id="A_diffexperiment-2">
+<div class="para" id="A_diffexperiment-2-1">Let’s see if we can create a <span class="process-math">\(2\times 2\)</span> matrix for a zero-sum game that has two equilibrium points with different values. Let’s assume the two equilbria are <span class="process-math">\((1, -1)\)</span> and <span class="process-math">\((2, -2)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_diffexperiment-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="A_diffexperiment-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_diffexperiment-3-1">Create a matrix with <span class="process-math">\((1, -1)\)</span> and <span class="process-math">\((2, -2)\)</span> in the same row. Can they both be equilibria, or does one player want to switch?<div class="autopermalink" data-description="Paragraph"><a href="#A_diffexperiment-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="A_diffexperiment-3-1-1">Create a matrix with <span class="process-math">\((1, -1)\)</span> and <span class="process-math">\((2, -2)\)</span> in the same row. Can they both be equilibria, or does one player want to switch?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_diffexperiment-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 2.5.3.a"><a href="#A_diffexperiment-3" title="Copy heading and permalink for Task 2.5.3.a" aria-label="Copy heading and permalink for Task 2.5.3.a">🔗</a></div></article><article class="task exercise-like" id="A_diffexperiment-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_diffexperiment-4-1">Create a matrix with <span class="process-math">\((1, -1)\)</span> and <span class="process-math">\((2, -2)\)</span> in the same column. Can they both be equilibria, or does one player want to switch?<div class="autopermalink" data-description="Paragraph"><a href="#A_diffexperiment-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.5.3.a"><a tabindex="-1" href="#A_diffexperiment-3" title="Copy heading and permalink for Task 2.5.3.a" aria-label="Copy heading and permalink for Task 2.5.3.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_diffexperiment-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_diffexperiment-4-1-1">Create a matrix with <span class="process-math">\((1, -1)\)</span> and <span class="process-math">\((2, -2)\)</span> in the same column. Can they both be equilibria, or does one player want to switch?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_diffexperiment-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 2.5.3.b"><a href="#A_diffexperiment-4" title="Copy heading and permalink for Task 2.5.3.b" aria-label="Copy heading and permalink for Task 2.5.3.b">🔗</a></div></article><article class="task exercise-like" id="A_diffexperiment-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="A_diffexperiment-5-1">Now place <span class="process-math">\((1, -1)\)</span> and <span class="process-math">\((2, -2)\)</span> diagonally in the matrix (different rows and columns). Try to fill in values for the other two places in the matrix so that <span class="process-math">\((1, -1)\)</span> is an equilibrium. Is <span class="process-math">\((2, -2)\)</span> an equilibrium in any of your examples?<div class="autopermalink" data-description="Paragraph"><a href="#A_diffexperiment-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.5.3.b"><a tabindex="-1" href="#A_diffexperiment-4" title="Copy heading and permalink for Task 2.5.3.b" aria-label="Copy heading and permalink for Task 2.5.3.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_diffexperiment-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_diffexperiment-5-1-1">Now place <span class="process-math">\((1, -1)\)</span> and <span class="process-math">\((2, -2)\)</span> diagonally in the matrix (different rows and columns). Try to fill in values for the other two places in the matrix so that <span class="process-math">\((1, -1)\)</span> is an equilibrium. Is <span class="process-math">\((2, -2)\)</span> an equilibrium in any of your examples?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_diffexperiment-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="A_diffexperiment-5-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
-<div class="para" id="A_diffexperiment-5-2-1">Remember, if <span class="process-math">\((1, -1)\)</span> is an equilibrium, then <span class="process-math">\(1\)</span> must be the biggest value for Player 1 in the column and <span class="process-math">\(1\)</span> is the smallest in the row, so that <span class="process-math">\(-1\)</span> is the biggest for Player 2 in the row.<div class="autopermalink" data-description="Paragraph"><a href="#A_diffexperiment-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="solutions">
+<details id="A_diffexperiment-5-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="A_diffexperiment-5-2-1">Remember, if <span class="process-math">\((1, -1)\)</span> is an equilibrium, then <span class="process-math">\(1\)</span> must be the biggest value for Player 1 in the column and <span class="process-math">\(1\)</span> is the smallest in the row, so that <span class="process-math">\(-1\)</span> is the biggest for Player 2 in the row.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_diffexperiment-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Hint 2.5.3.c.1"><a href="#A_diffexperiment-5-2" title="Copy heading and permalink for Hint 2.5.3.c.1" aria-label="Copy heading and permalink for Hint 2.5.3.c.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Task 2.5.3.c"><a href="#A_diffexperiment-5" title="Copy heading and permalink for Task 2.5.3.c" aria-label="Copy heading and permalink for Task 2.5.3.c">🔗</a></div></article><article class="task exercise-like" id="A_diffexperiment-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="A_diffexperiment-6-1">Do you think it is possible to have both <span class="process-math">\((1, -1)\)</span> and <span class="process-math">\((2, -2)\)</span> be equilibrium points in a <span class="process-math">\(2\times 2\)</span> matrix? Explain your answer based on your examples.<div class="autopermalink" data-description="Paragraph"><a href="#A_diffexperiment-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 2.5.3.c.1"><a tabindex="-1" href="#A_diffexperiment-5-2" title="Copy heading and permalink for Hint 2.5.3.c.1" aria-label="Copy heading and permalink for Hint 2.5.3.c.1">🔗</a></div>
+</div></details>
 </div>
-<div class="autopermalink" data-description="Task 2.5.3.d"><a href="#A_diffexperiment-6" title="Copy heading and permalink for Task 2.5.3.d" aria-label="Copy heading and permalink for Task 2.5.3.d">🔗</a></div></article><div class="autopermalink" data-description="Activity 2.5.3: Experimenting with different values"><a href="#A_diffexperiment" title="Copy heading and permalink for Activity 2.5.3: Experimenting with different values" aria-label="Copy heading and permalink for Activity 2.5.3: Experimenting with different values">🔗</a></div></article></details><div class="para" id="S_EquilibPoints-9">After trying several examples, you might be beginning to believe that the answer to <a href="S_EquilibPoints.html#Q_valuesofequilib" class="xref" data-knowl="./knowl/xref/Q_valuesofequilib.html" data-reveal-label="Reveal" data-close-label="Close" title="Question 2.5.1">Question 2.5.1</a> is “no.” Now you are ready to try to prove the following theorem.<div class="autopermalink" data-description="Paragraph"><a href="#S_EquilibPoints-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.5.3.c"><a tabindex="-1" href="#A_diffexperiment-5" title="Copy heading and permalink for Task 2.5.3.c" aria-label="Copy heading and permalink for Task 2.5.3.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_diffexperiment-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="A_diffexperiment-6-1-1">Do you think it is possible to have both <span class="process-math">\((1, -1)\)</span> and <span class="process-math">\((2, -2)\)</span> be equilibrium points in a <span class="process-math">\(2\times 2\)</span> matrix? Explain your answer based on your examples.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_diffexperiment-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.5.3.d"><a tabindex="-1" href="#A_diffexperiment-6" title="Copy heading and permalink for Task 2.5.3.d" aria-label="Copy heading and permalink for Task 2.5.3.d">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 2.5.3: Experimenting with different values"><a tabindex="-1" href="#A_diffexperiment" title="Copy heading and permalink for Activity 2.5.3: Experimenting with different values" aria-label="Copy heading and permalink for Activity 2.5.3: Experimenting with different values">🔗</a></div>
+</article>
+<div class="para" id="S_EquilibPoints-9">After trying several examples, you might be beginning to believe that the answer to <a href="S_EquilibPoints.html#Q_valuesofequilib" class="xref" data-knowl="./knowl/xref/Q_valuesofequilib.html" data-reveal-label="Reveal" data-close-label="Close" title="Question 2.5.1">Question 2.5.1</a> is “no.” Now you are ready to try to prove the following theorem.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_EquilibPoints-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="T_STfZSG"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Solution Theorem for Zero-Sum Games.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solution Theorem for Zero-Sum Games.</span>
 </h3>
-<div class="para" id="T_STfZSG-3-1">Every equilibrium point of a two-person zero-sum game has the same value.<div class="autopermalink" data-description="Paragraph"><a href="#T_STfZSG-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="T_STfZSG-3-1">Every equilibrium point of a two-person zero-sum game has the same value.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#T_STfZSG-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 2.5.2: Solution Theorem for Zero-Sum Games"><a href="#T_STfZSG" title="Copy heading and permalink for Theorem 2.5.2: Solution Theorem for Zero-Sum Games" aria-label="Copy heading and permalink for Theorem 2.5.2: Solution Theorem for Zero-Sum Games">🔗</a></div></article><div class="para" id="S_EquilibPoints-11">Let’s start with the <span class="process-math">\(2 \times 2\)</span> case. We will use a <dfn class="terminology">proof by contradiction</dfn>. We will assume the theorem is false and show that we get a logical contradiction. Once we reach a logical contradiction (a statement that is both true and false), we can conclude we were wrong to assume the theorem was false; hence, the theorem must be true. Make sure you are comfortable with the logic of this before moving on.<div class="autopermalink" data-description="Paragraph"><a href="#S_EquilibPoints-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 2.5.2: Solution Theorem for Zero-Sum Games"><a tabindex="-1" href="#T_STfZSG" title="Copy heading and permalink for Theorem 2.5.2: Solution Theorem for Zero-Sum Games" aria-label="Copy heading and permalink for Theorem 2.5.2: Solution Theorem for Zero-Sum Games">🔗</a></div>
+</article>
+<div class="para" id="S_EquilibPoints-11">Let’s start with the <span class="process-math">\(2 \times 2\)</span> case. We will use a <dfn class="terminology">proof by contradiction</dfn>. We will assume the theorem is false and show that we get a logical contradiction. Once we reach a logical contradiction (a statement that is both true and false), we can conclude we were wrong to assume the theorem was false; hence, the theorem must be true. Make sure you are comfortable with the logic of this before moving on.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_EquilibPoints-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="S_EquilibPoints-12">
 <div class="para">Since we want to assume the theorem is false, we assume we have a two-player zero-sum game with two different equilibrium values. Since we don’t have a specific example of such a game, we want to represent the game in a general form. In particular, we can represent the general game</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="S_EquilibPoints-12-1">
 \begin{equation*}
 \left[\begin{matrix}(a, -a)\amp (c, -c)\\
 (d, -d)\amp (b, -b)
 \end{matrix} \right].
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#S_EquilibPoints-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_EquilibPoints-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="S_EquilibPoints-13">Note that if <span class="process-math">\(a\)</span> is negative, then <span class="process-math">\(-a\)</span> is positive; thus, every possible set of values is represented by this matrix. We want to look at the possible cases for equilibria.<div class="autopermalink" data-description="Paragraph"><a href="#S_EquilibPoints-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="S_EquilibPoints-13">Note that if <span class="process-math">\(a\)</span> is negative, then <span class="process-math">\(-a\)</span> is positive; thus, every possible set of values is represented by this matrix. We want to look at the possible cases for equilibria.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_EquilibPoints-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="A_col1neq" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Equilibria in Column 1.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_col1neq-2-1">Explain what goes wrong if <span class="process-math">\((a, -a)\)</span> and <span class="process-math">\((d, -d)\)</span> are equilibria with <span class="process-math">\(a \neq d\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_col1neq-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="solutions"><details id="A_col1neq-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
-<div class="para" id="A_col1neq-3-1">Think about the different cases, such as <span class="process-math">\(a\lt d\text{,}\)</span> <span class="process-math">\(a&gt;d\text{.}\)</span> Can you show that in each case either <span class="process-math">\((a, -a)\)</span> or <span class="process-math">\((d, -d)\)</span> is NOT an equilibrium?<div class="autopermalink" data-description="Paragraph"><a href="#A_col1neq-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Hint 2.5.4.1"><a href="#A_col1neq-3" title="Copy heading and permalink for Hint 2.5.4.1" aria-label="Copy heading and permalink for Hint 2.5.4.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Activity 2.5.4: Equilibria in Column 1"><a href="#A_col1neq" title="Copy heading and permalink for Activity 2.5.4: Equilibria in Column 1" aria-label="Copy heading and permalink for Activity 2.5.4: Equilibria in Column 1">🔗</a></div></article></details><details id="A_gencolneq" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.5</span><span class="period">.</span><span class="space"> </span><span class="title">Equilibria in the same column/row.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_gencolneq-2-1">Generalize your answer to <a href="S_EquilibPoints.html#A_col1neq" class="xref" data-knowl="./knowl/xref/A_col1neq.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.5.4: Equilibria in Column 1">Activity 2.5.4</a> to explain what goes wrong if the two equilibria with different values are in the same column. Similarly, explain what happens if the two equilibria are in the same row.<div class="autopermalink" data-description="Paragraph"><a href="#A_gencolneq-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.5.5: Equilibria in the same column/row"><a href="#A_gencolneq" title="Copy heading and permalink for Activity 2.5.5: Equilibria in the same column/row" aria-label="Copy heading and permalink for Activity 2.5.5: Equilibria in the same column/row">🔗</a></div></article></details><details id="A_diag" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.6</span><span class="period">.</span><span class="space"> </span><span class="title">Diagonal equilibria.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_diag-2-1">Does the same explanation hold if the two equilibria are diagonal from each other? (Explain your answer!)<div class="autopermalink" data-description="Paragraph"><a href="#A_diag-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.5.6: Diagonal equilibria"><a href="#A_diag" title="Copy heading and permalink for Activity 2.5.6: Diagonal equilibria" aria-label="Copy heading and permalink for Activity 2.5.6: Diagonal equilibria">🔗</a></div></article></details><div class="para" id="S_EquilibPoints-17">From your last answer, you should see that we need to do more work to figure out what happens if the equilibria are diagonal. So let’s assume that the two equilibria are <span class="process-math">\((a, -a)\)</span> and <span class="process-math">\((b, -b)\)</span> with <span class="process-math">\(a \neq b\text{.}\)</span> It might be helpful to draw the payoff matrix and circle the equilibria.<div class="autopermalink" data-description="Paragraph"><a href="#S_EquilibPoints-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="A_4ineq1" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.7</span><span class="period">.</span><span class="space"> </span><span class="title">A player prefers the value of an equilibrium.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_4ineq1-2-1">Construct a system of inequalities using the fact that a player prefers an equilibrium point to another choice. For example, Player 1 prefers <span class="process-math">\(a\)</span> to <span class="process-math">\(d\text{.}\)</span> Thus, <span class="process-math">\(a &gt; d\text{.}\)</span> List all four inequalities you can get using this fact. You should get two for each player. Remember that Player 1 can only compare values in the same column since he has no ability to switch columns. If necessary, convert all inequalities to ones without negatives. (Algebra review: <span class="process-math">\(-5 \lt  -2\)</span> means <span class="process-math">\(5 &gt; 2\text{.}\)</span>)<div class="autopermalink" data-description="Paragraph"><a href="#A_4ineq1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.5.7: A player prefers the value of an equilibrium"><a href="#A_4ineq1" title="Copy heading and permalink for Activity 2.5.7: A player prefers the value of an equilibrium" aria-label="Copy heading and permalink for Activity 2.5.7: A player prefers the value of an equilibrium">🔗</a></div></article></details><details id="A_string1" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.8</span><span class="period">.</span><span class="space"> </span><span class="title">Create strings of inequalities.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_string1-2-1">Now string your inequalities together. For example, if <span class="process-math">\(a \lt  b\)</span> and <span class="process-math">\(b \lt  c\)</span> then we can write <span class="process-math">\(a \lt  b \lt  c\text{.}\)</span> Be careful, the inequalities must face the same way; we cannot write <span class="process-math">\(a&gt; b \lt  c\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_string1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.5.8: Create strings of inequalities"><a href="#A_string1" title="Copy heading and permalink for Activity 2.5.8: Create strings of inequalities" aria-label="Copy heading and permalink for Activity 2.5.8: Create strings of inequalities">🔗</a></div></article></details><details id="A_contra1" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.9</span><span class="period">.</span><span class="space"> </span><span class="title">You now have a contradiction.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_contra1-2-1">Explain why you now have a contradiction (a statement that <em class="emphasis">must</em> be false). We can now conclude our assumption that <span class="process-math">\(a \neq b\)</span> was wrong.<div class="autopermalink" data-description="Paragraph"><a href="#A_contra1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.5.9: You now have a contradiction"><a href="#A_contra1" title="Copy heading and permalink for Activity 2.5.9: You now have a contradiction" aria-label="Copy heading and permalink for Activity 2.5.9: You now have a contradiction">🔗</a></div></article></details><details id="A_repeatineq" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.10</span><span class="period">.</span><span class="space"> </span><span class="title">Diagonal case for <span class="process-math">\(c\)</span> and <span class="process-math">\(d\)</span>.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_repeatineq-2-1">Repeat the above argument (<a href="S_EquilibPoints.html#A_4ineq1" class="xref" data-knowl="./knowl/xref/A_4ineq1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.5.7: A player prefers the value of an equilibrium">Activity 2.5.7</a>, <a href="S_EquilibPoints.html#A_string1" class="xref" data-knowl="./knowl/xref/A_string1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.5.8: Create strings of inequalities">Activity 2.5.8</a>, and <a href="S_EquilibPoints.html#A_contra1" class="xref" data-knowl="./knowl/xref/A_contra1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.5.9: You now have a contradiction">Activity 2.5.9</a>) for the case that the two equilibria are <span class="process-math">\((d, -d)\)</span> and <span class="process-math">\((c, -c)\)</span> with <span class="process-math">\(d\neq c\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_repeatineq-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.5.10: Diagonal case for c and d"><a href="#A_repeatineq" title="Copy heading and permalink for Activity 2.5.10: Diagonal case for c and d" aria-label="Copy heading and permalink for Activity 2.5.10: Diagonal case for c and d">🔗</a></div></article></details><details id="A_concl2x2" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.11</span><span class="period">.</span><span class="space"> </span><span class="title">Summarize conclusion.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_concl2x2-2-1">Explain why you can conclude that all equilibria in a <span class="process-math">\(2 \times 2\)</span> two-player zero-sum game have the same value.<div class="autopermalink" data-description="Paragraph"><a href="#A_concl2x2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.5.11: Summarize conclusion"><a href="#A_concl2x2" title="Copy heading and permalink for Activity 2.5.11: Summarize conclusion" aria-label="Copy heading and permalink for Activity 2.5.11: Summarize conclusion">🔗</a></div></article></details><div class="para" id="S_EquilibPoints-23">We just worked through the proof, step-by-step, but now you need to put all the ideas together for yourself.<div class="autopermalink" data-description="Paragraph"><a href="#S_EquilibPoints-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="A_2x2proof" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.12</span><span class="period">.</span><span class="space"> </span><span class="title">The complete proof.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_2x2proof-2-1">Write up the complete proof for the <span class="process-math">\(2 \times 2\)</span> case in your own words.<div class="autopermalink" data-description="Paragraph"><a href="#A_2x2proof-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.5.12: The complete proof"><a href="#A_2x2proof" title="Copy heading and permalink for Activity 2.5.12: The complete proof" aria-label="Copy heading and permalink for Activity 2.5.12: The complete proof">🔗</a></div></article></details><details id="A_nxn" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.13</span><span class="period">.</span><span class="space"> </span><span class="title">Generalizing to a larger game.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_nxn-2-1">Can you see how you might generalize to a larger game matrix? You do not need to write up a proof of the general case, just explain how the key ideas from the <span class="process-math">\(2 \times 2\)</span> case would apply to a bigger game matrix.<div class="autopermalink" data-description="Paragraph"><a href="#A_nxn-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="solutions"><details id="A_nxn-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
-<div class="para" id="A_nxn-3-1">Think about equilibria in (a) the same row, (b) in the same column, or (c) in a different row and column.<div class="autopermalink" data-description="Paragraph"><a href="#A_nxn-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Hint 2.5.13.1"><a href="#A_nxn-3" title="Copy heading and permalink for Hint 2.5.13.1" aria-label="Copy heading and permalink for Hint 2.5.13.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Activity 2.5.13: Generalizing to a larger game"><a href="#A_nxn" title="Copy heading and permalink for Activity 2.5.13: Generalizing to a larger game" aria-label="Copy heading and permalink for Activity 2.5.13: Generalizing to a larger game">🔗</a></div></article></details><div class="para" id="S_EquilibPoints-26">We’ve seen that any two equlibrium points must have the same value. However, it is important to note that just because an outcome has the same value as an equilibrium point, that does not mean it is also an equilibrium point.<div class="autopermalink" data-description="Paragraph"><a href="#S_EquilibPoints-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="A_nonequil" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.14</span><span class="period">.</span><span class="space"> </span><span class="title">Equal values may not be equilibria.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_nonequil-2-1">Give a specific example of a game matrix with two payoff vectors that are <span class="process-math">\((0, 0)\text{,}\)</span> where one is an equilibrium point and the other is not.<div class="autopermalink" data-description="Paragraph"><a href="#A_nonequil-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.5.14: Equal values may not be equilibria"><a href="#A_nonequil" title="Copy heading and permalink for Activity 2.5.14: Equal values may not be equilibria" aria-label="Copy heading and permalink for Activity 2.5.14: Equal values may not be equilibria">🔗</a></div></article></details><div class="para" id="S_EquilibPoints-28">Working through the steps of a mathematical proof can be challenging. As you think about what we did in this section, first make sure you understand the argument for each step. Then work on understanding how the steps fit together to create the larger argument.<div class="autopermalink" data-description="Paragraph"><a href="#S_EquilibPoints-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="S_EquilibPoints-29">The next section summarizes all our work with finding equilibrium points for zero-sum games.<div class="autopermalink" data-description="Paragraph"><a href="#S_EquilibPoints-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<section class="reading-questions" id="S_EquilibPoints-30"><h3 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Check Your Understanding</span>
+<article class="activity project-like" id="A_col1neq"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Equilibria in Column 1.</span>
 </h3>
-<article class="exercise exercise-like" id="IGT_EP_CYU_inequal1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="A_col1neq-2-1">Explain what goes wrong if <span class="process-math">\((a, -a)\)</span> and <span class="process-math">\((d, -d)\)</span> are equilibria with <span class="process-math">\(a \neq d\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_col1neq-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="A_col1neq-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="A_col1neq-3-1">Think about the different cases, such as <span class="process-math">\(a\lt d\text{,}\)</span> <span class="process-math">\(a&gt;d\text{.}\)</span> Can you show that in each case either <span class="process-math">\((a, -a)\)</span> or <span class="process-math">\((d, -d)\)</span> is NOT an equilibrium?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_col1neq-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 2.5.4.1"><a tabindex="-1" href="#A_col1neq-3" title="Copy heading and permalink for Hint 2.5.4.1" aria-label="Copy heading and permalink for Hint 2.5.4.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.5.4: Equilibria in Column 1"><a tabindex="-1" href="#A_col1neq" title="Copy heading and permalink for Activity 2.5.4: Equilibria in Column 1" aria-label="Copy heading and permalink for Activity 2.5.4: Equilibria in Column 1">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_gencolneq"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Equilibria in the same column/row.</span>
+</h3>
+<div class="para" id="A_gencolneq-2-1">Generalize your answer to <a href="S_EquilibPoints.html#A_col1neq" class="xref" data-knowl="./knowl/xref/A_col1neq.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.5.4: Equilibria in Column 1">Activity 2.5.4</a> to explain what goes wrong if the two equilibria with different values are in the same column. Similarly, explain what happens if the two equilibria are in the same row.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_gencolneq-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.5.5: Equilibria in the same column/row"><a tabindex="-1" href="#A_gencolneq" title="Copy heading and permalink for Activity 2.5.5: Equilibria in the same column/row" aria-label="Copy heading and permalink for Activity 2.5.5: Equilibria in the same column/row">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_diag"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Diagonal equilibria.</span>
+</h3>
+<div class="para" id="A_diag-2-1">Does the same explanation hold if the two equilibria are diagonal from each other? (Explain your answer!)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_diag-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.5.6: Diagonal equilibria"><a tabindex="-1" href="#A_diag" title="Copy heading and permalink for Activity 2.5.6: Diagonal equilibria" aria-label="Copy heading and permalink for Activity 2.5.6: Diagonal equilibria">🔗</a></div>
+</article>
+<div class="para" id="S_EquilibPoints-17">From your last answer, you should see that we need to do more work to figure out what happens if the equilibria are diagonal. So let’s assume that the two equilibria are <span class="process-math">\((a, -a)\)</span> and <span class="process-math">\((b, -b)\)</span> with <span class="process-math">\(a \neq b\text{.}\)</span> It might be helpful to draw the payoff matrix and circle the equilibria.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_EquilibPoints-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="A_4ineq1"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A player prefers the value of an equilibrium.</span>
+</h3>
+<div class="para" id="A_4ineq1-2-1">Construct a system of inequalities using the fact that a player prefers an equilibrium point to another choice. For example, Player 1 prefers <span class="process-math">\(a\)</span> to <span class="process-math">\(d\text{.}\)</span> Thus, <span class="process-math">\(a &gt; d\text{.}\)</span> List all four inequalities you can get using this fact. You should get two for each player. Remember that Player 1 can only compare values in the same column since she has no ability to switch columns. If necessary, convert all inequalities to ones without negatives. (Algebra review: <span class="process-math">\(-5 \lt  -2\)</span> means <span class="process-math">\(5 &gt; 2\text{.}\)</span>)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_4ineq1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.5.7: A player prefers the value of an equilibrium"><a tabindex="-1" href="#A_4ineq1" title="Copy heading and permalink for Activity 2.5.7: A player prefers the value of an equilibrium" aria-label="Copy heading and permalink for Activity 2.5.7: A player prefers the value of an equilibrium">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_string1"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Create strings of inequalities.</span>
+</h3>
+<div class="para" id="A_string1-2-1">Now string your inequalities together. For example, if <span class="process-math">\(a \lt  b\)</span> and <span class="process-math">\(b \lt  c\)</span> then we can write <span class="process-math">\(a \lt  b \lt  c\text{.}\)</span> Be careful, the inequalities must face the same way; we cannot write <span class="process-math">\(a&gt; b \lt  c\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_string1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.5.8: Create strings of inequalities"><a tabindex="-1" href="#A_string1" title="Copy heading and permalink for Activity 2.5.8: Create strings of inequalities" aria-label="Copy heading and permalink for Activity 2.5.8: Create strings of inequalities">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_contra1"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">You now have a contradiction.</span>
+</h3>
+<div class="para" id="A_contra1-2-1">Explain why you now have a contradiction (a statement that <em class="emphasis">must</em> be false). We can now conclude our assumption that <span class="process-math">\(a \neq b\)</span> was wrong.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_contra1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.5.9: You now have a contradiction"><a tabindex="-1" href="#A_contra1" title="Copy heading and permalink for Activity 2.5.9: You now have a contradiction" aria-label="Copy heading and permalink for Activity 2.5.9: You now have a contradiction">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_repeatineq"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Diagonal case for <span class="process-math">\(c\)</span> and <span class="process-math">\(d\)</span>.</span>
+</h3>
+<div class="para" id="A_repeatineq-2-1">Repeat the above argument (<a href="S_EquilibPoints.html#A_4ineq1" class="xref" data-knowl="./knowl/xref/A_4ineq1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.5.7: A player prefers the value of an equilibrium">Activity 2.5.7</a>, <a href="S_EquilibPoints.html#A_string1" class="xref" data-knowl="./knowl/xref/A_string1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.5.8: Create strings of inequalities">Activity 2.5.8</a>, and <a href="S_EquilibPoints.html#A_contra1" class="xref" data-knowl="./knowl/xref/A_contra1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.5.9: You now have a contradiction">Activity 2.5.9</a>) for the case that the two equilibria are <span class="process-math">\((d, -d)\)</span> and <span class="process-math">\((c, -c)\)</span> with <span class="process-math">\(d\neq c\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_repeatineq-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.5.10: Diagonal case for c and d"><a tabindex="-1" href="#A_repeatineq" title="Copy heading and permalink for Activity 2.5.10: Diagonal case for c and d" aria-label="Copy heading and permalink for Activity 2.5.10: Diagonal case for c and d">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_concl2x2"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Summarize conclusion.</span>
+</h3>
+<div class="para" id="A_concl2x2-2-1">Explain why you can conclude that all equilibria in a <span class="process-math">\(2 \times 2\)</span> two-player zero-sum game have the same value.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_concl2x2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.5.11: Summarize conclusion"><a tabindex="-1" href="#A_concl2x2" title="Copy heading and permalink for Activity 2.5.11: Summarize conclusion" aria-label="Copy heading and permalink for Activity 2.5.11: Summarize conclusion">🔗</a></div>
+</article>
+<div class="para" id="S_EquilibPoints-23">We just worked through the proof, step-by-step, but now you need to put all the ideas together for yourself.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_EquilibPoints-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="A_2x2proof"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The complete proof.</span>
+</h3>
+<div class="para" id="A_2x2proof-2-1">Write up the complete proof for the <span class="process-math">\(2 \times 2\)</span> case in your own words.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_2x2proof-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.5.12: The complete proof"><a tabindex="-1" href="#A_2x2proof" title="Copy heading and permalink for Activity 2.5.12: The complete proof" aria-label="Copy heading and permalink for Activity 2.5.12: The complete proof">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_nxn"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Generalizing to a larger game.</span>
+</h3>
+<div class="para" id="A_nxn-2-1">Can you see how you might generalize to a larger game matrix? You do not need to write up a proof of the general case, just explain how the key ideas from the <span class="process-math">\(2 \times 2\)</span> case would apply to a bigger game matrix.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_nxn-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="A_nxn-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="A_nxn-3-1">Think about equilibria in (a) the same row, (b) the same column, or (c) a different row and column.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_nxn-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 2.5.13.1"><a tabindex="-1" href="#A_nxn-3" title="Copy heading and permalink for Hint 2.5.13.1" aria-label="Copy heading and permalink for Hint 2.5.13.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.5.13: Generalizing to a larger game"><a tabindex="-1" href="#A_nxn" title="Copy heading and permalink for Activity 2.5.13: Generalizing to a larger game" aria-label="Copy heading and permalink for Activity 2.5.13: Generalizing to a larger game">🔗</a></div>
+</article>
+<div class="para" id="S_EquilibPoints-26">We’ve seen that any two equlibrium points must have the same value. However, it is important to note that just because an outcome has the same value as an equilibrium point, that does not mean it is also an equilibrium point.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_EquilibPoints-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="A_nonequil"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Equal values may not be equilibria.</span>
+</h3>
+<div class="para" id="A_nonequil-2-1">Give a specific example of a game matrix with two payoff vectors that are <span class="process-math">\((0, 0)\text{,}\)</span> where one is an equilibrium point and the other is not.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_nonequil-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.5.14: Equal values may not be equilibria"><a tabindex="-1" href="#A_nonequil" title="Copy heading and permalink for Activity 2.5.14: Equal values may not be equilibria" aria-label="Copy heading and permalink for Activity 2.5.14: Equal values may not be equilibria">🔗</a></div>
+</article>
+<div class="para" id="S_EquilibPoints-28">Working through the steps of a mathematical proof can be challenging. As you think about what we did in this section, first make sure you understand the argument for each step. Then work on understanding how the steps fit together to create the larger argument.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_EquilibPoints-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="S_EquilibPoints-29">The next section summarizes all our work with finding equilibrium points for zero-sum games.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_EquilibPoints-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="reading-questions" id="S_EquilibPoints-30">
+<h3 class="heading hide-type">
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Check Your Understanding</span>
+</h3>
+<article class="exercise exercise-like" id="IGT_EP_CYU_inequal1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_EP_CYU_inequal1">
-<div class="para" id="IGT_EP_CYU_inequal1-1-1">True or False: If <span class="process-math">\(a\lt b \lt c\lt d\)</span> then <span class="process-math">\(a\lt d\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#IGT_EP_CYU_inequal1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="IGT_EP_CYU_inequal1-1-1">True or False: If <span class="process-math">\(a\lt b \lt c\lt d\)</span> then <span class="process-math">\(a\lt d\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_EP_CYU_inequal1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_EP_CYU_inequal1_opt_t" data-correct=""><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_EP_CYU_inequal1_opt_t"><div class="para" id="IGT_EP_CYU_inequal1-2-1">This is called the transitive property of inequalities.</div></li>
+<li data-component="feedback" id="rs-IGT_EP_CYU_inequal1_opt_t">
+<div class="para" id="IGT_EP_CYU_inequal1-2-1">This is called the transitive property of inequalities.</div>
+</li>
 <li data-component="answer" id="rs-IGT_EP_CYU_inequal1_opt_f"><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_EP_CYU_inequal1_opt_f"><div class="para" id="IGT_EP_CYU_inequal1-2-1">This is called the transitive property of inequalities.</div></li>
+<li data-component="feedback" id="rs-IGT_EP_CYU_inequal1_opt_f">
+<div class="para" id="IGT_EP_CYU_inequal1-2-1">This is called the transitive property of inequalities.</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 2.5.1"><a href="#IGT_EP_CYU_inequal1" title="Copy heading and permalink for Reading Question 2.5.1" aria-label="Copy heading and permalink for Reading Question 2.5.1">🔗</a></div></article><article class="exercise exercise-like" id="IGT_EP_CYU_inequal2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 2.5.1"><a tabindex="-1" href="#IGT_EP_CYU_inequal1" title="Copy heading and permalink for Reading Question 2.5.1" aria-label="Copy heading and permalink for Reading Question 2.5.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_EP_CYU_inequal2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_EP_CYU_inequal2">
-<div class="para" id="IGT_EP_CYU_inequal2-1-1">True or False: If <span class="process-math">\(a\lt b\)</span> then <span class="process-math">\(-a\lt -d\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#IGT_EP_CYU_inequal2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="IGT_EP_CYU_inequal2-1-1">True or False: If <span class="process-math">\(a\lt b\)</span> then <span class="process-math">\(-a\lt -d\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_EP_CYU_inequal2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_EP_CYU_inequal2_opt_t"><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_EP_CYU_inequal2_opt_t"><div class="para" id="IGT_EP_CYU_inequal2-2-1">When we multiply by a negative, the direction of the inequality changes, so it should be <span class="process-math">\(-d\lt -a\)</span>
-</div></li>
+<li data-component="feedback" id="rs-IGT_EP_CYU_inequal2_opt_t">
+<div class="para" id="IGT_EP_CYU_inequal2-2-1">When we multiply by a negative, the direction of the inequality changes, so it should be <span class="process-math">\(-d\lt -a\)</span>
+</div>
+</li>
 <li data-component="answer" id="rs-IGT_EP_CYU_inequal2_opt_f" data-correct=""><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_EP_CYU_inequal2_opt_f"><div class="para" id="IGT_EP_CYU_inequal2-2-1">When we multiply by a negative, the direction of the inequality changes, so it should be <span class="process-math">\(-d\lt -a\)</span>
-</div></li>
+<li data-component="feedback" id="rs-IGT_EP_CYU_inequal2_opt_f">
+<div class="para" id="IGT_EP_CYU_inequal2-2-1">When we multiply by a negative, the direction of the inequality changes, so it should be <span class="process-math">\(-d\lt -a\)</span>
+</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 2.5.2"><a href="#IGT_EP_CYU_inequal2" title="Copy heading and permalink for Reading Question 2.5.2" aria-label="Copy heading and permalink for Reading Question 2.5.2">🔗</a></div></article><article class="exercise exercise-like" id="IGT_EP_CYU_inequal3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 2.5.2"><a tabindex="-1" href="#IGT_EP_CYU_inequal2" title="Copy heading and permalink for Reading Question 2.5.2" aria-label="Copy heading and permalink for Reading Question 2.5.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_EP_CYU_inequal3"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_EP_CYU_inequal3">
-<div class="para" id="IGT_EP_CYU_inequal3-1-1">True or False: If <span class="process-math">\(a\lt b \lt c\lt d \lt a\)</span> then we have a contradiction.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_EP_CYU_inequal3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="IGT_EP_CYU_inequal3-1-1">True or False: If <span class="process-math">\(a\lt b \lt c\lt d \lt a\)</span> then we have a contradiction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_EP_CYU_inequal3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_EP_CYU_inequal3_opt_t" data-correct=""><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_EP_CYU_inequal3_opt_t"><div class="para" id="IGT_EP_CYU_inequal3-2-1">This inequality leads to <span class="process-math">\(a \lt a\)</span> which cannot be true.</div></li>
+<li data-component="feedback" id="rs-IGT_EP_CYU_inequal3_opt_t">
+<div class="para" id="IGT_EP_CYU_inequal3-2-1">This inequality leads to <span class="process-math">\(a \lt a\)</span> which cannot be true.</div>
+</li>
 <li data-component="answer" id="rs-IGT_EP_CYU_inequal3_opt_f"><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_EP_CYU_inequal3_opt_f"><div class="para" id="IGT_EP_CYU_inequal3-2-1">This inequality leads to <span class="process-math">\(a \lt a\)</span> which cannot be true.</div></li>
+<li data-component="feedback" id="rs-IGT_EP_CYU_inequal3_opt_f">
+<div class="para" id="IGT_EP_CYU_inequal3-2-1">This inequality leads to <span class="process-math">\(a \lt a\)</span> which cannot be true.</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 2.5.3"><a href="#IGT_EP_CYU_inequal3" title="Copy heading and permalink for Reading Question 2.5.3" aria-label="Copy heading and permalink for Reading Question 2.5.3">🔗</a></div></article><article class="exercise exercise-like" id="IGT_EP_CYU_equilequal"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 2.5.3"><a tabindex="-1" href="#IGT_EP_CYU_inequal3" title="Copy heading and permalink for Reading Question 2.5.3" aria-label="Copy heading and permalink for Reading Question 2.5.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_EP_CYU_equilequal"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_EP_CYU_equilequal">
-<div class="para" id="IGT_EP_CYU_equilequal-1-1">True or False: If <span class="process-math">\((a, -a)\)</span> and <span class="process-math">\((b, -b)\)</span> are two equilibria in a zero-sum game, then <span class="process-math">\(a=b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#IGT_EP_CYU_equilequal-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="IGT_EP_CYU_equilequal-1-1">True or False: If <span class="process-math">\((a, -a)\)</span> and <span class="process-math">\((b, -b)\)</span> are two equilibria in a zero-sum game, then <span class="process-math">\(a=b\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_EP_CYU_equilequal-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_EP_CYU_equilequal_opt_t" data-correct=""><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_EP_CYU_equilequal_opt_t"><div class="para" id="IGT_EP_CYU_equilequal-2-1">This is what <a href="S_EquilibPoints.html#T_STfZSG" class="xref" data-knowl="./knowl/xref/T_STfZSG.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.5.2: Solution Theorem for Zero-Sum Games">Theorem 2.5.2</a> tells us.</div></li>
+<li data-component="feedback" id="rs-IGT_EP_CYU_equilequal_opt_t">
+<div class="para" id="IGT_EP_CYU_equilequal-2-1">This is what <a href="S_EquilibPoints.html#T_STfZSG" class="xref" data-knowl="./knowl/xref/T_STfZSG.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.5.2: Solution Theorem for Zero-Sum Games">Theorem 2.5.2</a> tells us.</div>
+</li>
 <li data-component="answer" id="rs-IGT_EP_CYU_equilequal_opt_f"><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_EP_CYU_equilequal_opt_f"><div class="para" id="IGT_EP_CYU_equilequal-2-1">This is what <a href="S_EquilibPoints.html#T_STfZSG" class="xref" data-knowl="./knowl/xref/T_STfZSG.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.5.2: Solution Theorem for Zero-Sum Games">Theorem 2.5.2</a> tells us.</div></li>
+<li data-component="feedback" id="rs-IGT_EP_CYU_equilequal_opt_f">
+<div class="para" id="IGT_EP_CYU_equilequal-2-1">This is what <a href="S_EquilibPoints.html#T_STfZSG" class="xref" data-knowl="./knowl/xref/T_STfZSG.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.5.2: Solution Theorem for Zero-Sum Games">Theorem 2.5.2</a> tells us.</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 2.5.4"><a href="#IGT_EP_CYU_equilequal" title="Copy heading and permalink for Reading Question 2.5.4" aria-label="Copy heading and permalink for Reading Question 2.5.4">🔗</a></div></article><article class="exercise exercise-like" id="IGT_EP_CYU_equilvalues"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 2.5.4"><a tabindex="-1" href="#IGT_EP_CYU_equilequal" title="Copy heading and permalink for Reading Question 2.5.4" aria-label="Copy heading and permalink for Reading Question 2.5.4">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_EP_CYU_equilvalues"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_EP_CYU_equilvalues">
-<div class="para" id="IGT_EP_CYU_equilvalues-1-1">True or False: If <span class="process-math">\((3, -3)\)</span> is an equilibrium in a zero-sum game, then every equilibrium in the game has payoff vector <span class="process-math">\((3, -3)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#IGT_EP_CYU_equilvalues-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="IGT_EP_CYU_equilvalues-1-1">True or False: If <span class="process-math">\((3, -3)\)</span> is an equilibrium in a zero-sum game, then every equilibrium in the game has payoff vector <span class="process-math">\((3, -3)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_EP_CYU_equilvalues-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_EP_CYU_equilvalues_opt_t" data-correct=""><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_EP_CYU_equilvalues_opt_t"><div class="para" id="IGT_EP_CYU_equilvalues-2-1">This is what <a href="S_EquilibPoints.html#T_STfZSG" class="xref" data-knowl="./knowl/xref/T_STfZSG.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.5.2: Solution Theorem for Zero-Sum Games">Theorem 2.5.2</a> tells us.</div></li>
+<li data-component="feedback" id="rs-IGT_EP_CYU_equilvalues_opt_t">
+<div class="para" id="IGT_EP_CYU_equilvalues-2-1">This is what <a href="S_EquilibPoints.html#T_STfZSG" class="xref" data-knowl="./knowl/xref/T_STfZSG.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.5.2: Solution Theorem for Zero-Sum Games">Theorem 2.5.2</a> tells us.</div>
+</li>
 <li data-component="answer" id="rs-IGT_EP_CYU_equilvalues_opt_f"><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_EP_CYU_equilvalues_opt_f"><div class="para" id="IGT_EP_CYU_equilvalues-2-1">This is what <a href="S_EquilibPoints.html#T_STfZSG" class="xref" data-knowl="./knowl/xref/T_STfZSG.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.5.2: Solution Theorem for Zero-Sum Games">Theorem 2.5.2</a> tells us.</div></li>
+<li data-component="feedback" id="rs-IGT_EP_CYU_equilvalues_opt_f">
+<div class="para" id="IGT_EP_CYU_equilvalues-2-1">This is what <a href="S_EquilibPoints.html#T_STfZSG" class="xref" data-knowl="./knowl/xref/T_STfZSG.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.5.2: Solution Theorem for Zero-Sum Games">Theorem 2.5.2</a> tells us.</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 2.5.5"><a href="#IGT_EP_CYU_equilvalues" title="Copy heading and permalink for Reading Question 2.5.5" aria-label="Copy heading and permalink for Reading Question 2.5.5">🔗</a></div></article><article class="exercise exercise-like" id="IGT_EP_CYU_equilnonequil"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 2.5.5"><a tabindex="-1" href="#IGT_EP_CYU_equilvalues" title="Copy heading and permalink for Reading Question 2.5.5" aria-label="Copy heading and permalink for Reading Question 2.5.5">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_EP_CYU_equilnonequil"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_EP_CYU_equilnonequil">
 <div class="para logical" id="IGT_EP_CYU_equilnonequil-1-1">
 <div class="para">True or False: In the matrix</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="IGT_EP_CYU_equilnonequil-1-1-1">
 \begin{equation*}
 \left[\begin{matrix}(-2, 2)\amp (-1, 1)\\
 (-1, 1)\amp (2, -2)
@@ -522,23 +584,37 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="para">both <span class="process-math">\((-1, 1)\)</span> payoff vectors are equilibria.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#IGT_EP_CYU_equilnonequil-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_EP_CYU_equilnonequil-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_EP_CYU_equilnonequil_opt_t"><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_EP_CYU_equilnonequil_opt_t"><div class="para" id="IGT_EP_CYU_equilnonequil-2-1">True or False: Only the vector in Row 2, Column 1 is an equilibrium.</div></li>
+<li data-component="feedback" id="rs-IGT_EP_CYU_equilnonequil_opt_t">
+<div class="para" id="IGT_EP_CYU_equilnonequil-2-1">Only the vector in Row 2, Column 1 is an equilibrium.</div>
+</li>
 <li data-component="answer" id="rs-IGT_EP_CYU_equilnonequil_opt_f" data-correct=""><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_EP_CYU_equilnonequil_opt_f"><div class="para" id="IGT_EP_CYU_equilnonequil-2-1">True or False: Only the vector in Row 2, Column 1 is an equilibrium.</div></li>
+<li data-component="feedback" id="rs-IGT_EP_CYU_equilnonequil_opt_f">
+<div class="para" id="IGT_EP_CYU_equilnonequil-2-1">Only the vector in Row 2, Column 1 is an equilibrium.</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 2.5.6"><a href="#IGT_EP_CYU_equilnonequil" title="Copy heading and permalink for Reading Question 2.5.6" aria-label="Copy heading and permalink for Reading Question 2.5.6">🔗</a></div></article><article class="exercise exercise-like" id="IGT_EP_CYU_equilmultple"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 2.5.6"><a tabindex="-1" href="#IGT_EP_CYU_equilnonequil" title="Copy heading and permalink for Reading Question 2.5.6" aria-label="Copy heading and permalink for Reading Question 2.5.6">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_EP_CYU_equilmultple"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_EP_CYU_equilmultple">
-<div class="para" id="IGT_EP_CYU_equilmultple-1-1">True or False: If <span class="process-math">\((3, -3)\)</span> is an equilibrium in a zero-sum game, then every payoff vector <span class="process-math">\((3, -3)\)</span> is a equilibrium.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_EP_CYU_equilmultple-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="IGT_EP_CYU_equilmultple-1-1">True or False: If <span class="process-math">\((3, -3)\)</span> is an equilibrium in a zero-sum game, then every payoff vector <span class="process-math">\((3, -3)\)</span> is a equilibrium.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_EP_CYU_equilmultple-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_EP_CYU_equilmultple_opt_t"><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_EP_CYU_equilmultple_opt_t"><div class="para" id="IGT_EP_CYU_equilmultple-2-1">See <a href="S_EquilibPoints.html#A_nonequil" class="xref" data-knowl="./knowl/xref/A_nonequil.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.5.14: Equal values may not be equilibria">Activity 2.5.14</a>.</div></li>
+<li data-component="feedback" id="rs-IGT_EP_CYU_equilmultple_opt_t">
+<div class="para" id="IGT_EP_CYU_equilmultple-2-1">See <a href="S_EquilibPoints.html#A_nonequil" class="xref" data-knowl="./knowl/xref/A_nonequil.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.5.14: Equal values may not be equilibria">Activity 2.5.14</a>.</div>
+</li>
 <li data-component="answer" id="rs-IGT_EP_CYU_equilmultple_opt_f" data-correct=""><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_EP_CYU_equilmultple_opt_f"><div class="para" id="IGT_EP_CYU_equilmultple-2-1">See <a href="S_EquilibPoints.html#A_nonequil" class="xref" data-knowl="./knowl/xref/A_nonequil.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.5.14: Equal values may not be equilibria">Activity 2.5.14</a>.</div></li>
+<li data-component="feedback" id="rs-IGT_EP_CYU_equilmultple_opt_f">
+<div class="para" id="IGT_EP_CYU_equilmultple-2-1">See <a href="S_EquilibPoints.html#A_nonequil" class="xref" data-knowl="./knowl/xref/A_nonequil.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.5.14: Equal values may not be equilibria">Activity 2.5.14</a>.</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 2.5.7"><a href="#IGT_EP_CYU_equilmultple" title="Copy heading and permalink for Reading Question 2.5.7" aria-label="Copy heading and permalink for Reading Question 2.5.7">🔗</a></div></article><div class="autopermalink" data-description="Reading Questions 2.5: Check Your Understanding"><a href="#S_EquilibPoints-30" title="Copy heading and permalink for Reading Questions 2.5: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 2.5: Check Your Understanding">🔗</a></div></section><div class="autopermalink" data-description="Section 2.5: Equilibrium Points"><a href="#S_EquilibPoints" title="Copy heading and permalink for Section 2.5: Equilibrium Points" aria-label="Copy heading and permalink for Section 2.5: Equilibrium Points">🔗</a></div></section></div>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 2.5.7"><a tabindex="-1" href="#IGT_EP_CYU_equilmultple" title="Copy heading and permalink for Reading Question 2.5.7" aria-label="Copy heading and permalink for Reading Question 2.5.7">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 2.5: Check Your Understanding"><a tabindex="-1" href="#S_EquilibPoints-30" title="Copy heading and permalink for Reading Questions 2.5: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 2.5: Check Your Understanding">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 2.5: Equilibrium Points"><a tabindex="-1" href="#S_EquilibPoints" title="Copy heading and permalink for Section 2.5: Equilibrium Points" aria-label="Copy heading and permalink for Section 2.5: Equilibrium Points">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="S_OneCardStud.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="S_ZeroSumStrategySummary.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

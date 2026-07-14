@@ -20,85 +20,27 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js/lib"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: true,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
+<meta name="twitter:image" content="https://nordstromjf.github.io/IntroGameTheory2e/external/image-1.svg">
 <meta property="og:image" content="https://nordstromjf.github.io/IntroGameTheory2e/external/image-1.svg">
-<meta property="book:title" content="Introduction to Game Theory">
-<meta property="book:author" content="Jennifer Firkins Nordstrom">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<meta name="twitter:image:alt" content="Document Logo">
+<meta property="og:image:alt" content="Document Logo">
+<meta name="twitter:title" content="Introduction to Game Theory: a Discovery Approach">
+<meta property="og:title" content="Introduction to Game Theory: a Discovery Approach">
+<meta property="book:title" content="Introduction to Game Theory: a Discovery Approach">
+<meta name="twitter:description" content="This text provides an inquiry-based introduction to game theory. The material requires no mathematical prerequisites and is suitable for a non-majors quantitative reasoning course.">
+<meta property="og:description" content="This text provides an inquiry-based introduction to game theory. The material requires no mathematical prerequisites and is suitable for a non-majors quantitative reasoning course.">
+<meta name="twitter:card" content="summary_large_image">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -120,16 +62,16 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.18';
+eBookConfig.runestone_version = '8.1.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.cefb0224014f3333.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.c50cdcad467c8d3e.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/prefix-runtime.cb5af2e851de3574.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.f51cd4153b45055d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="introgametheory" class="pretext book ignore-math">
@@ -139,18 +81,35 @@ eBookConfig.enable_chatcodes =  false;
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div>
 </div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
-<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<div class="search-results-controls">
-<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-<h2 class="search-results-heading">Search Results: </h2>
-<div id="searchempty" class="searchempty"><span>No results.</span></div>
-<ol id="searchresults" class="searchresults"></ol>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
+<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="S_Probability.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="intro_game_theory-5.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="S_EquilibPoints.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="S_Probability.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="intro_game_theory-5.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="S_EquilibPoints.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\( \newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
   \newcommand{\MyTikzmark}[2]{
      \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
@@ -171,20 +130,20 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Preface</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="intro_game_theory-4.html" class="internal"><span class="codenumber">1</span> <span class="title">What is Game Theory?</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-intro_game_theory-4" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Players and Strategies</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_intro" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_intro.html#SS_Cake" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Assumptions: Cake Division</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_intro.html#Ex_Tic" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Developing Strategies: Tic Tac Toe</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_intro.html#S_intro-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Check Your Understanding</span></a></div></li>
@@ -192,7 +151,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_IntroMatrices.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Game Matrices and Payoff Vectors</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_IntroMatrices" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroMatrices.html#SS_MatchPennies" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Setting up a Payoff Matrix</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroMatrices.html#SS_revistassump" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Revisiting the Assumptions</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroMatrices.html#S_IntroMatrices-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Check Your Understanding</span></a></div></li>
@@ -202,10 +161,10 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="intro_game_theory-5.html" class="internal"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-intro_game_theory-5">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_IntroZeroSum.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to Two-Person Zero-Sum Games</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_IntroZeroSum" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroZeroSum.html#Ex_election" class="internal"><span class="codenumber">2.1.1</span> <span class="title">An Election Campaign Game</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroZeroSum.html#SS_equilpairs" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Equilibrium Pairs</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroZeroSum.html#S_IntroZeroSum-6" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Check Your Understanding</span></a></div></li>
@@ -213,7 +172,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_DominatedStrategies.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Finding Strategies</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_DominatedStrategies" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_simplifyingmatrix" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Simplifying a Zero-Sum Game Matrix</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_DomStrategies" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Dominated Strategies</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_maximin" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Maximin and Minimax Strategies</span></a></div></li>
@@ -222,7 +181,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_Probability.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Probability and Expected Value</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_Probability" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_Probability.html#SS_basicprob" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Some Basic Probability</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_Probability.html#SS_expectedvalue" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Expected Value</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_Probability.html#S_Probability-5" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Check Your Understanding</span></a></div></li>
@@ -230,306 +189,441 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="S_OneCardStud.html" class="internal"><span class="codenumber">2.4</span> <span class="title">A Game of Chance</span></a></div>
-<ul class="structural toc-item-list active"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_OneCardStud.html#S_OneCardStud-39" class="internal"><span class="codenumber">2.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul class="structural toc-item-list active" id="ptx-toc-group-S_OneCardStud"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_OneCardStud.html#S_OneCardStud-39" class="internal"><span class="codenumber">2.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_EquilibPoints.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Equilibrium Points</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_EquilibPoints.html#S_EquilibPoints-30" class="internal"><span class="codenumber">2.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_EquilibPoints" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_EquilibPoints.html#S_EquilibPoints-30" class="internal"><span class="codenumber">2.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Strategies for Zero-Sum Games and Equilibrium Points</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html#S_ZeroSumStrategySummary-15" class="internal"><span class="codenumber">2.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Strategies for Zero-Sum Games</span></a></div>
+<ul id="ptx-toc-group-S_ZeroSumStrategySummary" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html#S_ZeroSumStrategySummary-13" class="internal"><span class="codenumber">2.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopRationality.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Popular Culture: Rationality and Perfect Information</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopRationality.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Pop Culture: Rationality</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="intro_game_theory-6.html" class="internal"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-intro_game_theory-6" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_IntroRepeated.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction to Repeated Games</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroRepeated.html#S_IntroRepeated-26" class="internal"><span class="codenumber">3.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_IntroRepeated" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroRepeated.html#S_IntroRepeated-26" class="internal"><span class="codenumber">3.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_MixStratGraph.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Mixed Strategies: Graphical Solution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratGraph.html#S_MixStratGraph-55" class="internal"><span class="codenumber">3.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_MixStratGraph" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratGraph.html#S_MixStratGraph-53" class="internal"><span class="codenumber">3.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_SolvingEq.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Using Sage to Graph Lines and Solve Equations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_SolvingEq.html#S_SolvingEq-26" class="internal"><span class="codenumber">3.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_SolvingEq" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_SolvingEq.html#S_SolvingEq-26" class="internal"><span class="codenumber">3.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_MixStratEV.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Mixed Strategies: Expected Value Solution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratEV.html#S_MixStratEV-34" class="internal"><span class="codenumber">3.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_MixStratEV" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratEV.html#S_MixStratEV-32" class="internal"><span class="codenumber">3.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_LiarsPoker.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Liar’s Poker</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_LiarsPoker.html#S_LiarsPoker-23" class="internal"><span class="codenumber">3.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_LiarsPoker" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_LiarsPoker.html#S_LiarsPoker-23" class="internal"><span class="codenumber">3.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_AugMatrices.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Solving Systems of Equations Using Matrices</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_AugMatrices.html#S_AugMatrices-35" class="internal"><span class="codenumber">3.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_AugMatrices" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_AugMatrices.html#S_AugMatrices-35" class="internal"><span class="codenumber">3.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_Undercut.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Undercut</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_Undercut.html#S_Undercut-31" class="internal"><span class="codenumber">3.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_Undercut" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_Undercut.html#S_Undercut-30" class="internal"><span class="codenumber">3.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="intro_game_theory-7.html" class="internal"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-intro_game_theory-7" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_IntroNonzero.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Introduction to Two-Player Non-Zero-Sum Games</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroNonzero.html#S_IntroNonzero-32" class="internal"><span class="codenumber">4.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_IntroNonzero" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroNonzero.html#S_IntroNonzero-32" class="internal"><span class="codenumber">4.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_PdandChicken.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Prisoner’s Dilemma and Chicken</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PdandChicken.html#S_PdandChicken-43" class="internal"><span class="codenumber">4.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_PdandChicken" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PdandChicken.html#S_PdandChicken-43" class="internal"><span class="codenumber">4.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_CWPD.html" class="internal"><span class="codenumber">4.3</span> <span class="title">A Class-Wide Experiment</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_CWPD.html#S_CWPD-25" class="internal"><span class="codenumber">4.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_CWPD" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_CWPD.html#S_CWPD-25" class="internal"><span class="codenumber">4.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_PDconditions.html" class="internal"><span class="codenumber">4.4</span> <span class="title">What Makes a Prisoner’s Dilemma?</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PDconditions.html#S_PDconditions-18" class="internal"><span class="codenumber">4.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_PDconditions" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PDconditions.html#S_PDconditions-18" class="internal"><span class="codenumber">4.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_VDexperiment.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Another Multiplayer Experiment</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VDexperiment.html#S_VDexperiment-11" class="internal"><span class="codenumber">4.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_VDexperiment" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VDexperiment.html#S_VDexperiment-11" class="internal"><span class="codenumber">4.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_VolunteerDil.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Volunteer’s Dilemma</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VolunteerDil.html#S_VolunteerDil-20" class="internal"><span class="codenumber">4.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_VolunteerDil" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VolunteerDil.html#S_VolunteerDil-20" class="internal"><span class="codenumber">4.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_RepeatPD.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Repeated Prisoner’s Dilemma</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_RepeatPD.html#S_RepeatPD-31" class="internal"><span class="codenumber">4.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_RepeatPD" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_RepeatPD.html#S_RepeatPD-29" class="internal"><span class="codenumber">4.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopPD.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Popular Culture: Prisoner’s Dilemma and Chicken</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopPD.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Pop Culture: Prisoner’s Dilemma and Chicken</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">References</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="S_OneCardStud"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.4</span><span class="space"> </span><span class="title">A Game of Chance</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="S_OneCardStud">
+<h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Game of Chance</span>
 </h2>
-<div class="para" id="S_OneCardStud-2">Now that we have worked with expected value, we can begin to analyze some simple games that involve an element of chance.<div class="autopermalink" data-description="Paragraph"><a href="#S_OneCardStud-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="S_OneCardStud-2">Now that we have worked with expected value, we can begin to analyze some simple games that involve an element of chance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_OneCardStud-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="E_onecardstud"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">One-Card Stud Poker.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">One-Card Stud Poker.</span>
 </h3>
-<div class="para" id="E_onecardstud-2-1">We begin with a deck of cards in which 50% are Aces (you can use Red cards for Aces) and 50% are Kings (you can use Black cards for Kings). There are two players and one dealer. The play begins by each player putting in the ante (1 chip). Each player is dealt one card face down. WITHOUT LOOKING AT THEIR CARD, the players decide to Bet (say, 1 chip) or Fold. Players secretly show the dealer their choice of Bet or Fold. If one player Bets and the other Folds, then the player who Bet wins. If both Bet or both Fold, then Ace beats King (or Red beats Black); winner takes the pot (all the chips from the ante and any bets). If there is a tie, they split the pot.<div class="autopermalink" data-description="Paragraph"><a href="#E_onecardstud-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="E_onecardstud-2-1">We begin with a deck of cards in which 50% are Aces (you can use Red cards for Aces) and 50% are Kings (you can use Black cards for Kings). There are two players and one dealer. The play begins by each player putting in the ante (1 chip). Each player is dealt one card face down. WITHOUT LOOKING AT THEIR CARD, the players decide to Bet (say, 1 chip) or Fold. Players secretly show the dealer their choice of Bet or Fold. If one player Bets and the other Folds, then the player who Bet wins. If both Bet or both Fold, then Ace beats King (or Red beats Black); winner takes the pot (all the chips from the ante and any bets). If there is a tie, they split the pot.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_onecardstud-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 2.4.1: One-Card Stud Poker"><a href="#E_onecardstud" title="Copy heading and permalink for Example 2.4.1: One-Card Stud Poker" aria-label="Copy heading and permalink for Example 2.4.1: One-Card Stud Poker">🔗</a></div></article><details id="A_playonecard" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Play One-Card Stud Poker.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_playonecard-2-1">Play the game several times with two other people (so you have two players and a dealer). Keep track of the strategy choices of the players and the resulting payoffs.<div class="autopermalink" data-description="Paragraph"><a href="#A_playonecard-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.4.1: Play One-Card Stud Poker"><a href="#A_playonecard" title="Copy heading and permalink for Activity 2.4.1: Play One-Card Stud Poker" aria-label="Copy heading and permalink for Activity 2.4.1: Play One-Card Stud Poker">🔗</a></div></article></details><details id="A_onecardconjecturestrat" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Guess a strategy.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_onecardconjecturestrat-2-1">Based on playing the game, determine a possible winning strategy.<div class="autopermalink" data-description="Paragraph"><a href="#A_onecardconjecturestrat-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.4.2: Guess a strategy"><a href="#A_onecardconjecturestrat" title="Copy heading and permalink for Activity 2.4.2: Guess a strategy" aria-label="Copy heading and permalink for Activity 2.4.2: Guess a strategy">🔗</a></div></article></details><details id="A_onecardzerosum" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Check if zero-sum.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_onecardzerosum-2-1">Is this a zero-sum game? Why or why not?<div class="autopermalink" data-description="Paragraph"><a href="#A_onecardzerosum-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.4.3: Check if zero-sum"><a href="#A_onecardzerosum" title="Copy heading and permalink for Activity 2.4.3: Check if zero-sum" aria-label="Copy heading and permalink for Activity 2.4.3: Check if zero-sum">🔗</a></div></article></details><details id="A_dealandstrat" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Effect of the deal.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_dealandstrat-2-1">Does the actual deal affect the choice of strategy?<div class="autopermalink" data-description="Paragraph"><a href="#A_dealandstrat-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.4.4: Effect of the deal"><a href="#A_dealandstrat" title="Copy heading and permalink for Activity 2.4.4: Effect of the deal" aria-label="Copy heading and permalink for Activity 2.4.4: Effect of the deal">🔗</a></div></article></details><details id="A_strategychoices" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.5</span><span class="period">.</span><span class="space"> </span><span class="title">Strategy choices.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_strategychoices-2-1">On any given deal, what strategy choices does a player have?<div class="autopermalink" data-description="Paragraph"><a href="#A_strategychoices-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.4.5: Strategy choices"><a href="#A_strategychoices" title="Copy heading and permalink for Activity 2.4.5: Strategy choices" aria-label="Copy heading and permalink for Activity 2.4.5: Strategy choices">🔗</a></div></article></details><div class="para" id="S_OneCardStud-9">Before moving on, you should attempt to determine the payoff matrix. The remainder of this section will be more meaningful if you have given some thought to what the payoff matrix should be. It is OK to be wrong at this point, it is not OK to not try.<div class="autopermalink" data-description="Paragraph"><a href="#S_OneCardStud-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="A_possiblematrix" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Determine a possible payoff matrix.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_possiblematrix-2-1">Write down a possible payoff matrix for this game.<div class="autopermalink" data-description="Paragraph"><a href="#A_possiblematrix-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.4.6: Determine a possible payoff matrix"><a href="#A_possiblematrix" title="Copy heading and permalink for Activity 2.4.6: Determine a possible payoff matrix" aria-label="Copy heading and permalink for Activity 2.4.6: Determine a possible payoff matrix">🔗</a></div></article></details><div class="para" id="S_OneCardStud-11">Now let’s work through creating the payoff matrix for One-Card Stud Poker.<div class="autopermalink" data-description="Paragraph"><a href="#S_OneCardStud-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="A_payoffBF" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.7</span><span class="period">.</span><span class="space"> </span><span class="title">Payoff for [Bet, Fold].</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_payoffBF-2-1">If Player 1 Bets and Player 2 Folds, does it matter which cards were dealt? How much does Player 1 win? How much does Player 2 lose? What is the payoff vector for [Bet, Fold]? (Keep in mind your answer to <a href="S_OneCardStud.html#A_onecardzerosum" class="xref" data-knowl="./knowl/xref/A_onecardzerosum.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.3: Check if zero-sum">Activity 2.4.3</a>.)<div class="autopermalink" data-description="Paragraph"><a href="#A_payoffBF-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.4.7: Payoff for [Bet, Fold]"><a href="#A_payoffBF" title="Copy heading and permalink for Activity 2.4.7: Payoff for [Bet, Fold]" aria-label="Copy heading and permalink for Activity 2.4.7: Payoff for [Bet, Fold]">🔗</a></div></article></details><details id="A_payoffFB" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.8</span><span class="period">.</span><span class="space"> </span><span class="title">Payoff for [Fold, Bet].</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_payoffFB-2-1">If Player 1 Folds and Player 2 Bets, does it matter which cards were dealt? What is the payoff vector for [Fold, Bet]?<div class="autopermalink" data-description="Paragraph"><a href="#A_payoffFB-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.4.8: Payoff for [Fold, Bet]"><a href="#A_payoffFB" title="Copy heading and permalink for Activity 2.4.8: Payoff for [Fold, Bet]" aria-label="Copy heading and permalink for Activity 2.4.8: Payoff for [Fold, Bet]">🔗</a></div></article></details><details id="A_payoffandactual" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.9</span><span class="period">.</span><span class="space"> </span><span class="title">Payoff and the actual deal.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_payoffandactual-2-1">If both players Bet, does the payoff depend on which cards were dealt?<div class="autopermalink" data-description="Paragraph"><a href="#A_payoffandactual-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.4.9: Payoff and the actual deal"><a href="#A_payoffandactual" title="Copy heading and permalink for Activity 2.4.9: Payoff and the actual deal" aria-label="Copy heading and permalink for Activity 2.4.9: Payoff and the actual deal">🔗</a></div></article></details><div class="para" id="S_OneCardStud-15">To determine the payoff vector for [Bet, Bet] and [Fold, Fold] we will need to consider which cards were dealt. We can use some probability to determine the remaining payoff vectors.<div class="autopermalink" data-description="Paragraph"><a href="#S_OneCardStud-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="A_probofdeal" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.10</span><span class="period">.</span><span class="space"> </span><span class="title">Probability of each deal.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_probofdeal-2-1">There are four possible outcomes of the deal (what cards could have been dealt to each player?). List them. What is the probability that each occurs? Remember, the probability of an event is a number between 0 and 1.<div class="autopermalink" data-description="Paragraph"><a href="#A_probofdeal-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.4.10: Probability of each deal"><a href="#A_probofdeal" title="Copy heading and permalink for Activity 2.4.10: Probability of each deal" aria-label="Copy heading and permalink for Activity 2.4.10: Probability of each deal">🔗</a></div></article></details><details id="A_BBpayoffperdeal" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.11</span><span class="period">.</span><span class="space"> </span><span class="title">Payoff for each deal with [Bet, Bet].</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_BBpayoffperdeal-2-1">Consider the pair of strategies [Bet, Bet]. For each possible deal, determine the payoff vector. For example, if the players are each dealt an Ace (Red), how much does each player win? Again, keep in mind your answer to <a href="S_OneCardStud.html#A_onecardzerosum" class="xref" data-knowl="./knowl/xref/A_onecardzerosum.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.3: Check if zero-sum">Activity 2.4.3</a>.<div class="autopermalink" data-description="Paragraph"><a href="#A_BBpayoffperdeal-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.4.11: Payoff for each deal with [Bet, Bet]"><a href="#A_BBpayoffperdeal" title="Copy heading and permalink for Activity 2.4.11: Payoff for each deal with [Bet, Bet]" aria-label="Copy heading and permalink for Activity 2.4.11: Payoff for each deal with [Bet, Bet]">🔗</a></div></article></details><div class="para" id="S_OneCardStud-18">In order to calculate the payoff for [Bet, Bet], we need to take a weighted average of the possible payoff vectors in <a href="S_OneCardStud.html#A_BBpayoffperdeal" class="xref" data-knowl="./knowl/xref/A_BBpayoffperdeal.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.11: Payoff for each deal with [Bet, Bet]">Activity 2.4.11</a>. In particular, we will “weight” a payoff by the probability that it occurs. Recall that this is the <dfn class="terminology">expected value</dfn>, <a href="S_Probability.html#D_expectedvalue" class="xref" data-knowl="./knowl/xref/D_expectedvalue.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.3.4">Definition 2.3.4</a>. We will calculate the expected value separately for each player.<div class="autopermalink" data-description="Paragraph"><a href="#S_OneCardStud-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="A_BBev1" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.12</span><span class="period">.</span><span class="space"> </span><span class="title">Player 1’s expected value for [Bet, Bet].</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_BBev1-2-1">Find the expected value for [Bet, Bet] for Player 1.<div class="autopermalink" data-description="Paragraph"><a href="#A_BBev1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.4.12: Player 1’s expected value for [Bet, Bet]"><a href="#A_BBev1" title="Copy heading and permalink for Activity 2.4.12: Player 1’s expected value for [Bet, Bet]" aria-label="Copy heading and permalink for Activity 2.4.12: Player 1’s expected value for [Bet, Bet]">🔗</a></div></article></details><details id="A_BBev2" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.13</span><span class="period">.</span><span class="space"> </span><span class="title">Player 2’s expected value for [Bet, Bet].</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_BBev2-2-1">Find the expected value for [Bet, Bet] for Player 2.<div class="autopermalink" data-description="Paragraph"><a href="#A_BBev2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.4.13: Player 2’s expected value for [Bet, Bet]"><a href="#A_BBev2" title="Copy heading and permalink for Activity 2.4.13: Player 2’s expected value for [Bet, Bet]" aria-label="Copy heading and permalink for Activity 2.4.13: Player 2’s expected value for [Bet, Bet]">🔗</a></div></article></details><div class="para" id="S_OneCardStud-21">The pair of expected values from <a href="S_OneCardStud.html#A_BBev1" class="xref" data-knowl="./knowl/xref/A_BBev1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.12: Player 1’s expected value for [Bet, Bet]">Activity 2.4.12</a> and <a href="S_OneCardStud.html#A_BBev2" class="xref" data-knowl="./knowl/xref/A_BBev2.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.13: Player 2’s expected value for [Bet, Bet]">Activity 2.4.13</a> is the payoff vector for [Bet, Bet].<div class="autopermalink" data-description="Paragraph"><a href="#S_OneCardStud-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="A_BBexplain" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.14</span><span class="period">.</span><span class="space"> </span><span class="title">Justify using expected value as the payoff.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_BBexplain-2-1">Explain why it should make sense to use the expected values for the payoffs in the matrix for the strategy pair [Bet, Bet].<div class="autopermalink" data-description="Paragraph"><a href="#A_BBexplain-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="solutions"><details id="A_BBexplain-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
-<div class="para" id="A_BBexplain-3-1">Think about what a player needs to know to choose a strategy in a game of chance.<div class="autopermalink" data-description="Paragraph"><a href="#A_BBexplain-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Hint 2.4.14.1"><a href="#A_BBexplain-3" title="Copy heading and permalink for Hint 2.4.14.1" aria-label="Copy heading and permalink for Hint 2.4.14.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Activity 2.4.14: Justify using expected value as the payoff"><a href="#A_BBexplain" title="Copy heading and permalink for Activity 2.4.14: Justify using expected value as the payoff" aria-label="Copy heading and permalink for Activity 2.4.14: Justify using expected value as the payoff">🔗</a></div></article></details><div class="para" id="S_OneCardStud-23">We can use a similar process to find the payoff vector for [Fold, Fold].<div class="autopermalink" data-description="Paragraph"><a href="#S_OneCardStud-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="A_FF" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.15</span><span class="period">.</span><span class="space"> </span><span class="title">Repeat for [Fold, Fold].</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_FF-2-1">Repeat <a href="S_OneCardStud.html#A_BBpayoffperdeal" class="xref" data-knowl="./knowl/xref/A_BBpayoffperdeal.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.11: Payoff for each deal with [Bet, Bet]">Activity 2.4.11</a>, <a href="S_OneCardStud.html#A_BBev1" class="xref" data-knowl="./knowl/xref/A_BBev1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.12: Player 1’s expected value for [Bet, Bet]">Activity 2.4.12</a>, and <a href="S_OneCardStud.html#A_BBev2" class="xref" data-knowl="./knowl/xref/A_BBev2.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.13: Player 2’s expected value for [Bet, Bet]">Activity 2.4.13</a> for the pair of strategies [Fold, Fold].<div class="autopermalink" data-description="Paragraph"><a href="#A_FF-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.4.15: Repeat for [Fold, Fold]"><a href="#A_FF" title="Copy heading and permalink for Activity 2.4.15: Repeat for [Fold, Fold]" aria-label="Copy heading and permalink for Activity 2.4.15: Repeat for [Fold, Fold]">🔗</a></div></article></details><details id="A_onecardmatrix" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.16</span><span class="period">.</span><span class="space"> </span><span class="title">Complete payoff matrix.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_onecardmatrix-2-1">Summarize the above work by giving the completed payoff matrix for One-Card Stud Poker.<div class="autopermalink" data-description="Paragraph"><a href="#A_onecardmatrix-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.4.16: Complete payoff matrix"><a href="#A_onecardmatrix" title="Copy heading and permalink for Activity 2.4.16: Complete payoff matrix" aria-label="Copy heading and permalink for Activity 2.4.16: Complete payoff matrix">🔗</a></div></article></details><div class="para" id="S_OneCardStud-26">Now that you have done all the hard work of finding the payoff matrix for One-Card Stud Poker, we can analyze our two-player zero-sum game using the techniques we learned in the previous sections. It is also important to see how the mathematical solution compares to our conjectured solution from <a href="S_OneCardStud.html#A_onecardconjecturestrat" class="xref" data-knowl="./knowl/xref/A_onecardconjecturestrat.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.2: Guess a strategy">Activity 2.4.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#S_OneCardStud-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="A_onecardstrategy" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.17</span><span class="period">.</span><span class="space"> </span><span class="title">Best strategy for One-Card Stud.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_onecardstrategy-2-1">Use the payoff matrix to determine the best strategy for each player. If each player uses their best strategy, what will be the outcome of the game?<div class="autopermalink" data-description="Paragraph"><a href="#A_onecardstrategy-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.4.17: Best strategy for One-Card Stud"><a href="#A_onecardstrategy" title="Copy heading and permalink for Activity 2.4.17: Best strategy for One-Card Stud" aria-label="Copy heading and permalink for Activity 2.4.17: Best strategy for One-Card Stud">🔗</a></div></article></details><details id="A_onecardcompare" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.18</span><span class="period">.</span><span class="space"> </span><span class="title">Compare strategies.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_onecardcompare-2-1">Compare the strategy you found in <a href="S_OneCardStud.html#A_onecardstrategy" class="xref" data-knowl="./knowl/xref/A_onecardstrategy.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.17: Best strategy for One-Card Stud">Activity 2.4.17</a> to your suggested strategy in <a href="S_OneCardStud.html#A_onecardconjecturestrat" class="xref" data-knowl="./knowl/xref/A_onecardconjecturestrat.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.2: Guess a strategy">Activity 2.4.2</a>. In particular, discuss how knowing the payoff matrix might have changed your strategy. Also compare the payoff that results from the strategy in <a href="S_OneCardStud.html#A_onecardstrategy" class="xref" data-knowl="./knowl/xref/A_onecardstrategy.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.17: Best strategy for One-Card Stud">Activity 2.4.17</a> to the payoff that results from your original strategy in <a href="S_OneCardStud.html#A_onecardconjecturestrat" class="xref" data-knowl="./knowl/xref/A_onecardconjecturestrat.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.2: Guess a strategy">Activity 2.4.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#A_onecardcompare-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.4.18: Compare strategies"><a href="#A_onecardcompare" title="Copy heading and permalink for Activity 2.4.18: Compare strategies" aria-label="Copy heading and permalink for Activity 2.4.18: Compare strategies">🔗</a></div></article></details><div class="para" id="S_OneCardStud-29">Since One-Card Stud Poker has an element of chance, we should see what happens if we play the game several times using the strategy from <a href="S_OneCardStud.html#A_onecardstrategy" class="xref" data-knowl="./knowl/xref/A_onecardstrategy.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.17: Best strategy for One-Card Stud">Activity 2.4.17</a>.<div class="autopermalink" data-description="Paragraph"><a href="#S_OneCardStud-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="A_onecardlongrun" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.19</span><span class="period">.</span><span class="space"> </span><span class="title">Payoff for repeated One-Card Stud.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_onecardlongrun-2-1">Use the payoff matrix to predict what the payoff to each player would be if the game is played ten times.<div class="autopermalink" data-description="Paragraph"><a href="#A_onecardlongrun-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.4.19: Payoff for repeated One-Card Stud"><a href="#A_onecardlongrun" title="Copy heading and permalink for Activity 2.4.19: Payoff for repeated One-Card Stud" aria-label="Copy heading and permalink for Activity 2.4.19: Payoff for repeated One-Card Stud">🔗</a></div></article></details><details id="A_onecardtrials" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.20</span><span class="period">.</span><span class="space"> </span><span class="title">Play repeated One-Card Stud.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_onecardtrials-2-1">Play the game ten times using the best strategy. How much has each player won or lost after ten hands of One-Card Stud Poker? Compare your answer to your prediction in <a href="S_OneCardStud.html#A_onecardlongrun" class="xref" data-knowl="./knowl/xref/A_onecardlongrun.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.19: Payoff for repeated One-Card Stud">Activity 2.4.19</a>. Does the actual payoff differ from the theoretical payoff? If so, why do you think this might be?<div class="autopermalink" data-description="Paragraph"><a href="#A_onecardtrials-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.4.20: Play repeated One-Card Stud"><a href="#A_onecardtrials" title="Copy heading and permalink for Activity 2.4.20: Play repeated One-Card Stud" aria-label="Copy heading and permalink for Activity 2.4.20: Play repeated One-Card Stud">🔗</a></div></article></details><details id="A_onecardfair" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.21</span><span class="period">.</span><span class="space"> </span><span class="title">Fair game.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_onecardfair-2-1">Explain why this game is considered fair.<div class="autopermalink" data-description="Paragraph"><a href="#A_onecardfair-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 2.4.21: Fair game"><a href="#A_onecardfair" title="Copy heading and permalink for Activity 2.4.21: Fair game" aria-label="Copy heading and permalink for Activity 2.4.21: Fair game">🔗</a></div></article></details><article class="example example-like" id="E_genonecardstud"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Generalized One-Card Stud Poker.</span>
+<div class="autopermalink" aria-hidden="true" data-description="Example 2.4.1: One-Card Stud Poker"><a tabindex="-1" href="#E_onecardstud" title="Copy heading and permalink for Example 2.4.1: One-Card Stud Poker" aria-label="Copy heading and permalink for Example 2.4.1: One-Card Stud Poker">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_playonecard"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Play One-Card Stud Poker.</span>
 </h3>
-<div class="para" id="E_genonecardstud-2-1">In One-Card Stud Poker we anted one chip and bet one chip. Now, suppose we let players ante a different amount and bet a different amount (although players will still ante and bet the same amount as each other). Suppose a player antes <span class="process-math">\(a\)</span> and bets <span class="process-math">\(b\text{.}\)</span> How might this change the game?<div class="autopermalink" data-description="Paragraph"><a href="#E_genonecardstud-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="A_playonecard-2-1">Play the game several times with two other people (so you have two players and a dealer). Keep track of the strategy choices of the players and the resulting payoffs.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_playonecard-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 2.4.2: Generalized One-Card Stud Poker"><a href="#E_genonecardstud" title="Copy heading and permalink for Example 2.4.2: Generalized One-Card Stud Poker" aria-label="Copy heading and permalink for Example 2.4.2: Generalized One-Card Stud Poker">🔗</a></div></article><details id="A_genonecard" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.22</span><span class="period">.</span><span class="space"> </span><span class="title">Payoff matrix for Generalized One-Card Stud.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_genonecard-2-1">Use the method outlined for One-Card Stud Poker to determine the payoff matrix for Generalized One-Card Stud Poker.<div class="autopermalink" data-description="Paragraph"><a href="#A_genonecard-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.1: Play One-Card Stud Poker"><a tabindex="-1" href="#A_playonecard" title="Copy heading and permalink for Activity 2.4.1: Play One-Card Stud Poker" aria-label="Copy heading and permalink for Activity 2.4.1: Play One-Card Stud Poker">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_onecardconjecturestrat"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Guess a strategy.</span>
+</h3>
+<div class="para" id="A_onecardconjecturestrat-2-1">Based on playing the game, determine a possible winning strategy.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_onecardconjecturestrat-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Activity 2.4.22: Payoff matrix for Generalized One-Card Stud"><a href="#A_genonecard" title="Copy heading and permalink for Activity 2.4.22: Payoff matrix for Generalized One-Card Stud" aria-label="Copy heading and permalink for Activity 2.4.22: Payoff matrix for Generalized One-Card Stud">🔗</a></div></article></details><details id="A_stratgenonecard" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.23</span><span class="period">.</span><span class="space"> </span><span class="title">Strategy for Generalized One-Card Stud.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_stratgenonecard-2-1">Does the strategy change for the generalized version of the game? Explain.<div class="autopermalink" data-description="Paragraph"><a href="#A_stratgenonecard-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.2: Guess a strategy"><a tabindex="-1" href="#A_onecardconjecturestrat" title="Copy heading and permalink for Activity 2.4.2: Guess a strategy" aria-label="Copy heading and permalink for Activity 2.4.2: Guess a strategy">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_onecardzerosum"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Check if zero-sum.</span>
+</h3>
+<div class="para" id="A_onecardzerosum-2-1">Is this a zero-sum game? Why or why not?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_onecardzerosum-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Activity 2.4.23: Strategy for Generalized One-Card Stud"><a href="#A_stratgenonecard" title="Copy heading and permalink for Activity 2.4.23: Strategy for Generalized One-Card Stud" aria-label="Copy heading and permalink for Activity 2.4.23: Strategy for Generalized One-Card Stud">🔗</a></div></article></details><div class="para" id="S_OneCardStud-36">For more of a challenge with probability, you can think about what happens if we change the number of Kings in the deck.<div class="autopermalink" data-description="Paragraph"><a href="#S_OneCardStud-36" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.3: Check if zero-sum"><a tabindex="-1" href="#A_onecardzerosum" title="Copy heading and permalink for Activity 2.4.3: Check if zero-sum" aria-label="Copy heading and permalink for Activity 2.4.3: Check if zero-sum">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_dealandstrat"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Effect of the deal.</span>
+</h3>
+<div class="para" id="A_dealandstrat-2-1">Does the actual deal affect the choice of strategy?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_dealandstrat-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="A_OCSMoreK" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.24</span><span class="period">.</span><span class="space"> </span><span class="title">One-Card Stud with more Kings.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="introduction" id="A_OCSMoreK-2"><div class="para" id="A_OCSMoreK-2-1">Suppose you are playing the regular version of One-Card Stud Poker from <a href="S_OneCardStud.html#E_onecardstud" class="xref" data-knowl="./knowl/xref/E_onecardstud.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.4.1: One-Card Stud Poker">Example 2.4.1</a>, but now the deck contains 25% Aces and 75% Kings.<div class="autopermalink" data-description="Paragraph"><a href="#A_OCSMoreK-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.4: Effect of the deal"><a tabindex="-1" href="#A_dealandstrat" title="Copy heading and permalink for Activity 2.4.4: Effect of the deal" aria-label="Copy heading and permalink for Activity 2.4.4: Effect of the deal">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_strategychoices"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Strategy choices.</span>
+</h3>
+<div class="para" id="A_strategychoices-2-1">On any given deal, what strategy choices does a player have?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_strategychoices-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.5: Strategy choices"><a tabindex="-1" href="#A_strategychoices" title="Copy heading and permalink for Activity 2.4.5: Strategy choices" aria-label="Copy heading and permalink for Activity 2.4.5: Strategy choices">🔗</a></div>
+</article>
+<div class="para" id="S_OneCardStud-9">Before moving on, you should attempt to determine the payoff matrix. The remainder of this section will be more meaningful if you have given some thought to what the payoff matrix should be. It is OK to be wrong at this point, it is not OK to not try.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_OneCardStud-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="A_possiblematrix"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Determine a possible payoff matrix.</span>
+</h3>
+<div class="para" id="A_possiblematrix-2-1">Write down a possible payoff matrix for this game.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_possiblematrix-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.6: Determine a possible payoff matrix"><a tabindex="-1" href="#A_possiblematrix" title="Copy heading and permalink for Activity 2.4.6: Determine a possible payoff matrix" aria-label="Copy heading and permalink for Activity 2.4.6: Determine a possible payoff matrix">🔗</a></div>
+</article>
+<div class="para" id="S_OneCardStud-11">Now let’s work through creating the payoff matrix for One-Card Stud Poker.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_OneCardStud-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="A_payoffBF"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Payoff for [Bet, Fold].</span>
+</h3>
+<div class="para" id="A_payoffBF-2-1">If Player 1 Bets and Player 2 Folds, does it matter which cards were dealt? How much does Player 1 win? How much does Player 2 lose? What is the payoff vector for [Bet, Fold]? (Keep in mind your answer to <a href="S_OneCardStud.html#A_onecardzerosum" class="xref" data-knowl="./knowl/xref/A_onecardzerosum.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.3: Check if zero-sum">Activity 2.4.3</a>.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_payoffBF-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.7: Payoff for [Bet, Fold]"><a tabindex="-1" href="#A_payoffBF" title="Copy heading and permalink for Activity 2.4.7: Payoff for [Bet, Fold]" aria-label="Copy heading and permalink for Activity 2.4.7: Payoff for [Bet, Fold]">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_payoffFB"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Payoff for [Fold, Bet].</span>
+</h3>
+<div class="para" id="A_payoffFB-2-1">If Player 1 Folds and Player 2 Bets, does it matter which cards were dealt? What is the payoff vector for [Fold, Bet]?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_payoffFB-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.8: Payoff for [Fold, Bet]"><a tabindex="-1" href="#A_payoffFB" title="Copy heading and permalink for Activity 2.4.8: Payoff for [Fold, Bet]" aria-label="Copy heading and permalink for Activity 2.4.8: Payoff for [Fold, Bet]">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_payoffandactual"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Payoff and the actual deal.</span>
+</h3>
+<div class="para" id="A_payoffandactual-2-1">If both players Bet, does the payoff depend on which cards were dealt?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_payoffandactual-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.9: Payoff and the actual deal"><a tabindex="-1" href="#A_payoffandactual" title="Copy heading and permalink for Activity 2.4.9: Payoff and the actual deal" aria-label="Copy heading and permalink for Activity 2.4.9: Payoff and the actual deal">🔗</a></div>
+</article>
+<div class="para" id="S_OneCardStud-15">To determine the payoff vector for [Bet, Bet] and [Fold, Fold] we will need to consider which cards were dealt. We can use some probability to determine the remaining payoff vectors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_OneCardStud-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="A_probofdeal"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Probability of each deal.</span>
+</h3>
+<div class="para" id="A_probofdeal-2-1">There are four possible outcomes of the deal (what cards could have been dealt to each player?). List them. What is the probability that each occurs? Remember, the probability of an event is a number between 0 and 1.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_probofdeal-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.10: Probability of each deal"><a tabindex="-1" href="#A_probofdeal" title="Copy heading and permalink for Activity 2.4.10: Probability of each deal" aria-label="Copy heading and permalink for Activity 2.4.10: Probability of each deal">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_BBpayoffperdeal"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Payoff for each deal with [Bet, Bet].</span>
+</h3>
+<div class="para" id="A_BBpayoffperdeal-2-1">Consider the pair of strategies [Bet, Bet]. For each possible deal, determine the payoff vector. For example, if the players are each dealt an Ace (Red), how much does each player win? Again, keep in mind your answer to <a href="S_OneCardStud.html#A_onecardzerosum" class="xref" data-knowl="./knowl/xref/A_onecardzerosum.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.3: Check if zero-sum">Activity 2.4.3</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BBpayoffperdeal-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.11: Payoff for each deal with [Bet, Bet]"><a tabindex="-1" href="#A_BBpayoffperdeal" title="Copy heading and permalink for Activity 2.4.11: Payoff for each deal with [Bet, Bet]" aria-label="Copy heading and permalink for Activity 2.4.11: Payoff for each deal with [Bet, Bet]">🔗</a></div>
+</article>
+<div class="para" id="S_OneCardStud-18">In order to calculate the payoff for [Bet, Bet], we need to take a weighted average of the possible payoff vectors in <a href="S_OneCardStud.html#A_BBpayoffperdeal" class="xref" data-knowl="./knowl/xref/A_BBpayoffperdeal.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.11: Payoff for each deal with [Bet, Bet]">Activity 2.4.11</a>. In particular, we will “weight” a payoff by the probability that it occurs. Recall that this is the <dfn class="terminology">expected value</dfn>, <a href="S_Probability.html#D_expectedvalue" class="xref" data-knowl="./knowl/xref/D_expectedvalue.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.3.4">Definition 2.3.4</a>. We will calculate the expected value separately for each player.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_OneCardStud-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="A_BBev1"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Player 1’s expected value for [Bet, Bet].</span>
+</h3>
+<div class="para" id="A_BBev1-2-1">Find the expected value for [Bet, Bet] for Player 1.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BBev1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.12: Player 1’s expected value for [Bet, Bet]"><a tabindex="-1" href="#A_BBev1" title="Copy heading and permalink for Activity 2.4.12: Player 1’s expected value for [Bet, Bet]" aria-label="Copy heading and permalink for Activity 2.4.12: Player 1’s expected value for [Bet, Bet]">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_BBev2"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Player 2’s expected value for [Bet, Bet].</span>
+</h3>
+<div class="para" id="A_BBev2-2-1">Find the expected value for [Bet, Bet] for Player 2.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BBev2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.13: Player 2’s expected value for [Bet, Bet]"><a tabindex="-1" href="#A_BBev2" title="Copy heading and permalink for Activity 2.4.13: Player 2’s expected value for [Bet, Bet]" aria-label="Copy heading and permalink for Activity 2.4.13: Player 2’s expected value for [Bet, Bet]">🔗</a></div>
+</article>
+<div class="para" id="S_OneCardStud-21">The pair of expected values from <a href="S_OneCardStud.html#A_BBev1" class="xref" data-knowl="./knowl/xref/A_BBev1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.12: Player 1’s expected value for [Bet, Bet]">Activity 2.4.12</a> and <a href="S_OneCardStud.html#A_BBev2" class="xref" data-knowl="./knowl/xref/A_BBev2.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.13: Player 2’s expected value for [Bet, Bet]">Activity 2.4.13</a> is the payoff vector for [Bet, Bet].<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_OneCardStud-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="A_BBexplain"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Justify using expected value as the payoff.</span>
+</h3>
+<div class="para" id="A_BBexplain-2-1">Explain why it should make sense to use the expected values for the payoffs in the matrix for the strategy pair [Bet, Bet].<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BBexplain-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="A_BBexplain-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="A_BBexplain-3-1">Think about what a player needs to know to choose a strategy in a game of chance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_BBexplain-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 2.4.14.1"><a tabindex="-1" href="#A_BBexplain-3" title="Copy heading and permalink for Hint 2.4.14.1" aria-label="Copy heading and permalink for Hint 2.4.14.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.14: Justify using expected value as the payoff"><a tabindex="-1" href="#A_BBexplain" title="Copy heading and permalink for Activity 2.4.14: Justify using expected value as the payoff" aria-label="Copy heading and permalink for Activity 2.4.14: Justify using expected value as the payoff">🔗</a></div>
+</article>
+<div class="para" id="S_OneCardStud-23">We can use a similar process to find the payoff vector for [Fold, Fold].<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_OneCardStud-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="A_FF"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Repeat for [Fold, Fold].</span>
+</h3>
+<div class="para" id="A_FF-2-1">Repeat <a href="S_OneCardStud.html#A_BBpayoffperdeal" class="xref" data-knowl="./knowl/xref/A_BBpayoffperdeal.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.11: Payoff for each deal with [Bet, Bet]">Activity 2.4.11</a>, <a href="S_OneCardStud.html#A_BBev1" class="xref" data-knowl="./knowl/xref/A_BBev1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.12: Player 1’s expected value for [Bet, Bet]">Activity 2.4.12</a>, and <a href="S_OneCardStud.html#A_BBev2" class="xref" data-knowl="./knowl/xref/A_BBev2.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.13: Player 2’s expected value for [Bet, Bet]">Activity 2.4.13</a> for the pair of strategies [Fold, Fold].<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_FF-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.15: Repeat for [Fold, Fold]"><a tabindex="-1" href="#A_FF" title="Copy heading and permalink for Activity 2.4.15: Repeat for [Fold, Fold]" aria-label="Copy heading and permalink for Activity 2.4.15: Repeat for [Fold, Fold]">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_onecardmatrix"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Complete payoff matrix.</span>
+</h3>
+<div class="para" id="A_onecardmatrix-2-1">Summarize the above work by giving the completed payoff matrix for One-Card Stud Poker.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_onecardmatrix-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.16: Complete payoff matrix"><a tabindex="-1" href="#A_onecardmatrix" title="Copy heading and permalink for Activity 2.4.16: Complete payoff matrix" aria-label="Copy heading and permalink for Activity 2.4.16: Complete payoff matrix">🔗</a></div>
+</article>
+<div class="para" id="S_OneCardStud-26">Now that you have done all the hard work of finding the payoff matrix for One-Card Stud Poker, we can analyze our two-player zero-sum game using the techniques we learned in the previous sections. It is also important to see how the mathematical solution compares to our conjectured solution from <a href="S_OneCardStud.html#A_onecardconjecturestrat" class="xref" data-knowl="./knowl/xref/A_onecardconjecturestrat.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.2: Guess a strategy">Activity 2.4.2</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_OneCardStud-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="A_onecardstrategy"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Best strategy for One-Card Stud.</span>
+</h3>
+<div class="para" id="A_onecardstrategy-2-1">Use the payoff matrix to determine the best strategy for each player. If each player uses their best strategy, what will be the outcome of the game?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_onecardstrategy-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.17: Best strategy for One-Card Stud"><a tabindex="-1" href="#A_onecardstrategy" title="Copy heading and permalink for Activity 2.4.17: Best strategy for One-Card Stud" aria-label="Copy heading and permalink for Activity 2.4.17: Best strategy for One-Card Stud">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_onecardcompare"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Compare strategies.</span>
+</h3>
+<div class="para" id="A_onecardcompare-2-1">Compare the strategy you found in <a href="S_OneCardStud.html#A_onecardstrategy" class="xref" data-knowl="./knowl/xref/A_onecardstrategy.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.17: Best strategy for One-Card Stud">Activity 2.4.17</a> to your suggested strategy in <a href="S_OneCardStud.html#A_onecardconjecturestrat" class="xref" data-knowl="./knowl/xref/A_onecardconjecturestrat.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.2: Guess a strategy">Activity 2.4.2</a>. In particular, discuss how knowing the payoff matrix might have changed your strategy. Also compare the payoff that results from the strategy in <a href="S_OneCardStud.html#A_onecardstrategy" class="xref" data-knowl="./knowl/xref/A_onecardstrategy.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.17: Best strategy for One-Card Stud">Activity 2.4.17</a> to the payoff that results from your original strategy in <a href="S_OneCardStud.html#A_onecardconjecturestrat" class="xref" data-knowl="./knowl/xref/A_onecardconjecturestrat.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.2: Guess a strategy">Activity 2.4.2</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_onecardcompare-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.18: Compare strategies"><a tabindex="-1" href="#A_onecardcompare" title="Copy heading and permalink for Activity 2.4.18: Compare strategies" aria-label="Copy heading and permalink for Activity 2.4.18: Compare strategies">🔗</a></div>
+</article>
+<div class="para" id="S_OneCardStud-29">Since One-Card Stud Poker has an element of chance, we should see what happens if we play the game several times using the strategy from <a href="S_OneCardStud.html#A_onecardstrategy" class="xref" data-knowl="./knowl/xref/A_onecardstrategy.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.17: Best strategy for One-Card Stud">Activity 2.4.17</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_OneCardStud-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="A_onecardlongrun"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Payoff for repeated One-Card Stud.</span>
+</h3>
+<div class="para" id="A_onecardlongrun-2-1">Use the payoff matrix to predict what the payoff to each player would be if the game is played ten times.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_onecardlongrun-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.19: Payoff for repeated One-Card Stud"><a tabindex="-1" href="#A_onecardlongrun" title="Copy heading and permalink for Activity 2.4.19: Payoff for repeated One-Card Stud" aria-label="Copy heading and permalink for Activity 2.4.19: Payoff for repeated One-Card Stud">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_onecardtrials"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Play repeated One-Card Stud.</span>
+</h3>
+<div class="para" id="A_onecardtrials-2-1">Play the game ten times using the best strategy. How much has each player won or lost after ten hands of One-Card Stud Poker? Compare your answer to your prediction in <a href="S_OneCardStud.html#A_onecardlongrun" class="xref" data-knowl="./knowl/xref/A_onecardlongrun.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.4.19: Payoff for repeated One-Card Stud">Activity 2.4.19</a>. Does the actual payoff differ from the theoretical payoff? If so, why do you think this might be?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_onecardtrials-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.20: Play repeated One-Card Stud"><a tabindex="-1" href="#A_onecardtrials" title="Copy heading and permalink for Activity 2.4.20: Play repeated One-Card Stud" aria-label="Copy heading and permalink for Activity 2.4.20: Play repeated One-Card Stud">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_onecardfair"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fair game.</span>
+</h3>
+<div class="para" id="A_onecardfair-2-1">Explain why this game is considered fair.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_onecardfair-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.21: Fair game"><a tabindex="-1" href="#A_onecardfair" title="Copy heading and permalink for Activity 2.4.21: Fair game" aria-label="Copy heading and permalink for Activity 2.4.21: Fair game">🔗</a></div>
+</article>
+<article class="example example-like" id="E_genonecardstud"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Generalized One-Card Stud Poker.</span>
+</h3>
+<div class="para" id="E_genonecardstud-2-1">In One-Card Stud Poker we anted one chip and bet one chip. Now, suppose we let players ante a different amount and bet a different amount (although players will still ante and bet the same amount as each other). Suppose a player antes <span class="process-math">\(a\)</span> and bets <span class="process-math">\(b\text{.}\)</span> How might this change the game?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_genonecardstud-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 2.4.2: Generalized One-Card Stud Poker"><a tabindex="-1" href="#E_genonecardstud" title="Copy heading and permalink for Example 2.4.2: Generalized One-Card Stud Poker" aria-label="Copy heading and permalink for Example 2.4.2: Generalized One-Card Stud Poker">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_genonecard"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Payoff matrix for Generalized One-Card Stud.</span>
+</h3>
+<div class="para" id="A_genonecard-2-1">Use the method outlined for One-Card Stud Poker to determine the payoff matrix for Generalized One-Card Stud Poker.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_genonecard-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.22: Payoff matrix for Generalized One-Card Stud"><a tabindex="-1" href="#A_genonecard" title="Copy heading and permalink for Activity 2.4.22: Payoff matrix for Generalized One-Card Stud" aria-label="Copy heading and permalink for Activity 2.4.22: Payoff matrix for Generalized One-Card Stud">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_stratgenonecard"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.23</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Strategy for Generalized One-Card Stud.</span>
+</h3>
+<div class="para" id="A_stratgenonecard-2-1">Does the strategy change for the generalized version of the game? Explain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_stratgenonecard-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.23: Strategy for Generalized One-Card Stud"><a tabindex="-1" href="#A_stratgenonecard" title="Copy heading and permalink for Activity 2.4.23: Strategy for Generalized One-Card Stud" aria-label="Copy heading and permalink for Activity 2.4.23: Strategy for Generalized One-Card Stud">🔗</a></div>
+</article>
+<div class="para" id="S_OneCardStud-36">For more of a challenge with probability, you can think about what happens if we change the number of Kings in the deck.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_OneCardStud-36" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="A_OCSMoreK"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.24</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">One-Card Stud with more Kings.</span>
+</h3>
+<div class="introduction" id="A_OCSMoreK-2">
+<div class="para" id="A_OCSMoreK-2-1">Suppose you are playing the regular version of One-Card Stud Poker from <a href="S_OneCardStud.html#E_onecardstud" class="xref" data-knowl="./knowl/xref/E_onecardstud.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.4.1: One-Card Stud Poker">Example 2.4.1</a>, but now the deck contains 25% Aces and 75% Kings.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_OCSMoreK-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="A_OCSMoreK-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_OCSMoreK-3-1">Do you think having fewer Aces would change your strategy? Why or why not?<div class="autopermalink" data-description="Paragraph"><a href="#A_OCSMoreK-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="A_OCSMoreK-3-1-1">Do you think having fewer Aces would change your strategy? Why or why not?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_OCSMoreK-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 2.4.24.a"><a href="#A_OCSMoreK-3" title="Copy heading and permalink for Task 2.4.24.a" aria-label="Copy heading and permalink for Task 2.4.24.a">🔗</a></div></article><article class="task exercise-like" id="A_OCSMoreK-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_OCSMoreK-4-1">Does the number of Kings in the deck change the the payoff vector for [Bet, Fold] and [Fold, Bet]?<div class="autopermalink" data-description="Paragraph"><a href="#A_OCSMoreK-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.4.24.a"><a tabindex="-1" href="#A_OCSMoreK-3" title="Copy heading and permalink for Task 2.4.24.a" aria-label="Copy heading and permalink for Task 2.4.24.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_OCSMoreK-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_OCSMoreK-4-1-1">Does the number of Kings in the deck change the the payoff vector for [Bet, Fold] and [Fold, Bet]?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_OCSMoreK-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 2.4.24.b"><a href="#A_OCSMoreK-4" title="Copy heading and permalink for Task 2.4.24.b" aria-label="Copy heading and permalink for Task 2.4.24.b">🔗</a></div></article><article class="task exercise-like" id="A_OCSMoreK-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="A_OCSMoreK-5-1">Calculate the expected value for the [Bet, Bet] and [Fold, Fold] strategy pairs.<div class="autopermalink" data-description="Paragraph"><a href="#A_OCSMoreK-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.4.24.b"><a tabindex="-1" href="#A_OCSMoreK-4" title="Copy heading and permalink for Task 2.4.24.b" aria-label="Copy heading and permalink for Task 2.4.24.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_OCSMoreK-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_OCSMoreK-5-1-1">Calculate the expected value for the [Bet, Bet] and [Fold, Fold] strategy pairs.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_OCSMoreK-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="A_OCSMoreK-5-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
-<div class="para" id="A_OCSMoreK-5-2-1">To make this a little easier, assume the deck has infinitely many cards, so that the probability of a player being dealt an Ace doesn’t change if the other player was dealt an Ace. In other words, each player has a probability of <span class="process-math">\(.25\)</span> of being dealt an Ace. Now the probability of the deal Ace, Ace is <span class="process-math">\(.25\times .25\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_OCSMoreK-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="solutions">
+<details id="A_OCSMoreK-5-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="A_OCSMoreK-5-2-1">To make this a little easier, assume the deck has infinitely many cards, so that the probability of a player being dealt an Ace doesn’t change if the other player was dealt an Ace. In other words, each player has a probability of <span class="process-math">\(.25\)</span> of being dealt an Ace. Now the probability of the deal Ace, Ace is <span class="process-math">\(.25\times .25\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_OCSMoreK-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Hint 2.4.24.c.1"><a href="#A_OCSMoreK-5-2" title="Copy heading and permalink for Hint 2.4.24.c.1" aria-label="Copy heading and permalink for Hint 2.4.24.c.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Task 2.4.24.c"><a href="#A_OCSMoreK-5" title="Copy heading and permalink for Task 2.4.24.c" aria-label="Copy heading and permalink for Task 2.4.24.c">🔗</a></div></article><article class="task exercise-like" id="A_OCSMoreK-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="A_OCSMoreK-6-1">Give the payoff matrix for the game. How does it compare to the standard version of the game?<div class="autopermalink" data-description="Paragraph"><a href="#A_OCSMoreK-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 2.4.24.c.1"><a tabindex="-1" href="#A_OCSMoreK-5-2" title="Copy heading and permalink for Hint 2.4.24.c.1" aria-label="Copy heading and permalink for Hint 2.4.24.c.1">🔗</a></div>
+</div></details>
 </div>
-<div class="autopermalink" data-description="Task 2.4.24.d"><a href="#A_OCSMoreK-6" title="Copy heading and permalink for Task 2.4.24.d" aria-label="Copy heading and permalink for Task 2.4.24.d">🔗</a></div></article><article class="task exercise-like" id="A_OCSMoreK-7"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="A_OCSMoreK-7-1">Does the strategy for the game change if the percentage of Kings changes?<div class="autopermalink" data-description="Paragraph"><a href="#A_OCSMoreK-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.4.24.c"><a tabindex="-1" href="#A_OCSMoreK-5" title="Copy heading and permalink for Task 2.4.24.c" aria-label="Copy heading and permalink for Task 2.4.24.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_OCSMoreK-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="A_OCSMoreK-6-1-1">Give the payoff matrix for the game. How does it compare to the standard version of the game?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_OCSMoreK-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 2.4.24.e"><a href="#A_OCSMoreK-7" title="Copy heading and permalink for Task 2.4.24.e" aria-label="Copy heading and permalink for Task 2.4.24.e">🔗</a></div></article><div class="autopermalink" data-description="Activity 2.4.24: One-Card Stud with more Kings"><a href="#A_OCSMoreK" title="Copy heading and permalink for Activity 2.4.24: One-Card Stud with more Kings" aria-label="Copy heading and permalink for Activity 2.4.24: One-Card Stud with more Kings">🔗</a></div></article></details><div class="para" id="S_OneCardStud-38">Now that we have analyzed several zero-sum games, we can see how important it is to find any equilibrium pairs. In the next section we explore equilibrium strategies in more detail.<div class="autopermalink" data-description="Paragraph"><a href="#S_OneCardStud-38" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.4.24.d"><a tabindex="-1" href="#A_OCSMoreK-6" title="Copy heading and permalink for Task 2.4.24.d" aria-label="Copy heading and permalink for Task 2.4.24.d">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_OCSMoreK-7"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="A_OCSMoreK-7-1-1">Does the strategy for the game change if the percentage of Kings changes?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_OCSMoreK-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<section class="reading-questions" id="S_OneCardStud-39"><h3 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Check Your Understanding</span>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.4.24.e"><a tabindex="-1" href="#A_OCSMoreK-7" title="Copy heading and permalink for Task 2.4.24.e" aria-label="Copy heading and permalink for Task 2.4.24.e">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 2.4.24: One-Card Stud with more Kings"><a tabindex="-1" href="#A_OCSMoreK" title="Copy heading and permalink for Activity 2.4.24: One-Card Stud with more Kings" aria-label="Copy heading and permalink for Activity 2.4.24: One-Card Stud with more Kings">🔗</a></div>
+</article>
+<div class="para" id="S_OneCardStud-38">Now that we have analyzed several zero-sum games, we can see how important it is to find any equilibrium pairs. In the next section we explore equilibrium strategies in more detail.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_OneCardStud-38" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="reading-questions" id="S_OneCardStud-39">
+<h3 class="heading hide-type">
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Check Your Understanding</span>
 </h3>
-<article class="exercise exercise-like" id="IGT_OCS_CYU_OCSadvantage"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<article class="exercise exercise-like" id="IGT_OCS_CYU_OCSadvantage"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_OCS_CYU_OCSadvantage">
-<div class="para" id="IGT_OCS_CYU_OCSadvantage-1-1">True or False: Neither player has an advantage in One-Card Stud Poker.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_OCS_CYU_OCSadvantage-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="IGT_OCS_CYU_OCSadvantage-1-1">True or False: Neither player has an advantage in One-Card Stud Poker.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_OCS_CYU_OCSadvantage-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_OCS_CYU_OCSadvantage_opt_t" data-correct=""><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_OCS_CYU_OCSadvantage_opt_t"><div class="para" id="IGT_OCS_CYU_OCSadvantage-2-1">This is a fair game.</div></li>
+<li data-component="feedback" id="rs-IGT_OCS_CYU_OCSadvantage_opt_t">
+<div class="para" id="IGT_OCS_CYU_OCSadvantage-2-1">This is a fair game.</div>
+</li>
 <li data-component="answer" id="rs-IGT_OCS_CYU_OCSadvantage_opt_f"><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_OCS_CYU_OCSadvantage_opt_f"><div class="para" id="IGT_OCS_CYU_OCSadvantage-2-1">This is a fair game.</div></li>
+<li data-component="feedback" id="rs-IGT_OCS_CYU_OCSadvantage_opt_f">
+<div class="para" id="IGT_OCS_CYU_OCSadvantage-2-1">This is a fair game.</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 2.4.1"><a href="#IGT_OCS_CYU_OCSadvantage" title="Copy heading and permalink for Reading Question 2.4.1" aria-label="Copy heading and permalink for Reading Question 2.4.1">🔗</a></div></article><article class="exercise exercise-like" id="IGT_OCS_CYU_OCSequilibrium"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 2.4.1"><a tabindex="-1" href="#IGT_OCS_CYU_OCSadvantage" title="Copy heading and permalink for Reading Question 2.4.1" aria-label="Copy heading and permalink for Reading Question 2.4.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_OCS_CYU_OCSequilibrium"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_OCS_CYU_OCSequilibrium">
-<div class="para" id="IGT_OCS_CYU_OCSequilibrium-1-1">True or False: One-Card Stud Poker has an equilibrium pair.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_OCS_CYU_OCSequilibrium-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="IGT_OCS_CYU_OCSequilibrium-1-1">True or False: One-Card Stud Poker has an equilibrium pair.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_OCS_CYU_OCSequilibrium-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_OCS_CYU_OCSequilibrium_opt_t" data-correct=""><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_OCS_CYU_OCSequilibrium_opt_t"><div class="para" id="IGT_OCS_CYU_OCSequilibrium-2-1">[Bet, Bet] is an equilibrium pair.</div></li>
+<li data-component="feedback" id="rs-IGT_OCS_CYU_OCSequilibrium_opt_t">
+<div class="para" id="IGT_OCS_CYU_OCSequilibrium-2-1">[Bet, Bet] is an equilibrium pair.</div>
+</li>
 <li data-component="answer" id="rs-IGT_OCS_CYU_OCSequilibrium_opt_f"><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_OCS_CYU_OCSequilibrium_opt_f"><div class="para" id="IGT_OCS_CYU_OCSequilibrium-2-1">[Bet, Bet] is an equilibrium pair.</div></li>
+<li data-component="feedback" id="rs-IGT_OCS_CYU_OCSequilibrium_opt_f">
+<div class="para" id="IGT_OCS_CYU_OCSequilibrium-2-1">[Bet, Bet] is an equilibrium pair.</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 2.4.2"><a href="#IGT_OCS_CYU_OCSequilibrium" title="Copy heading and permalink for Reading Question 2.4.2" aria-label="Copy heading and permalink for Reading Question 2.4.2">🔗</a></div></article><article class="exercise exercise-like" id="IGT_OCS_CYU_howoftenbet"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 2.4.2"><a tabindex="-1" href="#IGT_OCS_CYU_OCSequilibrium" title="Copy heading and permalink for Reading Question 2.4.2" aria-label="Copy heading and permalink for Reading Question 2.4.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_OCS_CYU_howoftenbet"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
-<div class="exercise-statement"><div class="para" id="IGT_OCS_CYU_howoftenbet-1-1">In One-Card Stud Poker, Player 1 wants to play Bet<div class="autopermalink" data-description="Paragraph"><a href="#IGT_OCS_CYU_howoftenbet-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="exercise-statement">
+<div class="para" id="IGT_OCS_CYU_howoftenbet-1-1">In One-Card Stud Poker, Player 1 wants to play Bet<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_OCS_CYU_howoftenbet-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <ul data-component="multiplechoice" class="exercise-interactives" id="rs-IGT_OCS_CYU_howoftenbet" data-multipleanswers="false" data-random="">
-<li data-component="answer" id="rs-IGT_OCS_CYU_howoftenbet_opt_a" data-correct=""><div class="para" id="IGT_OCS_CYU_howoftenbet-2-1-1-1">always.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_OCS_CYU_howoftenbet-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_OCS_CYU_howoftenbet_opt_a"><div class="para" id="IGT_OCS_CYU_howoftenbet-2-1-2-1">[Bet, Bet] is an equilibrium pair, so if both players are playing optimally, they should both Bet.</div></li>
-<li data-component="answer" id="rs-IGT_OCS_CYU_howoftenbet_opt_b"><div class="para" id="IGT_OCS_CYU_howoftenbet-2-2-1-1">never.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_OCS_CYU_howoftenbet-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_OCS_CYU_howoftenbet_opt_b"><div class="para" id="IGT_OCS_CYU_howoftenbet-2-2-2-1">Incorrect.</div></li>
-<li data-component="answer" id="rs-IGT_OCS_CYU_howoftenbet_opt_c"><div class="para" id="IGT_OCS_CYU_howoftenbet-2-3-1-1">more often than Fold.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_OCS_CYU_howoftenbet-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_OCS_CYU_howoftenbet_opt_c"><div class="para" id="IGT_OCS_CYU_howoftenbet-2-3-2-1">Incorrect.</div></li>
-<li data-component="answer" id="rs-IGT_OCS_CYU_howoftenbet_opt_d"><div class="para" id="IGT_OCS_CYU_howoftenbet-2-4-1-1">less often than Fold.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_OCS_CYU_howoftenbet-2-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_OCS_CYU_howoftenbet_opt_d"><div class="para" id="IGT_OCS_CYU_howoftenbet-2-4-2-1">Incorrect.</div></li>
+<li data-component="answer" id="rs-IGT_OCS_CYU_howoftenbet_opt_a" data-correct="">
+<div class="para" id="IGT_OCS_CYU_howoftenbet-2-1-1-1">always.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_OCS_CYU_howoftenbet_opt_a">
+<div class="para" id="IGT_OCS_CYU_howoftenbet-2-1-2-1">[Bet, Bet] is an equilibrium pair, so if both players are playing optimally, they should both Bet.</div>
+</li>
+<li data-component="answer" id="rs-IGT_OCS_CYU_howoftenbet_opt_b">
+<div class="para" id="IGT_OCS_CYU_howoftenbet-2-2-1-1">never.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_OCS_CYU_howoftenbet_opt_b">
+<div class="para" id="IGT_OCS_CYU_howoftenbet-2-2-2-1">Incorrect.</div>
+</li>
+<li data-component="answer" id="rs-IGT_OCS_CYU_howoftenbet_opt_c">
+<div class="para" id="IGT_OCS_CYU_howoftenbet-2-3-1-1">more often than Fold.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_OCS_CYU_howoftenbet_opt_c">
+<div class="para" id="IGT_OCS_CYU_howoftenbet-2-3-2-1">Incorrect.</div>
+</li>
+<li data-component="answer" id="rs-IGT_OCS_CYU_howoftenbet_opt_d">
+<div class="para" id="IGT_OCS_CYU_howoftenbet-2-4-1-1">less often than Fold.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_OCS_CYU_howoftenbet_opt_d">
+<div class="para" id="IGT_OCS_CYU_howoftenbet-2-4-2-1">Incorrect.</div>
+</li>
 </ul>
 </div></div>
-<div class="autopermalink" data-description="Reading Question 2.4.3"><a href="#IGT_OCS_CYU_howoftenbet" title="Copy heading and permalink for Reading Question 2.4.3" aria-label="Copy heading and permalink for Reading Question 2.4.3">🔗</a></div></article><article class="exercise exercise-like" id="IGT_OCS_CYU_expvalue"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 2.4.3"><a tabindex="-1" href="#IGT_OCS_CYU_howoftenbet" title="Copy heading and permalink for Reading Question 2.4.3" aria-label="Copy heading and permalink for Reading Question 2.4.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_OCS_CYU_expvalue"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-IGT_OCS_CYU_expvalue">
-<div class="para" id="IGT_OCS_CYU_expvalue-1-1">The expected payoff to a player in One-Card Stud Poker over the long run is <input type="text" placeholder="Number" size="3">.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_OCS_CYU_expvalue-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="IGT_OCS_CYU_expvalue-1-1">The expected payoff to a player in One-Card Stud Poker over the long run is <input type="text" placeholder="Number" size="3">.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_OCS_CYU_expvalue-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<script type="application/json">[[{"number": [0, 0], "feedback": "<div class=\"para\" id=\"IGT_OCS_CYU_expvalue-2-1-1-1-1\">Correct. The expected payoff is 0, as that is the expected payoff for [Bet, Bet].<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"IGT_OCS_CYU_expvalue-2-1-2-1-1\">Incorrect. Use that players should play the equilibium strategies.<\/div>"}]]</script>
+<script type="application/json">[[{"number": [0, 0], "feedback": "\n<div class=\"para\" id=\"IGT_OCS_CYU_expvalue-2-1-1-1-1\">Correct. The expected payoff is 0, as that is the expected payoff for [Bet, Bet].<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "\n<div class=\"para\" id=\"IGT_OCS_CYU_expvalue-2-1-2-1-1\">Incorrect. Use that players should play the equilibium strategies.<\/div>"}]]</script>
 </div></div></div>
-<div class="autopermalink" data-description="Reading Question 2.4.4"><a href="#IGT_OCS_CYU_expvalue" title="Copy heading and permalink for Reading Question 2.4.4" aria-label="Copy heading and permalink for Reading Question 2.4.4">🔗</a></div></article><article class="exercise exercise-like" id="IGT_OCS_CYU_OCSactual"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 2.4.4"><a tabindex="-1" href="#IGT_OCS_CYU_expvalue" title="Copy heading and permalink for Reading Question 2.4.4" aria-label="Copy heading and permalink for Reading Question 2.4.4">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_OCS_CYU_OCSactual"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_OCS_CYU_OCSactual">
-<div class="para" id="IGT_OCS_CYU_OCSactual-1-1">True or False: The actual payoff to a player in One-Card Stud Poker is the same as the expected payoff.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_OCS_CYU_OCSactual-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="IGT_OCS_CYU_OCSactual-1-1">True or False: The actual payoff to a player in One-Card Stud Poker is the same as the expected payoff.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_OCS_CYU_OCSactual-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_OCS_CYU_OCSactual_opt_t"><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_OCS_CYU_OCSactual_opt_t"><div class="para" id="IGT_OCS_CYU_OCSactual-2-1">In a game of chance the actual outcome is often different that the expected outcome. As the game is played more, the actual payoff approaches the expected payoff.</div></li>
+<li data-component="feedback" id="rs-IGT_OCS_CYU_OCSactual_opt_t">
+<div class="para" id="IGT_OCS_CYU_OCSactual-2-1">In a game of chance the actual outcome is often different that the expected outcome. As the game is played more, the actual payoff approaches the expected payoff.</div>
+</li>
 <li data-component="answer" id="rs-IGT_OCS_CYU_OCSactual_opt_f" data-correct=""><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_OCS_CYU_OCSactual_opt_f"><div class="para" id="IGT_OCS_CYU_OCSactual-2-1">In a game of chance the actual outcome is often different that the expected outcome. As the game is played more, the actual payoff approaches the expected payoff.</div></li>
+<li data-component="feedback" id="rs-IGT_OCS_CYU_OCSactual_opt_f">
+<div class="para" id="IGT_OCS_CYU_OCSactual-2-1">In a game of chance the actual outcome is often different that the expected outcome. As the game is played more, the actual payoff approaches the expected payoff.</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 2.4.5"><a href="#IGT_OCS_CYU_OCSactual" title="Copy heading and permalink for Reading Question 2.4.5" aria-label="Copy heading and permalink for Reading Question 2.4.5">🔗</a></div></article><div class="autopermalink" data-description="Reading Questions 2.4: Check Your Understanding"><a href="#S_OneCardStud-39" title="Copy heading and permalink for Reading Questions 2.4: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 2.4: Check Your Understanding">🔗</a></div></section><div class="autopermalink" data-description="Section 2.4: A Game of Chance"><a href="#S_OneCardStud" title="Copy heading and permalink for Section 2.4: A Game of Chance" aria-label="Copy heading and permalink for Section 2.4: A Game of Chance">🔗</a></div></section></div>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 2.4.5"><a tabindex="-1" href="#IGT_OCS_CYU_OCSactual" title="Copy heading and permalink for Reading Question 2.4.5" aria-label="Copy heading and permalink for Reading Question 2.4.5">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 2.4: Check Your Understanding"><a tabindex="-1" href="#S_OneCardStud-39" title="Copy heading and permalink for Reading Questions 2.4: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 2.4: Check Your Understanding">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 2.4: A Game of Chance"><a tabindex="-1" href="#S_OneCardStud" title="Copy heading and permalink for Section 2.4: A Game of Chance" aria-label="Copy heading and permalink for Section 2.4: A Game of Chance">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="S_Probability.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="S_EquilibPoints.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

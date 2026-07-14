@@ -20,85 +20,27 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js/lib"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: true,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
+<meta name="twitter:image" content="https://nordstromjf.github.io/IntroGameTheory2e/external/image-1.svg">
 <meta property="og:image" content="https://nordstromjf.github.io/IntroGameTheory2e/external/image-1.svg">
-<meta property="book:title" content="Introduction to Game Theory">
-<meta property="book:author" content="Jennifer Firkins Nordstrom">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<meta name="twitter:image:alt" content="Document Logo">
+<meta property="og:image:alt" content="Document Logo">
+<meta name="twitter:title" content="Introduction to Game Theory: a Discovery Approach">
+<meta property="og:title" content="Introduction to Game Theory: a Discovery Approach">
+<meta property="book:title" content="Introduction to Game Theory: a Discovery Approach">
+<meta name="twitter:description" content="This text provides an inquiry-based introduction to game theory. The material requires no mathematical prerequisites and is suitable for a non-majors quantitative reasoning course.">
+<meta property="og:description" content="This text provides an inquiry-based introduction to game theory. The material requires no mathematical prerequisites and is suitable for a non-majors quantitative reasoning course.">
+<meta name="twitter:card" content="summary_large_image">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -120,16 +62,16 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.18';
+eBookConfig.runestone_version = '8.1.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.cefb0224014f3333.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.c50cdcad467c8d3e.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/prefix-runtime.cb5af2e851de3574.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.f51cd4153b45055d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="introgametheory" class="pretext book ignore-math">
@@ -139,18 +81,35 @@ eBookConfig.enable_chatcodes =  false;
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div>
 </div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
-<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<div class="search-results-controls">
-<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-<h2 class="search-results-heading">Search Results: </h2>
-<div id="searchempty" class="searchempty"><span>No results.</span></div>
-<ol id="searchresults" class="searchresults"></ol>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
+<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="intro_game_theory-6.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="intro_game_theory-6.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="S_MixStratGraph.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="intro_game_theory-6.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="intro_game_theory-6.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="S_MixStratGraph.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\( \newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
   \newcommand{\MyTikzmark}[2]{
      \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
@@ -171,20 +130,20 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Preface</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="intro_game_theory-4.html" class="internal"><span class="codenumber">1</span> <span class="title">What is Game Theory?</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-intro_game_theory-4" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Players and Strategies</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_intro" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_intro.html#SS_Cake" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Assumptions: Cake Division</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_intro.html#Ex_Tic" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Developing Strategies: Tic Tac Toe</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_intro.html#S_intro-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Check Your Understanding</span></a></div></li>
@@ -192,7 +151,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_IntroMatrices.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Game Matrices and Payoff Vectors</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_IntroMatrices" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroMatrices.html#SS_MatchPennies" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Setting up a Payoff Matrix</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroMatrices.html#SS_revistassump" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Revisiting the Assumptions</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroMatrices.html#S_IntroMatrices-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Check Your Understanding</span></a></div></li>
@@ -202,10 +161,10 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="intro_game_theory-5.html" class="internal"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-intro_game_theory-5" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_IntroZeroSum.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to Two-Person Zero-Sum Games</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_IntroZeroSum" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroZeroSum.html#Ex_election" class="internal"><span class="codenumber">2.1.1</span> <span class="title">An Election Campaign Game</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_IntroZeroSum.html#SS_equilpairs" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Equilibrium Pairs</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroZeroSum.html#S_IntroZeroSum-6" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Check Your Understanding</span></a></div></li>
@@ -213,7 +172,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_DominatedStrategies.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Finding Strategies</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_DominatedStrategies" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_simplifyingmatrix" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Simplifying a Zero-Sum Game Matrix</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_DomStrategies" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Dominated Strategies</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_DominatedStrategies.html#SS_maximin" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Maximin and Minimax Strategies</span></a></div></li>
@@ -222,7 +181,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_Probability.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Probability and Expected Value</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-S_Probability" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_Probability.html#SS_basicprob" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Some Basic Probability</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="S_Probability.html#SS_expectedvalue" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Expected Value</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_Probability.html#S_Probability-5" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Check Your Understanding</span></a></div></li>
@@ -230,449 +189,624 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_OneCardStud.html" class="internal"><span class="codenumber">2.4</span> <span class="title">A Game of Chance</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_OneCardStud.html#S_OneCardStud-39" class="internal"><span class="codenumber">2.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_OneCardStud" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_OneCardStud.html#S_OneCardStud-39" class="internal"><span class="codenumber">2.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_EquilibPoints.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Equilibrium Points</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_EquilibPoints.html#S_EquilibPoints-30" class="internal"><span class="codenumber">2.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_EquilibPoints" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_EquilibPoints.html#S_EquilibPoints-30" class="internal"><span class="codenumber">2.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Strategies for Zero-Sum Games and Equilibrium Points</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html#S_ZeroSumStrategySummary-15" class="internal"><span class="codenumber">2.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Strategies for Zero-Sum Games</span></a></div>
+<ul id="ptx-toc-group-S_ZeroSumStrategySummary" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_ZeroSumStrategySummary.html#S_ZeroSumStrategySummary-13" class="internal"><span class="codenumber">2.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopRationality.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Popular Culture: Rationality and Perfect Information</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopRationality.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Pop Culture: Rationality</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="intro_game_theory-6.html" class="internal"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-intro_game_theory-6">
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="S_IntroRepeated.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction to Repeated Games</span></a></div>
-<ul class="structural toc-item-list active"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroRepeated.html#S_IntroRepeated-26" class="internal"><span class="codenumber">3.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul class="structural toc-item-list active" id="ptx-toc-group-S_IntroRepeated"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroRepeated.html#S_IntroRepeated-26" class="internal"><span class="codenumber">3.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_MixStratGraph.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Mixed Strategies: Graphical Solution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratGraph.html#S_MixStratGraph-55" class="internal"><span class="codenumber">3.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_MixStratGraph" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratGraph.html#S_MixStratGraph-53" class="internal"><span class="codenumber">3.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_SolvingEq.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Using Sage to Graph Lines and Solve Equations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_SolvingEq.html#S_SolvingEq-26" class="internal"><span class="codenumber">3.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_SolvingEq" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_SolvingEq.html#S_SolvingEq-26" class="internal"><span class="codenumber">3.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_MixStratEV.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Mixed Strategies: Expected Value Solution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratEV.html#S_MixStratEV-34" class="internal"><span class="codenumber">3.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_MixStratEV" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_MixStratEV.html#S_MixStratEV-32" class="internal"><span class="codenumber">3.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_LiarsPoker.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Liar’s Poker</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_LiarsPoker.html#S_LiarsPoker-23" class="internal"><span class="codenumber">3.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_LiarsPoker" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_LiarsPoker.html#S_LiarsPoker-23" class="internal"><span class="codenumber">3.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_AugMatrices.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Solving Systems of Equations Using Matrices</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_AugMatrices.html#S_AugMatrices-35" class="internal"><span class="codenumber">3.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_AugMatrices" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_AugMatrices.html#S_AugMatrices-35" class="internal"><span class="codenumber">3.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_Undercut.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Undercut</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_Undercut.html#S_Undercut-31" class="internal"><span class="codenumber">3.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_Undercut" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_Undercut.html#S_Undercut-30" class="internal"><span class="codenumber">3.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="intro_game_theory-7.html" class="internal"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-intro_game_theory-7" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_IntroNonzero.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Introduction to Two-Player Non-Zero-Sum Games</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroNonzero.html#S_IntroNonzero-32" class="internal"><span class="codenumber">4.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_IntroNonzero" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_IntroNonzero.html#S_IntroNonzero-32" class="internal"><span class="codenumber">4.1</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_PdandChicken.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Prisoner’s Dilemma and Chicken</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PdandChicken.html#S_PdandChicken-43" class="internal"><span class="codenumber">4.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_PdandChicken" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PdandChicken.html#S_PdandChicken-43" class="internal"><span class="codenumber">4.2</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_CWPD.html" class="internal"><span class="codenumber">4.3</span> <span class="title">A Class-Wide Experiment</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_CWPD.html#S_CWPD-25" class="internal"><span class="codenumber">4.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_CWPD" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_CWPD.html#S_CWPD-25" class="internal"><span class="codenumber">4.3</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_PDconditions.html" class="internal"><span class="codenumber">4.4</span> <span class="title">What Makes a Prisoner’s Dilemma?</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PDconditions.html#S_PDconditions-18" class="internal"><span class="codenumber">4.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_PDconditions" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_PDconditions.html#S_PDconditions-18" class="internal"><span class="codenumber">4.4</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_VDexperiment.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Another Multiplayer Experiment</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VDexperiment.html#S_VDexperiment-11" class="internal"><span class="codenumber">4.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_VDexperiment" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VDexperiment.html#S_VDexperiment-11" class="internal"><span class="codenumber">4.5</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_VolunteerDil.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Volunteer’s Dilemma</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VolunteerDil.html#S_VolunteerDil-20" class="internal"><span class="codenumber">4.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_VolunteerDil" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_VolunteerDil.html#S_VolunteerDil-20" class="internal"><span class="codenumber">4.6</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="S_RepeatPD.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Repeated Prisoner’s Dilemma</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_RepeatPD.html#S_RepeatPD-31" class="internal"><span class="codenumber">4.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
+<ul id="ptx-toc-group-S_RepeatPD" class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="S_RepeatPD.html#S_RepeatPD-29" class="internal"><span class="codenumber">4.7</span> <span class="title">Check Your Understanding</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopPD.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Popular Culture: Prisoner’s Dilemma and Chicken</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="S_PopPD.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Pop Culture: Prisoner’s Dilemma and Chicken</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">References</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="S_IntroRepeated"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.1</span><span class="space"> </span><span class="title">Introduction to Repeated Games</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="S_IntroRepeated">
+<h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Introduction to Repeated Games</span>
 </h2>
-<div class="para" id="S_IntroRepeated-3">Now that we are experts at finding equilibrium pairs, what happens when a game doesn’t have any equilibrium pairs? What should our players do? As we saw in <a href="S_ZeroSumStrategySummary.html" class="internal" title="Section 2.6: Strategies for Zero-Sum Games and Equilibrium Points">Section 2.6</a>, if there is no equilibrium point then no matter which strategies are played, at least one player wants to switch.<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroRepeated-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="S_IntroRepeated-3">Now that we are experts at finding equilibrium pairs, what happens when a game doesn’t have any equilibrium pairs? What should our players do? As we saw in <a href="S_ZeroSumStrategySummary.html" class="internal" title="Section 2.6: Strategies for Zero-Sum Games and Equilibrium Points">Section 2.6</a>, if there is no equilibrium point then no matter which strategies are played, at least one player wants to switch.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroRepeated-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_smallrepeat" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">A <span class="process-math">\(2\times 2\)</span> repeated game.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="introduction" id="E_smallrepeat-2"><div class="para logical" id="E_smallrepeat-2-1">
+<article class="activity project-like" id="E_smallrepeat"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A <span class="process-math">\(2\times 2\)</span> repeated game.</span>
+</h3>
+<div class="introduction" id="E_smallrepeat-2">
+<div class="para logical" id="E_smallrepeat-2-1">
 <div class="para">Consider the following zero-sum game</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="E_smallrepeat-2-1-1">
 \begin{equation*}
 \left[\begin{matrix}1\amp 0\\
 -1\amp 2
 \end{matrix} \right].
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#E_smallrepeat-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_smallrepeat-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="E_smallrepeat-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="E_smallrepeat-3-1">Does this game have an equilibrium pair?<div class="autopermalink" data-description="Paragraph"><a href="#E_smallrepeat-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="E_smallrepeat-3-1-1">Does this game have an equilibrium pair?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_smallrepeat-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 3.1.1.a"><a href="#E_smallrepeat-3" title="Copy heading and permalink for Task 3.1.1.a" aria-label="Copy heading and permalink for Task 3.1.1.a">🔗</a></div></article><article class="task exercise-like" id="E_smallrepeat-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="E_smallrepeat-4-1">Play this game with an opponent 10 times. Tally your wins and losses.<div class="autopermalink" data-description="Paragraph"><a href="#E_smallrepeat-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.1.a"><a tabindex="-1" href="#E_smallrepeat-3" title="Copy heading and permalink for Task 3.1.1.a" aria-label="Copy heading and permalink for Task 3.1.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="E_smallrepeat-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="E_smallrepeat-4-1-1">Play this game with an opponent 10 times. Tally your wins and losses.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_smallrepeat-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 3.1.1.b"><a href="#E_smallrepeat-4" title="Copy heading and permalink for Task 3.1.1.b" aria-label="Copy heading and permalink for Task 3.1.1.b">🔗</a></div></article><article class="task exercise-like" id="E_smallrepeat-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="E_smallrepeat-5-1">Describe how you chose which strategy to play. Describe how your opponent chose which strategy to play.<div class="autopermalink" data-description="Paragraph"><a href="#E_smallrepeat-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.1.b"><a tabindex="-1" href="#E_smallrepeat-4" title="Copy heading and permalink for Task 3.1.1.b" aria-label="Copy heading and permalink for Task 3.1.1.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="E_smallrepeat-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="E_smallrepeat-5-1-1">Describe how you chose which strategy to play. Describe how your opponent chose which strategy to play.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_smallrepeat-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 3.1.1.c"><a href="#E_smallrepeat-5" title="Copy heading and permalink for Task 3.1.1.c" aria-label="Copy heading and permalink for Task 3.1.1.c">🔗</a></div></article><article class="task exercise-like" id="E_smallrepeat-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="E_smallrepeat-6-1">When playing the game several times, does it make sense for either player to play the same strategy all the time? Why or why not?<div class="autopermalink" data-description="Paragraph"><a href="#E_smallrepeat-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.1.c"><a tabindex="-1" href="#E_smallrepeat-5" title="Copy heading and permalink for Task 3.1.1.c" aria-label="Copy heading and permalink for Task 3.1.1.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="E_smallrepeat-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="E_smallrepeat-6-1-1">When playing the game several times, does it make sense for either player to play the same strategy all the time? Why or why not?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_smallrepeat-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 3.1.1.d"><a href="#E_smallrepeat-6" title="Copy heading and permalink for Task 3.1.1.d" aria-label="Copy heading and permalink for Task 3.1.1.d">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.1.1: A 2\times 2 repeated game"><a href="#E_smallrepeat" title="Copy heading and permalink for Activity 3.1.1: A 2\times 2 repeated game" aria-label="Copy heading and permalink for Activity 3.1.1: A 2\times 2 repeated game">🔗</a></div></article></details><div class="para" id="S_IntroRepeated-5">Up until this point we have used the term “strategy” to mean which row or column a player chooses to play. Now we want to refer to how a player plays a repeated game as the player’s <dfn class="terminology">strategy</dfn>. In order to avoid confusion, in repeated games we will define some specific strategies.<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroRepeated-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.1.d"><a tabindex="-1" href="#E_smallrepeat-6" title="Copy heading and permalink for Task 3.1.1.d" aria-label="Copy heading and permalink for Task 3.1.1.d">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 3.1.1: A 2\times 2 repeated game"><a tabindex="-1" href="#E_smallrepeat" title="Copy heading and permalink for Activity 3.1.1: A 2\times 2 repeated game" aria-label="Copy heading and permalink for Activity 3.1.1: A 2\times 2 repeated game">🔗</a></div>
+</article>
+<div class="para" id="S_IntroRepeated-5">Up until this point we have used the term “strategy” to mean which row or column a player chooses to play. Now we want to refer to how a player plays a repeated game as the player’s <dfn class="terminology">strategy</dfn>. In order to avoid confusion, in repeated games we will define some specific strategies.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroRepeated-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="D_purestrategy"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="D_purestrategy-3-1">In a repeated game, if a player always plays the same row or column, we say that she is playing a <dfn class="terminology">pure strategy</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#D_purestrategy-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="D_purestrategy-3-1">In a repeated game, if a player always plays the same row or column, we say that she is playing a <dfn class="terminology">pure strategy</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_purestrategy-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 3.1.1"><a href="#D_purestrategy" title="Copy heading and permalink for Definition 3.1.1" aria-label="Copy heading and permalink for Definition 3.1.1">🔗</a></div></article><div class="para" id="S_IntroRepeated-7">For example, if Player 1 always plays Row A, we say she is playing <dfn class="terminology">pure strategy A</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroRepeated-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.1"><a tabindex="-1" href="#D_purestrategy" title="Copy heading and permalink for Definition 3.1.1" aria-label="Copy heading and permalink for Definition 3.1.1">🔗</a></div>
+</article>
+<div class="para" id="S_IntroRepeated-7">For example, if Player 1 always plays Row A, we say she is playing <dfn class="terminology">pure strategy A</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroRepeated-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="D_mixedstrategy"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="D_mixedstrategy-3-1">If a player varies which row or column he plays, then we say he is playing a <dfn class="terminology">mixed strategy</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#D_mixedstrategy-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="D_mixedstrategy-3-1">If a player varies which row or column he plays, then we say he is playing a <dfn class="terminology">mixed strategy</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_mixedstrategy-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 3.1.2"><a href="#D_mixedstrategy" title="Copy heading and permalink for Definition 3.1.2" aria-label="Copy heading and permalink for Definition 3.1.2">🔗</a></div></article><div class="para" id="S_IntroRepeated-9">For example, if a player plays Row A 40% of the time and Row B 60% of the time, we will say he is playing a (.4, .6) strategy, as we generally use the probability rather than the percent. The probabilities of each strategy will be listed in the same order as the strategies in the matrix.<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroRepeated-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.2"><a tabindex="-1" href="#D_mixedstrategy" title="Copy heading and permalink for Definition 3.1.2" aria-label="Copy heading and permalink for Definition 3.1.2">🔗</a></div>
+</article>
+<div class="para" id="S_IntroRepeated-9">For example, if a player plays Row A 40% of the time and Row B 60% of the time, we will say he is playing a <span class="process-math">\((0.4, 0.6)\)</span> strategy, as we generally use the probability rather than the percent. The probabilities of each strategy will be listed in the same order as the strategies in the matrix.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroRepeated-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="S_IntroRepeated-10">It is not enough just to determine how often to play a strategy. Suppose Player 1 just alternates rows in <a href="S_IntroRepeated.html#E_smallrepeat" class="xref" data-knowl="./knowl/xref/E_smallrepeat.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.1.1: A 2\times 2 repeated game">Activity 3.1.1</a>. Can Player 2 “out-guess” Player 1? What might be a better way for Player 1 to play?<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroRepeated-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="S_IntroRepeated-10">It is not enough just to determine how often to play a strategy. Suppose Player 1 just alternates rows in <a href="S_IntroRepeated.html#E_smallrepeat" class="xref" data-knowl="./knowl/xref/E_smallrepeat.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.1.1: A 2\times 2 repeated game">Activity 3.1.1</a>. Can Player 2 “out-guess” Player 1? What might be a better way for Player 1 to play?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroRepeated-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="S_IntroRepeated-11">We’d really like to find a way to determine the best mixed strategy for each player in a repeated game. Let’s start with what we already know: games with equilibrium points. If a game has an equilibrium pair of strategies, would a player want to play a mixed strategy? Recall that a strategy pair is an equilibrium pair if neither player gains by switching strategy.<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroRepeated-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="S_IntroRepeated-11">We’d really like to find a way to determine the best mixed strategy for each player in a repeated game. Let’s start with what we already know: games with equilibrium points. If a game has an equilibrium pair of strategies, would a player want to play a mixed strategy? Recall that a strategy pair is an equilibrium pair if neither player gains by switching strategy.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroRepeated-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="E_repeatequil"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Repeating a Game with an Equilibrium.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Repeating a Game with an Equilibrium.</span>
 </h3>
 <div class="para logical" id="E_repeatequil-2-1">
 <div class="para">Consider the following zero-sum game</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="E_repeatequil-2-1-1">
 \begin{equation*}
 \left[\begin{matrix}-1\amp 1\\
 0\amp 2
 \end{matrix} \right].
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#E_repeatequil-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="E_repeatequil-2-2">This game has an equilibrium pair. Convince yourself that if this game is played repeatedly, each player should choose to play a pure strategy.<div class="autopermalink" data-description="Paragraph"><a href="#E_repeatequil-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_repeatequil-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="E_repeatequil-2-2">This game has an equilibrium pair. Convince yourself that if this game is played repeatedly, each player should choose to play a pure strategy.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_repeatequil-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 3.1.3: Repeating a Game with an Equilibrium"><a href="#E_repeatequil" title="Copy heading and permalink for Example 3.1.3: Repeating a Game with an Equilibrium" aria-label="Copy heading and permalink for Example 3.1.3: Repeating a Game with an Equilibrium">🔗</a></div></article><div class="para" id="S_IntroRepeated-13">Thus, if the game has an equilibrium we know that players will play the pure strategies determined by the equilibrium pairs. So let’s get back to thinking about games without equilibrium pairs. If we play such a game once, can we predict the outcome? What about if we repeat the game several times, can we predict the outcome? Think about tossing a coin. If you toss it once, can you predict the outcome? What if you toss it 100 times, can you predict the outcome? Not exactly, but we can say what we <em class="emphasis">expect</em>: if we toss a coin 100 times we expect to have half of the coins turn up heads and half turn up tails. This may not be the <em class="emphasis">actual</em> outcome, but it is a reasonable prediction. Now is a good time to remind yourself about finding the <dfn class="terminology">expected value</dfn>, <a href="S_Probability.html#D_expectedvalue" class="xref" data-knowl="./knowl/xref/D_expectedvalue.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.3.4">Definition 2.3.4</a>.<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroRepeated-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.1.3: Repeating a Game with an Equilibrium"><a tabindex="-1" href="#E_repeatequil" title="Copy heading and permalink for Example 3.1.3: Repeating a Game with an Equilibrium" aria-label="Copy heading and permalink for Example 3.1.3: Repeating a Game with an Equilibrium">🔗</a></div>
+</article>
+<div class="para" id="S_IntroRepeated-13">Thus, if the game has an equilibrium we know that players will play the pure strategies determined by the equilibrium pairs. So let’s get back to thinking about games without equilibrium pairs. If we play such a game once, can we predict the outcome? What about if we repeat the game several times, can we predict the outcome? Think about tossing a coin. If you toss it once, can you predict the outcome? What if you toss it 100 times, can you predict the outcome? Not exactly, but we can say what we <em class="emphasis">expect</em>: if we toss a coin 100 times we expect to have half of the coins turn up heads and half turn up tails. This may not be the <em class="emphasis">actual</em> outcome, but it is a reasonable prediction. Now is a good time to remind yourself about finding the <dfn class="terminology">expected value</dfn>, <a href="S_Probability.html#D_expectedvalue" class="xref" data-knowl="./knowl/xref/D_expectedvalue.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.3.4">Definition 2.3.4</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroRepeated-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="S_IntroRepeated-14">Recall the familiar game of Rock-Paper-Scissors: Rock beats Scissors, Scissors beat Paper, and Paper beats Rock. Using the payoff matrix and experimentation, we will try to determine the best strategy for this game.<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroRepeated-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="S_IntroRepeated-14">Recall the familiar game of Rock-Paper-Scissors: Rock beats Scissors, Scissors beat Paper, and Paper beats Rock. Using the payoff matrix and experimentation, we will try to determine the best strategy for this game.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroRepeated-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="A_RPSmatrixequil" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">RPS payoff matrix.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_RPSmatrixequil-2-1">Construct a game matrix for Rock-Paper-Scissors.<div class="autopermalink" data-description="Paragraph"><a href="#A_RPSmatrixequil-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="activity project-like" id="A_RPSmatrixequil"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">RPS payoff matrix.</span>
+</h3>
+<div class="introduction" id="A_RPSmatrixequil-2"></div>
+<article class="task exercise-like" id="A_RPSmatrixequil-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="A_RPSmatrixequil-3-1-1">Construct a game matrix for Rock-Paper-Scissors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_RPSmatrixequil-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Activity 3.1.2: RPS payoff matrix"><a href="#A_RPSmatrixequil" title="Copy heading and permalink for Activity 3.1.2: RPS payoff matrix" aria-label="Copy heading and permalink for Activity 3.1.2: RPS payoff matrix">🔗</a></div></article></details><details id="A_RPSzs" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">RPS and equilibrium points.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para" id="A_RPSzs-2-1">Is Rock-Paper-Scissors a zero-sum game? Does it have an equilibrium point? Explain.<div class="autopermalink" data-description="Paragraph"><a href="#A_RPSzs-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.2.a"><a tabindex="-1" href="#A_RPSmatrixequil-3" title="Copy heading and permalink for Task 3.1.2.a" aria-label="Copy heading and permalink for Task 3.1.2.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_RPSmatrixequil-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_RPSmatrixequil-4-1-1">Is Rock-Paper-Scissors a zero-sum game? Does it have an equilibrium point? Explain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_RPSmatrixequil-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Activity 3.1.3: RPS and equilibrium points"><a href="#A_RPSzs" title="Copy heading and permalink for Activity 3.1.3: RPS and equilibrium points" aria-label="Copy heading and permalink for Activity 3.1.3: RPS and equilibrium points">🔗</a></div></article></details><details id="A_RPSplay" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Play RPS.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="introduction" id="A_RPSplay-2"><div class="para" id="A_RPSplay-2-1">We want to look at what happens if we repeat Rock-Paper-Scissors.<div class="autopermalink" data-description="Paragraph"><a href="#A_RPSplay-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.2.b"><a tabindex="-1" href="#A_RPSmatrixequil-4" title="Copy heading and permalink for Task 3.1.2.b" aria-label="Copy heading and permalink for Task 3.1.2.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 3.1.2: RPS payoff matrix"><a tabindex="-1" href="#A_RPSmatrixequil" title="Copy heading and permalink for Activity 3.1.2: RPS payoff matrix" aria-label="Copy heading and permalink for Activity 3.1.2: RPS payoff matrix">🔗</a></div>
+</article>
+<div class="para" id="S_IntroRepeated-16">You should be able to see that Rock-Paper-Scissors does not have an equilibrium point, so we don’t have a good strategy for playing the game once. But what happens when we repeat the game? Is there a good strategy in the repeated game?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroRepeated-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="A_RPSplay"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Play RPS.</span>
+</h3>
+<div class="introduction" id="A_RPSplay-2">
+<div class="para" id="A_RPSplay-2-1">We want to look at what happens if we repeat Rock-Paper-Scissors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_RPSplay-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="A_RPSplay-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_RPSplay-3-1">Play the game ten times with an opponent. Record the results (list strategy pairs and payoffs for each player).<div class="autopermalink" data-description="Paragraph"><a href="#A_RPSplay-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="A_RPSplay-3-1-1">Play the game ten times with an opponent. Record the results (list strategy pairs and payoffs for each player).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_RPSplay-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 3.1.4.a"><a href="#A_RPSplay-3" title="Copy heading and permalink for Task 3.1.4.a" aria-label="Copy heading and permalink for Task 3.1.4.a">🔗</a></div></article><article class="task exercise-like" id="A_RPSplay-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_RPSplay-4-1">Describe any strategy you used to play Rock-Paper-Scissors.<div class="autopermalink" data-description="Paragraph"><a href="#A_RPSplay-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.3.a"><a tabindex="-1" href="#A_RPSplay-3" title="Copy heading and permalink for Task 3.1.3.a" aria-label="Copy heading and permalink for Task 3.1.3.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_RPSplay-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_RPSplay-4-1-1">Describe any strategy you used to play Rock-Paper-Scissors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_RPSplay-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 3.1.4.b"><a href="#A_RPSplay-4" title="Copy heading and permalink for Task 3.1.4.b" aria-label="Copy heading and permalink for Task 3.1.4.b">🔗</a></div></article><article class="task exercise-like" id="A_RPSplay-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="A_RPSplay-5-1">Reflect on your chosen strategy. Does it guarantee you a win? What should it mean to win in a repeated game? What are the strengths and weaknesses of your strategy?<div class="autopermalink" data-description="Paragraph"><a href="#A_RPSplay-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.3.b"><a tabindex="-1" href="#A_RPSplay-4" title="Copy heading and permalink for Task 3.1.3.b" aria-label="Copy heading and permalink for Task 3.1.3.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_RPSplay-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_RPSplay-5-1-1">Reflect on your chosen strategy. Does it guarantee you a win? What should it mean to win in a repeated game? What are the strengths and weaknesses of your strategy?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_RPSplay-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 3.1.4.c"><a href="#A_RPSplay-5" title="Copy heading and permalink for Task 3.1.4.c" aria-label="Copy heading and permalink for Task 3.1.4.c">🔗</a></div></article><article class="task exercise-like" id="A_RPSplay-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="A_RPSplay-6-1">Discuss your strategy with your opponent. After sharing your ideas for a strategy, can you improve your previous strategy?<div class="autopermalink" data-description="Paragraph"><a href="#A_RPSplay-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.3.c"><a tabindex="-1" href="#A_RPSplay-5" title="Copy heading and permalink for Task 3.1.3.c" aria-label="Copy heading and permalink for Task 3.1.3.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_RPSplay-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="A_RPSplay-6-1-1">Discuss your strategy with your opponent. After sharing your ideas for a strategy, can you improve your previous strategy?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_RPSplay-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 3.1.4.d"><a href="#A_RPSplay-6" title="Copy heading and permalink for Task 3.1.4.d" aria-label="Copy heading and permalink for Task 3.1.4.d">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.1.4: Play RPS"><a href="#A_RPSplay" title="Copy heading and permalink for Activity 3.1.4: Play RPS" aria-label="Copy heading and permalink for Activity 3.1.4: Play RPS">🔗</a></div></article></details><div class="para" id="S_IntroRepeated-18">Although you may have come up with a good strategy, let’s see if we can’t decide what the “best” strategy should be for Rock-Paper-Scissors.<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroRepeated-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.3.d"><a tabindex="-1" href="#A_RPSplay-6" title="Copy heading and permalink for Task 3.1.3.d" aria-label="Copy heading and permalink for Task 3.1.3.d">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 3.1.3: Play RPS"><a tabindex="-1" href="#A_RPSplay" title="Copy heading and permalink for Activity 3.1.3: Play RPS" aria-label="Copy heading and permalink for Activity 3.1.3: Play RPS">🔗</a></div>
+</article>
+<div class="para" id="S_IntroRepeated-18">Although you may have come up with a good strategy, let’s see if we can’t decide what the “best” strategy should be for Rock-Paper-Scissors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroRepeated-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="A_RPSsomemixed" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Exploring some strategies.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="introduction" id="A_RPSsomemixed-2"><div class="para" id="A_RPSsomemixed-2-1">Let’s assume we are playing Rock-Paper-Scissors against the smartest player to ever live. We will call such an opponent the “perfect” player. You can think of this player as one who can figure out your strategy easily.<div class="autopermalink" data-description="Paragraph"><a href="#A_RPSsomemixed-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<article class="activity project-like" id="A_RPSsomemixed"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exploring some strategies.</span>
+</h3>
+<div class="introduction" id="A_RPSsomemixed-2">
+<div class="para" id="A_RPSsomemixed-2-1">Let’s assume we are playing Rock-Paper-Scissors against the smartest player to ever live. We will call such an opponent the “perfect” player. You can think of this player as one who can figure out your strategy easily.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_RPSsomemixed-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="A_RPSsomemixed-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_RPSsomemixed-3-1">Explain why it is not a good idea to play a pure strategy; i.e., to play only Rock, only Paper, or only Scissors.<div class="autopermalink" data-description="Paragraph"><a href="#A_RPSsomemixed-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="A_RPSsomemixed-3-1-1">Explain why it is not a good idea to play a pure strategy; i.e., to play only Rock, only Paper, or only Scissors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_RPSsomemixed-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 3.1.5.a"><a href="#A_RPSsomemixed-3" title="Copy heading and permalink for Task 3.1.5.a" aria-label="Copy heading and permalink for Task 3.1.5.a">🔗</a></div></article><article class="task exercise-like" id="A_RPSsomemixed-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_RPSsomemixed-4-1">Does it make sense to play one option more often than another (for example, Rock more often than Paper)? Explain.<div class="autopermalink" data-description="Paragraph"><a href="#A_RPSsomemixed-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.4.a"><a tabindex="-1" href="#A_RPSsomemixed-3" title="Copy heading and permalink for Task 3.1.4.a" aria-label="Copy heading and permalink for Task 3.1.4.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_RPSsomemixed-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_RPSsomemixed-4-1-1">Does it make sense to play one option more often than another (for example, Rock more often than Paper)? Explain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_RPSsomemixed-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 3.1.5.b"><a href="#A_RPSsomemixed-4" title="Copy heading and permalink for Task 3.1.5.b" aria-label="Copy heading and permalink for Task 3.1.5.b">🔗</a></div></article><article class="task exercise-like" id="A_RPSsomemixed-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="A_RPSsomemixed-5-1">How often should you play each option?<div class="autopermalink" data-description="Paragraph"><a href="#A_RPSsomemixed-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.4.b"><a tabindex="-1" href="#A_RPSsomemixed-4" title="Copy heading and permalink for Task 3.1.4.b" aria-label="Copy heading and permalink for Task 3.1.4.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_RPSsomemixed-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_RPSsomemixed-5-1-1">How often should you play each option?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_RPSsomemixed-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 3.1.5.c"><a href="#A_RPSsomemixed-5" title="Copy heading and permalink for Task 3.1.5.c" aria-label="Copy heading and permalink for Task 3.1.5.c">🔗</a></div></article><article class="task exercise-like" id="A_RPSsomemixed-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="A_RPSsomemixed-6-1">Do you want to play in a predictable pattern or randomly? What are some advantages and disadvantages of a pattern? What are some advantages and disadvantages of a random strategy?<div class="autopermalink" data-description="Paragraph"><a href="#A_RPSsomemixed-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.4.c"><a tabindex="-1" href="#A_RPSsomemixed-5" title="Copy heading and permalink for Task 3.1.4.c" aria-label="Copy heading and permalink for Task 3.1.4.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_RPSsomemixed-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="A_RPSsomemixed-6-1-1">Do you want to play in a predictable pattern or randomly? What are some advantages and disadvantages of a pattern? What are some advantages and disadvantages of a random strategy?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_RPSsomemixed-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 3.1.5.d"><a href="#A_RPSsomemixed-6" title="Copy heading and permalink for Task 3.1.5.d" aria-label="Copy heading and permalink for Task 3.1.5.d">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.1.5: Exploring some strategies"><a href="#A_RPSsomemixed" title="Copy heading and permalink for Activity 3.1.5: Exploring some strategies" aria-label="Copy heading and permalink for Activity 3.1.5: Exploring some strategies">🔗</a></div></article></details><div class="para" id="S_IntroRepeated-20">Hopefully, you concluded that the best strategy against our perfect player would be to play Rock, Paper, Scissors 1/3 of the time each, and to play randomly. We can say that our strategy is to play each option randomly with a probability of 1/3, and call this the Random(1/3, 1/3, 1/3) strategy.<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroRepeated-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.4.d"><a tabindex="-1" href="#A_RPSsomemixed-6" title="Copy heading and permalink for Task 3.1.4.d" aria-label="Copy heading and permalink for Task 3.1.4.d">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 3.1.4: Exploring some strategies"><a tabindex="-1" href="#A_RPSsomemixed" title="Copy heading and permalink for Activity 3.1.4: Exploring some strategies" aria-label="Copy heading and permalink for Activity 3.1.4: Exploring some strategies">🔗</a></div>
+</article>
+<div class="para" id="S_IntroRepeated-20">Hopefully, you concluded that the best strategy against our perfect player would be to play Rock, Paper, Scissors 1/3 of the time each and to play randomly. We can say that our strategy is to play each option randomly with a probability of 1/3, and call this the Random<span class="process-math">\((1/3, 1/3, 1/3)\)</span> strategy.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroRepeated-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="A_RPSplaymixedeven" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Testing the random strategy.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="introduction" id="A_RPSplaymixedeven-2"><div class="para" id="A_RPSplaymixedeven-2-1">Let’s try out the Random(1/3, 1/3, 1/3) strategy<div class="autopermalink" data-description="Paragraph"><a href="#A_RPSplaymixedeven-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<article class="activity project-like" id="A_RPSplaymixedeven"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Testing the random strategy.</span>
+</h3>
+<div class="introduction" id="A_RPSplaymixedeven-2">
+<div class="para" id="A_RPSplaymixedeven-2-1">Let’s try out the Random<span class="process-math">\((1/3, 1/3, 1/3)\)</span> strategy<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_RPSplaymixedeven-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="A_RPSplaymixedeven-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_RPSplaymixedeven-3-1">Using this strategy, what do you predict the long term payoff will be for Player 1? For Player 2?<div class="autopermalink" data-description="Paragraph"><a href="#A_RPSplaymixedeven-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="A_RPSplaymixedeven-3-1-1">If Player 1 plays the Random<span class="process-math">\((1/3, 1/3, 1/3)\)</span> strategy, what do you predict the long term payoff will be for Player 1? Does it matter what Player 2 plays? What is Player 2’s long term payoff against the Random<span class="process-math">\((1/3, 1/3, 1/3)\)</span> strategy?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_RPSplaymixedeven-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 3.1.6.a"><a href="#A_RPSplaymixedeven-3" title="Copy heading and permalink for Task 3.1.6.a" aria-label="Copy heading and permalink for Task 3.1.6.a">🔗</a></div></article><article class="task exercise-like" id="A_RPSplaymixedeven-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_RPSplaymixedeven-4-1">Let’s check our prediction. Using a die, let 1 and 2 represent Rock, 3 and 4 represent Paper, and 5 and 6 represent Scissors. Play the game 20 times with someone in class where each player rolls to determine the choice of Rock, Paper, or Scissors. Keep track of the strategy pairs and payoffs. What was the total payoff for each player? At this point, if you still feel that you have a better strategy, try your strategy against the random one to see what happens!<div class="autopermalink" data-description="Paragraph"><a href="#A_RPSplaymixedeven-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.5.a"><a tabindex="-1" href="#A_RPSplaymixedeven-3" title="Copy heading and permalink for Task 3.1.5.a" aria-label="Copy heading and permalink for Task 3.1.5.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_RPSplaymixedeven-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_RPSplaymixedeven-4-1-1">Let’s check our prediction. Using a die, let 1 and 2 represent Rock, 3 and 4 represent Paper, and 5 and 6 represent Scissors. Play the game 20 times with someone in class where each player rolls to determine the choice of Rock, Paper, or Scissors. Keep track of the strategy pairs and payoffs. What was the total payoff for each player? At this point, if you still feel that you have a better strategy, try your strategy against the random one to see what happens.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_RPSplaymixedeven-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 3.1.6.b"><a href="#A_RPSplaymixedeven-4" title="Copy heading and permalink for Task 3.1.6.b" aria-label="Copy heading and permalink for Task 3.1.6.b">🔗</a></div></article><article class="task exercise-like" id="A_RPSplaymixedeven-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="A_RPSplaymixedeven-5-1">How did the actual outcome compare to your predicted outcome? What do you expect would happen if you play the game 100 times? (Or more?)<div class="autopermalink" data-description="Paragraph"><a href="#A_RPSplaymixedeven-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.5.b"><a tabindex="-1" href="#A_RPSplaymixedeven-4" title="Copy heading and permalink for Task 3.1.5.b" aria-label="Copy heading and permalink for Task 3.1.5.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_RPSplaymixedeven-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_RPSplaymixedeven-5-1-1">How did the actual outcome compare to your predicted outcome? What do you expect would happen if you play the game 100 times? (Or more?)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_RPSplaymixedeven-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 3.1.6.c"><a href="#A_RPSplaymixedeven-5" title="Copy heading and permalink for Task 3.1.6.c" aria-label="Copy heading and permalink for Task 3.1.6.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.1.6: Testing the random strategy"><a href="#A_RPSplaymixedeven" title="Copy heading and permalink for Activity 3.1.6: Testing the random strategy" aria-label="Copy heading and permalink for Activity 3.1.6: Testing the random strategy">🔗</a></div></article></details><div class="para" id="S_IntroRepeated-22">Using ideas about probability and expected value we can more precisely predict the long term payoff for each player when playing a random mixed strategy.<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroRepeated-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.5.c"><a tabindex="-1" href="#A_RPSplaymixedeven-5" title="Copy heading and permalink for Task 3.1.5.c" aria-label="Copy heading and permalink for Task 3.1.5.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 3.1.5: Testing the random strategy"><a tabindex="-1" href="#A_RPSplaymixedeven" title="Copy heading and permalink for Activity 3.1.5: Testing the random strategy" aria-label="Copy heading and permalink for Activity 3.1.5: Testing the random strategy">🔗</a></div>
+</article>
+<div class="para" id="S_IntroRepeated-22">Using ideas about probability and expected value we can more precisely predict the long term payoff for each player when playing a random mixed strategy.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroRepeated-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="A_RPSproboutcomes" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Expected payoff when both players play the random strategy.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="introduction" id="A_RPSproboutcomes-2"><div class="para" id="A_RPSproboutcomes-2-1">Assume both players are using the Random(1/3, 1/3, 1/3) strategy.<div class="autopermalink" data-description="Paragraph"><a href="#A_RPSproboutcomes-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<article class="activity project-like" id="A_RPSproboutcomes"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Expected payoff when both players play the random strategy.</span>
+</h3>
+<div class="introduction" id="A_RPSproboutcomes-2">
+<div class="para" id="A_RPSproboutcomes-2-1">Assume both players are using the Random<span class="process-math">\((1/3, 1/3, 1/3)\)</span> strategy.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_RPSproboutcomes-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="A_RPSproboutcomes-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_RPSproboutcomes-3-1">List all the possible outcomes for a single game. An outcome is a strategy pair and the corresponding payoff, for example [R, P], <span class="process-math">\((-1, 1)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_RPSproboutcomes-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="A_RPSproboutcomes-3-1-1">List all the possible outcomes for a single game. An outcome is a strategy pair and the corresponding payoff, for example [R, P], <span class="process-math">\((-1, 1)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_RPSproboutcomes-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 3.1.7.a"><a href="#A_RPSproboutcomes-3" title="Copy heading and permalink for Task 3.1.7.a" aria-label="Copy heading and permalink for Task 3.1.7.a">🔗</a></div></article><article class="task exercise-like" id="A_RPSproboutcomes-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_RPSproboutcomes-4-1">What is the probability that any particular pair of strategies will be played? Are the strategy pairs equally likely?<div class="autopermalink" data-description="Paragraph"><a href="#A_RPSproboutcomes-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.6.a"><a tabindex="-1" href="#A_RPSproboutcomes-3" title="Copy heading and permalink for Task 3.1.6.a" aria-label="Copy heading and permalink for Task 3.1.6.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_RPSproboutcomes-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_RPSproboutcomes-4-1-1">What is the probability that any particular pair of strategies will be played? Are the strategy pairs equally likely?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_RPSproboutcomes-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 3.1.7.b"><a href="#A_RPSproboutcomes-4" title="Copy heading and permalink for Task 3.1.7.b" aria-label="Copy heading and permalink for Task 3.1.7.b">🔗</a></div></article><article class="task exercise-like" id="A_RPSproboutcomes-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="A_RPSproboutcomes-5-1">Using these probabilities and payoffs, calculate the expected value of the game for each player.<div class="autopermalink" data-description="Paragraph"><a href="#A_RPSproboutcomes-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.6.b"><a tabindex="-1" href="#A_RPSproboutcomes-4" title="Copy heading and permalink for Task 3.1.6.b" aria-label="Copy heading and permalink for Task 3.1.6.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="A_RPSproboutcomes-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_RPSproboutcomes-5-1-1">Using these probabilities and payoffs, calculate the expected value of the game for each player.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_RPSproboutcomes-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 3.1.7.c"><a href="#A_RPSproboutcomes-5" title="Copy heading and permalink for Task 3.1.7.c" aria-label="Copy heading and permalink for Task 3.1.7.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.1.7: Expected payoff when both players play the random strategy"><a href="#A_RPSproboutcomes" title="Copy heading and permalink for Activity 3.1.7: Expected payoff when both players play the random strategy" aria-label="Copy heading and permalink for Activity 3.1.7: Expected payoff when both players play the random strategy">🔗</a></div></article></details><details id="A_smallrepeatstrat" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Strategy for the repeated <span class="process-math">\(2\times 2\)</span> game.</span>
-</h3></summary><article class="activity project-like knowl__content"><div class="para logical" id="A_smallrepeatstrat-2-1">
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.6.c"><a tabindex="-1" href="#A_RPSproboutcomes-5" title="Copy heading and permalink for Task 3.1.6.c" aria-label="Copy heading and permalink for Task 3.1.6.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 3.1.6: Expected payoff when both players play the random strategy"><a tabindex="-1" href="#A_RPSproboutcomes" title="Copy heading and permalink for Activity 3.1.6: Expected payoff when both players play the random strategy" aria-label="Copy heading and permalink for Activity 3.1.6: Expected payoff when both players play the random strategy">🔗</a></div>
+</article>
+<article class="activity project-like" id="A_smallrepeatstrat"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Strategy for the repeated <span class="process-math">\(2\times 2\)</span> game.</span>
+</h3>
+<div class="para logical" id="A_smallrepeatstrat-2-1">
 <div class="para">Now consider the matrix from <a href="S_IntroRepeated.html#E_smallrepeat" class="xref" data-knowl="./knowl/xref/E_smallrepeat.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.1.1: A 2\times 2 repeated game">Activity 3.1.1</a>:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/E_smallrepeat.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/E_smallrepeat.html" id="A_smallrepeatstrat-2-1-2">
 \begin{equation*}
 \left[\begin{matrix}1\amp 0\\
 -1\amp 2
 \end{matrix} \right].
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#A_smallrepeatstrat-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="A_smallrepeatstrat-2-2">See if you can determine how often Player 1 should play each row, and how often Player 2 should play each column. Try testing your proposed strategy (you may be able to use a variation on the dice as we saw in <a href="S_IntroRepeated.html#A_RPSplaymixedeven" class="xref" data-knowl="./knowl/xref/A_RPSplaymixedeven.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.1.6: Testing the random strategy">Activity 3.1.6</a>). Write up any conjectured strategies and the results from playing the game with your strategy. Do you think you have come up with the best strategy? Explain.<div class="autopermalink" data-description="Paragraph"><a href="#A_smallrepeatstrat-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_smallrepeatstrat-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="A_smallrepeatstrat-2-2">See if you can determine how often Player 1 should play each row, and how often Player 2 should play each column. Try testing your proposed strategy (you may be able to use a variation on the dice as we saw in <a href="S_IntroRepeated.html#A_RPSplaymixedeven" class="xref" data-knowl="./knowl/xref/A_RPSplaymixedeven.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.1.5: Testing the random strategy">Activity 3.1.5</a>). Write up any conjectured strategies and the results from playing the game with your strategy. Do you think you have come up with the best strategy? Explain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_smallrepeatstrat-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Activity 3.1.8: Strategy for the repeated 2\times 2 game"><a href="#A_smallrepeatstrat" title="Copy heading and permalink for Activity 3.1.8: Strategy for the repeated 2\times 2 game" aria-label="Copy heading and permalink for Activity 3.1.8: Strategy for the repeated 2\times 2 game">🔗</a></div></article></details><div class="para" id="S_IntroRepeated-25">You may have had an idea about the best way to play Rock-Paper-Scissors before working through this section, but how can we find solutions to other games, such as the one in <a href="S_IntroRepeated.html#A_smallrepeatstrat" class="xref" data-knowl="./knowl/xref/A_smallrepeatstrat.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.1.8: Strategy for the repeated 2\times 2 game">Activity 3.1.8</a>? We don’t want to just use a “guess and check” method. Especially since there are infinitely many possible mixed strategies to try! The rest of the chapter will develop mathematical methods for solving repeated games with no equilibrium point.<div class="autopermalink" data-description="Paragraph"><a href="#S_IntroRepeated-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 3.1.7: Strategy for the repeated 2\times 2 game"><a tabindex="-1" href="#A_smallrepeatstrat" title="Copy heading and permalink for Activity 3.1.7: Strategy for the repeated 2\times 2 game" aria-label="Copy heading and permalink for Activity 3.1.7: Strategy for the repeated 2\times 2 game">🔗</a></div>
+</article>
+<div class="para" id="S_IntroRepeated-25">You may have had an idea about the best way to play Rock-Paper-Scissors before working through this section, but how can we find solutions to other games, such as the one in <a href="S_IntroRepeated.html#A_smallrepeatstrat" class="xref" data-knowl="./knowl/xref/A_smallrepeatstrat.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.1.7: Strategy for the repeated 2\times 2 game">Activity 3.1.7</a>? We don’t want to just use a “guess and check” method since there are infinitely many possible mixed strategies to try! The rest of the chapter will develop mathematical methods for solving repeated games with no equilibrium point.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#S_IntroRepeated-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<section class="reading-questions" id="S_IntroRepeated-26"><h3 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Check Your Understanding</span>
+<section class="reading-questions" id="S_IntroRepeated-26">
+<h3 class="heading hide-type">
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Check Your Understanding</span>
 </h3>
-<article class="exercise exercise-like" id="IGT_IRG_CYU_RPSpure"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<article class="exercise exercise-like" id="IGT_IRG_CYU_RPSpure"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_IRG_CYU_RPSpure">
-<div class="para" id="IGT_IRG_CYU_RPSpure-1-1">True or False: In Rock-Paper-Scissors, the best strategy is to always play Rock.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_RPSpure-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="IGT_IRG_CYU_RPSpure-1-1">True or False: In Rock-Paper-Scissors, the best strategy is to always play Rock.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_IRG_CYU_RPSpure-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_IRG_CYU_RPSpure_opt_t"><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_RPSpure_opt_t"><div class="para" id="IGT_IRG_CYU_RPSpure-2-1">If a player always plays Rock, then the opponent can always play Paper.</div></li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_RPSpure_opt_t">
+<div class="para" id="IGT_IRG_CYU_RPSpure-2-1">If a player always plays Rock, then the opponent can always play Paper.</div>
+</li>
 <li data-component="answer" id="rs-IGT_IRG_CYU_RPSpure_opt_f" data-correct=""><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_RPSpure_opt_f"><div class="para" id="IGT_IRG_CYU_RPSpure-2-1">If a player always plays Rock, then the opponent can always play Paper.</div></li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_RPSpure_opt_f">
+<div class="para" id="IGT_IRG_CYU_RPSpure-2-1">If a player always plays Rock, then the opponent can always play Paper.</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 3.1.1"><a href="#IGT_IRG_CYU_RPSpure" title="Copy heading and permalink for Reading Question 3.1.1" aria-label="Copy heading and permalink for Reading Question 3.1.1">🔗</a></div></article><article class="exercise exercise-like" id="IGT_IRG_CYU_RPSmorerock"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.1.1"><a tabindex="-1" href="#IGT_IRG_CYU_RPSpure" title="Copy heading and permalink for Reading Question 3.1.1" aria-label="Copy heading and permalink for Reading Question 3.1.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_IRG_CYU_RPSmorerock"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_IRG_CYU_RPSmorerock">
-<div class="para" id="IGT_IRG_CYU_RPSmorerock-1-1">True or False: In Rock-Paper-Scissors, the best strategy is to play Rock more often than Paper or Scissors.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_RPSmorerock-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="IGT_IRG_CYU_RPSmorerock-1-1">True or False: In Rock-Paper-Scissors, the best strategy is to play Rock more often than Paper or Scissors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_IRG_CYU_RPSmorerock-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_IRG_CYU_RPSmorerock_opt_t"><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_RPSmorerock_opt_t"><div class="para" id="IGT_IRG_CYU_RPSmorerock-2-1">If a player plays Rock more often, then the opponent can play Paper more often.</div></li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_RPSmorerock_opt_t">
+<div class="para" id="IGT_IRG_CYU_RPSmorerock-2-1">If a player plays Rock more often, then the opponent can play Paper more often.</div>
+</li>
 <li data-component="answer" id="rs-IGT_IRG_CYU_RPSmorerock_opt_f" data-correct=""><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_RPSmorerock_opt_f"><div class="para" id="IGT_IRG_CYU_RPSmorerock-2-1">If a player plays Rock more often, then the opponent can play Paper more often.</div></li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_RPSmorerock_opt_f">
+<div class="para" id="IGT_IRG_CYU_RPSmorerock-2-1">If a player plays Rock more often, then the opponent can play Paper more often.</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 3.1.2"><a href="#IGT_IRG_CYU_RPSmorerock" title="Copy heading and permalink for Reading Question 3.1.2" aria-label="Copy heading and permalink for Reading Question 3.1.2">🔗</a></div></article><article class="exercise exercise-like" id="IGT_IRG_CYU_RPSrps"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.1.2"><a tabindex="-1" href="#IGT_IRG_CYU_RPSmorerock" title="Copy heading and permalink for Reading Question 3.1.2" aria-label="Copy heading and permalink for Reading Question 3.1.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_IRG_CYU_RPSrps"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_IRG_CYU_RPSrps">
-<div class="para" id="IGT_IRG_CYU_RPSrps-1-1">True or False: In Rock-Paper-Scissors, the best strategy is to play Rock, then Paper, then Scissors.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_RPSrps-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="IGT_IRG_CYU_RPSrps-1-1">True or False: In Rock-Paper-Scissors, the best strategy is to play Rock, then Paper, then Scissors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_IRG_CYU_RPSrps-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_IRG_CYU_RPSrps_opt_t"><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_RPSrps_opt_t"><div class="para" id="IGT_IRG_CYU_RPSrps-2-1">If a player always plays Rock, then Paper, then Scissors, then the opponent can play Paper, then Scissors, then Rock.</div></li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_RPSrps_opt_t">
+<div class="para" id="IGT_IRG_CYU_RPSrps-2-1">If a player always plays Rock, then Paper, then Scissors, then the opponent can play Paper, then Scissors, then Rock.</div>
+</li>
 <li data-component="answer" id="rs-IGT_IRG_CYU_RPSrps_opt_f" data-correct=""><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_RPSrps_opt_f"><div class="para" id="IGT_IRG_CYU_RPSrps-2-1">If a player always plays Rock, then Paper, then Scissors, then the opponent can play Paper, then Scissors, then Rock.</div></li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_RPSrps_opt_f">
+<div class="para" id="IGT_IRG_CYU_RPSrps-2-1">If a player always plays Rock, then Paper, then Scissors, then the opponent can play Paper, then Scissors, then Rock.</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 3.1.3"><a href="#IGT_IRG_CYU_RPSrps" title="Copy heading and permalink for Reading Question 3.1.3" aria-label="Copy heading and permalink for Reading Question 3.1.3">🔗</a></div></article><article class="exercise exercise-like" id="IGT_IRG_CYU_equil1"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.1.3"><a tabindex="-1" href="#IGT_IRG_CYU_RPSrps" title="Copy heading and permalink for Reading Question 3.1.3" aria-label="Copy heading and permalink for Reading Question 3.1.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_IRG_CYU_equil1"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_IRG_CYU_equil1">
 <div class="para logical" id="IGT_IRG_CYU_equil1-1-1">
-<div class="para">True or False: The following game has an equilibruim.</div>
-<div class="displaymath process-math">
+<div class="para">True or False: The following game has an equilibrium</div>
+<div class="displaymath process-math" id="IGT_IRG_CYU_equil1-1-1-1">
 \begin{equation*}
 \left[\begin{matrix}
 (10, -10)\amp (-10, 10)\\
 (-20, 20) \amp  (0, 0)
-\end{matrix}\right]\hspace{.5in}
+\end{matrix}\right].\hspace{.5in}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_equil1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_IRG_CYU_equil1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_IRG_CYU_equil1_opt_t"><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_equil1_opt_t"><div class="para" id="IGT_IRG_CYU_equil1-2-1">For each outcome, at least one player wants to switch.</div></li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_equil1_opt_t">
+<div class="para" id="IGT_IRG_CYU_equil1-2-1">For each outcome, at least one player wants to switch.</div>
+</li>
 <li data-component="answer" id="rs-IGT_IRG_CYU_equil1_opt_f" data-correct=""><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_equil1_opt_f"><div class="para" id="IGT_IRG_CYU_equil1-2-1">For each outcome, at least one player wants to switch.</div></li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_equil1_opt_f">
+<div class="para" id="IGT_IRG_CYU_equil1-2-1">For each outcome, at least one player wants to switch.</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 3.1.4"><a href="#IGT_IRG_CYU_equil1" title="Copy heading and permalink for Reading Question 3.1.4" aria-label="Copy heading and permalink for Reading Question 3.1.4">🔗</a></div></article><article class="exercise exercise-like" id="IGT_IRG_CYU_strat1P1"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.1.4"><a tabindex="-1" href="#IGT_IRG_CYU_equil1" title="Copy heading and permalink for Reading Question 3.1.4" aria-label="Copy heading and permalink for Reading Question 3.1.4">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_IRG_CYU_strat1P1"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
-<div class="exercise-statement"><div class="para logical" id="IGT_IRG_CYU_strat1P1-1-1">
-<div class="para">Suppose the following game is played repeatedly.</div>
-<div class="displaymath process-math">
+<div class="exercise-statement">
+<div class="para logical" id="IGT_IRG_CYU_strat1P1-1-1">
+<div class="para">Suppose the following game is played repeatedly</div>
+<div class="displaymath process-math" id="IGT_IRG_CYU_strat1P1-1-1-1">
 \begin{equation*}
 \left[\begin{matrix}
 (10, -10)\amp (-10, 10)\\
 (-20, 20) \amp  (0, 0)
-\end{matrix}\right]\hspace{.5in}
+\end{matrix}\right].\hspace{.5in}
 \end{equation*}
 </div>
 <div class="para">Player 1 should play</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_strat1P1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_IRG_CYU_strat1P1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <ul data-component="multiplechoice" class="exercise-interactives" id="rs-IGT_IRG_CYU_strat1P1" data-multipleanswers="false">
-<li data-component="answer" id="rs-IGT_IRG_CYU_strat1P1_opt_a"><div class="para" id="IGT_IRG_CYU_strat1P1-2-1-1-1">Pure strategy Row 1.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_strat1P1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_strat1P1_opt_a"><div class="para" id="IGT_IRG_CYU_strat1P1-2-1-2-1">Then Player 2 would play Column 2 repeatedly.</div></li>
-<li data-component="answer" id="rs-IGT_IRG_CYU_strat1P1_opt_b"><div class="para" id="IGT_IRG_CYU_strat1P1-2-2-1-1">Pure strategy Row 2.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_strat1P1-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_strat1P1_opt_b"><div class="para" id="IGT_IRG_CYU_strat1P1-2-2-2-1">Then Player 2 would play Column 1 repeatedly.</div></li>
-<li data-component="answer" id="rs-IGT_IRG_CYU_strat1P1_opt_c" data-correct=""><div class="para" id="IGT_IRG_CYU_strat1P1-2-3-1-1">A mixed strategy, varying Row 1 and Row 2.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_strat1P1-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_strat1P1_opt_c"><div class="para" id="IGT_IRG_CYU_strat1P1-2-3-2-1">Correct. We will learn how to find the exact strategy later.</div></li>
+<li data-component="answer" id="rs-IGT_IRG_CYU_strat1P1_opt_a">
+<div class="para" id="IGT_IRG_CYU_strat1P1-2-1-1-1">Pure strategy Row 1.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_strat1P1_opt_a">
+<div class="para" id="IGT_IRG_CYU_strat1P1-2-1-2-1">Then Player 2 would play Column 2 repeatedly.</div>
+</li>
+<li data-component="answer" id="rs-IGT_IRG_CYU_strat1P1_opt_b">
+<div class="para" id="IGT_IRG_CYU_strat1P1-2-2-1-1">Pure strategy Row 2.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_strat1P1_opt_b">
+<div class="para" id="IGT_IRG_CYU_strat1P1-2-2-2-1">Then Player 2 would play Column 1 repeatedly.</div>
+</li>
+<li data-component="answer" id="rs-IGT_IRG_CYU_strat1P1_opt_c" data-correct="">
+<div class="para" id="IGT_IRG_CYU_strat1P1-2-3-1-1">A mixed strategy, varying Row 1 and Row 2.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_strat1P1_opt_c">
+<div class="para" id="IGT_IRG_CYU_strat1P1-2-3-2-1">Correct. We will learn how to find the exact strategy later.</div>
+</li>
 </ul>
 </div></div>
-<div class="autopermalink" data-description="Reading Question 3.1.5"><a href="#IGT_IRG_CYU_strat1P1" title="Copy heading and permalink for Reading Question 3.1.5" aria-label="Copy heading and permalink for Reading Question 3.1.5">🔗</a></div></article><article class="exercise exercise-like" id="IGT_IRG_CYU_strat1P2"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.1.5"><a tabindex="-1" href="#IGT_IRG_CYU_strat1P1" title="Copy heading and permalink for Reading Question 3.1.5" aria-label="Copy heading and permalink for Reading Question 3.1.5">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_IRG_CYU_strat1P2"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
-<div class="exercise-statement"><div class="para logical" id="IGT_IRG_CYU_strat1P2-1-1">
-<div class="para">Suppose the following game is played repeatedly.</div>
-<div class="displaymath process-math">
+<div class="exercise-statement">
+<div class="para logical" id="IGT_IRG_CYU_strat1P2-1-1">
+<div class="para">Suppose the following game is played repeatedly</div>
+<div class="displaymath process-math" id="IGT_IRG_CYU_strat1P2-1-1-1">
 \begin{equation*}
 \left[\begin{matrix}
 (10, -10)\amp (-10, 10)\\
 (-20, 20) \amp  (0, 0)
-\end{matrix}\right]\hspace{.5in}
+\end{matrix}\right].\hspace{.5in}
 \end{equation*}
 </div>
 <div class="para">Player 2 should play</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_strat1P2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_IRG_CYU_strat1P2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <ul data-component="multiplechoice" class="exercise-interactives" id="rs-IGT_IRG_CYU_strat1P2" data-multipleanswers="false">
-<li data-component="answer" id="rs-IGT_IRG_CYU_strat1P2_opt_a"><div class="para" id="IGT_IRG_CYU_strat1P2-2-1-1-1">Pure strategy Column 1.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_strat1P2-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_strat1P2_opt_a"><div class="para" id="IGT_IRG_CYU_strat1P2-2-1-2-1">Then Player 1 would play Row 1 repeatedly.</div></li>
-<li data-component="answer" id="rs-IGT_IRG_CYU_strat1P2_opt_b"><div class="para" id="IGT_IRG_CYU_strat1P2-2-2-1-1">Pure strategy Column 2.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_strat1P2-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_strat1P2_opt_b"><div class="para" id="IGT_IRG_CYU_strat1P2-2-2-2-1">Then Player 1 would play Row 2 repeatedly.</div></li>
-<li data-component="answer" id="rs-IGT_IRG_CYU_strat1P2_opt_c" data-correct=""><div class="para" id="IGT_IRG_CYU_strat1P2-2-3-1-1">A mixed strategy, varying Column 1 and Column 2.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_strat1P2-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_strat1P2_opt_c"><div class="para" id="IGT_IRG_CYU_strat1P2-2-3-2-1">Correct. We will learn how to find the exact strategy later.</div></li>
+<li data-component="answer" id="rs-IGT_IRG_CYU_strat1P2_opt_a">
+<div class="para" id="IGT_IRG_CYU_strat1P2-2-1-1-1">Pure strategy Column 1.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_strat1P2_opt_a">
+<div class="para" id="IGT_IRG_CYU_strat1P2-2-1-2-1">Then Player 1 would play Row 1 repeatedly.</div>
+</li>
+<li data-component="answer" id="rs-IGT_IRG_CYU_strat1P2_opt_b">
+<div class="para" id="IGT_IRG_CYU_strat1P2-2-2-1-1">Pure strategy Column 2.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_strat1P2_opt_b">
+<div class="para" id="IGT_IRG_CYU_strat1P2-2-2-2-1">Then Player 1 would play Row 2 repeatedly.</div>
+</li>
+<li data-component="answer" id="rs-IGT_IRG_CYU_strat1P2_opt_c" data-correct="">
+<div class="para" id="IGT_IRG_CYU_strat1P2-2-3-1-1">A mixed strategy, varying Column 1 and Column 2.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_strat1P2_opt_c">
+<div class="para" id="IGT_IRG_CYU_strat1P2-2-3-2-1">Correct. We will learn how to find the exact strategy later.</div>
+</li>
 </ul>
 </div></div>
-<div class="autopermalink" data-description="Reading Question 3.1.6"><a href="#IGT_IRG_CYU_strat1P2" title="Copy heading and permalink for Reading Question 3.1.6" aria-label="Copy heading and permalink for Reading Question 3.1.6">🔗</a></div></article><article class="exercise exercise-like" id="IGT_IRG_CYU_equil2"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.1.6"><a tabindex="-1" href="#IGT_IRG_CYU_strat1P2" title="Copy heading and permalink for Reading Question 3.1.6" aria-label="Copy heading and permalink for Reading Question 3.1.6">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_IRG_CYU_equil2"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_IRG_CYU_equil2">
 <div class="para logical" id="IGT_IRG_CYU_equil2-1-1">
-<div class="para">True or False: The following game has an equilibruim.</div>
-<div class="displaymath process-math">
+<div class="para">True or False: The following game has an equilibrium</div>
+<div class="displaymath process-math" id="IGT_IRG_CYU_equil2-1-1-1">
 \begin{equation*}
 \left[\begin{matrix}
 (10, -10)\amp (0, 0)\\
 (-20, 20) \amp  (-1, 1)
-\end{matrix}\right]\hspace{.5in}
+\end{matrix}\right].\hspace{.5in}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_equil2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_IRG_CYU_equil2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_IRG_CYU_equil2_opt_t" data-correct=""><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_equil2_opt_t"><div class="para" id="IGT_IRG_CYU_equil2-2-1">
-<span class="process-math">\((0, 0)\)</span> is an equilibruim.</div></li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_equil2_opt_t">
+<div class="para" id="IGT_IRG_CYU_equil2-2-1">
+<span class="process-math">\((0, 0)\)</span> is an equilibruim.</div>
+</li>
 <li data-component="answer" id="rs-IGT_IRG_CYU_equil2_opt_f"><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_equil2_opt_f"><div class="para" id="IGT_IRG_CYU_equil2-2-1">
-<span class="process-math">\((0, 0)\)</span> is an equilibruim.</div></li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_equil2_opt_f">
+<div class="para" id="IGT_IRG_CYU_equil2-2-1">
+<span class="process-math">\((0, 0)\)</span> is an equilibruim.</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 3.1.7"><a href="#IGT_IRG_CYU_equil2" title="Copy heading and permalink for Reading Question 3.1.7" aria-label="Copy heading and permalink for Reading Question 3.1.7">🔗</a></div></article><article class="exercise exercise-like" id="IGT_IRG_CYU_strat2P1"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.1.7"><a tabindex="-1" href="#IGT_IRG_CYU_equil2" title="Copy heading and permalink for Reading Question 3.1.7" aria-label="Copy heading and permalink for Reading Question 3.1.7">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_IRG_CYU_strat2P1"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
-<div class="exercise-statement"><div class="para logical" id="IGT_IRG_CYU_strat2P1-1-1">
-<div class="para">Suppose the following game is played repeatedly.</div>
-<div class="displaymath process-math">
+<div class="exercise-statement">
+<div class="para logical" id="IGT_IRG_CYU_strat2P1-1-1">
+<div class="para">Suppose the following game is played repeatedly</div>
+<div class="displaymath process-math" id="IGT_IRG_CYU_strat2P1-1-1-1">
 \begin{equation*}
 \left[\begin{matrix}
 (10, -10)\amp (0, 0)\\
 (-20, 20) \amp  (-1, 1)
-\end{matrix}\right]\hspace{.5in}
+\end{matrix}\right].\hspace{.5in}
 \end{equation*}
 </div>
 <div class="para">Player 1 should play</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_strat2P1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_IRG_CYU_strat2P1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <ul data-component="multiplechoice" class="exercise-interactives" id="rs-IGT_IRG_CYU_strat2P1" data-multipleanswers="false">
-<li data-component="answer" id="rs-IGT_IRG_CYU_strat2P1_opt_a" data-correct=""><div class="para" id="IGT_IRG_CYU_strat2P1-2-1-1-1">Pure strategy Row 1.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_strat2P1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_strat2P1_opt_a"><div class="para" id="IGT_IRG_CYU_strat2P1-2-1-2-1">Player 1 always prefers Row 1 to Row 2.</div></li>
-<li data-component="answer" id="rs-IGT_IRG_CYU_strat2P1_opt_b"><div class="para" id="IGT_IRG_CYU_strat2P1-2-2-1-1">Pure strategy Row 2.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_strat2P1-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_strat2P1_opt_b"><div class="para" id="IGT_IRG_CYU_strat2P1-2-2-2-1">Player 1 always prefers Row 1 to Row 2.</div></li>
-<li data-component="answer" id="rs-IGT_IRG_CYU_strat2P1_opt_c"><div class="para" id="IGT_IRG_CYU_strat2P1-2-3-1-1">A mixed strategy, varying Row 1 and Row 2.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_strat2P1-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_strat2P1_opt_c"><div class="para" id="IGT_IRG_CYU_strat2P1-2-3-2-1">Since Player 1 always prefers Row 1 to Row 2, there is no reason for Player 1 to play Row 2</div></li>
+<li data-component="answer" id="rs-IGT_IRG_CYU_strat2P1_opt_a" data-correct="">
+<div class="para" id="IGT_IRG_CYU_strat2P1-2-1-1-1">Pure strategy Row 1.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_strat2P1_opt_a">
+<div class="para" id="IGT_IRG_CYU_strat2P1-2-1-2-1">Player 1 always prefers Row 1 to Row 2.</div>
+</li>
+<li data-component="answer" id="rs-IGT_IRG_CYU_strat2P1_opt_b">
+<div class="para" id="IGT_IRG_CYU_strat2P1-2-2-1-1">Pure strategy Row 2.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_strat2P1_opt_b">
+<div class="para" id="IGT_IRG_CYU_strat2P1-2-2-2-1">Player 1 always prefers Row 1 to Row 2.</div>
+</li>
+<li data-component="answer" id="rs-IGT_IRG_CYU_strat2P1_opt_c">
+<div class="para" id="IGT_IRG_CYU_strat2P1-2-3-1-1">A mixed strategy, varying Row 1 and Row 2.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_strat2P1_opt_c">
+<div class="para" id="IGT_IRG_CYU_strat2P1-2-3-2-1">Since Player 1 always prefers Row 1 to Row 2, there is no reason for Player 1 to play Row 2</div>
+</li>
 </ul>
 </div></div>
-<div class="autopermalink" data-description="Reading Question 3.1.8"><a href="#IGT_IRG_CYU_strat2P1" title="Copy heading and permalink for Reading Question 3.1.8" aria-label="Copy heading and permalink for Reading Question 3.1.8">🔗</a></div></article><article class="exercise exercise-like" id="IGT_IRG_CYU_strat2P2"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.1.8"><a tabindex="-1" href="#IGT_IRG_CYU_strat2P1" title="Copy heading and permalink for Reading Question 3.1.8" aria-label="Copy heading and permalink for Reading Question 3.1.8">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_IRG_CYU_strat2P2"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
-<div class="exercise-statement"><div class="para logical" id="IGT_IRG_CYU_strat2P2-1-1">
-<div class="para">Suppose the following game is played repeatedly.</div>
-<div class="displaymath process-math">
+<div class="exercise-statement">
+<div class="para logical" id="IGT_IRG_CYU_strat2P2-1-1">
+<div class="para">Suppose the following game is played repeatedly</div>
+<div class="displaymath process-math" id="IGT_IRG_CYU_strat2P2-1-1-1">
 \begin{equation*}
 \left[\begin{matrix}
 (10, -10)\amp (0, 0)\\
 (-20, 20) \amp  (-1, 1)
-\end{matrix}\right]\hspace{.5in}
+\end{matrix}\right].\hspace{.5in}
 \end{equation*}
 </div>
 <div class="para">Player 2 should play</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_strat2P2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_IRG_CYU_strat2P2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <ul data-component="multiplechoice" class="exercise-interactives" id="rs-IGT_IRG_CYU_strat2P2" data-multipleanswers="false">
-<li data-component="answer" id="rs-IGT_IRG_CYU_strat2P2_opt_a"><div class="para" id="IGT_IRG_CYU_strat2P2-2-1-1-1">Pure strategy Column 1.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_strat2P2-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_strat2P2_opt_a"><div class="para" id="IGT_IRG_CYU_strat2P2-2-1-2-1">Player 1 should always play Row 1, so Player 2 does better to play Column 2.</div></li>
-<li data-component="answer" id="rs-IGT_IRG_CYU_strat2P2_opt_b" data-correct=""><div class="para" id="IGT_IRG_CYU_strat2P2-2-2-1-1">Pure strategy Column 2.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_strat2P2-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_strat2P2_opt_b"><div class="para" id="IGT_IRG_CYU_strat2P2-2-2-2-1">Player 1 should always play Row 1, so Player 2 does better to play Column 2.</div></li>
-<li data-component="answer" id="rs-IGT_IRG_CYU_strat2P2_opt_c"><div class="para" id="IGT_IRG_CYU_strat2P2-2-3-1-1">A mixed strategy, varying Column 1 and Column 2.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_strat2P2-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_strat2P2_opt_c"><div class="para" id="IGT_IRG_CYU_strat2P2-2-3-2-1">Since Player 1 should always play Row 1, Player 2 should always play Column 2.</div></li>
+<li data-component="answer" id="rs-IGT_IRG_CYU_strat2P2_opt_a">
+<div class="para" id="IGT_IRG_CYU_strat2P2-2-1-1-1">Pure strategy Column 1.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_strat2P2_opt_a">
+<div class="para" id="IGT_IRG_CYU_strat2P2-2-1-2-1">Player 1 should always play Row 1, so Player 2 does better to play Column 2.</div>
+</li>
+<li data-component="answer" id="rs-IGT_IRG_CYU_strat2P2_opt_b" data-correct="">
+<div class="para" id="IGT_IRG_CYU_strat2P2-2-2-1-1">Pure strategy Column 2.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_strat2P2_opt_b">
+<div class="para" id="IGT_IRG_CYU_strat2P2-2-2-2-1">Player 1 should always play Row 1, so Player 2 does better to play Column 2.</div>
+</li>
+<li data-component="answer" id="rs-IGT_IRG_CYU_strat2P2_opt_c">
+<div class="para" id="IGT_IRG_CYU_strat2P2-2-3-1-1">A mixed strategy, varying Column 1 and Column 2.</div>
+</li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_strat2P2_opt_c">
+<div class="para" id="IGT_IRG_CYU_strat2P2-2-3-2-1">Since Player 1 should always play Row 1, Player 2 should always play Column 2.</div>
+</li>
 </ul>
 </div></div>
-<div class="autopermalink" data-description="Reading Question 3.1.9"><a href="#IGT_IRG_CYU_strat2P2" title="Copy heading and permalink for Reading Question 3.1.9" aria-label="Copy heading and permalink for Reading Question 3.1.9">🔗</a></div></article><article class="exercise exercise-like" id="IGT_IRG_CYU_equilpure"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.1.9"><a tabindex="-1" href="#IGT_IRG_CYU_strat2P2" title="Copy heading and permalink for Reading Question 3.1.9" aria-label="Copy heading and permalink for Reading Question 3.1.9">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_IRG_CYU_equilpure"><h4 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_IRG_CYU_equilpure">
-<div class="para" id="IGT_IRG_CYU_equilpure-1-1">True or False: If a repeated game has an equilibrium, then the players should play a pure strategy.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_equilpure-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="IGT_IRG_CYU_equilpure-1-1">True or False: If a repeated game has an equilibrium, then the players should play a pure strategy.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_IRG_CYU_equilpure-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_IRG_CYU_equilpure_opt_t" data-correct=""><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_equilpure_opt_t"><div class="para" id="IGT_IRG_CYU_equilpure-2-1">If there is an equilibrium, there is no reason for the players to switch strategies.</div></li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_equilpure_opt_t">
+<div class="para" id="IGT_IRG_CYU_equilpure-2-1">If there is an equilibrium, there is no reason for the players to switch strategies.</div>
+</li>
 <li data-component="answer" id="rs-IGT_IRG_CYU_equilpure_opt_f"><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_equilpure_opt_f"><div class="para" id="IGT_IRG_CYU_equilpure-2-1">If there is an equilibrium, there is no reason for the players to switch strategies.</div></li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_equilpure_opt_f">
+<div class="para" id="IGT_IRG_CYU_equilpure-2-1">If there is an equilibrium, there is no reason for the players to switch strategies.</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 3.1.10"><a href="#IGT_IRG_CYU_equilpure" title="Copy heading and permalink for Reading Question 3.1.10" aria-label="Copy heading and permalink for Reading Question 3.1.10">🔗</a></div></article><article class="exercise exercise-like" id="IGT_IRG_CYU_pattern"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.1.10"><a tabindex="-1" href="#IGT_IRG_CYU_equilpure" title="Copy heading and permalink for Reading Question 3.1.10" aria-label="Copy heading and permalink for Reading Question 3.1.10">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="IGT_IRG_CYU_pattern"><h4 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-IGT_IRG_CYU_pattern">
-<div class="para" id="IGT_IRG_CYU_pattern-1-1">True or False: In a repeated game with no equilibrium, it is better to play a mixed strategy with a predictable pattern.<div class="autopermalink" data-description="Paragraph"><a href="#IGT_IRG_CYU_pattern-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="IGT_IRG_CYU_pattern-1-1">True or False: In a repeated game with no equilibrium, it is better to play a mixed strategy with a predictable pattern.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#IGT_IRG_CYU_pattern-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <li data-component="answer" id="rs-IGT_IRG_CYU_pattern_opt_t"><p>True.</p></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_pattern_opt_t"><div class="para" id="IGT_IRG_CYU_pattern-2-1">If a player is predictable, we can assume the opponent will guess the pattern.</div></li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_pattern_opt_t">
+<div class="para" id="IGT_IRG_CYU_pattern-2-1">If a player is predictable, we can assume the opponent will guess the pattern.</div>
+</li>
 <li data-component="answer" id="rs-IGT_IRG_CYU_pattern_opt_f" data-correct=""><p>False.</p></li>
-<li data-component="feedback" id="rs-IGT_IRG_CYU_pattern_opt_f"><div class="para" id="IGT_IRG_CYU_pattern-2-1">If a player is predictable, we can assume the opponent will guess the pattern.</div></li>
+<li data-component="feedback" id="rs-IGT_IRG_CYU_pattern_opt_f">
+<div class="para" id="IGT_IRG_CYU_pattern-2-1">If a player is predictable, we can assume the opponent will guess the pattern.</div>
+</li>
 </ul></div></div>
-<div class="autopermalink" data-description="Reading Question 3.1.11"><a href="#IGT_IRG_CYU_pattern" title="Copy heading and permalink for Reading Question 3.1.11" aria-label="Copy heading and permalink for Reading Question 3.1.11">🔗</a></div></article><div class="autopermalink" data-description="Reading Questions 3.1: Check Your Understanding"><a href="#S_IntroRepeated-26" title="Copy heading and permalink for Reading Questions 3.1: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 3.1: Check Your Understanding">🔗</a></div></section><div class="autopermalink" data-description="Section 3.1: Introduction to Repeated Games"><a href="#S_IntroRepeated" title="Copy heading and permalink for Section 3.1: Introduction to Repeated Games" aria-label="Copy heading and permalink for Section 3.1: Introduction to Repeated Games">🔗</a></div></section></div>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.1.11"><a tabindex="-1" href="#IGT_IRG_CYU_pattern" title="Copy heading and permalink for Reading Question 3.1.11" aria-label="Copy heading and permalink for Reading Question 3.1.11">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 3.1: Check Your Understanding"><a tabindex="-1" href="#S_IntroRepeated-26" title="Copy heading and permalink for Reading Questions 3.1: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 3.1: Check Your Understanding">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 3.1: Introduction to Repeated Games"><a tabindex="-1" href="#S_IntroRepeated" title="Copy heading and permalink for Section 3.1: Introduction to Repeated Games" aria-label="Copy heading and permalink for Section 3.1: Introduction to Repeated Games">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="intro_game_theory-6.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="S_MixStratGraph.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
