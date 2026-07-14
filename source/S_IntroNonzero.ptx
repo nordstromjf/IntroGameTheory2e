@@ -8,7 +8,7 @@
     <title>Compare properties</title>
     <statement>
       <p>
-        What are some properties of a zero-sum game that may no longer hold for a non-zero-sum game? For example, in a zero-sum game is it ever advantageous to inform your opponent of your strategy? Is it advantageous to communicate prior to game play and determine a joint plan of action? Would you still want to minimize your opponents payoff?
+        What are some properties of a zero-sum game that may no longer hold for a non-zero-sum game? For example, in a zero-sum game is it ever advantageous to inform your opponent of your strategy? Is it advantageous to communicate prior to game play and determine a joint plan of action? Would you still want to minimize your opponent's payoff?
       </p>
     </statement>
   </activity>
@@ -58,12 +58,12 @@
     <title>Not zero-sum</title>
     <statement>
       <p>
-        Explain why this is not a zero-sum game.
+        Explain why Battle of the Movies is not a zero-sum game.
       </p>
     </statement>
   </activity>
 
-  <p> In zero-sum games it is never advantageous to let your opponent know you strategy. Does that property still apply for games like Battle of the Movies?</p>
+  <p> In zero-sum games it is never advantageous to let your opponent know your strategy. Does that property still apply for games like Battle of the Movies?</p>
 
   <activity xml:id="A_BoMannounce">
     <title>Announcing a strategy</title>
@@ -81,45 +81,45 @@
     <introduction>
       <p>
         Since our main goal in analyzing games has been to find equilibrium points, let's find any equilibrium points for Battle of the Movies. </p></introduction>
-        <task><p>Are there any strategy pairs where players would not want to switch? </p><hint><p>There are two!</p></hint></task>
+        <task><statement><p>Are there any strategy pairs where players would not want to switch? </p></statement><hint><p>There are two!</p></hint></task>
   
     
   
     
-    <task>
+    <task><statement>
       <p>
         Are the equilibrium points the same (in other words, does each player get the same payoff at each equilibrium point)? Compare this to what must happen for zero-sum games.
-      </p>
+      </p></statement>
     </task>
   </activity>
 
-  <p>Now that we know Battle of the Movies has two equilibrium points, we should try to find actual strategies for Alice and Bob. Is there a good strategy for each if they play the game only once? What if they repeat the game? Recall that with zero-sum games, if there was an equilibrium, rational players always want to play it, even if the game is repeated. Does that still seem to work here? Also, how might the ability to communicate change what the players do? </p>
+  <p>Now that we know Battle of the Movies has two equilibrium points, we should try to find actual strategies for Alice and Bob. Is there a good strategy for each if they play the game only once? What if they repeat the game? Recall that with zero-sum games, if there is an equilibrium, rational players always want to play it, even if the game is repeated. Does that still seem to work here? Also, how might the ability to communicate change what the players do? </p>
 
   <activity xml:id="A_BoMrepeat">
     <title>Repeating the game</title>
     <introduction>
       <p>
-        Suppose the game is played repeatedly. For example, Alice and Bob have movie night once a month. </p></introduction>
+        Suppose Battle of teh Movies is played repeatedly. For example, Alice and Bob have movie night once a month. </p></introduction>
 
-        <task><p>Suggest a strategy for Alice and for Bob.</p></task>
-        <task><p> Play the game with someone from class <em>without communicating</em> about your strategy before each game.
-      </p>
+        <task><statement><p>Suggest a strategy for Alice and for Bob.</p></statement></task>
+        <task><statement><p> Play the game with someone else <em>without communicating</em> about your strategy before each game.
+      </p></statement>
     </task>
   
-      <task><p>
-        How could communication affect the choice of strategy? Now play several times where you are allowed to communicate about your strategy. Does this change your strategy?</p></task>
+      <task><statement><p>
+        How could communication affect the choice of strategy? Now play several times where you are allowed to communicate about your strategy. Does this change your strategy?</p></statement></task>
     
     
-      <task><p>
+      <task><statement><p>
         In either case, communicating and not communicating, do you think your strategies for Alice and Bob represent a mixed strategy equilibrium?
-      </p>
+      </p></statement>
     </task>
   </activity>
   <activity xml:id="A_BoMcomparezerosum">
     <title>Compare to zero-sum</title>
     <statement>
       <p>
-        In a zero-sum game, if there is a pure strategy equilibrium, then what happens when you repeat a game? If you repeat Battle of the Movies, does the game always result in an equilibrium pair?
+        In a zero-sum game, if there is a pure strategy equilibrium, then what happens when you repeat a game? If you repeat Battle of the Movies, does the game always result in an equilibrium point?
       </p>
     </statement>
   </activity>
@@ -169,15 +169,15 @@
     <introduction>
       <p>
         Assume Bob plays the mixed strategy from <xref ref="A_BoMBobintersection"></xref>.</p></introduction>
-        <task><p>Calculate Alice's expected value for each of her <em>pure</em> strategies (<m>E_2</m>(Comedy) and <m>E_2</m>(Action)).
-      </p>
+        <task><statement><p>Calculate Alice's expected value for each of her <em>pure</em> strategies (<m>E_2</m>(Comedy) and <m>E_2</m>(Action)).
+      </p></statement>
     </task>
   
  
-    <task>
+    <task><statement>
       <p>
         Are Alice's expected values equal? If not, which strategy does she prefer when Bob plays the mixed strategy from <xref ref="A_BoMBobintersection"></xref>? Does Alice want to deviate from her mixed strategy?
-      </p>
+      </p></statement>
     </task>
   </activity>
   <activity xml:id="A_BoMBobchange">
@@ -220,7 +220,7 @@
     <title>Out-guessing the mixed strategy</title>
     <statement>
       <p>
-        Suppose Bob thinks Alice will try the mixed strategy and Alice thinks Bob will try the mixed strategy. Which pure strategy will each play? What is the outcome? Do you end up at an equilibrium?
+        Suppose Bob thinks Alice will try the mixed strategy, and Alice thinks Bob will try the mixed strategy. Which pure strategy will each play? What is the outcome? Do you end up at an equilibrium?
       </p>
     </statement>
   </activity>
@@ -358,7 +358,7 @@
 
     <answer><p>(2, 3) and (3, 2)</p></answer></exercise>
 
-    <exercise label="IGT_INZ_CYU_repeat2"><statement correct="no"><p>True or False: In the game in <xref ref="T_NZmatrix2"></xref>, if the players play once, and each player chooses the strategy with their preferred equilibrium, them the game will result in an equilibrium.</p></statement><feedback><p>Player 1 would play B while Player 2 would play C, which is not an equilibrium.</p></feedback><answer>False.</answer></exercise>
+    <exercise label="IGT_INZ_CYU_repeat2"><statement correct="no"><p>True or False: In the game in <xref ref="T_NZmatrix2"></xref>, if the players play once, and each player chooses the strategy with their preferred equilibrium, then the game will result in an equilibrium.</p></statement><feedback><p>Player 1 would play B while Player 2 would play C, which is not an equilibrium.</p></feedback><answer>False.</answer></exercise>
 
     <exercise label="IGT_INZ_CYU_P1strat2"><statement><p> In the game in <xref ref="T_NZmatrix2"></xref>, suppose Player 1 only considers her payoff matrix and finds the mixed strategy as we did for zero-sum games. Then Player 1 would play</p></statement>
     <choices randomize="no">
@@ -384,7 +384,7 @@
       <choice ><statement><p>A mixed strategy with B more often than A.</p></statement><feedback><p>In this game, knowing what Player 2 will do should make the choice easy for Player 1.</p></feedback></choice>
     </choices><answer><p>Pure strategy A.</p></answer></exercise>
 
-    <exercise label="IGT_INZ_CYU_BoMvariation"><statement><p>Going back to Battle of the Movies, suppose Alice still prefers Comedy to Action, but also prefers to go to the movie with Bob than to go alone. However, now Bob hates Comedy, so he would prefer to see the action movie alone rather than go to the Comedy movie.</p>
+    <exercise label="IGT_INZ_CYU_BoMvariation"><statement><p>Going back to Battle of the Movies, suppose Alice still prefers Comedy to Action, but also prefers to go to the movie with Bob than to go alone. However, Bob hates Comedy, so he would prefer to see the action movie alone rather than go to the Comedy movie.</p>
     <p> We can adjust the payoff as in the following matrix. Click or circle any equilibruim points. 
     </p></statement><areas><p>
 <table xml:id="T_battleofmoviesvariation" >
@@ -418,9 +418,9 @@
 
     <answer>(2, 2)</answer></exercise>
     
-    <exercise label="IGT_INZ_CYU_zerocomm"><statement correct="no"><p>True or False: In a <em>zero-sum game</em>, it can be a benefit to a player to announce their strategy.</p></statement><feedback><p>Since one player's gain is the other's loss, it never benefits a player to announce a strategy.</p></feedback><answer>False.</answer></exercise>
+    <exercise label="IGT_INZ_CYU_zerocomm"><statement correct="no"><p>True or False: In a <em>zero-sum game</em>, it can benefit  a player to announce their strategy.</p></statement><feedback><p>Since one player's gain is the other's loss, it never benefits a player to announce a strategy.</p></feedback><answer>False.</answer></exercise>
 
-    <exercise label="IGT_INZ_CYU_nonzerocomm"><statement correct="yes"><p>True or False: In a <em>non-zero-sum game</em>, it can be a benefit to a player to announce their strategy.</p></statement><feedback><p>Think of Battle of the Movies and what Bob should do if Alice says she is going to Comedy. Would this benefit Alice?</p></feedback><answer>True.</answer></exercise>
+    <exercise label="IGT_INZ_CYU_nonzerocomm"><statement correct="yes"><p>True or False: In a <em>non-zero-sum game</em>, it can  benefit a player to announce their strategy.</p></statement><feedback><p>Think of Battle of the Movies and what Bob should do if Alice says she is going to Comedy. Would this benefit Alice?</p></feedback><answer>True.</answer></exercise>
 
     <exercise label="IGT_INZ_CYU_zerominopp"><statement correct="yes"><p>True or False: In a <em>zero-sum game</em>, a player wants to minimize their opponent's payoff.</p></statement><feedback><p>This is the entire premise behind our methods for solving zero-sum games.</p></feedback><answer>True.</answer></exercise>
     

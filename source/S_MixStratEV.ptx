@@ -18,47 +18,46 @@
     <title>Matching Pennies Game<idx><h>Matching Pennies</h></idx><idx><h>game</h><h>Matching Pennies</h></idx> </title>
     <statement>
       <p>
-        Consider the game in which each player can choose HEADS (H) or TAILS (T); if the two players match, Player 1 wins; if the two players differ, Player 2 wins. What strategy should each player play?
+        Consider the game in which each player can choose Heads (H) or Tails (T); if the two players match, Player 1 wins; if the two players differ, Player 2 wins. What strategy should each player play?
       </p>
     </statement>
   </example>
 
   <activity xml:id="A_mpmatrix">
-    <title>Payoff matrix</title>
-    <statement>
+    <title>Payoff matrix for Matching Pennies</title>
+    <introduction><p>We want to determine what each player should do in the Matching Pennies game.</p></introduction>
+    <task><statement>
       <p>
         Determine the payoff matrix for the Matching Pennies game.
       </p>
-    </statement>
-  </activity>
-  <activity xml:id="A_mpnoequil">
-    <title>Pure strategy equilibria</title>
-    <statement>
+    </statement></task>
+  
+    <task><statement>
       <p>
         Explain why the Matching Pennies game has no pure strategy equilibrium point.
       </p>
-    </statement>
+    </statement></task>
   </activity>
   <activity xml:id="A_mpguess">
     <title>Conjecture a mixed strategy</title>
     <introduction>
       <p>
-        Since we know that there is no pure strategy equilibrium point, we need to look for a mixed strategy equilibrium point. </p></introduction>
-        <task><p>Just by looking at the payoff matrix for Matching Pennies, what do you think an ideal strategy for each player would be? Explain your choice.
-      </p></task>
+        Since we know that there is no pure strategy equilibrium point we need to look for a mixed strategy equilibrium point. </p></introduction>
+        <task><statement><p>Just by looking at the payoff matrix for Matching Pennies, what do you think an ideal strategy for each player would be? Explain your choice.
+      </p></statement></task>
     
-    <task>
+    <task><statement>
       <p>
         Suppose both players play your ideal strategy in the Matching Pennies game, what should the expected value of the game be?
-      </p>
+      </p></statement>
     </task>
   </activity>
   <p>
-    We could use our previous graphical method to determine the expected value of the game (you might quickly try this just to verify your prediction). However, as we have noted, a major drawback of the graphical solution is that if our players have 3 or more options, then we would need to graph an equation in 3 or more variables; which, I hope you agree, we don't want to do. Although we will continue to focus on <m>2 \times 2</m> games, we will develop a new method which can more easily be used to solve larger games.
+    We could use our previous graphical method to determine the expected value of the game (you might try this just to verify your prediction). However, as we have noted, a major drawback of the graphical solution is that if our players have 3 or more options, then we would need to graph an equation in 3 or more variables; which, I hope you agree, we don't want to do. Although we will continue to focus on <m>2 \times 2</m> games, we will develop a new method which can more easily be used to solve larger games.
   </p>
 
   <p>
-    We will some new notation. Let
+    We will need some new notation. Let
     <md>
       <mrow>P_1(H) \amp  = \mbox{ the probability that Player 1 plays H; }</mrow>
       <mrow>P_1(T) \amp  = \mbox{ the probability that Player 1 plays T;}</mrow>
@@ -68,35 +67,35 @@
     Also, we will let <m>E_1(H)</m> be the expected value for Player 1 playing pure strategy H against a given strategy for Player 2. Similarly, <m>E_2(H)</m> will be Player 2's expected value for playing pure strategy H.
   </p>
   <activity xml:id="A_mpP2_60_40">
-    <title>The <m>(60, 40)</m> strategy for Player 2</title>
+    <title>The <m>(0.6, 0.4)</m> strategy for Player 2</title>
     <introduction>
       <p>
       In the Matching Pennies game, suppose Player 2 plays H 60% of the time and T 40% of the time.</p></introduction>
 
-      <task><p>
+      <task><statement><p>
             What are <m>P_2(H)</m> and <m>P_2(T)</m>?
-          </p></task>
+          </p></statement></task>
 
-        <task><p>
+        <task><statement><p>
             What do you think Player 1 should do? Does this differ from your ideal mixed strategy in <xref ref="A_mpguess"></xref>? Explain.
-          </p></task>
+          </p></statement></task>
 
-        <task><p>
-            We can use expected value to compute what Player 1 should do in response to Player 2's 60/40 strategy. First, consider a pure strategy for Player 1. Compute the expected value for Player 1 if she only plays H while Player 2 plays H with probability .6  and T with probability .4. This expected value is <m>E_1(H)</m>, above.
-          </p></task>
+        <task><statement><p>
+            We can use expected value to compute what Player 1 should do in response to Player 2's 60/40 strategy. First, consider a pure strategy for Player 1. Compute the expected value for Player 1 if she only plays H while Player 2 plays H with probability <m>0.6</m>  and T with probability <m>0.4</m>. This expected value is <m>E_1(H)</m>.
+          </p></statement></task>
 
-        <task><p>
+        <task><statement><p>
             Similarly, compute the expected value for Player 1 if she plays only T. Call it <m>E_1(T)</m>.
-          </p></task>
+          </p></statement></task>
 
-        <task><p>
-            Which pure strategy has a higher expected value for Player 1? If Player 1 plays this pure strategy, will she do better than your predicted value of the game?
-          </p></task>
+        <task><statement><p>
+            Which pure strategy, H or T, has a higher expected value for Player 1? If Player 1 plays this pure strategy, will she do better than your predicted value of the game?
+          </p></statement></task>
       
     
   </activity>
   <activity xml:id="A_mp60_40badP2">
-    <title>The <m>(60, 40)</m> strategy is not ideal for Player 2</title>
+    <title>The <m>(0.6, 0.4)</m> strategy is not ideal for Player 2</title>
     <statement>
       <p>
         Hopefully, you concluded that in <xref ref="A_mpP2_60_40"></xref> a pure strategy is good for Player 1. Explain why this means the 60/40 strategy is bad for Player 2.
@@ -108,27 +107,25 @@
     <introduction>
       <p>
         For any particular mixed (or pure) strategy of Player 2, we could find <m>E_1(T)</m> and <m>E_1(H)</m>.</p></introduction>
-        <task><p>Explain why if <m>E_1(H) > E_1(T)</m>, Player 1 should always play H.
-      </p></task>
+        <task><statement><p>Explain why if <m>E_1(H) > E_1(T)</m> Player 1 should always play H.
+      </p></statement></task>
     
-      <task><p>
-        Similarly, explain why if <m>E_1(H) \lt  E_1(T)</m>, Player 1 should always play T.
-      </p></task>
-    
-  </activity>
-  <activity xml:id="A_mpuneqbad">
-    <title>Player 2 is unhappy when Player 1's expected values are unequal</title>
-    <statement>
+      <task><statement><p>
+        Similarly, explain why if <m>E_1(H) \lt  E_1(T)</m> Player 1 should always play T.
+      </p></statement></task>
+      <task><statement>
       <p>
-        Explain why the situations in <xref ref="A_mpPlayHT"></xref> are bad for Player 2.
+        Explain why the situations in (a) and (b) are bad for Player 2.
       </p>
-    </statement>
+    </statement></task>
+    
   </activity>
+  
   <activity xml:id="A_eqgood">
     <title>Equal expected values are better</title>
     <statement>
       <p>
-        Use your answers from <xref ref="A_mpPlayHT"></xref> and <xref ref="A_mpuneqbad"></xref> to explain why the situation in which <m>E_1(H)=E_1(T)</m> is the best for Player 2.
+        Use your answers from <xref ref="A_mpPlayHT"></xref> to explain why the situation in which <m>E_1(H)=E_1(T)</m> is the best for Player 2.
       </p>
     </statement>
   </activity>
@@ -142,13 +139,14 @@
     <introduction>
       <p>
         Let <m>P_2(H)</m> and <m>P_2(T)</m> be the probabilities that Player 2 plays H and T respectively. </p></introduction>
-        <task><p>Find equations for <m>E_1(H)</m> and <m>E_1(T)</m> in terms of <m>P_2(H)</m> and <m>P_2(T)</m> for the game of Matching Pennies.</p><hint><p>The expected value, <m>E_1(H)</m>,  is (Player 1's payoff for [H, H]<m>\times</m> the probability Player 2 plays H)<m>+</m> (Player 1's payoff for [H, T]<m>\times</m> the probability Player 2 plays T).</p></hint></task>
-        <task><p>Since we want <m>E_1(H)=E_1(T)</m>, set your two equations equal to each other. This gives you one equation in terms of <m>P_2(H)</m> and <m>P_2(T)</m>.
-      </p></task>
+        <task><statement><p>Find equations for <m>E_1(H)</m> and <m>E_1(T)</m> in terms of <m>P_2(H)</m> and <m>P_2(T)</m> for the game of Matching Pennies.</p></statement><hint><p>The expected value, <m>E_1(H)</m>,  is (Player 1's payoff for [H, H]<m>\times P_2(H)) +</m> (Player 1's payoff for [H, T]<m>\times P_2(T))</m>.
+        </p></hint></task>
+        <task><statement><p>Since we want <m>E_1(H)=E_1(T)</m>, set your two equations equal to each other. This gives you one equation in terms of <m>P_2(H)</m> and <m>P_2(T)</m>.
+      </p></statement></task>
     
-      <task><p>
+      <task><statement><p>
         Explain why we must also have the equation <m>P_2(H)+P_2(T)=1</m>.
-      </p></task>
+      </p></statement></task>
   </activity>
   <p>
     In general, to solve for Player 2's strategy, we want to write an equation for each of Player 1's pure strategy expected values in terms of Player 2's probabilities. For example, <m>E_1(H)</m> and <m>E_1(T)</m> in terms of variables <m>P_2(H)</m> and <m>P_2(T)</m>. We then set the expected values equal to each other. We now have an equation just in terms of Player 2's probabilities. 
@@ -166,7 +164,7 @@
       </p>
     </statement>
   </activity>
-  <p>Now can you use a similar process to find Player 1's strategy? Whose expected values should you use? Whose probabliities?
+  <p>Can you use a similar process to find Player 1's strategy? Whose expected values should you use? Whose probabliities?
   </p>
   <activity xml:id="A_mpP1sol">
     <title>Find Player 1's probabilities</title>
@@ -202,12 +200,13 @@
     <title>Solve a <m>2\times 2</m> repeated game using expected values</title>
     <statement>
       <p>
-        Apply this method of using expected value to <xref ref="E_smallrepeat"></xref>, which we solved using the graphical method in <xref ref="S_MixStratGraph"></xref> to find the equilibrium mixed strategies for each player and the value of the game for each player:
+        Apply the method of using expected value to the game in <xref ref="E_smallrepeat"></xref> to find the equilibrium mixed strategies for each player and the value of the game for each player:
         <me>
           \left[\begin{matrix}1\amp 0\\
           -1\amp 2
           \end{matrix} \right].
         </me>
+        Note, we solved this game using the graphical method in <xref ref="S_MixStratGraph"></xref>, so you can compare your answer.
       </p>
     </statement>
   </activity>
@@ -215,7 +214,7 @@
     <title>Expected value solution for Rock-Paper-Scissors</title><idx><h>Rock-Paper-Scissors</h><h>expected value solution</h></idx>
     <statement>
       <p>
-        As we noted in this section, this method can be used to solve bigger games. We just have more equations. Use the expected value method to find the equilibrium mixed strategy for Rock-Paper-Scissors for Player 2.  
+        As we noted in this section, teh expected value method can be used to solve bigger games. We just have more equations. Use the expected value method to find the equilibrium mixed strategy for Rock-Paper-Scissors for Player 2.  
       </p>
     </statement>
     <hint><p>You will need to set <m>E_1(R)=E_1(P)</m> and <m>E_1(P)=E_1(S)</m>; solve for <m>P_2(R), P_2(P), P_2(S)</m>; etc. It should be very similar to what you did for Matching Pennies, but there will be three equations and three unknowns.</p></hint>
@@ -249,7 +248,7 @@
     has a pure strategy equilibrium.</p></statement><answer>False</answer></exercise>
 
      <exercise label="IGT_MSEV_CYU_findE1A5050"><statement><p>Consider the zero-sum game given by
-       <xref ref="T_exergameEV"></xref>. Suppose Player 2 plays the C 50% of the time and D 50% of the time. We can call this the (50, 50) or (1/2, 1/2) strategy. What is <m>E_1(A)</m>? <var width="3"/> 
+       <xref ref="T_exergameEV"></xref>. Suppose Player 2 plays the C 50% of the time and D 50% of the time. We can call this the <m>(1/2, 1/2)</m> strategy. What is <m>E_1(A)</m>? <var width="3"/> 
     </p></statement>
     
       <setup>
@@ -292,7 +291,7 @@
       <answer><m>E_1(A)=(1/2)(1)+(1/2)(-3)=-1</m></answer></exercise>
 
   <exercise label="IGT_MSEV_CYU_findE1B5050"><statement><p>Consider the zero-sum game given by
-       <xref ref="T_exergameEV"></xref>. Suppose Player 2 plays the C 50% of the time and D 50% of the time. We can call this the (50, 50) or (1/2, 1/2) strategy. What is <m>E_1(B)</m>? <var width="3"/> 
+       <xref ref="T_exergameEV"></xref>. Suppose Player 2 plays the C 50% of the time and D 50% of the time. We can call this the  <m>(1/2, 1/2)</m> strategy. What is <m>E_1(B)</m>? <var width="3"/> 
     </p></statement>
     
       <setup>
@@ -334,7 +333,7 @@
   </setup>
       <answer><m>E_1(A)=(1/2)(-4)+(1/2)(2)=-1</m></answer></exercise>
 
-    <exercise label="IGT_MSEV_CYU_AorB5050"><statement><p>Suppose Player 2 plays the (1/2, 1/2) strategy in  <xref ref="T_exergameEV"></xref>, then which pure strategy does Player 1 prefer?</p></statement> 
+    <exercise label="IGT_MSEV_CYU_AorB5050"><statement><p>Suppose Player 2 plays the <m>(1/2, 1/2)</m> strategy in  <xref ref="T_exergameEV"></xref>, then which pure strategy does Player 1 prefer?</p></statement> 
     <choices randomize="no">
       <choice><statement><p>Playing A</p></statement><feedback><p>Use the expected values of each pure strategy to help you.</p></feedback></choice>
       <choice><statement><p>Playing B</p></statement><feedback><p>Use the expected values of each pure strategy to help you.</p></feedback></choice>
@@ -342,7 +341,7 @@
     </choices><answer><p>Neither</p></answer></exercise> 
 
     <exercise label="IGT_MSEV_CYU_findE1A2575"><statement><p>Consider the zero-sum game given by
-       <xref ref="T_exergameEV"></xref>. Suppose Player 2 plays the C 25% of the time and D 75% of the time. We can call this the (25, 75) or (1/4, 3/4) strategy. What is <m>E_1(A)</m>? <var width="3"/> 
+       <xref ref="T_exergameEV"></xref>. Suppose Player 2 plays C 25% of the time and D 75% of the time. We can call this the <m>(0.25, 0.75)</m> or <m>(1/4, 3/4)</m> strategy. What is <m>E_1(A)</m>? <var width="3"/> 
     </p></statement>
     
       <setup>
@@ -378,7 +377,7 @@
       <answer><m>E_1(A)=(1/4)(1)+(3/4)(-3)=-2</m></answer></exercise>
 
   <exercise label="IGT_MSEV_CYU_findE1B2575"><statement><p>Consider the zero-sum game given by
-       <xref ref="T_exergameEV"></xref>. Suppose Player 2 plays the C 25% of the time and D 75% of the time. We can call this the (25, 75) or (1/4, 3/4) strategy. What is <m>E_1(B)</m>? <var width="3"/> 
+       <xref ref="T_exergameEV"></xref>. Suppose Player 2 plays C 25% of the time and D 75% of the time. We can call this the <m>(0.25, 0.75)</m> or <m>(1/4, 3/4)</m> strategy. What is <m>E_1(B)</m>? <var width="3"/> 
     </p>
   <p>Reminder, if your answer is not a whole number, use decimals.</p></statement>
     
@@ -414,7 +413,7 @@
   </setup>
       <answer><m>E_1(A)=(1/4)(-4)+(3/4)(2)=0.5</m></answer></exercise>
 
-    <exercise label="IGT_MSEV_CYU_AorB2575"><statement><p>If Player 2 plays the (1/4, 3/4) strategy in  <xref ref="T_exergameEV"></xref>, then which pure strategy does Player 1 prefer?</p></statement> 
+    <exercise label="IGT_MSEV_CYU_AorB2575"><statement><p>If Player 2 plays the <m>(1/4, 3/4)</m> strategy in  <xref ref="T_exergameEV"></xref>, then which pure strategy does Player 1 prefer?</p></statement> 
     <choices randomize="no">
       <choice><statement><p>Playing A</p></statement><feedback><p>Use the expected values of each pure strategy to help you.</p></feedback></choice>
       <choice correct="yes"><statement><p>Playing B</p></statement><feedback><p>Since the expected value for Player 1 is greater for B than A, Player 1 prefers B.</p></feedback></choice>
@@ -422,7 +421,7 @@
     </choices><answer>Playing B</answer></exercise> 
 
     <exercise label="IGT_MSEV_CYU_findE17525"><statement><p>Consider the zero-sum game given by
-       <xref ref="T_exergameEV"></xref>. Suppose Player 2 plays (3/4, 1/4) strategy.</p>
+       <xref ref="T_exergameEV"></xref>. Suppose Player 2 plays the <m>(3/4, 1/4)</m> strategy.</p>
        <p> What is <m>E_1(A)</m>? <var width="3"/></p>
        <p> What is <m>E_1(B)</m>? <var width="3"/></p> 
        <p>Reminder, if your answer is not a whole number, use decimals.</p>
@@ -473,7 +472,7 @@
   </setup>
       <answer><m>E_1(A)=0, E_1(B)=-2.5</m></answer></exercise>
 
-    <exercise label="IGT_MSEV_CYU_AorB7525"><statement><p>If Player 2 plays the (3/4, 1/4) strategy in  <xref ref="T_exergameEV"></xref>, then which pure strategy does Player 1 prefer?</p></statement> 
+    <exercise label="IGT_MSEV_CYU_AorB7525"><statement><p>If Player 2 plays the <m>(3/4, 1/4)</m> strategy in  <xref ref="T_exergameEV"></xref>, then which pure strategy does Player 1 prefer?</p></statement> 
     <choices randomize="no">
       <choice correct="yes"><statement><p>Playing A</p></statement><feedback><p>Since the expected value for Player 1 is greater for A than B, Player 1 prefers A.</p></feedback></choice>
       <choice><statement><p>Playing B</p></statement><feedback><p>Use the expected values of each pure strategy to help you.</p></feedback></choice>

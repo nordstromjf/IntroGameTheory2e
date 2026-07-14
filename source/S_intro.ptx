@@ -29,25 +29,25 @@
         </p>
 
     <p>
-      We need both players to be self-interested and rational to reach the solution that the cake is divided evenly, and both children receive equal sized pieces. For example, if a player doesn't like cake, then they may cut themselves a small piece, and give the other player a large piece. This could lead to both children being happy and feeling that the cake was fairly divided, but it does not give us an evenly divided cake. The idea that each player knows the other player is rational is important as well. If the cake cutter does not think the chooser will take the largest piece, then we also may not get an evenly divided cake.
+      We need both players to be self-interested and rational to reach the solution that the cake is divided evenly, and both children receive equal sized pieces. For example, if a player doesn't like cake, then they may cut themselves a small piece and give the other player a large piece. This could lead to both children being happy and feeling that the cake was fairly divided, but it does not give us an evenly divided cake. The idea that each player knows the other player is rational is important as well. If the cake cutter does not think the chooser will take the largest piece, then we also may not get an evenly divided cake.
     </p>
 
     <p>
-      The idea that players are self-interested is crucial to game theory. There are lots of other ways to play games, and those might be worth exploring. But to get started with game theory, we must make specific assumptions and develop the mathematical context from these assumptions.
+      The idea that players are self-interested is crucial to game theory. There are lots of other ways to play games, and those might be worth exploring. But to get started with game theory we must make specific assumptions and develop the mathematical context from these assumptions.
     </p>
     <assemblage xml:id="assumptions"><title>Basic Assumptions</title><idx><h>assumptions</h></idx>
     <p>
-      <dl>
-        <li><title>Players are self-interested.</title>  The goal is to win the most or lose the least. </li>
-        <li><title>Players are perfectly logical.</title>  A player will always take into account all available information and make the decision which maximizes his payoff. This includes knowing that his opponent is also making the best decision for herself.</li>
-      </dl></p>
+      <ul>
+        <li><em>Players are self-interested.</em>  The goal is to win the most or lose the least. </li>
+        <li><em>Players are perfectly logical.</em>  A player will always take into account all available information and make the decision which maximizes his payoff. This includes knowing that his opponent is also making the best decision for herself.</li>
+      </ul></p>
     </assemblage>
 
-      <p>As an example of how a player must assume that his opponent is also making the best decision for herself, in the cake cutting game a player wouldn't cut one large piece hoping that his opponent will by chance pick the smaller piece. A player must assume that her opponent will always choose the larger piece.
+      <p>As an example of how a player must assume that his opponent is also making the best decision for herself, in the cake cutting game a player wouldn't cut one large piece hoping that his opponent will by chance pick the smaller piece. A player must assume that his opponent will always choose the larger piece.
     </p>
 
     <p>
-      What does it mean to win? A player's <term>payoff</term><idx><h>payoff</h></idx> is the amount (points, money, or anything a player values) a player receives for a particular outcome of a game. We say that the player's goal is to maximize his or her payoff. We should note that the maximum payoff for a player might even be negative, in which case the player wants the least negative (or closest to 0) payoff.
+      A player's <term>payoff</term><idx><h>payoff</h></idx> is the amount (points, money, or anything a player values) a player receives for a particular outcome of a game. We say that the player's goal is to maximize his or her payoff. We should note that the maximum payoff for a player might even be negative, in which case the player wants the least negative (or closest to 0) payoff.
     </p>
 
     <p>
@@ -63,7 +63,7 @@
         </p></li>
 
       <li><p>
-          In an election poll, a candidate doesn't just want to be ahead of her opponent, she wants lead by as large a margin as possible, (especially if she needs to account for error in the polls).
+          In an election poll, a candidate doesn't just want to be ahead of her opponent, she wants lead by as large a margin as possible, especially if she needs to account for error in the polls.
         </p></li>
     </ol>
     </p>
@@ -75,11 +75,11 @@
     
 
     <p>
-      Now you may be wondering what these assumptions have to do with reality. After all, no one's perfect. But we often study ideal situations (especially in math). For example, you've all studied geometry. Can anyone here draw a perfectly straight line or a perfectly round circle? Yet, you've all studied such objects.
+      Now you may be wondering what these assumptions have to do with reality. After all, no one's perfect. But we often study ideal situations, especially in math. For example, you've all studied geometry. Can you draw a perfectly straight line or a perfectly round circle? Yet, in Geometry you've studied such objects.
     </p>
 
     <p>
-      <em>Our Goal: Develop strategies for our perfectly logical, self-interested players.</em>
+      Our main goal throughout this text is to develop strategies for our perfectly logical, self-interested players.
     </p>
   </subsection>
 
@@ -94,22 +94,22 @@
         Play several games of Tic TacToe with an opponent. Make sure you take turns being the first player and the second player. Develop a strategy for winning Tic Tac Toe. You may have a different strategy for the first player and for the second player. Be as specific as possible. You may need to consider several possibilities which depend on what your opponent does.
       </p></introduction>
 
-        <task>
+        <task><statement>
           <p>
               Who wins? Player 1 or Player 2?
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               What must each player do in order to have the best possible outcome?
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               How did you develop your strategy?
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               How do you know it will always work?
-            </p></task>
+            </p></statement></task>
     </activity>
     
     <p>
@@ -121,7 +121,7 @@
         </p></li>
 
       <li><p>
-          Players have <term>perfect information</term><idx><h>perfect information</h></idx>. This means each player knows what all of his or her own options are, what all of his or her opponent's options are, and both players know what the outcome of each option is. Additionally, players know that both players have all of this information.
+          Players have <term>perfect information</term><idx><h>perfect information</h></idx>. This means each player knows what all of his or her own options are, what all of his or her opponent's options are, and both players know what the outcome of each option is. Additionally, players know that both players have all of this information. Be careful, though, as some games of chance may also be games with perfect information. Players just need to know what all their opponent's options are. If some information about which strategies are avalable to a player is hidden, then the game does not have perfect information. Many board games have perfect information in that once a player rolls a die, all the players know what options a player has. Many card games do not have perfect information in that if you don't know what cards your opponent holds, you don't know what the payoff will be for certain strategies.
         </p></li>
 
       <li><p>
@@ -129,7 +129,7 @@
         </p></li>
 
       <li><p>
-          The game is <term>finite</term><idx><h>finite game</h></idx>. This means the game must end after a finite number of moves or turns. In other words, the game cannot go on forever. A game that is not finite is called <term>infinite</term><idx><h>infinite game</h></idx>. Note, an infinite game may end after a finite number of turns, but there is no maximum number of turns or process to ensure the game ends. In Tic Tac Toe, the game must end after 9 or fewer turns.
+          The game is <term>finite</term><idx><h>finite game</h></idx>. This means the game must end after a finite number of moves or turns. In other words, the game cannot go on forever. A game that is not finite is called <term>infinite</term><idx><h>infinite game</h></idx>. Note, an infinite game may end after a finite number of turns, but there is no maximum number of turns or some other process to ensure the game ends. In Tic Tac Toe, the game must end after 9 or fewer turns.
         </p></li>
     </ul>
     </p>
@@ -167,26 +167,26 @@
         <p>
         What is your favorite game?</p></introduction>
 
-        <task>
+        <task><statement>
           <p>
               Give a brief description of the game, including what it means to <q>win</q> or <q>lose</q> the game.
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               How many players do you need?
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               Do the players have perfect information for the game?
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               Is the game finite or can it go on forever?
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               Give some possible strategies for the player(s). Note, depending on the game, these strategies may not always result in a definite win, but they should suggest a way to increase a player's chances of winning (or not losing).
-            </p></task>
+            </p></statement></task>
         
       </activity>
  

@@ -3,7 +3,7 @@
   <idx><h>solution</h><h>using <pubtitle>Sage</pubtitle></h></idx>
 
   <p>
-    In this section we will use technology to graph lines and solve for the intersection point. In particular, we will use an open online resource called <pubtitle>Sage</pubtitle>. 
+    In this section we will use technology to graph lines and solve for the intersection point. In particular, we will use an open online resource called <pubtitle>Sage</pubtitle>. Although you will be able to use <pubtitle>Sage</pubtitle> directly in the online version of textbook, you can access it externally by going to the Sage Cell Server at <url href="https://sagecell.sagemath.org/" visual="sagecell.sagemath.org"/>. This is free and open to use, no account needed. If you are working from the print version of the text you can just type the code into a <pubtitle>Sage</pubtitle> cell.
   </p>
 
   <p>
@@ -95,7 +95,7 @@
       </p></li></ul></p></li>
 </ul></p>
 <p>
-  Before moving on, let's again, make sure we understand what this line represents. Any point on it represents the expected payoff to Player 1 as she varies her strategy, <em>assuming Player 2 only plays <m>C</m></em>. In this case, we can see that as she plays <m>B</m> more often, her expected payoff goes down. You can now use this Sage cell to plot any line for Player 2's pure strategy <m>C</m>. Just edit the values for the points <m>u</m> and <m>v</m>. Go ahead and try it! (Don't worry the original values will reset when you refresh the page.)
+  Before moving on, let's again, make sure we understand what this line represents. Any point on it represents the expected payoff to Player 1 as she varies her strategy, <em>assuming Player 2 only plays <m>C</m></em>. In this case, we can see that as she plays <m>B</m> more often, her expected payoff goes down. You can now use this <pubtitle>Sage</pubtitle> cell to plot any line for Player 2's pure strategy <m>C</m>. Just edit the values for the points <m>AC</m> and <m>BC</m>. Go ahead and try it! 
 </p>
 <p>
   Now let's do the same thing, assuming Player 2 plays only <m>D</m>.
@@ -150,7 +150,7 @@
         </sage>
 
       <p>
-        Now we can see that if Player 2 plays only <m>D</m>, then Player 1 does best by playing only <m>B</m>. Again, you can use this Sage cell to plot both Player 2's pure strategies. Points <m>AC</m> and <m>BC</m> are for strategy <m>C</m>, while points <m>AD</m> and <m>BD</m> are for strategy <m>D</m>.
+        We can see that if Player 2 plays only <m>D</m>, then Player 1 does best by playing only <m>B</m>. Again, you can use this <pubtitle>Sage</pubtitle> cell to plot both Player 2's pure strategies. Points <m>AC</m> and <m>BC</m> are for strategy <m>C</m>, while points <m>AD</m> and <m>BD</m> are for strategy <m>D</m>.
       </p></li></ul></p></li>
   </ul></p>
   
@@ -195,7 +195,7 @@
         </sage></p>
         <p>The solution for Player 1 is <m>(p, m)</m>. Where <m>p</m> is the probability Player 1 plays B, and <m>m</m> is the expected payoff to Player 1.</p>
       <p>
-        We can use this Sage cell to solve for <m>p</m> and <m>m</m> for any <m>2\times 2</m> game by editing the equations <m>m==-2*p+1, m==2*p</m>.
+        We can use this <pubtitle>Sage</pubtitle> cell to solve for <m>p</m> and <m>m</m> for any <m>2\times 2</m> game by editing the equations <m>m==-2*p+1, m==2*p</m>.
       </p></li></ul></p></li>
     
     <li>
@@ -203,7 +203,7 @@
       <p>
       Determine Player 1's maximin mixed strategy. 
 
-      Recalling that <m>p</m> is the probability that Player 1 plays <m>B</m>, we know that Player 1 will play <m>B</m> with probability 1/4, and thus, play A with probability 3/4. The expected payoff for Player 1, <m>m</m>, is 1/2. It is important to check the algebraic solution with where the intersection point appears on the graph. Although we are using technology to help us graph and solve for the intersection point, we need to be able to catch any errors we make entering the information into Sage.
+      Recalling that <m>p</m> is the probability that Player 1 plays <m>B</m>, we know that Player 1 will play <m>B</m> with probability 1/4, and thus, play A with probability 3/4. The expected payoff for Player 1, <m>m</m>, is 1/2. It is important to check the algebraic solution with where the intersection point appears on the graph. Although we are using technology to help us graph and solve for the intersection point, we need to be able to catch any errors we make entering the information into <pubtitle>Sage</pubtitle>.
       </p>
     </li></ul></p>
   
@@ -216,7 +216,7 @@
       -1\amp 2
       \end{matrix} \right],
     </me>
-    and continuing to label Player 1's strategies by <m>A</m> and <m>B</m>, and Player 2's strategies by <m>C</m> and <m>D</m>, we can graph lines for Player 1's pure strategies <m>A</m> and <m>B</m>. We now let the <m>x</m>-axis represent the probability that Player 2 plays <m>D</m>. In the Sage applet below, for <m>AC</m> and <m>AD</m> enter the coordinates of two points that determine the line for when Player 1 plays <m>A</m>, then the two points for <m>BC</m> and <m>BD</m> that determine the line for when Player 1 plays <m>B</m>. We will then have Sage graph the lines. You can enter new values for <m>AC, AD, BC,</m> and <m>BD</m> if you would like to draw the graph for a different matrix.
+    and continuing to label Player 1's strategies by <m>A</m> and <m>B</m>, and Player 2's strategies by <m>C</m> and <m>D</m>, we can graph lines for Player 1's pure strategies <m>A</m> and <m>B</m>. We now let the <m>x</m>-axis represent the probability that Player 2 plays <m>D</m>. In the <pubtitle>Sage</pubtitle> applet below, for <m>AC</m> and <m>AD</m> enter the coordinates of two points that determine the line for when Player 1 plays <m>A</m>, then the two points for <m>BC</m> and <m>BD</m> that determine the line for when Player 1 plays <m>B</m>. We will then have <pubtitle>Sage</pubtitle> graph the lines. You can enter new values for <m>AC, AD, BC,</m> and <m>BD</m> if you would like to draw the graph for a different matrix.
   </p>
 
   <sage>
@@ -249,7 +249,7 @@
       <output></output>
       </sage>-->
   <p>
-    Now determine and enter the equations of the two lines and have Sage solve for the intersection point.
+    Now determine and enter the equations of the two lines and have <pubtitle>Sage</pubtitle> solve for the intersection point.
   </p>  
 
   <sage>
@@ -275,9 +275,9 @@
         </output>
       </sage> -->
 
-  <p>You can now use these last two Sage cells to solve any 2 <m>\times</m> 2 game with a mixed strategy equilibrium. You can also take some time to experiment with what happens if the game has a pure strategy equilibrium.</p>
+  <p>You can now these last two <pubtitle>Sage</pubtitle> cells to solve any 2 <m>\times</m> 2 game with a mixed strategy equilibrium. You can also take some time to experiment with what happens if the game has a pure strategy equilibrium.</p>
 
-  <p>Sage is a powerful tool that we can use to solve many different computational problems. It is nice because it is free and open to use. But feel free to use other available graphing and solving tools, such as <url href="https://www.desmos.com/" visual="https://www.desmos.com/">Desmos</url>.</p>
+  <p><pubtitle>Sage</pubtitle> is a powerful tool that we can use to solve many different computational problems. It is nice because it is free and open to use. But feel free to use other available graphing and solving tools, such as <url href="https://www.desmos.com/" visual="https://www.desmos.com/">Desmos</url>.</p>
 
   <p>We can also use a simplified version of the interactive activity from <xref ref="S_MixStratGraph"/>.</p>
 
@@ -290,13 +290,13 @@
             
           </slate>
           <static><p>The interactive activity is available in the online version of the text at <url href="https://nordstrommath.com/IntroGameTheory2e/S_SolvingEq.html#W_graphicalmethodtool" visual="nordstrommath.com/IntroGameTheory2e/S_SolvingEq.html#W_graphicalmethodtool"/>
-           or on Doenet at <url href="https://www.doenet.org/portfolioviewer/_wuJisITcxM90a5oMR3Qye" visual="https://tinyurl.com/doenetmixstratfinder"/>.
+           or on Doenet at <url href="https://beta.doenet.org/activityViewer/rrTGvgdPgkPbCfqoP4us1i" visual="https://tinyurl.com/GraphicalMethodMixedStrategies"/>.
         </p></static>
   </interactive>
 
 </paragraphs>
   <p>
-    Now use the Sage cells or the interactive activity to help you analyze some more games!
+    Now use the <pubtitle>Sage</pubtitle> cells or the interactive activity to help you analyze some more games!
   </p>
   <activity xml:id="A_graph2practiceSage">
     <title>Use technology to find a mixed strategy equilibrium </title>
@@ -318,7 +318,7 @@
           </p></statement></task>
 
         <task><statement><p>
-            Use the Sage applet or the interactive activity to draw the graph for this game. Label each of your lines with the appropriate pure strategy.
+            Use the <pubtitle>Sage</pubtitle> applet or the interactive activity to draw the graph for this game. Label each of your lines with the appropriate pure strategy.
           </p></statement></task>
 
         <task><statement><p>
@@ -348,7 +348,7 @@
           </p></statement></task>
 
         <task><statement><p>
-            Use the Sage applet or the interactive activity to draw the graph for this game. Label each of your lines with the appropriate pure strategy.
+            Use the <pubtitle>Sage</pubtitle> applet or the interactive activity to draw the graph for this game. Label each of your lines with the appropriate pure strategy.
           </p></statement></task>
 
         <task><statement><p>
@@ -609,7 +609,7 @@
     <exercise label="IGT_SE_CYU_fullP2game2"><statement><p>Find the mixed strategy for <alert>Player 2</alert> for the game in 
 
         <xref ref="T_exergame2"></xref>.</p>
-  <p> Player 2 should play C with a probability of <var width="3" /> and D with a probabilty of <var width="3" />. The expected payoff to Player 2 is <var width="4" />. (Use 3 decimal places if necessary)</p></statement>
+  <p> Player 2 should play C with a probability of <var width="3" /> and D with a probabilty of <var width="3" />. The expected payoff to Player 2 is <var width="4" />. (Use 3 decimal places if necessary.)</p></statement>
       
       <setup>
     <var>
@@ -692,7 +692,7 @@
     </condition>
     </var></setup><answer><p><m>(5/9, 4/9), -17/9</m></p></answer></exercise>
 
-    <exercise label="IGT_SE_CYU_infofromgraph"><statement><p>If we use the graph to try to find Player 1's mixed strategy, which of the following can we determine with just the graph, without solving for the intersection point?</p></statement>
+    <exercise label="IGT_SE_CYU_infofromgraph"><statement><p>If we use the graphical method to try to find Player 1's mixed strategy, which of the following can we determine with just the graph, without solving for the intersection point?</p></statement>
        <choices randomize="yes">
          <choice correct="yes"><statement ><p>Whether Player 1 should play A more often than B.</p></statement><feedback><p>If the intersection seems to be closer to <m>x=0</m> than <m>x=1</m>, then Player 1 should play A more often than B.</p></feedback></choice>
          <choice correct="yes"><statement><p>Whether Player 1's expected payoff is positive or negative.</p></statement><feedback><p>If the intersection point is above the <m>x</m>-axis, then the payoff is positive.</p></feedback></choice>

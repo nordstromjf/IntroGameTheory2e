@@ -2,11 +2,11 @@
 <section xml:id="S_Undercut">
   <title>Undercut</title>
   <p>
-    This section requires you to be able to solve <q>large</q> systems of equations. You will be using the matrix techniques from <xref ref="S_AugMatrices"></xref>. You are encouraged to use technology such as a Desmos or Sage.
+    This section requires you to be able to solve <q>large</q> systems of equations. You will be using the matrix techniques from <xref ref="S_AugMatrices"></xref>. You are encouraged to use technology such as a Desmos or <pubtitle>Sage</pubtitle>.
   </p>
 
   <p>
-    As we saw in <xref ref="S_LiarsPoker"></xref>, an important part of game theory is the process of translating a game to a form that we can analyze.
+    As we saw in <xref ref="S_LiarsPoker"></xref>, an important part of game theory is the process of translating a game into a form that we can analyze.
   </p>
 
   <example xml:id="Undercut">
@@ -16,11 +16,11 @@
 
       <p>
         
-        Each player chooses a number 1 through 5. If the two numbers don't differ by 1, then each player adds their own number to their score. If the two numbers differ by 1, then the player with the <em>lower</em> number adds <em>both</em> numbers to their score; the player with the higher number gets nothing. This game is from Douglas Hofstadter's <pubtitle>Metamagical Themas</pubtitle>.
+        Each player chooses a number 1 through 5. If the two numbers don't differ by 1, then each player adds their own number to their score. If the two numbers differ by 1, then the player with the <em>lower</em> number adds <em>both</em> numbers to their score; the player with the higher number gets nothing. This game is from Douglas Hofstadter's <pubtitle>Metamagical Themas</pubtitle>, p. 700, <xref ref="biblio-hofstadter-MT"/>.
       </p>
 
       <p>
-        For example, suppose in round one Player 1 chooses 4, and Player 2 chooses 4. Each player keeps their own number. The score is now 4-4. In the next round, Player 1 chooses 2, and Player 2 chooses 5. The score would now be 6-9. In the third round Player 1 chooses 4, and Player 2 chooses 5. Now Player 1 gets <em>both</em> numbers, while Player 2 gets nothing, making the score 15-9.
+        For example, suppose in round one Player 1 chooses 4, and Player 2 chooses 4. Each player gets their own number of points. The score is now 4-4. In the next round, Player 1 chooses 2, and Player 2 chooses 5. The score would now be 6-9. In the third round Player 1 chooses 4, and Player 2 chooses 5. Now Player 1 gets <em>both</em> numbers, while Player 2 gets nothing, making the score 15-9.
       </p>
     </statement>
   </example>
@@ -34,7 +34,7 @@
     </statement>
   </activity>
 
-  <p>After playing Undercut with an opponent, try to devise a good strategy.</p>
+  
 
   <activity xml:id="A_Uguessstrat">
     <title>Conjecture a strategy</title>
@@ -155,12 +155,12 @@
     <title>Expected value of a symmetric game</title>
     <statement>
       <p>
-        In <xref ref="A_symmetricpayoff"></xref>, you should have determined that since this is a symmetric game, the expected value for each Player should be 0. Modify your equations from <xref ref="A_Uequations"></xref> to include this piece of information. It is important to recognize that this step greatly simplifies our work for the expected value method since we don't need to set the expected values equal to each other. However, we can ONLY do this since we know the game is symmetric!
+        In <xref ref="A_symmetricpayoff"></xref>, you should have determined that since this is a symmetric game, the expected value for each Player should be 0. Modify your equations from <xref ref="A_Uequations"></xref> to include this piece of information. Note, we can ONLY do this since we know the game is symmetric!
       </p>
     </statement>
   </activity>
 
-  <p>If we use that the game is symmetric, and hence the expected value of the game for each player must be 0 since neither player can have an advantage over the other, we do not need to set the equations equal to each other. We could not use this method earlier since we had no way of knowing the expected value of a general game.</p>
+  <p>If we use that the game is symmetric, and hence the expected value of the game for each player must be 0, we do not need to set the equations equal to each other. It is important to recognize that this step greatly simplifies the algebra for the expected value method. We could not use this method earlier since we had no way of knowing the expected value of a general game.</p>
 
   <p>We now have five equations and five unknowns. There is a sixth equation: we know that the probabilities must add up to 1. We can now solve for the equilibrium strategy.</p>
 
@@ -187,7 +187,7 @@
   <reading-questions>
       <title>Check Your Understanding</title>
 
-      <exercise label="IGT_UC_CYU_netgain15"><statement><p>In Undercut, <xref ref="Undercut"></xref>, if Player 1 plays 5 and Player 2 plays 1, Player 2's net gain is <var width="3"/>.</p></statement>
+      <exercise label="IGT_UC_CYU_netgain15"><statement><p>In Undercut, if Player 1 plays 5 and Player 2 plays 1, Player 2's net gain is <var width="3"/>.</p></statement>
       <setup>
         <var>
 
@@ -227,7 +227,7 @@
     </var>
       </setup><answer><m>-4</m></answer></exercise>
 
-    <exercise label="IGT_UC_CYU_netgain43"><statement><p>In Undercut, <xref ref="Undercut"></xref>, if Player 1 plays 3 and Player 2 plays 4, Player 1's net gain is <var width="3"/>.</p></statement>
+    <exercise label="IGT_UC_CYU_netgain43"><statement><p>In Undercut, if Player 1 plays 3 and Player 2 plays 4, Player 1's net gain is <var width="3"/>.</p></statement>
       <setup>
         <var>
 

@@ -13,7 +13,7 @@
       </p>
 
       <p>
-        You should note that it is difficult to put this game into a matrix form since payoffs depend on whether there is at least one volunteer or cooperator.
+        You should note that it is difficult to put this game into a matrix since payoffs depend on whether there is at least one volunteer or cooperator.
       </p>
     </statement>
   </example>
@@ -37,7 +37,7 @@
             <cell halign="center" bottom="minor">Defect</cell>
           </row>
           <row>
-            <cell>Driver 1</cell>
+            <cell>Player 1</cell>
             <cell right="minor">Cooperate</cell>
             <cell halign="center" bottom="minor" right="minor"><m>(3, 3)</m></cell>
             <cell halign="center" bottom="minor" right="minor"><m>(0, 5)</m></cell>

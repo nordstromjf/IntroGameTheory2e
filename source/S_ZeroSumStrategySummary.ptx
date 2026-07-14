@@ -1,9 +1,55 @@
 
 <section xml:id="S_ZeroSumStrategySummary">
-  <title>Strategies for Zero-Sum Games and Equilibrium Points</title>
+  <title>Strategies for Zero-Sum Games and Equilibrium Points</title><shorttitle>Strategies for Zero-Sum Games</shorttitle>
   <p>
     Throughout this chapter, we have been trying to find solutions for two player zero-sum games by deciding what two rational players should do. In this section, we will try to understand where we are with solving two-player zero-sum games. The activities in this section are intended to review the concepts of dominated strategies, equilibrium points, and the maximin/minimax strategies. By working through your own examples, we hope to tie these concepts together and ask some bigger questions about equilibrium points. For example, should a player always play an equilibrium strategy? Will the maximin/minimax strategy always find an equilibrium point if one exists? What should a player do if no equlibrium exists? Although the formal answers to some of these questions are outside the scope of this book, you should be able to make some good conjectures about equilibrium points and rational solutions to two-player zero-sum games.
   </p>
+
+  <activity xml:id="A_random"><title>Random Matrices</title>
+  <introduction><p>We wish to see what might be true about zero-sum matrices in general. We can experiment by generating random matrices and trying to find equilibrium points. You can try to generate examples yourself, or you can use technology.</p></introduction>
+  <task><statement><p>Write down a random payoff (zero-sum) matrix with two strategy choices for each player. If you want to use technology, you can generate a random <m>2\times 2</m> matrix using <pubtitle>Sage</pubtitle>. We'll see more specifically how to use <pubtitle>Sage</pubtitle> in <xref ref="S_SolvingEq"/>.</p>
+  <p>Click on the <q>Evaluate (Sage)</q> button to generate a random <m>2\times 2</m> matrix.
+
+        <sage>
+          <input>
+          A=random_matrix(ZZ, 2, 2);
+          show(A)
+          </input>
+          <output></output>
+        </sage> </p>
+
+</statement></task>
+<task><statement><p>Write down a random <m>3 \times 3</m> matrix and a random <m>4 \times 4</m> matrix. Again, you can use <pubtitle>Sage</pubtitle> to generate random matrices.
+        <sage>
+          <input>
+          B=random_matrix(ZZ, 3, 3);
+          C=random_matrix(ZZ, 4, 4);
+          show(B)
+          show(C)
+          </input>
+          <output></output>
+        </sage> </p>
+
+</statement></task>
+<task><statement><p>For each of your matrices
+      <ol marker="(1)">
+        <li><p>
+            try to determine any dominated strategies, if they exist.
+          </p></li>
+
+        <li><p>
+            try to determine any equilibrium points, if they exist.
+          </p></li>
+
+        <li><p>
+            determine the maximin and minimax strategies for Player 1 and Player 2, respectively. Can you always find these?
+          </p></li>
+      </ol></p></statement></task>
+
+<task><statement><p>Exchange your list with another student in the class or generate more examples using <pubtitle>Sage</pubtitle>, and repeat (c).</p></statement></task>  </activity>    
+
+
+<!--</activity>
   <activity xml:id="A_random2">
     <title>Random <m>2\times 2</m> matrix</title>
     <statement>
@@ -49,12 +95,13 @@
       </ol>
       </p>
     </statement>
-  </activity>
+  </activity>-->
+
   <activity xml:id="A_makelists">
     <title>Classify examples</title>
     <statement>
       <p>
-        Now combine all the examples of payoff matrices in a group of 3 or 4 students. Make a list of the examples with equilibrium points and a list of examples without equilibrium points. If you have only one list, try creating examples for the other list. Based on your lists, do you think random payoff matrices are likely to have equilibrium points?
+        Now combine all the examples of payoff matrices in a group of 3 or 4 students. Make a list of the examples with equilibrium points and a list of examples without equilibrium points. If you have only one list, try generating examples for the other list. Based on your lists, do you think random payoff matrices are likely to have equilibrium points?
       </p>
     </statement>
   </activity>
@@ -70,7 +117,7 @@
     </statement>
   </activity>
   <activity xml:id="A_equilmaxmin">
-    <title>Equilibia and maximin/minimax</title>
+    <title>Equilibria and maximin/minimax</title>
     <statement>
       <p>
         If a matrix has an equilibrium point, does the maximin/minimax strategy always find it? Explain.

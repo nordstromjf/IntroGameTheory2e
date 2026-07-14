@@ -18,7 +18,7 @@
       We can always think of zero-sum games as being games in which one player's win is the other player's loss.
     </p>
 
-    <example xml:id="poker">
+    <example xml:id="E_poker">
       <title>Zero-sum in Poker</title>
       <statement>
         <p>
@@ -107,14 +107,14 @@
     </p>
 
     <p>
-      But why are we going to call these games <q>zero-sum</q> rather than <q>constant-sum</q>? We can convert any zero-sum game to a game where the payoffs actually sum to zero.
+      But why are we going to call these games <q>zero-sum</q> rather than <q>constant-sum?</q> We can convert any zero-sum game to a game where the payoffs actually sum to zero.
     </p>
 
     <example xml:id="E_pokerzero">
       <title>Poker Payoffs Revisited</title>
       <statement>
         <p>
-          Consider the above poker game where each player begins the game with $100. Suppose at some point in the game the five players have the following amounts of money: $50, $200, $140, $100, $10. Then we could think of their gain as -$50, $100, $40, $0, -$90. What do these five numbers add up to?
+          Consider the poker game from <xref ref="E_poker" /> where each player begins the game with $100. Suppose at some point in the game the five players have the following amounts of money: $50, $200, $140, $100, $10. Then we could think of their gain as -$50, $100, $40, $0, -$90. What do these five numbers add up to?
         </p>
       </statement>
     </example>
@@ -123,7 +123,7 @@
       <tile>Converting to Payoffs that Sum to Zero</tile>
       <statement>
         <p>
-          Convert the cake division payoffs so that the payoff vectors sum to zero (rather than 100).
+          Convert the cake division payoffs so that the payoff vectors sum to zero rather than 100.
         </p>
 
         <p>
@@ -173,17 +173,23 @@
   <subsection xml:id="Ex_election">
     <title>An Election Campaign Game</title>
     <p>
-      Two candidates, Arnold and Bainbridge, are facing each other in a state election. They have three choices regarding the issue of the speed limit on I-5: they can support raising the speed limit to 70 MPH, they can support keeping the current speed limit, or they can dodge the issue entirely. The next three examples present three different payoff matrices for Arnold and Bainbridge.
+      Two candidates, Arnold and Bainbridge, are facing each other in a state election. They have three choices regarding the issue of the speed limit on a local highway: they can support raising the speed limit to 70 MPH, they can support keeping the current speed limit, or they can dodge the issue entirely. The next three activities present three different payoff matrices for Arnold and Bainbridge.
     </p>
-    <example xml:id="Ex_election1">
+    <!--<example xml:id="Ex_election1">
       <title>The Speed Limit Issue</title>
       <statement>
-        <p>
+
+      </statement>
+    </example>-->
+    <activity xml:id="A_election1">
+      <title>An election game</title>
+      <introduction>
+              <p>
           The candidates have the information given in <xref ref="T_election1"></xref> about how they would likely fare in the election based on how they stand on the speed limit.
         </p>
 
         <table xml:id="T_election1" >
-          <title>Percentage of the vote for <xref ref="Ex_election1"></xref>.</title>
+          <title>Percentage of the vote for the speed limit issue.</title>
           <tabular>
             <row>
               <cell></cell>
@@ -219,39 +225,38 @@
               <cell right="minor" bottom="minor" halign="center"><m>(40, 60)</m></cell>
             </row>
           </tabular>
-        </table>
-      </statement>
-    </example>
-    <activity xml:id="A_election1">
-      <title>Analysis of the election game</title>
-      <introduction>
-      <p> For the following questions, assume Arnold and Bainbridge have the payoff matrix given in <xref ref="Ex_election1"></xref>.
-      </p></introduction>
-        <task><p>
+        </table></introduction>
+        <task><statement><p>
               Explain why <xref ref="T_election1"></xref> is a zero-sum game.
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
-              What should Arnold choose to do? What should Bainbridge choose to do? Be sure to explain each candidate's choice. And remember, a player doesn't just want to win, he wants to get THE MOST votes. For example, you could assume these are polling numbers and that there is some margin of error, thus a candidate prefers to have a larger margin over his opponent.
-            </p></task>
+          <task><statement><p>
+              What should Arnold choose to do? What should Bainbridge choose to do? Be sure to explain each candidate's choice. And remember, a player doesn't just want to win, he wants to get the MOST votes. For example, you could assume these are polling numbers and that there is some margin of error, thus a candidate prefers to have a larger margin over his opponent.
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               What is the outcome of the election? What percentage of the vote does each candidate get?
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               Does Arnold need to consider Bainbridge's strategies in order to decide on his own strategy? Does Bainbridge need to consider Arnold's strategies in order to decide on his own strategy? Explain your answer.
-            </p></task>
+            </p></statement></task>
      </activity>
-    <example xml:id="Ex_election2">
+    <!--<example xml:id="Ex_election2">
       <title>A New Scenario</title>
       <statement>
-        <p>
+        
+      </statement>
+    </example>-->
+   <activity xml:id="A_election2">
+    <title>A new scenario</title>
+    <introduction>
+      <p>
           Bainbridge's mother is injured in a highway accident caused by speeding. The new payoff matrix is given in <xref ref="T_election2"></xref>.
         </p>
 
         <table xml:id="T_election2" >
-          <title>Percentage of the vote for <xref ref="Ex_election2"></xref>.</title>
+          <title>Percentage of the vote for the new scenario.</title>
           <tabular>
             <row>
               <cell></cell>
@@ -287,41 +292,40 @@
               <cell right="minor" bottom="minor" halign="center"><m>(40, 60)</m></cell>
             </row>
           </tabular>
-        </table>
-      </statement>
-    </example>
-   <activity xml:id="A_election2">
-    <title>Analysis of the second scenario</title>
-    <introduction>
-      <p> For the following questions, assume Arnold and Bainbridge have the payoff matrix given in <xref ref="Ex_election2"></xref>.
-      </p></introduction>
-        <task><p>
+        </table></introduction>
+        <task><statement><p>
               Explain why <xref ref="T_election2"></xref> is a zero-sum game.
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               What should Arnold choose to do? What should Bainbridge choose to do? Be sure to explain each candidate's choice.
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
-              What is the outcome of the election?
-            </p></task>
+          <task><statement><p>
+              What is the outcome of the election? Give the payoff vector.
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               Does Arnold need to consider Bainbridge's strategies in order to decide on his own strategy? Does Bainbridge need to consider Arnold's strategies in order to decide on his own strategy? Explain your answer.
-            </p></task>
+            </p></statement></task>
 
     </activity>
-    <example xml:id="Ex_election3">
+    <!--<example xml:id="Ex_election3">
       <title>A Third Scenario</title>
       <statement>
-        <p>
+        
+      </statement>
+    </example>-->
+   <activity xml:id="A_election3">
+    <title>A third scenario</title>
+    <introduction>
+      <p>
           Bainbridge begins giving election speeches at college campuses and monster truck rallies.
           The new payoff matrix is given in <xref ref="T_election3"></xref>.
         </p>
 
         <table xml:id="T_election3" >
-          <title>Percentage of the vote for <xref ref="Ex_election3"></xref>.</title>
+          <title>Percentage of the vote for the third scenario.</title>
           <tabular>
             <row>
               <cell></cell>
@@ -357,35 +361,28 @@
               <cell right="minor" bottom="minor" halign="center"><m>(65, 35)</m></cell>
             </row>
           </tabular>
-        </table>
-      </statement>
-    </example>
-   <activity xml:id="A_election3">
-    <title>Analysis of the third scenario</title>
-    <introduction>
-      <p> For the following questions, assume Arnold and Bainbridge have the payoff matrix given in <xref ref="Ex_election3"></xref>.
-      </p></introduction>
-          <task><p>
+        </table></introduction>
+          <task><statement><p>
               Explain why <xref ref="T_election3"></xref> is a zero-sum game.
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               What should Arnold choose to do? What should Bainbridge choose to do? Be sure to explain each candidate's choice.
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
-              What is the outcome of the election?
-            </p></task>
+          <task><statement><p>
+              What is the outcome of the election? Give the payoff vector.
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               Does Arnold need to consider Bainbridge's strategies in order to decide on his own strategy? Does Bainbridge need to consider Arnold's strategies in order to decide on his own strategy? Explain your answer.
-            </p></task>
+            </p></statement></task>
     </activity>
     <activity xml:id="A_changestrategy">
       <title>Changing the strategy</title>
       <statement>
         <p>
-          In each of the above scenarios, is there any reason for Arnold or Bainbridge to change his strategy? If there is, explain under what circumstances it makes sense to change strategy. If not, explain why it never makes sense to change strategy.
+          In each of the above scenarios, is there any reason for Arnold or Bainbridge to change his strategy from the strategy you determined? If there is, explain under what circumstances it makes sense to change strategy. If not, explain why it never makes sense to change strategy.
         </p>
       </statement>
     </activity>
@@ -394,7 +391,7 @@
   <subsection xml:id="SS_equilpairs">
     <title>Equilibrium Pairs</title>
     <p>
-      Chances are, in each of the exercises above, you were able to determine what each player should do. In particular, if both players play your suggested strategies, there is no reason for either player to change to a different strategy.
+      Chances are, in each of the exercises above, you were able to determine what each player should do. In particular, if both players play your suggested strategies there is no reason for either player to change to a different strategy.
     </p>
 
     <definition xml:id="D_equilpair"><idx><h>equilibrium pair</h></idx><idx><h>equilibrium</h></idx>
@@ -406,11 +403,11 @@
     </definition>
 
     <p>
-      For example, consider the game matrix from <xref ref="E_Sec2_2small"></xref>, <xref ref="T_matrixEx1Sec2_2"></xref>.
+      For example, consider the game matrix from <xref ref="A_SolveSec2_2small"></xref>, <xref ref="T_matrixEx1Sec2_2"></xref>.
     </p>
 
     <table>
-      <title>Payoff matrix for <xref ref="E_Sec2_2small"></xref>.</title>
+      <title>Payoff matrix for <xref ref="A_SolveSec2_2small"></xref>.</title>
       <tabular>
         <row>
           <cell></cell>
@@ -439,14 +436,12 @@
     </table>
 
     <p>
-      You determined that Player 2 should choose to play B, and thus, Player 1 should play B (i.e., we have the strategy pair [B, B]). Why is this an equilibrium pair? If Player 2 plays B, does Player 1 have any reason to change to strategy A? No, she would lose 10 instead of 1. If Player 1 plays B, does Player 2 have any reason to change to strategy A? No, she would gain 0 instead of 1. Thus neither player benefits from changing strategy, and so we say [B, B] is an equilibrium pair.
+      You determined that Player 2 should choose to play B, and thus, Player 1 should play B, so we have the strategy pair [B, B]. Why is this an equilibrium pair? If Player 2 plays B, does Player 1 have any reason to change to strategy A? No, she would lose 10 instead of 1. If Player 1 plays B, does Player 2 have any reason to change to strategy A? No, she would gain 0 instead of 1. Thus neither player benefits from changing strategy, and so we say [B, B] is an equilibrium pair.
     </p>
 
     <p>
-      For now, we can use a <q>guess and check</q> method for finding equilibrium pairs. Take each outcome and decide whether either player would prefer to switch. Remember, Player 1 can only choose a different row, and Player 2 can only choose a different column. In our above example there are four outcomes to check: [A, A], [A, B], [B, A], and [B, B]. We already know [B, B] is an equilibrium pair, but let's check the rest. Suppose the players play [A, A]. Does Player 1 want to switch to B? No, she'd rather get 100 than 0. Does Player 2 want to switch to B? Yes! She'd rather get 10 than <m>-100</m>. So [A, A] is NOT an equilibrium pair since a player wants to switch. Now check that for [A, B] Player 1 would want to switch, and for [B, A] both players would want to switch. Thus [A, B] and [B, A] are NOT equilibrium pairs. Now you can try to find equilibrium pairs in any matrix game by just checking each payoff vector to see if one of the players would have wanted to switch to a different strategy.
+      For now, we can use a <q>guess and check</q> method for finding equilibrium pairs. Take each outcome and decide whether either player would prefer to switch. Remember, Player 1 can only choose a different row, and Player 2 can only choose a different column. In our above example there are four outcomes to check: [A, A], [A, B], [B, A], and [B, B]. We already know [B, B] is an equilibrium pair, but let's check the rest. Suppose the players play [A, A]. Does Player 1 want to switch to B? No, she'd rather get 100 than 0. Does Player 2 want to switch to B? Yes! She'd rather get 10 than <m>-100</m>. So [A, A] is NOT an equilibrium pair since a player wants to switch. Now check that for [A, B] Player 1 would want to switch, and for [B, A] both players would want to switch. Thus [A, B] and [B, A] are NOT equilibrium pairs. Now you can try to find equilibrium pairs in any matrix game by just checking each payoff vector to see if one of the players would want to switch to a different strategy.
     </p>
-
-    <p>Generally, when we define a game matrix for a game, our rows and columns will be named with the strategy choices for the players. However, mathematically, we can just think of the matrix of payoff vectors without the row and column labels. In this case, we often identify the payoff vector itself as an <term>equilibrium</term><idx><h>equilibrium</h></idx> or <term>equilibrium point</term><idx><h>equilibrium point</h></idx>. In <xref ref="T_matrixEx1Sec2_2"></xref>, for example, we would say the payoff vector <m>(-1, 1)</m> is an <term>equilibrium point</term>.</p>
 
     <activity xml:id="A_checkequil">
       <title>Checking equilibrium pairs</title>
@@ -456,42 +451,46 @@
         </p>
       </statement>
     </activity>
+
+    <p>Generally, when we define a game matrix for a game, our rows and columns will be named with the strategy choices for the players. However, mathematically, we can just think of the matrix of payoff vectors without the row and column labels. In this case, we often identify the payoff vector itself as an <term>equilibrium</term><idx><h>equilibrium</h></idx> or <term>equilibrium point</term><idx><h>equilibrium point</h></idx>. In <xref ref="T_matrixEx1Sec2_2"></xref>, for example, we would say the payoff vector <m>(-1, 1)</m> is an <term>equilibrium point</term>.</p>
+
+    
     <activity xml:id="A_guesscheck">
       <title>Using <q>guess and check</q></title>
       <introduction>
         <p>
         Use the <q>guess and check</q> method to determine any equilibrium points for the following payoff matrices. It can also be helpful to identify the associated row and column for the equilibrium pair.</p></introduction>
 
-          <task><p>
+          <task><statement><p>
               <me>
                 \left[\begin{matrix}
                 (2,-2)\amp (2, -2)\\
                 (1, -1) \amp  (3, -3)
                 \end{matrix}\right]\hspace{.5in}
               </me>
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               <me>
                 \left[\begin{matrix}
                 (3,-3)\amp (1, -1)\\
                 (2, -2) \amp  (4, -4)
                 \end{matrix}\right]\hspace{.5in}
               </me>
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               <me>
                 \left[\begin{matrix}
                 (4,-4)\amp (5, -5)\amp (4, -4)\\
                 (3, -3) \amp  (0, 0)\amp (1, -1)
                 \end{matrix}\right]
               </me>
-            </p></task>
+            </p></statement></task>
    
     </activity>
 
-    <p>After trying the above examples, do you think every game has an equilibrium pair? Can games have multiple equilibrium pairs?</p>
+    <p>After trying the examples in <xref ref="A_guesscheck"/>, do you think every game has an equilibrium pair? Can games have multiple equilibrium pairs?</p>
 
     <activity xml:id="A_existequil">
       <title>Existence of equilibrium pairs</title>
@@ -557,16 +556,17 @@
         </table></introduction>
 
        
-          <task><p>
+          <task><statement><p>
               Explain why this is a zero-sum game.
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               Does this game have an equilibrium pair? If so, find it and explain what each network should do.
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
-              Convert this game to one in which the payoffs actually sum to zero.</p><hint><p>If a network wins 60% of the viewers, how much more than 50% of the viewers does it have?
+          <task><statement><p>
+              Convert this game to one in which the payoffs actually sum to zero.</p></statement>
+              <hint><p> If a network wins 60% of the viewers, how much more than 50% of the viewers does it have?
             </p></hint></task>
     </activity>
     <activity xml:id="A_compadvantage">
@@ -608,17 +608,17 @@
           </tabular>
         </table></introduction>
 
-          <task><p>
+          <task><statement><p>
               Explain the payoff vector for each strategy pair. For example, why should the pair [Adopt New Tech, Stay Put] have the payoff <m>(a, -a)</m>?
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               Explain what each firm should do.
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               Give a real life example of Competitive Advantage.
-            </p></task>
+            </p></statement></task>
  
     </activity>
 

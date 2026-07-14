@@ -77,9 +77,6 @@
   </p>
 </assemblage>
 
-  <p>
-    Let's apply this description of Prisoner's Dilemma to a few games we've seen. We can use <xref ref="l_ConditionsPD" text="title"/> to check if a game is really a Prisoner's Dilemma.
-  </p>
   <activity xml:id="A_describeconditions">
     <title>Description of conditions</title>
     <statement>
@@ -89,6 +86,11 @@
     </statement>
     <hint><p> <m>(T+S)/2</m> is the average of <m>T</m> and <m>S</m>.</p></hint>
   </activity>
+
+  <p>
+    Let's apply this description of Prisoner's Dilemma to a few games we've seen. We can use <xref ref="l_ConditionsPD" text="title"/> to check if a game is really a Prisoner's Dilemma.
+  </p>
+  
   <activity xml:id="A_CWPDshow">
     <title>The conditions for Classwide Prisoner's Dilemma</title>
     <statement>
@@ -189,7 +191,7 @@
         <me>
           \left[\begin{matrix}
             (3, 3) \amp  (0, 50)\\
-           (50, 0) \amp  (.01, .01)
+           (50, 0) \amp  (0.01, 0.01)
           \end{matrix}\right].
         </me>
 
@@ -228,18 +230,18 @@
     <title>Compare the games</title>
     <statement>
       <p>
-        The games in <xref ref="A_chickenshow"></xref>, <xref ref="A_conditionspractice1"></xref>, and <xref ref="A_conditionspractice2"></xref> are not true Prisoner's Dilemmas. For each game, how do the changes in payoffs affect how you play? In particular, in Prisoner's Dilemma, a player will generally choose to defect. This results in a non-optimal payoff for each player. Is this still true in <xref ref="A_chickenshow"></xref>, <xref ref="A_conditionspractice1"></xref>, and <xref ref="A_conditionspractice2"></xref>? If possible, use canges in the <xref ref="l_ConditionsPD" text="title"></xref> to help explain any differences in how one should play.
+        The games in <xref ref="A_chickenshow"></xref>, <xref ref="A_conditionspractice1"></xref>, and <xref ref="A_conditionspractice2"></xref> are not true Prisoner's Dilemmas. For each game, how do the changes in payoffs affect how you play? In particular, in Prisoner's Dilemma, a player will generally choose to defect. This results in a non-optimal payoff for each player. Is this still true in <xref ref="A_chickenshow"></xref>, <xref ref="A_conditionspractice1"></xref>, and <xref ref="A_conditionspractice2"></xref>? If possible, use changes in the <xref ref="l_ConditionsPD" text="title"></xref> to help explain any differences in how one should play.
       </p>
     </statement>
   </activity>
   <p>
-    We can now define <term>defection</term><idx><h>defection</h></idx><idx><h>defect</h><h>strategy</h></idx><idx><h>strategy</h><h>defect</h></idx> as the idea that if everyone did it, things would be worse for everyone. Yet, if only one (or a small) number did it, life would be sweeter for that individual. We can define <term>cooperation</term><idx><h>cooperation</h></idx><idx><h>cooperate</h><h>strategy</h></idx><idx><h>strategy</h><h>cooperate</h></idx> as the act of resisting temptation for the betterment of all players.
+    We can now define <term>defection</term><idx><h>defection</h></idx><idx><h>defect</h><h>strategy</h></idx><idx><h>strategy</h><h>defect</h></idx> as the idea that if everyone did it, things would be worse for everyone. Yet, if only one (or a small) number did it, life would be sweeter for individual defectors. We can define <term>cooperation</term><idx><h>cooperation</h></idx><idx><h>cooperate</h><h>strategy</h></idx><idx><h>strategy</h><h>cooperate</h></idx> as the act of resisting temptation for the betterment of all players.
   </p>
   <activity xml:id="A_reallifeex">
     <title>Example from real life</title>
     <statement>
       <p>
-        Give an example of defection and cooperation from real life. Explain how your example of defection make things worse for everyone if everyone did it, but would benefit the defector. Explain how cooperation is improves things for all, even if the payoff is smaller for the individual.
+        Give an example of defection and cooperation from real life. Explain how your example of defection make things worse for everyone if everyone did it, but would benefit the defector. Explain how cooperation improves things for all, even if the payoff is smaller for the individual.
       </p>
     </statement>
   </activity>
@@ -382,7 +384,7 @@
         </me>
         satisfies the <xref ref="l_ConditionsPD" text="title"></xref>.</p></statement><feedback><m>T>R>P>S; (T+S)/2 &lt; R.</m></feedback><answer>True.</answer></exercise>
 
-        <exercise label="IGT_PDCond_CYU_equilpd3"><statement><p>The game given in 
+        <exercise label="IGT_PDCond_CYU_equilpd3"><statement><p>The game
          <me>
         \left[
       \begin{matrix}(2, 2) \amp  (-5, 5)\\
@@ -443,7 +445,7 @@
         </me>
         satisfies the <xref ref="l_ConditionsPD" text="title"></xref>.</p></statement><feedback><m>P\ngtr S; (T+S)/2 \nless R.</m></feedback><answer>False.</answer></exercise>
 
-        <exercise label="IGT_PDCond_CYU_equilpd4"><statement><p>The game given in 
+        <exercise label="IGT_PDCond_CYU_equilpd4"><statement><p>The game 
          <me>
         \left[
       \begin{matrix}(-2, -2) \amp  (5, 0)\\
@@ -504,7 +506,7 @@
         </me>
         satisfies the <xref ref="l_ConditionsPD" text="title"></xref>.</p></statement><feedback><m>T>R>P>S; (T+S)/2 \nless R.</m></feedback><answer>False.</answer></exercise>
 
-        <exercise label="IGT_PDCond_CYU_equilpd5"><statement><p>The game given in 
+        <exercise label="IGT_PDCond_CYU_equilpd5"><statement><p>The game 
          <me>
         \left[
       \begin{matrix}(0, 0) \amp  (-15, 20)\\

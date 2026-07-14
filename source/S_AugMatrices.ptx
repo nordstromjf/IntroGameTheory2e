@@ -36,7 +36,7 @@
   </example>
 
   <p>
-    In <xref ref="E_threeeq"></xref>, even after setting <m>E_1(A)=E_1(B)</m> so that there were only 2 variables, the algebra began to get cumbersome. What if we wanted to solve a much larger game, such as a 5 X 5 game?
+    In <xref ref="E_threeeq"></xref>, even after setting <m>E_1(A)=E_1(B)</m> so that there were only 2 variables, the algebra began to get cumbersome. What if we wanted to solve a much larger game, such as a <m>5 \times 5</m> game?
   </p>
 
   <p>
@@ -79,7 +79,7 @@
   </p>
 
   <p>
-    Computer algebra systems such as Sage, Mathematica, and Maple, as well as graphing calculators, can easily do the row reduction for us. In this section we will use the Desmos matrix calculator first, then show how to use Sage. Note that any graphing claculator will work similarly to Desmos.
+    Computer algebra systems such as <pubtitle>Sage</pubtitle>, <pubtitle>Mathematica</pubtitle>, and <pubtitle>Maple</pubtitle>, as well as graphing calculators, can easily do the row reduction for us. In this section we will use the Desmos matrix calculator first, then show how to use <pubtitle>Sage</pubtitle>. Note that any graphing claculator will work similarly to Desmos.
   </p>
 
   <example xml:id="E_desmosmatrix"><title>Using the Desmos Matrix Calculator</title><p>
@@ -102,7 +102,7 @@
   </p></example>
 
   <example xml:id="E_sagematrix"><title>Using Sage</title><p>
-    We can also find the reduced row echolon form of a matrix using Sage, as in the following Sage Cell.
+    We can also find the reduced row echolon form of a matrix using <pubtitle>Sage</pubtitle>, as in the following <pubtitle>Sage</pubtitle> cell.
   </p>
 
   <sage>
@@ -178,7 +178,7 @@
       \end{matrix} 
       \right],
     </me>
-    where the first column corresponds to <m>P_2(C)</m> and the second column corresponds to <m>P_2(D)</m>. We can do the row reduction using either Desmos or the Sage cell below.
+    where the first column corresponds to <m>P_2(C)</m> and the second column corresponds to <m>P_2(D)</m>. We can do the row reduction using either Desmos or the <pubtitle>Sage</pubtitle> cell below.
   </p>
 
 
@@ -208,7 +208,7 @@
   </p>
 
   <p>
-    Here are some more systems of equations to practice solving using augmented matrices. If you want to use the above Sage cells just edit the values for each row in the cell.
+    Here are some more systems of equations to practice solving using augmented matrices. If you want to use the above <pubtitle>Sage</pubtitle> cells just edit the values for each row in the cell.
   </p>
   <activity xml:id="A_2x2system1">
     <title>Solve a system of 2 equations</title>
@@ -237,7 +237,7 @@
     </statement>
   </activity>
 
-  <p>For larger matrices, you can edit the Sage cell by adding additional terms in each row, and adding more rows. For example, you can replace <m>[3,-5,1],[1,1,3]</m> with <m>[4,8,-4,4],[3,8,5,-11],[-2,1,12,-17]</m>.</p>
+  <p>For larger matrices, you can edit the <pubtitle>Sage</pubtitle> cell by adding additional terms in each row, and adding more rows. For example, you can replace <m>[3,-5,1],[1,1,3]</m> with <m>[4,8,-4,4],[3,8,5,-11],[-2,1,12,-17]</m>.</p>
 
   <activity xml:id="A_3x3system1">
     <title>Solve a system of 3 equations</title>
@@ -251,13 +251,13 @@
       \end{matrix}</me></p></introduction>
 
       
-        <task><p>
+        <task><statement><p>
             Set up the augmented matrix for this system.
-          </p></task>
+          </p></statement></task>
 
-        <task><p>
+        <task><statement><p>
             Use row reduction to find the solution.
-          </p></task>
+          </p></statement></task>
     
   </activity>
   <activity xml:id="A_3x3system2">
@@ -270,13 +270,13 @@
       \end{matrix}</me></p></introduction>
 
     
-        <task><p>
+        <task><statement><p>
             Set up the augmented matrix for this system.
-          </p></task>
+          </p></statement></task>
 
-        <task><p>
+        <task><statement><p>
             Use row reduction to find the solution.
-          </p></task>
+          </p></statement></task>
       
   </activity>
   <activity xml:id="A_3x3system3">
@@ -289,17 +289,17 @@
       \end{matrix}</me></p></introduction>
 
       
-        <task><p>
+        <task><statement><p>
             Set up the augmented matrix for this system.
-          </p></task>
+          </p></statement></task>
 
-        <task><p>
+        <task><statement><p>
             Use row reduction to find the solution.
-          </p></task>
+          </p></statement></task>
       
   </activity>
   <activity xml:id="A_5x5system1">
-    <title>Now, a system with 5 equations</title>
+    <title>A system with 5 equations</title>
     <introduction>
       <p>
         Consider the system of equations
@@ -308,13 +308,13 @@
       \end{matrix}</me></p></introduction>
 
      
-        <task><p>
+        <task><statement><p>
             Set up the augmented matrix for this system.
-          </p></task>
+          </p></statement></task>
 
-        <task><p>
+        <task><statement><p>
             Use row reduction to find the solution.
-          </p></task>
+          </p></statement></task>
       
   </activity>
   <p>Now we are ready to apply everything we have learned about solving repeated zero-sum games to a much more challenging game in the next section.</p>
@@ -520,7 +520,7 @@
       <answer><m>x=1, y=-1, z=2</m></answer></exercise>
 
       <exercise label="IGT_SSAM_CYU_solmatrix1">
-    <statement><p>Suppose we finding the mixed strategy equilibrium for a <m>2\times 2</m> game using row reduction. After row reducing we have the following matrix where the first column represents <m>P(A)</m> and the second represents <m>P(B)</m>.
+    <statement><p>Suppose we are finding the mixed strategy equilibrium for a <m>2\times 2</m> game using row reduction. After row reducing we have the following matrix where the first column represents <m>P(A)</m> and the second represents <m>P(B)</m>.
 
       <me>\left[
       \begin{matrix}1 \amp  0\amp  -1\\
@@ -540,7 +540,7 @@
     </choices><answer><p>We must have made a mistake since <m>P(A)</m> and <m>P(B)</m> must be between 0 and 1 in this context.</p></answer>
   </exercise>
 <exercise label="IGT_SSAM_CYU_solmatrix2">
-  <statement><p>Suppose we finding the mixed strategy equilibrium for a <m>2\times 2</m> game using row reduction. After row reducing we have the following matrix where the first column represents <m>P(A)</m> and the second represents <m>P(B)</m>.
+  <statement><p>Suppose we are finding the mixed strategy equilibrium for a <m>2\times 2</m> game using row reduction. After row reducing we have the following matrix where the first column represents <m>P(A)</m> and the second represents <m>P(B)</m>.
 
       <me>\left[
       \begin{matrix}1 \amp  0\amp  1/3\\
@@ -561,7 +561,7 @@
   </exercise>
 
   <exercise label="IGT_SSAM_CYU_solmatrix3">
-  <statement><p>Suppose we finding the mixed strategy equilibrium for a <m>2\times 2</m> game using row reduction. After row reducing we have the following matrix where the first column represents <m>P(A)</m> and the second represents <m>P(B)</m>.
+  <statement><p>Suppose we are finding the mixed strategy equilibrium for a <m>2\times 2</m> game using row reduction. After row reducing we have the following matrix where the first column represents <m>P(A)</m> and the second represents <m>P(B)</m>.
 
       <me>\left[
       \begin{matrix}1 \amp  0\amp  1/3\\

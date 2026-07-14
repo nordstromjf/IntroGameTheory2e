@@ -59,7 +59,7 @@
     </definition>
 
     <p>
-      Now we can fill in the matrix with each player's payoff. Since the payoffs to each player are different, we will use ordered pairs where the first number is Player 1's payoff and the second number is Player 2's payoff. The ordered pair is called the <term>payoff vector</term><idx><h>payoff vector</h></idx>. For example, if both players choose H, then Player 1's payoff is $1 and Player 2's payoff is -$1 (since he loses to Player 1). Thus the payoff vector associated with the outcome H, H is <m>(1, -1)</m>.
+      Now we can fill in the matrix with each player's payoff. Since the payoffs to each player are different, we will use ordered pairs where the first number is Player 1's payoff and the second number is Player 2's payoff. The ordered pair is called the <term>payoff vector</term><idx><h>payoff vector</h></idx>. For example, if both players choose H, then Player 1's payoff is $1 and Player 2's payoff is -$1 since he loses to Player 1. Thus, the payoff vector associated with the outcome H, H is <m>(1, -1)</m>.
     </p>
 
     <p>
@@ -121,33 +121,42 @@
     </p>
 
     <p>
-      It is important to note that each player also knows that his or her opponent is also self-interested and perfectly logical!
+      It is important to note that each player also knows that his or her opponent is also self-interested and perfectly logical.
     </p>
     <activity xml:id="A_preferredpayoff">
       <title>Preferred payoffs</title>
       <introduction><p>Determine best payoff in each of the following.</p></introduction>
         
-          <task><p>
+          <task><statement><p>
               Which payoff does a player prefer: <m>0, 2,</m> or <m>-2</m>?
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               Which payoff does a player prefer: <m>-2, -5,</m> or <m>-10</m>?
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               Which payoff does a player prefer: <m>-1, -3,</m> or <m>0</m>?
-            </p></task>
+            </p></statement></task>
        
       
     </activity>
     <p>
-      It may be strightforward to decide the best payoff for a player out of a list of values, and it would be great if a player could just determine the biggest value in the table and choose that strategy. However, when there are two players a player may have to choose a strategy more carefully, since Player 1 can only choose the row, and Player 2 can only choose the column. Thus, the outcome of the game depends on BOTH players.
+      It may be straightforward to decide the best payoff for a player out of a list of values, and it would be great if a player could just determine the biggest value in the table and choose that strategy. However, when there are two players a player may have to choose a strategy more carefully, since Player 1 can only choose the row, and Player 2 can only choose the column. Thus, the outcome of the game depends on BOTH players.
     </p>
-    <example xml:id="E_Sec2_2small">
+    <!--<example xml:id="E_Sec2_2small">
       <title>A <m>2\times 2</m> Game</title>
       <statement>
+        
         <p>
+          In the following activity, we will try to determine what each player should do.
+        </p>
+      </statement>
+    </example>-->
+
+    <activity xml:id="A_SolveSec2_2small">
+      <title>Finding strategies for a <m>2 \times 2</m> game</title>
+      <introduction><p>
           Suppose two players are playing a game in which they can choose A or B with the payoffs given in the game matrix in <xref ref="T_matrixEx1Sec2_2"></xref>.
         </p>
 
@@ -178,47 +187,46 @@
               <cell right="minor" bottom="minor" halign="center"><m>(-1, 1)</m></cell>
             </row>
           </tabular>
-        </table>
+        </table></introduction>
+        
+          <task><statement><p>
+              Just by quickly looking at the matrix, which player appears to be able to win more than the other player? Does one player seem to have an advantage? Explain.
+            </p></statement></task>
+
+          <task><statement><p>
+              Determine what each player should do. Explain your answer.
+            </p></statement></task>
+
+          <task><statement><p>
+              Compare your answer in (b) to your answer in (a). Did the player you suggested in (a) actually win more than the other player?
+            </p></statement></task>
+
+          <task><statement><p>
+              According to your answer in (b), does Player 1 end up with the largest possible payoff (for Player 1) in the matrix?
+            </p></statement></task>
+
+          <task><statement><p>
+              According to your answer in (b), does Player 2 end up with the largest possible payoff (for Player 2) in the matrix?
+            </p></statement></task>
+
+          <task><statement><p>
+              Do you still think a player has an advantage in this game? Is it the same answer as in (a)?
+            </p></statement></task>
+        
+      
+    </activity>
+    <!--<example xml:id="E_Sec2_2large">
+      <title>A <m>3\times 3</m> Game</title>
+      <statement>
+        
         <p>
           In the following activity, we will try to determine what each player should do.
         </p>
       </statement>
-    </example>
-
-    <activity xml:id="A_SolveSec2_2small">
-      <title>Finding strategies</title>
-      <introduction><p>Use the game matrix given in <xref ref="T_matrixEx1Sec2_2"/>.</p></introduction>
-        
-          <task><p>
-              Just by quickly looking at the matrix, which player appears to be able to win more than the other player? Does one player seem to have an advantage? Explain.
-            </p></task>
-
-          <task><p>
-              Determine what each player should do. Explain your answer.
-            </p></task>
-
-          <task><p>
-              Compare your answer in (b) to your answer in (a). Did the player you suggested in (a) actually win more than the other player?
-            </p></task>
-
-          <task><p>
-              According to your answer in (b), does Player 1 end up with the largest possible payoff (for Player 1) in the matrix?
-            </p></task>
-
-          <task><p>
-              According to your answer in (b), does Player 2 end up with the largest possible payoff (for Player 2) in the matrix?
-            </p></task>
-
-          <task><p>
-              Do you still think a player has an advantage in this game? Is it the same answer as in (a)?
-            </p></task>
-        
-      
-    </activity>
-    <example xml:id="E_Sec2_2large">
-      <title>A <m>3\times 3</m> Game</title>
-      <statement>
-        <p>
+    </example>-->
+    <activity xml:id="A_SolveSec2_2large">
+      <title>Finding strategies for a <m>3 \times 3</m> game</title>
+      <introduction><p>
           Suppose there are two players with the game matrix given in <xref ref="T_matrixEx2Sec2_2"></xref>.
         </p>
 
@@ -259,39 +267,31 @@
               <cell right="minor" bottom="minor" halign="center"><m>(-25,25)</m></cell>
             </row>
           </tabular>
-        </table>
-        <p>
-          In the following activity, we will try to determine what each player should do.
-        </p>
-      </statement>
-    </example>
-    <activity xml:id="A_SolveSec2_2large">
-      <title>More practice finding strategies</title>
-      <introduction><p>Use the game matrix given in <xref ref="T_matrixEx2Sec2_2"/>.</p></introduction>
+        </table></introduction>
         
-          <task><p>
+          <task><statement><p>
               Just by quickly looking at the matrix, which player appears to be able to win more than the other player? Does one player seem to have an advantage? Explain.
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               Determine what each player should do. Explain your answer.
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               Compare your answer in (b) to your answer in (a). Did the player you suggested in (a) actually win more than the other player?
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               According to your answer in (b), does Player 1 end up with the largest possible payoff (for Player 1) in the matrix?
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               According to your answer in (b), does Player 2 end up with the largest possible payoff (for Player 2) in the matrix?
-            </p></task>
+            </p></statement></task>
 
-          <task><p>
+          <task><statement><p>
               Do you still think a player has an advantage in this game? Is it the same answer as in (a)?
-            </p></task>
+            </p></statement></task>
       
     </activity>
     <p>
@@ -388,7 +388,7 @@
       <answer><p>D, Player 2 always does better by choosing D, no matter what Player 1 does.</p></answer></exercise>
 
        <exercise xml:id="IGT_intromatrices_CYU_matrixP2">
-        <statement><p>Using the game matrix <xref ref="CYU_matrixEx1"></xref>.</p>
+        <statement><p>Using the game matrix in <xref ref="CYU_matrixEx1"></xref>.</p>
         <p>What row should Player 1 choose?</p></statement><choices randomize="no">
       <choice correct="yes"><statement><p>A</p></statement><feedback><p>Correct. Player 1 always does better by choosing A, no matter what Player 2 does.</p></feedback>
       </choice>
@@ -398,7 +398,7 @@
       <answer><p>A, Player 1 always does better by choosing A, no matter what Player 2 does.</p></answer></exercise>
 
       <exercise xml:id="IGT_intromatrices_CYU_matrixwhichplayer">
-        <statement><p>Using the game matrix <xref ref="CYU_matrixEx1"></xref>.</p>
+        <statement><p>Using the game matrix in <xref ref="CYU_matrixEx1"></xref>.</p>
         <p>Which player has the advantage in this game?</p></statement><choices randomize="no">
       <choice><statement><p>Player 1</p></statement><feedback><p>Can Player 1 prevent a negative payoff if Player 2 chooses D?</p></feedback>
       </choice>

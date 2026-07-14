@@ -2,7 +2,7 @@
 <section xml:id="S_DominatedStrategies">
   <title>Finding Strategies</title>
   <introduction><p>
-    Recall that in a zero-sum game, we know that one player's win is the other player's loss. Furthermore, we know we can rewrite any zero-sum game so that the player's payoffs are in the form <m>(a, -a)</m>. Note, this works even if <m>a</m> is negative; in which case, <m>-a</m> is positive.
+    Recall that in a zero-sum game, we know that one player's win is the other player's loss. Furthermore, we know we can rewrite any zero-sum game so that the player's payoffs are in the form <m>(a, -a)</m>. Note, this works even if <m>a</m> is negative, in which case <m>-a</m> is positive.
   </p></introduction>
 
   <subsection xml:id="SS_simplifyingmatrix"><title>Simplifying a Zero-Sum Game Matrix</title>
@@ -61,7 +61,7 @@
   </example>
 
   <p>
-  When simplifying, keep a few things in mind:
+  Keep a few things in mind when simplifying:
 
   <ol>
     <li><p>
@@ -208,7 +208,7 @@
    
 
   <p>
-    This definition can also be used for Player 2: we consider columns instead of rows. If we are looking at Player 1's payoffs, then Player 2 prefers smaller payoffs. Thus one column <m>X</m> dominates another column <m>Y</m> if all the entries in <m>X</m> are <em>smaller than or equal</em> to the corresponding entries in <m>Y</m>.
+    This definition can also be used for Player 2: we consider columns instead of rows. If we are looking at Player 1's payoffs, then Player 2 prefers smaller payoffs. Thus one column <m>X</m> dominates another column <m>Y</m> if all the entries in <m>X</m> are <em>less than or equal</em> to the corresponding entries in <m>Y</m>.
   </p>
 
   <p>
@@ -579,7 +579,7 @@
     </statement>
   </activity>
   <p>
-    Chances are you had trouble determining an equilibrium pair for the game in <xref ref="A_domstratpractice4"></xref>. Does this mean there isn't an equilibrium pair? Not necessarily, but we are stuck if we try to use only the idea of eliminating dominated strategies. So we need a new method.
+    Chances are you had trouble determining an equilibrium pair for the game in <xref ref="A_domstratpractice4"></xref>. Does this mean there isn't an equilibrium pair? Not necessarily, but we are stuck if we try to use only the idea of eliminating dominated strategies. So, we need a new method.
   </p></subsection>
 
   <subsection xml:id="SS_maximin"><title>Maximin and Minimax Strategies</title>

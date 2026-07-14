@@ -53,7 +53,7 @@
     <title>Conjecture a strategy</title>
     <statement>
       <p>
-        First it is good to test your instinct. Do you think she should play one of the strategies more often than the other? If so, which strategy should she play the most?
+        First it is good to test your instinct. Do you think Player 1 should play one of the strategies more often than the other? If so, which strategy should she play the most?
       </p>
     </statement>
   </activity>
@@ -301,7 +301,7 @@
   </figure>
 
   <p>
-    Hopefully, you've begun to see that for each choice of <m>p</m>, the top line represents the highest expected value for Player 1; the bottom line represents the lowest expected value for Player 1; the area between the lines represents the possible expected values for Player 1. As we did with non-repeated games, let's look at the <q>worst case scenario</q> for Player 1. In other words, let's assume that Player 2 can figure out Player 1's strategy. Then Player 1 would want to <em>maximize the minimum expected value</em>. Aha! This is just looking for the <term>maximin</term> strategy<idx><h>maximin strategy</h><h>repeated games</h></idx>!
+    Hopefully, you've begun to see that for each choice of <m>p</m>, the top line represents the highest expected value for Player 1; the bottom line represents the lowest expected value for Player 1; the area between the lines represents the possible expected values for Player 1. As we did with non-repeated games, let's look at the <q>worst case scenario</q> for Player 1. In other words, let's assume that Player 2 can figure out Player 1's strategy. Then Player 1 would want to <em>maximize the minimum expected value</em>. Aha! This is just looking for the <term>maximin</term> strategy<idx><h>maximin strategy</h><h>repeated games</h></idx>.
   </p>
 
   <p>
@@ -365,20 +365,20 @@
       <title>Step 3c. Use substitution to find the point of intersection</title>
       <p>
           <md>
-          <mrow>2x \amp =  \amp -2x+1</mrow>
-          <mrow>4x \amp = \amp 1</mrow>
-          <mrow>x \amp = \amp \frac{1}{4}</mrow>
+          <mrow>2x \amp =  -2x+1</mrow>
+          <mrow>4x \amp =  1</mrow>
+          <mrow>x \amp = \frac{1}{4}</mrow>
         </md>
         Substituting <m>x=\frac{1}{4}</m> back in to either original equation, say <m>y=2x</m>, gives us <m>y=\frac{1}{2}</m>. Thus, the point of intersection is <m>(1/4, 1/2)</m>.
       </p></li></ul></p></li>
   <li>
     <title>Step 4. Determine Player 1's maximin mixed strategy</title><idx><h>maximin mixed strategy</h></idx><idx><h>strategy</h><h>maximin mixed</h></idx>
     <p>
-        Recalling that the first coordinate is <m>p</m>, the probability that Player 1 plays B, we know that Player 1 will play B with probability 1/4, and thus, play A with probability 3/4, since <m>1-(1/4)=3/4</m>. The expected payoff for Player 1 is 1/2. It is important to check back to your original intuition about the game from <xref ref="A_linearconjecture"></xref>. Did it seem as though Player 1 should play A more often than B?
+        Recalling that the first coordinate is <m>p</m>, the probability that Player 1 plays B, we know that Player 1 will play B with probability 1/4, and thus, play A with probability 3/4, since <m>1-(1/4)=3/4</m>. The expected payoff for Player 1 is 1/2. It is important to look back to your original intuition about the game from <xref ref="A_linearconjecture"></xref>. Did it seem as though Player 1 should play A more often than B?
     </p></li>
   </ul></p>
   <p>
-    Let's make a few important observations. First, it should be clear from the graph that Player 1 expects a payoff of 1/2 NO MATTER WHAT PLAYER 2 DOES. Second, since this is a zero-sum game, we know that Player 2's expected payoff is <m>-1/2</m>. It is important to note that this graph does not give us any information about an optimal strategy for Player 2. We will see how to find a strategy for Player 2 in the following activities. Can you think of how you might do this?
+    Let's make a few important observations. First, it should be clear from the graph that Player 1 expects a payoff of 1/2 <em>no matter what Player 2 does</em>. Second, since this is a zero-sum game, we know that Player 2's expected payoff is <m>-1/2</m>. It is important to note that this graph does not give us any information about an optimal strategy for Player 2. We will see how to find a strategy for Player 2 in the following activities. Can you think of how you might do this?
   </p>
 
   <p>
@@ -386,33 +386,28 @@
   </p>
 
   <p>
-    Using the same game matrix as above:
-    <me>
-      \left[\begin{matrix}1\amp 0\\
-      -1\amp 2
-      \end{matrix} \right],
-    </me>
+    Using the same game matrix in <xref ref="T_smallrepeat" />,
     we will continue to label Player 1's strategies by <m>A</m> and <m>B</m>, and Player 2's strategies by <m>C</m> and <m>D</m>. We now want to determine the minimax strategy for Player 2. Keep in mind the payoffs are still the payoffs to Player 1, so Player 2 wants the payoff to be as small as possible.
   </p>
   <activity xml:id="A_showminimax">
     <title>The minimax strategy</title>
-    <introduction><p>We can use the graph to see the payoff for Player 2's minimax strategy.</p></introduction>
-    <task>
+    <introduction><p>We can use a graph to see the payoff for Player 2's minimax strategy.</p></introduction>
+    <task><statement>
       <p>
-        Sketch the graph for Player 1 that we drew above. Be sure to label the endpoints of each line. Also label each line according to which strategy they represent.
-      </p>
+        Sketch the graph for Player 1 that we drew in <xref ref="F_Player_2_s_pure_strategy_D"/>. Be sure to label the endpoints of each line. Also label each line according to which strategy they represent.
+      </p></statement>
     </task>
  
-    <task>
+    <task><statement>
       <p>
         Describe the minimax strategy and show it on the graph. (You do not need to find the actual mixed strategy for Player 2.)
-      </p>
+      </p></statement>
     </task>
   
-    <task>
+    <task><statement>
       <p>
         Are the payoff vectors for the maximin and minimax strategies the same?
-      </p>
+      </p></statement>
     </task>
   </activity>
   <p>
@@ -465,25 +460,28 @@
     <title>Player 1 plays <m>A</m></title>
     <introduction>
       <p>
-      Assume Player 1 only plays <m>A</m>.</p></introduction>
+      Continue to use the game matrix in <xref ref="T_smallrepeat" />.
+     
+    Assume Player 1 only plays <m>A</m>.</p></introduction>
 
-        <task><p>
+        <task><statement><p>
             If Player 2 only plays <m>C</m>, what is the payoff to Player 1? Recall we called this <m>m</m>. What is the probability that Player 2 plays <m>D</m>? Recall we called this <m>p</m>. On your graph, plot the point (<m>p</m>, <m>m</m>).
-          </p></task>
+          </p></statement></task>
 
-        <task><p>
+        <task><statement><p>
             If Player 2 plays only <m>D</m>, find <m>m</m> and <m>p</m>. Plot <m>(p, m)</m> on the graph.
-          </p></task>
+          </p></statement></task>
 
-        <task><p>
+        <task><statement><p>
             Now sketch the line through your two points. This line represents Player 1's pure strategy <m>A</m> and the expected payoff (to Player 1) for Player 2's mixed strategies. Label it <m>A</m>.
-          </p></task>
+          </p></statement></task>
       
   </activity>
   <activity xml:id="A_graphP1B">
     <title>Player 1 plays <m>B</m></title>
     <statement>
-      <p>
+      <p>Continue to use the game matrix in <xref ref="T_smallrepeat" />.
+    
         Now assume Player 1 plays only <m>B</m>. Repeat the steps in <xref ref="A_graphP1A"></xref>, using <m>B</m> instead of <m>A</m>, to find the line representing Player 1's pure strategy <m>B</m>. (Label it!)
       </p>
     </statement>
@@ -495,48 +493,50 @@
       It is important to keep in mind that although the <m>x</m>-axis refers to how often Player 2 will play <m>C</m> and <m>D</m>, the <m>y</m>-axis represents the payoff to <em>Player 1</em>.</p></introduction>
 
       
-        <task><p>
+        <task><statement><p>
             Explain why we are looking for the <em>minimax</em> strategy for Player 2.
-          </p></task>
+          </p></statement></task>
 
-        <task><p>
+        <task><statement><p>
             Show on the graph the <em>maximum</em> payoff that Player 1 can expect for each of Player 2's possible mixed strategies.
-          </p></task>
+          </p></statement></task>
 
-        <task><p>
+        <task><statement><p>
             Show the point on the graph that represents the minimax strategy.
-          </p></task>
+          </p></statement></task>
       
   </activity>
-  <activity xml:id="A_graphFindEquations">
+  <!--<activity xml:id="A_graphFindEquations">
     <title>Equations for the lines</title>
-    <statement>
+    
+  </activity>-->
+  <activity xml:id="A_graphFindIntersection">
+    <title>The point of intersection</title>
+    <task><statement>
       <p>
         Find the equations of the lines you drew in <xref ref="A_graphP1A"></xref> and <xref ref="A_graphP1B"></xref>.
       </p>
-    </statement>
-  </activity>
-  <activity xml:id="A_graphFindIntersection">
-    <title>The point of intersection</title>
-    <statement>
+    </statement></task>
+    <task><statement>
       <p>
-        Using the equations from <xref ref="A_graphFindEquations"></xref>, find the point of intersection of the two lines.
+        Using the equations from (a), find the point of intersection of the two lines.
       </p>
-    </statement>
-  </activity>
-  <activity xml:id="A_graphSolution">
-    <title>Player 2's mixed strategy</title>
-    <statement>
+    </statement></task>
+    <task><statement>
       <p>
         How often should Player 2 play <m>C</m>? How often should he play <m>D</m>? What is Player 1's expected payoff? And hence, what is Player 2's expected payoff?
       </p>
-    </statement>
+    </statement></task>
   </activity>
+  <!--<activity xml:id="A_graphSolution">
+    <title>Player 2's mixed strategy</title>
+    
+  </activity>-->
   <activity xml:id="A_whyequil">
     <title>Equilibrium strategies</title>
     <statement>
       <p>
-        Explain why each player should play the maximin/ minimax mixed strategy. In other words, explain why neither player benefits by changing their strategy. 
+        Explain why each player should play the maximin/minimax mixed strategy. In other words, explain why neither player benefits by changing their strategy. 
       </p>
     </statement>
     <hint>
@@ -551,7 +551,13 @@
     <title>Finding the maximin using Player 2's payoffs</title>
     <statement>
       <p>
-        Convert the payoff matrix above into the payoff matrix for Player 2. Find the maximin strategy for Player 2 using the graphical method. Be sure to include a sketch of the graph (labeled!!), the equations for the lines, the probability that Player 2 will play <m>C</m> and <m>D</m>, and the expected payoff for Player 2.
+        Convert the payoff matrix given by
+        <me>
+      \left[\begin{matrix}1\amp 0\\
+      -1\amp 2
+      \end{matrix} \right]
+    </me>
+     into the payoff matrix for Player 2. Find the maximin strategy for Player 2 using the graphical method. Be sure to include a sketch of the graph (labeled!!), the equations for the lines, the probability that Player 2 will play <m>C</m> and <m>D</m>, and the expected payoff for Player 2.
       </p>
     </statement>
   </activity>
@@ -559,7 +565,7 @@
     <title>Compare the solutions</title>
     <statement>
       <p>
-        Compare your answer in <xref ref="A_graphconvert"></xref> to your answer in <xref ref="A_graphSolution"></xref>.
+        Compare your answer in <xref ref="A_graphconvert"></xref> to your answer in <xref ref="A_graphFindIntersection"></xref>.
       </p>
     </statement>
   </activity>
@@ -567,7 +573,8 @@
     <title>Fairness</title>
     <statement>
       <p>
-        Is this game fair? Explain.
+        Is the game in <xref ref="T_smallrepeat" />
+      fair? Explain.
       </p>
     </statement>
   </activity>
@@ -600,7 +607,7 @@
             
           </slate>
           <static><p>The interactive activity is available in the online version of the text at <url href="https://nordstrommath.com/IntroGameTheory2e/S_MixStratGraph.html#W_graphicalmethod" visual="nordstrommath.com/IntroGameTheory2e/S_MixStratGraph.html#W_graphicalmethod"/>
-           or on Doenet at <url href="https://www.doenet.org/portfolioviewer/_iR2WJvOBDdOFkCkep7LgL" visual="https://tinyurl.com/doenetmixstrat"/>.
+           or on Doenet at <url href="https://beta.doenet.org/activityViewer/u6eGbwRmPMtg1FYRqi4fD8" visual="https://tinyurl.com/FindingMixedStrategies"/>.
         </p></static>
   </interactive>
 
@@ -620,25 +627,25 @@
       \end{matrix} \right].</m></p></introduction>
 
       
-        <task><p>
+        <task><statement><p>
             Does this game have a pure strategy equilibrium?
-          </p></task>
+          </p></statement></task>
 
-        <task><p>
+        <task><statement><p>
             Just by looking at the matrix, do you think this game will be fair? (Would you rather be Player 1 or Player 2?)
-          </p></task>
+          </p></statement></task>
 
-        <task><p>
+        <task><statement><p>
             Sketch (and label!) the appropriate graph for this game.
-          </p></task>
+          </p></statement></task>
 
-        <task><p>
+        <task><statement><p>
             Use you graph to determine if there is a mixed strategy equilibrium point. If there is, how often should Player 1 play each strategy? What is the expected payoff to each player?
-          </p></task>
+          </p></statement></task>
 
-        <task><p>
+        <task><statement><p>
             Is this game fair? Explain. Compare your answer to (b).
-          </p></task>
+          </p></statement></task>
       
   </activity>
   <activity xml:id="A_graph3practice">
@@ -650,25 +657,25 @@
       \end{matrix} \right].</m></p></introduction>
 
      
-        <task><p>
+        <task><statement><p>
             Does this game have a pure strategy equilibrium?
-          </p></task>
+          </p></statement></task>
 
-        <task><p>
+        <task><statement><p>
             Just by looking at the matrix, do you think this game will be fair? (Would you rather be Player 1 or Player 2?)
-          </p></task>
+          </p></statement></task>
 
-        <task><p>
+        <task><statement><p>
             Sketch (and label!) the appropriate graph for this game.
-          </p></task>
+          </p></statement></task>
 
-        <task><p>
+        <task><statement><p>
             Use you graph to determine if there is a mixed strategy equilibrium point. If there is, how often should Player 1 play each strategy? What is the expected payoff to each player?
-          </p></task>
+          </p></statement></task>
 
-        <task><p>
+        <task><statement><p>
             Is this game fair? Explain. Compare your answer to (b).
-          </p></task>
+          </p></statement></task>
     
   </activity>
   <p>
@@ -956,7 +963,7 @@
     </condition>
     </var></setup><answer><p>slope= <m>5</m>, intercept=<m>-1</m></p></answer></exercise>
 
-      <exercise label="IGT_MSG_CYU_findinter"><statement><p>Find the intersection of the lines <m>y=-5x+2</m> and <m>y=5x-1</m></p>
+      <exercise label="IGT_MSG_CYU_findinter"><statement><p>Find the intersection of the lines <m>y=-5x+2</m> and <m>y=5x-1</m>:</p>
       <p><m>x=</m><var width="3"/> and <m>y=</m><var width="3"/>. Give your answer in decimal form.</p></statement>
       <setup>
     <var>
@@ -1016,17 +1023,17 @@
       <exercise label="IGT_MSG_CYU_mixedstrat"><statement><p>Consider the zero-sum game given by
        <xref ref="T_exergame1"></xref>. Player 1 should play the mixed strategy </p></statement>
        <choices randomize="yes">
-         <choice><statement><m>(0.3, 0.7)</m></statement><feedback><p>Remember <m>x</m> in the intersection point is the probability that Player 1 plays B.</p></feedback></choice>
-         <choice correct="yes"><statement><m>(0.7, 0.3)</m></statement><feedback><p>Correct. Player 1 should play A with a probability of <m>0.7</m> and B with a probability of <m>0.3</m>.</p></feedback></choice>
-         <choice><statement><m>(0.5, 0.5)</m></statement><feedback><p>Remember <m>y</m> in the intersection point is the payoff to Player 1, not the probability.</p></feedback></choice>
-         <choice><statement><m>(0.3, 0.5)</m></statement><feedback><p>This is the intersection point, not the mixed strategy.</p></feedback></choice>
+         <choice><statement><m>(0.3, 0.7).</m></statement><feedback><p>Remember <m>x</m> in the intersection point is the probability that Player 1 plays B.</p></feedback></choice>
+         <choice correct="yes"><statement><m>(0.7, 0.3).</m></statement><feedback><p>Correct. Player 1 should play A with a probability of <m>0.7</m> and B with a probability of <m>0.3</m>.</p></feedback></choice>
+         <choice><statement><m>(0.5, 0.5).</m></statement><feedback><p>Remember <m>y</m> in the intersection point is the payoff to Player 1, not the probability.</p></feedback></choice>
+         <choice><statement><m>(0.3, 0.5).</m></statement><feedback><p>This is the intersection point, not the mixed strategy.</p></feedback></choice>
        </choices><hint><p>The work in the previous exercises will help answer this question.</p></hint><answer><m>(0.7, 0.3)</m></answer></exercise>
 
        <exercise label="IGT_MSG_CYU_exppayoff"><statement><p>Consider the repeated zero-sum game given by
        <xref ref="T_exergame1"></xref>. If Player 1 plays the maximin mixed strategy, her expected payoff is </p></statement>
        <choices randomize="yes">
-         <choice><statement><m>0.3</m></statement><feedback><p>Remember <m>x</m> in the intersection point is the probability that Player 1 plays B.</p></feedback></choice>
-         <choice correct="yes"><statement><m>0.5</m></statement><feedback><p>Correct. The <m>y</m> in the intersection point is the payoff to Player 1.</p></feedback></choice>
+         <choice><statement><m>0.3.</m></statement><feedback><p>Remember <m>x</m> in the intersection point is the probability that Player 1 plays B.</p></feedback></choice>
+         <choice correct="yes"><statement><m>0.5.</m></statement><feedback><p>Correct. The <m>y</m> in the intersection point is the payoff to Player 1.</p></feedback></choice>
          <choice><statement><p>It depends on what Player 2 plays.</p></statement><feedback><p>The maximin strategy gives the same expected payoff no matter what Player 2 does.</p></feedback></choice>
        </choices><hint><p>The work in the previous exercises will help answer this question.</p></hint><answer><m>0.5</m></answer></exercise>
 

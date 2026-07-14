@@ -238,11 +238,12 @@
 <p>For more of a challenge with probability, you can think about what happens if we change the number of Kings in the deck.</p>
   <activity xml:id="A_OCSMoreK"><title>One-Card Stud with more Kings</title>
 <introduction><p>Suppose you are playing the regular version of One-Card Stud Poker from <xref ref="E_onecardstud"></xref>, but now the deck contains 25% Aces and 75% Kings.</p></introduction>
-<task><p>Do you think having fewer Aces would change your strategy? Why or why not?</p></task>
-<task><p>Does the number of Kings in the deck change the the payoff vector for [Bet, Fold] and [Fold, Bet]?</p></task>
-<task><p>Calculate the expected value for the [Bet, Bet] and [Fold, Fold] strategy pairs.</p><hint><p>To make this a little easier, assume the deck has infinitely many cards, so that the probability of a player being dealt an Ace doesn't change if the other player was dealt an Ace. In other words, each player has a probability of <m>.25</m> of being dealt an Ace. Now the probability of the deal Ace, Ace is <m>.25\times .25</m>.</p></hint></task>
-<task><p>Give the payoff matrix for the game. How does it compare to the standard version of the game?</p></task>
-<task><p>Does the strategy for the game change if the percentage of Kings changes?</p></task>
+<task><statement><p>Do you think having fewer Aces would change your strategy? Why or why not?</p></statement></task>
+<task><statement><p>Does the number of Kings in the deck change the the payoff vector for [Bet, Fold] and [Fold, Bet]?</p></statement></task>
+<task><statement><p>Calculate the expected value for the [Bet, Bet] and [Fold, Fold] strategy pairs.</p></statement>
+<hint><p>To make this a little easier, assume the deck has infinitely many cards, so that the probability of a player being dealt an Ace doesn't change if the other player was dealt an Ace. In other words, each player has a probability of <m>.25</m> of being dealt an Ace. Now the probability of the deal Ace, Ace is <m>.25\times .25</m>.</p></hint></task>
+<task><statement><p>Give the payoff matrix for the game. How does it compare to the standard version of the game?</p></statement></task>
+<task><statement><p>Does the strategy for the game change if the percentage of Kings changes?</p></statement></task>
 </activity>
   <p>Now that we have analyzed several zero-sum games, we can see how important it is to find any equilibrium pairs. In the next section we explore equilibrium strategies in more detail.</p>
 

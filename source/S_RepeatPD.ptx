@@ -41,7 +41,7 @@
     <title>A single internet purchase</title>
     <statement>
       <p>
-        Suppose the above matrix in <xref ref="T_CWPD3"></xref> represents the situation of purchasing an item (say, a used textbook) on the internet where both parties are untraceable. You agree to send the money at the same time that the seller agrees to send the book. Then we can think of cooperating as each of you sending money/ book, and defecting as not sending money/ book. Why might a player cooperate? Why might a player defect?
+        Suppose the matrix in <xref ref="T_CWPD3"></xref> represents the situation of purchasing a rare book on the internet where both parties are untraceable. You agree to send the money at the same time that the seller agrees to send the book. Then we can think of cooperating as each of you sending money/ book, and defecting as not sending money/ book. Why might a player cooperate? Why might a player defect?
       </p>
     </statement>
   </activity>
@@ -49,7 +49,7 @@
     <title>Repeated internet purchases</title>
     <statement>
       <p>
-        Now suppose you wish to continue to do business with the other party. For example, instead of buying a used textbook, maybe you are buying music downloads. Why might a player cooperate? Why might a player defect? Do these reasons differ from your reasons in <xref ref="A_internetpurchaseonce"></xref>?
+        Now suppose you wish to continue to do business with the other party. For example, instead of buying a rare book, maybe you are buying music downloads. Why might a player cooperate? Why might a player defect? Do these reasons differ from your reasons in <xref ref="A_internetpurchaseonce"></xref>?
       </p>
     </statement>
   </activity>
@@ -58,25 +58,23 @@
 
   <activity xml:id="A_RPDstrategy">
     <title>Strategy for repeated Prisoner's Dilemma</title>
-    <statement>
+    <introduction><p>We are going to play the repeated version of Prisoner's Dilemma.</p></introduction>
+    <task><statement>
       <p>
         Suggest a strategy for playing the Prisoner's Dilemma in <xref ref="T_CWPD3"></xref> repeatedly. DON'T SHARE YOUR STRATEGY WITH ANYONE YET!
       </p>
-    </statement>
-  </activity>
-
-  <p>Now let's see how your strategy works by actually playing the game several times.</p>
-
-  <activity xml:id="A_RPDplay">
-    <title>Play Prisoner's Dilemma repeatedly</title>
-    <statement>
+    </statement></task>
+  
+    <task><statement>
       <p>
-        Play 10 rounds of Prisoner's Dilemma with someone in class. Use your suggested strategy. Keep track of the payoffs. Did your strategy seem effective? What should it mean to have an <q>effective</q> strategy?
+        Play 10 rounds of Prisoner's Dilemma with someone else. Use your suggested strategy from (a). Keep track of the payoffs. 
       </p>
-    </statement>
+    </statement></task>
+
+    <task><statement><p>Did your strategy seem effective? What should it mean to have an <q>effective</q> strategy?</p></statement></task>
   </activity>
   <p>
-    We are now going to play a Prisoner's Dilemma Tournament! Several strategies are suggested below. Choose one of the strategies  or keep playing with your own strategy. You are to play your strategy against everyone else in the class. Keep a running total of your score. Don't tell your opponents your strategy.
+    We are now going to play a Prisoner's Dilemma Tournament. Several strategies are suggested below. Choose one of the strategies  or keep playing with your own strategy. You are to play your strategy against everyone else in the class. Keep a running total of your score. Don't tell your opponents your strategy.
   </p>
 
   <p>
@@ -120,12 +118,12 @@
     <title>A Prisoner's Dilemma tournament</title>
     <statement>
       <p>
-        WITHOUT SHARING YOUR STRATEGY, play Prisoner's Dilemma 10 times with each of the other members of the class. Keep track of the payoffs for each game and your total score.
+        Without sharing your strategy, play Prisoner's Dilemma 10 times with each of the other members of the class. Keep track of the payoffs for each game and your total score.
       </p>
     </statement>
   </activity>
 
-  <p>After playing Repeated Prisoner's Dilemma as a class, can you determine who used which strategy? At this point you may share your strategy with others. Was your strategy more effective with some strategies than with others? If some of the above strategies were not used, can you guess how your strategy would have done against them?</p>
+  <p>After playing Repeated Prisoner's Dilemma as a class, can you determine who used which strategy? At this point you should share your strategy with others. Was your strategy more effective with some strategies than with others? If some of the above strategies were not used, can you guess how your strategy would have done against them?</p>
 
   <activity xml:id="A_RPDeffectivestrategies">
     <title>Effectiveness of your strategy</title>
@@ -198,11 +196,11 @@
     </statement>
   </activity>
 
-  <p>The TIT-FOR-TAT strategy is particularly interesting in an iterated Prisoner's Dilemma. It has a few special characteristics that lead to success. First it is <term>responsive</term> in that it responds to the strategy of the other player. If the other player is cooperating, the TIT-FOR-TAT strategy will be able to gain the 3 points on each round. If the other player is defecting, it will defect so as to not keep getting the sucker's payoff of 0. The random strategies and pure strategies, for example, are not responsive. They do not respond to how the other player is playing. Chances are when you played in the tournament, you wanted to be able to adapt your strategy to respond to how your opponent was playing. </p>
+  <p>The TIT-FOR-TAT strategy is particularly interesting in an iterated Prisoner's Dilemma. It has a few special characteristics that lead to success. First it is <term>responsive</term> in that it responds to the strategy of the other player. If the other player is cooperating, the TIT-FOR-TAT strategy will be able to gain the 3 points on each round. If the other player is defecting, it will defect so as to not keep getting the sucker's payoff of 0. Random strategies and pure strategies, for example, are not responsive. They do not respond to how the other player is playing. Chances are when you played in the tournament, you wanted to be able to adapt your strategy to respond to how your opponent was playing. </p>
 
   <p>The TIT-FOR-TAT strategy is also <term>nice</term> in that it starts by cooperating. If it meets another cooperator it will continue to cooperate. If the opponent at some point begins cooperating, it will, too. However, it is also <term>unexploitable</term>. This means that a defector cannot take advantage of the <q>niceness.</q> It <q>punishes</q> any defection with an in-kind defection.</p>
 
-  <p>The TIT-FOR-TAT behavior has been observed in some animal populations, but you also might be able to think of situations in your own life where you or your friends have employed such a strategy with each other! Has it been effective for you?</p>
+  <p>The TIT-FOR-TAT behavior has been observed in some animal populations, but you also might be able to think of situations in your own life where you or your friends have employed such a strategy with each other. Has it been effective for you?</p>
 
   <reading-questions>
       <title>Check Your Understanding</title>

@@ -10,18 +10,18 @@
       <p>
       Determine the equilibrium point(s) for the following games.</p></introduction>
 
-        <task><p>
+        <task><statement><p>
             <m>\left[\begin{matrix}(2, -2)\amp (-1, 1)\\
             (2, -2)\amp (-1, 1)
             \end{matrix} \right]</m>
-          </p></task>
+          </p></statement></task>
 
-        <task><p>
+        <task><statement><p>
             <m>\left[\begin{matrix}(0, 0)\amp (-1, 1)\amp (0, 0)\\
             (-1, 1)\amp (0, 0)\amp (-1, 1)\\
             (0, 0)\amp (1, -1)\amp (0, 0)
             \end{matrix} \right]</m>
-          </p></task>
+          </p></statement></task>
   </activity>
   <activity xml:id="A_equilobserve">
     <title>An observation about equilibrium points</title>
@@ -35,14 +35,14 @@
     We now get to the main question in this section.</p>
      <question xml:id="Q_valuesofequilib"><p>Can two equilibrium points for a two-player zero-sum game have different values?
      </p></question>
-     <p>By experimenting with some examples, try to create an example of a game with two equilibrium points where those points have different values for one of the players. If you can successfully create such an example, you will have answered the question. But just because you can't find an example, that doesn't mean one doesn't exist!
+     <p>By experimenting with some examples, try to create an example of a game with two equilibrium points where those points have different values for one of the players. If you can successfully create such an example, you will have answered the question. But just because you can't find an example, that doesn't mean one doesn't exist.
   </p>
   <activity xml:id="A_diffexperiment"><title>Experimenting with different values</title>
-  <introduction><p>Let's see if we can create a <m>2\times 2</m> matrix for a zero-sum game that has two equilibrium points with different values. Let's assume the two equilbrium are <m>(1, -1)</m> and <m>(2, -2)</m>.</p></introduction>
-  <task><p>Create a matrix with <m>(1, -1)</m> and <m>(2, -2)</m> in the same row. Can they both be equilibria, or does one player want to switch?</p></task>
-  <task><p>Create a matrix with <m>(1, -1)</m> and <m>(2, -2)</m> in the same column. Can they both be equilibria, or does one player want to switch?</p></task>
-  <task><p>Now place <m>(1, -1)</m> and <m>(2, -2)</m> diagonally in the matrix (different rows and columns). Try to fill in values for the other two places in the matrix so that <m>(1, -1)</m> is an equilibrium. Is <m>(2, -2)</m> an equilibrium in any of your examples?</p><hint><p>Remember, if <m>(1, -1)</m> is an equilibrium, then <m>1</m> must be the biggest value for Player 1 in the column and <m>1</m> is the smallest in the row, so that <m>-1</m> is the biggest for Player 2 in the row.</p></hint></task>
-  <task><p>Do you think it is possible to have both <m>(1, -1)</m> and <m>(2, -2)</m> be equilibrium points in a <m>2\times 2</m> matrix? Explain your answer based on your examples.</p></task>
+  <introduction><p>Let's see if we can create a <m>2\times 2</m> matrix for a zero-sum game that has two equilibrium points with different values. Let's assume the two equilbria are <m>(1, -1)</m> and <m>(2, -2)</m>.</p></introduction>
+  <task><statement><p>Create a matrix with <m>(1, -1)</m> and <m>(2, -2)</m> in the same row. Can they both be equilibria, or does one player want to switch?</p></statement></task>
+  <task><statement><p>Create a matrix with <m>(1, -1)</m> and <m>(2, -2)</m> in the same column. Can they both be equilibria, or does one player want to switch?</p></statement></task>
+  <task><statement><p>Now place <m>(1, -1)</m> and <m>(2, -2)</m> diagonally in the matrix (different rows and columns). Try to fill in values for the other two places in the matrix so that <m>(1, -1)</m> is an equilibrium. Is <m>(2, -2)</m> an equilibrium in any of your examples?</p></statement><hint><p>Remember, if <m>(1, -1)</m> is an equilibrium, then <m>1</m> must be the biggest value for Player 1 in the column and <m>1</m> is the smallest in the row, so that <m>-1</m> is the biggest for Player 2 in the row.</p></hint></task>
+  <task><statement><p>Do you think it is possible to have both <m>(1, -1)</m> and <m>(2, -2)</m> be equilibrium points in a <m>2\times 2</m> matrix? Explain your answer based on your examples.</p></statement></task>
 
 </activity>
 
@@ -104,7 +104,7 @@
     <title> A player prefers the value of an equilibrium</title>
     <statement>
       <p>
-        Construct a system of inequalities using the fact that a player prefers an equilibrium point to another choice. For example, Player 1 prefers <m>a</m> to <m>d</m>. Thus, <m>a > d</m>. List all four inequalities you can get using this fact. You should get two for each player. Remember that Player 1 can only compare values in the same column since he has no ability to switch columns. If necessary, convert all inequalities to ones without negatives. (Algebra review: <m>-5 \lt  -2</m> means <m>5 > 2</m>.)
+        Construct a system of inequalities using the fact that a player prefers an equilibrium point to another choice. For example, Player 1 prefers <m>a</m> to <m>d</m>. Thus, <m>a > d</m>. List all four inequalities you can get using this fact. You should get two for each player. Remember that Player 1 can only compare values in the same column since she has no ability to switch columns. If necessary, convert all inequalities to ones without negatives. (Algebra review: <m>-5 \lt  -2</m> means <m>5 > 2</m>.)
       </p>
     </statement>
   </activity>
@@ -159,7 +159,7 @@
         Can you see how you might generalize to a larger game matrix? You do not need to write up a proof of the general case, just explain how the key ideas from the <m>2 \times 2</m> case would apply to a bigger game matrix. 
       </p>
     </statement>
-    <hint><p>Think about equilibria in (a) the same row, (b) in the same column, or (c) in a different row and column.</p></hint>
+    <hint><p>Think about equilibria in (a) the same row, (b) the same column, or (c) a different row and column.</p></hint>
   </activity>
   
   <p>We've seen that any two equlibrium points must have the same value. However, it is important to note that just because an outcome has the same value as an equilibrium point, that does not mean it is also an equilibrium point. </p>
@@ -197,7 +197,7 @@
         <me>\left[\begin{matrix}(-2, 2)\amp (-1, 1)\\
             (-1, 1)\amp (2, -2)
             \end{matrix} \right]</me>
-        both <m>(-1, 1)</m> payoff vectors are equilibria.</p></statement><feedback><p>True or False: Only the vector in Row 2, Column 1 is an equilibrium.</p></feedback><answer>False.</answer>
+        both <m>(-1, 1)</m> payoff vectors are equilibria.</p></statement><feedback><p>Only the vector in Row 2, Column 1 is an equilibrium.</p></feedback><answer>False.</answer>
       </exercise>
 
       <exercise label="IGT_EP_CYU_equilmultple"><statement correct="no"><p>True or False: If <m>(3, -3)</m> is an equilibrium in a zero-sum game, then every payoff vector <m>(3, -3)</m> is a equilibrium.</p></statement><feedback><p>See <xref ref="A_nonequil"></xref>.</p></feedback><answer>False.</answer>

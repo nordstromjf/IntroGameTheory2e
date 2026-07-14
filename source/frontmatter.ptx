@@ -24,10 +24,14 @@
     </website>
 
     <copyright>
-      <year>2017<ndash />2025</year>
+      <year>2017<ndash />2026</year>
       <holder>Jennifer Firkins Nordstrom</holder>
             <minilicense>Creative Commons Attribution-ShareAlike 4.0 International License</minilicense>
-            <shortlicense>This work is licensed under a <url  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</url>.</shortlicense>
+            <shortlicense>This work is licensed under a <url  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</url>.
+
+          <sidebyside width="25%"> 
+          <image source="images/creativecommons.png" />
+        </sidebyside></shortlicense>
     </copyright>
      <p>The images in this text were designed and created by the author using TikZ.</p>
   </bibinfo>
@@ -42,10 +46,10 @@
 
   <preface>
 <p>
-Many colleges and universities are offering courses in quantitative reasoning for all students. One model for a quantitative reasoning course is to provide students with a single cohesive topic. Ideally, such a topic can pique the curiosity of students with wide ranging academic interests and limited mathematical background. This text is intended for use in such a course. Game theory is an excellent topic for a non-majors quantitative course as it develops mathematical models to understand human behavior in social, political, and economic settings. The variety of applications can appeal to a broad range of students. Additionally, students can learn mathematics through playing games, something many choose to do in their spare time! </p>
+Many colleges and universities are offering courses in quantitative reasoning for all students. One model for a quantitative reasoning course is to provide students with a single cohesive topic. Ideally, such a topic can pique the curiosity of students with wide ranging academic interests and limited mathematical background. This text is intended for use in such a course. Game theory is an excellent topic for a non-majors quantitative course as it develops mathematical models to understand human behavior in social, political, and economic settings. The variety of applications can appeal to a broad range of students. Additionally, students can learn mathematics through playing games, something many choose to do in their spare time. </p>
 
 <p>
-This text particularly explores the ideas of game theory through the rich context of popular culture. At the end of each chapter is a section on applications of the concepts to popular culture. It suggests films, television shows, and novels with themes from game theory. The questions in each of these sections are intended to serve as essay prompts for writing assignments.
+In addition, this text particularly explores the ideas of game theory through the rich context of popular culture. At the end of Chapter 2 and Chapter 4 are sections on applications of the concepts to popular culture. It suggests films, television shows, and novels with themes from game theory. The questions in each of these sections are intended to serve as essay prompts for writing assignments.
 </p>
 
 <paragraphs xml:id="Course_Goals">
@@ -63,14 +67,20 @@ This text particularly explores the ideas of game theory through the rich contex
 <paragraphs xml:id="Format">
   <title>Course Format</title>
 
-<p>The material is presented in a discovery format, requiring students to make conjectures frequently. Each section is structured as a class activity. Any introduction material can be read by the students, and the numbered problems or questions are to be out in class and as homework, depending on how far a particular student progresses through the section. Most sections require students to attempt to solve the problem <em>before</em> they have been provided much framework. The sections then build the necessary tools to solve the problem or understand the key ideas. Being able to compare their original solutions and ideas to the more sophisticated mathematical ones helps build their mathematical intuition and helps them to understand the power of using mathematics in situations where their intuition falls short.</p>
+<p>The material is presented in a discovery format, requiring students to make conjectures frequently. Each section is structured as a series of activities. Any introduction material can be read by the students, and the numbered activities are to be done in class and as homework, depending on how far a particular student progresses through the section. Most sections require students to attempt to solve the problem <em>before</em> they have been provided much framework. The sections then build the necessary tools to solve the problem or understand the key ideas. Being able to compare their original solutions and ideas to the more sophisticated mathematical ones helps build their mathematical intuition and helps them to understand the power of using mathematics in situations where their intuition falls short.</p>
 </paragraphs>
 <paragraphs xml:id="Use">
   <title>Suggestions for Use</title>
 
 <p>
 This text is primarily for use in a college-level quantitative reasoning course. It can also be used for an introductory course in game theory for the social sciences. It approaches the subject matter through an inquiry-based format.  Most of the topics can be introduced by providing the students with the activity to work through during class, followed by a discussion. Almost all of the activities are intended to work through the concepts without additional lecture or introduction. 
-Students with even a rudimentary background in algebra will find the material accessible. Any necessary mathematical background can be introduced as needed. </p>
+Students with a general high school background in algebra will find the material accessible. Any necessary mathematical background can be introduced as needed. </p>
+</paragraphs>
+
+<paragraphs xml:id="Student">
+  <title> To the Student</title>
+
+  <p>Throughout this course you will be asked to try things and to make guesses. It is very important that you play the games yourself and that you really make guesses and predictions before actually learning the main ideas in each section. Embrace being wrong. Mistakes and errors are a crucial part of learning, especially in mathematics. But, also, find joy in being right. Sometimes your natural intuition will lead you in the right direction and sometimes it won't. It is important to build on your intuition when it works and to learn to recognize when it isn't enough.  Game theory has applications in many fields including psychology, economics, and politics. I hope you find meaningful connection throughout the course, but I also hope you enjoy just getting to play. </p>
 </paragraphs>
 </preface>
 </frontmatter>

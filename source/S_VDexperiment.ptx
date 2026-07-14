@@ -11,7 +11,7 @@
   </p>
 
     <question xml:id="Q_VDlights"><p>
-    The lights go out in the neighborhood. Someone needs to call the power company. If someone calls, everyone's lights go on.
+    The power goes out in the neighborhood. Someone needs to call the power company. If someone calls, everyone's power goes on.
   
 
   <ol marker="(A)">
@@ -56,7 +56,7 @@
 </question>
 
    <question xml:id="Q_VDlightsholdcharge"><p>
-  The same as in <xref ref="Q_VDlights"/>, but now you have to pay a $.50 service fee.
+  The same as in <xref ref="Q_VDlights"/>, but now you have to pay a $1.00 service fee.
 
   <ol marker="(A)">
     <li><p>
@@ -71,7 +71,7 @@
 </question>
 
   <question xml:id="Q_VDlightschargemore"><p>
-  The same as in <xref ref="Q_VDlights"/>, but now you have to pay a $2.50 service fee.
+  The same as in <xref ref="Q_VDlights"/>, but now you have to pay a $5.00 service fee.
 
   <ol marker="(A)">
     <li><p>
@@ -89,11 +89,11 @@
 
   <ol marker="(A)">
     <li><p>
-        Hike to notify the power company
+        Hike to notify the power company.
       </p></li>
 
     <li><p>
-        Stay home and let someone else do the hiking
+        Stay home and let someone else do the hiking.
       </p></li>
   </ol>
   </p></question>
@@ -113,7 +113,7 @@
   </p></question>
 
   <question xml:id="Q_VDsharksclass"><p>
-  Evil Dr. No captures the class and puts you in all in a shark tank separated so you can't communicate. If one person volunteers to be eaten then the rest go free. If no one volunteers after 10 minutes all get eaten by sharks.
+  Evil Dr. No captures the class and puts you in all in a shark tank separated so you can't communicate. If one person volunteers to be eaten then the rest go free. If no one volunteers after 10 minutes everyone gets eaten by sharks.
 
   <ol marker="(A)">
     <li><p>
@@ -127,7 +127,7 @@
   </p></question>
 
  <question xml:id="Q_VDsharksfamily"><p>
-  Evil Dr. No captures you and the five most important people in your life and puts you in all in a shark tank separated so you can't communicate. If one person volunteers to be eaten then the rest go free. If no one volunteers after 10 minutes all get eaten by sharks.
+  Evil Dr. No captures you and the five most important people in your life and puts you in all in a shark tank separated so you can't communicate. If one person volunteers to be eaten then the rest go free. If no one volunteers after 10 minutes everyone gets eaten by sharks.
 
   <ol marker="(A)">
     <li><p>
@@ -141,7 +141,7 @@
   </p></question>
 
   <question xml:id="Q_VDslop"><p>
-  For any <q>Big Brother</q> fans: choose to eat all your favorite foods for a week or nasty <q>slop</q> for a week. If at least three people say slop, everyone gets what they asked for. Otherwise, everyone is on slop.
+  For any fans of CBS's <pubtitle>Big Brother</pubtitle>: choose to eat all your favorite foods for a week or nasty <q>slop</q> for a week. If at least three people say slop, everyone gets what they asked for. Otherwise, everyone is on slop.
 
   <ol marker="(A)">
     <li><p>
@@ -227,7 +227,7 @@
     <title>Always a volunteer</title>
     <statement>
       <p>
-        After sharing your answers as a class, did each situation have a volunteer? In other words, was there always someone willing to call the power company or take fewer points? If there was a question with no volunteer, can you suggest why?
+        After sharing your answers as a class, did each situation have a volunteer? In other words, was there always someone willing to call the power company or take fewer points? If there was a question with no volunteer can you suggest why?
       </p>
     </statement>
   </activity>

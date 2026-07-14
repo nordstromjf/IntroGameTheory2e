@@ -41,7 +41,7 @@
     </statement>
   </activity>
   <p>
-    Finding the payoff matrix in <xref ref="A_LPguessmatrix"></xref> is probably more challenging than it appears. Eventually we want to employ the same method for finding the payoff matrix that we used in One-Card Stud Poker from <xref ref="E_onecardstud"></xref> in Chapter 2, but first we need to understand each player's strategies and the resulting payoffs. We begin with the fact that Player 1 can be dealt an Ace or a King.
+    Finding the payoff matrix in <xref ref="A_LPguessmatrix"></xref> is probably more challenging than it appears. Eventually we want to employ the same method for finding the payoff matrix that we used in One-Card Stud Poker from <xref ref="E_onecardstud"></xref>, but first we need to understand each player's strategies and the resulting payoffs. We begin with the fact that Player 1 can be dealt an Ace or a King.
   </p>
   <activity xml:id="A_LPP1Ace">
     <title>Player 1 has an Ace</title>
@@ -212,7 +212,7 @@
     <exercise label="IGT_LP_CYU_findE15050"><statement><p>In Liar's Poker, suppose Player 2 calls (C) 50% of the time and folds (F) 50% of the time.</p>
        <p> What is the expected payoff to Player 1 for bluffing, <m>E_1(B)</m>? <var width="4"/></p>
        <p> What is the expected payoff to Player 1 for telling the truth, <m>E_1(T)</m>? <var width="4"/></p> 
-       <p>Reminder, if your answer is not a whole number, use decimals.</p>
+       <p>Reminder, if your answer is not a whole number use decimals.</p>
     </statement>
     
       <setup>
@@ -260,7 +260,7 @@
   </setup>
       <answer><m>E_1(B)=0.25, E_1(T)=0.375</m></answer></exercise>
 
-    <exercise label="IGT_LP_CYU_BorT5050"><statement><p>If Player 2 plays the (1/2, 1/2) mixed strategy in  Liar's Poker, then which pure strategy does Player 1 prefer?</p></statement> 
+    <exercise label="IGT_LP_CYU_BorT5050"><statement><p>If Player 2 plays the <m>(1/2, 1/2)</m> mixed strategy in  Liar's Poker, then which pure strategy does Player 1 prefer?</p></statement> 
     <choices randomize="no">
       <choice><statement><p>Bluffing (B)</p></statement><feedback><p>Use the expected values of each pure strategy to help you.</p></feedback></choice>
 

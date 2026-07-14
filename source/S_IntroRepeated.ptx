@@ -17,15 +17,15 @@
         </me>
       </p></introduction>
 
-      <task><p>
-        Does this game have an equilibrium pair? </p></task>
-        <task><p>
-         Play this game with an opponent 10 times. Tally your wins and losses. </p></task>
-         <task><p> Describe how you chose which strategy to play. Describe how your opponent chose which strategy to play.
-      </p></task>
-      <task><p>
+      <task><statement><p>
+        Does this game have an equilibrium pair? </p></statement></task>
+        <task><statement><p>
+         Play this game with an opponent 10 times. Tally your wins and losses. </p></statement></task>
+         <task><statement><p> Describe how you chose which strategy to play. Describe how your opponent chose which strategy to play.
+      </p></statement></task>
+      <task><statement><p>
     When playing the game several times, does it make sense for either player to play the same strategy all the time? Why or why not?
-  </p></task>
+  </p></statement></task>
   </activity>
 
   
@@ -55,7 +55,7 @@
   </definition>
 
   <p>
-    For example, if a player plays Row A 40% of the time and Row B 60% of the time, we will say he is playing a (.4, .6) strategy, as we generally use the probability rather than the percent. The probabilities of each strategy will be listed in the same order as the strategies in the matrix.
+    For example, if a player plays Row A 40% of the time and Row B 60% of the time, we will say he is playing a <m>(0.4, 0.6)</m> strategy, as we generally use the probability rather than the percent. The probabilities of each strategy will be listed in the same order as the strategies in the matrix.
   </p>
 
   <p>
@@ -93,40 +93,42 @@
   </p>
   <activity xml:id="A_RPSmatrixequil">
     <title>RPS payoff matrix</title>
-    <statement>
+    <introduction>Consider the game of Rock-Paper-Scissors.</introduction>
+    <task><statement>
       <p>
         Construct a game matrix for Rock-Paper-Scissors.
       </p>
-    </statement>
-  </activity>
-  <activity xml:id="A_RPSzs">
-    <title>RPS and equilibrium points</title>
-    <statement>
+    </statement></task>
+  
+    <task><statement>
       <p>
         Is Rock-Paper-Scissors a zero-sum game? Does it have an equilibrium point? Explain.
       </p>
-    </statement>
+    </statement></task>
   </activity>
+
+  <p>You should be able to see that Rock-Paper-Scissors does not have an equilibrium point, so we don't have a good strategy for playing the game once. But what happens when we repeat the game? Is there a good strategy in the repeated game?</p>
+
   <activity xml:id="A_RPSplay">
     <title>Play RPS</title>
     <introduction>
       <p>
         We want to look at what happens if we repeat Rock-Paper-Scissors.</p></introduction>
 
-       <task><p>Play the game ten times with an opponent. Record the results (list strategy pairs and payoffs for each player).
-      </p></task>
+       <task><statement><p>Play the game ten times with an opponent. Record the results (list strategy pairs and payoffs for each player).
+      </p></statement></task>
    
-      <task><p>
+      <task><statement><p>
         Describe any strategy you used to play Rock-Paper-Scissors.
-      </p></task>
+      </p></statement></task>
     
-     <task> <p>
+     <task><statement><p>
         Reflect on your chosen strategy. Does it guarantee you a win? What should it mean to win in a repeated game? What are the strengths and weaknesses of your strategy?
-      </p></task>
-  <task>
+      </p></statement></task>
+  <task><statement>
       <p>
         Discuss your strategy with your opponent. After sharing your ideas for a strategy, can you improve your previous strategy?
-      </p></task>
+      </p></statement></task>
   </activity>
   <p>
     Although you may have come up with a good strategy, let's see if we can't decide what the <q>best</q> strategy should be for Rock-Paper-Scissors. 
@@ -134,45 +136,45 @@
   <activity xml:id="A_RPSsomemixed">
     <title>Exploring some strategies</title>
     <introduction><p>Let's assume we are playing Rock-Paper-Scissors against the smartest player to ever live. We will call such an opponent the <q>perfect</q> player. You can think of this player as one who can figure out your strategy easily.</p></introduction>
-    <task>
+    <task><statement>
       <p>
         Explain why it is not a good idea to play a pure strategy; i.e., to play only Rock, only Paper, or only Scissors.
-      </p>
+      </p></statement>
     </task>
-    <task>
+    <task><statement>
       <p>
         Does it make sense to play one option more often than another (for example, Rock more often than Paper)? Explain.
-      </p>
+      </p></statement>
     </task>
-    <task>
+    <task><statement>
       <p>
         How often should you play each option?
-      </p>
+      </p></statement>
     </task>
-    <task>
+    <task><statement>
       <p>
         Do you want to play in a predictable pattern or randomly? What are some advantages and disadvantages of a pattern? What are some advantages and disadvantages of a random strategy?
-      </p>
+      </p></statement>
     </task>
   </activity>
   <p>
-    Hopefully, you concluded that the best strategy against our perfect player would be to play Rock, Paper, Scissors 1/3 of the time each, and to play randomly. We can say that our strategy is to play each option randomly with a probability of 1/3, and call this the Random(1/3, 1/3, 1/3) strategy.
+    Hopefully, you concluded that the best strategy against our perfect player would be to play Rock, Paper, Scissors 1/3 of the time each and to play randomly. We can say that our strategy is to play each option randomly with a probability of 1/3, and call this the Random<m>(1/3, 1/3, 1/3)</m> strategy.
   </p>
   <activity xml:id="A_RPSplaymixedeven">
     <title>Testing the random strategy</title>
-    <introduction><p>Let's try out the Random(1/3, 1/3, 1/3) strategy</p></introduction>
-      <task><p>
-        Using this strategy, what do you predict the long term payoff will be for Player 1? For Player 2?
-      </p>
+    <introduction><p>Let's try out the Random<m>(1/3, 1/3, 1/3)</m> strategy</p></introduction>
+      <task><statement><p>
+        If Player 1 plays the Random<m>(1/3, 1/3, 1/3)</m> strategy, what do you predict the long term payoff will be for Player 1? Does it matter what Player 2 plays? What is Player 2's long term payoff against the Random<m>(1/3, 1/3, 1/3)</m> strategy?
+      </p></statement>
     </task>
   
-    <task><p>
-        Let's check our prediction. Using a die, let 1 and 2 represent Rock, 3 and 4 represent Paper, and 5 and 6 represent Scissors. Play the game 20 times with someone in class where each player rolls to determine the choice of Rock, Paper, or Scissors. Keep track of the strategy pairs and payoffs. What was the total payoff for each player? At this point, if you still feel that you have a better strategy, try your strategy against the random one to see what happens!
-      </p></task>
-    <task>
+    <task><statement><p>
+        Let's check our prediction. Using a die, let 1 and 2 represent Rock, 3 and 4 represent Paper, and 5 and 6 represent Scissors. Play the game 20 times with someone in class where each player rolls to determine the choice of Rock, Paper, or Scissors. Keep track of the strategy pairs and payoffs. What was the total payoff for each player? At this point, if you still feel that you have a better strategy, try your strategy against the random one to see what happens.
+      </p></statement></task>
+    <task><statement>
       <p>
         How did the actual outcome compare to your predicted outcome? What do you expect would happen if you play the game 100 times? (Or more?)
-      </p></task>
+      </p></statement></task>
   
   </activity>
   <p>
@@ -182,15 +184,15 @@
     <title>Expected payoff when both players play the random strategy</title>
     <introduction>
       <p>
-        Assume both players are using the Random(1/3, 1/3, 1/3) strategy.</p></introduction>
+        Assume both players are using the Random<m>(1/3, 1/3, 1/3)</m> strategy.</p></introduction>
 
-        <task><p>
-         List all the possible outcomes for a single game. An outcome is a strategy pair and the corresponding payoff, for example [R, P], <m>(-1, 1)</m>.</p></task>
-         <task><p> What is the probability that any particular pair of strategies will be played? Are the strategy pairs equally likely?</p></task>
+        <task><statement><p>
+         List all the possible outcomes for a single game. An outcome is a strategy pair and the corresponding payoff, for example [R, P], <m>(-1, 1)</m>.</p></statement></task>
+         <task><statement><p> What is the probability that any particular pair of strategies will be played? Are the strategy pairs equally likely?</p></statement></task>
     
-      <task><p>
+      <task><statement><p>
         Using these probabilities and payoffs, calculate the expected value of the game for each player.
-      </p></task>
+      </p></statement></task>
     </activity>
   <activity xml:id="A_smallrepeatstrat">
     <title>Strategy for the repeated <m>2\times 2</m> game</title>
@@ -209,7 +211,7 @@
       </p>
     </statement>
   </activity>
-  <p>You may have had an idea about the best way to play Rock-Paper-Scissors before working through this section, but how can we find solutions to other games, such as the one in <xref ref="A_smallrepeatstrat"></xref>? We don't want to just use a <q>guess and check</q> method. Especially since there are infinitely many possible mixed strategies to try! The rest of the chapter will develop mathematical methods for solving repeated games with no equilibrium point.</p>
+  <p>You may have had an idea about the best way to play Rock-Paper-Scissors before working through this section, but how can we find solutions to other games, such as the one in <xref ref="A_smallrepeatstrat"></xref>? We don't want to just use a <q>guess and check</q> method since there are infinitely many possible mixed strategies to try! The rest of the chapter will develop mathematical methods for solving repeated games with no equilibrium point.</p>
 
   <reading-questions>
       <title>Check Your Understanding</title>
@@ -223,21 +225,21 @@
       <exercise label="IGT_IRG_CYU_RPSrps"><statement correct="no"><p>True or False: In Rock-Paper-Scissors, the best strategy is to play Rock, then Paper, then Scissors.
       </p></statement><feedback><p>If a player always plays Rock, then Paper, then Scissors, then the opponent can play Paper, then Scissors, then Rock.</p></feedback><answer>False.</answer></exercise>
 
-      <exercise label="IGT_IRG_CYU_equil1"><statement correct="no"><p>True or False: The following game has an equilibruim.
+      <exercise label="IGT_IRG_CYU_equil1"><statement correct="no"><p>True or False: The following game has an equilibrium
          <me>
                 \left[\begin{matrix}
                 (10, -10)\amp (-10, 10)\\
                 (-20, 20) \amp  (0, 0)
-                \end{matrix}\right]\hspace{.5in}
+                \end{matrix}\right].\hspace{.5in}
               </me>
       </p></statement><feedback><p>For each outcome, at least one player wants to switch.</p></feedback><answer>False.</answer></exercise>
 
-      <exercise label="IGT_IRG_CYU_strat1P1"><statement><p>Suppose the following game is played repeatedly. 
+      <exercise label="IGT_IRG_CYU_strat1P1"><statement><p>Suppose the following game is played repeatedly 
          <me>
                 \left[\begin{matrix}
                 (10, -10)\amp (-10, 10)\\
                 (-20, 20) \amp  (0, 0)
-                \end{matrix}\right]\hspace{.5in}
+                \end{matrix}\right].\hspace{.5in}
               </me>
               Player 1 should play
       </p></statement>
@@ -251,12 +253,12 @@
       </choices>
       <answer><p>A mixed strategy, varying Row 1 and Row 2.</p></answer></exercise>
 
-      <exercise label="IGT_IRG_CYU_strat1P2"><statement><p>Suppose the following game is played repeatedly. 
+      <exercise label="IGT_IRG_CYU_strat1P2"><statement><p>Suppose the following game is played repeatedly 
          <me>
                 \left[\begin{matrix}
                 (10, -10)\amp (-10, 10)\\
                 (-20, 20) \amp  (0, 0)
-                \end{matrix}\right]\hspace{.5in}
+                \end{matrix}\right].\hspace{.5in}
               </me>
               Player 2 should play
       </p></statement>
@@ -270,21 +272,21 @@
       </choices>
       <answer><p>A mixed strategy, varying Column 1 and Column 2.</p></answer></exercise>
 
-      <exercise label="IGT_IRG_CYU_equil2"><statement correct="yes"><p>True or False: The following game has an equilibruim.
+      <exercise label="IGT_IRG_CYU_equil2"><statement correct="yes"><p>True or False: The following game has an equilibrium
          <me>
                 \left[\begin{matrix}
                 (10, -10)\amp (0, 0)\\
                 (-20, 20) \amp  (-1, 1)
-                \end{matrix}\right]\hspace{.5in}
+                \end{matrix}\right].\hspace{.5in}
               </me>
       </p></statement><feedback><p><m>(0, 0)</m> is an equilibruim.</p></feedback><answer>True.</answer></exercise>
 
-      <exercise label="IGT_IRG_CYU_strat2P1"><statement><p>Suppose the following game is played repeatedly. 
+      <exercise label="IGT_IRG_CYU_strat2P1"><statement><p>Suppose the following game is played repeatedly 
          <me>
                 \left[\begin{matrix}
                 (10, -10)\amp (0, 0)\\
                 (-20, 20) \amp  (-1, 1)
-                \end{matrix}\right]\hspace{.5in}
+                \end{matrix}\right].\hspace{.5in}
               </me>
               Player 1 should play
       </p></statement>
@@ -298,12 +300,12 @@
       </choices>
       <answer><p>Pure strategy Row 1.</p></answer></exercise>
 
-      <exercise label="IGT_IRG_CYU_strat2P2"><statement><p>Suppose the following game is played repeatedly. 
+      <exercise label="IGT_IRG_CYU_strat2P2"><statement><p>Suppose the following game is played repeatedly 
          <me>
                 \left[\begin{matrix}
                 (10, -10)\amp (0, 0)\\
                 (-20, 20) \amp  (-1, 1)
-                \end{matrix}\right]\hspace{.5in}
+                \end{matrix}\right].\hspace{.5in}
               </me>
               Player 2 should play
       </p></statement>
