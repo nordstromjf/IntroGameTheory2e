@@ -515,7 +515,7 @@
       <title>Rock, paper, scissors</title>
       <statement>
         <p>
-          Consider the game ROCK, PAPER, SCISSORS<idx><h>Rock-Paper-Scissors</h></idx><idx><h>game</h><h>Rock-Paper-Scissors</h></idx> (Rock beats Scissors, Scissors beat Paper, Paper beats Rock). Construct the payoff matrix for this game. Does it have an equilibrium pair? Explain your answer.
+          Consider the game Rock-Paper-Scissors<idx><h>Rock-Paper-Scissors</h></idx><idx><h>game</h><h>Rock-Paper-Scissors</h></idx> (Rock beats Scissors, Scissors beat Paper, Paper beats Rock). Construct the payoff matrix for this game. Does it have an equilibrium pair? Explain your answer.
         </p>
       </statement>
     </activity>
@@ -656,14 +656,15 @@
               </md>
       </p></statement>
       <choices randomize="yes">
-      <choice correct="yes"><statement><m>(2, -2)</m></statement>
-      <feedback><p><m>(2, -2)</m> is an equilibrium point since if Player 2 chose column 2, Player 1 does not prefer row 1 with a payoff of 0. Similarly, if Player 1 chose row 2, Player 2 does not prefer column 1 with a payoff of <m>-3</m>.</p></feedback></choice>
+      
       <choice><statement><m>(1, -1)</m></statement>
      <feedback><p><m>(1, -1)</m> is not an equilibrium point since if Player 2 chose column 1, Player 1 prefers row 2 with a payoff of 3. Similarly, if Player 1 chose row 1, Player 2 prefers column 2 with a payoff of <m>0</m>.</p></feedback></choice>
      <choice><statement><m>(0, 0)</m></statement>
      <feedback><p><m>(0, 0)</m> is not an equilibrium point since if Player 2 chose column 2, Player 1 prefers row 2 with a payoff of 2. Note, Player 2 doesn't want to switch, but we only need one player to want to change strategies for the vector to not be an equilibrium.</p></feedback></choice>
      <choice><statement><m>(3, -3)</m></statement>
      <feedback><p><m>(3, -3)</m> is not an equilibrium point since if Player 1 chose row 2, Player 2 prefers column 2 with a payoff of <m>-2</m>. Note, Player 1 doesn't want to switch, but we only need one player to want to change strategies for the vector to not be an equilibrium.</p></feedback></choice>
+     <choice correct="yes"><statement><m>(2, -2)</m></statement>
+      <feedback><p><m>(2, -2)</m> is an equilibrium point since if Player 2 chose column 2, Player 1 does not prefer row 1 with a payoff of 0. Similarly, if Player 1 chose row 2, Player 2 does not prefer column 1 with a payoff of <m>-3</m>.</p></feedback></choice>
     </choices><answer><p><m>(2, -2)</m></p></answer>
     </exercise>
 

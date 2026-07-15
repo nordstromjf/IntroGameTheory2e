@@ -385,7 +385,7 @@
     </choices><answer><p>Pure strategy A.</p></answer></exercise>
 
     <exercise label="IGT_INZ_CYU_BoMvariation"><statement><p>Going back to Battle of the Movies, suppose Alice still prefers Comedy to Action, but also prefers to go to the movie with Bob than to go alone. However, Bob hates Comedy, so he would prefer to see the action movie alone rather than go to the Comedy movie.</p>
-    <p> We can adjust the payoff as in the following matrix. Click or circle any equilibruim points. 
+    <p> We can adjust the payoff as in the following matrix. Click or circle any equilibrium points. 
     </p></statement><areas><p>
 <table xml:id="T_battleofmoviesvariation" >
         <tabular halign="center">

@@ -185,7 +185,7 @@
     </statement>
   </activity>
 
-  <p>After thinking about individuals in a society playing pure strategies, what happens to individiuals who are playing some of the mixed strategies listed above?</p>
+  <p>After thinking about individuals in a society playing pure strategies, what happens to individuals who are playing some of the mixed strategies listed above?</p>
 
   <activity xml:id="A_RPDtft">
     <title>A society of TIT-FOR-TATers</title>
@@ -218,7 +218,7 @@
 
        <choices randomize="no">
         <choice ><statement><p>cooperate; cooperates</p></statement><feedback><p>Although both players tie when they both cooperate, it does not result in the best payoff for a single player.</p></feedback></choice>
-        <choice ><statement><p>cooperate; defects</p></statement><feedback><p>This is an equilibrium, but not the one wioth the best payoff.</p></feedback></choice>
+        <choice ><statement><p>cooperate; defects</p></statement><feedback><p>This is an equilibrium, but not the one with the best payoff.</p></feedback></choice>
         <choice ><statement><p>defect; defects</p></statement><feedback><p>This is the worst outcome.</p></feedback></choice>
         <choice correct="yes"><statement><p>defect; cooperates</p></statement><feedback><p>Correct. A player really wants their opponent to cooperate while they defect.</p></feedback></choice>
        </choices><answer><p>defect; cooperates</p></answer></exercise>
@@ -251,7 +251,7 @@
 
        <choices randomize="no">
         <choice correct="yes"><statement><p>cooperate.</p></statement><feedback><p>Correct. A player would rather swerve than crash.</p></feedback></choice>
-        <choice ><statement><p>defect.</p></statement><feedback><p>If your oppent always drives straight, you wan to always swerve.</p></feedback></choice>
+        <choice ><statement><p>defect.</p></statement><feedback><p>If your opponent always drives straight, you want to always swerve.</p></feedback></choice>
         
        </choices><answer><p>cooperate.</p></answer></exercise>
 

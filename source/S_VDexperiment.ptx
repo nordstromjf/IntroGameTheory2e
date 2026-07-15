@@ -283,7 +283,7 @@
         <choice correct="yes"><statement><p>less</p></statement><feedback><p>Generally, if there are more people, there is less pressure on any one person to volunteer. People are more likely to let someone else volunteer.</p></feedback></choice>
       </choices><answer><p>less</p></answer></exercise>
 
-      <exercise label="IGT_VDE_CYU_considerothers"><statement correct="yes"><p>True or False: In trying to get the best outcome for yourself in this experiment, it is useful to consider how likely it is that other people volunteer.</p></statement><feedback><p>For example, if you think there are likely to be other volunteers, you may not to volunteer. You can get the benefit without the cost of volunteering.</p></feedback><answer><p>True.</p></answer></exercise>
+      <exercise label="IGT_VDE_CYU_considerothers"><statement correct="yes"><p>True or False: In trying to get the best outcome for yourself in this experiment, it is useful to consider how likely it is that other people volunteer.</p></statement><feedback><p>For example, if you think there are likely to be other volunteers, you may not want to volunteer. You can get the benefit without the cost of volunteering.</p></feedback><answer><p>True.</p></answer></exercise>
 
 
 

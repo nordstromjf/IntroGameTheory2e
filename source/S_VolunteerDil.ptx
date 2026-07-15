@@ -159,7 +159,7 @@
 
        <choices randomize="no">
         <choice ><statement><p>cooperator.</p></statement><feedback><p>Who benefits most by a player choosing 1, the individual or the group?</p></feedback></choice>
-        <choice correct="yes"><statement><p>defector.</p></statement><feedback><p>Choosing 1 allows the individual to benefit but risks a negetive payoff for everyone.</p></feedback></choice>
+        <choice correct="yes"><statement><p>defector.</p></statement><feedback><p>Choosing 1 allows the individual to benefit but risks a negative payoff for everyone.</p></feedback></choice>
        </choices><answer><p>cooperator.</p></answer></exercise>
 
       <exercise label="IGT_VolDil_CYU_Vall0"><statement><p>Consider the Volunteer's Dilemma in which each player can choose 1 point or 0 points. If no one chooses 0, everyone loses 10 points. If at least one person chooses 0, every player gets the points they chose.  Suppose you are playing this game in a class of 20 people. If everyone chooses 0, how many points does each person get? <var width="3" /></p></statement>

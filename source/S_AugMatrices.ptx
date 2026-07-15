@@ -79,7 +79,7 @@
   </p>
 
   <p>
-    Computer algebra systems such as <pubtitle>Sage</pubtitle>, <pubtitle>Mathematica</pubtitle>, and <pubtitle>Maple</pubtitle>, as well as graphing calculators, can easily do the row reduction for us. In this section we will use the Desmos matrix calculator first, then show how to use <pubtitle>Sage</pubtitle>. Note that any graphing claculator will work similarly to Desmos.
+    Computer algebra systems such as <pubtitle>Sage</pubtitle>, <pubtitle>Mathematica</pubtitle>, and <pubtitle>Maple</pubtitle>, as well as graphing calculators, can easily do the row reduction for us. In this section we will use the Desmos matrix calculator first, then show how to use <pubtitle>Sage</pubtitle>. Note that any graphing calculator will work similarly to Desmos.
   </p>
 
   <example xml:id="E_desmosmatrix"><title>Using the Desmos Matrix Calculator</title><p>
@@ -102,7 +102,7 @@
   </p></example>
 
   <example xml:id="E_sagematrix"><title>Using Sage</title><p>
-    We can also find the reduced row echolon form of a matrix using <pubtitle>Sage</pubtitle>, as in the following <pubtitle>Sage</pubtitle> cell.
+    We can also find the reduced row echelon form of a matrix using <pubtitle>Sage</pubtitle>, as in the following <pubtitle>Sage</pubtitle> cell.
   </p>
 
   <sage>

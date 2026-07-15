@@ -182,7 +182,7 @@
     </statement>
   </activity>
 
-  <p>You have now solved a rather complex two-person game. Try playing it with your friends and family. It may be difficult (or even impossible) to play randomly with the exact probabilities. It is also unlikely that your opponent will also be playing the equilibrium strategy, but can you use the solution to assure you have an advantage, or at least assure that your opponent doensn't have an advantage? Can you see the difference between an exact theoretical solution to a game and a practical strategy for playing the game? In the next chapter we will see even more differences between theoretical and practical solutions to a game.</p>
+  <p>You have now solved a rather complex two-person game. Try playing it with your friends and family. It may be difficult (or even impossible) to play randomly with the exact probabilities. It is also unlikely that your opponent will also be playing the equilibrium strategy, but can you use the solution to assure you have an advantage, or at least assure that your opponent doesn't have an advantage? Can you see the difference between an exact theoretical solution to a game and a practical strategy for playing the game? In the next chapter we will see even more differences between theoretical and practical solutions to a game.</p>
 
   <reading-questions>
       <title>Check Your Understanding</title>
@@ -335,7 +335,7 @@
   <exercise label="IGT_UC_CYU_Uequalplay"><statement correct="no"><p>True or False: In Undercut, a player should play each number 1-5 equally.</p>
   </statement><feedback><p>See <xref ref="A_Usolve"></xref>.</p></feedback><answer><p>False.</p></answer></exercise>
 
-  <exercise label="IGT_UC_CYU_Umixedequi"><statement correct="yes"><p>True or False: In Undercut, If Player 1 is playing the mixed strategy equilibrium, then Player should play the mixed strategy equilibrium.</p>
+  <exercise label="IGT_UC_CYU_Umixedequi"><statement correct="yes"><p>True or False: In Undercut, If Player 1 is playing the mixed strategy equilibrium, then Player 2 should play the mixed strategy equilibrium.</p>
   </statement><feedback><p>This is the main idea of an equilibrium, no player gains by changing strategy.</p></feedback><answer><p>True.</p></answer></exercise>
 
 </reading-questions>

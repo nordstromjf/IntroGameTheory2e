@@ -1235,9 +1235,9 @@
 
           <row>
             <cell right="minor"></cell>
-            <cell bottom="minor" right="minor"><area correct="yes">5</area></cell>
-            <cell bottom="minor" right="minor"><area correct="no">-3</area></cell>
-            <cell bottom="minor" right="minor"><area correct="no">-4</area></cell>
+            <cell bottom="minor" right="minor"><area correct="yes"><m>5</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>-3</m></area></cell>
+            <cell bottom="minor" right="minor"><area correct="no"><m>-4</m></area></cell>
           </row>
         </tabular>
       </table>

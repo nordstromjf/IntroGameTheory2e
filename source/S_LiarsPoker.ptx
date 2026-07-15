@@ -180,8 +180,9 @@
       <choice><statement><m>(0, 0)</m></statement></choice>
       <choice correct="yes"><statement><m>(1/2, -1/2).</m></statement></choice>
       <choice><statement><m>(-1/2, 1/2).</m></statement></choice>
-      <choice><statement><m>(-1/4, 1/4).</m></statement></choice>
       <choice><statement><m>(1/4, -1/4).</m></statement></choice>
+      <choice><statement><m>(-1/4, 1/4).</m></statement></choice>
+      
     </choices><answer><p><m>(1/2, -1/2)</m></p></answer>
   </exercise>
 
