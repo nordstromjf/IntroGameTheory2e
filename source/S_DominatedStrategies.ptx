@@ -196,7 +196,7 @@
         A strategy <m>X</m> <term>dominates</term> a strategy <m>Y</m> if every entry for <m>X</m> is greater than or equal to the corresponding entry for <m>Y</m>. In this case, we say <m>Y</m> is <term>dominated by</term> <m>X</m>.
       </p>
       <p>
-        If strategy <m>X</m> dominates stratgy <m>Y</m>, we can write <m>X\succ Y</m>.
+        If strategy <m>X</m> dominates strategy <m>Y</m>, we can write <m>X\succ Y</m>.
       </p>
     </statement>
   </definition>
@@ -325,7 +325,7 @@
       <li><p>Compare the corresponding values in the two columns. </p></li>
       <li><p>If in each comparison, one column has values greater than or equal to the values in the other column, eliminate the column with the larger values.</p></li>
     </ol></p>
-    <p>Once you have eliminated a row or column, you can repeat the process with the remaining rows or columns, ignoring any eliminated values. The process of elimininating dominated strategies is helpful for simplifying the game.</p>
+    <p>Once you have eliminated a row or column, you can repeat the process with the remaining rows or columns, ignoring any eliminated values. The process of eliminating dominated strategies is helpful for simplifying the game.</p>
   </assemblage>
 
   <p>Now, look back at the election examples from <xref ref="Ex_election"></xref> and apply the process of eliminating dominated strategies.</p>
@@ -625,7 +625,7 @@
     </statement>
   </activity>
   <activity xml:id="A_maxminequil">
-    <title>The new method and equlibrium points</title>
+    <title>The new method and equilibrium points</title>
     <statement>
       <p>
         What do you notice about using this method on the games in <xref ref="T_domstratpractice1"></xref>, <xref ref="T_domstratpractice2"></xref>, and <xref ref="T_domstratpractice3"></xref>? Is the solution an equilibrium pair?
@@ -751,7 +751,7 @@
       </p>
     </statement>
   </activity>
-  <p>Given a zero-sum matrix game, we can find equilibruim pairs (if they exist) by the <q>guess and check</q> method, by eliminating dominated strategies, and by looking for the minimax/maximin strategies. You should be able to apply all three methods and think about which method might be the most appropriate for a given matrix game. For example, although <q>guess and check</q> should always find an equilibrium point if it exists, it may be very tedious to apply to a really large matrix. The maximin/minimax method might be much faster. </p></subsection>
+  <p>Given a zero-sum matrix game, we can find equilibrium pairs (if they exist) by the <q>guess and check</q> method, by eliminating dominated strategies, and by looking for the minimax/maximin strategies. You should be able to apply all three methods and think about which method might be the most appropriate for a given matrix game. For example, although <q>guess and check</q> should always find an equilibrium point if it exists, it may be very tedious to apply to a really large matrix. The maximin/minimax method might be much faster. </p></subsection>
 
   <reading-questions>
       <title>Check Your Understanding</title>
@@ -809,7 +809,7 @@
       <choice><statement><p>Column 1</p></statement>
       <feedback><p>Column 1 is not dominated by Column 2 or Column 3.</p></feedback></choice>
       <choice><statement><p>Column 2</p></statement>
-     <feedback><p>Column 2 is not dominated by either Column 1 or Column 3. Remember Player 2 prefers smaller values since these are PLayer 1's payoffs.</p></feedback></choice>
+     <feedback><p>Column 2 is not dominated by either Column 1 or Column 3. Remember Player 2 prefers smaller values since these are Player 1's payoffs.</p></feedback></choice>
       <choice correct="yes"><statement><p>Column 3</p></statement>
      <feedback><p>Column 3 is dominated by Column 2.</p></feedback></choice>
      <choice><statement><p>We can't eliminate any columns.</p></statement>
@@ -946,7 +946,7 @@
         </tabular>
       </table>
     </p></areas>
-    <answer><m>-1, -3, 0</m></answer></task>
+    <answer><p><m>-1, -3, 0</m></p></answer></task>
     <!--<task>
       <statement><p>What is the largest of the values you selected (a)? <var /></p></statement>
       <setup>
@@ -982,7 +982,7 @@
     </var>
   </setup>
     </task>-->
-    <task label="IGT_strat_CYU_maximin_task_b"><statement><p>If Player 1 wants to play the maximin stategy, she should play the row with the largest of the values from (a). Thus, she should play</p></statement>
+    <task label="IGT_strat_CYU_maximin_task_b"><statement><p>If Player 1 wants to play the maximin strategy, she should play the row with the largest of the values from (a). Thus, she should play</p></statement>
   <choices randomize="no">
       <choice ><statement><p>Row 1.</p></statement>
       <feedback><p>Incorrect.</p></feedback></choice>
@@ -1023,7 +1023,7 @@
           </row>
         </tabular>
       </table>
-    </p></areas><answer><m>3, 2, 3</m></answer></task>
+    </p></areas><answer><p><m>3, 2, 3</m></p></answer></task>
     <!--<task>
       <statement><p>What is the smallest of the values you selected (a)? <var /></p></statement>
       <setup>
@@ -1059,7 +1059,7 @@
     </var>
   </setup>
     </task>-->
-    <task label="IGT_strat_CYU_minimax_task_b"><statement><p>If Player 2 wants to play the minimax stategy, she should play the column with the smallest of the values from (a). Thus, she should play</p></statement>
+    <task label="IGT_strat_CYU_minimax_task_b"><statement><p>If Player 2 wants to play the minimax strategy, she should play the column with the smallest of the values from (a). Thus, she should play</p></statement>
   <choices randomize="no">
       <choice ><statement><p>Column 1.</p></statement>
       <feedback><p>Incorrect.</p></feedback></choice>
@@ -1166,7 +1166,7 @@
    <exercise label="IGT_strat_CYU_maxminequilib1">
      <statement correct="no">
        <p>True or False: The game <xref ref="T_exdomstrat2"></xref>, has an equilibrium pair.</p>
-     </statement><hint><p>Try using what you know about the maximin and minimax strategies.</p></hint><answer>False</answer><feedback><p>This game does not have an equilibrium pair.</p></feedback><answer><p>False.</p></answer>
+     </statement><hint><p>Try using what you know about the maximin and minimax strategies.</p></hint><answer><p>False</p></answer><feedback><p>This game does not have an equilibrium pair.</p></feedback><answer><p>False.</p></answer>
    </exercise>
 
 <exercise label="IGT_strat_CYU_maximin2"><introduction><p>This exercise finds Player 1's maximin strategy.</p></introduction>
@@ -1199,9 +1199,9 @@
           </row>
         </tabular>
       </table>
-    </p></areas><answer><m>-4, 1, -4</m></answer></task>
+    </p></areas><answer><p><m>-4, 1, -4</m></p></answer></task>
     
-    <task label="IGT_strat_CYU_maximin2_task_b"><statement><p>If Player 1 wants to play the maximin stategy, she should play the row with the largest of the values from (a). Thus, she should play</p></statement>
+    <task label="IGT_strat_CYU_maximin2_task_b"><statement><p>If Player 1 wants to play the maximin strategy, she should play the row with the largest of the values from (a). Thus, she should play</p></statement>
   <choices randomize="no">
       <choice ><statement><p>Row 1.</p></statement>
       <feedback><p>Incorrect.</p></feedback></choice>
@@ -1241,9 +1241,9 @@
           </row>
         </tabular>
       </table>
-    </p></areas><answer>5, 1, 5</answer></task>
+    </p></areas><answer><p><m>5, 1, 5</m></p></answer></task>
     
-    <task label="IGT_strat_CYU_minimax2_task_b"><statement><p>If Player 2 wants to play the minimax stategy, she should play the column with the smallest of the values from (a). Thus, she should play</p></statement>
+    <task label="IGT_strat_CYU_minimax2_task_b"><statement><p>If Player 2 wants to play the minimax strategy, she should play the column with the smallest of the values from (a). Thus, she should play</p></statement>
   <choices randomize="no">
       <choice ><statement><p>Column 1.</p></statement>
       <feedback><p>Incorrect.</p></feedback></choice>
@@ -1377,7 +1377,7 @@
    <exercise label="IGT_strat_CYU_maxminequilib2">
      <statement correct="yes">
        <p>True or False: The game <xref ref="T_exdomstrat3"></xref>, has an equilibrium pair.</p>
-     </statement><feedback><p>This game has an equilibrium pair, [Row 2, Column 2].</p></feedback><hint><p>Try using what you know about the maximin and minimax strategies.</p></hint><answer>True.</answer>
+     </statement><feedback><p>This game has an equilibrium pair, [Row 2, Column 2].</p></feedback><hint><p>Try using what you know about the maximin and minimax strategies.</p></hint><answer><p>True.</p></answer>
    </exercise>
    
     </reading-questions>

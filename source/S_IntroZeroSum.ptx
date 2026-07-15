@@ -56,7 +56,7 @@
             </row>
             <row>
               <cell></cell>
-              <cell right="minor">Cut Unvenly</cell>
+              <cell right="minor">Cut Unevenly</cell>
               <cell right="minor" bottom="minor" halign="center">(small piece, large piece)</cell>
               <cell right="minor" bottom="minor" halign="center">(large piece, small piece)</cell>
             </row>
@@ -89,7 +89,7 @@
             </row>
             <row>
               <cell></cell>
-              <cell right="minor">Cut Unvenly</cell>
+              <cell right="minor">Cut Unevenly</cell>
               <cell right="minor" bottom="minor" halign="center"><m>(40, 60)</m></cell>
               <cell right="minor" bottom="minor" halign="center"><m>(60, 40)</m></cell>
             </row>
@@ -152,7 +152,7 @@
             </row>
             <row>
               <cell></cell>
-              <cell right="minor">Cut Unvenly</cell>
+              <cell right="minor">Cut Unevenly</cell>
               <cell right="minor" bottom="minor" halign="center"><m>(-10, 10)</m></cell>
               <cell right="minor" bottom="minor" halign="center"><m>(10, -10)</m></cell>
             </row>
@@ -462,30 +462,30 @@
         Use the <q>guess and check</q> method to determine any equilibrium points for the following payoff matrices. It can also be helpful to identify the associated row and column for the equilibrium pair.</p></introduction>
 
           <task><statement><p>
-              <me>
+              <md>
                 \left[\begin{matrix}
                 (2,-2)\amp (2, -2)\\
                 (1, -1) \amp  (3, -3)
                 \end{matrix}\right]\hspace{.5in}
-              </me>
+              </md>
             </p></statement></task>
 
           <task><statement><p>
-              <me>
+              <md>
                 \left[\begin{matrix}
                 (3,-3)\amp (1, -1)\\
                 (2, -2) \amp  (4, -4)
                 \end{matrix}\right]\hspace{.5in}
-              </me>
+              </md>
             </p></statement></task>
 
           <task><statement><p>
-              <me>
+              <md>
                 \left[\begin{matrix}
                 (4,-4)\amp (5, -5)\amp (4, -4)\\
                 (3, -3) \amp  (0, 0)\amp (1, -1)
                 \end{matrix}\right]
-              </me>
+              </md>
             </p></statement></task>
    
     </activity>
@@ -630,30 +630,30 @@
       
 
       <exercise label="IGT_izs_CYU_zerosum1"><statement correct="yes"><p>True or False: The following game matrix is a zero-sum game.
-         <me>
+         <md>
                 \left[\begin{matrix}
                 (10, 20)\amp (-10, 40)\\
                 (-20, 50) \amp  (0, 30)
                 \end{matrix}\right]\hspace{.5in}
-              </me>
-      </p></statement><feedback><p>Each payoff vector sums to 30, a constant sum. Thus, this is a zero-sum game.</p></feedback><answer>True.</answer></exercise>
+              </md>
+      </p></statement><feedback><p>Each payoff vector sums to 30, a constant sum. Thus, this is a zero-sum game.</p></feedback><answer><p>True.</p></answer></exercise>
 
       <exercise label="IGT_izs_CYU_zerosum2"><statement correct="no"><p>True or False: The following game matrix is a zero-sum game.
-         <me>
+         <md>
                 \left[\begin{matrix}
                 (10, 20)\amp (-20, 10)\\
                 (-10, 20) \amp  (20, 10)
                 \end{matrix}\right]\hspace{.5in}
-              </me>
-      </p></statement><feedback><p>Payoff vector <m>(10, 20)</m> sums to 30, but payoff vector <m>(-10, 20)</m> sums to 10. Thus, this is not a zero-sum game.</p></feedback><answer>False.</answer></exercise>
+              </md>
+      </p></statement><feedback><p>Payoff vector <m>(10, 20)</m> sums to 30, but payoff vector <m>(-10, 20)</m> sums to 10. Thus, this is not a zero-sum game.</p></feedback><answer><p>False.</p></answer></exercise>
 
-      <exercise label="IGT_izs_CYU_equil"><statement><p> Determine which payoff vector is an equilbrium point for the following matrix.
-      <me>
+      <exercise label="IGT_izs_CYU_equil"><statement><p> Determine which payoff vector is an equilibrium point for the following matrix.
+      <md>
                 \left[\begin{matrix}
                 (1, -1)\amp (0, 0)\\
                 (3, -3) \amp  (2, -2)
                 \end{matrix}\right]\hspace{.5in}
-              </me>
+              </md>
       </p></statement>
       <choices randomize="yes">
       <choice correct="yes"><statement><m>(2, -2)</m></statement>
@@ -661,34 +661,34 @@
       <choice><statement><m>(1, -1)</m></statement>
      <feedback><p><m>(1, -1)</m> is not an equilibrium point since if Player 2 chose column 1, Player 1 prefers row 2 with a payoff of 3. Similarly, if Player 1 chose row 1, Player 2 prefers column 2 with a payoff of <m>0</m>.</p></feedback></choice>
      <choice><statement><m>(0, 0)</m></statement>
-     <feedback><p><m>(0, 0)</m> is not an equilibrium point since if Player 2 chose column 2, Player 1 prefers row 2 with a payoff of 2. Note, Player 2 doesn't want to switch, but we only need one player to want to change strategies for the vector to not be an equilbrium.</p></feedback></choice>
+     <feedback><p><m>(0, 0)</m> is not an equilibrium point since if Player 2 chose column 2, Player 1 prefers row 2 with a payoff of 2. Note, Player 2 doesn't want to switch, but we only need one player to want to change strategies for the vector to not be an equilibrium.</p></feedback></choice>
      <choice><statement><m>(3, -3)</m></statement>
-     <feedback><p><m>(3, -3)</m> is not an equilibrium point since if Player 1 chose row 2, Player 2 prefers column 2 with a payoff of <m>-2</m>. Note, Player 1 doesn't want to switch, but we only need one player to want to change strategies for the vector to not be an equilbrium.</p></feedback></choice>
-    </choices><answer><m>(2, -2)</m></answer>
+     <feedback><p><m>(3, -3)</m> is not an equilibrium point since if Player 1 chose row 2, Player 2 prefers column 2 with a payoff of <m>-2</m>. Note, Player 1 doesn't want to switch, but we only need one player to want to change strategies for the vector to not be an equilibrium.</p></feedback></choice>
+    </choices><answer><p><m>(2, -2)</m></p></answer>
     </exercise>
 
     <exercise label="IGT_izs_CYU_existequil"><statement correct="no"><p>True or False: A zero-sum game must have an equilibrium pair (or point).
       </p></statement><feedback><p>For example, the game matrix 
-    <me>
+    <md>
                 \left[\begin{matrix}
                 (3,-3)\amp (1, -1)\\
                 (2, -2) \amp  (4, -4)
                 \end{matrix}\right]\hspace{.5in}
-              </me>
-    does not have an equilibrium.</p></feedback><answer>False.</answer></exercise>
+              </md>
+    does not have an equilibrium.</p></feedback><answer><p>False.</p></answer></exercise>
 
     <exercise label="IGT_izs_CYU_multequil"><statement correct="yes"><p>True or False: A zero-sum game can have more than one  equilibrium pair (or point).
       </p></statement><feedback><p>For example, the game matrix 
-    <me>
+    <md>
                 \left[\begin{matrix}
                 (4,-4)\amp (5, -5)\amp (4, -4)\\
                 (3, -3) \amp  (0, 0)\amp (1, -1)
                 \end{matrix}\right]
-              </me>
-    has more than one equilibrium.</p></feedback><answer>True.</answer></exercise>
+              </md>
+    has more than one equilibrium.</p></feedback><answer><p>True.</p></answer></exercise>
 
     <exercise label="IGT_izs_CYU_RPS"><statement correct="no"><p>True or False: The game of Rock-Paper-Scissors has an equilibrium pair.
-      </p></statement><feedback><p>No matter which strategy pair is played, there is at least one player that wishes they had played a different strategy.</p></feedback><answer>False.</answer></exercise>
+      </p></statement><feedback><p>No matter which strategy pair is played, there is at least one player that wishes they had played a different strategy.</p></feedback><answer><p>False.</p></answer></exercise>
 
 
  

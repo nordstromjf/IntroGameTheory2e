@@ -13,7 +13,7 @@
     
 
     <p>
-      We begin with an example of the game of Matching Pennies<idx><h>Matching Pennies</h></idx><idx><h>game</h><h>Matching Pennies</h></idx>, Suppose each player has two choices: Heads (H) or Tails (T). If they choose the same side of the coin, then Player 1 wins $1 from Player 2. If they don't match, then Player 1 loses $1 to Player 2.</p>
+      We begin with an example of the game of Matching Pennies<idx><h>Matching Pennies</h></idx><idx><h>game</h><h>Matching Pennies</h></idx>. Suppose each player has two choices: Heads (H) or Tails (T). If they choose the same side of the coin, then Player 1 wins $1 from Player 2. If they don't match, then Player 1 loses $1 to Player 2.</p>
       
     
 
@@ -310,7 +310,7 @@
       <choice><statement><m>-5</m></statement>
       <feedback><p><m>-5</m> is not the largest payoff.</p></feedback></choice>
     </choices>
-      <answer>3</answer></exercise>
+      <answer><p><m>3</m></p></answer></exercise>
 
       <exercise label="IGT_intromatrices_CYU_prefpayoff2"><statement><p> Which payoff does a player prefer: <m>-5, -1,</m> or <m>-10</m>?</p></statement><choices randomize="yes">
       <choice correct="yes"><statement><m>-1</m></statement>
@@ -320,7 +320,7 @@
       <choice><statement><m>-10</m></statement>
       <feedback><p><m>-10</m> is not the largest payoff.</p></feedback></choice>
     </choices>
-      <answer>-1</answer></exercise>
+      <answer><p><m>-1</m></p></answer></exercise>
 
       <exercise label="IGT_intromatrices_CYU_prefpayoff3"><statement><p> Which payoff does a player prefer: <m>1/2, 0,</m> or <m>5/6</m>?</p></statement><choices randomize="yes">
       <choice correct="yes"><statement><m>5/6</m></statement>
@@ -330,7 +330,7 @@
       <choice><statement><m>1/2</m></statement>
       <feedback><p><m>1/2</m> is not the largest payoff.</p></feedback></choice>
     </choices>
-      <answer>5/6</answer></exercise>
+      <answer><p><m>5/6</m></p></answer></exercise>
 
       <exercise label="IGT_intromatrices_CYU_player1"><statement><p>In the game matrix, Player 1 will always choose </p></statement><choices randomize="yes">
       <choice correct="yes"><statement><p>the row.</p></statement>

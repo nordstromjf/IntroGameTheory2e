@@ -38,7 +38,7 @@
      <p>By experimenting with some examples, try to create an example of a game with two equilibrium points where those points have different values for one of the players. If you can successfully create such an example, you will have answered the question. But just because you can't find an example, that doesn't mean one doesn't exist.
   </p>
   <activity xml:id="A_diffexperiment"><title>Experimenting with different values</title>
-  <introduction><p>Let's see if we can create a <m>2\times 2</m> matrix for a zero-sum game that has two equilibrium points with different values. Let's assume the two equilbria are <m>(1, -1)</m> and <m>(2, -2)</m>.</p></introduction>
+  <introduction><p>Let's see if we can create a <m>2\times 2</m> matrix for a zero-sum game that has two equilibrium points with different values. Let's assume the two equilibria are <m>(1, -1)</m> and <m>(2, -2)</m>.</p></introduction>
   <task><statement><p>Create a matrix with <m>(1, -1)</m> and <m>(2, -2)</m> in the same row. Can they both be equilibria, or does one player want to switch?</p></statement></task>
   <task><statement><p>Create a matrix with <m>(1, -1)</m> and <m>(2, -2)</m> in the same column. Can they both be equilibria, or does one player want to switch?</p></statement></task>
   <task><statement><p>Now place <m>(1, -1)</m> and <m>(2, -2)</m> diagonally in the matrix (different rows and columns). Try to fill in values for the other two places in the matrix so that <m>(1, -1)</m> is an equilibrium. Is <m>(2, -2)</m> an equilibrium in any of your examples?</p></statement><hint><p>Remember, if <m>(1, -1)</m> is an equilibrium, then <m>1</m> must be the biggest value for Player 1 in the column and <m>1</m> is the smallest in the row, so that <m>-1</m> is the biggest for Player 2 in the row.</p></hint></task>
@@ -62,11 +62,11 @@
 
   <p>
     Since we want to assume the theorem is false, we assume we have a two-player zero-sum game with two different equilibrium values. Since we don't have a specific example of such a game, we want to represent the game in a general form. In particular, we can represent the general game
-    <me>
+    <md>
       \left[\begin{matrix}(a, -a)\amp (c, -c)\\
       (d, -d)\amp (b, -b)
       \end{matrix} \right].
-    </me>
+    </md>
   </p>
 
   <p>
@@ -162,7 +162,7 @@
     <hint><p>Think about equilibria in (a) the same row, (b) the same column, or (c) a different row and column.</p></hint>
   </activity>
   
-  <p>We've seen that any two equlibrium points must have the same value. However, it is important to note that just because an outcome has the same value as an equilibrium point, that does not mean it is also an equilibrium point. </p>
+  <p>We've seen that any two equilibrium points must have the same value. However, it is important to note that just because an outcome has the same value as an equilibrium point, that does not mean it is also an equilibrium point. </p>
 
   <activity xml:id="A_nonequil">
     <title>Equal values may not be equilibria</title>
@@ -178,29 +178,29 @@
 
   <reading-questions>
       <title>Check Your Understanding</title>
-      <exercise label="IGT_EP_CYU_inequal1"><statement correct="yes"><p>True or False: If <m>a\lt b \lt c\lt d</m> then <m>a\lt d</m>.</p></statement><feedback><p>This is called the transitive property of inequalities.</p></feedback><answer>True.</answer>
+      <exercise label="IGT_EP_CYU_inequal1"><statement correct="yes"><p>True or False: If <m>a\lt b \lt c\lt d</m> then <m>a\lt d</m>.</p></statement><feedback><p>This is called the transitive property of inequalities.</p></feedback><answer><p>True.</p></answer>
       </exercise>
 
-       <exercise label="IGT_EP_CYU_inequal2"><statement correct="no"><p>True or False: If <m>a\lt b</m> then <m>-a\lt -d</m>.</p></statement><feedback><p>When we multiply by a negative, the direction of the inequality changes, so it should be <m>-d\lt -a</m></p></feedback><answer>False.</answer>
+       <exercise label="IGT_EP_CYU_inequal2"><statement correct="no"><p>True or False: If <m>a\lt b</m> then <m>-a\lt -d</m>.</p></statement><feedback><p>When we multiply by a negative, the direction of the inequality changes, so it should be <m>-d\lt -a</m></p></feedback><answer><p>False.</p></answer>
       </exercise>
 
-      <exercise label="IGT_EP_CYU_inequal3"><statement correct="yes"><p>True or False: If <m>a\lt b \lt c\lt d \lt a</m> then we have a contradiction.</p></statement><feedback><p>This inequality leads to <m>a \lt a</m> which cannot be true.</p></feedback><answer>True.</answer>
+      <exercise label="IGT_EP_CYU_inequal3"><statement correct="yes"><p>True or False: If <m>a\lt b \lt c\lt d \lt a</m> then we have a contradiction.</p></statement><feedback><p>This inequality leads to <m>a \lt a</m> which cannot be true.</p></feedback><answer><p>True.</p></answer>
       </exercise>
 
-       <exercise label="IGT_EP_CYU_equilequal"><statement correct="yes"><p>True or False: If <m>(a, -a)</m> and <m>(b, -b)</m> are two equilibria in a zero-sum game, then <m>a=b</m>.</p></statement><feedback><p>This is what <xref ref="T_STfZSG"></xref> tells us.</p></feedback><answer>True.</answer>
+       <exercise label="IGT_EP_CYU_equilequal"><statement correct="yes"><p>True or False: If <m>(a, -a)</m> and <m>(b, -b)</m> are two equilibria in a zero-sum game, then <m>a=b</m>.</p></statement><feedback><p>This is what <xref ref="T_STfZSG"></xref> tells us.</p></feedback><answer><p>True.</p></answer>
       </exercise>
 
-      <exercise label="IGT_EP_CYU_equilvalues"><statement correct="yes"><p>True or False: If <m>(3, -3)</m> is an equilibrium in a zero-sum game, then every equilibrium in the game has payoff vector <m>(3, -3)</m>.</p></statement><feedback><p>This is what <xref ref="T_STfZSG"></xref> tells us.</p></feedback><answer>True.</answer>
+      <exercise label="IGT_EP_CYU_equilvalues"><statement correct="yes"><p>True or False: If <m>(3, -3)</m> is an equilibrium in a zero-sum game, then every equilibrium in the game has payoff vector <m>(3, -3)</m>.</p></statement><feedback><p>This is what <xref ref="T_STfZSG"></xref> tells us.</p></feedback><answer><p>True.</p></answer>
       </exercise>
 
       <exercise label="IGT_EP_CYU_equilnonequil"><statement correct="no"><p>True or False: In the matrix 
-        <me>\left[\begin{matrix}(-2, 2)\amp (-1, 1)\\
+        <md>\left[\begin{matrix}(-2, 2)\amp (-1, 1)\\
             (-1, 1)\amp (2, -2)
-            \end{matrix} \right]</me>
-        both <m>(-1, 1)</m> payoff vectors are equilibria.</p></statement><feedback><p>Only the vector in Row 2, Column 1 is an equilibrium.</p></feedback><answer>False.</answer>
+            \end{matrix} \right]</md>
+        both <m>(-1, 1)</m> payoff vectors are equilibria.</p></statement><feedback><p>Only the vector in Row 2, Column 1 is an equilibrium.</p></feedback><answer><p>False.</p></answer>
       </exercise>
 
-      <exercise label="IGT_EP_CYU_equilmultple"><statement correct="no"><p>True or False: If <m>(3, -3)</m> is an equilibrium in a zero-sum game, then every payoff vector <m>(3, -3)</m> is a equilibrium.</p></statement><feedback><p>See <xref ref="A_nonequil"></xref>.</p></feedback><answer>False.</answer>
+      <exercise label="IGT_EP_CYU_equilmultple"><statement correct="no"><p>True or False: If <m>(3, -3)</m> is an equilibrium in a zero-sum game, then every payoff vector <m>(3, -3)</m> is an equilibrium.</p></statement><feedback><p>See <xref ref="A_nonequil"></xref>.</p></feedback><answer><p>False.</p></answer>
       </exercise>
     </reading-questions>
 </section>

@@ -239,7 +239,7 @@
   <activity xml:id="A_OCSMoreK"><title>One-Card Stud with more Kings</title>
 <introduction><p>Suppose you are playing the regular version of One-Card Stud Poker from <xref ref="E_onecardstud"></xref>, but now the deck contains 25% Aces and 75% Kings.</p></introduction>
 <task><statement><p>Do you think having fewer Aces would change your strategy? Why or why not?</p></statement></task>
-<task><statement><p>Does the number of Kings in the deck change the the payoff vector for [Bet, Fold] and [Fold, Bet]?</p></statement></task>
+<task><statement><p>Does the number of Kings in the deck change the payoff vector for [Bet, Fold] and [Fold, Bet]?</p></statement></task>
 <task><statement><p>Calculate the expected value for the [Bet, Bet] and [Fold, Fold] strategy pairs.</p></statement>
 <hint><p>To make this a little easier, assume the deck has infinitely many cards, so that the probability of a player being dealt an Ace doesn't change if the other player was dealt an Ace. In other words, each player has a probability of <m>.25</m> of being dealt an Ace. Now the probability of the deal Ace, Ace is <m>.25\times .25</m>.</p></hint></task>
 <task><statement><p>Give the payoff matrix for the game. How does it compare to the standard version of the game?</p></statement></task>
@@ -292,8 +292,8 @@
     </condition>
     </var>
   </setup>
-      <answer><m>0</m></answer></exercise>
-      <exercise label="IGT_OCS_CYU_OCSactual"><statement correct="no"><p>True or False: The actual payoff to a player in One-Card Stud Poker is the same as the expected payoff.</p></statement><feedback><p>In a game of chance the actual outcome is often different that the expected outcome. As the game is played more, the actual payoff approaches the expected payoff.</p></feedback><answer><p>False.</p></answer>
+      <answer><p><m>0</m></p></answer></exercise>
+      <exercise label="IGT_OCS_CYU_OCSactual"><statement correct="no"><p>True or False: The actual payoff to a player in One-Card Stud Poker is the same as the expected payoff.</p></statement><feedback><p>In a game of chance the actual outcome is often different than the expected outcome. As the game is played more, the actual payoff approaches the expected payoff.</p></feedback><answer><p>False.</p></answer>
       </exercise>
 
     </reading-questions>
