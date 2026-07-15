@@ -14,11 +14,11 @@
 
   <p>
     Let's continue to consider the game given in <xref ref="E_smallrepeat"></xref> by
-    <me>
+    <md>
       \left[\begin{matrix}1\amp 0\\
       -1\amp 2
       \end{matrix} \right].
-    </me>
+    </md>
   </p>
 
   <p>
@@ -79,9 +79,9 @@
       <p>
         Find the probability, <m>p</m>, and payoff, <m>m</m>, if Player 1 always plays A.</p>
 
-        <p>If Player 1 plays pure strategy A, then she never plays B. Thus the probability she plays B is 0. Hence,  <me>p=0.</me></p> 
+        <p>If Player 1 plays pure strategy A, then she never plays B. Thus the probability she plays B is 0. Hence,  <md>p=0.</md></p> 
 
-        <p>In the case where Player 1 plays A and Player 2 plays C, what is the payoff to Player 1? This is <m>m</m>, so <me>m=1.</me> </p>
+        <p>In the case where Player 1 plays A and Player 2 plays C, what is the payoff to Player 1? This is <m>m</m>, so <md>m=1.</md> </p>
 
         <p>Thus, for the strategy pair <m>[A, C]</m> we get <m>(p, m)=(0, 1)</m>. </p>
 
@@ -93,9 +93,9 @@
       <p>
         Find the probability (<m>p</m>) and payoff (<m>m</m>) if Player 1 always plays B.</p>
 
-        <p>If Player 1 plays pure strategy B, then what is the probability that she plays B? Since she always plays B, <me>p=1.</me></p>
+        <p>If Player 1 plays pure strategy B, then what is the probability that she plays B? Since she always plays B, <md>p=1.</md></p>
 
-        <p>In the case where Player 1 plays B and Player 2 plays C, what is the payoff to Player 1? <me>m=-1.</me> </p>
+        <p>In the case where Player 1 plays B and Player 2 plays C, what is the payoff to Player 1? <md>m=-1.</md> </p>
 
         <p>Thus, for the strategy pair <m>[B, C]</m> we get <m>(p, m)=(1, -1)</m>.
       </p></li>
@@ -103,7 +103,7 @@
     <li>
       <title>Step 1c. Player 1 varies her strategy</title>
       <p>
-        Now we want to know what Player 1's payoff will be as she varies the probability, <m>p</m>, with which she plays B. We can draw a graph where the <m>x</m>-axis represents to probability with which she plays B (<m>p</m>) and the <m>y</m>-axis represents the expected payoff (<m>m</m>). See <xref ref="F_MixedStrategyAxes"></xref>.
+        Now we want to know what Player 1's payoff will be as she varies the probability, <m>p</m>, with which she plays B. We can draw a graph where the <m>x</m>-axis represents the probability with which she plays B (<m>p</m>) and the <m>y</m>-axis represents the expected payoff (<m>m</m>). See <xref ref="F_MixedStrategyAxes"></xref>.
 
         <figure xml:id="F_MixedStrategyAxes">
           <caption> Labeled axes.</caption>
@@ -176,8 +176,8 @@
       <p>
         Find the probability, <m>p</m>,  and payoff, <m>m</m>, if Player 1 always plays A.</p>
 
-        <p>If Player 1 plays pure strategy A, then what is the probability that she plays B? <me>p=0.</me></p>
-        <p> What is the payoff to Player 1? <me>m=0.</me></p> 
+        <p>If Player 1 plays pure strategy A, then what is the probability that she plays B? <md>p=0.</md></p>
+        <p> What is the payoff to Player 1? <md>m=0.</md></p> 
 
         <p>Thus, for the strategy pair <m>[A, D]</m> we get <m>(p, m)=(0, 0)</m>.</p>
 
@@ -188,8 +188,8 @@
       <p>
         Find the probability, <m>p</m>, and payoff, <m>m</m>, if Player 1 always plays B.</p>
 
-        <p>If Player 1 plays pure strategy B, then what is the probability that she plays B? <me>p=1.</me></p>
-        <p>What is the payoff to Player 1? <me>m=2.</me></p>
+        <p>If Player 1 plays pure strategy B, then what is the probability that she plays B? <md>p=1.</md></p>
+        <p>What is the payoff to Player 1? <md>m=2.</md></p>
 
         <p>Thus, for the strategy pair <m>[B, D]</m> we get <m>(p, m)=(1, 2)</m>.
       </p></li>
@@ -352,13 +352,13 @@
     <li>
       <title>Step 3a. Find the equation for Line C</title>
       <p>
-         This is the line passing through the points <m>(0, 1)</m> and <m>(1, -1)</m>. It has slope <m>-2</m> and <m>y</m>-intercept 1. Thus, it has equation <me>y=-2x+1.</me> [Although the <m>x</m>-axis represents probability <m>p</m> and the <m>y</m>-axis represents expected payoff <m>m</m>, you are probably more comfortable solving equations<ndash />at least for the moment<ndash />in <m>x</m> and <m>y</m>.]
+         This is the line passing through the points <m>(0, 1)</m> and <m>(1, -1)</m>. It has slope <m>-2</m> and <m>y</m>-intercept 1. Thus, it has equation <md>y=-2x+1.</md> [Although the <m>x</m>-axis represents probability <m>p</m> and the <m>y</m>-axis represents expected payoff <m>m</m>, you are probably more comfortable solving equations<ndash />at least for the moment<ndash />in <m>x</m> and <m>y</m>.]
       </p></li>
 
     <li>
       <title>Step 3b. Find the equation for Line D</title>
       <p>
-        This is the line passing through the points <m>(0, 0)</m> and <m>(1, 2)</m>. It has slope <m>2</m> and <m>y</m>-intercept 0. Thus, it has equation <me>y=2x.</me>
+        This is the line passing through the points <m>(0, 0)</m> and <m>(1, 2)</m>. It has slope <m>2</m> and <m>y</m>-intercept 0. Thus, it has equation <md>y=2x.</md>
       </p></li>
 
     <li>
@@ -552,11 +552,11 @@
     <statement>
       <p>
         Convert the payoff matrix given by
-        <me>
+        <md>
       \left[\begin{matrix}1\amp 0\\
       -1\amp 2
       \end{matrix} \right]
-    </me>
+    </md>
      into the payoff matrix for Player 2. Find the maximin strategy for Player 2 using the graphical method. Be sure to include a sketch of the graph (labeled!!), the equations for the lines, the probability that Player 2 will play <m>C</m> and <m>D</m>, and the expected payoff for Player 2.
       </p>
     </statement>
@@ -590,11 +590,11 @@
   </activity>
 
   <p>Before trying to solve more games, work through the following interactive activity using the same game matrix as above:
-    <me>
+    <md>
       \left[\begin{matrix}1\amp 0\\
       -1\amp 2
       \end{matrix} \right]
-    </me>. You can then use this same activity to help you solve other <m>2\times 2</m> games. Make sure you check for a pure strategy equilibria <emph>before</emph> trying to find mixed strategies!</p>
+    </md>. You can then use this same activity to help you solve other <m>2\times 2</m> games. Make sure you check for a pure strategy equilibria <emph>before</emph> trying to find mixed strategies!</p>
 
 
 
@@ -640,7 +640,7 @@
           </p></statement></task>
 
         <task><statement><p>
-            Use you graph to determine if there is a mixed strategy equilibrium point. If there is, how often should Player 1 play each strategy? What is the expected payoff to each player?
+            Use your graph to determine if there is a mixed strategy equilibrium point. If there is, how often should Player 1 play each strategy? What is the expected payoff to each player?
           </p></statement></task>
 
         <task><statement><p>
@@ -670,7 +670,7 @@
           </p></statement></task>
 
         <task><statement><p>
-            Use you graph to determine if there is a mixed strategy equilibrium point. If there is, how often should Player 1 play each strategy? What is the expected payoff to each player?
+            Use your graph to determine if there is a mixed strategy equilibrium point. If there is, how often should Player 1 play each strategy? What is the expected payoff to each player?
           </p></statement></task>
 
         <task><statement><p>
@@ -705,7 +705,7 @@
       </row>
     </tabular>
   </table>
-    has a pure strategy equilibrium.</p></statement><answer>False.</answer></exercise>
+    has a pure strategy equilibrium.</p></statement><answer><p>False.</p></answer></exercise>
 
       <exercise label="IGT_MSG_CYU_findpandmC"><statement><p>Consider the zero-sum game given by
        <xref ref="T_exergame1"></xref>. Let <m>p</m> be the probability that Player 1 plays B and <m>m</m> be the payoff to Player 1.
@@ -790,7 +790,7 @@
     </condition>
     </var>
   </setup>
-      <answer><m>p=0, m=2</m>; <m>p=1, m=-3</m></answer></exercise>
+      <answer><p><m>p=0, m=2</m>; <m>p=1, m=-3</m></p></answer></exercise>
 
       <exercise label="IGT_MSG_CYU_findpandmD"><statement><p>Consider the zero-sum game given by
        <xref ref="T_exergame1"></xref>. Let <m>p</m> be the probability that Player 1 plays B and <m>m</m> be the payoff to Player 1.
@@ -875,9 +875,9 @@
     </condition>
     </var>
   </setup>
-      <answer><m>p=0, m=-1</m>; <m>p=1, m=4</m></answer></exercise>
+      <answer><p><m>p=0, m=-1</m>; <m>p=1, m=4</m></p></answer></exercise>
 
-      <exercise label="IGT_MSG_CYU_findlineC"><statement><p>The line between to points <m>(0, 2)</m> and <m>(1, -3)</m>
+      <exercise label="IGT_MSG_CYU_findlineC"><statement><p>The line between two points <m>(0, 2)</m> and <m>(1, -3)</m>
     has slope <var width="3" /> and <m>y</m> intercept <var width="3" />.</p></statement>
       
       <setup>
@@ -920,7 +920,7 @@
     </condition>
     </var></setup><answer><p>slope= <m>-5</m>, intercept=<m>2</m></p></answer></exercise>
 
-    <exercise label="IGT_MSG_CYU_findlineD"><statement><p>The line between to points <m>(0, -1)</m> and <m>(1, 4)</m>
+    <exercise label="IGT_MSG_CYU_findlineD"><statement><p>The line between two points <m>(0, -1)</m> and <m>(1, 4)</m>
     has slope <var width="3" /> and <m>y</m> intercept <var width="3" />.</p></statement>
       
       <setup>
@@ -1018,7 +1018,7 @@
     </condition>
     </var>
   </setup>
-      <answer><m>x=0.3, y=0.5</m></answer></exercise>
+      <answer><p><m>x=0.3, y=0.5</m></p></answer></exercise>
 
       <exercise label="IGT_MSG_CYU_mixedstrat"><statement><p>Consider the zero-sum game given by
        <xref ref="T_exergame1"></xref>. Player 1 should play the mixed strategy </p></statement>
@@ -1027,7 +1027,7 @@
          <choice correct="yes"><statement><m>(0.7, 0.3).</m></statement><feedback><p>Correct. Player 1 should play A with a probability of <m>0.7</m> and B with a probability of <m>0.3</m>.</p></feedback></choice>
          <choice><statement><m>(0.5, 0.5).</m></statement><feedback><p>Remember <m>y</m> in the intersection point is the payoff to Player 1, not the probability.</p></feedback></choice>
          <choice><statement><m>(0.3, 0.5).</m></statement><feedback><p>This is the intersection point, not the mixed strategy.</p></feedback></choice>
-       </choices><hint><p>The work in the previous exercises will help answer this question.</p></hint><answer><m>(0.7, 0.3)</m></answer></exercise>
+       </choices><hint><p>The work in the previous exercises will help answer this question.</p></hint><answer><p><m>(0.7, 0.3)</m></p></answer></exercise>
 
        <exercise label="IGT_MSG_CYU_exppayoff"><statement><p>Consider the repeated zero-sum game given by
        <xref ref="T_exergame1"></xref>. If Player 1 plays the maximin mixed strategy, her expected payoff is </p></statement>
@@ -1035,7 +1035,7 @@
          <choice><statement><m>0.3.</m></statement><feedback><p>Remember <m>x</m> in the intersection point is the probability that Player 1 plays B.</p></feedback></choice>
          <choice correct="yes"><statement><m>0.5.</m></statement><feedback><p>Correct. The <m>y</m> in the intersection point is the payoff to Player 1.</p></feedback></choice>
          <choice><statement><p>It depends on what Player 2 plays.</p></statement><feedback><p>The maximin strategy gives the same expected payoff no matter what Player 2 does.</p></feedback></choice>
-       </choices><hint><p>The work in the previous exercises will help answer this question.</p></hint><answer><m>0.5</m></answer></exercise>
+       </choices><hint><p>The work in the previous exercises will help answer this question.</p></hint><answer><p><m>0.5</m></p></answer></exercise>
 
        <exercise label="IGT_MSG_CYU_fair"><statement><p>Is the game in <xref ref="T_exergame1" ></xref> fair?</p></statement>
        <choices randomize="no">

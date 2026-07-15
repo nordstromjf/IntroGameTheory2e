@@ -164,7 +164,7 @@
       </p>
     </statement>
   </activity>
-  <p>Can you use a similar process to find Player 1's strategy? Whose expected values should you use? Whose probabliities?
+  <p>Can you use a similar process to find Player 1's strategy? Whose expected values should you use? Whose probabilities?
   </p>
   <activity xml:id="A_mpP1sol">
     <title>Find Player 1's probabilities</title>
@@ -201,11 +201,11 @@
     <statement>
       <p>
         Apply the method of using expected value to the game in <xref ref="E_smallrepeat"></xref> to find the equilibrium mixed strategies for each player and the value of the game for each player:
-        <me>
+        <md>
           \left[\begin{matrix}1\amp 0\\
           -1\amp 2
           \end{matrix} \right].
-        </me>
+        </md>
         Note, we solved this game using the graphical method in <xref ref="S_MixStratGraph"></xref>, so you can compare your answer.
       </p>
     </statement>
@@ -245,7 +245,7 @@
       </row>
     </tabular>
   </table>
-    has a pure strategy equilibrium.</p></statement><answer>False</answer></exercise>
+    has a pure strategy equilibrium.</p></statement><answer><p>False.</p></answer></exercise>
 
      <exercise label="IGT_MSEV_CYU_findE1A5050"><statement><p>Consider the zero-sum game given by
        <xref ref="T_exergameEV"></xref>. Suppose Player 2 plays the C 50% of the time and D 50% of the time. We can call this the <m>(1/2, 1/2)</m> strategy. What is <m>E_1(A)</m>? <var width="3"/> 
@@ -288,7 +288,7 @@
     </var>
     
   </setup>
-      <answer><m>E_1(A)=(1/2)(1)+(1/2)(-3)=-1</m></answer></exercise>
+      <answer><p><m>E_1(A)=(1/2)(1)+(1/2)(-3)=-1</m></p></answer></exercise>
 
   <exercise label="IGT_MSEV_CYU_findE1B5050"><statement><p>Consider the zero-sum game given by
        <xref ref="T_exergameEV"></xref>. Suppose Player 2 plays the C 50% of the time and D 50% of the time. We can call this the  <m>(1/2, 1/2)</m> strategy. What is <m>E_1(B)</m>? <var width="3"/> 
@@ -331,7 +331,7 @@
     </var>
     
   </setup>
-      <answer><m>E_1(A)=(1/2)(-4)+(1/2)(2)=-1</m></answer></exercise>
+      <answer><p><m>E_1(A)=(1/2)(-4)+(1/2)(2)=-1</m></p></answer></exercise>
 
     <exercise label="IGT_MSEV_CYU_AorB5050"><statement><p>Suppose Player 2 plays the <m>(1/2, 1/2)</m> strategy in  <xref ref="T_exergameEV"></xref>, then which pure strategy does Player 1 prefer?</p></statement> 
     <choices randomize="no">
@@ -374,7 +374,7 @@
     </var>
     
   </setup>
-      <answer><m>E_1(A)=(1/4)(1)+(3/4)(-3)=-2</m></answer></exercise>
+      <answer><p><m>E_1(A)=(1/4)(1)+(3/4)(-3)=-2</m></p></answer></exercise>
 
   <exercise label="IGT_MSEV_CYU_findE1B2575"><statement><p>Consider the zero-sum game given by
        <xref ref="T_exergameEV"></xref>. Suppose Player 2 plays C 25% of the time and D 75% of the time. We can call this the <m>(0.25, 0.75)</m> or <m>(1/4, 3/4)</m> strategy. What is <m>E_1(B)</m>? <var width="3"/> 
@@ -411,14 +411,14 @@
     </var>
     
   </setup>
-      <answer><m>E_1(A)=(1/4)(-4)+(3/4)(2)=0.5</m></answer></exercise>
+      <answer><p><m>E_1(A)=(1/4)(-4)+(3/4)(2)=0.5</m></p></answer></exercise>
 
     <exercise label="IGT_MSEV_CYU_AorB2575"><statement><p>If Player 2 plays the <m>(1/4, 3/4)</m> strategy in  <xref ref="T_exergameEV"></xref>, then which pure strategy does Player 1 prefer?</p></statement> 
     <choices randomize="no">
       <choice><statement><p>Playing A</p></statement><feedback><p>Use the expected values of each pure strategy to help you.</p></feedback></choice>
       <choice correct="yes"><statement><p>Playing B</p></statement><feedback><p>Since the expected value for Player 1 is greater for B than A, Player 1 prefers B.</p></feedback></choice>
       <choice ><statement><p>Neither, Player 1 is indifferent to playing A or B.</p></statement><feedback><p>Use the expected values of each pure strategy to help you.</p></feedback></choice>
-    </choices><answer>Playing B</answer></exercise> 
+    </choices><answer><p>Playing B</p></answer></exercise> 
 
     <exercise label="IGT_MSEV_CYU_findE17525"><statement><p>Consider the zero-sum game given by
        <xref ref="T_exergameEV"></xref>. Suppose Player 2 plays the <m>(3/4, 1/4)</m> strategy.</p>
@@ -470,7 +470,7 @@
     </var>
     
   </setup>
-      <answer><m>E_1(A)=0, E_1(B)=-2.5</m></answer></exercise>
+      <answer><p><m>E_1(A)=0, E_1(B)=-2.5</m></p></answer></exercise>
 
     <exercise label="IGT_MSEV_CYU_AorB7525"><statement><p>If Player 2 plays the <m>(3/4, 1/4)</m> strategy in  <xref ref="T_exergameEV"></xref>, then which pure strategy does Player 1 prefer?</p></statement> 
     <choices randomize="no">

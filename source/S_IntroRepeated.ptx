@@ -10,11 +10,11 @@
     <introduction>
       <p>
         Consider the following zero-sum game
-        <me>
+        <md>
           \left[\begin{matrix}1\amp 0\\
           -1\amp 2
           \end{matrix} \right].
-        </me>
+        </md>
       </p></introduction>
 
       <task><statement><p>
@@ -71,11 +71,11 @@
     <statement>
       <p>
         Consider the following zero-sum game
-        <me>
+        <md>
           \left[\begin{matrix}-1\amp 1\\
           0\amp 2
           \end{matrix} \right].
-        </me>
+        </md>
       </p>
 
       <p>
@@ -199,11 +199,11 @@
     <statement>
       <p>
         Now consider the matrix from <xref ref="E_smallrepeat"></xref>:
-        <me>
+        <md>
           \left[\begin{matrix}1\amp 0\\
           -1\amp 2
           \end{matrix} \right].
-        </me>
+        </md>
       </p>
 
       <p>
@@ -217,30 +217,30 @@
       <title>Check Your Understanding</title>
       
       <exercise label="IGT_IRG_CYU_RPSpure"><statement correct="no"><p>True or False: In Rock-Paper-Scissors, the best strategy is to always play Rock.
-      </p></statement><feedback><p>If a player always plays Rock, then the opponent can always play Paper.</p></feedback><answer>False.</answer></exercise>
+      </p></statement><feedback><p>If a player always plays Rock, then the opponent can always play Paper.</p></feedback><answer><p>False.</p></answer></exercise>
 
       <exercise label="IGT_IRG_CYU_RPSmorerock"><statement correct="no"><p>True or False: In Rock-Paper-Scissors, the best strategy is to play Rock more often than Paper or Scissors.
-      </p></statement><feedback><p>If a player plays Rock more often, then the opponent can play Paper more often.</p></feedback><answer>False.</answer></exercise>
+      </p></statement><feedback><p>If a player plays Rock more often, then the opponent can play Paper more often.</p></feedback><answer><p>False.</p></answer></exercise>
 
       <exercise label="IGT_IRG_CYU_RPSrps"><statement correct="no"><p>True or False: In Rock-Paper-Scissors, the best strategy is to play Rock, then Paper, then Scissors.
-      </p></statement><feedback><p>If a player always plays Rock, then Paper, then Scissors, then the opponent can play Paper, then Scissors, then Rock.</p></feedback><answer>False.</answer></exercise>
+      </p></statement><feedback><p>If a player always plays Rock, then Paper, then Scissors, then the opponent can play Paper, then Scissors, then Rock.</p></feedback><answer><p>False.</p></answer></exercise>
 
       <exercise label="IGT_IRG_CYU_equil1"><statement correct="no"><p>True or False: The following game has an equilibrium
-         <me>
+         <md>
                 \left[\begin{matrix}
                 (10, -10)\amp (-10, 10)\\
                 (-20, 20) \amp  (0, 0)
                 \end{matrix}\right].\hspace{.5in}
-              </me>
-      </p></statement><feedback><p>For each outcome, at least one player wants to switch.</p></feedback><answer>False.</answer></exercise>
+              </md>
+      </p></statement><feedback><p>For each outcome, at least one player wants to switch.</p></feedback><answer><p>False.</p></answer></exercise>
 
       <exercise label="IGT_IRG_CYU_strat1P1"><statement><p>Suppose the following game is played repeatedly 
-         <me>
+         <md>
                 \left[\begin{matrix}
                 (10, -10)\amp (-10, 10)\\
                 (-20, 20) \amp  (0, 0)
                 \end{matrix}\right].\hspace{.5in}
-              </me>
+              </md>
               Player 1 should play
       </p></statement>
       <choices randomize="no">
@@ -254,12 +254,12 @@
       <answer><p>A mixed strategy, varying Row 1 and Row 2.</p></answer></exercise>
 
       <exercise label="IGT_IRG_CYU_strat1P2"><statement><p>Suppose the following game is played repeatedly 
-         <me>
+         <md>
                 \left[\begin{matrix}
                 (10, -10)\amp (-10, 10)\\
                 (-20, 20) \amp  (0, 0)
                 \end{matrix}\right].\hspace{.5in}
-              </me>
+              </md>
               Player 2 should play
       </p></statement>
       <choices randomize="no">
@@ -273,21 +273,21 @@
       <answer><p>A mixed strategy, varying Column 1 and Column 2.</p></answer></exercise>
 
       <exercise label="IGT_IRG_CYU_equil2"><statement correct="yes"><p>True or False: The following game has an equilibrium
-         <me>
+         <md>
                 \left[\begin{matrix}
                 (10, -10)\amp (0, 0)\\
                 (-20, 20) \amp  (-1, 1)
                 \end{matrix}\right].\hspace{.5in}
-              </me>
-      </p></statement><feedback><p><m>(0, 0)</m> is an equilibruim.</p></feedback><answer>True.</answer></exercise>
+              </md>
+      </p></statement><feedback><p><m>(0, 0)</m> is an equilibrium.</p></feedback><answer><p>True.</p></answer></exercise>
 
       <exercise label="IGT_IRG_CYU_strat2P1"><statement><p>Suppose the following game is played repeatedly 
-         <me>
+         <md>
                 \left[\begin{matrix}
                 (10, -10)\amp (0, 0)\\
                 (-20, 20) \amp  (-1, 1)
                 \end{matrix}\right].\hspace{.5in}
-              </me>
+              </md>
               Player 1 should play
       </p></statement>
       <choices randomize="no">
@@ -301,12 +301,12 @@
       <answer><p>Pure strategy Row 1.</p></answer></exercise>
 
       <exercise label="IGT_IRG_CYU_strat2P2"><statement><p>Suppose the following game is played repeatedly 
-         <me>
+         <md>
                 \left[\begin{matrix}
                 (10, -10)\amp (0, 0)\\
                 (-20, 20) \amp  (-1, 1)
                 \end{matrix}\right].\hspace{.5in}
-              </me>
+              </md>
               Player 2 should play
       </p></statement>
       <choices randomize="no">
@@ -320,9 +320,9 @@
       <answer><p>Pure strategy Column 2.</p></answer></exercise>
 
       <exercise label="IGT_IRG_CYU_equilpure"><statement correct="yes"><p>True or False: If a repeated game has an equilibrium, then the players should play a pure strategy.
-      </p></statement><feedback><p>If there is an equilibrium, there is no reason for the players to switch strategies.</p></feedback><answer>True.</answer></exercise>
+      </p></statement><feedback><p>If there is an equilibrium, there is no reason for the players to switch strategies.</p></feedback><answer><p>True.</p></answer></exercise>
 
       <exercise label="IGT_IRG_CYU_pattern"><statement correct="no"><p>True or False: In a repeated game with no equilibrium, it is better to play a mixed strategy with a predictable pattern. 
-      </p></statement><feedback><p>If a player is predictable, we can assume the opponent will guess the pattern.</p></feedback><answer>False.</answer></exercise>
+      </p></statement><feedback><p>If a player is predictable, we can assume the opponent will guess the pattern.</p></feedback><answer><p>False.</p></answer></exercise>
     </reading-questions>
 </section>

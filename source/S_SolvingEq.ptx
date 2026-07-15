@@ -75,7 +75,7 @@
     <li>
       <title>Step 1c. Player 1 varies her strategy</title>
       <p>
-        Now we want to know what Player 1's payoff will be as she varies the probability, <m>p</m>, with which she plays <m>B</m>. We can draw a graph where the <m>x</m>-axis represents to probability with which she plays B (<m>p</m>) and the <m>y</m>-axis represents the expected payoff (<m>m</m>). 
+        Now we want to know what Player 1's payoff will be as she varies the probability, <m>p</m>, with which she plays <m>B</m>. We can draw a graph where the <m>x</m>-axis represents the probability with which she plays B (<m>p</m>) and the <m>y</m>-axis represents the expected payoff (<m>m</m>). 
         Thus, when Player 1 plays only <m>A</m>, she is playing <m>B</m> with probability 0; when Player 1 plays only B, she is playing B with probability 1. It might be easier to remember if you label your graph as in <xref ref="F_MixedStrategyAxes"></xref>.
       </p></li>
 
@@ -211,11 +211,11 @@
 
   <p>
     We have seen that we can use the same matrix with Player 1's payoffs to find the strategy for Player 2. Using the same game matrix as above:
-    <me>
+    <md>
       \left[\begin{matrix}1\amp 0\\
       -1\amp 2
       \end{matrix} \right],
-    </me>
+    </md>
     and continuing to label Player 1's strategies by <m>A</m> and <m>B</m>, and Player 2's strategies by <m>C</m> and <m>D</m>, we can graph lines for Player 1's pure strategies <m>A</m> and <m>B</m>. We now let the <m>x</m>-axis represent the probability that Player 2 plays <m>D</m>. In the <pubtitle>Sage</pubtitle> applet below, for <m>AC</m> and <m>AD</m> enter the coordinates of two points that determine the line for when Player 1 plays <m>A</m>, then the two points for <m>BC</m> and <m>BD</m> that determine the line for when Player 1 plays <m>B</m>. We will then have <pubtitle>Sage</pubtitle> graph the lines. You can enter new values for <m>AC, AD, BC,</m> and <m>BD</m> if you would like to draw the graph for a different matrix.
   </p>
 
@@ -385,7 +385,7 @@
       </row>
     </tabular>
   </table>
-    has a pure strategy equilibrium.</p></statement><answer>False.</answer></exercise>
+    has a pure strategy equilibrium.</p></statement><answer><p>False.</p></answer></exercise>
 
      <exercise label="IGT_SE_CYU_pointsC"><statement><p>Consider the zero-sum game given by
        <xref ref="T_exergame2"></xref>. If we are finding Player 1's mixed strategy, which two points are on the line for Player 2's pure strategy C?</p></statement>
@@ -398,7 +398,7 @@
          <choice ><statement><m>(0, 1)</m></statement><feedback><p>Check the probability with which Player 1 is playing B.</p></feedback></choice>
          <choice><statement><m>(1, -2)</m></statement><feedback><p>Player 2 is playing C, not D.</p></feedback></choice>
          <choice><statement><m>(0, 3)</m></statement><feedback><p>Player 2 is playing C, not D.</p></feedback></choice>
-       </choices><answer><m>(0, 5), (1, 1)</m></answer></exercise>
+       </choices><answer><p><m>(0, 5), (1, 1)</m></p></answer></exercise>
 
        <exercise label="IGT_SE_CYU_pointsD"><statement><p>Consider the zero-sum game given by
        <xref ref="T_exergame2"></xref>. If we are finding Player 1's mixed strategy, which two points are on the line for Player 2's pure strategy D?</p></statement>
@@ -411,7 +411,7 @@
          <choice ><statement><m>(0, 1)</m></statement><feedback><p>Player 2 is playing D, not C.</p></feedback></choice>
          <choice><statement><m>(1, -2)</m></statement><feedback><p>Check the probability with which Player 1 is playing A.</p></feedback></choice>
          <choice><statement><m>(0, 3)</m></statement><feedback><p>Check the probability with which Player 1 is playing B.</p></feedback></choice>
-       </choices><answer><m>(0, -2), (1, 3)</m></answer></exercise>
+       </choices><answer><p><m>(0, -2), (1, 3)</m></p></answer></exercise>
 
        <exercise label="IGT_SE_CYU_findlineC"><statement><p>The line between the points <m>(0, 5)</m> and <m>(1, 1)</m>
     has slope <var width="3" /> and <m>y</m> intercept <var width="3" />.</p></statement>
@@ -499,9 +499,9 @@
     </condition>
     </var></setup><answer><p>slope= <m>5</m>, intercept=<m>-2</m></p></answer></exercise>
 
-    <exercise label="IGT_SE_CYU_pneg"><statement correct="no"><p>True or False: When finding the mixed strategy, it is possible that <m>p</m> is negative.</p></statement><feedback><p>Remember, <m>p</m> is a probabilty. What is the smallest a probability can be?</p></feedback></exercise>
+    <exercise label="IGT_SE_CYU_pneg"><statement correct="no"><p>True or False: When finding the mixed strategy, it is possible that <m>p</m> is negative.</p></statement><feedback><p>Remember, <m>p</m> is a probability. What is the smallest a probability can be?</p></feedback></exercise>
 
-    <exercise label="IGT_SE_CYU_pgt1"><statement correct="no"><p>True or False: When finding the mixed strategy, it is possible that <m>p</m> is greater than 1.</p></statement><feedback><p>Remember, <m>p</m> is a probabilty. What is the largest a probability can be?</p></feedback><answer>False.</answer></exercise>
+    <exercise label="IGT_SE_CYU_pgt1"><statement correct="no"><p>True or False: When finding the mixed strategy, it is possible that <m>p</m> is greater than 1.</p></statement><feedback><p>Remember, <m>p</m> is a probability. What is the largest a probability can be?</p></feedback><answer><p>False.</p></answer></exercise>
 
     <exercise label="IGT_SE_CYU_mixedstrat"><statement><p>Consider the zero-sum game given by
        <xref ref="T_exergame2"></xref>. Find the mixed strategy for Player 1. </p></statement>
@@ -509,7 +509,7 @@
          <choice><statement><m>(7/9, 2/9)</m></statement><feedback><p>Remember <m>x</m> in the intersection point is the probability that Player 1 plays B.</p></feedback></choice>
          <choice correct="yes"><statement><m>(2/9, 7/9)</m></statement><feedback><p>Correct. Player 1 should play A with a probability of <m>2/9</m> and B with a probability of <m>7/9</m>.</p></feedback></choice>
          <choice><statement><m>(2/9, 17/9)</m></statement><feedback><p>This is the intersection point, not the mixed strategy.</p></feedback></choice>
-       </choices><answer><m>(2/9, 7/9)</m></answer></exercise>
+       </choices><answer><p><m>(2/9, 7/9)</m></p></answer></exercise>
 
        <exercise label="IGT_SE_CYU_exppayoff"><statement><p>Consider the repeated zero-sum game given by
        <xref ref="T_exergame2"></xref>. If Player 1 plays the maximin mixed strategy, her expected payoff is </p></statement>
@@ -517,7 +517,7 @@
          <choice><statement><m>7/9</m></statement><feedback><p>Remember <m>x</m> in the intersection point is the probability that Player 1 plays B.</p></feedback></choice>
          <choice correct="yes"><statement><m>17/9</m></statement><feedback><p>Correct. The <m>y</m> in the intersection point is the payoff to Player 1.</p></feedback></choice>
          <choice><statement><p>It depends on what Player 2 plays.</p></statement><feedback><p>The maximin strategy gives the same expected payoff no matter what Player 2 does.</p></feedback></choice>
-       </choices><answer><m>17/9</m></answer></exercise>
+       </choices><answer><p><m>17/9</m></p></answer></exercise>
 
        <exercise label="IGT_SE_CYU_fair"><statement><p>Is the game in <xref ref="T_exergame2" ></xref> fair?</p></statement>
        <choices randomize="no">
@@ -547,7 +547,7 @@
       </row>
     </tabular>
   </table></p>
-  <p> Player 1 should play A with a probability of <var width="3" /> and B with a probabilty of <var width="3" />. The expected payoff to Player 1 is <var width="3" />.</p></statement>
+  <p> Player 1 should play A with a probability of <var width="3" /> and B with a probability of <var width="3" />. The expected payoff to Player 1 is <var width="3" />.</p></statement>
       
       <setup>
     <var>
@@ -609,7 +609,7 @@
     <exercise label="IGT_SE_CYU_fullP2game2"><statement><p>Find the mixed strategy for <alert>Player 2</alert> for the game in 
 
         <xref ref="T_exergame2"></xref>.</p>
-  <p> Player 2 should play C with a probability of <var width="3" /> and D with a probabilty of <var width="3" />. The expected payoff to Player 2 is <var width="4" />. (Use 3 decimal places if necessary.)</p></statement>
+  <p> Player 2 should play C with a probability of <var width="3" /> and D with a probability of <var width="3" />. The expected payoff to Player 2 is <var width="4" />. (Use 3 decimal places if necessary.)</p></statement>
       
       <setup>
     <var>

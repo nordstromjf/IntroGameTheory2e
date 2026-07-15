@@ -182,7 +182,7 @@
       <choice><statement><m>(-1/2, 1/2).</m></statement></choice>
       <choice><statement><m>(-1/4, 1/4).</m></statement></choice>
       <choice><statement><m>(1/4, -1/4).</m></statement></choice>
-    </choices><answer><m>(1/2, -1/2)</m></answer>
+    </choices><answer><p><m>(1/2, -1/2)</m></p></answer>
   </exercise>
 
 <exercise label="IGT_LP_CYU_prefPlayer">
@@ -195,19 +195,19 @@
   </exercise>
 
  <exercise label="IGT_LP_CYU_LPP1B"><statement correct="no"><p>True or False: In the game of Liar's Poker, Player 1 should always bluff (B).
-    </p></statement><feedback><p>The payoff matrix is helpful.</p></feedback><answer>False</answer></exercise>
+    </p></statement><feedback><p>The payoff matrix is helpful.</p></feedback><answer><p>False.</p></answer></exercise>
 
     <exercise label="IGT_LP_CYU_LPP2C"><statement correct="no"><p>True or False: In the game of Liar's Poker, Player 2 should always call (C).
-    </p></statement><feedback><p>The payoff matrix is helpful.</p></feedback><answer>False</answer></exercise>
+    </p></statement><feedback><p>The payoff matrix is helpful.</p></feedback><answer><p>False.</p></answer></exercise>
 
     <exercise label="IGT_LP_CYU_LPP1moreT"><statement correct="yes"><p>True or False: In the game of Liar's Poker, Player 1 should tell the truth (T) more often than bluff (B).
-    </p></statement><feedback><p>The equilibrium mixed strategy from <xref ref="A_LPmixedequil"></xref> is helpful.</p></feedback><answer>True</answer></exercise>
+    </p></statement><feedback><p>The equilibrium mixed strategy from <xref ref="A_LPmixedequil"></xref> is helpful.</p></feedback><answer><p>True.</p></answer></exercise>
 
     <exercise label="IGT_LP_CYU_LPP2moreF"><statement correct="yes"><p>True or False: In the game of Liar's Poker, Player 2 should fold (F) more often than call (C).
-    </p></statement><feedback><p>The equilibrium mixed strategy from <xref ref="A_LPmixedequil"></xref> is helpful.</p></feedback><answer>True</answer></exercise>
+    </p></statement><feedback><p>The equilibrium mixed strategy from <xref ref="A_LPmixedequil"></xref> is helpful.</p></feedback><answer><p>True.</p></answer></exercise>
 
     <exercise label="IGT_LP_CYU_LPfair"><statement correct="no"><p>True or False: Liar's Poker is a fair game.
-    </p></statement><feedback><p>The expected payoff from <xref ref="A_LPexpectedvalue"></xref> is helpful.</p></feedback><answer>False</answer></exercise>
+    </p></statement><feedback><p>The expected payoff from <xref ref="A_LPexpectedvalue"></xref> is helpful.</p></feedback><answer><p>False.</p></answer></exercise>
 
     <exercise label="IGT_LP_CYU_findE15050"><statement><p>In Liar's Poker, suppose Player 2 calls (C) 50% of the time and folds (F) 50% of the time.</p>
        <p> What is the expected payoff to Player 1 for bluffing, <m>E_1(B)</m>? <var width="4"/></p>
@@ -258,7 +258,7 @@
     </var>
     
   </setup>
-      <answer><m>E_1(B)=0.25, E_1(T)=0.375</m></answer></exercise>
+      <answer><p><m>E_1(B)=0.25, E_1(T)=0.375</m></p></answer></exercise>
 
     <exercise label="IGT_LP_CYU_BorT5050"><statement><p>If Player 2 plays the <m>(1/2, 1/2)</m> mixed strategy in  Liar's Poker, then which pure strategy does Player 1 prefer?</p></statement> 
     <choices randomize="no">
@@ -270,10 +270,10 @@
     </choices><answer><p>Telling the truth (T)</p></answer></exercise> 
 
     <exercise label="IGT_LP_CYU_LPonce"><statement correct="no"><p>True or False: If Liar's Poker is played once (not repeated), Player 1 will win.
-    </p></statement><feedback><p>Although the expected payoff is positive, we don't know what will happen for any one time the game is played.</p></feedback><answer>False.</answer></exercise>
+    </p></statement><feedback><p>Although the expected payoff is positive, we don't know what will happen for any one time the game is played.</p></feedback><answer><p>False.</p></answer></exercise>
 
     <exercise label="IGT_LP_CYU_LPtentimes"><statement correct="yes"><p>True or False: If Liar's Poker is played 10 times with Player 1 playing the mixed strategy equilibrium, then Player 1 expects to have a positive payoff.
-    </p></statement><feedback><p>Since the expected payoff is positive for the mixed strategy equilibrium, Player 1 expects a positive payoff in the long run.</p></feedback><answer>True.</answer></exercise>
+    </p></statement><feedback><p>Since the expected payoff is positive for the mixed strategy equilibrium, Player 1 expects a positive payoff in the long run.</p></feedback><answer><p>True.</p></answer></exercise>
 
   </reading-questions>
 </section>
