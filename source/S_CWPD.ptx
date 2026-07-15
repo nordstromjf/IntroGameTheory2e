@@ -195,7 +195,7 @@
         <choice ><statement><m>(3, 5)</m></statement><feedback><p>See <xref ref="A_CWPDmatrix"></xref>.</p></feedback></choice>
         <choice ><statement><m>(3, 1)</m></statement><feedback><p>See <xref ref="A_CWPDmatrix"></xref>.</p></feedback></choice>
        
-      </choices><answer>(0, 5)</answer></exercise>
+      </choices><answer><p><m>(0, 5)</m></p></answer></exercise>
 
       <exercise label="IGT_CWPD_CYU_multiPDDef"><statement><p>In Class-Wide Prisoner's Dilemma every player was playing a two-person Prisoner's Dilemma with every other player. If you think most of the class will defect, then you should
     </p>
@@ -204,7 +204,7 @@
         <choice ><statement><p>Cooperate</p></statement><feedback><p>Cooperators get 0 against every defector, so it is probably better to defect and get 1.</p></feedback></choice>
         <choice correct="yes"><statement><p>Defect</p></statement><feedback><p>Correct. Since it is better to defect against a defector.</p></feedback></choice>
        
-      </choices><answer>Defect</answer></exercise>
+      </choices><answer><p>Defect.</p></answer></exercise>
 
       <exercise label="IGT_CWPD_CYU_multiPDCoop"><statement><p>In Class-Wide Prisoner's Dilemma every player was playing a two-person Prisoner's Dilemma with every other player. If you think most of the class will cooperate, then you should
     </p>
@@ -213,7 +213,7 @@
         <choice ><statement><p>Cooperate</p></statement><feedback><p>Although cooperators get 3 against other cooperators, a defector will get 5 against each of the cooperators.</p></feedback></choice>
         <choice correct="yes"><statement><p>Defect</p></statement><feedback><p>Correct. Since it is better to defect against a cooperator.</p></feedback></choice>
        
-      </choices><answer>Defect</answer></exercise>
+      </choices><answer><p>Defect.</p></answer></exercise>
 
       <exercise label="IGT_CWPD_CYU_increaseC"><statement><p>Consider the following Cooperate-Defect game where we can vary the value for <m>a</m>.
     <table xml:id="T_PDvaryC" >
@@ -242,7 +242,7 @@
         <choice correct="yes"><statement><p>increase</p></statement><feedback><p>The greater the payoff for cooperating, the more incentive the players have to cooperate.</p></feedback></choice>
         <choice ><statement><p>decrease</p></statement><feedback><p>Think about the incentives for cooperating vs. defecting.</p></feedback></choice>
         <choice ><statement><p>don't change</p></statement><feedback><p>Think about the incentives for cooperating vs. defecting.</p></feedback></choice>
-      </choices><answer>increase</answer></exercise>
+      </choices><answer><p>increase</p></answer></exercise>
 
       <exercise label="IGT_CWPD_CYU_increaseR"><statement><p>Consider the following Cooperate-Defect game where we can vary the value for <m>a</m>.
     <table xml:id="T_PDvaryR" >
@@ -271,7 +271,7 @@
         <choice ><statement><p>increase</p></statement><feedback><p>Think about the incentives for cooperating vs. defecting.</p></feedback></choice>
         <choice correct="yes"><statement><p>decrease</p></statement><feedback><p>There is greater incentive to defect, so less incentive to cooperate.</p></feedback></choice>
         <choice ><statement><p>don't change</p></statement><feedback><p>Think about the incentives for cooperating vs. defecting.</p></feedback></choice>
-      </choices><answer>decrease</answer></exercise>
+      </choices><answer><p>decrease</p></answer></exercise>
 
       <exercise label="IGT_CWPD_CYU_decreaseS"><statement><p>Consider the following Cooperate-Defect game where we can vary the value for <m>a</m>.
     <table xml:id="T_PDvaryS" >
@@ -300,7 +300,7 @@
         <choice ><statement><p>increase</p></statement><feedback><p>Would you want to cooperate if you think your opponent will defect?</p></feedback></choice>
         <choice correct="yes"><statement><p>decrease</p></statement><feedback><p>Since there is already incentive to defect, it becomes riskier to cooperate.</p></feedback></choice>
         <choice ><statement><p>don't change</p></statement><feedback><p>Would you want to cooperate if you think your opponent will defect?</p></feedback></choice>
-      </choices><answer>decrease</answer></exercise>
+      </choices><answer><p>decrease</p></answer></exercise>
 
 
 </reading-questions>

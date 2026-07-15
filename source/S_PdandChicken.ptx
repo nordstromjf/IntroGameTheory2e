@@ -338,25 +338,25 @@
       <title>Check Your Understanding</title>
 
       <exercise label="IGT_PDC_CYU_Ccoop"><statement correct="yes"><p>True or False: In the game of Chicken, the player who swerves is cooperating.</p>
-      </statement><feedback><p>In Chicken, swerving is cooperating.</p></feedback><answer>True.</answer></exercise>
+      </statement><feedback><p>In Chicken, swerving is cooperating.</p></feedback><answer><p>True.</p></answer></exercise>
 
       <exercise label="IGT_PDC_CYU_PDcoop"><statement correct="no"><p>True or False: In the Prisoner's Dilemma, the player who confesses is cooperating.</p>
-      </statement><feedback><p>In Prisoner's Dilemma, confessing is defecting.</p></feedback><answer>False.</answer></exercise>
+      </statement><feedback><p>In Prisoner's Dilemma, confessing is defecting.</p></feedback><answer><p>False.</p></answer></exercise>
 
       <exercise label="IGT_PDC_CYU_PDequil"><statement correct="no"><p>True or False: In the Prisoner's Dilemma, the strategy pair [Don't Confess, Don't Confess] is an equilibrium.</p>
-      </statement><feedback><p>See <xref ref="T_PrisonersDilemma"></xref>, keeping in mind that players want less time in prison.</p></feedback><answer>False.</answer></exercise>
+      </statement><feedback><p>See <xref ref="T_PrisonersDilemma"></xref>, keeping in mind that players want less time in prison.</p></feedback><answer><p>False.</p></answer></exercise>
 
       <exercise label="IGT_PDC_CYU_Cequil"><statement correct="no"><p>True or False: In the game of Chicken, the strategy pair [Swerve, Swerve] is an equilibrium.</p>
-      </statement><feedback><p>See <xref ref="T_chicken"></xref>.</p></feedback><answer>False.</answer></exercise>
+      </statement><feedback><p>See <xref ref="T_chicken"></xref>.</p></feedback><answer><p>False.</p></answer></exercise>
 
       <exercise label="IGT_PDC_CYU_Cequilsame"><statement correct="no"><p>True or False: In the game of Chicken, the equilibria have the same payoff vectors.</p>
-      </statement><feedback><p>See <xref ref="T_chicken"></xref>. The payoffs are different for the two players.</p></feedback><answer>False.</answer></exercise>
+      </statement><feedback><p>See <xref ref="T_chicken"></xref>. The payoffs are different for the two players.</p></feedback><answer><p>False.</p></answer></exercise>
 
       <exercise label="IGT_PDC_CYU_Ccomm"><statement correct="yes"><p>True or False: In the game of Chicken, communication can be beneficial for players.</p>
-      </statement><feedback><p>For example, if Player 1 states she will drive straight no matter what, Player 2 should swerve, benefiting Player 1.</p></feedback><answer>True.</answer></exercise>
+      </statement><feedback><p>For example, if Player 1 states she will drive straight no matter what, Player 2 should swerve, benefiting Player 1.</p></feedback><answer><p>True.</p></answer></exercise>
 
       <exercise label="IGT_PDC_CYU_PDcomm"><statement correct="yes"><p>True or False: In Prisoner's Dilemma, communication can be beneficial for players.</p>
-      </statement><feedback><p>If they communicate, players may be able to agree to Not Confess.</p></feedback><answer>True.</answer></exercise>
+      </statement><feedback><p>If they communicate, players may be able to agree to Not Confess.</p></feedback><answer><p>True.</p></answer></exercise>
 
       <!--<exercise label="IGT_PDC_CYU_PDsamestrat"><statement><p>In Prisoner's Dilemma, two rational players should try to play</p>
       </statement>

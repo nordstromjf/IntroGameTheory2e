@@ -188,19 +188,19 @@
       <p>
         Consider the cooperate-defect game where the first row/column is C and the second row/column is D:
 
-        <me>
+        <md>
           \left[\begin{matrix}
             (3, 3) \amp  (0, 50)\\
            (50, 0) \amp  (0.01, 0.01)
           \end{matrix}\right].
-        </me>
+        </md>
 
-        <!--<me>
+        <!--<md>
           \begin{matrix}\amp  C\amp  D\\
           C\amp  (3, 3) \amp  (0, 50)\\
           D \amp (50, 0) \amp  (.01, .01)
           \end{matrix}.
-        </me>-->
+        </md>-->
       </p>
 
       <p>
@@ -213,12 +213,12 @@
     <statement>
       <p>
         Consider the cooperate-defect game where the first row/column is C and the second row/column is D:
-        <me>
+        <md>
           \left[\begin{matrix}
           (1000, 1000) \amp  (0, 100)\\
           (100, 0) \amp  (100, 100)
           \end{matrix}\right].
-        </me>
+        </md>
       </p>
 
       <p>
@@ -251,13 +251,13 @@
 
       <exercise label="IGT_PDCond_CYU_RPTS1"><statement><p>Consider the cooperate-defect game
 
-        <me>
+        <md>
           \left[
       \begin{matrix}(5, 5) \amp  (15, -1)\\
       (-1, 15) \amp  (10, 10)\\
       \end{matrix} 
       \right].
-        </me></p>
+        </md></p>
 
         <p>Match the reward for mutual cooeration (R), the punishment for defecting (P), the temptation to defect (T), and the sucker's payoff (S) with their corresponding payoffs.</p></statement>
       <feedback>
@@ -282,27 +282,27 @@
   <premise order="2">15</premise>
   <response>T</response>
   </match>
-  </cardsort><answer><m>R=10, P=5, T=15, S=-1.</m></answer></exercise>
+  </cardsort><answer><p><m>R=10, P=5, T=15, S=-1.</m></p></answer></exercise>
 
   <exercise label="IGT_PDCond_CYU_checkpd1"><statement correct="yes"><p>True or False: the game 
-    <me>
+    <md>
           \left[
       \begin{matrix}(5, 5) \amp  (15, -1)\\
       (-1, 15) \amp  (10, 10)\\
       \end{matrix} 
       \right]
-        </me>
-        satisfies the <xref ref="l_ConditionsPD" text="title"></xref>.</p></statement><feedback><m>T>R>P>S; (T+S)/2 &lt; R.</m></feedback><answer>True.</answer></exercise>
+        </md>
+        satisfies the <xref ref="l_ConditionsPD" text="title"></xref>.</p></statement><feedback><m>T>R>P>S; (T+S)/2 &lt; R.</m></feedback><answer><p>True.</p></answer></exercise>
 
         <exercise label="IGT_PDCond_CYU_RPTS2"><statement><p>Consider the cooperate-defect game
 
-        <me>
+        <md>
           \left[
       \begin{matrix}(10, 10) \amp  (-1, 5)\\
       (5, -1) \amp  (2, 2)\\
       \end{matrix} 
       \right].
-        </me></p>
+        </md></p>
 
         <p>Match the reward for mutual cooeration (R), the punishment for defecting (P), the temptation to defect (T), and the sucker's payoff (S) with their corresponding payoffs.</p></statement>
       <feedback>
@@ -327,27 +327,27 @@
   <premise order="1">5</premise>
   <response>T</response>
   </match>
-  </cardsort><answer><m>R=10, P=2, T=5, S=-1.</m></answer></exercise>
+  </cardsort><answer><p><m>R=10, P=2, T=5, S=-1.</m></p></answer></exercise>
 
   <exercise label="IGT_PDCond_CYU_checkpd2"><statement correct="no"><p>True or False: the game 
-    <me>
+    <md>
           \left[
       \begin{matrix}(10, 10) \amp  (-1, 5)\\
       (5, -1) \amp  (2, 2)\\
       \end{matrix} 
       \right]
-        </me>
-        satisfies the <xref ref="l_ConditionsPD" text="title"></xref>.</p></statement><feedback><m>T\ngtr R; (T+S)/2 &lt; R.</m></feedback><answer>False.</answer></exercise>
+        </md>
+        satisfies the <xref ref="l_ConditionsPD" text="title"></xref>.</p></statement><feedback><m>T\ngtr R; (T+S)/2 &lt; R.</m></feedback><answer><p>False.</p></answer></exercise>
     
     <exercise label="IGT_PDCond_CYU_RPTS3"><statement><p>Consider the cooperate-defect game
 
-        <me>
+        <md>
           \left[
       \begin{matrix}(2, 2) \amp  (-5, 5)\\
       (5, -5) \amp  (-2, -2)\\
       \end{matrix} 
       \right].
-        </me></p>
+        </md></p>
 
         <p>Match the reward for mutual cooeration (R), the punishment for defecting (P), the temptation to defect (T), and the sucker's payoff (S) with their corresponding payoffs.</p></statement>
       <feedback>
@@ -372,43 +372,43 @@
   <premise order="3">5</premise>
   <response>T</response>
   </match>
-  </cardsort><answer><m>R=2, P=-2, T=5, S=-5.</m></answer></exercise>
+  </cardsort><answer><p><m>R=2, P=-2, T=5, S=-5.</m></p></answer></exercise>
 
   <exercise label="IGT_PDCond_CYU_checkpd3"><statement correct="yes"><p>True or False: the game 
-    <me>
+    <md>
           \left[
       \begin{matrix}(2, 2) \amp  (-5, 5)\\
       (5, -5) \amp  (-2, -2)\\
       \end{matrix} 
       \right]
-        </me>
-        satisfies the <xref ref="l_ConditionsPD" text="title"></xref>.</p></statement><feedback><m>T>R>P>S; (T+S)/2 &lt; R.</m></feedback><answer>True.</answer></exercise>
+        </md>
+        satisfies the <xref ref="l_ConditionsPD" text="title"></xref>.</p></statement><feedback><m>T>R>P>S; (T+S)/2 &lt; R.</m></feedback><answer><p>True.</p></answer></exercise>
 
         <exercise label="IGT_PDCond_CYU_equilpd3"><statement><p>The game
-         <me>
+         <md>
         \left[
       \begin{matrix}(2, 2) \amp  (-5, 5)\\
       (5, -5) \amp  (-2, -2)\\
       \end{matrix} 
       \right]
-        </me>
+        </md>
         has <fillin width="3"></fillin> equilibrium point(s).</p></statement>
         <choices ramdomize="no">
           <choice><statement><m>0</m></statement></choice>
           <choice correct="yes"><statement><m>1</m></statement><feedback><p><m>(-2, -2)</m> is the only equilibrium point.</p></feedback></choice>
           <choice><statement><m>2</m></statement></choice>
           <choice><statement><m>3</m></statement></choice>
-        </choices><answer>1</answer></exercise>
+        </choices><answer><p><m>1</m></p></answer></exercise>
 
   <exercise label="IGT_PDCond_CYU_RPTS4"><statement><p>Consider the cooperate-defect game
 
-        <me>
+        <md>
           \left[
       \begin{matrix}(-2, -2) \amp  (5, 0)\\
       (0, 5) \amp  (2, 2)\\
       \end{matrix} 
       \right].
-        </me></p>
+        </md></p>
 
         <p>Match the reward for mutual cooeration (R), the punishment for defecting (P), the temptation to defect (T), and the sucker's payoff (S) with their corresponding payoffs.</p></statement>
       <feedback>
@@ -433,43 +433,43 @@
   <premise order="2">5</premise>
   <response>T</response>
   </match>
-  </cardsort><answer><m>R=2, P=-2, T=5, S=0.</m></answer></exercise>
+  </cardsort><answer><p><m>R=2, P=-2, T=5, S=0.</m></p></answer></exercise>
 
   <exercise label="IGT_PDCond_CYU_checkpd4"><statement correct="no"><p>True or False: the game 
-    <me>
+    <md>
           \left[
       \begin{matrix}(-2, -2) \amp  (5, 0)\\
       (0, 5) \amp  (2, 2)\\
       \end{matrix} 
       \right]
-        </me>
-        satisfies the <xref ref="l_ConditionsPD" text="title"></xref>.</p></statement><feedback><m>P\ngtr S; (T+S)/2 \nless R.</m></feedback><answer>False.</answer></exercise>
+        </md>
+        satisfies the <xref ref="l_ConditionsPD" text="title"></xref>.</p></statement><feedback><m>P\ngtr S; (T+S)/2 \nless R.</m></feedback><answer><p>False.</p></answer></exercise>
 
         <exercise label="IGT_PDCond_CYU_equilpd4"><statement><p>The game 
-         <me>
+         <md>
         \left[
       \begin{matrix}(-2, -2) \amp  (5, 0)\\
       (0, 5) \amp  (2, 2)\\
       \end{matrix} 
       \right]
-        </me>
+        </md>
         has <fillin width="3"></fillin> equilibrium point(s).</p></statement>
         <choices ramdomize="no">
           <choice><statement><m>0</m></statement></choice>
           <choice ><statement><m>1</m></statement></choice>
           <choice correct="yes"><statement><m>2</m></statement><feedback><p><m>(0, 5)</m> and <m>(5, 0)</m> is the two equilibrium points.</p></feedback></choice>
           <choice><statement><m>3</m></statement></choice>
-        </choices><answer>2</answer></exercise>
+        </choices><answer><p><m>2</m></p></answer></exercise>
 
       <exercise label="IGT_PDCond_CYU_RPTS5"><statement><p>Consider the cooperate-defect game
 
-        <me>
+        <md>
           \left[
       \begin{matrix}(0, 0) \amp  (-15, 20)\\
       (20, -15) \amp  (-10, -10)\\
       \end{matrix} 
       \right].
-        </me></p>
+        </md></p>
 
         <p>Match the reward for mutual cooeration (R), the punishment for defecting (P), the temptation to defect (T), and the sucker's payoff (S) with their corresponding payoffs.</p></statement>
       <feedback>
@@ -494,33 +494,33 @@
   <premise order="1">20</premise>
   <response>T</response>
   </match>
-  </cardsort><answer><m>R=0, P=-10, T=20, S=-15.</m></answer></exercise>
+  </cardsort><answer><p><m>R=0, P=-10, T=20, S=-15.</m></p></answer></exercise>
 
   <exercise label="IGT_PDCond_CYU_checkpd5"><statement correct="no"><p>True or False: the game 
-    <me>
+    <md>
         \left[
       \begin{matrix}(0, 0) \amp  (-15, 20)\\
       (20, -15) \amp  (-10, -10)\\
       \end{matrix} 
       \right]
-        </me>
-        satisfies the <xref ref="l_ConditionsPD" text="title"></xref>.</p></statement><feedback><m>T>R>P>S; (T+S)/2 \nless R.</m></feedback><answer>False.</answer></exercise>
+        </md>
+        satisfies the <xref ref="l_ConditionsPD" text="title"></xref>.</p></statement><feedback><m>T>R>P>S; (T+S)/2 \nless R.</m></feedback><answer><p>False.</p></answer></exercise>
 
         <exercise label="IGT_PDCond_CYU_equilpd5"><statement><p>The game 
-         <me>
+         <md>
         \left[
       \begin{matrix}(0, 0) \amp  (-15, 20)\\
       (20, -15) \amp  (-10, -10)\\
       \end{matrix} 
       \right]
-        </me>
+        </md>
         has <fillin width="3"></fillin> equilibrium point(s).</p></statement>
         <choices ramdomize="no">
           <choice><statement><m>0</m></statement></choice>
           <choice correct="yes"><statement><m>1</m></statement><feedback><p><m>(-10, -10)</m> is the only equilibrium point.</p></feedback></choice>
           <choice><statement><m>2</m></statement></choice>
           <choice><statement><m>3</m></statement></choice>
-        </choices><answer>1</answer></exercise>
+        </choices><answer><p><m>1</m></p></answer></exercise>
 
     </reading-questions>
 </section>

@@ -239,7 +239,7 @@
         
        </choices><answer><p>cooperate.</p></answer></exercise>
 
-       <exercise label="IGT_RPD_CYU_bestIPDDresp"><statement><p>In a repeated (or iterated) Prisoner's Dilemma, if a player always defects, the the other player should <fillin width="5"></fillin>.</p></statement>
+       <exercise label="IGT_RPD_CYU_bestIPDDresp"><statement><p>In a repeated (or iterated) Prisoner's Dilemma, if a player always defects, then the other player should <fillin width="5"></fillin>.</p></statement>
 
        <choices randomize="no">
         <choice ><statement><p>cooperate.</p></statement><feedback><p>A player does not want to get the sucker's payoff.</p></feedback></choice>
@@ -247,7 +247,7 @@
         
        </choices><answer><p>defect.</p></answer></exercise>
 
-       <exercise label="IGT_RPD_CYU_bestICDresp"><statement><p>In a repeated (or iterated) game of Chicken, if a player always defects, the the other player should <fillin width="5"></fillin>.</p></statement>
+       <exercise label="IGT_RPD_CYU_bestICDresp"><statement><p>In a repeated (or iterated) game of Chicken, if a player always defects, then the other player should <fillin width="5"></fillin>.</p></statement>
 
        <choices randomize="no">
         <choice correct="yes"><statement><p>cooperate.</p></statement><feedback><p>Correct. A player would rather swerve than crash.</p></feedback></choice>
@@ -255,11 +255,11 @@
         
        </choices><answer><p>cooperate.</p></answer></exercise>
 
-       <exercise label="IGT_RPD_CYU_IPDCtoC"><statement correct="yes"><p>True or False: In an iterated Prisoner's Dilemma, it can be beneficial to cooperate in order to encourage your opponent to cooperate.</p></statement><feedback><p>See the Tit-for-Tat strategy.</p></feedback><answer>True.</answer></exercise>
+       <exercise label="IGT_RPD_CYU_IPDCtoC"><statement correct="yes"><p>True or False: In an iterated Prisoner's Dilemma, it can be beneficial to cooperate in order to encourage your opponent to cooperate.</p></statement><feedback><p>See the Tit-for-Tat strategy.</p></feedback><answer><p>True.</p></answer></exercise>
 
-       <exercise label="IGT_RPD_CYU_IPDmixed"><statement correct="no"><p>Recall in repeated <em>zero-sum</em> games, if there was a pure strategy equilibrium, then players never benefit from playing a mixed strategy. True or False: In a repeated <em>non-zero-sum</em> game with a pure strategy equilibrium, players never benefit from playing a mixed strategy.</p></statement><feedback><p>See the Tit-for-Tat strategy.</p></feedback><answer>False.</answer></exercise>
+       <exercise label="IGT_RPD_CYU_IPDmixed"><statement correct="no"><p>Recall in repeated <em>zero-sum</em> games, if there was a pure strategy equilibrium, then players never benefit from playing a mixed strategy. True or False: In a repeated <em>non-zero-sum</em> game with a pure strategy equilibrium, players never benefit from playing a mixed strategy.</p></statement><feedback><p>See the Tit-for-Tat strategy.</p></feedback><answer><p>False.</p></answer></exercise>
 
-       <exercise label="IGT_RPD_CYU_IPDpred"><statement correct="yes"><p>Recall in repeated <em>zero-sum</em> games players never benefit from playing a strategy with a predictable pattern. True or False: In a repeated <em>non-zero-sum</em> game a player may benefit from playing a strategy with a predictable pattern.</p></statement><feedback><p>See the Tit-for-Tat strategy.</p></feedback><answer>True.</answer></exercise>
+       <exercise label="IGT_RPD_CYU_IPDpred"><statement correct="yes"><p>Recall in repeated <em>zero-sum</em> games players never benefit from playing a strategy with a predictable pattern. True or False: In a repeated <em>non-zero-sum</em> game a player may benefit from playing a strategy with a predictable pattern.</p></statement><feedback><p>See the Tit-for-Tat strategy.</p></feedback><answer><p>True.</p></answer></exercise>
 
        
 

@@ -268,7 +268,7 @@
       </row>
     </tabular>
   </table>
-    is a zero-sum game.</p></statement><answer>False</answer></exercise>
+    is a zero-sum game.</p></statement><answer><p>False</p></answer></exercise>
 
     <exercise label="IGT_INZ_CYU_findequil1"><statement><p>The following game has at least one pure strategy equilibrium, click on or circle the equilibrium point(s).
     </p></statement><areas><p>
@@ -293,7 +293,7 @@
   </table>
     </p></areas>
 
-    <answer>(2, 2)</answer></exercise>
+    <answer><p><m>(2, 2)</m></p></answer></exercise>
 
     <exercise label="IGT_INZ_CYU_P1strat1"><statement><p> In the game in <xref ref="T_NZmatrix1"></xref>, Player 1 should play</p></statement>
     <choices randomize="no">
@@ -331,7 +331,7 @@
       </row>
     </tabular>
   </table>
-    is a zero-sum game.</p></statement><answer>False</answer></exercise>
+    is a zero-sum game.</p></statement><answer><p>False.</p></answer></exercise>
 
     <exercise label="IGT_INZ_CYU_findequil2"><statement><p>The following game has at least one pure strategy equilibrium, click on or circle the equilibrium point(s).
     </p></statement><areas><p>
@@ -356,9 +356,9 @@
   </table>
     </p></areas>
 
-    <answer><p>(2, 3) and (3, 2)</p></answer></exercise>
+    <answer><p><m>(2, 3)</m> and <m>(3, 2)</m></p></answer></exercise>
 
-    <exercise label="IGT_INZ_CYU_repeat2"><statement correct="no"><p>True or False: In the game in <xref ref="T_NZmatrix2"></xref>, if the players play once, and each player chooses the strategy with their preferred equilibrium, then the game will result in an equilibrium.</p></statement><feedback><p>Player 1 would play B while Player 2 would play C, which is not an equilibrium.</p></feedback><answer>False.</answer></exercise>
+    <exercise label="IGT_INZ_CYU_repeat2"><statement correct="no"><p>True or False: In the game in <xref ref="T_NZmatrix2"></xref>, if the players play once, and each player chooses the strategy with their preferred equilibrium, then the game will result in an equilibrium.</p></statement><feedback><p>Player 1 would play B while Player 2 would play C, which is not an equilibrium.</p></feedback><answer><p>False.</p></answer></exercise>
 
     <exercise label="IGT_INZ_CYU_P1strat2"><statement><p> In the game in <xref ref="T_NZmatrix2"></xref>, suppose Player 1 only considers her payoff matrix and finds the mixed strategy as we did for zero-sum games. Then Player 1 would play</p></statement>
     <choices randomize="no">
@@ -416,15 +416,15 @@
       </table>
     </p></areas>
 
-    <answer>(2, 2)</answer></exercise>
+    <answer><p><m>(2, 2)</m></p></answer></exercise>
     
-    <exercise label="IGT_INZ_CYU_zerocomm"><statement correct="no"><p>True or False: In a <em>zero-sum game</em>, it can benefit  a player to announce their strategy.</p></statement><feedback><p>Since one player's gain is the other's loss, it never benefits a player to announce a strategy.</p></feedback><answer>False.</answer></exercise>
+    <exercise label="IGT_INZ_CYU_zerocomm"><statement correct="no"><p>True or False: In a <em>zero-sum game</em>, it can benefit  a player to announce their strategy.</p></statement><feedback><p>Since one player's gain is the other's loss, it never benefits a player to announce a strategy.</p></feedback><answer><p>False.</p></answer></exercise>
 
-    <exercise label="IGT_INZ_CYU_nonzerocomm"><statement correct="yes"><p>True or False: In a <em>non-zero-sum game</em>, it can  benefit a player to announce their strategy.</p></statement><feedback><p>Think of Battle of the Movies and what Bob should do if Alice says she is going to Comedy. Would this benefit Alice?</p></feedback><answer>True.</answer></exercise>
+    <exercise label="IGT_INZ_CYU_nonzerocomm"><statement correct="yes"><p>True or False: In a <em>non-zero-sum game</em>, it can  benefit a player to announce their strategy.</p></statement><feedback><p>Think of Battle of the Movies and what Bob should do if Alice says she is going to Comedy. Would this benefit Alice?</p></feedback><answer><p>True.</p></answer></exercise>
 
-    <exercise label="IGT_INZ_CYU_zerominopp"><statement correct="yes"><p>True or False: In a <em>zero-sum game</em>, a player wants to minimize their opponent's payoff.</p></statement><feedback><p>This is the entire premise behind our methods for solving zero-sum games.</p></feedback><answer>True.</answer></exercise>
+    <exercise label="IGT_INZ_CYU_zerominopp"><statement correct="yes"><p>True or False: In a <em>zero-sum game</em>, a player wants to minimize their opponent's payoff.</p></statement><feedback><p>This is the entire premise behind our methods for solving zero-sum games.</p></feedback><answer><p>True.</p></answer></exercise>
     
-    <exercise label="IGT_INZ_CYU_znonerominopp"><statement correct="no"><p>True or False: In a <em>non-zero-sum game</em>, a player wants to minimize their opponent's payoff.</p></statement><feedback><p>Since both players can win, there is no reason to make your opponent lose.</p></feedback><answer>False.</answer></exercise>
+    <exercise label="IGT_INZ_CYU_znonerominopp"><statement correct="no"><p>True or False: In a <em>non-zero-sum game</em>, a player wants to minimize their opponent's payoff.</p></statement><feedback><p>Since both players can win, there is no reason to make your opponent lose.</p></feedback><answer><p>False.</p></answer></exercise>
 
 
 
