@@ -1,6 +1,6 @@
 
 <section xml:id="S_ZeroSumStrategySummary">
-  <title>Strategies for Zero-Sum Games and Equilibrium Points</title><shorttitle>Strategies for Zero-Sum Games</shorttitle>
+  <title><line>Strategies for Zero-Sum Games and</line> <line>Equilibrium Points</line></title><shorttitle>Strategies for Zero-Sum Games</shorttitle>
   <p>
     Throughout this chapter, we have been trying to find solutions for two player zero-sum games by deciding what two rational players should do. In this section, we will try to understand where we are with solving two-player zero-sum games. The activities in this section are intended to review the concepts of dominated strategies, equilibrium points, and the maximin/minimax strategies. By working through your own examples, we hope to tie these concepts together and ask some bigger questions about equilibrium points. For example, should a player always play an equilibrium strategy? Will the maximin/minimax strategy always find an equilibrium point if one exists? What should a player do if no equilibrium exists? Although the formal answers to some of these questions are outside the scope of this book, you should be able to make some good conjectures about equilibrium points and rational solutions to two-player zero-sum games.
   </p>

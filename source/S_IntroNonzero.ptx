@@ -1,6 +1,6 @@
 
 <section xml:id="S_IntroNonzero">
-  <title>Introduction to Two-Player Non-Zero-Sum Games</title>
+  <title><line>Introduction to Two-Player</line> <line>Non-Zero-Sum Games</line></title><shorttitle>Intro to Non-Zero-Sum Games</shorttitle>
   <p>
     In this section we introduce non-zero-sum games. In a <term>non-zero-sum game</term><idx><h>non-zero-sum game</h></idx> the players' payoffs no longer need to sum to a constant value. Now it is possible for both players to gain or both players to lose.
   </p>
@@ -17,7 +17,7 @@
   </p>
 
   <example xml:id="E_battle_of_movies">
-    <title>Battle of the Movies</title><idx><h>Battle of the Movies</h></idx><idx><h>game</h><h>Battle of the Movies</h></idx>
+    <title>Battle of the Movies<idx><h>Battle of the Movies</h></idx><idx><h>game</h><h>Battle of the Movies</h></idx></title>
     <statement>
       <p>
          Alice and Bob want to go out to a movie. Bob wants to see an action movie, Alice wants to see a comedy. Both prefer to go to a movie together rather than to go alone. We can represent the situation with the payoff matrix in <xref ref="T_battleofmovies"></xref>:

@@ -5,8 +5,8 @@
     In <xref ref="S_VDexperiment"></xref> we played a game called Volunteer's Dilemma.
   </p>
 
-  <example xml:id="E_VDpoints"><idx><h>Volunteer's Dilemma</h></idx>
-    <title>A Volunteer's Dilemma</title>
+  <example xml:id="E_VDpoints">
+    <title>A Volunteer's Dilemma<idx><h>Volunteer's Dilemma</h></idx></title>
     <statement>
       <p>
         One example of a Volunteer's Dilemma is the game where everyone chooses <q>1 point</q> or <q>5 points.</q> If at least one person writes down 1 point, then everyone gets the number of points they wrote down. If no one chooses 1 point, then everyone gets 0 points. Choosing <q>1 point</q> is considered volunteering or cooperating. Choosing to not volunteer and take <q>5 points</q> is defecting.

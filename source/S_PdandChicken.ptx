@@ -122,7 +122,7 @@
   </p>
 
   <example xml:id="E_PrisonersDilemma">
-    <title>Prisoner's Dilemma</title><idx><h>Prisoner's Dilemma</h></idx><idx><h>game</h><h>Prisoner's Dilemma</h></idx>
+    <title>Prisoner's Dilemma<idx><h>Prisoner's Dilemma</h></idx><idx><h>game</h><h>Prisoner's Dilemma</h></idx></title>
     <statement>
       <p>
         Two partners in crime are arrested for burglary and sent to separate rooms. They are each offered a deal: if they confess and rat on their partner, they will receive a reduced sentence. So if one confesses and the other doesn't, the confessor only gets 3 months in prison, while the partner serves 10 years. If both confess, then they each get 8 years. However, if neither confess, there isn't enough evidence, and each gets just one year. We can represent the situation with the following matrix.
@@ -225,14 +225,14 @@
   <p>We now turn to another classic example. We can ask similar questions about Chicken that we ask about Prisoner's Dilemma.</p>
 
   <example xml:id="E_Chicken">
-    <title>Chicken</title><idx><h>Chicken</h></idx><idx><h>game</h><h>Chicken</h></idx>
+    <title>Chicken<idx><h>Chicken</h></idx><idx><h>game</h><h>Chicken</h></idx></title>
     <statement>
       <p> 
         Two drivers drive towards each other. If one driver swerves, he is considered a <q>chicken.</q> If a driver doesn't swerve (drives straight), he is considered the winner. Of course if neither swerves, they crash and neither wins. A possible payoff matrix for this game is given in the following matrix.
       </p>
 
       <table xml:id="T_chicken" >
-        <title>The game of Chicken.</title>
+        <title>The game of Chicken</title>
         <tabular>
           <row>
             <cell></cell>

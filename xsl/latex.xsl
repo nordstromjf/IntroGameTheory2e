@@ -53,7 +53,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 <xsl:template match="activity" mode="tcb-style">
     <xsl:text>enhanced,frame hidden,interior hidden, sharp corners,&#xa;</xsl:text>
     <xsl:text>boxrule=0pt,borderline west={3pt}{0pt}{blue!50!green}, &#xa;</xsl:text>
-    <xsl:text>runintitlestyle, blockspacingstyle, after title={.\space}, &#xa;</xsl:text>
+    <xsl:text>runintitlestyle, blockspacingstyle, after title={\space}, &#xa;</xsl:text>
     <xsl:text>colback=white,&#xa;</xsl:text>
     <xsl:text>coltitle=black,&#xa;</xsl:text>
     <xsl:text>colframe=black,</xsl:text>
@@ -61,6 +61,23 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
 <xsl:template match="example" mode="tcb-style">
     <xsl:text>bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, </xsl:text>
+</xsl:template>
+
+<!-- Override default frontmatter pages: -->
+
+<!-- Remove "half-title" leading page with -->
+<!-- title only, at about 1:2 split    -->
+<xsl:template match="book" mode="half-title" >
+    <xsl:text>%% no half-title&#xa;</xsl:text>
+</xsl:template>
+
+
+
+<!-- Import custom copyright page -->
+<xsl:template match="book" mode="copyright-page" >
+    <xsl:text>%% begin: copyright-page&#xa;</xsl:text>
+    <xsl:text>\input{external/copyright-page}&#xa;</xsl:text>
+    <xsl:text>%% end:   copyright-page&#xa;</xsl:text>
 </xsl:template>
 
 <!--<xsl:template match="activity" mode="tcb-style">

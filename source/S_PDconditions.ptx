@@ -246,7 +246,7 @@
     </statement>
   </activity>
 
-  <reading-questions>
+  <reading-questions xml:id="CYU-PDconditions">
       <title>Check Your Understanding</title>
 
       <exercise label="IGT_PDCond_CYU_RPTS1"><statement><p>Consider the cooperate-defect game

@@ -102,7 +102,7 @@
   
     <task><statement>
       <p>
-        Is Rock-Paper-Scissors a zero-sum game? Does it have an equilibrium point? Explain.
+        Is Rock-Paper-Scissors a zero-sum game? Does it have an equilibrium point? Explain your answer.
       </p>
     </statement></task>
   </activity>
@@ -143,7 +143,7 @@
     </task>
     <task><statement>
       <p>
-        Does it make sense to play one option more often than another (for example, Rock more often than Paper)? Explain.
+        Does it make sense to play one option more often than another (for example, Rock more often than Paper)? Explain your answer.
       </p></statement>
     </task>
     <task><statement>
@@ -207,7 +207,7 @@
       </p>
 
       <p>
-        See if you can determine how often Player 1 should play each row, and how often Player 2 should play each column. Try testing your proposed strategy (you may be able to use a variation on the dice as we saw in <xref ref="A_RPSplaymixedeven"></xref>). Write up any conjectured strategies and the results from playing the game with your strategy. Do you think you have come up with the best strategy? Explain.
+        See if you can determine how often Player 1 should play each row, and how often Player 2 should play each column. Try testing your proposed strategy (you may be able to use a variation on the dice as we saw in <xref ref="A_RPSplaymixedeven"></xref>). Write up any conjectured strategies and the results from playing the game with your strategy. Do you think you have come up with the best strategy? Explain your answer.
       </p>
     </statement>
   </activity>

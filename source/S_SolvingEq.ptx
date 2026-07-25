@@ -1,5 +1,5 @@
 <section xml:id="S_SolvingEq" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Using Sage to Graph Lines and Solve Equations</title><idx><h><pubtitle>Sage</pubtitle></h></idx>
+  <title>Using Sage to Graph Lines and Solve Equations</title><shorttitle>Using Sage</shorttitle><idx><h><pubtitle>Sage</pubtitle></h></idx>
   <idx><h>solution</h><h>using <pubtitle>Sage</pubtitle></h></idx>
 
   <p>
@@ -90,7 +90,7 @@
           BC=(1,-1);
           show(line([AC, BC], thickness=2, color=('blue'))+point(AC, color=('blue'), pointsize=70)+point(BC, color=('blue'), pointsize=70), figsize=4)
           </input>
-          <output></output>
+          
         </sage>
       </p></li></ul></p></li>
 </ul></p>
@@ -146,7 +146,7 @@
             +line([AD, BD], thickness=2, color=('red'))
             +point(AD, color=('red'), pointsize=70)+point(BD, color=('red'), pointsize=70), figsize=4)
           </input>
-          <output></output>
+          
         </sage>
 
       <p>
@@ -190,8 +190,8 @@
             p, m = var('p, m')
             solve([m==-2*p+1, m==2*p], p, m)[0] 
           </input>
-          <output>[p == (1/4), m == (1/2)]
-          </output>
+          <!--<output>[p == (1/4), m == (1/2)]
+          </output>-->
         </sage></p>
         <p>The solution for Player 1 is <m>(p, m)</m>. Where <m>p</m> is the probability Player 1 plays B, and <m>m</m> is the expected payoff to Player 1.</p>
       <p>
@@ -232,7 +232,7 @@
       pretty_print(html("Enter the coordinates of the endpoints for the two lines you'd like to graph. Note that AC and AD are for one line, BC and BD for the other."))
       show(L1+L2+P1+P2+P3+P4, figsize=4)
      </input>
-     <output></output> 
+     
   </sage>
 
     <!--<sage>
@@ -252,17 +252,18 @@
     Now determine and enter the equations of the two lines and have <pubtitle>Sage</pubtitle> solve for the intersection point.
   </p>  
 
-  <sage>
+  <sage xml:id="Sage-intersectionpoint">
     <input>
     p, m = var('p, m')
     @interact
-    def intersection(Slope1=-1,Intercept1=1,Slope2=3,Intercept2=-1):
+    def intersection(Slope1=-1,Intercept1=1,
+      Slope2=3,Intercept2=-1):
       Eq1 = m==Slope1*p+Intercept1
       Eq2 = m==Slope2*p+Intercept2
       S = solve([Eq1, Eq2], p, m)[0]
       pretty_print(html("The intersection point is $%s$, $%s$."%(latex(S[0]),latex(S[1]))))
     </input>
-    <output></output>  
+     
   </sage>
 
      <!-- <sage>
@@ -289,7 +290,7 @@
             <xi:include parse="text" href="doenet/graphingsolver.doenetml"/>
             
           </slate>
-          <static><p>The interactive activity is available in the online version of the text at <url href="https://nordstrommath.com/IntroGameTheory2e/S_SolvingEq.html#W_graphicalmethodtool" visual="nordstrommath.com/IntroGameTheory2e/S_SolvingEq.html#W_graphicalmethodtool"/>
+          <static><p>The interactive activity is available in the online version of the text at <url href="https://nordstrommath.com/IntroGameTheory2e/S_SolvingEq.html#W_graphicalmethodtool" visual="nordstrommath.com/IntroGameTheory2e/S_SolvingEq.html"/>
            or on Doenet at <url href="https://beta.doenet.org/activityViewer/rrTGvgdPgkPbCfqoP4us1i" visual="https://tinyurl.com/GraphicalMethodMixedStrategies"/>.
         </p></static>
   </interactive>
@@ -363,7 +364,7 @@
 
   <reading-questions>
       <title>Check Your Understanding</title>
-      <p>Use one of the tools in this section to find the mixed strategy for Player 1.</p>
+      <p>Use one of the tools in this section to find the mixed strategy equilibrium for Player 1.</p>
       
        <exercise label="IGT_SE_CYU_equil"><statement correct="no"><p>True or False: The following zero-sum game
         <table xml:id="T_exergame2" >

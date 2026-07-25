@@ -1,6 +1,6 @@
 
 <section xml:id="S_IntroZeroSum">
-  <title>Introduction to Two-Person Zero-Sum Games</title><idx><h>zero-sum game</h></idx>
+  <title>Introduction to Two-Person Zero-Sum Games</title><shorttitle>Intro Two-Person Zero-Sum</shorttitle><idx><h>zero-sum game</h></idx>
   <introduction>
        <p>
       In the examples from the last section, whatever amount one player won, the other player lost.
@@ -37,6 +37,10 @@
         <table xml:id="T_cakecutting" >
           <title>Payoff matrix for Cake Cutting game.</title><idx><h>Cake Cutting game</h></idx><idx><h>game</h><h>Cake Cutting</h></idx>
           <tabular>
+            <col width="25%"/>
+            <col width="25%"/>
+            <col width="25%"/>
+            <col width="25%"/>
             <row>
               <cell></cell>
               <cell></cell>
@@ -45,8 +49,8 @@
             <row>
               <cell></cell>
               <cell></cell>
-              <cell bottom="minor">Larger Piece</cell>
-              <cell bottom="minor">Smaller Piece</cell>
+              <cell bottom="minor">Large Piece</cell>
+              <cell bottom="minor">Small Piece</cell>
             </row>
             <row>
               <cell>Cutter</cell>
@@ -57,8 +61,8 @@
             <row>
               <cell></cell>
               <cell right="minor">Cut Unevenly</cell>
-              <cell right="minor" bottom="minor" halign="center">(small piece, large piece)</cell>
-              <cell right="minor" bottom="minor" halign="center">(large piece, small piece)</cell>
+              <cell right="minor" bottom="minor" halign="center">(small, large)</cell>
+              <cell right="minor" bottom="minor" halign="center">(large, small)</cell>
             </row>
           </tabular>
         </table>
@@ -78,8 +82,8 @@
             <row>
               <cell></cell>
               <cell></cell>
-              <cell bottom="minor">Larger Piece</cell>
-              <cell bottom="minor">Smaller Piece</cell>
+              <cell bottom="minor">Large Piece</cell>
+              <cell bottom="minor">Small Piece</cell>
             </row>
             <row>
               <cell>Cutter</cell>
@@ -185,7 +189,7 @@
       <title>An election game</title>
       <introduction>
               <p>
-          The candidates have the information given in <xref ref="T_election1"></xref> about how they would likely fare in the election based on how they stand on the speed limit.
+          The candidates have the information given in <xref ref="T_election1"></xref> about how they would likely fare in the election based on whether they want to raise the speed limit, keep the speed limit, or dodge the issue.
         </p>
 
         <table xml:id="T_election1" >
@@ -199,20 +203,20 @@
             <row>
               <cell></cell>
               <cell></cell>
-              <cell bottom="minor">Raise Limit</cell>
-              <cell bottom="minor">Keep Limit</cell>
+              <cell bottom="minor">Raise</cell>
+              <cell bottom="minor">Keep</cell>
               <cell bottom="minor">Dodge</cell>
             </row>
             <row>
               <cell></cell>
-              <cell right="minor">Raise Limit</cell>
+              <cell right="minor">Raise</cell>
               <cell right="minor" bottom="minor" halign="center"><m>(45, 55)</m></cell>
               <cell right="minor" bottom="minor" halign="center"><m>(50, 50)</m></cell>
               <cell right="minor" bottom="minor" halign="center"><m>(40, 60)</m></cell>
             </row>
             <row>
               <cell>Arnold</cell>
-              <cell right="minor">Keep Limit</cell>
+              <cell right="minor">Keep</cell>
               <cell right="minor" bottom="minor" halign="center"><m>(60, 40)</m></cell>
               <cell right="minor" bottom="minor" halign="center"><m>(55, 45)</m></cell>
               <cell right="minor" bottom="minor" halign="center"><m>(50, 50)</m></cell>
@@ -266,20 +270,20 @@
             <row>
               <cell></cell>
               <cell></cell>
-              <cell bottom="minor">Raise Limit</cell>
-              <cell bottom="minor">Keep Limit</cell>
+              <cell bottom="minor">Raise</cell>
+              <cell bottom="minor">Keep</cell>
               <cell bottom="minor">Dodge</cell>
             </row>
             <row>
               <cell></cell>
-              <cell right="minor">Raise Limit</cell>
+              <cell right="minor">Raise</cell>
               <cell right="minor" bottom="minor" halign="center"><m>(45, 55)</m></cell>
               <cell right="minor" bottom="minor" halign="center"><m>(10, 90)</m></cell>
               <cell right="minor" bottom="minor" halign="center"><m>(40, 60)</m></cell>
             </row>
             <row>
               <cell>Arnold</cell>
-              <cell right="minor">Keep Limit</cell>
+              <cell right="minor">Keep</cell>
               <cell right="minor" bottom="minor" halign="center"><m>(60, 40)</m></cell>
               <cell right="minor" bottom="minor" halign="center"><m>(55, 45)</m></cell>
               <cell right="minor" bottom="minor" halign="center"><m>(50, 50)</m></cell>
@@ -335,20 +339,20 @@
             <row>
               <cell></cell>
               <cell></cell>
-              <cell bottom="minor">Raise Limit</cell>
-              <cell bottom="minor">Keep Limit</cell>
+              <cell bottom="minor">Raise</cell>
+              <cell bottom="minor">Keep</cell>
               <cell bottom="minor">Dodge</cell>
             </row>
             <row>
               <cell></cell>
-              <cell right="minor">Raise Limit</cell>
+              <cell right="minor">Raise</cell>
               <cell right="minor" bottom="minor" halign="center"><m>(35, 65)</m></cell>
               <cell right="minor" bottom="minor" halign="center"><m>(10, 90)</m></cell>
               <cell right="minor" bottom="minor" halign="center"><m>(60, 40)</m></cell>
             </row>
             <row>
               <cell>Arnold</cell>
-              <cell right="minor">Keep Limit</cell>
+              <cell right="minor">Keep</cell>
               <cell right="minor" bottom="minor" halign="center"><m>(45, 55)</m></cell>
               <cell right="minor" bottom="minor" halign="center"><m>(55, 45)</m></cell>
               <cell right="minor" bottom="minor" halign="center"><m>(50, 50)</m></cell>
@@ -382,7 +386,7 @@
       <title>Changing the strategy</title>
       <statement>
         <p>
-          In each of the above scenarios, is there any reason for Arnold or Bainbridge to change his strategy from the strategy you determined? If there is, explain under what circumstances it makes sense to change strategy. If not, explain why it never makes sense to change strategy.
+          In each of the above election scenarios, is there any reason for Arnold or Bainbridge to change his strategy from the strategy you determined? Explain under what circumstances it makes sense to change strategy, or explain why it never makes sense to change strategy.
         </p>
       </statement>
     </activity>

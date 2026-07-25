@@ -1,6 +1,6 @@
 
 <section xml:id="S_MixStratEV">
-  <title>Mixed Strategies: Expected Value Solution</title><idx><h>mixed strategy</h><h>expected value solution</h></idx><idx><h>expected value</h></idx>
+  <title><line>Mixed Strategies: Expected Value</line><line> Solution</line></title><shorttitle>Mixed Strategies: Expected Value</shorttitle><idx><h>mixed strategy</h><h>expected value solution</h></idx><idx><h>expected value</h></idx>
     <idx><h>expected value solution</h></idx>
     <idx><h>solution</h><h>expected value</h></idx>
 
@@ -214,7 +214,7 @@
     <title>Expected value solution for Rock-Paper-Scissors</title><idx><h>Rock-Paper-Scissors</h><h>expected value solution</h></idx>
     <statement>
       <p>
-        As we noted in this section, teh expected value method can be used to solve bigger games. We just have more equations. Use the expected value method to find the equilibrium mixed strategy for Rock-Paper-Scissors for Player 2.  
+        As we noted in this section, the expected value method can be used to solve bigger games. We just have more equations. Use the expected value method to find the equilibrium mixed strategy for Rock-Paper-Scissors for Player 2.  
       </p>
     </statement>
     <hint><p>You will need to set <m>E_1(R)=E_1(P)</m> and <m>E_1(P)=E_1(S)</m>; solve for <m>P_2(R), P_2(P), P_2(S)</m>; etc. It should be very similar to what you did for Matching Pennies, but there will be three equations and three unknowns.</p></hint>

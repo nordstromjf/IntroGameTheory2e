@@ -3,7 +3,10 @@
 <project ptx-version="2">
   <targets>
     <target name="web" format="html" />
-    <target name="print" format="pdf" xsl="latex.xsl"/>
+    <target name="print" format="pdf" xsl="latex.xsl">
+          <stringparams  index-maker="pretext" latex.preamble.late="\setlength\extrarowheight{5pt} &#xa; \newcommand{\sectionbreak}{\ifnum\value{section}>1\clearpage\thispagestyle{plain}\fi\phantomsection}"/>
+          <!--debug.project.number="the-way-it-should-be"-->
+    </target>
     
     <target
         name="runestone"

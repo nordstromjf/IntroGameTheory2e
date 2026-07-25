@@ -35,7 +35,7 @@
     <p>
       The idea that players are self-interested is crucial to game theory. There are lots of other ways to play games, and those might be worth exploring. But to get started with game theory we must make specific assumptions and develop the mathematical context from these assumptions.
     </p>
-    <assemblage xml:id="assumptions"><title>Basic Assumptions</title><idx><h>assumptions</h></idx>
+    <assemblage xml:id="assumptions"><title>Basic Assumptions<idx><h>assumptions</h></idx></title>
     <p>
       <ul>
         <li><em>Players are self-interested.</em>  The goal is to win the most or lose the least. </li>

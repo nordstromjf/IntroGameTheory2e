@@ -415,7 +415,7 @@
   </p>
   <p>Before looking for the mixed strategy for Player 2, we summarize the graphical process for finding the mixed strategy for Player 1.</p>
 
-  <assemblage xml:id="AS_FindMixedEquil"><title>Finding a Mixed Strategy Graphically</title><idx><h>mixed strategy</h><h>graphical solution</h></idx><idx><h>maximin strategy</h><h>graphical solution</h></idx>
+  <assemblage xml:id="AS_FindMixedEquil"><title>Finding a Mixed Strategy Graphically<idx><h>mixed strategy</h><h>graphical solution</h></idx><idx><h>maximin strategy</h><h>graphical solution</h></idx></title>
   <p>The graph represents the probability that Player 1 plays B along the <m>x</m>-axis and the payoff along the <m>y</m>-axis.</p>
   <p><ol>
     <li><p>Assume Player 2 plays C.
@@ -490,7 +490,7 @@
     <title>The graph for Player 2</title>
     <introduction>
       <p>
-      It is important to keep in mind that although the <m>x</m>-axis refers to how often Player 2 will play <m>C</m> and <m>D</m>, the <m>y</m>-axis represents the payoff to <em>Player 1</em>.</p></introduction>
+      It is important to remember that although the <m>x</m>-axis refers to how often Player 2 will play <m>C</m> and <m>D</m>, the <m>y</m>-axis represents <em>Player 1's</em> payoff.</p></introduction>
 
       
         <task><statement><p>
@@ -606,8 +606,8 @@
             <xi:include parse="text" href="doenet/maximingraph.doenetml"/>
             
           </slate>
-          <static><p>The interactive activity is available in the online version of the text at <url href="https://nordstrommath.com/IntroGameTheory2e/S_MixStratGraph.html#W_graphicalmethod" visual="nordstrommath.com/IntroGameTheory2e/S_MixStratGraph.html#W_graphicalmethod"/>
-           or on Doenet at <url href="https://beta.doenet.org/activityViewer/u6eGbwRmPMtg1FYRqi4fD8" visual="https://tinyurl.com/FindingMixedStrategies"/>.
+          <static><p>The interactive activity is available in the online version of the text at <url href="https://nordstrommath.com/IntroGameTheory2e/S_MixStratGraph.html#W_graphicalmethod" visual="nordstrommath.com/IntroGameTheory2e/S_MixStratGraph.html"/>
+           or on Doenet at</p> <p><url href="https://beta.doenet.org/activityViewer/u6eGbwRmPMtg1FYRqi4fD8" visual="https://tinyurl.com/FindingMixedStrategies"/>.
         </p></static>
   </interactive>
 

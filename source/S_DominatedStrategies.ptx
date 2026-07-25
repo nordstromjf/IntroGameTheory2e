@@ -311,7 +311,7 @@
     </statement>
   </activity>
 
-  <assemblage xml:id="elimdomstrategies"><title>Eliminating Dominated Strategies</title><idx><h>dominated strategy</h><h>eliminating</h></idx>
+  <assemblage xml:id="elimdomstrategies"><title>Eliminating Dominated Strategies<idx><h>dominated strategy</h><h>eliminating</h></idx></title>
   <p>
     Given a zero-sum game matrix with Player 1's payoffs. We find a <term>dominated strategy</term> with the following process. Note, you can compare either rows or columns first.
     <ol>
@@ -643,7 +643,7 @@
   <p>
     The strategies we found using the above method have a more official name. Player 1's strategy is called the <term>maximin</term><idx><h>maximin strategy</h></idx><idx><h>strategy</h><h>maximin</h></idx> strategy. Player 1 is maximizing the minimum values from each row. Player 2's strategy is called the <term>minimax</term><idx><h>minimax</h></idx><idx><h>strategy</h><h>minimax</h></idx> strategy. Player 2 is minimizing the maximum values from each column. Notice, we can find the maximin and minimax strategies for any zero-sum game. But do our players always want to use these strategies? Will they always result in an equilibrium pair? The next five activities explore these questions.
   </p>
-  <assemblage xml:id="maximinstrategy"><title>Finding the Maximin and Minimax Strategies</title><idx><h>maximin strategy</h><h>finding</h></idx><idx><h>minimax strategy</h><h>finding</h></idx>
+  <assemblage xml:id="maximinstrategy"><title>Finding the Maximin and Minimax Strategies<idx><h>maximin strategy</h><h>finding</h></idx><idx><h>minimax strategy</h><h>finding</h></idx></title>
   <p>
     Given a zero-sum game matrix with Player 1's payoffs. We find the <term>maximin strategy</term> with the following process.
     <ol>
