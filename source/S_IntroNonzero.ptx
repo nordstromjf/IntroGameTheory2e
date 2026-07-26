@@ -99,7 +99,7 @@
     <title>Repeating the game</title>
     <introduction>
       <p>
-        Suppose Battle of teh Movies is played repeatedly. For example, Alice and Bob have movie night once a month. </p></introduction>
+        Suppose Battle of the Movies is played repeatedly. For example, Alice and Bob have movie night once a month. </p></introduction>
 
         <task><statement><p>Suggest a strategy for Alice and for Bob.</p></statement></task>
         <task><statement><p> Play the game with someone else <em>without communicating</em> about your strategy before each game.
@@ -130,7 +130,7 @@
     <title>Bob's payoff matrix</title>
     <statement>
       <p>
-        Consider Battle of the Movies from Bob's point of view. We know that Bob wants to maximize his payoff (that has not changed). So Bob doesn't care what Alice's payoff's are. Write down Bob's payoff matrix without including Alice's payoffs.
+        Consider Battle of the Movies from Bob's point of view. We know that Bob wants to maximize his payoff (that has not changed). So Bob doesn't care what Alice's payoffs are. Write down Bob's payoff matrix without including Alice's payoffs.
       </p>
     </statement>
   </activity>
@@ -309,7 +309,7 @@
       <choice ><statement><p>Pure strategy D.</p></statement><feedback><p>Think about any equilibrium points.</p></feedback></choice>
       <choice ><statement><p>A mixed strategy with C more often than D.</p></statement><feedback><p>Think about any equilibrium points.</p></feedback></choice>
       <choice ><statement><p>A mixed strategy with D more often than C.</p></statement><feedback><p>Think about any equilibrium points.</p></feedback></choice>
-    </choices><answer><p>Pure strategy A</p></answer></exercise>
+    </choices><answer><p>Pure strategy C</p></answer></exercise>
 
     <exercise label="IGT_INZ_CYU_zerosum2"><statement correct="no"><p>True or False: The following game
         <table xml:id="T_NZmatrix2" >

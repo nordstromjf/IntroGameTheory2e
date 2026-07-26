@@ -231,7 +231,7 @@
         
        </choices><answer><p>cooperate.</p></answer></exercise>
 
-       <exercise label="IGT_RPD_CYU_bestICout"><statement><p>Now think about what should happen if we iterated (repeated) a game of Chicken. In an iterated game of Chicken, a player really wants their opponent to <fillin width="5"></fillin>.</p></statement>
+       <exercise label="IGT_RPD_CYU_bestICout"><statement><p>Think about what should happen if we iterated (repeated) a game of Chicken. In an iterated game of Chicken, a player really wants their opponent to <fillin width="5"></fillin>.</p></statement>
 
        <choices randomize="no">
         <choice correct="yes"><statement><p>cooperate.</p></statement><feedback><p>Correct. No matter what, a player does best when their opponent cooperates. The player either ties or wins.</p></feedback></choice>
@@ -257,7 +257,7 @@
 
        <exercise label="IGT_RPD_CYU_IPDCtoC"><statement correct="yes"><p>True or False: In an iterated Prisoner's Dilemma, it can be beneficial to cooperate in order to encourage your opponent to cooperate.</p></statement><feedback><p>See the Tit-for-Tat strategy.</p></feedback><answer><p>True.</p></answer></exercise>
 
-       <exercise label="IGT_RPD_CYU_IPDmixed"><statement correct="no"><p>Recall in repeated <em>zero-sum</em> games, if there was a pure strategy equilibrium, then players never benefit from playing a mixed strategy. True or False: In a repeated <em>non-zero-sum</em> game with a pure strategy equilibrium, players never benefit from playing a mixed strategy.</p></statement><feedback><p>See the Tit-for-Tat strategy.</p></feedback><answer><p>False.</p></answer></exercise>
+       <exercise label="IGT_RPD_CYU_IPDmixed"><statement correct="no"><p>Recall in repeated <em>zero-sum</em> games, if there is a pure strategy equilibrium, then players never benefit from playing a mixed strategy. True or False: In a repeated <em>non-zero-sum</em> game with a pure strategy equilibrium, players never benefit from playing a mixed strategy.</p></statement><feedback><p>See the Tit-for-Tat strategy.</p></feedback><answer><p>False.</p></answer></exercise>
 
        <exercise label="IGT_RPD_CYU_IPDpred"><statement correct="yes"><p>Recall in repeated <em>zero-sum</em> games players never benefit from playing a strategy with a predictable pattern. True or False: In a repeated <em>non-zero-sum</em> game a player may benefit from playing a strategy with a predictable pattern.</p></statement><feedback><p>See the Tit-for-Tat strategy.</p></feedback><answer><p>True.</p></answer></exercise>
 

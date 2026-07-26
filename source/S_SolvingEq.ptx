@@ -201,7 +201,7 @@
     <li>
       <title>Step 4. Determine Player 1's maximin mixed strategy</title><idx><h>maximin mixed strategy</h></idx><idx><h>strategy</h><h>maximin mixed</h></idx>
       <p>
-      Determine Player 1's maximin mixed strategy. 
+      
 
       Recalling that <m>p</m> is the probability that Player 1 plays <m>B</m>, we know that Player 1 will play <m>B</m> with probability 1/4, and thus, play A with probability 3/4. The expected payoff for Player 1, <m>m</m>, is 1/2. It is important to check the algebraic solution with where the intersection point appears on the graph. Although we are using technology to help us graph and solve for the intersection point, we need to be able to catch any errors we make entering the information into <pubtitle>Sage</pubtitle>.
       </p>
@@ -276,7 +276,7 @@
         </output>
       </sage> -->
 
-  <p>You can now these last two <pubtitle>Sage</pubtitle> cells to solve any 2 <m>\times</m> 2 game with a mixed strategy equilibrium. You can also take some time to experiment with what happens if the game has a pure strategy equilibrium.</p>
+  <p>You can now use these last two <pubtitle>Sage</pubtitle> cells to solve any 2 <m>\times</m> 2 game with a mixed strategy equilibrium. You can also take some time to experiment with what happens if the game has a pure strategy equilibrium.</p>
 
   <p><pubtitle>Sage</pubtitle> is a powerful tool that we can use to solve many different computational problems. It is nice because it is free and open to use. But feel free to use other available graphing and solving tools, such as <url href="https://www.desmos.com/" visual="https://www.desmos.com/">Desmos</url>.</p>
 
@@ -290,8 +290,10 @@
             <xi:include parse="text" href="doenet/graphingsolver.doenetml"/>
             
           </slate>
-          <static><p>The interactive activity is available in the online version of the text at <url href="https://nordstrommath.com/IntroGameTheory2e/S_SolvingEq.html#W_graphicalmethodtool" visual="nordstrommath.com/IntroGameTheory2e/S_SolvingEq.html"/>
-           or on Doenet at <url href="https://beta.doenet.org/activityViewer/rrTGvgdPgkPbCfqoP4us1i" visual="https://tinyurl.com/GraphicalMethodMixedStrategies"/>.
+          <static><p>The interactive activity is available in the online version of the text at</p> 
+          <p><url href="https://nordstrommath.com/IntroGameTheory2e/S_SolvingEq.html#W_graphicalmethodtool" visual="nordstrommath.com/IntroGameTheory2e/S_SolvingEq.html"/></p>
+           <p>or on Doenet at</p>
+           <p><url href="https://beta.doenet.org/activityViewer/rrTGvgdPgkPbCfqoP4us1i" visual="https://tinyurl.com/GraphicalMethodMixedStrategies"/>.
         </p></static>
   </interactive>
 
@@ -506,7 +508,7 @@
     </condition>
     </var></setup><answer><p>slope= <m>5</m>, intercept=<m>-2</m></p></answer></exercise>
 
-    <exercise label="IGT_SE_CYU_pneg"><statement correct="no"><p>True or False: When finding the mixed strategy, it is possible that <m>p</m> is negative.</p></statement><feedback><p>Remember, <m>p</m> is a probability. What is the smallest a probability can be?</p></feedback></exercise>
+    <exercise label="IGT_SE_CYU_pneg"><statement correct="no"><p>True or False: When finding the mixed strategy, it is possible that <m>p</m> is negative.</p></statement><feedback><p>Remember, <m>p</m> is a probability. What is the smallest a probability can be?</p></feedback><answer><p>False.</p></answer></exercise>
 
     <exercise label="IGT_SE_CYU_pgt1"><statement correct="no"><p>True or False: When finding the mixed strategy, it is possible that <m>p</m> is greater than 1.</p></statement><feedback><p>Remember, <m>p</m> is a probability. What is the largest a probability can be?</p></feedback><answer><p>False.</p></answer></exercise>
 

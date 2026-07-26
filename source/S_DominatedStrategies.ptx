@@ -1154,7 +1154,7 @@
     <condition string=".*">
     <feedback>
       <p>
-        Yuo answer should be <q>yes</q> or <q>no</q>.
+        Your answer should be <q>yes</q> or <q>no</q>.
       </p>
     </feedback>
     </condition>
@@ -1166,7 +1166,7 @@
    <exercise label="IGT_strat_CYU_maxminequilib1">
      <statement correct="no">
        <p>True or False: The game <xref ref="T_exdomstrat2"></xref>, has an equilibrium pair.</p>
-     </statement><hint><p>Try using what you know about the maximin and minimax strategies.</p></hint><answer><p>False</p></answer><feedback><p>This game does not have an equilibrium pair.</p></feedback><answer><p>False.</p></answer>
+     </statement><hint><p>Try using what you know about the maximin and minimax strategies.</p></hint><feedback><p>This game does not have an equilibrium pair.</p></feedback><answer><p>False.</p></answer>
    </exercise>
 
 <exercise label="IGT_strat_CYU_maximin2"><introduction><p>This exercise finds Player 1's maximin strategy.</p></introduction>

@@ -297,7 +297,7 @@
             (1, 1) \amp  (-5, 5)\\
            (5, -5) \amp  (0, 0)
           \end{matrix}\right],
-        </md> where every player is playing the game against every other player.  Suppose you are playing this game in a class of 20 people. If 19 players chooses Row/Column 1 and one chooses Row/Column 2, how many points does a defector get? <var width="3" /></p></statement>
+        </md> where every player is playing the game against every other player.  Suppose you are playing this game in a class of 20 people. If 19 players choose Row/Column 1 and one chooses Row/Column 2, how many points does a defector get? <var width="3" /></p></statement>
       <setup>
         <var>
           <condition number="95"><feedback><p>Correct, the single defector gets 5 points from each of the 19 cooperators.</p></feedback></condition>

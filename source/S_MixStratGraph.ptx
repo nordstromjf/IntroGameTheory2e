@@ -235,7 +235,7 @@
   </p>
 
   <figure xml:id="F_BoldA">
-    <caption><xref ref="F_BoldA"></xref> of the expected payoffs for Player 1 playing only A.</caption>
+    <caption>The expected payoffs for Player 1 playing only A.</caption>
     <image width="60%" source="images/image-10.svg">
       <shortdescription>
             horizontal and vertical axes where the x=0 value is labeled A and the x=1 value is labeled B; there is a line segment labeled C connecting the two points (0, 1) and (1, -1); there is a line segment labeled D connecting the points (0, 0) and (1, 2); the portion of the vertical axis is shaded red from (0, 0) to (0, 1)
@@ -606,8 +606,9 @@
             <xi:include parse="text" href="doenet/maximingraph.doenetml"/>
             
           </slate>
-          <static><p>The interactive activity is available in the online version of the text at <url href="https://nordstrommath.com/IntroGameTheory2e/S_MixStratGraph.html#W_graphicalmethod" visual="nordstrommath.com/IntroGameTheory2e/S_MixStratGraph.html"/>
-           or on Doenet at</p> <p><url href="https://beta.doenet.org/activityViewer/u6eGbwRmPMtg1FYRqi4fD8" visual="https://tinyurl.com/FindingMixedStrategies"/>.
+          <static><p>The interactive activity is available in the online version of the text at</p>
+          <p> <url href="https://nordstrommath.com/IntroGameTheory2e/S_MixStratGraph.html#W_graphicalmethod" visual="nordstrommath.com/IntroGameTheory2e/S_MixStratGraph.html"/></p>
+           <p>or on Doenet at</p> <p><url href="https://beta.doenet.org/activityViewer/u6eGbwRmPMtg1FYRqi4fD8" visual="https://tinyurl.com/FindingMixedStrategies"/>.
         </p></static>
   </interactive>
 

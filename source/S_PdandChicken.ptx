@@ -311,7 +311,7 @@
     <title>A random self-driving car</title>
     <statement>
       <p>
-        Suppose Driver 2 is poorly programmed self-driving car that will swerve or drive straight with a 50/50 chance. What should Driver 1 do? Does it change if the self-driving car swerves with 75% chance?
+        Suppose Driver 2 is a poorly programmed self-driving car that will swerve or drive straight with a 50/50 chance. What should Driver 1 do? Does it change if the self-driving car swerves with 75% chance?
       </p>
     </statement>
   </activity>
